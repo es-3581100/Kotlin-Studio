@@ -1,0 +1,6 @@
+PURE_SMOKE_PASS
+anchor=ComplexPoint(x=-0.22625000000000012, y=0.585)
+snapshot=RenderSnapshot(centerX=-0.5, centerY=0.0, scale=3.0, rotation=0.0, iterations=260, escapeRadius=8.0, power=2.0, juliaReal=-0.78, juliaImag=0.176, morph=0.0, palettePhase=0.1)
+presetBytes=476
+fractals=mandelbrot, julia, multibrot, tricorn, burning-ship, newton
+presets=Classic Mandelbrot | Seahorse Valley | Julia Dream | Tricorn Ice | Burning Ship Harbor | Newton Roots

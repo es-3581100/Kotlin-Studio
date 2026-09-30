@@ -1,0 +1,10 @@
+FULL_BUILD_ENVIRONMENT_CHECK
+utc=2026-09-30T09:21:34Z
+java=openjdk version "21.0.11" 2026-04-21
+kotlinc=info: kotlinc-jvm 1.9.0 (JRE 21.0.11+10-1-deb13u2-Debian)
+gradle=NOT_INSTALLED
+gradlew=NOT_PRESENT
+openrndr_cache=NOT_PRESENT
+maven_dns=UNAVAILABLE:gaierror:[Errno -3] Temporary failure in name resolution
+result=FULL_GRADLE_BUILD_NOT_RUN_ENVIRONMENT_BLOCKED
+reason=no Gradle executable/wrapper distribution and no cached OPENRNDR dependencies; Maven DNS unavailable

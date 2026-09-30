@@ -1,0 +1,5 @@
+SHADER_STATIC_PASS
+uniforms_sent=center,colorMode,escapeRadius,insideColor,iterations,juliaC,mode,morph,palette,paletteFrequency,palettePhase,power,resolution,rotation,scale,time
+uniforms_used=center,colorMode,escapeRadius,insideColor,iterations,juliaC,mode,morph,palette,paletteFrequency,palettePhase,power,resolution,rotation,scale
+preamble_braces=balanced
+transform_braces=balanced
