@@ -49,7 +49,7 @@ jobs:
           cd Sacred-Computations-Map
           bash ./run_checks.sh
           test -f dist/index.html
-          test -f dist/data/graph.json
+          test -f dist/data/concepts.json\n          test -f dist/data/relations.json
 
       - name: Commit Sacred-Computations-Map
         run: |
