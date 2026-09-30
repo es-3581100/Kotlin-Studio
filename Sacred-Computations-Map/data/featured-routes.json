@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Pell → modern kernel",
+    "nodes": [
+      "pell",
+      "silver-ratio",
+      "sympy-solving",
+      "codegen",
+      "rust-target"
+    ],
+    "note": "Recurrence → algebraic root → exact solve → source emission."
+  },
+  {
+    "title": "Tribonacci → Rauzy → code",
+    "nodes": [
+      "tribonacci",
+      "tribonacci-ratio",
+      "rauzy-fractal",
+      "sympy-matrices",
+      "python-numpy"
+    ],
+    "note": "Recurrence → eigenvalue → fractal geometry → exact matrix → numerical execution."
+  },
+  {
+    "title": "Golden ratio → state matrix",
+    "nodes": [
+      "fibonacci",
+      "golden-ratio",
+      "sympy-solving",
+      "codegen",
+      "javascript-target"
+    ],
+    "note": "Classical recurrence → exact root → browser-ready expression."
+  },
+  {
+    "title": "Pythagorean → exact integer code",
+    "nodes": [
+      "pythagorean-triples",
+      "sympy-ntheory",
+      "codegen",
+      "c-target"
+    ],
+    "note": "Diophantine family → exact integer reasoning → low-level kernel."
+  }
+]

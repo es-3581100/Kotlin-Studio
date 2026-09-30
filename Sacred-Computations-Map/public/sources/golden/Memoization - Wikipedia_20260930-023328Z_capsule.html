@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Memoization - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Memoization - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Memoization</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T02:33:28.163Z</div><div class="stat"><b>Records</b><br>17</div><div class="stat"><b>Sections</b><br>11</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 245 B · ~62 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 47064 B · ~11713 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 48553 B · ~12122 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 403 B · ~101 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Memoization.md</code></a> <small>markdown · 3488 B · ~857 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Etymology.md</code></a> <small>markdown · 904 B · ~226 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Overview.md</code></a> <small>markdown · 5771 B · ~1441 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Other considerations.md</code></a> <small>markdown · 111 B · ~28 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Functional programming.md</code></a> <small>markdown · 1148 B · ~287 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Automatic memoization.md</code></a> <small>markdown · 5809 B · ~1453 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Parsers.md</code></a> <small>markdown · 11105 B · ~2768 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-See also.md</code></a> <small>markdown · 1239 B · ~306 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-References.md</code></a> <small>markdown · 7418 B · ~1842 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-External links.md</code></a> <small>markdown · 9662 B · ~2406 tok</small></li><li><a href="#art-0015"><code>artifacts/provenance/source-record.json</code></a> <small>json · 371 B · ~93 tok</small></li><li><a href="#art-0016"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0017"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Memoization - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Memoization
+captured_at: 2026-09-30T02:33:28.163Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 17
+artifact_count: 17
+content_sha256: f5871efbb94c94950dc8e522bf8b0e93362dd50bccca7da9602296c4c77712ec
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:245,&quot;sha256&quot;:&quot;f642fc764860168d0ff3038767bd8b5132484987c5d0352bb8a3a8bcc59e397e&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;memoization&quot;,&quot;wikipedia&quot;,&quot;163z&quot;,&quot;2026-09-30t02&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:62,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:47064,&quot;sha256&quot;:&quot;f5871efbb94c94950dc8e522bf8b0e93362dd50bccca7da9602296c4c77712ec&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;memoization&quot;,&quot;function&quot;,&quot;factorial&quot;,&quot;values&quot;],&quot;summary&quot;:&quot;Memoization - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:11713,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:48553,&quot;sha256&quot;:&quot;f5add6ab8220f070a194b611dac7705d08cc49f13595620acee059d04a60487c&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:12122,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:403,&quot;sha256&quot;:&quot;80da46515c2414d53faf41a06e8049ae0c6d07ce93abefd7a1c734c5e9c48d85&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:101,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Memoization.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3488,&quot;sha256&quot;:&quot;074a8de751d2e40fb1ca328aeca27ec0f5772e7c4f256d175082019e0fdaf56f&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;wikipedia&quot;,&quot;memoization&quot;,&quot;computing&quot;,&quot;memoisation&quot;,&quot;programming&quot;],&quot;summary&quot;:&quot;Memoization&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:857,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Etymology.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:904,&quot;sha256&quot;:&quot;c94ad2b3b9db5fa69e44b29895532e285ff379bb319b23c2f0834fcb06bf55c1&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;memoization&quot;,&quot;edit&quot;,&quot;etymology&quot;,&quot;latin&quot;],&quot;summary&quot;:&quot;Etymology&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:226,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Overview.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5771,&quot;sha256&quot;:&quot;a9b46fab4229472c721add6ada9f7a327d71478279ced359c64763e7de599f79&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;factorial&quot;,&quot;function&quot;,&quot;cost&quot;,&quot;return&quot;],&quot;summary&quot;:&quot;Overview&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1441,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Other considerations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:111,&quot;sha256&quot;:&quot;5d7a29eef36907f7a34e2b53f70633302fdafb03aa445814f12a8b4d8671b76c&quot;,&quot;keywords&quot;:[&quot;considerations&quot;,&quot;edit&quot;,&quot;other&quot;,&quot;action&quot;,&quot;https&quot;,&quot;index&quot;,&quot;memoization&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Other considerations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:28,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Functional programming.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1148,&quot;sha256&quot;:&quot;630c28552b6702f29a64fff3f79fb8c4a1230e5c00482245ec88d36741d977fc&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;functional&quot;,&quot;programming&quot;,&quot;edit&quot;,&quot;memoization&quot;],&quot;summary&quot;:&quot;Functional programming&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:287,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Automatic memoization.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5809,&quot;sha256&quot;:&quot;58d5cc97068f99630538cef97922e55e27cfef802f1b95ca8d724df9261633ee&quot;,&quot;keywords&quot;:[&quot;function&quot;,&quot;values&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;arguments&quot;,&quot;self&quot;],&quot;summary&quot;:&quot;Automatic memoization&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1453,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Parsers.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:11105,&quot;sha256&quot;:&quot;6158dbcff8d18c91f65e32c8b47823ccb25c7b58d99f296fafc7c39e0f64b2d1&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;memoization&quot;,&quot;parser&quot;,&quot;input&quot;,&quot;rule&quot;],&quot;summary&quot;:&quot;Parsers&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2768,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1239,&quot;sha256&quot;:&quot;5cc566e439522da5bff778a3b8dcc5c1aa780ec961ac658d10452b8f7d7783cc&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;memoization&quot;,&quot;complexity&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:306,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7418,&quot;sha256&quot;:&quot;3d7e4b3dd82fb63721592afd26f8b4e0f6a2b79f11232950da63e577b6e8a978&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;memoization&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;doi_&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1842,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:9662,&quot;sha256&quot;:&quot;7975a7b178c721cd9058cb38a2cb31cb6dd9f2e6949e3c2acd713fe13f2e6c7c&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;memoization&quot;,&quot;category&quot;,&quot;http&quot;,&quot;com&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2406,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0015&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:371,&quot;sha256&quot;:&quot;0b6e284e3e8a1cd0e926778e0c7ee11728ff8efc3a95de086d8f028f1c00b2ce&quot;,&quot;keywords&quot;:[&quot;memoization&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;163z&quot;,&quot;2026-09-30t02&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:93,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0016&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;2e001dd19ffce93bb088b36c57f9722f4f9c265ad1670b7856687d87072f5984&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;325&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0017&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T02:33:28.163Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	62	245	f642fc764860168d0ff3038767bd8b5132484987c5d0352bb8a3a8bcc59e397e	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	11713	47064	f5871efbb94c94950dc8e522bf8b0e93362dd50bccca7da9602296c4c77712ec	Memoization - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	12122	48553	f5add6ab8220f070a194b611dac7705d08cc49f13595620acee059d04a60487c	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	101	403	80da46515c2414d53faf41a06e8049ae0c6d07ce93abefd7a1c734c5e9c48d85	Introduction	
+sec:0005	section	artifacts/sections/0002-Memoization.md	primary	857	3488	074a8de751d2e40fb1ca328aeca27ec0f5772e7c4f256d175082019e0fdaf56f	Memoization	
+sec:0006	section	artifacts/sections/0003-Etymology.md	primary	226	904	c94ad2b3b9db5fa69e44b29895532e285ff379bb319b23c2f0834fcb06bf55c1	Etymology	
+sec:0007	section	artifacts/sections/0004-Overview.md	primary	1441	5771	a9b46fab4229472c721add6ada9f7a327d71478279ced359c64763e7de599f79	Overview	
+sec:0008	section	artifacts/sections/0005-Other considerations.md	primary	28	111	5d7a29eef36907f7a34e2b53f70633302fdafb03aa445814f12a8b4d8671b76c	Other considerations	
+sec:0009	section	artifacts/sections/0006-Functional programming.md	primary	287	1148	630c28552b6702f29a64fff3f79fb8c4a1230e5c00482245ec88d36741d977fc	Functional programming	
+sec:0010	section	artifacts/sections/0007-Automatic memoization.md	primary	1453	5809	58d5cc97068f99630538cef97922e55e27cfef802f1b95ca8d724df9261633ee	Automatic memoization	
+sec:0011	section	artifacts/sections/0008-Parsers.md	primary	2768	11105	6158dbcff8d18c91f65e32c8b47823ccb25c7b58d99f296fafc7c39e0f64b2d1	Parsers	
+sec:0012	section	artifacts/sections/0009-See also.md	supporting	306	1239	5cc566e439522da5bff778a3b8dcc5c1aa780ec961ac658d10452b8f7d7783cc	See also	
+sec:0013	section	artifacts/sections/0010-References.md	supporting	1842	7418	3d7e4b3dd82fb63721592afd26f8b4e0f6a2b79f11232950da63e577b6e8a978	References	
+sec:0014	section	artifacts/sections/0011-External links.md	supporting	2406	9662	7975a7b178c721cd9058cb38a2cb31cb6dd9f2e6949e3c2acd713fe13f2e6c7c	External links	
+art:0015	provenance	artifacts/provenance/source-record.json	supporting	93	371	0b6e284e3e8a1cd0e926778e0c7ee11728ff8efc3a95de086d8f028f1c00b2ce	Capture source identity and metadata	
+art:0016	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	2e001dd19ffce93bb088b36c57f9722f4f9c265ad1670b7856687d87072f5984	Extraction engine and counts	
+art:0017	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Memoization#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Memoization
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%B8%D9%87%D8%A7%D8%B1)
+- [Català](https://ca.wikipedia.org/wiki/Memoitzaci%C3%B3)
+- [Deutsch](https://de.wikipedia.org/wiki/Memoisation)
+- [Español](https://es.wikipedia.org/wiki/Memoizaci%C3%B3n)
+- [فارسی](https://fa.wikipedia.org/wiki/%D8%A8%D9%87%E2%80%8C%D8%AE%D8%A7%D8%B7%D8%B1%D8%B3%D9%BE%D8%A7%D8%B1%DB%8C_(%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D8%B4))
+- [Français](https://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation)
+- [Italiano](https://it.wikipedia.org/wiki/Memoizzazione)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98)
+- [Nederlands](https://nl.wikipedia.org/wiki/Memoization)
+- [Português](https://pt.wikipedia.org/wiki/Memoiza%C3%A7%C3%A3o)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F)
+- [Simple English](https://simple.wikipedia.org/wiki/Memoization)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%98%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/Memoisation)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B3_(%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C))
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D1%97%D0%B7%D0%B0%D1%86%D1%96%D1%8F)
+- [中文](https://zh.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1376168#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Software programming optimization technique Not to be confused with [Memorization](https://en.wikipedia.org/wiki/Memorization).
+
+In [computing](https://en.wikipedia.org/wiki/Computing), **memoization** or **memoisation** is an [optimization](https://en.wikipedia.org/wiki/Optimization_(computer_science)) technique used primarily to speed up [computer programs](https://en.wikipedia.org/wiki/Computer_programs). It works by storing the results of expensive [calls](https://en.wikipedia.org/wiki/Subroutine) to [pure functions](https://en.wikipedia.org/wiki/Pure_function), so that these results can be returned quickly should the same inputs occur again. It is a type of [caching](https://en.wikipedia.org/wiki/Cache_(computing)), normally implemented using a [hash table](https://en.wikipedia.org/wiki/Hash_table). It is a typical example of a [space–time tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff), where the runtime of a program is reduced by increasing its memory usage. Memoization can be implemented in any programming language, though some languages have built-in support that make it easy for the programmer to memoize a function, and others memoize certain functions by default.
+
+Memoization has also been used in other contexts (and for purposes other than speed gains), such as in simple [mutually recursive](https://en.wikipedia.org/wiki/Mutual_recursion) descent parsing.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) In the context of some [logic programming](https://en.wikipedia.org/wiki/Logic_programming) languages, memoization is also known as [tabling](https://en.wikipedia.org/wiki/Tabling).[[2]](https://en.wikipedia.org/wiki/Memoization#cite_note-2)
+
+## Etymology
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=1)]
+
+The term *memoization* was coined by [Donald Michie](https://en.wikipedia.org/wiki/Donald_Michie) in 1968[[3]](https://en.wikipedia.org/wiki/Memoization#cite_note-Michie1968-3)[*[failed verification](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)*] and is derived from the [Latin](https://en.wikipedia.org/wiki/Latin) word *[memorandum](https://en.wikipedia.org/wiki/Memorandum)* (&#39;to be remembered&#39;), usually truncated as *memo* in American English, and thus carries the meaning of &#39;turning [the results of] a function into something to be remembered&#39;. While *memoization* might be confused with *[memorization](https://en.wikipedia.org/wiki/Memorization)* (because they are etymological [cognates](https://en.wikipedia.org/wiki/Cognate)), *memoization* has a specialized meaning in computing.
+
+## Overview
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=2)]
+
+A memoized function, when called with a given set of inputs for the first time, stores the inputs along with the computed results. Upon subsequent calls with remembered inputs, the function returns the remembered results rather than recomputing them, thus eliminating the cost of a recomputation. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set,[*[clarification needed](https://en.wikipedia.org/wiki/Wikipedia:Please_clarify)*] depending on the nature of the function and its use. A function can only be memoized if it is [referentially transparent](https://en.wikipedia.org/wiki/Referential_transparency); that is, only if calling the function has exactly the same effect as replacing that function call with its return value. (Special case exceptions to this restriction exist, however.) While related to [lookup tables](https://en.wikipedia.org/wiki/Lookup_table), since memoization often uses such tables in its implementation, memoization populates its cache of results transparently on the fly, rather than needing them to be supplied in advance.
+
+Memoized functions are optimized for *speed* in exchange for a higher use of [computer memory](https://en.wikipedia.org/wiki/Computer_memory) *space*. The time/space &quot;cost&quot; of [algorithms](https://en.wikipedia.org/wiki/Algorithm) has a specific name in computing: *[computational complexity](https://en.wikipedia.org/wiki/Computational_complexity_theory)*. All functions have a computational complexity in *time* (i.e. they take time to execute) and in *space*.
+
+Although a [space–time tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff) occurs (i.e., space used is speed gained), this differs from some other optimizations that involve time-space trade-off, such as [strength reduction](https://en.wikipedia.org/wiki/Strength_reduction), in that memoization is a [run-time](https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)) rather than [compile-time](https://en.wikipedia.org/wiki/Compile-time) optimization. Moreover, strength reduction potentially replaces a costly operation such as multiplication with a less costly operation such as addition, and the results in savings can be highly [machine-dependent](https://en.wikipedia.org/wiki/Machine-dependent) (non-portable across machines), whereas memoization is a more machine-independent, [cross-platform](https://en.wikipedia.org/wiki/Cross-platform) strategy.
+
+Consider the following [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) function to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of *n*:
+
+```
+function factorial (n is a non-negative integer)
+    if n is 0 then
+        return 1 [by the convention that 0! = 1]
+    else
+        return factorial(n – 1) times n [recursively invoke factorial
+                                        with the parameter 1 less than n]
+    end if
+end function
+```
+
+For every [integer](https://en.wikipedia.org/wiki/Integer) *n* such that `n ≥ 0`, the final result of the function `factorial` is [invariant](https://en.wikipedia.org/wiki/Invariant_(computer_science)); if invoked as `x = factorial(3)`, the result is such that *x* will *always* be assigned the value 6. The non-memoized implementation above, given the nature of the [recursive](https://en.wikipedia.org/wiki/Recursion) algorithm involved, would require *n + 1* invocations of `factorial` to arrive at a result, and each of these invocations, in turn, has an associated cost in the time it takes the function to return the value computed. Depending on the machine, this cost might be the sum of:
+
+1. The cost to set up the functional call stack frame.
+2. The cost to compare *n* to 0.
+3. The cost to subtract 1 from *n*.
+4. The cost to set up the recursive call stack frame. (As above.)
+5. The cost to multiply the result of the recursive call to `factorial` by *n*.
+6. The cost to store the return result so that it may be used by the calling context.
+
+In a non-memoized implementation, *every* top-level call to `factorial` includes the cumulative cost of steps 2 through 6 proportional to the initial value of *n*.
+
+A memoized version of the `factorial` function follows:
+
+```
+function factorial (n is a non-negative integer)
+    if n is 0 then
+        return 1 [by the convention that 0! = 1]
+    else if n is in lookup-table then
+        return lookup-table-value-for-n
+    else
+        let x = factorial(n – 1) times n [recursively invoke factorial
+                                         with the parameter 1 less than n]
+        store x in lookup-table in the nth slot [remember the result of n! for later]
+        return x
+    end if
+end function
+```
+
+In this particular example, if `factorial` is first invoked with 5, and then invoked later with any value less than or equal to five, those return values will also have been memoized, since `factorial` will have been called recursively with the values 5, 4, 3, 2, 1, and 0, and the return values for *each* of those will have been stored. If it is then called with a number greater than 5, such as 7, only 2 recursive calls will be made (7 and 6), and the value for 5! will have been stored from the previous call. In this way, memoization allows a function to become more time-efficient the more often it is called, thus resulting in eventual overall speed-up.
+
+An extreme example of memoization is the [Singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern), specifically the implementation of its getter — a function that creates an object upon the first invocation, caches the instance, and returns the same object on all subsequent invocations.
+
+## Other considerations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=3)]
+
+### Functional programming
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=4)] Main article: [Thunk § Functional programming](https://en.wikipedia.org/wiki/Thunk#Functional_programming) [![\[icon\]](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wiki_letter_w_cropped.svg)This section **needs expansion**. You can help by [adding missing information](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=). *(April 2014)*
+
+Memoization is heavily used in compilers for [functional programming](https://en.wikipedia.org/wiki/Functional_programming) languages, which often use [call by name](https://en.wikipedia.org/wiki/Call_by_name) evaluation strategy. To avoid overhead with calculating argument values, compilers for these languages heavily use auxiliary functions called [thunks](https://en.wikipedia.org/wiki/Thunk) to compute the argument values, and memoize these functions to avoid repeated calculations.
+
+### Automatic memoization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=5)]
+
+While memoization may be added to functions *internally* and *explicitly* by a [computer programmer](https://en.wikipedia.org/wiki/Computer_programmer) in much the same way the above memoized version of `factorial` is implemented, referentially transparent functions may also be automatically memoized *externally*.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) The techniques employed by [Peter Norvig](https://en.wikipedia.org/wiki/Peter_Norvig) have application not only in [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp) (the language in which his paper demonstrated automatic memoization), but also in various other [programming languages](https://en.wikipedia.org/wiki/Programming_language). Applications of automatic memoization have also been formally explored in the study of [term rewriting](https://en.wikipedia.org/wiki/Term_rewriting)[[4]](https://en.wikipedia.org/wiki/Memoization#cite_note-Hoffman1992-4) and [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence).[[5]](https://en.wikipedia.org/wiki/Memoization#cite_note-MayfieldEtAl1995-5)
+
+In programming languages where functions are [first-class objects](https://en.wikipedia.org/wiki/First-class_object) (such as [Lua](https://en.wikipedia.org/wiki/Lua_(programming_language)), [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), or [Perl](https://en.wikipedia.org/wiki/Perl)[[6]](https://en.wikipedia.org/wiki/Memoization#cite_note-perl-firstclass-6)), automatic memoization can be implemented by replacing (at run-time) a function with its calculated value once a value has been calculated for a given set of parameters. The function that does this value-for-function-object replacement can generically wrap any referentially transparent function. Consider the following pseudocode (where it is assumed that functions are first-class values):
+
+```
+function memoized-call (F is a function object parameter)
+    if F has no attached array values then
+        allocate an associative array called values;
+        attach values to F;
+    end if;
+
+    if F.values[arguments] is empty then
+        F.values[arguments] = F(arguments);
+    end if;
+
+    return F.values[arguments];
+end function
+```
+
+In order to call an automatically memoized version of `factorial` using the above strategy, rather than calling `factorial` directly, code invokes `memoized-call(factorial)(n)`. Each such call first checks to see if a holder array has been allocated to store results, and if not, attaches that array. If no entry exists at the position `values[arguments]` (where `arguments` are used as the key of the associative array), a *real* call is made to `factorial` with the supplied arguments. Finally, the entry in the array at the key position is returned to the caller.
+
+The above strategy requires *explicit* wrapping at each call to a function that is to be memoized. In those languages that allow [closures](https://en.wikipedia.org/wiki/Closure_(computer_science)), memoization can be effected *implicitly* via a [functor](https://en.wikipedia.org/wiki/Function_object) factory that returns a wrapped memoized function object in a [decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern). In pseudocode, this can be expressed as follows:
+
+```
+function construct-memoized-functor (F is a function object parameter)
+    allocate a function object called memoized-version;
+
+    let memoized-version(arguments) be
+        if self has no attached array values then [self is a reference to this object]
+            allocate an associative array called values;
+            attach values to self;
+        end if;
+
+        if self.values[arguments] is empty then
+            self.values[arguments] = F(arguments);
+        end if;
+
+        return self.values[arguments];
+    end let;
+
+    return memoized-version;
+end function
+```
+
+Rather than call `factorial`, a new function object `memfact` is created as follows:
+
+```
+memfact = construct-memoized-functor(factorial)
+```
+
+The above example assumes that the function `factorial` has already been defined *before* the call to `construct-memoized-functor` is made. From this point forward, `memfact(n)` is called whenever the factorial of *n* is desired. In languages such as Lua, more sophisticated techniques exist which allow a function to be replaced by a new function with the same name, which would permit:
+
+```
+factorial = construct-memoized-functor(factorial)
+```
+
+Essentially, such techniques involve attaching the *original function object* to the created functor and forwarding calls to the original function being memoized via an alias when a call to the actual function is required (to avoid endless [recursion](https://en.wikipedia.org/wiki/Recursion)), as illustrated below:
+
+```
+function construct-memoized-functor (F is a function object parameter)
+    allocate a function object called memoized-version;
+
+    let memoized-version(arguments) be
+        if self has no attached array values then [self is a reference to this object]
+            allocate an associative array called values;
+            attach values to self;
+            allocate a new function object called alias;
+            attach alias to self; [for later ability to invoke F indirectly]
+            self.alias = F;
+        end if;
+
+        if self.values[arguments] is empty then
+            self.values[arguments] = self.alias(arguments); [not a direct call to F]
+        end if;
+
+        return self.values[arguments];
+    end let;
+
+    return memoized-version;
+end function
+```
+
+(Note: Some of the steps shown above may be implicitly managed by the implementation language and are provided for illustration.)
+
+### Parsers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=6)]
+
+When a [top-down parser](https://en.wikipedia.org/wiki/Top-down_parsing) tries to parse an [ambiguous](https://en.wikipedia.org/wiki/Syntactic_ambiguity) input with respect to an ambiguous [context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) (CFG), it may need an exponential number of steps (with respect to the length of the input) to try all alternatives of the CFG in order to produce all possible parse trees. This eventually would require exponential memory space. Memoization was explored as a [parsing](https://en.wikipedia.org/wiki/Parsing) strategy in 1991 by Peter Norvig, who demonstrated that an algorithm similar to the use of [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) and state-sets in [Earley&#39;s algorithm](https://en.wikipedia.org/wiki/Earley_parser) (1970), and tables in the [CYK algorithm](https://en.wikipedia.org/wiki/CYK_algorithm) of Cocke, Younger and Kasami, could be generated by introducing automatic memoization to a simple [backtracking](https://en.wikipedia.org/wiki/Backtracking) [recursive descent parser](https://en.wikipedia.org/wiki/Recursive_descent_parser) to solve the problem of exponential time complexity.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) The basic idea in Norvig&#39;s approach is that when a parser is applied to the input, the result is stored in a memotable for subsequent reuse if the same parser is ever reapplied to the same input.
+
+Richard Frost and Barbara Szydlowski also used memoization to reduce the exponential time complexity of [parser combinators](https://en.wikipedia.org/wiki/Parser_combinator), describing the result as a memoizing purely functional top-down backtracking language processor.[[7]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost1996-7) Frost showed that basic memoized parser combinators can be used as building blocks to construct complex parsers as executable specifications of CFGs.[[8]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost1994-8)[[9]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost2003-9)
+
+Memoization was again explored in the context of parsing in 1995 by Mark Johnson and Jochen Dörre.[[10]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson1995-10)[[11]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson&amp;Dorre-11) In 2002, it was examined in considerable depth by Bryan Ford in the form called [packrat parsing](https://en.wikipedia.org/wiki/Packrat_parser).[[12]](https://en.wikipedia.org/wiki/Memoization#cite_note-Ford2002-12)
+
+In 2007, Frost, Hafiz and Callaghan[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*] described a top-down parsing algorithm that uses memoization for refraining redundant computations to accommodate any form of ambiguous CFG in [polynomial](https://en.wikipedia.org/wiki/Polynomial) time ([Θ](https://en.wikipedia.org/wiki/Big_O_notation)(n4) for [left-recursive](https://en.wikipedia.org/wiki/Left_recursion) grammars and Θ(n3) for non left-recursive grammars). Their top-down parsing algorithm also requires polynomial space for potentially exponential ambiguous parse trees by &#39;compact representation&#39; and &#39;local ambiguities grouping&#39;. Their compact representation is comparable with Tomita&#39;s compact representation of [bottom-up parsing](https://en.wikipedia.org/wiki/Bottom-up_parsing).[[13]](https://en.wikipedia.org/wiki/Memoization#cite_note-Tomita1985-13) Their use of memoization is not only limited to retrieving the previously computed results when a parser is applied to a same input position repeatedly (which is essential for polynomial time requirement); it is specialized to perform the following additional tasks:
+
+- The memoization process (which could be viewed as a ‘wrapper’ around any parser execution) accommodates an ever-growing **direct left-recursive** parse by imposing depth restrictions with respect to input length and current input position.
+- The algorithm&#39;s memo-table ‘lookup’ procedure also determines the reusability of a saved result by comparing the saved result&#39;s computational context with the parser&#39;s current context. This contextual comparison is the key to accommodate **indirect (or hidden) left-recursion**.
+- When performing a successful lookup in a memotable, instead of returning the complete result-set, the process only returns the references of the actual result and eventually speeds up the overall computation.
+- During updating the memotable, the memoization process groups the (potentially exponential) ambiguous results and ensures the polynomial space requirement.
+
+Frost, Hafiz and Callaghan also described the implementation of the algorithm in PADL’08[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*] as a set of [higher-order functions](https://en.wikipedia.org/wiki/Higher-order_function) (called [parser combinators](https://en.wikipedia.org/wiki/Parser_combinators)) in [Haskell](https://en.wikipedia.org/wiki/Haskell_(programming_language)), which enables the construction of directly executable specifications of CFGs as language processors. The importance of their polynomial algorithm&#39;s power to accommodate ‘any form of ambiguous CFG’ with top-down parsing is vital with respect to the syntax and semantics analysis during [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing). The [X-SAIGA](http://www.cs.uwindsor.ca/~hafiz/proHome.html) site has more about the algorithm and implementation details.
+
+While Norvig increased the *power* of the parser through memoization, the augmented parser was still as time complex as Earley&#39;s algorithm, which demonstrates a case of the use of memoization for something other than speed optimization. Johnson and Dörre[[11]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson&amp;Dorre-11) demonstrate another such non-speed related application of memoization: the use of memoization to delay linguistic constraint resolution to a point in a parse where sufficient information has been accumulated to resolve those constraints. By contrast, in the speed optimization application of memoization, Ford demonstrated that memoization could guarantee that [parsing expression grammars](https://en.wikipedia.org/wiki/Parsing_expression_grammar) could parse in [linear](https://en.wikipedia.org/wiki/Big_O_notation) time even those [languages](https://en.wikipedia.org/wiki/Formal_language) that resulted in worst-case backtracking behavior.[[12]](https://en.wikipedia.org/wiki/Memoization#cite_note-Ford2002-12)
+
+Consider the following [grammar](https://en.wikipedia.org/wiki/Formal_grammar):
+
+```
+S → (A c) | (B d)
+A → X (a|b)
+B → X b
+X → x [X]
+```
+
+(Notation note: In the above example, the [production](https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars) S → (A **c**) | (B **d**) reads: &quot;An *S* is either an *A* followed by a **c** or a *B* followed by a **d**.&quot; The production X → **x** [X] reads &quot;An *X* is an **x** followed by an optional *X*.&quot;)
+
+This grammar generates one of the following three variations of [string](https://en.wikipedia.org/wiki/String_(computer_science)): *xac*, *xbc*, or *xbd* (where *x* here is understood to mean *one or more*x*&#39;s*.) Next, consider how this grammar, used as a parse specification, might effect a top-down, left-right parse of the string *xxxxxbd*:
+
+ The rule *A* will recognize *xxxxxb* (by first descending into *X* to recognize one *x*, and again descending into *X* until all the *x*&#39;s are consumed, and then recognizing the *b*), and then return to *S*, and fail to recognize a *c*. The next clause of *S* will then descend into B, which in turn **again descends into *X*** and recognizes the *x*&#39;s by means of many recursive calls to *X*, and then a *b*, and returns to *S* and finally recognizes a *d*.
+
+The key concept here is inherent in the phrase **again descends into *X***. The process of looking forward, failing, backing up, and then retrying the next alternative is known in parsing as backtracking, and it is primarily backtracking that presents opportunities for memoization in parsing. Consider a function `RuleAcceptsSomeInput(Rule, Position, Input)`, where the parameters are as follows:
+
+- `Rule` is the name of the rule under consideration.
+- `Position` is the offset currently under consideration in the input.
+- `Input` is the input under consideration.
+
+Let the return value of the function `RuleAcceptsSomeInput` be the length of the input accepted by `Rule`, or 0 if that rule does not accept any input at that offset in the string. In a backtracking scenario with such memoization, the parsing process is as follows:
+
+ When the rule *A* descends into *X* at offset 0, it memoizes the length 5 against that position and the rule *X*. After having failed at *d*, *B* then, rather than descending again into *X*, queries the position 0 against rule *X* in the memoization engine, and is returned a length of 5, thus saving having to actually descend again into *X*, and carries on *as if* it had descended into *X* as many times as before.
+
+In the above example, one or *many* descents into *X* may occur, allowing for strings such as *xxxxxxxxxxxxxxxxbd*. In fact, there may be *any number* of *x*&#39;s before the *b*. While the call to S must recursively descend into X as many times as there are *x*&#39;s, *B* will never have to descend into X at all, since the return value of `RuleAcceptsSomeInput(X, 0, xxxxxxxxxxxxxxxxbd)` will be 16 (in this particular case).
+
+Those parsers that make use of [syntactic predicates](https://en.wikipedia.org/wiki/Syntactic_predicate) are also able to memoize the results of predicate parses, as well, thereby reducing such constructions as:
+
+```
+S → (A)? A
+A → /* some rule */
+```
+
+to one descent into *A*.
+
+If a parser builds a [parse tree](https://en.wikipedia.org/wiki/Parse_tree) during a parse, it must memoize not only the *length* of the input that matches at some offset against a given rule, but also must store the sub-tree that is generated by that rule at that offset in the input, since subsequent calls to the rule by the parser will not actually descend and rebuild that tree. For the same reason, memoized parser algorithms that generate calls to external code (sometimes called a [semantic action routine](https://en.wikipedia.org/wiki/Semantic_action_routine)) when a rule matches must use some scheme to ensure that such rules are invoked in a predictable order.
+
+Since, for any given backtracking or syntactic predicate capable parser not every grammar will *need* backtracking or predicate checks, the overhead of storing each rule&#39;s parse results against every offset in the input (and storing the parse tree if the parsing process does that implicitly) may actually *slow down* a parser. This effect can be mitigated by explicit selection of those rules the parser will memoize.[[14]](https://en.wikipedia.org/wiki/Memoization#cite_note-AcarEtAl2003-14)
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=7)]
+- [Approximate computing](https://en.wikipedia.org/wiki/Approximate_computing) – category of techniques to improve efficiency
+- [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory) – more information on algorithm complexity
+- [Director string](https://en.wikipedia.org/wiki/Director_string) – rapidly locating free variables in expressions
+- [Flyweight pattern](https://en.wikipedia.org/wiki/Flyweight_pattern) – an object programming [design pattern](https://en.wikipedia.org/wiki/Design_pattern_(computer_science)), that also uses a kind of memoization
+- [Hashlife](https://en.wikipedia.org/wiki/Hashlife) – a memoizing technique to speed up the computation of [cellular automata](https://en.wikipedia.org/wiki/Cellular_automata)
+- [Lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation) – shares some concepts with memoization
+- [Materialized view](https://en.wikipedia.org/wiki/Materialized_view) – analogous caching in database queries
+- [Partial evaluation](https://en.wikipedia.org/wiki/Partial_evaluation) – a related technique for automatic program optimization
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=8)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-1) [3](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-2) Norvig, Peter (1991). [&quot;Techniques for Automatic Memoization with Applications to Context-Free Parsing&quot;](https://dl.acm.org/doi/abs/10.5555/971738.971743). *Computational Linguistics*. **17** (1): 91–98.
+2. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-2) Warren, David S. (1992-03-01). [&quot;Memoing for logic programs&quot;](https://doi.org/10.1145%2F131295.131299). *Communications of the ACM*. **35** (3): 93–111. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/131295.131299](https://doi.org/10.1145%2F131295.131299). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0001-0782](https://search.worldcat.org/issn/0001-0782).
+3. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Michie1968_3-0) Michie, Donald (1968). [&quot;&#39;Memo&#39; Functions and Machine Learning&quot;](https://www.cs.utexas.edu/users/hunt/research/hash-cons/hash-cons-papers/michie-memo-nature-1968.pdf) (PDF). *[Nature](https://en.wikipedia.org/wiki/Nature_(journal))*. **218** (5136): 19–22. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1968Natur.218...19M](https://ui.adsabs.harvard.edu/abs/1968Natur.218...19M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1038/218019a0](https://doi.org/10.1038%2F218019a0). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [4265138](https://api.semanticscholar.org/CorpusID:4265138).
+4. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Hoffman1992_4-0) Hoffman, Berthold (1992). &quot;Term Rewriting with Sharing and Memoïzation&quot;. In Kirchner, H.; Levi, G. (eds.). *Algebraic and Logic Programming: Third International Conference, Proceedings, Volterra, Italy, 2–4 September 1992*. Lecture Notes in Computer Science. Vol. 632. Berlin: Springer. pp. 128–142. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BFb0013824](https://doi.org/10.1007%2FBFb0013824). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-540-55873-6](https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-55873-6).
+5. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-MayfieldEtAl1995_5-0) Mayfield, James; et al. (1995). [&quot;Using Automatic Memoization as a Software Engineering Tool in Real-World AI Systems&quot;](http://ebiquity.umbc.edu/get/a/publication/799.pdf) (PDF). *Proceedings of the Eleventh IEEE Conference on Artificial Intelligence for Applications (CAIA &#39;95)*. pp. 87–93. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1109/CAIA.1995.378786](https://doi.org/10.1109%2FCAIA.1995.378786). [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[11603/12722](https://hdl.handle.net/11603%2F12722). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-8186-7070-3](https://en.wikipedia.org/wiki/Special:BookSources/0-8186-7070-3). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [8963326](https://api.semanticscholar.org/CorpusID:8963326).
+6. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-perl-firstclass_6-0) [&quot;Bricolage: Memoization&quot;](http://perl.plover.com/MiniMemoize/memoize.html).
+7. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost1996_7-0) Frost, Richard; Szydlowski, Barbara (1996). [&quot;Memoizing Purely Functional Top-Down Backtracking Language Processors&quot;](https://doi.org/10.1016%2F0167-6423%2896%2900014-7). *Sci. Comput. Program*. **27** (3): 263–288. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0167-6423(96)00014-7](https://doi.org/10.1016%2F0167-6423%2896%2900014-7).
+8. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost1994_8-0) Frost, Richard (1994). &quot;Using Memoization to Achieve Polynomial Complexity of Purely Functional Executable Specifications of Non-Deterministic Top-Down Parsers&quot;. *SIGPLAN Notices*. **29** (4): 23–30. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/181761.181764](https://doi.org/10.1145%2F181761.181764). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [10616505](https://api.semanticscholar.org/CorpusID:10616505).
+9. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost2003_9-0) Frost, Richard (2003). &quot;Monadic Memoization towards Correctness-Preserving Reduction of Search&quot;. *Canadian Conference on AI 2003*. Lecture Notes in Computer Science. Vol. 2671. pp. 66–80. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/3-540-44886-1_8](https://doi.org/10.1007%2F3-540-44886-1_8). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-540-40300-5](https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-40300-5).
+10. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson1995_10-0) Johnson, Mark (1995). &quot;Memoization of Top-Down Parsing&quot;. *Computational Linguistics*. **21** (3): 405–417. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[cmp-lg/9504016](https://arxiv.org/abs/cmp-lg/9504016). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1995cmp.lg....4016J](https://ui.adsabs.harvard.edu/abs/1995cmp.lg....4016J).
+11. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson&amp;Dorre_11-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson&amp;Dorre_11-1) Johnson, Mark &amp; Dörre, Jochen (1995). &quot;Memoization of Coroutined Constraints&quot;. *Proceedings of the 33rd Annual Meeting of the Association for Computational Linguistics*. Cambridge, Massachusetts. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[cmp-lg/9504028](https://arxiv.org/abs/cmp-lg/9504028).`{{cite book}}`: CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+12. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Ford2002_12-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Ford2002_12-1) Ford, Bryan (2002). *Packrat Parsing: a Practical Linear-Time Algorithm with Backtracking* (Master’s thesis). Massachusetts Institute of Technology. [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[1721.1/87310](https://hdl.handle.net/1721.1%2F87310).
+13. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Tomita1985_13-0) [Tomita, Masaru](https://en.wikipedia.org/wiki/Masaru_Tomita) (1985). *Efficient Parsing for Natural Language*. Boston: Kluwer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-89838-202-5](https://en.wikipedia.org/wiki/Special:BookSources/0-89838-202-5).
+14. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-AcarEtAl2003_14-0) Acar, Umut A.; et al. (2003). &quot;Selective Memoization&quot;. *Proceedings of the 30th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, 15–17 January 2003*. Vol. 38. New Orleans, Louisiana. pp. 14–25. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1106.0447](https://arxiv.org/abs/1106.0447). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/640128.604133](https://doi.org/10.1145%2F640128.604133). `{{cite book}}`: `|journal=` ignored ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#periodical_ignored))CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=9)]   [![Wiktionary logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wiktionary-logo-en-v2.svg) Look up ***[memoization](https://en.wiktionary.org/wiki/Special:Search/memoization)*** in Wiktionary, the free dictionary.  Examples of memoization in various programming languages
+- [groovy.lang.Closure#memoize()](https://web.archive.org/web/20150302033735/http://groovy.codehaus.org/api/groovy/lang/Closure.html#memoize()) – Memoize is an [Apache Groovy](https://en.wikipedia.org/wiki/Groovy_(programming_language)) 1.8 language feature.
+- [Memoize](http://www.cliki.net/memoize) – Memoize is a small library, written by Tim Bradshaw, for performing memoization in [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp).
+- [IncPy](http://www.pgbovine.net/incpy.html) – A custom [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) interpreter that performs automatic memoization (with no required user annotations)
+- Dave Herman&#39;s [Macros for defining memoized procedures](http://planet.racket-lang.org/display.ss?package=memoize.plt&amp;owner=dherman) in [Racket](https://en.wikipedia.org/wiki/Racket_(programming_language)).
+- [Memoize.pm](https://metacpan.org/module/Memoize) – a [Perl module](https://en.wikipedia.org/wiki/Perl_module) that implements memoized functions.
+- [Java memoization](https://web.archive.org/web/20180506230333/http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html) – an example in Java using dynamic proxy classes to create a generic memoization pattern. ( archived version of [http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html](http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html) ).
+- [memoization.java](https://github.com/sebhoss/memoization.java) - A Java memoization library.
+- C++Memo[[link removed](https://en.wikipedia.org/wiki/Wikipedia:ATODAY)] – A [C++](https://en.wikipedia.org/wiki/C++) memoization framework.
+- [C-Memo](https://sourceforge.net/projects/c-memo/) – Generic memoization library for C, implemented using pre-processor function wrapper macros.
+- [Tek271 Memoizer](https://github.com/ahabra/memoize) – Open source Java memoizer using annotations and pluggable cache implementations.
+- [memoizable](https://github.com/dkubb/memoizable) – A [Ruby](https://en.wikipedia.org/wiki/Ruby_programming_language) gem that implements memoized methods.
+- [Python memoization](http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52201) – A [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) example of memoization.
+- [OCaml memoization](https://web.archive.org/web/20120106065126/http://martin.jambon.free.fr/309/pa_memo.ml.html) – Implemented as a [Camlp4](https://en.wikipedia.org/wiki/Camlp4) syntax extension.
+- [Memoization in Lua](http://lua-users.org/wiki/FuncTables) – Two example implementations of a general memoize function in [Lua](https://en.wikipedia.org/wiki/Lua_(programming_language)).
+- [Memoization in Mathematica](http://szhorvat.net/pelican/memoization-in-mathematica.html) – Memoization and limited memoization in [Mathematica](https://en.wikipedia.org/wiki/Mathematica).
+- Memoization in Javascript[[link removed](https://en.wikipedia.org/wiki/Wikipedia:ATODAY)] – Extending the Function prototype in [JavaScript](https://en.wikipedia.org/wiki/JavaScript) ( archived version of [http://talideon.com/weblog/2005/07/javascript-memoization.cfm](https://talideon.com/weblog/2005/07/javascript-memoization.cfm) ).
+- [Memoization in Javascript](http://odhyan.com/blog/2010/09/caching-in-javascript-yui-cache/) – Examples of memoization in javascript using own caching mechanism and using the YUI library
+- [X-SAIGA](http://www.cs.uwindsor.ca/~hafiz/proHome.html) – eXecutable SpecificAtIons of GrAmmars. Contains publications related to top-down parsing algorithm that supports left-recursion and ambiguity in polynomial time and space.
+- [Memoization in Scheme](http://codeimmersion.i3ci.hampshire.edu/2009/10/09/memoization/) – A [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language)) example of memoization on a class webpage.
+- [Memoization in Combinatory Logic](https://code.google.com/p/clache/) – A web service to reduce [Combinatory Logic](https://en.wikipedia.org/wiki/Combinatory_Logic) while memoizing every step in a database.
+- [MbCache](https://code.google.com/p/mbcache/) – Cache method results in [.NET](https://en.wikipedia.org/wiki/.NET_Framework).
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Parsers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Parsers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Parsers)
+[Parsing algorithms](https://en.wikipedia.org/wiki/Parsing)[Top-down](https://en.wikipedia.org/wiki/Top-down_parsing)
+- [Earley](https://en.wikipedia.org/wiki/Earley_parser)
+- [LL](https://en.wikipedia.org/wiki/LL_parser)
+- [Recursive descent](https://en.wikipedia.org/wiki/Recursive_descent_parser) [Tail recursive](https://en.wikipedia.org/wiki/Tail_recursive_parser)
+ [Bottom-up](https://en.wikipedia.org/wiki/Bottom-up_parsing)
+- Precedence [Simple](https://en.wikipedia.org/wiki/Simple_precedence_parser) [Operator](https://en.wikipedia.org/wiki/Operator-precedence_parser) [Shunting-yard](https://en.wikipedia.org/wiki/Shunting_yard_algorithm)
+- [LR](https://en.wikipedia.org/wiki/LR_parser) [Simple](https://en.wikipedia.org/wiki/Simple_LR_parser) [Look-ahead](https://en.wikipedia.org/wiki/LALR_parser) [Canonical](https://en.wikipedia.org/wiki/Canonical_LR_parser) [Generalized](https://en.wikipedia.org/wiki/GLR_parser)
+- [CYK](https://en.wikipedia.org/wiki/CYK_algorithm)
+- [Recursive ascent](https://en.wikipedia.org/wiki/Recursive_ascent_parser)
+- [Shift-reduce](https://en.wikipedia.org/wiki/Shift-reduce_parser)
+ Mixed, other
+- [Combinator](https://en.wikipedia.org/wiki/Parser_combinator)
+- [Chart](https://en.wikipedia.org/wiki/Chart_parser) [Left corner](https://en.wikipedia.org/wiki/Left_corner_parser)
+- Statistical
+ Related topics
+- [PEG](https://en.wikipedia.org/wiki/Parsing_expression_grammar)
+- [Definite clause grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar)
+- [Deterministic parsing](https://en.wikipedia.org/wiki/Deterministic_parsing)
+- [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
+- [Memoization](https://en.wikipedia.org/wiki/Memoization)
+- [Parser generator](https://en.wikipedia.org/wiki/Compiler-compiler) [LALR](https://en.wikipedia.org/wiki/LALR_parser_generator)
+- [Parse tree](https://en.wikipedia.org/wiki/Parse_tree)
+- [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
+- [Scannerless parsing](https://en.wikipedia.org/wiki/Scannerless_parsing)
+- [History of compiler construction](https://en.wikipedia.org/wiki/History_of_compiler_construction)
+- [Comparison of parser generators](https://en.wikipedia.org/wiki/Comparison_of_parser_generators)
+- [Operator-precedence grammar](https://en.wikipedia.org/wiki/Operator-precedence_grammar)
+ ![](https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail) [Category](https://en.wikipedia.org/wiki/Category:Parsing_algorithms)         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Memoization&amp;oldid=1371985897](https://en.wikipedia.org/w/index.php?title=Memoization&amp;oldid=1371985897)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Software optimization](https://en.wikipedia.org/wiki/Category:Software_optimization)
+- [Computer performance](https://en.wikipedia.org/wiki/Category:Computer_performance)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [All articles with failed verification](https://en.wikipedia.org/wiki/Category:All_articles_with_failed_verification)
+- [Articles with failed verification from September 2025](https://en.wikipedia.org/wiki/Category:Articles_with_failed_verification_from_September_2025)
+- [Articles containing Latin-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_Latin-language_text)
+- [Wikipedia articles needing clarification from March 2026](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2026)
+- [Articles to be expanded from April 2014](https://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_April_2014)
+- [All articles to be expanded](https://en.wikipedia.org/wiki/Category:All_articles_to_be_expanded)
+- [CS1 maint: location missing publisher](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from December 2017](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2017)
+- [CS1 errors: periodical ignored](https://en.wikipedia.org/wiki/Category:CS1_errors:_periodical_ignored)
+- [Deprecated archive template links](https://en.wikipedia.org/wiki/Category:Deprecated_archive_template_links)
+
+    [https://en\.wikipedia\.org/wiki/Memoization?action=edit](https://en.wikipedia.org/wiki/Memoization?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Memoization#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Memoization</h3><pre># Memoization
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%B8%D9%87%D8%A7%D8%B1)
+- [Català](https://ca.wikipedia.org/wiki/Memoitzaci%C3%B3)
+- [Deutsch](https://de.wikipedia.org/wiki/Memoisation)
+- [Español](https://es.wikipedia.org/wiki/Memoizaci%C3%B3n)
+- [فارسی](https://fa.wikipedia.org/wiki/%D8%A8%D9%87%E2%80%8C%D8%AE%D8%A7%D8%B7%D8%B1%D8%B3%D9%BE%D8%A7%D8%B1%DB%8C_(%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D8%B4))
+- [Français](https://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation)
+- [Italiano](https://it.wikipedia.org/wiki/Memoizzazione)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98)
+- [Nederlands](https://nl.wikipedia.org/wiki/Memoization)
+- [Português](https://pt.wikipedia.org/wiki/Memoiza%C3%A7%C3%A3o)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F)
+- [Simple English](https://simple.wikipedia.org/wiki/Memoization)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%98%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/Memoisation)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B3_(%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C))
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D1%97%D0%B7%D0%B0%D1%86%D1%96%D1%8F)
+- [中文](https://zh.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1376168#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Software programming optimization technique Not to be confused with [Memorization](https://en.wikipedia.org/wiki/Memorization).
+
+In [computing](https://en.wikipedia.org/wiki/Computing), **memoization** or **memoisation** is an [optimization](https://en.wikipedia.org/wiki/Optimization_(computer_science)) technique used primarily to speed up [computer programs](https://en.wikipedia.org/wiki/Computer_programs). It works by storing the results of expensive [calls](https://en.wikipedia.org/wiki/Subroutine) to [pure functions](https://en.wikipedia.org/wiki/Pure_function), so that these results can be returned quickly should the same inputs occur again. It is a type of [caching](https://en.wikipedia.org/wiki/Cache_(computing)), normally implemented using a [hash table](https://en.wikipedia.org/wiki/Hash_table). It is a typical example of a [space–time tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff), where the runtime of a program is reduced by increasing its memory usage. Memoization can be implemented in any programming language, though some languages have built-in support that make it easy for the programmer to memoize a function, and others memoize certain functions by default.
+
+Memoization has also been used in other contexts (and for purposes other than speed gains), such as in simple [mutually recursive](https://en.wikipedia.org/wiki/Mutual_recursion) descent parsing.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) In the context of some [logic programming](https://en.wikipedia.org/wiki/Logic_programming) languages, memoization is also known as [tabling](https://en.wikipedia.org/wiki/Tabling).[[2]](https://en.wikipedia.org/wiki/Memoization#cite_note-2)
+</pre></article><article id="section-0003"><h3>Etymology</h3><pre># Etymology
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=1)]
+
+The term *memoization* was coined by [Donald Michie](https://en.wikipedia.org/wiki/Donald_Michie) in 1968[[3]](https://en.wikipedia.org/wiki/Memoization#cite_note-Michie1968-3)[*[failed verification](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)*] and is derived from the [Latin](https://en.wikipedia.org/wiki/Latin) word *[memorandum](https://en.wikipedia.org/wiki/Memorandum)* (&#39;to be remembered&#39;), usually truncated as *memo* in American English, and thus carries the meaning of &#39;turning [the results of] a function into something to be remembered&#39;. While *memoization* might be confused with *[memorization](https://en.wikipedia.org/wiki/Memorization)* (because they are etymological [cognates](https://en.wikipedia.org/wiki/Cognate)), *memoization* has a specialized meaning in computing.
+</pre></article><article id="section-0004"><h3>Overview</h3><pre># Overview
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=2)]
+
+A memoized function, when called with a given set of inputs for the first time, stores the inputs along with the computed results. Upon subsequent calls with remembered inputs, the function returns the remembered results rather than recomputing them, thus eliminating the cost of a recomputation. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set,[*[clarification needed](https://en.wikipedia.org/wiki/Wikipedia:Please_clarify)*] depending on the nature of the function and its use. A function can only be memoized if it is [referentially transparent](https://en.wikipedia.org/wiki/Referential_transparency); that is, only if calling the function has exactly the same effect as replacing that function call with its return value. (Special case exceptions to this restriction exist, however.) While related to [lookup tables](https://en.wikipedia.org/wiki/Lookup_table), since memoization often uses such tables in its implementation, memoization populates its cache of results transparently on the fly, rather than needing them to be supplied in advance.
+
+Memoized functions are optimized for *speed* in exchange for a higher use of [computer memory](https://en.wikipedia.org/wiki/Computer_memory) *space*. The time/space &quot;cost&quot; of [algorithms](https://en.wikipedia.org/wiki/Algorithm) has a specific name in computing: *[computational complexity](https://en.wikipedia.org/wiki/Computational_complexity_theory)*. All functions have a computational complexity in *time* (i.e. they take time to execute) and in *space*.
+
+Although a [space–time tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff) occurs (i.e., space used is speed gained), this differs from some other optimizations that involve time-space trade-off, such as [strength reduction](https://en.wikipedia.org/wiki/Strength_reduction), in that memoization is a [run-time](https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)) rather than [compile-time](https://en.wikipedia.org/wiki/Compile-time) optimization. Moreover, strength reduction potentially replaces a costly operation such as multiplication with a less costly operation such as addition, and the results in savings can be highly [machine-dependent](https://en.wikipedia.org/wiki/Machine-dependent) (non-portable across machines), whereas memoization is a more machine-independent, [cross-platform](https://en.wikipedia.org/wiki/Cross-platform) strategy.
+
+Consider the following [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) function to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of *n*:
+
+```
+function factorial (n is a non-negative integer)
+    if n is 0 then
+        return 1 [by the convention that 0! = 1]
+    else
+        return factorial(n – 1) times n [recursively invoke factorial
+                                        with the parameter 1 less than n]
+    end if
+end function
+```
+
+For every [integer](https://en.wikipedia.org/wiki/Integer) *n* such that `n ≥ 0`, the final result of the function `factorial` is [invariant](https://en.wikipedia.org/wiki/Invariant_(computer_science)); if invoked as `x = factorial(3)`, the result is such that *x* will *always* be assigned the value 6. The non-memoized implementation above, given the nature of the [recursive](https://en.wikipedia.org/wiki/Recursion) algorithm involved, would require *n + 1* invocations of `factorial` to arrive at a result, and each of these invocations, in turn, has an associated cost in the time it takes the function to return the value computed. Depending on the machine, this cost might be the sum of:
+
+1. The cost to set up the functional call stack frame.
+2. The cost to compare *n* to 0.
+3. The cost to subtract 1 from *n*.
+4. The cost to set up the recursive call stack frame. (As above.)
+5. The cost to multiply the result of the recursive call to `factorial` by *n*.
+6. The cost to store the return result so that it may be used by the calling context.
+
+In a non-memoized implementation, *every* top-level call to `factorial` includes the cumulative cost of steps 2 through 6 proportional to the initial value of *n*.
+
+A memoized version of the `factorial` function follows:
+
+```
+function factorial (n is a non-negative integer)
+    if n is 0 then
+        return 1 [by the convention that 0! = 1]
+    else if n is in lookup-table then
+        return lookup-table-value-for-n
+    else
+        let x = factorial(n – 1) times n [recursively invoke factorial
+                                         with the parameter 1 less than n]
+        store x in lookup-table in the nth slot [remember the result of n! for later]
+        return x
+    end if
+end function
+```
+
+In this particular example, if `factorial` is first invoked with 5, and then invoked later with any value less than or equal to five, those return values will also have been memoized, since `factorial` will have been called recursively with the values 5, 4, 3, 2, 1, and 0, and the return values for *each* of those will have been stored. If it is then called with a number greater than 5, such as 7, only 2 recursive calls will be made (7 and 6), and the value for 5! will have been stored from the previous call. In this way, memoization allows a function to become more time-efficient the more often it is called, thus resulting in eventual overall speed-up.
+
+An extreme example of memoization is the [Singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern), specifically the implementation of its getter — a function that creates an object upon the first invocation, caches the instance, and returns the same object on all subsequent invocations.
+</pre></article><article id="section-0005"><h3>Other considerations</h3><pre># Other considerations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=3)]
+</pre></article><article id="section-0006"><h3>Functional programming</h3><pre># Functional programming
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=4)] Main article: [Thunk § Functional programming](https://en.wikipedia.org/wiki/Thunk#Functional_programming) [![\[icon\]](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wiki_letter_w_cropped.svg)This section **needs expansion**. You can help by [adding missing information](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=). *(April 2014)*
+
+Memoization is heavily used in compilers for [functional programming](https://en.wikipedia.org/wiki/Functional_programming) languages, which often use [call by name](https://en.wikipedia.org/wiki/Call_by_name) evaluation strategy. To avoid overhead with calculating argument values, compilers for these languages heavily use auxiliary functions called [thunks](https://en.wikipedia.org/wiki/Thunk) to compute the argument values, and memoize these functions to avoid repeated calculations.
+</pre></article><article id="section-0007"><h3>Automatic memoization</h3><pre># Automatic memoization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=5)]
+
+While memoization may be added to functions *internally* and *explicitly* by a [computer programmer](https://en.wikipedia.org/wiki/Computer_programmer) in much the same way the above memoized version of `factorial` is implemented, referentially transparent functions may also be automatically memoized *externally*.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) The techniques employed by [Peter Norvig](https://en.wikipedia.org/wiki/Peter_Norvig) have application not only in [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp) (the language in which his paper demonstrated automatic memoization), but also in various other [programming languages](https://en.wikipedia.org/wiki/Programming_language). Applications of automatic memoization have also been formally explored in the study of [term rewriting](https://en.wikipedia.org/wiki/Term_rewriting)[[4]](https://en.wikipedia.org/wiki/Memoization#cite_note-Hoffman1992-4) and [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence).[[5]](https://en.wikipedia.org/wiki/Memoization#cite_note-MayfieldEtAl1995-5)
+
+In programming languages where functions are [first-class objects](https://en.wikipedia.org/wiki/First-class_object) (such as [Lua](https://en.wikipedia.org/wiki/Lua_(programming_language)), [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), or [Perl](https://en.wikipedia.org/wiki/Perl)[[6]](https://en.wikipedia.org/wiki/Memoization#cite_note-perl-firstclass-6)), automatic memoization can be implemented by replacing (at run-time) a function with its calculated value once a value has been calculated for a given set of parameters. The function that does this value-for-function-object replacement can generically wrap any referentially transparent function. Consider the following pseudocode (where it is assumed that functions are first-class values):
+
+```
+function memoized-call (F is a function object parameter)
+    if F has no attached array values then
+        allocate an associative array called values;
+        attach values to F;
+    end if;
+
+    if F.values[arguments] is empty then
+        F.values[arguments] = F(arguments);
+    end if;
+
+    return F.values[arguments];
+end function
+```
+
+In order to call an automatically memoized version of `factorial` using the above strategy, rather than calling `factorial` directly, code invokes `memoized-call(factorial)(n)`. Each such call first checks to see if a holder array has been allocated to store results, and if not, attaches that array. If no entry exists at the position `values[arguments]` (where `arguments` are used as the key of the associative array), a *real* call is made to `factorial` with the supplied arguments. Finally, the entry in the array at the key position is returned to the caller.
+
+The above strategy requires *explicit* wrapping at each call to a function that is to be memoized. In those languages that allow [closures](https://en.wikipedia.org/wiki/Closure_(computer_science)), memoization can be effected *implicitly* via a [functor](https://en.wikipedia.org/wiki/Function_object) factory that returns a wrapped memoized function object in a [decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern). In pseudocode, this can be expressed as follows:
+
+```
+function construct-memoized-functor (F is a function object parameter)
+    allocate a function object called memoized-version;
+
+    let memoized-version(arguments) be
+        if self has no attached array values then [self is a reference to this object]
+            allocate an associative array called values;
+            attach values to self;
+        end if;
+
+        if self.values[arguments] is empty then
+            self.values[arguments] = F(arguments);
+        end if;
+
+        return self.values[arguments];
+    end let;
+
+    return memoized-version;
+end function
+```
+
+Rather than call `factorial`, a new function object `memfact` is created as follows:
+
+```
+memfact = construct-memoized-functor(factorial)
+```
+
+The above example assumes that the function `factorial` has already been defined *before* the call to `construct-memoized-functor` is made. From this point forward, `memfact(n)` is called whenever the factorial of *n* is desired. In languages such as Lua, more sophisticated techniques exist which allow a function to be replaced by a new function with the same name, which would permit:
+
+```
+factorial = construct-memoized-functor(factorial)
+```
+
+Essentially, such techniques involve attaching the *original function object* to the created functor and forwarding calls to the original function being memoized via an alias when a call to the actual function is required (to avoid endless [recursion](https://en.wikipedia.org/wiki/Recursion)), as illustrated below:
+
+```
+function construct-memoized-functor (F is a function object parameter)
+    allocate a function object called memoized-version;
+
+    let memoized-version(arguments) be
+        if self has no attached array values then [self is a reference to this object]
+            allocate an associative array called values;
+            attach values to self;
+            allocate a new function object called alias;
+            attach alias to self; [for later ability to invoke F indirectly]
+            self.alias = F;
+        end if;
+
+        if self.values[arguments] is empty then
+            self.values[arguments] = self.alias(arguments); [not a direct call to F]
+        end if;
+
+        return self.values[arguments];
+    end let;
+
+    return memoized-version;
+end function
+```
+
+(Note: Some of the steps shown above may be implicitly managed by the implementation language and are provided for illustration.)
+</pre></article><article id="section-0008"><h3>Parsers</h3><pre># Parsers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=6)]
+
+When a [top-down parser](https://en.wikipedia.org/wiki/Top-down_parsing) tries to parse an [ambiguous](https://en.wikipedia.org/wiki/Syntactic_ambiguity) input with respect to an ambiguous [context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) (CFG), it may need an exponential number of steps (with respect to the length of the input) to try all alternatives of the CFG in order to produce all possible parse trees. This eventually would require exponential memory space. Memoization was explored as a [parsing](https://en.wikipedia.org/wiki/Parsing) strategy in 1991 by Peter Norvig, who demonstrated that an algorithm similar to the use of [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) and state-sets in [Earley&#39;s algorithm](https://en.wikipedia.org/wiki/Earley_parser) (1970), and tables in the [CYK algorithm](https://en.wikipedia.org/wiki/CYK_algorithm) of Cocke, Younger and Kasami, could be generated by introducing automatic memoization to a simple [backtracking](https://en.wikipedia.org/wiki/Backtracking) [recursive descent parser](https://en.wikipedia.org/wiki/Recursive_descent_parser) to solve the problem of exponential time complexity.[[1]](https://en.wikipedia.org/wiki/Memoization#cite_note-Norvig1991-1) The basic idea in Norvig&#39;s approach is that when a parser is applied to the input, the result is stored in a memotable for subsequent reuse if the same parser is ever reapplied to the same input.
+
+Richard Frost and Barbara Szydlowski also used memoization to reduce the exponential time complexity of [parser combinators](https://en.wikipedia.org/wiki/Parser_combinator), describing the result as a memoizing purely functional top-down backtracking language processor.[[7]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost1996-7) Frost showed that basic memoized parser combinators can be used as building blocks to construct complex parsers as executable specifications of CFGs.[[8]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost1994-8)[[9]](https://en.wikipedia.org/wiki/Memoization#cite_note-Frost2003-9)
+
+Memoization was again explored in the context of parsing in 1995 by Mark Johnson and Jochen Dörre.[[10]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson1995-10)[[11]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson&amp;Dorre-11) In 2002, it was examined in considerable depth by Bryan Ford in the form called [packrat parsing](https://en.wikipedia.org/wiki/Packrat_parser).[[12]](https://en.wikipedia.org/wiki/Memoization#cite_note-Ford2002-12)
+
+In 2007, Frost, Hafiz and Callaghan[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*] described a top-down parsing algorithm that uses memoization for refraining redundant computations to accommodate any form of ambiguous CFG in [polynomial](https://en.wikipedia.org/wiki/Polynomial) time ([Θ](https://en.wikipedia.org/wiki/Big_O_notation)(n4) for [left-recursive](https://en.wikipedia.org/wiki/Left_recursion) grammars and Θ(n3) for non left-recursive grammars). Their top-down parsing algorithm also requires polynomial space for potentially exponential ambiguous parse trees by &#39;compact representation&#39; and &#39;local ambiguities grouping&#39;. Their compact representation is comparable with Tomita&#39;s compact representation of [bottom-up parsing](https://en.wikipedia.org/wiki/Bottom-up_parsing).[[13]](https://en.wikipedia.org/wiki/Memoization#cite_note-Tomita1985-13) Their use of memoization is not only limited to retrieving the previously computed results when a parser is applied to a same input position repeatedly (which is essential for polynomial time requirement); it is specialized to perform the following additional tasks:
+
+- The memoization process (which could be viewed as a ‘wrapper’ around any parser execution) accommodates an ever-growing **direct left-recursive** parse by imposing depth restrictions with respect to input length and current input position.
+- The algorithm&#39;s memo-table ‘lookup’ procedure also determines the reusability of a saved result by comparing the saved result&#39;s computational context with the parser&#39;s current context. This contextual comparison is the key to accommodate **indirect (or hidden) left-recursion**.
+- When performing a successful lookup in a memotable, instead of returning the complete result-set, the process only returns the references of the actual result and eventually speeds up the overall computation.
+- During updating the memotable, the memoization process groups the (potentially exponential) ambiguous results and ensures the polynomial space requirement.
+
+Frost, Hafiz and Callaghan also described the implementation of the algorithm in PADL’08[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*] as a set of [higher-order functions](https://en.wikipedia.org/wiki/Higher-order_function) (called [parser combinators](https://en.wikipedia.org/wiki/Parser_combinators)) in [Haskell](https://en.wikipedia.org/wiki/Haskell_(programming_language)), which enables the construction of directly executable specifications of CFGs as language processors. The importance of their polynomial algorithm&#39;s power to accommodate ‘any form of ambiguous CFG’ with top-down parsing is vital with respect to the syntax and semantics analysis during [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing). The [X-SAIGA](http://www.cs.uwindsor.ca/~hafiz/proHome.html) site has more about the algorithm and implementation details.
+
+While Norvig increased the *power* of the parser through memoization, the augmented parser was still as time complex as Earley&#39;s algorithm, which demonstrates a case of the use of memoization for something other than speed optimization. Johnson and Dörre[[11]](https://en.wikipedia.org/wiki/Memoization#cite_note-Johnson&amp;Dorre-11) demonstrate another such non-speed related application of memoization: the use of memoization to delay linguistic constraint resolution to a point in a parse where sufficient information has been accumulated to resolve those constraints. By contrast, in the speed optimization application of memoization, Ford demonstrated that memoization could guarantee that [parsing expression grammars](https://en.wikipedia.org/wiki/Parsing_expression_grammar) could parse in [linear](https://en.wikipedia.org/wiki/Big_O_notation) time even those [languages](https://en.wikipedia.org/wiki/Formal_language) that resulted in worst-case backtracking behavior.[[12]](https://en.wikipedia.org/wiki/Memoization#cite_note-Ford2002-12)
+
+Consider the following [grammar](https://en.wikipedia.org/wiki/Formal_grammar):
+
+```
+S → (A c) | (B d)
+A → X (a|b)
+B → X b
+X → x [X]
+```
+
+(Notation note: In the above example, the [production](https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars) S → (A **c**) | (B **d**) reads: &quot;An *S* is either an *A* followed by a **c** or a *B* followed by a **d**.&quot; The production X → **x** [X] reads &quot;An *X* is an **x** followed by an optional *X*.&quot;)
+
+This grammar generates one of the following three variations of [string](https://en.wikipedia.org/wiki/String_(computer_science)): *xac*, *xbc*, or *xbd* (where *x* here is understood to mean *one or more*x*&#39;s*.) Next, consider how this grammar, used as a parse specification, might effect a top-down, left-right parse of the string *xxxxxbd*:
+
+ The rule *A* will recognize *xxxxxb* (by first descending into *X* to recognize one *x*, and again descending into *X* until all the *x*&#39;s are consumed, and then recognizing the *b*), and then return to *S*, and fail to recognize a *c*. The next clause of *S* will then descend into B, which in turn **again descends into *X*** and recognizes the *x*&#39;s by means of many recursive calls to *X*, and then a *b*, and returns to *S* and finally recognizes a *d*.
+
+The key concept here is inherent in the phrase **again descends into *X***. The process of looking forward, failing, backing up, and then retrying the next alternative is known in parsing as backtracking, and it is primarily backtracking that presents opportunities for memoization in parsing. Consider a function `RuleAcceptsSomeInput(Rule, Position, Input)`, where the parameters are as follows:
+
+- `Rule` is the name of the rule under consideration.
+- `Position` is the offset currently under consideration in the input.
+- `Input` is the input under consideration.
+
+Let the return value of the function `RuleAcceptsSomeInput` be the length of the input accepted by `Rule`, or 0 if that rule does not accept any input at that offset in the string. In a backtracking scenario with such memoization, the parsing process is as follows:
+
+ When the rule *A* descends into *X* at offset 0, it memoizes the length 5 against that position and the rule *X*. After having failed at *d*, *B* then, rather than descending again into *X*, queries the position 0 against rule *X* in the memoization engine, and is returned a length of 5, thus saving having to actually descend again into *X*, and carries on *as if* it had descended into *X* as many times as before.
+
+In the above example, one or *many* descents into *X* may occur, allowing for strings such as *xxxxxxxxxxxxxxxxbd*. In fact, there may be *any number* of *x*&#39;s before the *b*. While the call to S must recursively descend into X as many times as there are *x*&#39;s, *B* will never have to descend into X at all, since the return value of `RuleAcceptsSomeInput(X, 0, xxxxxxxxxxxxxxxxbd)` will be 16 (in this particular case).
+
+Those parsers that make use of [syntactic predicates](https://en.wikipedia.org/wiki/Syntactic_predicate) are also able to memoize the results of predicate parses, as well, thereby reducing such constructions as:
+
+```
+S → (A)? A
+A → /* some rule */
+```
+
+to one descent into *A*.
+
+If a parser builds a [parse tree](https://en.wikipedia.org/wiki/Parse_tree) during a parse, it must memoize not only the *length* of the input that matches at some offset against a given rule, but also must store the sub-tree that is generated by that rule at that offset in the input, since subsequent calls to the rule by the parser will not actually descend and rebuild that tree. For the same reason, memoized parser algorithms that generate calls to external code (sometimes called a [semantic action routine](https://en.wikipedia.org/wiki/Semantic_action_routine)) when a rule matches must use some scheme to ensure that such rules are invoked in a predictable order.
+
+Since, for any given backtracking or syntactic predicate capable parser not every grammar will *need* backtracking or predicate checks, the overhead of storing each rule&#39;s parse results against every offset in the input (and storing the parse tree if the parsing process does that implicitly) may actually *slow down* a parser. This effect can be mitigated by explicit selection of those rules the parser will memoize.[[14]](https://en.wikipedia.org/wiki/Memoization#cite_note-AcarEtAl2003-14)
+</pre></article><article id="section-0009"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=7)]
+- [Approximate computing](https://en.wikipedia.org/wiki/Approximate_computing) – category of techniques to improve efficiency
+- [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory) – more information on algorithm complexity
+- [Director string](https://en.wikipedia.org/wiki/Director_string) – rapidly locating free variables in expressions
+- [Flyweight pattern](https://en.wikipedia.org/wiki/Flyweight_pattern) – an object programming [design pattern](https://en.wikipedia.org/wiki/Design_pattern_(computer_science)), that also uses a kind of memoization
+- [Hashlife](https://en.wikipedia.org/wiki/Hashlife) – a memoizing technique to speed up the computation of [cellular automata](https://en.wikipedia.org/wiki/Cellular_automata)
+- [Lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation) – shares some concepts with memoization
+- [Materialized view](https://en.wikipedia.org/wiki/Materialized_view) – analogous caching in database queries
+- [Partial evaluation](https://en.wikipedia.org/wiki/Partial_evaluation) – a related technique for automatic program optimization
+</pre></article><article id="section-0010"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=8)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-1) [3](https://en.wikipedia.org/wiki/Memoization#cite_ref-Norvig1991_1-2) Norvig, Peter (1991). [&quot;Techniques for Automatic Memoization with Applications to Context-Free Parsing&quot;](https://dl.acm.org/doi/abs/10.5555/971738.971743). *Computational Linguistics*. **17** (1): 91–98.
+2. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-2) Warren, David S. (1992-03-01). [&quot;Memoing for logic programs&quot;](https://doi.org/10.1145%2F131295.131299). *Communications of the ACM*. **35** (3): 93–111. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/131295.131299](https://doi.org/10.1145%2F131295.131299). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0001-0782](https://search.worldcat.org/issn/0001-0782).
+3. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Michie1968_3-0) Michie, Donald (1968). [&quot;&#39;Memo&#39; Functions and Machine Learning&quot;](https://www.cs.utexas.edu/users/hunt/research/hash-cons/hash-cons-papers/michie-memo-nature-1968.pdf) (PDF). *[Nature](https://en.wikipedia.org/wiki/Nature_(journal))*. **218** (5136): 19–22. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1968Natur.218...19M](https://ui.adsabs.harvard.edu/abs/1968Natur.218...19M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1038/218019a0](https://doi.org/10.1038%2F218019a0). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [4265138](https://api.semanticscholar.org/CorpusID:4265138).
+4. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Hoffman1992_4-0) Hoffman, Berthold (1992). &quot;Term Rewriting with Sharing and Memoïzation&quot;. In Kirchner, H.; Levi, G. (eds.). *Algebraic and Logic Programming: Third International Conference, Proceedings, Volterra, Italy, 2–4 September 1992*. Lecture Notes in Computer Science. Vol. 632. Berlin: Springer. pp. 128–142. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BFb0013824](https://doi.org/10.1007%2FBFb0013824). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-540-55873-6](https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-55873-6).
+5. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-MayfieldEtAl1995_5-0) Mayfield, James; et al. (1995). [&quot;Using Automatic Memoization as a Software Engineering Tool in Real-World AI Systems&quot;](http://ebiquity.umbc.edu/get/a/publication/799.pdf) (PDF). *Proceedings of the Eleventh IEEE Conference on Artificial Intelligence for Applications (CAIA &#39;95)*. pp. 87–93. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1109/CAIA.1995.378786](https://doi.org/10.1109%2FCAIA.1995.378786). [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[11603/12722](https://hdl.handle.net/11603%2F12722). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-8186-7070-3](https://en.wikipedia.org/wiki/Special:BookSources/0-8186-7070-3). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [8963326](https://api.semanticscholar.org/CorpusID:8963326).
+6. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-perl-firstclass_6-0) [&quot;Bricolage: Memoization&quot;](http://perl.plover.com/MiniMemoize/memoize.html).
+7. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost1996_7-0) Frost, Richard; Szydlowski, Barbara (1996). [&quot;Memoizing Purely Functional Top-Down Backtracking Language Processors&quot;](https://doi.org/10.1016%2F0167-6423%2896%2900014-7). *Sci. Comput. Program*. **27** (3): 263–288. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0167-6423(96)00014-7](https://doi.org/10.1016%2F0167-6423%2896%2900014-7).
+8. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost1994_8-0) Frost, Richard (1994). &quot;Using Memoization to Achieve Polynomial Complexity of Purely Functional Executable Specifications of Non-Deterministic Top-Down Parsers&quot;. *SIGPLAN Notices*. **29** (4): 23–30. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/181761.181764](https://doi.org/10.1145%2F181761.181764). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [10616505](https://api.semanticscholar.org/CorpusID:10616505).
+9. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Frost2003_9-0) Frost, Richard (2003). &quot;Monadic Memoization towards Correctness-Preserving Reduction of Search&quot;. *Canadian Conference on AI 2003*. Lecture Notes in Computer Science. Vol. 2671. pp. 66–80. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/3-540-44886-1_8](https://doi.org/10.1007%2F3-540-44886-1_8). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-540-40300-5](https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-40300-5).
+10. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson1995_10-0) Johnson, Mark (1995). &quot;Memoization of Top-Down Parsing&quot;. *Computational Linguistics*. **21** (3): 405–417. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[cmp-lg/9504016](https://arxiv.org/abs/cmp-lg/9504016). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1995cmp.lg....4016J](https://ui.adsabs.harvard.edu/abs/1995cmp.lg....4016J).
+11. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson&amp;Dorre_11-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Johnson&amp;Dorre_11-1) Johnson, Mark &amp; Dörre, Jochen (1995). &quot;Memoization of Coroutined Constraints&quot;. *Proceedings of the 33rd Annual Meeting of the Association for Computational Linguistics*. Cambridge, Massachusetts. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[cmp-lg/9504028](https://arxiv.org/abs/cmp-lg/9504028).`{{cite book}}`: CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+12. [Jump up to: 1](https://en.wikipedia.org/wiki/Memoization#cite_ref-Ford2002_12-0) [2](https://en.wikipedia.org/wiki/Memoization#cite_ref-Ford2002_12-1) Ford, Bryan (2002). *Packrat Parsing: a Practical Linear-Time Algorithm with Backtracking* (Master’s thesis). Massachusetts Institute of Technology. [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[1721.1/87310](https://hdl.handle.net/1721.1%2F87310).
+13. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-Tomita1985_13-0) [Tomita, Masaru](https://en.wikipedia.org/wiki/Masaru_Tomita) (1985). *Efficient Parsing for Natural Language*. Boston: Kluwer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-89838-202-5](https://en.wikipedia.org/wiki/Special:BookSources/0-89838-202-5).
+14. [↑](https://en.wikipedia.org/wiki/Memoization#cite_ref-AcarEtAl2003_14-0) Acar, Umut A.; et al. (2003). &quot;Selective Memoization&quot;. *Proceedings of the 30th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, 15–17 January 2003*. Vol. 38. New Orleans, Louisiana. pp. 14–25. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1106.0447](https://arxiv.org/abs/1106.0447). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/640128.604133](https://doi.org/10.1145%2F640128.604133). `{{cite book}}`: `|journal=` ignored ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#periodical_ignored))CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+</pre></article><article id="section-0011"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Memoization&amp;action=edit&amp;section=9)]   [![Wiktionary logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wiktionary-logo-en-v2.svg) Look up ***[memoization](https://en.wiktionary.org/wiki/Special:Search/memoization)*** in Wiktionary, the free dictionary.  Examples of memoization in various programming languages
+- [groovy.lang.Closure#memoize()](https://web.archive.org/web/20150302033735/http://groovy.codehaus.org/api/groovy/lang/Closure.html#memoize()) – Memoize is an [Apache Groovy](https://en.wikipedia.org/wiki/Groovy_(programming_language)) 1.8 language feature.
+- [Memoize](http://www.cliki.net/memoize) – Memoize is a small library, written by Tim Bradshaw, for performing memoization in [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp).
+- [IncPy](http://www.pgbovine.net/incpy.html) – A custom [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) interpreter that performs automatic memoization (with no required user annotations)
+- Dave Herman&#39;s [Macros for defining memoized procedures](http://planet.racket-lang.org/display.ss?package=memoize.plt&amp;owner=dherman) in [Racket](https://en.wikipedia.org/wiki/Racket_(programming_language)).
+- [Memoize.pm](https://metacpan.org/module/Memoize) – a [Perl module](https://en.wikipedia.org/wiki/Perl_module) that implements memoized functions.
+- [Java memoization](https://web.archive.org/web/20180506230333/http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html) – an example in Java using dynamic proxy classes to create a generic memoization pattern. ( archived version of [http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html](http://www.onjava.com/pub/a/onjava/2003/08/20/memoization.html) ).
+- [memoization.java](https://github.com/sebhoss/memoization.java) - A Java memoization library.
+- C++Memo[[link removed](https://en.wikipedia.org/wiki/Wikipedia:ATODAY)] – A [C++](https://en.wikipedia.org/wiki/C++) memoization framework.
+- [C-Memo](https://sourceforge.net/projects/c-memo/) – Generic memoization library for C, implemented using pre-processor function wrapper macros.
+- [Tek271 Memoizer](https://github.com/ahabra/memoize) – Open source Java memoizer using annotations and pluggable cache implementations.
+- [memoizable](https://github.com/dkubb/memoizable) – A [Ruby](https://en.wikipedia.org/wiki/Ruby_programming_language) gem that implements memoized methods.
+- [Python memoization](http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52201) – A [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) example of memoization.
+- [OCaml memoization](https://web.archive.org/web/20120106065126/http://martin.jambon.free.fr/309/pa_memo.ml.html) – Implemented as a [Camlp4](https://en.wikipedia.org/wiki/Camlp4) syntax extension.
+- [Memoization in Lua](http://lua-users.org/wiki/FuncTables) – Two example implementations of a general memoize function in [Lua](https://en.wikipedia.org/wiki/Lua_(programming_language)).
+- [Memoization in Mathematica](http://szhorvat.net/pelican/memoization-in-mathematica.html) – Memoization and limited memoization in [Mathematica](https://en.wikipedia.org/wiki/Mathematica).
+- Memoization in Javascript[[link removed](https://en.wikipedia.org/wiki/Wikipedia:ATODAY)] – Extending the Function prototype in [JavaScript](https://en.wikipedia.org/wiki/JavaScript) ( archived version of [http://talideon.com/weblog/2005/07/javascript-memoization.cfm](https://talideon.com/weblog/2005/07/javascript-memoization.cfm) ).
+- [Memoization in Javascript](http://odhyan.com/blog/2010/09/caching-in-javascript-yui-cache/) – Examples of memoization in javascript using own caching mechanism and using the YUI library
+- [X-SAIGA](http://www.cs.uwindsor.ca/~hafiz/proHome.html) – eXecutable SpecificAtIons of GrAmmars. Contains publications related to top-down parsing algorithm that supports left-recursion and ambiguity in polynomial time and space.
+- [Memoization in Scheme](http://codeimmersion.i3ci.hampshire.edu/2009/10/09/memoization/) – A [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language)) example of memoization on a class webpage.
+- [Memoization in Combinatory Logic](https://code.google.com/p/clache/) – A web service to reduce [Combinatory Logic](https://en.wikipedia.org/wiki/Combinatory_Logic) while memoizing every step in a database.
+- [MbCache](https://code.google.com/p/mbcache/) – Cache method results in [.NET](https://en.wikipedia.org/wiki/.NET_Framework).
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Parsers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Parsers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Parsers)
+[Parsing algorithms](https://en.wikipedia.org/wiki/Parsing)[Top-down](https://en.wikipedia.org/wiki/Top-down_parsing)
+- [Earley](https://en.wikipedia.org/wiki/Earley_parser)
+- [LL](https://en.wikipedia.org/wiki/LL_parser)
+- [Recursive descent](https://en.wikipedia.org/wiki/Recursive_descent_parser) [Tail recursive](https://en.wikipedia.org/wiki/Tail_recursive_parser)
+ [Bottom-up](https://en.wikipedia.org/wiki/Bottom-up_parsing)
+- Precedence [Simple](https://en.wikipedia.org/wiki/Simple_precedence_parser) [Operator](https://en.wikipedia.org/wiki/Operator-precedence_parser) [Shunting-yard](https://en.wikipedia.org/wiki/Shunting_yard_algorithm)
+- [LR](https://en.wikipedia.org/wiki/LR_parser) [Simple](https://en.wikipedia.org/wiki/Simple_LR_parser) [Look-ahead](https://en.wikipedia.org/wiki/LALR_parser) [Canonical](https://en.wikipedia.org/wiki/Canonical_LR_parser) [Generalized](https://en.wikipedia.org/wiki/GLR_parser)
+- [CYK](https://en.wikipedia.org/wiki/CYK_algorithm)
+- [Recursive ascent](https://en.wikipedia.org/wiki/Recursive_ascent_parser)
+- [Shift-reduce](https://en.wikipedia.org/wiki/Shift-reduce_parser)
+ Mixed, other
+- [Combinator](https://en.wikipedia.org/wiki/Parser_combinator)
+- [Chart](https://en.wikipedia.org/wiki/Chart_parser) [Left corner](https://en.wikipedia.org/wiki/Left_corner_parser)
+- Statistical
+ Related topics
+- [PEG](https://en.wikipedia.org/wiki/Parsing_expression_grammar)
+- [Definite clause grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar)
+- [Deterministic parsing](https://en.wikipedia.org/wiki/Deterministic_parsing)
+- [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
+- [Memoization](https://en.wikipedia.org/wiki/Memoization)
+- [Parser generator](https://en.wikipedia.org/wiki/Compiler-compiler) [LALR](https://en.wikipedia.org/wiki/LALR_parser_generator)
+- [Parse tree](https://en.wikipedia.org/wiki/Parse_tree)
+- [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
+- [Scannerless parsing](https://en.wikipedia.org/wiki/Scannerless_parsing)
+- [History of compiler construction](https://en.wikipedia.org/wiki/History_of_compiler_construction)
+- [Comparison of parser generators](https://en.wikipedia.org/wiki/Comparison_of_parser_generators)
+- [Operator-precedence grammar](https://en.wikipedia.org/wiki/Operator-precedence_grammar)
+ ![](https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail) [Category](https://en.wikipedia.org/wiki/Category:Parsing_algorithms)         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Memoization&amp;oldid=1371985897](https://en.wikipedia.org/w/index.php?title=Memoization&amp;oldid=1371985897)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Software optimization](https://en.wikipedia.org/wiki/Category:Software_optimization)
+- [Computer performance](https://en.wikipedia.org/wiki/Category:Computer_performance)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [All articles with failed verification](https://en.wikipedia.org/wiki/Category:All_articles_with_failed_verification)
+- [Articles with failed verification from September 2025](https://en.wikipedia.org/wiki/Category:Articles_with_failed_verification_from_September_2025)
+- [Articles containing Latin-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_Latin-language_text)
+- [Wikipedia articles needing clarification from March 2026](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2026)
+- [Articles to be expanded from April 2014](https://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_April_2014)
+- [All articles to be expanded](https://en.wikipedia.org/wiki/Category:All_articles_to_be_expanded)
+- [CS1 maint: location missing publisher](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from December 2017](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2017)
+- [CS1 errors: periodical ignored](https://en.wikipedia.org/wiki/Category:CS1_errors:_periodical_ignored)
+- [Deprecated archive template links](https://en.wikipedia.org/wiki/Category:Deprecated_archive_template_links)
+
+    [https://en\.wikipedia\.org/wiki/Memoization?action=edit](https://en.wikipedia.org/wiki/Memoization?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

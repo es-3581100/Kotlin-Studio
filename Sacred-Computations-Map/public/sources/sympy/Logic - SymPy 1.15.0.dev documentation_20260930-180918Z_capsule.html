@@ -1,0 +1,3040 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Logic - SymPy 1.15.0.dev documentation — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Logic - SymPy 1.15.0.dev documentation</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://docs.sympy.org/dev/modules/logic.html</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T18:09:18.013Z</div><div class="stat"><b>Records</b><br>14</div><div class="stat"><b>Sections</b><br>8</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 264 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 53557 B · ~13349 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 69069 B · ~17262 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Logic[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.md</code></a> <small>markdown · 78 B · ~20 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Introduction[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 190 B · ~48 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Forming logical expressions[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 7487 B · ~1860 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Boolean functions[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 26303 B · ~6562 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Simplification and equivalence-testing[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 4060 B · ~1013 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Manipulating expressions[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 3526 B · ~879 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Truth tables and related functions[¶](https---docs.sympy.org-dev-modules-logic.md</code></a> <small>markdown · 9497 B · ~2367 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Inference[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.logic.md</code></a> <small>markdown · 2396 B · ~599 tok</small></li><li><a href="#art-0012"><code>artifacts/provenance/source-record.json</code></a> <small>json · 397 B · ~100 tok</small></li><li><a href="#art-0013"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 318 B · ~80 tok</small></li><li><a href="#art-0014"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Logic - SymPy 1.15.0.dev documentation&quot;
+source: https://docs.sympy.org/dev/modules/logic.html
+captured_at: 2026-09-30T18:09:18.013Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 14
+artifact_count: 14
+content_sha256: b262471a6acd47309a37b3bc1668ecbbfebda95942a122bdb6cefb5488a01533
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:264,&quot;sha256&quot;:&quot;53c0b5d7a6329176cce384839723e94a2c640d9d8735409588738e980076da79&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;dev&quot;,&quot;logic&quot;,&quot;sympy&quot;,&quot;013z&quot;,&quot;2026-09-30t18&quot;,&quot;agent&quot;,&quot;canonical&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:53557,&quot;sha256&quot;:&quot;b262471a6acd47309a37b3bc1668ecbbfebda95942a122bdb6cefb5488a01533&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;logic&quot;,&quot;true&quot;,&quot;boolalg&quot;,&quot;https&quot;,&quot;false&quot;,&quot;org&quot;,&quot;dev&quot;],&quot;summary&quot;:&quot;Logic - SymPy 1.15.0.dev documentation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:13349,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:69069,&quot;sha256&quot;:&quot;edfed28cb2eda024eda91579c8b04423cfc1a1a7040d2bd09f71266450b41c25&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:17262,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Logic[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:78,&quot;sha256&quot;:&quot;fcd72350780a4b767f3943532976aec6348c0b1e688dcdb216923996dac45024&quot;,&quot;keywords&quot;:[&quot;logic&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;module-sympy&quot;,&quot;modules&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Logic[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:20,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Introduction[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:190,&quot;sha256&quot;:&quot;0d3975f934b140c5ee87026037cae884143454db85ac86a277f3815c4de8a0ac&quot;,&quot;keywords&quot;:[&quot;introduction&quot;,&quot;logic&quot;,&quot;sympy&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;Introduction[¶](https://docs.sympy.org/dev/modules/logic.html#introduction)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:48,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Forming logical expressions[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7487,&quot;sha256&quot;:&quot;d75bbc18480037a6bad5213c032ca00f57b521cde178a0b29a1e1ca2c071bb86&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;logic&quot;,&quot;https&quot;,&quot;org&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;Forming logical expressions[¶](https://docs.sympy.org/dev/modules/logic.html#forming-logical-expressions)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1860,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Boolean functions[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:26303,&quot;sha256&quot;:&quot;28137fa22b291592f1105b2fb73fae4d9ea3692f8360f2aff6451ffb793747e8&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;true&quot;,&quot;logic&quot;,&quot;false&quot;,&quot;boolalg&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Boolean functions[¶](https://docs.sympy.org/dev/modules/logic.html#boolean-functions)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:6562,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Simplification and equivalence-testing[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4060,&quot;sha256&quot;:&quot;b706175d9bf93b07d75c322dca53617d3d94e9404d8fcf25940b2355193a7766&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;logic&quot;,&quot;https&quot;,&quot;org&quot;,&quot;boolalg&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;],&quot;summary&quot;:&quot;Simplification and equivalence-testing[¶](https://docs.sympy.org/dev/modules/logic.html#simplification-and-equivalence-testing)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1013,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Manipulating expressions[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3526,&quot;sha256&quot;:&quot;a266c58f1574e7881ae1bbef5704c324e6c845e9e080c7f69359221c128e38f3&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;logic&quot;,&quot;boolalg&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;Manipulating expressions[¶](https://docs.sympy.org/dev/modules/logic.html#manipulating-expressions)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:879,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Truth tables and related functions[¶](https---docs.sympy.org-dev-modules-logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:9497,&quot;sha256&quot;:&quot;e389a7a390466ea884715ffe23268df30f16385d89893ebd032ac59c360a3cf1&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;logic&quot;,&quot;boolalg&quot;,&quot;https&quot;,&quot;true&quot;,&quot;variables&quot;,&quot;list&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Truth tables and related functions[¶](https://docs.sympy.org/dev/modules/logic.html#truth-tables-and-related-functions)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2367,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Inference[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.logic.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2396,&quot;sha256&quot;:&quot;789d39a6e2b39a13f0cb96efba4eee183a2d2c9b6830e1b133624fd9fdc372f8&quot;,&quot;keywords&quot;:[&quot;true&quot;,&quot;satisfiable&quot;,&quot;sympy&quot;,&quot;false&quot;,&quot;logic&quot;,&quot;inference&quot;,&quot;all_models&quot;,&quot;model&quot;],&quot;summary&quot;:&quot;Inference[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic.inference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:599,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0012&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:397,&quot;sha256&quot;:&quot;20c036fc44250d2e8901d8e02f1eb3b7648be29b2df9ec2197041bc57a145d9a&quot;,&quot;keywords&quot;:[&quot;logic&quot;,&quot;sympy&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;modules&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:100,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0013&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:318,&quot;sha256&quot;:&quot;2fa2fbe037ec2b6d6cd78f1e582cce434d15ec622a0aaf97714639579902fbb4&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;456&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0014&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T18:09:18.013Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	264	53c0b5d7a6329176cce384839723e94a2c640d9d8735409588738e980076da79	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	13349	53557	b262471a6acd47309a37b3bc1668ecbbfebda95942a122bdb6cefb5488a01533	Logic - SymPy 1.15.0.dev documentation	
+art:0003	index	artifacts/index/page-index.json	supporting	17262	69069	edfed28cb2eda024eda91579c8b04423cfc1a1a7040d2bd09f71266450b41c25	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Logic[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.md	primary	20	78	fcd72350780a4b767f3943532976aec6348c0b1e688dcdb216923996dac45024	Logic[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic)	
+sec:0005	section	artifacts/sections/0002-Introduction[¶](https---docs.sympy.org-dev-modules-logic.md	primary	48	190	0d3975f934b140c5ee87026037cae884143454db85ac86a277f3815c4de8a0ac	Introduction[¶](https://docs.sympy.org/dev/modules/logic.html#introduction)	
+sec:0006	section	artifacts/sections/0003-Forming logical expressions[¶](https---docs.sympy.org-dev-modules-logic.md	primary	1860	7487	d75bbc18480037a6bad5213c032ca00f57b521cde178a0b29a1e1ca2c071bb86	Forming logical expressions[¶](https://docs.sympy.org/dev/modules/logic.html#forming-logical-expressions)	
+sec:0007	section	artifacts/sections/0004-Boolean functions[¶](https---docs.sympy.org-dev-modules-logic.md	primary	6562	26303	28137fa22b291592f1105b2fb73fae4d9ea3692f8360f2aff6451ffb793747e8	Boolean functions[¶](https://docs.sympy.org/dev/modules/logic.html#boolean-functions)	
+sec:0008	section	artifacts/sections/0005-Simplification and equivalence-testing[¶](https---docs.sympy.org-dev-modules-logic.md	primary	1013	4060	b706175d9bf93b07d75c322dca53617d3d94e9404d8fcf25940b2355193a7766	Simplification and equivalence-testing[¶](https://docs.sympy.org/dev/modules/logic.html#simplification-and-equivalence-testing)	
+sec:0009	section	artifacts/sections/0006-Manipulating expressions[¶](https---docs.sympy.org-dev-modules-logic.md	primary	879	3526	a266c58f1574e7881ae1bbef5704c324e6c845e9e080c7f69359221c128e38f3	Manipulating expressions[¶](https://docs.sympy.org/dev/modules/logic.html#manipulating-expressions)	
+sec:0010	section	artifacts/sections/0007-Truth tables and related functions[¶](https---docs.sympy.org-dev-modules-logic.md	primary	2367	9497	e389a7a390466ea884715ffe23268df30f16385d89893ebd032ac59c360a3cf1	Truth tables and related functions[¶](https://docs.sympy.org/dev/modules/logic.html#truth-tables-and-related-functions)	
+sec:0011	section	artifacts/sections/0008-Inference[¶](https---docs.sympy.org-dev-modules-logic.html#module-sympy.logic.md	primary	599	2396	789d39a6e2b39a13f0cb96efba4eee183a2d2c9b6830e1b133624fd9fdc372f8	Inference[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic.inference)	
+art:0012	provenance	artifacts/provenance/source-record.json	supporting	100	397	20c036fc44250d2e8901d8e02f1eb3b7648be29b2df9ec2197041bc57a145d9a	Capture source identity and metadata	
+art:0013	provenance	artifacts/provenance/extraction-record.json	supporting	80	318	2fa2fbe037ec2b6d6cd78f1e582cce434d15ec622a0aaf97714639579902fbb4	Extraction engine and counts	
+art:0014	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre># Logic[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic)
+
+## Introduction[¶](https://docs.sympy.org/dev/modules/logic.html#introduction)
+
+The logic module for SymPy allows to form and manipulate logic expressions using symbolic and Boolean values.
+
+## Forming logical expressions[¶](https://docs.sympy.org/dev/modules/logic.html#forming-logical-expressions)
+
+You can build Boolean expressions with the standard python operators `&amp;` ([`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And)), `|` ([`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or)), `~` ([`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not)):
+
+```
+&gt;&gt;&gt; from sympy import *
+&gt;&gt;&gt; x, y = symbols(&#39;x,y&#39;)
+&gt;&gt;&gt; y | (x &amp; y)
+y | (x &amp; y)
+&gt;&gt;&gt; x | y
+x | y
+&gt;&gt;&gt; ~x
+~x
+```
+
+  Copy to clipboard
+
+You can also form implications with `&gt;&gt;` and `&lt;&lt;`:
+
+```
+&gt;&gt;&gt; x &gt;&gt; y
+Implies(x, y)
+&gt;&gt;&gt; x &lt;&lt; y
+Implies(y, x)
+```
+
+  Copy to clipboard
+
+Like most types in SymPy, Boolean expressions inherit from [`Basic`](https://docs.sympy.org/dev/modules/core.html#sympy.core.basic.Basic):
+
+```
+&gt;&gt;&gt; (y &amp; x).subs({x: True, y: True})
+True
+&gt;&gt;&gt; (x | y).atoms()
+{x, y}
+```
+
+  Copy to clipboard
+
+The logic module also includes the following functions to derive boolean expressions from their truth tables:
+
+   sympy.logic.boolalg.SOPform(*variables*, *minterms*, *dontcares=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2408-L2480)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.SOPform)
+
+The SOPform function uses simplified_pairs and a redundant group- eliminating algorithm to convert the list of all input combos that generate ‘1’ (the minterms) into the smallest sum-of-products form.
+
+The variables must be given as the first argument.
+
+Return a logical [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) function (i.e., the “sum of products” or “SOP” form) that gives the desired outcome. If there are inputs that can be ignored, pass them as a list, too.
+
+The result will be one of the (perhaps many) functions that satisfy the conditions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import SOPform
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; w, x, y, z = symbols(&#39;w x y z&#39;)
+&gt;&gt;&gt; minterms = [[0, 0, 0, 1], [0, 0, 1, 1],
+...             [0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [[0, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(y &amp; z) | (~w &amp; ~x)
+```
+
+  Copy to clipboard
+
+The terms can also be represented as integers:
+
+```
+&gt;&gt;&gt; minterms = [1, 3, 7, 11, 15]
+&gt;&gt;&gt; dontcares = [0, 2, 5]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(y &amp; z) | (~w &amp; ~x)
+```
+
+  Copy to clipboard
+
+They can also be specified using dicts, which does not have to be fully specified:
+
+```
+&gt;&gt;&gt; minterms = [{w: 0, x: 1}, {y: 1, z: 1, x: 0}]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms)
+(x &amp; ~w) | (y &amp; z &amp; ~x)
+```
+
+  Copy to clipboard
+
+Or a combination:
+
+```
+&gt;&gt;&gt; minterms = [4, 7, 11, [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [{w : 0, x : 0, y: 0}, 5]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(w &amp; y &amp; z) | (~w &amp; ~y) | (x &amp; z &amp; ~w)
+```
+
+  Copy to clipboard
+
+See also
+
+[`POSform`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.POSform)
+
+References
+
+   [[R809](https://docs.sympy.org/dev/modules/logic.html#id1)]
+
+[https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm](https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm)
+
+   [[R810](https://docs.sympy.org/dev/modules/logic.html#id2)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+      sympy.logic.boolalg.POSform(*variables*, *minterms*, *dontcares=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2489-L2567)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.POSform)
+
+The POSform function uses simplified_pairs and a redundant-group eliminating algorithm to convert the list of all input combinations that generate ‘1’ (the minterms) into the smallest product-of-sums form.
+
+The variables must be given as the first argument.
+
+Return a logical [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) function (i.e., the “product of sums” or “POS” form) that gives the desired outcome. If there are inputs that can be ignored, pass them as a list, too.
+
+The result will be one of the (perhaps many) functions that satisfy the conditions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import POSform
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; w, x, y, z = symbols(&#39;w x y z&#39;)
+&gt;&gt;&gt; minterms = [[0, 0, 0, 1], [0, 0, 1, 1], [0, 1, 1, 1],
+...             [1, 0, 1, 1], [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [[0, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+z &amp; (y | ~w)
+```
+
+  Copy to clipboard
+
+The terms can also be represented as integers:
+
+```
+&gt;&gt;&gt; minterms = [1, 3, 7, 11, 15]
+&gt;&gt;&gt; dontcares = [0, 2, 5]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+z &amp; (y | ~w)
+```
+
+  Copy to clipboard
+
+They can also be specified using dicts, which does not have to be fully specified:
+
+```
+&gt;&gt;&gt; minterms = [{w: 0, x: 1}, {y: 1, z: 1, x: 0}]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms)
+(x | y) &amp; (x | z) &amp; (~w | ~x)
+```
+
+  Copy to clipboard
+
+Or a combination:
+
+```
+&gt;&gt;&gt; minterms = [4, 7, 11, [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [{w : 0, x : 0, y: 0}, 5]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+(w | x) &amp; (y | ~w) &amp; (z | ~y)
+```
+
+  Copy to clipboard
+
+See also
+
+[`SOPform`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.SOPform)
+
+References
+
+   [[R811](https://docs.sympy.org/dev/modules/logic.html#id3)]
+
+[https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm](https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm)
+
+   [[R812](https://docs.sympy.org/dev/modules/logic.html#id4)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+      sympy.logic.boolalg.ANFform(*variables*, *truthvalues*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2570-L2629)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ANFform)
+
+The ANFform function converts the list of truth values to Algebraic Normal Form (ANF).
+
+The variables must be given as the first argument.
+
+Return True, False, logical [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) function (i.e., the “Zhegalkin monomial”) or logical [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor) function (i.e., the “Zhegalkin polynomial”). When True and False are represented by 1 and 0, respectively, then [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) is multiplication and [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor) is addition.
+
+Formally a “Zhegalkin monomial” is the product (logical And) of a finite set of distinct variables, including the empty set whose product is denoted 1 (True). A “Zhegalkin polynomial” is the sum (logical Xor) of a set of Zhegalkin monomials, with the empty set denoted by 0 (False).
+
+  Parameters:
+
+**variables** : list of variables
+
+**truthvalues** : list of 1’s and 0’s (result column of truth table)
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import ANFform
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; ANFform([x], [1, 0])
+x ^ True
+&gt;&gt;&gt; ANFform([x, y], [0, 1, 1, 1])
+x ^ y ^ (x &amp; y)
+```
+
+  Copy to clipboard
+
+References
+
+   [[R813](https://docs.sympy.org/dev/modules/logic.html#id5)]
+
+[https://en.wikipedia.org/wiki/Zhegalkin_polynomial](https://en.wikipedia.org/wiki/Zhegalkin_polynomial)
+
+## Boolean functions[¶](https://docs.sympy.org/dev/modules/logic.html#boolean-functions)
+
+   class sympy.logic.boolalg.Boolean(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L72-L234)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean)
+
+A Boolean object is an object for which logic operations make sense.
+
+   as_set() → [Set](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L169-L216)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean.as_set)
+
+Rewrites Boolean expression in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Eq, Or, And
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;, real=True)
+&gt;&gt;&gt; Eq(x, 0).as_set()
+{0}
+&gt;&gt;&gt; (x &gt; 0).as_set()
+Interval.open(0, oo)
+&gt;&gt;&gt; And(-2 &lt; x, x &lt; 2).as_set()
+Interval.open(-2, 2)
+&gt;&gt;&gt; Or(x &lt; -2, 2 &lt; x).as_set()
+Union(Interval.open(-oo, -2), Interval.open(2, oo))
+```
+
+  Copy to clipboard          equals(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L139-L163)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean.equals)
+
+Returns `True` if the given formulas have the same truth table. For two formulas to be equal they must have the same literals.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; from sympy import And, Or, Not
+&gt;&gt;&gt; (A &gt;&gt; B).equals(~B &gt;&gt; ~A)
+True
+&gt;&gt;&gt; Not(And(A, B, C)).equals(And(Not(A), Not(B), Not(C)))
+False
+&gt;&gt;&gt; Not(And(A, Not(A))).equals(Or(B, Not(B)))
+False
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.BooleanTrue[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L288-L401)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+SymPy version of `True`, a singleton that can be accessed via `S.true`.
+
+This is the SymPy version of `True`, for use in the logic module. The primary advantage of using `true` instead of `True` is that shorthand Boolean operations like `~` and `&gt;&gt;` will work as expected on this class, whereas with True they act bitwise on 1. Functions in the logic module will return this class when they evaluate to true.
+
+Notes
+
+There is liable to be some confusion as to when `True` should be used and when `S.true` should be used in various contexts throughout SymPy. An important thing to remember is that `sympify(True)` returns `S.true`. This means that for the most part, you can just use `True` and it will automatically be converted to `S.true` when necessary, similar to how you can generally use 1 instead of `S.One`.
+
+The rule of thumb is:
+
+“If the boolean in question can be replaced by an arbitrary symbolic `Boolean`, like `Or(x, y)` or `x &gt; 1`, use `S.true`. Otherwise, use `True`”
+
+In other words, use `S.true` only on those contexts where the boolean is being used as a symbolic representation of truth. For example, if the object ends up in the `.args` of any expression, then it must necessarily be `S.true` instead of `True`, as elements of `.args` must be `Basic`. On the other hand, `==` is not a symbolic operation in SymPy, since it always returns `True` or `False`, and does so in terms of structural equality rather than mathematical, so it should return `True`. The assumptions system should use `True` and `False`. Aside from not satisfying the above rule of thumb, the assumptions system uses a three-valued logic (`True`, `False`, `None`), whereas `S.true` and `S.false` represent a two-valued logic. When in doubt, use `True`.
+
+“`S.true == True is True`.”
+
+While “`S.true is True`” is `False`, “`S.true == True`” is `True`, so if there is any doubt over whether a function or expression will return `S.true` or `True`, just use `==` instead of `is` to do the comparison, and it will work in either case. Finally, for boolean flags, it’s better to just use `if x` instead of `if x is True`. To quote PEP 8:
+
+Do not compare boolean values to `True` or `False` using `==`.
+
+- Yes: `if greeting:`
+- No: `if greeting == True:`
+- Worse: `if greeting is True:`
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import sympify, true, false, Or
+&gt;&gt;&gt; sympify(True)
+True
+&gt;&gt;&gt; _ is True, _ is true
+(False, True)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Or(true, false)
+True
+&gt;&gt;&gt; _ is true
+True
+```
+
+  Copy to clipboard
+
+Python operators give a boolean result for true but a bitwise result for True
+
+```
+&gt;&gt;&gt; ~true, ~True
+(False, -2)
+&gt;&gt;&gt; true &gt;&gt; true, True &gt;&gt; True
+(True, 0)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.logic.boolalg.BooleanFalse`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse)
+
+    as_set()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L389-L401)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue.as_set)
+
+Rewrite logic operators and relationals in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import true
+&gt;&gt;&gt; true.as_set()
+UniversalSet
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.BooleanFalse[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L404-L475)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse)
+
+SymPy version of `False`, a singleton that can be accessed via `S.false`.
+
+This is the SymPy version of `False`, for use in the logic module. The primary advantage of using `false` instead of `False` is that shorthand Boolean operations like `~` and `&gt;&gt;` will work as expected on this class, whereas with `False` they act bitwise on 0. Functions in the logic module will return this class when they evaluate to false.
+
+Notes
+
+See the notes section in [`sympy.logic.boolalg.BooleanTrue`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import sympify, true, false, Or
+&gt;&gt;&gt; sympify(False)
+False
+&gt;&gt;&gt; _ is False, _ is false
+(False, True)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Or(true, false)
+True
+&gt;&gt;&gt; _ is true
+True
+```
+
+  Copy to clipboard
+
+Python operators give a boolean result for false but a bitwise result for False
+
+```
+&gt;&gt;&gt; ~false, ~False
+(True, -1)
+&gt;&gt;&gt; false &gt;&gt; false, False &gt;&gt; False
+(True, 0)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.logic.boolalg.BooleanTrue`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+    as_set()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L464-L475)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse.as_set)
+
+Rewrite logic operators and relationals in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import false
+&gt;&gt;&gt; false.as_set()
+EmptySet
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.And(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L580-L750)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And)
+
+Logical AND function.
+
+It evaluates its arguments in order, returning false immediately when an argument is false and true if they are all true.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; from sympy import And
+&gt;&gt;&gt; x &amp; y
+x &amp; y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `&amp;` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise and. Hence, `And(a, b)` and `a &amp; b` will produce different results if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; And(x, y).subs(x, 1)
+y
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Or(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L753-L869)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or)
+
+Logical OR function
+
+It evaluates its arguments in order, returning true immediately when an argument is true, and false if they are all false.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; from sympy import Or
+&gt;&gt;&gt; x | y
+x | y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `|` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise or. Hence, `Or(a, b)` and `a | b` will return different things if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; Or(x, y).subs(x, 0)
+y
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Not(*arg*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L872-L985)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not)
+
+Logical Not function (negation)
+
+Returns `true` if the statement is `false` or `False`. Returns `false` if the statement is `true` or `True`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Not, And, Or
+&gt;&gt;&gt; from sympy.abc import x, A, B
+&gt;&gt;&gt; Not(True)
+False
+&gt;&gt;&gt; Not(False)
+True
+&gt;&gt;&gt; Not(And(True, False))
+True
+&gt;&gt;&gt; Not(Or(True, False))
+False
+&gt;&gt;&gt; Not(And(And(True, x), Or(x, False)))
+~x
+&gt;&gt;&gt; ~x
+~x
+&gt;&gt;&gt; Not(And(Or(A, B), Or(~A, ~B)))
+~((A | B) &amp; (~A | ~B))
+```
+
+  Copy to clipboard
+
+Notes
+
+- The `~` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise not. In particular, `~a` and `Not(a)` will be different if `a` is an integer. Furthermore, since bools in Python subclass from `int`, `~True` is the same as `~1` which is `-2`, which has a boolean value of True. To avoid this issue, use the SymPy boolean types `true` and `false`.
+- As of Python 3.12, the bitwise not operator `~` used on a Python `bool` is deprecated and will emit a warning.
+
+```
+&gt;&gt;&gt; from sympy import true
+&gt;&gt;&gt; ~True
+-2
+&gt;&gt;&gt; ~true
+False
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Xor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L988-L1123)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor)
+
+Logical XOR (exclusive OR) function.
+
+Returns True if an odd number of the arguments are True and the rest are False.
+
+Returns False if an even number of the arguments are True and the rest are False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Xor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Xor(True, False)
+True
+&gt;&gt;&gt; Xor(True, True)
+False
+&gt;&gt;&gt; Xor(True, False, True, True, False)
+True
+&gt;&gt;&gt; Xor(True, False, True, False)
+False
+&gt;&gt;&gt; x ^ y
+x ^ y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `^` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise xor. In particular, `a ^ b` and `Xor(a, b)` will be different if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; Xor(x, y).subs(y, 0)
+x
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Nand(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1126-L1152)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nand)
+
+Logical NAND function.
+
+It evaluates its arguments in order, giving True immediately if any of them are False, and False if they are all True.
+
+Returns True if any of the arguments are False Returns False if all arguments are True
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Nand
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Nand(False, True)
+True
+&gt;&gt;&gt; Nand(True, True)
+False
+&gt;&gt;&gt; Nand(x, y)
+~(x &amp; y)
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Nor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1155-L1186)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nor)
+
+Logical NOR function.
+
+It evaluates its arguments in order, giving False immediately if any of them are True, and True if they are all False.
+
+Returns False if any argument is True Returns True if all arguments are False
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Nor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Nor(True, False)
+False
+&gt;&gt;&gt; Nor(True, True)
+False
+&gt;&gt;&gt; Nor(False, True)
+False
+&gt;&gt;&gt; Nor(False, False)
+True
+&gt;&gt;&gt; Nor(x, y)
+~(x | y)
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Xnor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1189-L1217)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor)
+
+Logical XNOR function.
+
+Returns False if an odd number of the arguments are True and the rest are False.
+
+Returns True if an even number of the arguments are True and the rest are False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Xnor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Xnor(True, False)
+False
+&gt;&gt;&gt; Xnor(True, True)
+True
+&gt;&gt;&gt; Xnor(True, False, True, True, False)
+False
+&gt;&gt;&gt; Xnor(True, False, True, False)
+True
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Implies(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1220-L1301)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Implies)
+
+Logical implication.
+
+A implies B is equivalent to if A then B. Mathematically, it is written as  and is equivalent to  or `~A | B`.
+
+Accepts two Boolean arguments; A and B. Returns False if A is True and B is False Returns True otherwise.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Implies
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Implies(True, False)
+False
+&gt;&gt;&gt; Implies(False, False)
+True
+&gt;&gt;&gt; Implies(True, True)
+True
+&gt;&gt;&gt; Implies(False, True)
+True
+&gt;&gt;&gt; x &gt;&gt; y
+Implies(x, y)
+&gt;&gt;&gt; y &lt;&lt; x
+Implies(x, y)
+```
+
+  Copy to clipboard
+
+Notes
+
+The `&gt;&gt;` and `&lt;&lt;` operators are provided as a convenience, but note that their use here is different from their normal use in Python, which is bit shifts. Hence, `Implies(a, b)` and `a &gt;&gt; b` will return different things if `a` and `b` are integers. In particular, since Python considers `True` and `False` to be integers, `True &gt;&gt; True` will be the same as `1 &gt;&gt; 1`, i.e., 0, which has a truth value of False. To avoid this issue, use the SymPy objects `true` and `false`.
+
+```
+&gt;&gt;&gt; from sympy import true, false
+&gt;&gt;&gt; True &gt;&gt; False
+1
+&gt;&gt;&gt; true &gt;&gt; false
+False
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Equivalent(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1304-L1380)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Equivalent)
+
+Equivalence relation.
+
+`Equivalent(A, B)` is True iff A and B are both True or both False.
+
+Returns True if all of the arguments are logically equivalent. Returns False otherwise.
+
+For two arguments, this is equivalent to [`Xnor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Equivalent, And
+&gt;&gt;&gt; from sympy.abc import x
+&gt;&gt;&gt; Equivalent(False, False, False)
+True
+&gt;&gt;&gt; Equivalent(True, False, False)
+False
+&gt;&gt;&gt; Equivalent(x, And(x, True))
+True
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.ITE(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1383-L1497)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ITE)
+
+If-then-else clause.
+
+`ITE(A, B, C)` evaluates and returns the result of B if A is true else it returns the result of C. All args must be Booleans.
+
+From a logic gate perspective, ITE corresponds to a 2-to-1 multiplexer, where A is the select signal.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import ITE, And, Xor, Or
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; ITE(True, False, True)
+False
+&gt;&gt;&gt; ITE(Or(True, False), And(True, True), Xor(True, True))
+True
+&gt;&gt;&gt; ITE(x, y, z)
+ITE(x, y, z)
+&gt;&gt;&gt; ITE(True, x, y)
+x
+&gt;&gt;&gt; ITE(False, x, y)
+y
+&gt;&gt;&gt; ITE(x, y, y)
+y
+```
+
+  Copy to clipboard
+
+Trying to use non-Boolean args will generate a TypeError:
+
+```
+&gt;&gt;&gt; ITE(True, [], ())
+Traceback (most recent call last):
+...
+TypeError: expecting bool, Boolean or ITE, not `[]`
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Exclusive(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1500-L1525)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Exclusive)
+
+True if only one or no argument is true.
+
+`Exclusive(A, B, C)` is equivalent to `~(A &amp; B) &amp; ~(A &amp; C) &amp; ~(B &amp; C)`.
+
+For two arguments, this is equivalent to [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Exclusive
+&gt;&gt;&gt; Exclusive(False, False, False)
+True
+&gt;&gt;&gt; Exclusive(False, True, False)
+True
+&gt;&gt;&gt; Exclusive(False, True, True)
+False
+```
+
+  Copy to clipboard
+
+The following functions can be used to handle Algebraic, Conjunctive, Disjunctive, and Negated Normal forms:
+
+   sympy.logic.boolalg.to_anf(*expr*, *deep=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1644-L1685)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_anf)
+
+Converts expr to Algebraic Normal Form (ANF).
+
+ANF is a canonical normal form, which means that two equivalent formulas will convert to the same ANF.
+
+A logical expression is in ANF if it has the form
+
+      i.e. it can be:
+- purely true,
+- purely false,
+- conjunction of variables,
+- exclusive disjunction.
+
+The exclusive disjunction can only contain true, variables or conjunction of variables. No negations are permitted.
+
+If `deep` is `False`, arguments of the boolean expression are considered variables, i.e. only the top-level expression is converted to ANF.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import And, Or, Not, Implies, Equivalent
+&gt;&gt;&gt; from sympy.logic.boolalg import to_anf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; to_anf(Not(A))
+A ^ True
+&gt;&gt;&gt; to_anf(And(Or(A, B), Not(C)))
+A ^ B ^ (A &amp; B) ^ (A &amp; C) ^ (B &amp; C) ^ (A &amp; B &amp; C)
+&gt;&gt;&gt; to_anf(Implies(Not(A), Equivalent(B, C)), deep=False)
+True ^ ~A ^ (~A &amp; (Equivalent(B, C)))
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_cnf(*expr*, *simplify=False*, *force=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1725-L1764)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_cnf)
+
+Convert a propositional logical sentence `expr` to conjunctive normal form: `((A | ~B | ...) &amp; (B | C | ...) &amp; ...)`. If `simplify` is `True`, `expr` is evaluated to its simplest CNF form using the Quine-McCluskey algorithm; this may take a long time. If there are more than 8 variables the `force` flag must be set to `True` to simplify (default is `False`).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_cnf
+&gt;&gt;&gt; from sympy.abc import A, B, D
+&gt;&gt;&gt; to_cnf(~(A | B) | D)
+(D | ~A) &amp; (D | ~B)
+&gt;&gt;&gt; to_cnf((A | B) &amp; (A | ~A), True)
+A | B
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_dnf(*expr*, *simplify=False*, *force=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1767-L1804)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_dnf)
+
+Convert a propositional logical sentence `expr` to disjunctive normal form: `((A &amp; ~B &amp; ...) | (B &amp; C &amp; ...) | ...)`. If `simplify` is `True`, `expr` is evaluated to its simplest DNF form using the Quine-McCluskey algorithm; this may take a long time. If there are more than 8 variables, the `force` flag must be set to `True` to simplify (default is `False`).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_dnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; to_dnf(B &amp; (A | C))
+(A &amp; B) | (B &amp; C)
+&gt;&gt;&gt; to_dnf((A &amp; B) | (A &amp; ~B) | (B &amp; C) | (~B &amp; C), True)
+A | C
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_nnf(*expr*, *simplify=True*, *form=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1688-L1722)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_nnf)
+
+Converts `expr` to Negation Normal Form (NNF).
+
+A logical expression is in NNF if it contains only [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not) is applied only to literals. If `simplify` is `True`, the result contains no redundant clauses.
+
+  Parameters:
+
+**expr** : boolean expression
+
+&gt;
+&gt; The expression to convert to NNF.
+&gt;
+
+**simplify** : bool, optional
+
+&gt;
+&gt; If True, simplify the result. Default is True.
+&gt;
+
+**form** : str, optional
+
+&gt;
+&gt; Target form hint: ‘cnf’ for conjunctive normal form bias,
+&gt; ‘dnf’ for disjunctive normal form bias, or None (default).
+&gt; This hint optimizes XOR conversions.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C, D
+&gt;&gt;&gt; from sympy.logic.boolalg import Not, Equivalent, to_nnf
+&gt;&gt;&gt; to_nnf(Not((~A &amp; ~B) | (C &amp; D)))
+(A | B) &amp; (~C | ~D)
+&gt;&gt;&gt; to_nnf(Equivalent(A &gt;&gt; B, B &gt;&gt; A))
+(A | ~B | (A &amp; ~B)) &amp; (B | ~A | (B &amp; ~A))
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_anf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1807-L1860)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_anf)
+
+Checks if `expr` is in Algebraic Normal Form (ANF).
+
+A logical expression is in ANF if it has the form
+
+i.e. it is purely true, purely false, conjunction of variables or exclusive disjunction. The exclusive disjunction can only contain true, variables or conjunction of variables. No negations are permitted.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import And, Not, Xor, true, is_anf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_anf(true)
+True
+&gt;&gt;&gt; is_anf(A)
+True
+&gt;&gt;&gt; is_anf(And(A, B, C))
+True
+&gt;&gt;&gt; is_anf(Xor(A, Not(B)))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_cnf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1912-L1929)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_cnf)
+
+Test whether or not an expression is in conjunctive normal form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import is_cnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_cnf(A | B | C)
+True
+&gt;&gt;&gt; is_cnf(A &amp; B &amp; C)
+True
+&gt;&gt;&gt; is_cnf((A &amp; B) | C)
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_dnf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1932-L1951)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_dnf)
+
+Test whether or not an expression is in disjunctive normal form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import is_dnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_dnf(A | B | C)
+True
+&gt;&gt;&gt; is_dnf(A &amp; B &amp; C)
+True
+&gt;&gt;&gt; is_dnf((A &amp; B) | C)
+True
+&gt;&gt;&gt; is_dnf(A &amp; (B | C))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_nnf(*expr*, *simplified=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1863-L1909)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_nnf)
+
+Checks if `expr` is in Negation Normal Form (NNF).
+
+A logical expression is in NNF if it contains only [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not) is applied only to literals. If `simplified` is `True`, checks if result contains no redundant clauses.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; from sympy.logic.boolalg import Not, is_nnf
+&gt;&gt;&gt; is_nnf(A &amp; B | ~C)
+True
+&gt;&gt;&gt; is_nnf((A | ~A) &amp; (B | C))
+False
+&gt;&gt;&gt; is_nnf((A | ~A) &amp; (B | C), False)
+True
+&gt;&gt;&gt; is_nnf(Not(A &amp; B) | C)
+False
+&gt;&gt;&gt; is_nnf((A &gt;&gt; B) &amp; (B &gt;&gt; A))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.gateinputcount(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L3565-L3622)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.gateinputcount)
+
+Return the total number of inputs for the logic gates realizing the Boolean expression.
+
+  Returns:
+
+int
+
+&gt;
+&gt; Number of gate inputs
+&gt;
+
+Note
+
+Not all Boolean functions count as gate here, only those that are considered to be standard gates. These are: [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or), [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor), [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`ITE`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ITE) (multiplexer). [`Nand`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nand), [`Nor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nor), and [`Xnor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor) will be evaluated to `Not(And())` etc.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import And, Or, Nand, Not, gateinputcount
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; expr = And(x, y)
+&gt;&gt;&gt; gateinputcount(expr)
+2
+&gt;&gt;&gt; gateinputcount(Or(expr, z))
+4
+```
+
+  Copy to clipboard
+
+Note that `Nand` is automatically evaluated to `Not(And())` so
+
+```
+&gt;&gt;&gt; gateinputcount(Nand(x, y, z))
+4
+&gt;&gt;&gt; gateinputcount(Not(And(x, y, z)))
+4
+```
+
+  Copy to clipboard
+
+Although this can be avoided by using `evaluate=False`
+
+```
+&gt;&gt;&gt; gateinputcount(Nand(x, y, z, evaluate=False))
+3
+```
+
+  Copy to clipboard
+
+Also note that a comparison will count as a Boolean variable:
+
+```
+&gt;&gt;&gt; gateinputcount(And(x &gt; z, y &gt;= 2))
+2
+```
+
+  Copy to clipboard
+
+As will a symbol: &gt;&gt;&gt; gateinputcount(x) 0
+
+## Simplification and equivalence-testing[¶](https://docs.sympy.org/dev/modules/logic.html#simplification-and-equivalence-testing)
+
+   sympy.logic.boolalg.simplify_logic(  *expr*, *form=None*, *deep=True*, *force=False*, *dontcare=None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2812-L2940)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.simplify_logic)
+
+This function simplifies a boolean function to its simplified version in SOP or POS form. The return type is an [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) or [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) object in SymPy.
+
+  Parameters:
+
+**expr** : Boolean
+
+**form** : string (`&#39;cnf&#39;` or `&#39;dnf&#39;`) or `None` (default).
+
+&gt;
+&gt; If &#39;cnf&#39; or &#39;dnf&#39;, the simplest expression in the corresponding
+&gt; normal form is returned; if None, the answer is returned
+&gt; according to the form with fewest args (in CNF by default).
+&gt;
+
+**deep** : bool (default `True`)
+
+&gt;
+&gt; Indicates whether to recursively simplify any
+&gt; non-boolean functions contained within the input.
+&gt;
+
+**force** : bool (default `False`)
+
+&gt;
+&gt; As the simplifications require exponential time in the number
+&gt; of variables, there is by default a limit on expressions with
+&gt; 8 variables. When the expression has more than 8 variables
+&gt; only symbolical simplification (controlled by deep) is
+&gt; made. By setting force to True, this limit is removed. Be
+&gt; aware that this can lead to very long simplification times.
+&gt;
+
+**dontcare** : Boolean
+
+&gt;
+&gt; Optimize expression under the assumption that inputs where this
+&gt; expression is true are don’t care. This is useful in e.g. Piecewise
+&gt; conditions, where later conditions do not need to consider inputs that
+&gt; are converted by previous conditions. For example, if a previous
+&gt; condition is And(A, B), the simplification of expr can be made
+&gt; with don’t cares for And(A, B).
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import simplify_logic
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; b = (~x &amp; ~y &amp; ~z) | ( ~x &amp; ~y &amp; z)
+&gt;&gt;&gt; simplify_logic(b)
+~x &amp; ~y
+&gt;&gt;&gt; simplify_logic(x | y, dontcare=y)
+x
+```
+
+  Copy to clipboard
+
+References
+
+   [[R814](https://docs.sympy.org/dev/modules/logic.html#id6)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+SymPy’s [`simplify()`](https://docs.sympy.org/dev/modules/simplify/simplify.html#sympy.simplify.simplify.simplify) function can also be used to simplify logic expressions to their simplest forms.
+
+   sympy.logic.boolalg.bool_map(*bool1*, *bool2*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L3032-L3114)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_map)
+
+Return the simplified version of *bool1*, and the mapping of variables that makes the two expressions *bool1* and *bool2* represent the same logical behaviour for some correspondence between the variables of each. If more than one mappings of this sort exist, one of them is returned.
+
+For example, `And(x, y)` is logically equivalent to `And(a, b)` for the mapping `{x: a, y: b}` or `{x: b, y: a}`. If no such mapping exists, return `False`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import SOPform, bool_map, Or, And, Not, Xor
+&gt;&gt;&gt; from sympy.abc import w, x, y, z, a, b, c, d
+&gt;&gt;&gt; function1 = SOPform([x, z, y],[[1, 0, 1], [0, 0, 1]])
+&gt;&gt;&gt; function2 = SOPform([a, b, c],[[1, 0, 1], [1, 0, 0]])
+&gt;&gt;&gt; bool_map(function1, function2)
+(y &amp; ~z, {y: a, z: b})
+```
+
+  Copy to clipboard
+
+The results are not necessarily unique, but they are canonical. Here, `(w, z)` could be `(a, d)` or `(d, a)`:
+
+```
+&gt;&gt;&gt; eq =  Or(And(Not(y), w), And(Not(y), z), And(x, y))
+&gt;&gt;&gt; eq2 = Or(And(Not(c), a), And(Not(c), d), And(b, c))
+&gt;&gt;&gt; bool_map(eq, eq2)
+((x &amp; y) | (w &amp; ~y) | (z &amp; ~y), {w: a, x: b, y: c, z: d})
+&gt;&gt;&gt; eq = And(Xor(a, b), c, And(c,d))
+&gt;&gt;&gt; bool_map(eq, eq.subs(c, x))
+(c &amp; d &amp; (a | b) &amp; (~a | ~b), {a: a, b: b, c: d, d: x})
+```
+
+  Copy to clipboard
+
+## Manipulating expressions[¶](https://docs.sympy.org/dev/modules/logic.html#manipulating-expressions)
+
+The following functions can be used to manipulate Boolean expressions:
+
+   sympy.logic.boolalg.distribute_and_over_or(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1565-L1579)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_and_over_or)
+
+Given a sentence `expr` consisting of conjunctions and disjunctions of literals, return an equivalent sentence in CNF.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_and_over_or, And, Or, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_and_over_or(Or(A, And(Not(B), Not(C))))
+(A | ~B) &amp; (A | ~C)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.distribute_or_over_and(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1582-L1598)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_or_over_and)
+
+Given a sentence `expr` consisting of conjunctions and disjunctions of literals, return an equivalent sentence in DNF.
+
+Note that the output is NOT simplified.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_or_over_and, And, Or, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_or_over_and(And(Or(Not(A), B), C))
+(B &amp; C) | (C &amp; ~A)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.distribute_xor_over_and(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1601-L1617)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_xor_over_and)
+
+Given a sentence `expr` consisting of conjunction and exclusive disjunctions of literals, return an equivalent exclusive disjunction.
+
+Note that the output is NOT simplified.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_xor_over_and, And, Xor, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_xor_over_and(And(Xor(Not(A), B), C))
+(B &amp; C) ^ (C &amp; ~A)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.eliminate_implications(*expr*, *form=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1974-L2004)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.eliminate_implications)
+
+Change [`Implies`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Implies) and [`Equivalent`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Equivalent) into [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not). That is, return an expression that is equivalent to `expr`, but has only `&amp;`, `|`, and `~` as logical operators.
+
+  Parameters:
+
+**expr** : boolean expression
+
+&gt;
+&gt; The expression to eliminate implications from.
+&gt;
+
+**form** : str, optional
+
+&gt;
+&gt; Target form hint: ‘cnf’ or ‘dnf’. Passed to to_nnf for optimization.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Implies, Equivalent,          eliminate_implications
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; eliminate_implications(Implies(A, B))
+B | ~A
+&gt;&gt;&gt; eliminate_implications(Equivalent(A, B))
+(A | ~B) &amp; (B | ~A)
+&gt;&gt;&gt; eliminate_implications(Equivalent(A, B, C))
+(A | ~C) &amp; (B | ~A) &amp; (C | ~B)
+```
+
+  Copy to clipboard
+
+## Truth tables and related functions[¶](https://docs.sympy.org/dev/modules/logic.html#truth-tables-and-related-functions)
+
+It is possible to create a truth table for a Boolean function with
+
+   sympy.logic.boolalg.truth_table(*expr*, *variables*, *input=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2094-L2159)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.truth_table)
+
+Return a generator of all possible configurations of the input variables, and the result of the boolean expression for those values.
+
+  Parameters:
+
+**expr** : Boolean expression
+
+**variables** : list of variables
+
+**input** : bool (default `True`)
+
+&gt;
+&gt; Indicates whether to return the input combinations.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import truth_table
+&gt;&gt;&gt; from sympy.abc import x,y
+&gt;&gt;&gt; table = truth_table(x &gt;&gt; y, [x, y])
+&gt;&gt;&gt; for t in table:
+...     print(&#39;{0} -&gt; {1}&#39;.format(*t))
+[0, 0] -&gt; True
+[0, 1] -&gt; True
+[1, 0] -&gt; False
+[1, 1] -&gt; True
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; table = truth_table(x | y, [x, y])
+&gt;&gt;&gt; list(table)
+[([0, 0], False), ([0, 1], True), ([1, 0], True), ([1, 1], True)]
+```
+
+  Copy to clipboard
+
+If `input` is `False`, `truth_table` returns only a list of truth values. In this case, the corresponding input values of variables can be deduced from the index of a given output.
+
+```
+&gt;&gt;&gt; from sympy.utilities.iterables import ibin
+&gt;&gt;&gt; vars = [y, x]
+&gt;&gt;&gt; values = truth_table(x &gt;&gt; y, vars, input=False)
+&gt;&gt;&gt; values = list(values)
+&gt;&gt;&gt; values
+[True, False, True, True]
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; for i, value in enumerate(values):
+...     print(&#39;{0} -&gt; {1}&#39;.format(list(zip(
+...     vars, ibin(i, len(vars)))), value))
+[(y, 0), (x, 0)] -&gt; True
+[(y, 0), (x, 1)] -&gt; False
+[(y, 1), (x, 0)] -&gt; True
+[(y, 1), (x, 1)] -&gt; True
+```
+
+  Copy to clipboard
+
+For mapping between integer representations of truth table positions, lists of zeros and ones and symbols, the following functions can be used:
+
+   sympy.logic.boolalg.integer_to_term(  *n: int*, *bits: int | None = None*, *str: bool = False*,  ) → list[int] | str | [Iterator](https://docs.sympy.org/dev/modules/polys/reference.html#sympy.polys.dispersion.collections.abc.Iterator)[tuple[int, ...]] | [Iterator](https://docs.sympy.org/dev/modules/polys/reference.html#sympy.polys.dispersion.collections.abc.Iterator)[str][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/utilities/iterables.py#L358-L436)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.integer_to_term)
+
+Return a list of length `bits` corresponding to the binary value of `n` with small bits to the right (last). If bits is omitted, the length will be the number required to represent `n`. If the bits are desired in reversed order, use the `[::-1]` slice of the returned list.
+
+If a sequence of all bits-length lists starting from `[0, 0,..., 0]` through `[1, 1, ..., 1]` are desired, pass a non-integer for bits, e.g. `&#39;all&#39;`.
+
+If the bit *string* is desired pass `str=True`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.utilities.iterables import ibin
+&gt;&gt;&gt; ibin(2)
+[1, 0]
+&gt;&gt;&gt; ibin(2, 4)
+[0, 0, 1, 0]
+```
+
+  Copy to clipboard
+
+If all lists corresponding to 0 to 2**n - 1, pass a non-integer for bits:
+
+```
+&gt;&gt;&gt; bits = 2
+&gt;&gt;&gt; for i in ibin(2, &#39;all&#39;):
+...     print(i)
+(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+```
+
+  Copy to clipboard
+
+If a bit string is desired of a given length, use str=True:
+
+```
+&gt;&gt;&gt; n = 123
+&gt;&gt;&gt; bits = 10
+&gt;&gt;&gt; ibin(n, bits, str=True)
+&#39;0001111011&#39;
+&gt;&gt;&gt; ibin(n, bits, str=True)[::-1]  # small bits left
+&#39;1101111000&#39;
+&gt;&gt;&gt; list(ibin(3, &#39;all&#39;, str=True))
+[&#39;000&#39;, &#39;001&#39;, &#39;010&#39;, &#39;011&#39;, &#39;100&#39;, &#39;101&#39;, &#39;110&#39;, &#39;111&#39;]
+```
+
+  Copy to clipboard          sympy.logic.boolalg.term_to_integer(*term*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2068-L2088)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.term_to_integer)
+
+Return an integer corresponding to the base-2 digits given by *term*.
+
+  Parameters:
+
+**term** : a string or list of ones and zeros
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import term_to_integer
+&gt;&gt;&gt; term_to_integer([1, 0, 0])
+4
+&gt;&gt;&gt; term_to_integer(&#39;100&#39;)
+4
+```
+
+  Copy to clipboard          sympy.logic.boolalg.bool_maxterm(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2723-L2756)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_maxterm)
+
+Return the k-th maxterm.
+
+Each maxterm is assigned an index based on the opposite conventional binary encoding used for minterms. The maxterm convention assigns the value 0 to the direct form and 1 to the complemented form.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s (complementation pattern)
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_maxterm
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_maxterm([1, 0, 1], [x, y, z])
+y | ~x | ~z
+&gt;&gt;&gt; bool_maxterm(6, [x, y, z])
+z | ~x | ~y
+```
+
+  Copy to clipboard
+
+References
+
+   [[R815](https://docs.sympy.org/dev/modules/logic.html#id7)]
+
+[https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_maxterms](https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_maxterms)
+
+      sympy.logic.boolalg.bool_minterm(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2687-L2720)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_minterm)
+
+Return the k-th minterm.
+
+Minterms are numbered by a binary encoding of the complementation pattern of the variables. This convention assigns the value 1 to the direct form and 0 to the complemented form.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s (complementation pattern)
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_minterm
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_minterm([1, 0, 1], [x, y, z])
+x &amp; z &amp; ~y
+&gt;&gt;&gt; bool_minterm(6, [x, y, z])
+x &amp; y &amp; ~z
+```
+
+  Copy to clipboard
+
+References
+
+   [[R816](https://docs.sympy.org/dev/modules/logic.html#id8)]
+
+[https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_minterms](https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_minterms)
+
+      sympy.logic.boolalg.bool_monomial(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2759-L2797)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_monomial)
+
+Return the k-th monomial.
+
+Monomials are numbered by a binary encoding of the presence and absences of the variables. This convention assigns the value 1 to the presence of variable and 0 to the absence of variable.
+
+Each boolean function can be uniquely represented by a Zhegalkin Polynomial (Algebraic Normal Form). The Zhegalkin Polynomial of the boolean function with  variables can contain up to  monomials. We can enumerate all the monomials. Each monomial is fully specified by the presence or absence of each variable.
+
+For example, boolean function with four variables `(a, b, c, d)` can contain up to  monomials. The 13-th monomial is the product `a &amp; b &amp; d`, because 13 in binary is 1, 1, 0, 1.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_monomial
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_monomial([1, 0, 1], [x, y, z])
+x &amp; z
+&gt;&gt;&gt; bool_monomial(6, [x, y, z])
+x &amp; y
+```
+
+  Copy to clipboard          sympy.logic.boolalg.anf_coeffs(*truthvalues*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2632-L2684)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.anf_coeffs)
+
+Convert a list of truth values of some boolean expression to the list of coefficients of the polynomial mod 2 (exclusive disjunction) representing the boolean expression in ANF (i.e., the “Zhegalkin polynomial”).
+
+There are  possible Zhegalkin monomials in  variables, since each monomial is fully specified by the presence or absence of each variable.
+
+We can enumerate all the monomials. For example, boolean function with four variables `(a, b, c, d)` can contain up to  monomials. The 13-th monomial is the product `a &amp; b &amp; d`, because 13 in binary is 1, 1, 0, 1.
+
+A given monomial’s presence or absence in a polynomial corresponds to that monomial’s coefficient being 1 or 0 respectively.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import anf_coeffs, bool_monomial, Xor
+&gt;&gt;&gt; from sympy.abc import a, b, c
+&gt;&gt;&gt; truthvalues = [0, 1, 1, 0, 0, 1, 0, 1]
+&gt;&gt;&gt; coeffs = anf_coeffs(truthvalues)
+&gt;&gt;&gt; coeffs
+[0, 1, 1, 0, 0, 0, 1, 0]
+&gt;&gt;&gt; polynomial = Xor(*[
+...     bool_monomial(k, [a, b, c])
+...     for k, coeff in enumerate(coeffs) if coeff == 1
+... ])
+&gt;&gt;&gt; polynomial
+b ^ c ^ (a &amp; b)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_int_repr(*clauses*, *symbols*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2041-L2065)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_int_repr)
+
+Takes clauses in CNF format and puts them into an integer representation.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_int_repr
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; to_int_repr([x | y, y], [x, y]) == [{1, 2}, {2}]
+True
+```
+
+  Copy to clipboard
+
+## Inference[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic.inference)
+
+This module implements some inference routines in propositional logic.
+
+The function satisfiable will test that a given Boolean expression is satisfiable, that is, you can assign values to the variables to make the sentence `True`.
+
+For example, the expression `x &amp; ~x` is not satisfiable, since there are no values for `x` that make this sentence `True`. On the other hand, `(x
+| y) &amp; (x | ~y) &amp; (~x | y)` is satisfiable with both `x` and `y` being `True`.
+
+```
+&gt;&gt;&gt; from sympy.logic.inference import satisfiable
+&gt;&gt;&gt; from sympy import Symbol
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;)
+&gt;&gt;&gt; y = Symbol(&#39;y&#39;)
+&gt;&gt;&gt; satisfiable(x &amp; ~x)
+False
+&gt;&gt;&gt; satisfiable((x | y) &amp; (x | ~y) &amp; (~x | y))
+{x: True, y: True}
+```
+
+  Copy to clipboard
+
+As you see, when a sentence is satisfiable, it returns a model that makes that sentence `True`. If it is not satisfiable it will return `False`.
+
+   sympy.logic.inference.satisfiable(  *expr*, *algorithm=None*, *all_models=False*, *minimal=False*, *use_lra_theory=False*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/inference.py#L34-L118)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.inference.satisfiable)
+
+Check satisfiability of a propositional sentence. Returns a model when it succeeds. Returns {true: true} for trivially true expressions.
+
+On setting all_models to True, if given expr is satisfiable then returns a generator of models. However, if expr is unsatisfiable then returns a generator containing the single element False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B
+&gt;&gt;&gt; from sympy.logic.inference import satisfiable
+&gt;&gt;&gt; satisfiable(A &amp; ~B)
+{A: True, B: False}
+&gt;&gt;&gt; satisfiable(A &amp; ~A)
+False
+&gt;&gt;&gt; satisfiable(True)
+{True: True}
+&gt;&gt;&gt; next(satisfiable(A &amp; ~A, all_models=True))
+False
+&gt;&gt;&gt; models = satisfiable((A &gt;&gt; B) &amp; B, all_models=True)
+&gt;&gt;&gt; next(models)
+{A: False, B: True}
+&gt;&gt;&gt; next(models)
+{A: True, B: True}
+&gt;&gt;&gt; def use_models(models):
+...     for model in models:
+...         if model:
+...             # Do something with the model.
+...             print(model)
+...         else:
+...             # Given expr is unsatisfiable.
+...             print(&quot;UNSAT&quot;)
+&gt;&gt;&gt; use_models(satisfiable(A &gt;&gt; ~A, all_models=True))
+{A: False}
+&gt;&gt;&gt; use_models(satisfiable(A ^ A, all_models=True))
+UNSAT
+```
+
+  Copy to clipboard
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Logic[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic)</h3><pre># Logic[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic)
+</pre></article><article id="section-0002"><h3>Introduction[¶](https://docs.sympy.org/dev/modules/logic.html#introduction)</h3><pre># Introduction[¶](https://docs.sympy.org/dev/modules/logic.html#introduction)
+
+The logic module for SymPy allows to form and manipulate logic expressions using symbolic and Boolean values.
+</pre></article><article id="section-0003"><h3>Forming logical expressions[¶](https://docs.sympy.org/dev/modules/logic.html#forming-logical-expressions)</h3><pre># Forming logical expressions[¶](https://docs.sympy.org/dev/modules/logic.html#forming-logical-expressions)
+
+You can build Boolean expressions with the standard python operators `&amp;` ([`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And)), `|` ([`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or)), `~` ([`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not)):
+
+```
+&gt;&gt;&gt; from sympy import *
+&gt;&gt;&gt; x, y = symbols(&#39;x,y&#39;)
+&gt;&gt;&gt; y | (x &amp; y)
+y | (x &amp; y)
+&gt;&gt;&gt; x | y
+x | y
+&gt;&gt;&gt; ~x
+~x
+```
+
+  Copy to clipboard
+
+You can also form implications with `&gt;&gt;` and `&lt;&lt;`:
+
+```
+&gt;&gt;&gt; x &gt;&gt; y
+Implies(x, y)
+&gt;&gt;&gt; x &lt;&lt; y
+Implies(y, x)
+```
+
+  Copy to clipboard
+
+Like most types in SymPy, Boolean expressions inherit from [`Basic`](https://docs.sympy.org/dev/modules/core.html#sympy.core.basic.Basic):
+
+```
+&gt;&gt;&gt; (y &amp; x).subs({x: True, y: True})
+True
+&gt;&gt;&gt; (x | y).atoms()
+{x, y}
+```
+
+  Copy to clipboard
+
+The logic module also includes the following functions to derive boolean expressions from their truth tables:
+
+   sympy.logic.boolalg.SOPform(*variables*, *minterms*, *dontcares=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2408-L2480)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.SOPform)
+
+The SOPform function uses simplified_pairs and a redundant group- eliminating algorithm to convert the list of all input combos that generate ‘1’ (the minterms) into the smallest sum-of-products form.
+
+The variables must be given as the first argument.
+
+Return a logical [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) function (i.e., the “sum of products” or “SOP” form) that gives the desired outcome. If there are inputs that can be ignored, pass them as a list, too.
+
+The result will be one of the (perhaps many) functions that satisfy the conditions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import SOPform
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; w, x, y, z = symbols(&#39;w x y z&#39;)
+&gt;&gt;&gt; minterms = [[0, 0, 0, 1], [0, 0, 1, 1],
+...             [0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [[0, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(y &amp; z) | (~w &amp; ~x)
+```
+
+  Copy to clipboard
+
+The terms can also be represented as integers:
+
+```
+&gt;&gt;&gt; minterms = [1, 3, 7, 11, 15]
+&gt;&gt;&gt; dontcares = [0, 2, 5]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(y &amp; z) | (~w &amp; ~x)
+```
+
+  Copy to clipboard
+
+They can also be specified using dicts, which does not have to be fully specified:
+
+```
+&gt;&gt;&gt; minterms = [{w: 0, x: 1}, {y: 1, z: 1, x: 0}]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms)
+(x &amp; ~w) | (y &amp; z &amp; ~x)
+```
+
+  Copy to clipboard
+
+Or a combination:
+
+```
+&gt;&gt;&gt; minterms = [4, 7, 11, [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [{w : 0, x : 0, y: 0}, 5]
+&gt;&gt;&gt; SOPform([w, x, y, z], minterms, dontcares)
+(w &amp; y &amp; z) | (~w &amp; ~y) | (x &amp; z &amp; ~w)
+```
+
+  Copy to clipboard
+
+See also
+
+[`POSform`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.POSform)
+
+References
+
+   [[R809](https://docs.sympy.org/dev/modules/logic.html#id1)]
+
+[https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm](https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm)
+
+   [[R810](https://docs.sympy.org/dev/modules/logic.html#id2)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+      sympy.logic.boolalg.POSform(*variables*, *minterms*, *dontcares=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2489-L2567)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.POSform)
+
+The POSform function uses simplified_pairs and a redundant-group eliminating algorithm to convert the list of all input combinations that generate ‘1’ (the minterms) into the smallest product-of-sums form.
+
+The variables must be given as the first argument.
+
+Return a logical [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) function (i.e., the “product of sums” or “POS” form) that gives the desired outcome. If there are inputs that can be ignored, pass them as a list, too.
+
+The result will be one of the (perhaps many) functions that satisfy the conditions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import POSform
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; w, x, y, z = symbols(&#39;w x y z&#39;)
+&gt;&gt;&gt; minterms = [[0, 0, 0, 1], [0, 0, 1, 1], [0, 1, 1, 1],
+...             [1, 0, 1, 1], [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [[0, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+z &amp; (y | ~w)
+```
+
+  Copy to clipboard
+
+The terms can also be represented as integers:
+
+```
+&gt;&gt;&gt; minterms = [1, 3, 7, 11, 15]
+&gt;&gt;&gt; dontcares = [0, 2, 5]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+z &amp; (y | ~w)
+```
+
+  Copy to clipboard
+
+They can also be specified using dicts, which does not have to be fully specified:
+
+```
+&gt;&gt;&gt; minterms = [{w: 0, x: 1}, {y: 1, z: 1, x: 0}]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms)
+(x | y) &amp; (x | z) &amp; (~w | ~x)
+```
+
+  Copy to clipboard
+
+Or a combination:
+
+```
+&gt;&gt;&gt; minterms = [4, 7, 11, [1, 1, 1, 1]]
+&gt;&gt;&gt; dontcares = [{w : 0, x : 0, y: 0}, 5]
+&gt;&gt;&gt; POSform([w, x, y, z], minterms, dontcares)
+(w | x) &amp; (y | ~w) &amp; (z | ~y)
+```
+
+  Copy to clipboard
+
+See also
+
+[`SOPform`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.SOPform)
+
+References
+
+   [[R811](https://docs.sympy.org/dev/modules/logic.html#id3)]
+
+[https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm](https://en.wikipedia.org/wiki/Quine-McCluskey_algorithm)
+
+   [[R812](https://docs.sympy.org/dev/modules/logic.html#id4)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+      sympy.logic.boolalg.ANFform(*variables*, *truthvalues*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2570-L2629)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ANFform)
+
+The ANFform function converts the list of truth values to Algebraic Normal Form (ANF).
+
+The variables must be given as the first argument.
+
+Return True, False, logical [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) function (i.e., the “Zhegalkin monomial”) or logical [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor) function (i.e., the “Zhegalkin polynomial”). When True and False are represented by 1 and 0, respectively, then [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) is multiplication and [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor) is addition.
+
+Formally a “Zhegalkin monomial” is the product (logical And) of a finite set of distinct variables, including the empty set whose product is denoted 1 (True). A “Zhegalkin polynomial” is the sum (logical Xor) of a set of Zhegalkin monomials, with the empty set denoted by 0 (False).
+
+  Parameters:
+
+**variables** : list of variables
+
+**truthvalues** : list of 1’s and 0’s (result column of truth table)
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import ANFform
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; ANFform([x], [1, 0])
+x ^ True
+&gt;&gt;&gt; ANFform([x, y], [0, 1, 1, 1])
+x ^ y ^ (x &amp; y)
+```
+
+  Copy to clipboard
+
+References
+
+   [[R813](https://docs.sympy.org/dev/modules/logic.html#id5)]
+
+[https://en.wikipedia.org/wiki/Zhegalkin_polynomial](https://en.wikipedia.org/wiki/Zhegalkin_polynomial)
+</pre></article><article id="section-0004"><h3>Boolean functions[¶](https://docs.sympy.org/dev/modules/logic.html#boolean-functions)</h3><pre># Boolean functions[¶](https://docs.sympy.org/dev/modules/logic.html#boolean-functions)
+
+class sympy.logic.boolalg.Boolean(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L72-L234)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean)
+
+A Boolean object is an object for which logic operations make sense.
+
+   as_set() → [Set](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L169-L216)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean.as_set)
+
+Rewrites Boolean expression in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Eq, Or, And
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;, real=True)
+&gt;&gt;&gt; Eq(x, 0).as_set()
+{0}
+&gt;&gt;&gt; (x &gt; 0).as_set()
+Interval.open(0, oo)
+&gt;&gt;&gt; And(-2 &lt; x, x &lt; 2).as_set()
+Interval.open(-2, 2)
+&gt;&gt;&gt; Or(x &lt; -2, 2 &lt; x).as_set()
+Union(Interval.open(-oo, -2), Interval.open(2, oo))
+```
+
+  Copy to clipboard          equals(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L139-L163)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Boolean.equals)
+
+Returns `True` if the given formulas have the same truth table. For two formulas to be equal they must have the same literals.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; from sympy import And, Or, Not
+&gt;&gt;&gt; (A &gt;&gt; B).equals(~B &gt;&gt; ~A)
+True
+&gt;&gt;&gt; Not(And(A, B, C)).equals(And(Not(A), Not(B), Not(C)))
+False
+&gt;&gt;&gt; Not(And(A, Not(A))).equals(Or(B, Not(B)))
+False
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.BooleanTrue[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L288-L401)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+SymPy version of `True`, a singleton that can be accessed via `S.true`.
+
+This is the SymPy version of `True`, for use in the logic module. The primary advantage of using `true` instead of `True` is that shorthand Boolean operations like `~` and `&gt;&gt;` will work as expected on this class, whereas with True they act bitwise on 1. Functions in the logic module will return this class when they evaluate to true.
+
+Notes
+
+There is liable to be some confusion as to when `True` should be used and when `S.true` should be used in various contexts throughout SymPy. An important thing to remember is that `sympify(True)` returns `S.true`. This means that for the most part, you can just use `True` and it will automatically be converted to `S.true` when necessary, similar to how you can generally use 1 instead of `S.One`.
+
+The rule of thumb is:
+
+“If the boolean in question can be replaced by an arbitrary symbolic `Boolean`, like `Or(x, y)` or `x &gt; 1`, use `S.true`. Otherwise, use `True`”
+
+In other words, use `S.true` only on those contexts where the boolean is being used as a symbolic representation of truth. For example, if the object ends up in the `.args` of any expression, then it must necessarily be `S.true` instead of `True`, as elements of `.args` must be `Basic`. On the other hand, `==` is not a symbolic operation in SymPy, since it always returns `True` or `False`, and does so in terms of structural equality rather than mathematical, so it should return `True`. The assumptions system should use `True` and `False`. Aside from not satisfying the above rule of thumb, the assumptions system uses a three-valued logic (`True`, `False`, `None`), whereas `S.true` and `S.false` represent a two-valued logic. When in doubt, use `True`.
+
+“`S.true == True is True`.”
+
+While “`S.true is True`” is `False`, “`S.true == True`” is `True`, so if there is any doubt over whether a function or expression will return `S.true` or `True`, just use `==` instead of `is` to do the comparison, and it will work in either case. Finally, for boolean flags, it’s better to just use `if x` instead of `if x is True`. To quote PEP 8:
+
+Do not compare boolean values to `True` or `False` using `==`.
+
+- Yes: `if greeting:`
+- No: `if greeting == True:`
+- Worse: `if greeting is True:`
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import sympify, true, false, Or
+&gt;&gt;&gt; sympify(True)
+True
+&gt;&gt;&gt; _ is True, _ is true
+(False, True)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Or(true, false)
+True
+&gt;&gt;&gt; _ is true
+True
+```
+
+  Copy to clipboard
+
+Python operators give a boolean result for true but a bitwise result for True
+
+```
+&gt;&gt;&gt; ~true, ~True
+(False, -2)
+&gt;&gt;&gt; true &gt;&gt; true, True &gt;&gt; True
+(True, 0)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.logic.boolalg.BooleanFalse`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse)
+
+    as_set()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L389-L401)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue.as_set)
+
+Rewrite logic operators and relationals in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import true
+&gt;&gt;&gt; true.as_set()
+UniversalSet
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.BooleanFalse[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L404-L475)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse)
+
+SymPy version of `False`, a singleton that can be accessed via `S.false`.
+
+This is the SymPy version of `False`, for use in the logic module. The primary advantage of using `false` instead of `False` is that shorthand Boolean operations like `~` and `&gt;&gt;` will work as expected on this class, whereas with `False` they act bitwise on 0. Functions in the logic module will return this class when they evaluate to false.
+
+Notes
+
+See the notes section in [`sympy.logic.boolalg.BooleanTrue`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import sympify, true, false, Or
+&gt;&gt;&gt; sympify(False)
+False
+&gt;&gt;&gt; _ is False, _ is false
+(False, True)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Or(true, false)
+True
+&gt;&gt;&gt; _ is true
+True
+```
+
+  Copy to clipboard
+
+Python operators give a boolean result for false but a bitwise result for False
+
+```
+&gt;&gt;&gt; ~false, ~False
+(True, -1)
+&gt;&gt;&gt; false &gt;&gt; false, False &gt;&gt; False
+(True, 0)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.logic.boolalg.BooleanTrue`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanTrue)
+
+    as_set()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L464-L475)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.BooleanFalse.as_set)
+
+Rewrite logic operators and relationals in terms of real sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import false
+&gt;&gt;&gt; false.as_set()
+EmptySet
+```
+
+  Copy to clipboard           class sympy.logic.boolalg.And(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L580-L750)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And)
+
+Logical AND function.
+
+It evaluates its arguments in order, returning false immediately when an argument is false and true if they are all true.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; from sympy import And
+&gt;&gt;&gt; x &amp; y
+x &amp; y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `&amp;` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise and. Hence, `And(a, b)` and `a &amp; b` will produce different results if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; And(x, y).subs(x, 1)
+y
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Or(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L753-L869)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or)
+
+Logical OR function
+
+It evaluates its arguments in order, returning true immediately when an argument is true, and false if they are all false.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; from sympy import Or
+&gt;&gt;&gt; x | y
+x | y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `|` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise or. Hence, `Or(a, b)` and `a | b` will return different things if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; Or(x, y).subs(x, 0)
+y
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Not(*arg*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L872-L985)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not)
+
+Logical Not function (negation)
+
+Returns `true` if the statement is `false` or `False`. Returns `false` if the statement is `true` or `True`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Not, And, Or
+&gt;&gt;&gt; from sympy.abc import x, A, B
+&gt;&gt;&gt; Not(True)
+False
+&gt;&gt;&gt; Not(False)
+True
+&gt;&gt;&gt; Not(And(True, False))
+True
+&gt;&gt;&gt; Not(Or(True, False))
+False
+&gt;&gt;&gt; Not(And(And(True, x), Or(x, False)))
+~x
+&gt;&gt;&gt; ~x
+~x
+&gt;&gt;&gt; Not(And(Or(A, B), Or(~A, ~B)))
+~((A | B) &amp; (~A | ~B))
+```
+
+  Copy to clipboard
+
+Notes
+
+- The `~` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise not. In particular, `~a` and `Not(a)` will be different if `a` is an integer. Furthermore, since bools in Python subclass from `int`, `~True` is the same as `~1` which is `-2`, which has a boolean value of True. To avoid this issue, use the SymPy boolean types `true` and `false`.
+- As of Python 3.12, the bitwise not operator `~` used on a Python `bool` is deprecated and will emit a warning.
+
+```
+&gt;&gt;&gt; from sympy import true
+&gt;&gt;&gt; ~True
+-2
+&gt;&gt;&gt; ~true
+False
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Xor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L988-L1123)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor)
+
+Logical XOR (exclusive OR) function.
+
+Returns True if an odd number of the arguments are True and the rest are False.
+
+Returns False if an even number of the arguments are True and the rest are False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Xor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Xor(True, False)
+True
+&gt;&gt;&gt; Xor(True, True)
+False
+&gt;&gt;&gt; Xor(True, False, True, True, False)
+True
+&gt;&gt;&gt; Xor(True, False, True, False)
+False
+&gt;&gt;&gt; x ^ y
+x ^ y
+```
+
+  Copy to clipboard
+
+Notes
+
+The `^` operator is provided as a convenience, but note that its use here is different from its normal use in Python, which is bitwise xor. In particular, `a ^ b` and `Xor(a, b)` will be different if `a` and `b` are integers.
+
+```
+&gt;&gt;&gt; Xor(x, y).subs(y, 0)
+x
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Nand(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1126-L1152)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nand)
+
+Logical NAND function.
+
+It evaluates its arguments in order, giving True immediately if any of them are False, and False if they are all True.
+
+Returns True if any of the arguments are False Returns False if all arguments are True
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Nand
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Nand(False, True)
+True
+&gt;&gt;&gt; Nand(True, True)
+False
+&gt;&gt;&gt; Nand(x, y)
+~(x &amp; y)
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Nor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1155-L1186)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nor)
+
+Logical NOR function.
+
+It evaluates its arguments in order, giving False immediately if any of them are True, and True if they are all False.
+
+Returns False if any argument is True Returns True if all arguments are False
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Nor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Nor(True, False)
+False
+&gt;&gt;&gt; Nor(True, True)
+False
+&gt;&gt;&gt; Nor(False, True)
+False
+&gt;&gt;&gt; Nor(False, False)
+True
+&gt;&gt;&gt; Nor(x, y)
+~(x | y)
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Xnor(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1189-L1217)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor)
+
+Logical XNOR function.
+
+Returns False if an odd number of the arguments are True and the rest are False.
+
+Returns True if an even number of the arguments are True and the rest are False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Xnor
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+&gt;&gt;&gt; Xnor(True, False)
+False
+&gt;&gt;&gt; Xnor(True, True)
+True
+&gt;&gt;&gt; Xnor(True, False, True, True, False)
+False
+&gt;&gt;&gt; Xnor(True, False, True, False)
+True
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Implies(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1220-L1301)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Implies)
+
+Logical implication.
+
+A implies B is equivalent to if A then B. Mathematically, it is written as  and is equivalent to  or `~A | B`.
+
+Accepts two Boolean arguments; A and B. Returns False if A is True and B is False Returns True otherwise.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Implies
+&gt;&gt;&gt; from sympy import symbols
+&gt;&gt;&gt; x, y = symbols(&#39;x y&#39;)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Implies(True, False)
+False
+&gt;&gt;&gt; Implies(False, False)
+True
+&gt;&gt;&gt; Implies(True, True)
+True
+&gt;&gt;&gt; Implies(False, True)
+True
+&gt;&gt;&gt; x &gt;&gt; y
+Implies(x, y)
+&gt;&gt;&gt; y &lt;&lt; x
+Implies(x, y)
+```
+
+  Copy to clipboard
+
+Notes
+
+The `&gt;&gt;` and `&lt;&lt;` operators are provided as a convenience, but note that their use here is different from their normal use in Python, which is bit shifts. Hence, `Implies(a, b)` and `a &gt;&gt; b` will return different things if `a` and `b` are integers. In particular, since Python considers `True` and `False` to be integers, `True &gt;&gt; True` will be the same as `1 &gt;&gt; 1`, i.e., 0, which has a truth value of False. To avoid this issue, use the SymPy objects `true` and `false`.
+
+```
+&gt;&gt;&gt; from sympy import true, false
+&gt;&gt;&gt; True &gt;&gt; False
+1
+&gt;&gt;&gt; true &gt;&gt; false
+False
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Equivalent(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1304-L1380)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Equivalent)
+
+Equivalence relation.
+
+`Equivalent(A, B)` is True iff A and B are both True or both False.
+
+Returns True if all of the arguments are logically equivalent. Returns False otherwise.
+
+For two arguments, this is equivalent to [`Xnor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Equivalent, And
+&gt;&gt;&gt; from sympy.abc import x
+&gt;&gt;&gt; Equivalent(False, False, False)
+True
+&gt;&gt;&gt; Equivalent(True, False, False)
+False
+&gt;&gt;&gt; Equivalent(x, And(x, True))
+True
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.ITE(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1383-L1497)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ITE)
+
+If-then-else clause.
+
+`ITE(A, B, C)` evaluates and returns the result of B if A is true else it returns the result of C. All args must be Booleans.
+
+From a logic gate perspective, ITE corresponds to a 2-to-1 multiplexer, where A is the select signal.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import ITE, And, Xor, Or
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; ITE(True, False, True)
+False
+&gt;&gt;&gt; ITE(Or(True, False), And(True, True), Xor(True, True))
+True
+&gt;&gt;&gt; ITE(x, y, z)
+ITE(x, y, z)
+&gt;&gt;&gt; ITE(True, x, y)
+x
+&gt;&gt;&gt; ITE(False, x, y)
+y
+&gt;&gt;&gt; ITE(x, y, y)
+y
+```
+
+  Copy to clipboard
+
+Trying to use non-Boolean args will generate a TypeError:
+
+```
+&gt;&gt;&gt; ITE(True, [], ())
+Traceback (most recent call last):
+...
+TypeError: expecting bool, Boolean or ITE, not `[]`
+```
+
+  Copy to clipboard          class sympy.logic.boolalg.Exclusive(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1500-L1525)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Exclusive)
+
+True if only one or no argument is true.
+
+`Exclusive(A, B, C)` is equivalent to `~(A &amp; B) &amp; ~(A &amp; C) &amp; ~(B &amp; C)`.
+
+For two arguments, this is equivalent to [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Exclusive
+&gt;&gt;&gt; Exclusive(False, False, False)
+True
+&gt;&gt;&gt; Exclusive(False, True, False)
+True
+&gt;&gt;&gt; Exclusive(False, True, True)
+False
+```
+
+  Copy to clipboard
+
+The following functions can be used to handle Algebraic, Conjunctive, Disjunctive, and Negated Normal forms:
+
+   sympy.logic.boolalg.to_anf(*expr*, *deep=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1644-L1685)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_anf)
+
+Converts expr to Algebraic Normal Form (ANF).
+
+ANF is a canonical normal form, which means that two equivalent formulas will convert to the same ANF.
+
+A logical expression is in ANF if it has the form
+
+      i.e. it can be:
+- purely true,
+- purely false,
+- conjunction of variables,
+- exclusive disjunction.
+
+The exclusive disjunction can only contain true, variables or conjunction of variables. No negations are permitted.
+
+If `deep` is `False`, arguments of the boolean expression are considered variables, i.e. only the top-level expression is converted to ANF.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import And, Or, Not, Implies, Equivalent
+&gt;&gt;&gt; from sympy.logic.boolalg import to_anf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; to_anf(Not(A))
+A ^ True
+&gt;&gt;&gt; to_anf(And(Or(A, B), Not(C)))
+A ^ B ^ (A &amp; B) ^ (A &amp; C) ^ (B &amp; C) ^ (A &amp; B &amp; C)
+&gt;&gt;&gt; to_anf(Implies(Not(A), Equivalent(B, C)), deep=False)
+True ^ ~A ^ (~A &amp; (Equivalent(B, C)))
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_cnf(*expr*, *simplify=False*, *force=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1725-L1764)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_cnf)
+
+Convert a propositional logical sentence `expr` to conjunctive normal form: `((A | ~B | ...) &amp; (B | C | ...) &amp; ...)`. If `simplify` is `True`, `expr` is evaluated to its simplest CNF form using the Quine-McCluskey algorithm; this may take a long time. If there are more than 8 variables the `force` flag must be set to `True` to simplify (default is `False`).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_cnf
+&gt;&gt;&gt; from sympy.abc import A, B, D
+&gt;&gt;&gt; to_cnf(~(A | B) | D)
+(D | ~A) &amp; (D | ~B)
+&gt;&gt;&gt; to_cnf((A | B) &amp; (A | ~A), True)
+A | B
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_dnf(*expr*, *simplify=False*, *force=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1767-L1804)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_dnf)
+
+Convert a propositional logical sentence `expr` to disjunctive normal form: `((A &amp; ~B &amp; ...) | (B &amp; C &amp; ...) | ...)`. If `simplify` is `True`, `expr` is evaluated to its simplest DNF form using the Quine-McCluskey algorithm; this may take a long time. If there are more than 8 variables, the `force` flag must be set to `True` to simplify (default is `False`).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_dnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; to_dnf(B &amp; (A | C))
+(A &amp; B) | (B &amp; C)
+&gt;&gt;&gt; to_dnf((A &amp; B) | (A &amp; ~B) | (B &amp; C) | (~B &amp; C), True)
+A | C
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_nnf(*expr*, *simplify=True*, *form=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1688-L1722)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_nnf)
+
+Converts `expr` to Negation Normal Form (NNF).
+
+A logical expression is in NNF if it contains only [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not) is applied only to literals. If `simplify` is `True`, the result contains no redundant clauses.
+
+  Parameters:
+
+**expr** : boolean expression
+
+&gt;
+&gt; The expression to convert to NNF.
+&gt;
+
+**simplify** : bool, optional
+
+&gt;
+&gt; If True, simplify the result. Default is True.
+&gt;
+
+**form** : str, optional
+
+&gt;
+&gt; Target form hint: ‘cnf’ for conjunctive normal form bias,
+&gt; ‘dnf’ for disjunctive normal form bias, or None (default).
+&gt; This hint optimizes XOR conversions.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C, D
+&gt;&gt;&gt; from sympy.logic.boolalg import Not, Equivalent, to_nnf
+&gt;&gt;&gt; to_nnf(Not((~A &amp; ~B) | (C &amp; D)))
+(A | B) &amp; (~C | ~D)
+&gt;&gt;&gt; to_nnf(Equivalent(A &gt;&gt; B, B &gt;&gt; A))
+(A | ~B | (A &amp; ~B)) &amp; (B | ~A | (B &amp; ~A))
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_anf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1807-L1860)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_anf)
+
+Checks if `expr` is in Algebraic Normal Form (ANF).
+
+A logical expression is in ANF if it has the form
+
+i.e. it is purely true, purely false, conjunction of variables or exclusive disjunction. The exclusive disjunction can only contain true, variables or conjunction of variables. No negations are permitted.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import And, Not, Xor, true, is_anf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_anf(true)
+True
+&gt;&gt;&gt; is_anf(A)
+True
+&gt;&gt;&gt; is_anf(And(A, B, C))
+True
+&gt;&gt;&gt; is_anf(Xor(A, Not(B)))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_cnf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1912-L1929)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_cnf)
+
+Test whether or not an expression is in conjunctive normal form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import is_cnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_cnf(A | B | C)
+True
+&gt;&gt;&gt; is_cnf(A &amp; B &amp; C)
+True
+&gt;&gt;&gt; is_cnf((A &amp; B) | C)
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_dnf(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1932-L1951)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_dnf)
+
+Test whether or not an expression is in disjunctive normal form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import is_dnf
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; is_dnf(A | B | C)
+True
+&gt;&gt;&gt; is_dnf(A &amp; B &amp; C)
+True
+&gt;&gt;&gt; is_dnf((A &amp; B) | C)
+True
+&gt;&gt;&gt; is_dnf(A &amp; (B | C))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.is_nnf(*expr*, *simplified=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1863-L1909)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.is_nnf)
+
+Checks if `expr` is in Negation Normal Form (NNF).
+
+A logical expression is in NNF if it contains only [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not) is applied only to literals. If `simplified` is `True`, checks if result contains no redundant clauses.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; from sympy.logic.boolalg import Not, is_nnf
+&gt;&gt;&gt; is_nnf(A &amp; B | ~C)
+True
+&gt;&gt;&gt; is_nnf((A | ~A) &amp; (B | C))
+False
+&gt;&gt;&gt; is_nnf((A | ~A) &amp; (B | C), False)
+True
+&gt;&gt;&gt; is_nnf(Not(A &amp; B) | C)
+False
+&gt;&gt;&gt; is_nnf((A &gt;&gt; B) &amp; (B &gt;&gt; A))
+False
+```
+
+  Copy to clipboard          sympy.logic.boolalg.gateinputcount(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L3565-L3622)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.gateinputcount)
+
+Return the total number of inputs for the logic gates realizing the Boolean expression.
+
+  Returns:
+
+int
+
+&gt;
+&gt; Number of gate inputs
+&gt;
+
+Note
+
+Not all Boolean functions count as gate here, only those that are considered to be standard gates. These are: [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or), [`Xor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xor), [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not), and [`ITE`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.ITE) (multiplexer). [`Nand`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nand), [`Nor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Nor), and [`Xnor`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Xnor) will be evaluated to `Not(And())` etc.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import And, Or, Nand, Not, gateinputcount
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; expr = And(x, y)
+&gt;&gt;&gt; gateinputcount(expr)
+2
+&gt;&gt;&gt; gateinputcount(Or(expr, z))
+4
+```
+
+  Copy to clipboard
+
+Note that `Nand` is automatically evaluated to `Not(And())` so
+
+```
+&gt;&gt;&gt; gateinputcount(Nand(x, y, z))
+4
+&gt;&gt;&gt; gateinputcount(Not(And(x, y, z)))
+4
+```
+
+  Copy to clipboard
+
+Although this can be avoided by using `evaluate=False`
+
+```
+&gt;&gt;&gt; gateinputcount(Nand(x, y, z, evaluate=False))
+3
+```
+
+  Copy to clipboard
+
+Also note that a comparison will count as a Boolean variable:
+
+```
+&gt;&gt;&gt; gateinputcount(And(x &gt; z, y &gt;= 2))
+2
+```
+
+  Copy to clipboard
+
+As will a symbol: &gt;&gt;&gt; gateinputcount(x) 0
+</pre></article><article id="section-0005"><h3>Simplification and equivalence-testing[¶](https://docs.sympy.org/dev/modules/logic.html#simplification-and-equivalence-testing)</h3><pre># Simplification and equivalence-testing[¶](https://docs.sympy.org/dev/modules/logic.html#simplification-and-equivalence-testing)
+
+sympy.logic.boolalg.simplify_logic(  *expr*, *form=None*, *deep=True*, *force=False*, *dontcare=None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2812-L2940)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.simplify_logic)
+
+This function simplifies a boolean function to its simplified version in SOP or POS form. The return type is an [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or) or [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And) object in SymPy.
+
+  Parameters:
+
+**expr** : Boolean
+
+**form** : string (`&#39;cnf&#39;` or `&#39;dnf&#39;`) or `None` (default).
+
+&gt;
+&gt; If &#39;cnf&#39; or &#39;dnf&#39;, the simplest expression in the corresponding
+&gt; normal form is returned; if None, the answer is returned
+&gt; according to the form with fewest args (in CNF by default).
+&gt;
+
+**deep** : bool (default `True`)
+
+&gt;
+&gt; Indicates whether to recursively simplify any
+&gt; non-boolean functions contained within the input.
+&gt;
+
+**force** : bool (default `False`)
+
+&gt;
+&gt; As the simplifications require exponential time in the number
+&gt; of variables, there is by default a limit on expressions with
+&gt; 8 variables. When the expression has more than 8 variables
+&gt; only symbolical simplification (controlled by deep) is
+&gt; made. By setting force to True, this limit is removed. Be
+&gt; aware that this can lead to very long simplification times.
+&gt;
+
+**dontcare** : Boolean
+
+&gt;
+&gt; Optimize expression under the assumption that inputs where this
+&gt; expression is true are don’t care. This is useful in e.g. Piecewise
+&gt; conditions, where later conditions do not need to consider inputs that
+&gt; are converted by previous conditions. For example, if a previous
+&gt; condition is And(A, B), the simplification of expr can be made
+&gt; with don’t cares for And(A, B).
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic import simplify_logic
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; b = (~x &amp; ~y &amp; ~z) | ( ~x &amp; ~y &amp; z)
+&gt;&gt;&gt; simplify_logic(b)
+~x &amp; ~y
+&gt;&gt;&gt; simplify_logic(x | y, dontcare=y)
+x
+```
+
+  Copy to clipboard
+
+References
+
+   [[R814](https://docs.sympy.org/dev/modules/logic.html#id6)]
+
+[https://en.wikipedia.org/wiki/Don%27t-care_term](https://en.wikipedia.org/wiki/Don%27t-care_term)
+
+SymPy’s [`simplify()`](https://docs.sympy.org/dev/modules/simplify/simplify.html#sympy.simplify.simplify.simplify) function can also be used to simplify logic expressions to their simplest forms.
+
+   sympy.logic.boolalg.bool_map(*bool1*, *bool2*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L3032-L3114)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_map)
+
+Return the simplified version of *bool1*, and the mapping of variables that makes the two expressions *bool1* and *bool2* represent the same logical behaviour for some correspondence between the variables of each. If more than one mappings of this sort exist, one of them is returned.
+
+For example, `And(x, y)` is logically equivalent to `And(a, b)` for the mapping `{x: a, y: b}` or `{x: b, y: a}`. If no such mapping exists, return `False`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import SOPform, bool_map, Or, And, Not, Xor
+&gt;&gt;&gt; from sympy.abc import w, x, y, z, a, b, c, d
+&gt;&gt;&gt; function1 = SOPform([x, z, y],[[1, 0, 1], [0, 0, 1]])
+&gt;&gt;&gt; function2 = SOPform([a, b, c],[[1, 0, 1], [1, 0, 0]])
+&gt;&gt;&gt; bool_map(function1, function2)
+(y &amp; ~z, {y: a, z: b})
+```
+
+  Copy to clipboard
+
+The results are not necessarily unique, but they are canonical. Here, `(w, z)` could be `(a, d)` or `(d, a)`:
+
+```
+&gt;&gt;&gt; eq =  Or(And(Not(y), w), And(Not(y), z), And(x, y))
+&gt;&gt;&gt; eq2 = Or(And(Not(c), a), And(Not(c), d), And(b, c))
+&gt;&gt;&gt; bool_map(eq, eq2)
+((x &amp; y) | (w &amp; ~y) | (z &amp; ~y), {w: a, x: b, y: c, z: d})
+&gt;&gt;&gt; eq = And(Xor(a, b), c, And(c,d))
+&gt;&gt;&gt; bool_map(eq, eq.subs(c, x))
+(c &amp; d &amp; (a | b) &amp; (~a | ~b), {a: a, b: b, c: d, d: x})
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0006"><h3>Manipulating expressions[¶](https://docs.sympy.org/dev/modules/logic.html#manipulating-expressions)</h3><pre># Manipulating expressions[¶](https://docs.sympy.org/dev/modules/logic.html#manipulating-expressions)
+
+The following functions can be used to manipulate Boolean expressions:
+
+   sympy.logic.boolalg.distribute_and_over_or(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1565-L1579)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_and_over_or)
+
+Given a sentence `expr` consisting of conjunctions and disjunctions of literals, return an equivalent sentence in CNF.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_and_over_or, And, Or, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_and_over_or(Or(A, And(Not(B), Not(C))))
+(A | ~B) &amp; (A | ~C)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.distribute_or_over_and(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1582-L1598)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_or_over_and)
+
+Given a sentence `expr` consisting of conjunctions and disjunctions of literals, return an equivalent sentence in DNF.
+
+Note that the output is NOT simplified.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_or_over_and, And, Or, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_or_over_and(And(Or(Not(A), B), C))
+(B &amp; C) | (C &amp; ~A)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.distribute_xor_over_and(*expr*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1601-L1617)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.distribute_xor_over_and)
+
+Given a sentence `expr` consisting of conjunction and exclusive disjunctions of literals, return an equivalent exclusive disjunction.
+
+Note that the output is NOT simplified.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import distribute_xor_over_and, And, Xor, Not
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; distribute_xor_over_and(And(Xor(Not(A), B), C))
+(B &amp; C) ^ (C &amp; ~A)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.eliminate_implications(*expr*, *form=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L1974-L2004)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.eliminate_implications)
+
+Change [`Implies`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Implies) and [`Equivalent`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Equivalent) into [`And`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.And), [`Or`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Or), and [`Not`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.Not). That is, return an expression that is equivalent to `expr`, but has only `&amp;`, `|`, and `~` as logical operators.
+
+  Parameters:
+
+**expr** : boolean expression
+
+&gt;
+&gt; The expression to eliminate implications from.
+&gt;
+
+**form** : str, optional
+
+&gt;
+&gt; Target form hint: ‘cnf’ or ‘dnf’. Passed to to_nnf for optimization.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import Implies, Equivalent,          eliminate_implications
+&gt;&gt;&gt; from sympy.abc import A, B, C
+&gt;&gt;&gt; eliminate_implications(Implies(A, B))
+B | ~A
+&gt;&gt;&gt; eliminate_implications(Equivalent(A, B))
+(A | ~B) &amp; (B | ~A)
+&gt;&gt;&gt; eliminate_implications(Equivalent(A, B, C))
+(A | ~C) &amp; (B | ~A) &amp; (C | ~B)
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0007"><h3>Truth tables and related functions[¶](https://docs.sympy.org/dev/modules/logic.html#truth-tables-and-related-functions)</h3><pre># Truth tables and related functions[¶](https://docs.sympy.org/dev/modules/logic.html#truth-tables-and-related-functions)
+
+It is possible to create a truth table for a Boolean function with
+
+   sympy.logic.boolalg.truth_table(*expr*, *variables*, *input=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2094-L2159)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.truth_table)
+
+Return a generator of all possible configurations of the input variables, and the result of the boolean expression for those values.
+
+  Parameters:
+
+**expr** : Boolean expression
+
+**variables** : list of variables
+
+**input** : bool (default `True`)
+
+&gt;
+&gt; Indicates whether to return the input combinations.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import truth_table
+&gt;&gt;&gt; from sympy.abc import x,y
+&gt;&gt;&gt; table = truth_table(x &gt;&gt; y, [x, y])
+&gt;&gt;&gt; for t in table:
+...     print(&#39;{0} -&gt; {1}&#39;.format(*t))
+[0, 0] -&gt; True
+[0, 1] -&gt; True
+[1, 0] -&gt; False
+[1, 1] -&gt; True
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; table = truth_table(x | y, [x, y])
+&gt;&gt;&gt; list(table)
+[([0, 0], False), ([0, 1], True), ([1, 0], True), ([1, 1], True)]
+```
+
+  Copy to clipboard
+
+If `input` is `False`, `truth_table` returns only a list of truth values. In this case, the corresponding input values of variables can be deduced from the index of a given output.
+
+```
+&gt;&gt;&gt; from sympy.utilities.iterables import ibin
+&gt;&gt;&gt; vars = [y, x]
+&gt;&gt;&gt; values = truth_table(x &gt;&gt; y, vars, input=False)
+&gt;&gt;&gt; values = list(values)
+&gt;&gt;&gt; values
+[True, False, True, True]
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; for i, value in enumerate(values):
+...     print(&#39;{0} -&gt; {1}&#39;.format(list(zip(
+...     vars, ibin(i, len(vars)))), value))
+[(y, 0), (x, 0)] -&gt; True
+[(y, 0), (x, 1)] -&gt; False
+[(y, 1), (x, 0)] -&gt; True
+[(y, 1), (x, 1)] -&gt; True
+```
+
+  Copy to clipboard
+
+For mapping between integer representations of truth table positions, lists of zeros and ones and symbols, the following functions can be used:
+
+   sympy.logic.boolalg.integer_to_term(  *n: int*, *bits: int | None = None*, *str: bool = False*,  ) → list[int] | str | [Iterator](https://docs.sympy.org/dev/modules/polys/reference.html#sympy.polys.dispersion.collections.abc.Iterator)[tuple[int, ...]] | [Iterator](https://docs.sympy.org/dev/modules/polys/reference.html#sympy.polys.dispersion.collections.abc.Iterator)[str][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/utilities/iterables.py#L358-L436)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.integer_to_term)
+
+Return a list of length `bits` corresponding to the binary value of `n` with small bits to the right (last). If bits is omitted, the length will be the number required to represent `n`. If the bits are desired in reversed order, use the `[::-1]` slice of the returned list.
+
+If a sequence of all bits-length lists starting from `[0, 0,..., 0]` through `[1, 1, ..., 1]` are desired, pass a non-integer for bits, e.g. `&#39;all&#39;`.
+
+If the bit *string* is desired pass `str=True`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.utilities.iterables import ibin
+&gt;&gt;&gt; ibin(2)
+[1, 0]
+&gt;&gt;&gt; ibin(2, 4)
+[0, 0, 1, 0]
+```
+
+  Copy to clipboard
+
+If all lists corresponding to 0 to 2**n - 1, pass a non-integer for bits:
+
+```
+&gt;&gt;&gt; bits = 2
+&gt;&gt;&gt; for i in ibin(2, &#39;all&#39;):
+...     print(i)
+(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+```
+
+  Copy to clipboard
+
+If a bit string is desired of a given length, use str=True:
+
+```
+&gt;&gt;&gt; n = 123
+&gt;&gt;&gt; bits = 10
+&gt;&gt;&gt; ibin(n, bits, str=True)
+&#39;0001111011&#39;
+&gt;&gt;&gt; ibin(n, bits, str=True)[::-1]  # small bits left
+&#39;1101111000&#39;
+&gt;&gt;&gt; list(ibin(3, &#39;all&#39;, str=True))
+[&#39;000&#39;, &#39;001&#39;, &#39;010&#39;, &#39;011&#39;, &#39;100&#39;, &#39;101&#39;, &#39;110&#39;, &#39;111&#39;]
+```
+
+  Copy to clipboard          sympy.logic.boolalg.term_to_integer(*term*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2068-L2088)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.term_to_integer)
+
+Return an integer corresponding to the base-2 digits given by *term*.
+
+  Parameters:
+
+**term** : a string or list of ones and zeros
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import term_to_integer
+&gt;&gt;&gt; term_to_integer([1, 0, 0])
+4
+&gt;&gt;&gt; term_to_integer(&#39;100&#39;)
+4
+```
+
+  Copy to clipboard          sympy.logic.boolalg.bool_maxterm(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2723-L2756)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_maxterm)
+
+Return the k-th maxterm.
+
+Each maxterm is assigned an index based on the opposite conventional binary encoding used for minterms. The maxterm convention assigns the value 0 to the direct form and 1 to the complemented form.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s (complementation pattern)
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_maxterm
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_maxterm([1, 0, 1], [x, y, z])
+y | ~x | ~z
+&gt;&gt;&gt; bool_maxterm(6, [x, y, z])
+z | ~x | ~y
+```
+
+  Copy to clipboard
+
+References
+
+   [[R815](https://docs.sympy.org/dev/modules/logic.html#id7)]
+
+[https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_maxterms](https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_maxterms)
+
+      sympy.logic.boolalg.bool_minterm(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2687-L2720)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_minterm)
+
+Return the k-th minterm.
+
+Minterms are numbered by a binary encoding of the complementation pattern of the variables. This convention assigns the value 1 to the direct form and 0 to the complemented form.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s (complementation pattern)
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_minterm
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_minterm([1, 0, 1], [x, y, z])
+x &amp; z &amp; ~y
+&gt;&gt;&gt; bool_minterm(6, [x, y, z])
+x &amp; y &amp; ~z
+```
+
+  Copy to clipboard
+
+References
+
+   [[R816](https://docs.sympy.org/dev/modules/logic.html#id8)]
+
+[https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_minterms](https://en.wikipedia.org/wiki/Canonical_normal_form#Indexing_minterms)
+
+      sympy.logic.boolalg.bool_monomial(*k*, *variables*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2759-L2797)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.bool_monomial)
+
+Return the k-th monomial.
+
+Monomials are numbered by a binary encoding of the presence and absences of the variables. This convention assigns the value 1 to the presence of variable and 0 to the absence of variable.
+
+Each boolean function can be uniquely represented by a Zhegalkin Polynomial (Algebraic Normal Form). The Zhegalkin Polynomial of the boolean function with  variables can contain up to  monomials. We can enumerate all the monomials. Each monomial is fully specified by the presence or absence of each variable.
+
+For example, boolean function with four variables `(a, b, c, d)` can contain up to  monomials. The 13-th monomial is the product `a &amp; b &amp; d`, because 13 in binary is 1, 1, 0, 1.
+
+  Parameters:
+
+**k** : int or list of 1’s and 0’s
+
+**variables** : list of variables
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import bool_monomial
+&gt;&gt;&gt; from sympy.abc import x, y, z
+&gt;&gt;&gt; bool_monomial([1, 0, 1], [x, y, z])
+x &amp; z
+&gt;&gt;&gt; bool_monomial(6, [x, y, z])
+x &amp; y
+```
+
+  Copy to clipboard          sympy.logic.boolalg.anf_coeffs(*truthvalues*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2632-L2684)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.anf_coeffs)
+
+Convert a list of truth values of some boolean expression to the list of coefficients of the polynomial mod 2 (exclusive disjunction) representing the boolean expression in ANF (i.e., the “Zhegalkin polynomial”).
+
+There are  possible Zhegalkin monomials in  variables, since each monomial is fully specified by the presence or absence of each variable.
+
+We can enumerate all the monomials. For example, boolean function with four variables `(a, b, c, d)` can contain up to  monomials. The 13-th monomial is the product `a &amp; b &amp; d`, because 13 in binary is 1, 1, 0, 1.
+
+A given monomial’s presence or absence in a polynomial corresponds to that monomial’s coefficient being 1 or 0 respectively.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import anf_coeffs, bool_monomial, Xor
+&gt;&gt;&gt; from sympy.abc import a, b, c
+&gt;&gt;&gt; truthvalues = [0, 1, 1, 0, 0, 1, 0, 1]
+&gt;&gt;&gt; coeffs = anf_coeffs(truthvalues)
+&gt;&gt;&gt; coeffs
+[0, 1, 1, 0, 0, 0, 1, 0]
+&gt;&gt;&gt; polynomial = Xor(*[
+...     bool_monomial(k, [a, b, c])
+...     for k, coeff in enumerate(coeffs) if coeff == 1
+... ])
+&gt;&gt;&gt; polynomial
+b ^ c ^ (a &amp; b)
+```
+
+  Copy to clipboard          sympy.logic.boolalg.to_int_repr(*clauses*, *symbols*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/boolalg.py#L2041-L2065)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.boolalg.to_int_repr)
+
+Takes clauses in CNF format and puts them into an integer representation.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.logic.boolalg import to_int_repr
+&gt;&gt;&gt; from sympy.abc import x, y
+&gt;&gt;&gt; to_int_repr([x | y, y], [x, y]) == [{1, 2}, {2}]
+True
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0008"><h3>Inference[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic.inference)</h3><pre># Inference[¶](https://docs.sympy.org/dev/modules/logic.html#module-sympy.logic.inference)
+
+This module implements some inference routines in propositional logic.
+
+The function satisfiable will test that a given Boolean expression is satisfiable, that is, you can assign values to the variables to make the sentence `True`.
+
+For example, the expression `x &amp; ~x` is not satisfiable, since there are no values for `x` that make this sentence `True`. On the other hand, `(x
+| y) &amp; (x | ~y) &amp; (~x | y)` is satisfiable with both `x` and `y` being `True`.
+
+```
+&gt;&gt;&gt; from sympy.logic.inference import satisfiable
+&gt;&gt;&gt; from sympy import Symbol
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;)
+&gt;&gt;&gt; y = Symbol(&#39;y&#39;)
+&gt;&gt;&gt; satisfiable(x &amp; ~x)
+False
+&gt;&gt;&gt; satisfiable((x | y) &amp; (x | ~y) &amp; (~x | y))
+{x: True, y: True}
+```
+
+  Copy to clipboard
+
+As you see, when a sentence is satisfiable, it returns a model that makes that sentence `True`. If it is not satisfiable it will return `False`.
+
+   sympy.logic.inference.satisfiable(  *expr*, *algorithm=None*, *all_models=False*, *minimal=False*, *use_lra_theory=False*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/logic/inference.py#L34-L118)[¶](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.inference.satisfiable)
+
+Check satisfiability of a propositional sentence. Returns a model when it succeeds. Returns {true: true} for trivially true expressions.
+
+On setting all_models to True, if given expr is satisfiable then returns a generator of models. However, if expr is unsatisfiable then returns a generator containing the single element False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.abc import A, B
+&gt;&gt;&gt; from sympy.logic.inference import satisfiable
+&gt;&gt;&gt; satisfiable(A &amp; ~B)
+{A: True, B: False}
+&gt;&gt;&gt; satisfiable(A &amp; ~A)
+False
+&gt;&gt;&gt; satisfiable(True)
+{True: True}
+&gt;&gt;&gt; next(satisfiable(A &amp; ~A, all_models=True))
+False
+&gt;&gt;&gt; models = satisfiable((A &gt;&gt; B) &amp; B, all_models=True)
+&gt;&gt;&gt; next(models)
+{A: False, B: True}
+&gt;&gt;&gt; next(models)
+{A: True, B: True}
+&gt;&gt;&gt; def use_models(models):
+...     for model in models:
+...         if model:
+...             # Do something with the model.
+...             print(model)
+...         else:
+...             # Given expr is unsatisfiable.
+...             print(&quot;UNSAT&quot;)
+&gt;&gt;&gt; use_models(satisfiable(A &gt;&gt; ~A, all_models=True))
+{A: False}
+&gt;&gt;&gt; use_models(satisfiable(A ^ A, all_models=True))
+UNSAT
+```
+
+  Copy to clipboard
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

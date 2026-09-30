@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Jacobian matrix and determinant - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Jacobian matrix and determinant - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#Jacobian_matrix</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:09:02.212Z</div><div class="stat"><b>Records</b><br>28</div><div class="stat"><b>Sections</b><br>22</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 301 B · ~76 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 45504 B · ~11208 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 79027 B · ~19725 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 423 B · ~106 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Jacobian matrix and determinant.md</code></a> <small>markdown · 8130 B · ~1999 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Definition.md</code></a> <small>markdown · 6040 B · ~1483 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Jacobian matrix.md</code></a> <small>markdown · 4059 B · ~1006 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Jacobian determinant.md</code></a> <small>markdown · 3324 B · ~830 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Inverse.md</code></a> <small>markdown · 1984 B · ~493 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Critical points.md</code></a> <small>markdown · 943 B · ~236 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Examples.md</code></a> <small>markdown · 119 B · ~30 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Example 1.md</code></a> <small>markdown · 1297 B · ~317 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Example 2- polar-Cartesian transformation.md</code></a> <small>markdown · 1456 B · ~351 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Example 3- spherical-Cartesian transformation.md</code></a> <small>markdown · 3106 B · ~736 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Example 4.md</code></a> <small>markdown · 1859 B · ~450 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Example 5.md</code></a> <small>markdown · 1363 B · ~336 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Other uses.md</code></a> <small>markdown · 122 B · ~31 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Dynamical systems.md</code></a> <small>markdown · 1858 B · ~463 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Newton&#39;s method.md</code></a> <small>markdown · 356 B · ~89 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-Regression and least squares fitting.md</code></a> <small>markdown · 745 B · ~187 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-See also.md</code></a> <small>markdown · 341 B · ~86 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-Notes.md</code></a> <small>markdown · 357 B · ~89 tok</small></li><li><a href="#section-0020"><code>artifacts/sections/0020-References.md</code></a> <small>markdown · 4431 B · ~1101 tok</small></li><li><a href="#section-0021"><code>artifacts/sections/0021-Further reading.md</code></a> <small>markdown · 931 B · ~232 tok</small></li><li><a href="#section-0022"><code>artifacts/sections/0022-External links.md</code></a> <small>markdown · 2227 B · ~557 tok</small></li><li><a href="#art-0026"><code>artifacts/provenance/source-record.json</code></a> <small>json · 447 B · ~112 tok</small></li><li><a href="#art-0027"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0028"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Jacobian matrix and determinant - Wikipedia&quot;
+source: &quot;https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#Jacobian_matrix&quot;
+captured_at: 2026-09-30T05:09:02.212Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 28
+artifact_count: 28
+content_sha256: 4c10a8ebf63721f377e02be049f7cda40ef8f1cef9b5010ba5f89a821560a2b9
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:301,&quot;sha256&quot;:&quot;28a7408f86f44e9a31428f3f1570a306af393e0044707efe3e08ae069c83aec4&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t05&quot;,&quot;212z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;determinant&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:76,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:45504,&quot;sha256&quot;:&quot;4c10a8ebf63721f377e02be049f7cda40ef8f1cef9b5010ba5f89a821560a2b9&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;jacobian&quot;,&quot;partial&quot;,&quot;mathbf&quot;,&quot;function&quot;],&quot;summary&quot;:&quot;Jacobian matrix and determinant - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:11208,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:79027,&quot;sha256&quot;:&quot;32a55bbf0dcac6c7c90054ee1b037e30882749a1aef265e27f7c83ebea615b1f&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;rel&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:19725,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:423,&quot;sha256&quot;:&quot;2b4ddaa6aa0280e389f90c69516cbddf209cb7511dfba5304ead6c581b302a3f&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:106,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Jacobian matrix and determinant.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8130,&quot;sha256&quot;:&quot;968bd15062043a2069eae2ff641f2d4f729514e9e7e870d56e06d784eb937e1f&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;matrix&quot;,&quot;jacobian&quot;,&quot;determinant&quot;,&quot;function&quot;],&quot;summary&quot;:&quot;Jacobian matrix and determinant&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1999,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Definition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6040,&quot;sha256&quot;:&quot;2979b1e086e44f7e7a8b1024590d385c653149f86ba4d22baec1fe407f383a08&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;partial&quot;,&quot;displaystyle&quot;,&quot;jacobian&quot;,&quot;mathbf&quot;],&quot;summary&quot;:&quot;Definition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1483,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Jacobian matrix.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4059,&quot;sha256&quot;:&quot;1d7b0ae98296a84b39089fcdbf29423c1aee98d86480a115ead930e53cfc4678&quot;,&quot;keywords&quot;:[&quot;mathbf&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;function&quot;,&quot;jacobian&quot;,&quot;its&quot;],&quot;summary&quot;:&quot;Jacobian matrix&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1006,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Jacobian determinant.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3324,&quot;sha256&quot;:&quot;b3cb326de0dfb1bb33bcbe2c99473cdea8360f45067bbc52833d0d541f64c840&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;jacobian&quot;,&quot;determinant&quot;,&quot;near&quot;,&quot;point&quot;],&quot;summary&quot;:&quot;Jacobian determinant&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:830,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Inverse.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1984,&quot;sha256&quot;:&quot;6edd8d970f995b04b075170499d6f264415f05f1460ef2ddef4706d6b1b92433&quot;,&quot;keywords&quot;:[&quot;mathbf&quot;,&quot;function&quot;,&quot;jacobian&quot;,&quot;https&quot;,&quot;inverse&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Inverse&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:493,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Critical points.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:943,&quot;sha256&quot;:&quot;c122aa07af535e7b398d04eb994a47f6cf164dff0c3e65e8e885b0f6b7f1263a&quot;,&quot;keywords&quot;:[&quot;critical&quot;,&quot;point&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;rank&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;Critical points&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:236,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:119,&quot;sha256&quot;:&quot;0c626f5eedce2827254a8a08a24c899e7790b2d6f7238befaa9a4016620c5013&quot;,&quot;keywords&quot;:[&quot;edit&quot;,&quot;examples&quot;,&quot;action&quot;,&quot;https&quot;,&quot;index&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;org&quot;,&quot;php&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:30,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Example 1.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1297,&quot;sha256&quot;:&quot;844c36260ae011a3f02aa5ebbebc0815bdabdace1d1a61dbdfcfd1c6392010db&quot;,&quot;keywords&quot;:[&quot;partial&quot;,&quot;bmatrix&quot;,&quot;dfrac&quot;,&quot;begin&quot;,&quot;end&quot;,&quot;mathbf&quot;,&quot;1em&quot;,&quot;cos&quot;],&quot;summary&quot;:&quot;Example 1&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:317,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Example 2- polar-Cartesian transformation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1456,&quot;sha256&quot;:&quot;55e5f74020a2684b8c8487688dc64fe1da2b2480abac9381002f9481b354d93f&quot;,&quot;keywords&quot;:[&quot;varphi&quot;,&quot;cos&quot;,&quot;partial&quot;,&quot;sin&quot;,&quot;bmatrix&quot;,&quot;frac&quot;,&quot;begin&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Example 2: polar-Cartesian transformation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:351,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Example 3- spherical-Cartesian transformation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3106,&quot;sha256&quot;:&quot;c15e88a83f053949850e2d11614ecff93d20e46bd8e710d01be28015e2303170&quot;,&quot;keywords&quot;:[&quot;sin&quot;,&quot;cos&quot;,&quot;varphi&quot;,&quot;partial&quot;,&quot;rho&quot;,&quot;theta&quot;,&quot;dfrac&quot;,&quot;volume&quot;],&quot;summary&quot;:&quot;Example 3: spherical-Cartesian transformation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:736,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Example 4.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1859,&quot;sha256&quot;:&quot;aec4256d5b7f942b790a2b3daffaaa0c8c9e8b36f39d06fbe54ccdf292a2796d&quot;,&quot;keywords&quot;:[&quot;partial&quot;,&quot;dfrac&quot;,&quot;bmatrix&quot;,&quot;sin&quot;,&quot;1em&quot;,&quot;begin&quot;,&quot;end&quot;,&quot;example&quot;],&quot;summary&quot;:&quot;Example 4&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:450,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Example 5.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1363,&quot;sha256&quot;:&quot;6cc4df021171d0685c1bff85f253c21b987581eee096f4b48bd591c8f866783f&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;vmatrix&quot;,&quot;begin&quot;,&quot;end&quot;,&quot;object&quot;,&quot;one&quot;,&quot;2x_&quot;,&quot;8x_&quot;],&quot;summary&quot;:&quot;Example 5&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:336,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Other uses.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:122,&quot;sha256&quot;:&quot;08061d5930db504f3e9bb0ffc3c73f2d686556ae5ac77fbbedff83329ef32535&quot;,&quot;keywords&quot;:[&quot;edit&quot;,&quot;other&quot;,&quot;uses&quot;,&quot;action&quot;,&quot;https&quot;,&quot;index&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Other uses&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:31,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Dynamical systems.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1858,&quot;sha256&quot;:&quot;dd8478d96f4d01a6b07da9a8d52d46aa203aee5178edbbdf36a7deb180d98124&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;mathbf&quot;,&quot;wiki&quot;,&quot;point&quot;,&quot;stationary&quot;],&quot;summary&quot;:&quot;Dynamical systems&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:463,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Newton&#39;s method.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:356,&quot;sha256&quot;:&quot;f201f69000ccc0d5bc788a8a838d8ea165c8e6a117cbed149431a338c759dafb&quot;,&quot;keywords&quot;:[&quot;method&quot;,&quot;newton&quot;,&quot;edit&quot;,&quot;equations&quot;,&quot;https&quot;,&quot;org&quot;,&quot;system&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Newton&#39;s method&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:89,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-Regression and least squares fitting.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:745,&quot;sha256&quot;:&quot;8bd2255d484a480b71b605d9e4febfc341b12d746120d18ac1217be3aca142d3&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fitting&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;least&quot;,&quot;regression&quot;],&quot;summary&quot;:&quot;Regression and least squares fitting&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:187,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:341,&quot;sha256&quot;:&quot;3e4033fe78147018f90331720d814b19a8acf9f6d87e209a83f8f576f86166c4&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;differential&quot;,&quot;edit&quot;,&quot;see&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:86,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:357,&quot;sha256&quot;:&quot;feec7e50bcafe4ce2b913dbfe36494c2543623af458c9c6fc56db1817fac3f53&quot;,&quot;keywords&quot;:[&quot;edit&quot;,&quot;https&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;notes&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;action&quot;,&quot;cite_ref-7&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:89,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0023&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0020-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4431,&quot;sha256&quot;:&quot;3311d8716c24f11887a716bc53673230f8d9ba5c4dc48b98a3a15d84f05407ba&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;jacobian&quot;,&quot;com&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;identifier&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1101,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0024&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0021-Further reading.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:931,&quot;sha256&quot;:&quot;e658a04b2fb89c63c8dea0f3058e603fdce1a3d1801c879b5cb3f5c5c95adf02&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;0-387-96058-9&quot;,&quot;3-540-60988-1&quot;,&quot;books&quot;,&quot;booksources&quot;],&quot;summary&quot;:&quot;Further reading&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:232,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0025&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0022-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2227,&quot;sha256&quot;:&quot;bd17d4f6f62c7e92001997ef77eeba89c8f8303f79196522b0f6c0eefb22c4ec&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;category&quot;,&quot;jacobian&quot;,&quot;edit&quot;,&quot;index&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:557,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0026&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:447,&quot;sha256&quot;:&quot;bb718d78eb11bc96a580bfc2b35c958e5f1b5a55e6769cb6b44ef23d42259a8a&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;jacobian_matrix_and_determinant&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t05&quot;,&quot;212z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0026&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:112,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0027&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;54f6cdc37b64b173f1032484623a1070f60b2d73e2ad6d7157398a450c609095&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;535&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0027&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0028&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0028&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:09:02.212Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	76	301	28a7408f86f44e9a31428f3f1570a306af393e0044707efe3e08ae069c83aec4	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	11208	45504	4c10a8ebf63721f377e02be049f7cda40ef8f1cef9b5010ba5f89a821560a2b9	Jacobian matrix and determinant - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	19725	79027	32a55bbf0dcac6c7c90054ee1b037e30882749a1aef265e27f7c83ebea615b1f	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	106	423	2b4ddaa6aa0280e389f90c69516cbddf209cb7511dfba5304ead6c581b302a3f	Introduction	
+sec:0005	section	artifacts/sections/0002-Jacobian matrix and determinant.md	primary	1999	8130	968bd15062043a2069eae2ff641f2d4f729514e9e7e870d56e06d784eb937e1f	Jacobian matrix and determinant	
+sec:0006	section	artifacts/sections/0003-Definition.md	primary	1483	6040	2979b1e086e44f7e7a8b1024590d385c653149f86ba4d22baec1fe407f383a08	Definition	
+sec:0007	section	artifacts/sections/0004-Jacobian matrix.md	primary	1006	4059	1d7b0ae98296a84b39089fcdbf29423c1aee98d86480a115ead930e53cfc4678	Jacobian matrix	
+sec:0008	section	artifacts/sections/0005-Jacobian determinant.md	primary	830	3324	b3cb326de0dfb1bb33bcbe2c99473cdea8360f45067bbc52833d0d541f64c840	Jacobian determinant	
+sec:0009	section	artifacts/sections/0006-Inverse.md	primary	493	1984	6edd8d970f995b04b075170499d6f264415f05f1460ef2ddef4706d6b1b92433	Inverse	
+sec:0010	section	artifacts/sections/0007-Critical points.md	primary	236	943	c122aa07af535e7b398d04eb994a47f6cf164dff0c3e65e8e885b0f6b7f1263a	Critical points	
+sec:0011	section	artifacts/sections/0008-Examples.md	primary	30	119	0c626f5eedce2827254a8a08a24c899e7790b2d6f7238befaa9a4016620c5013	Examples	
+sec:0012	section	artifacts/sections/0009-Example 1.md	supporting	317	1297	844c36260ae011a3f02aa5ebbebc0815bdabdace1d1a61dbdfcfd1c6392010db	Example 1	
+sec:0013	section	artifacts/sections/0010-Example 2- polar-Cartesian transformation.md	supporting	351	1456	55e5f74020a2684b8c8487688dc64fe1da2b2480abac9381002f9481b354d93f	Example 2: polar-Cartesian transformation	
+sec:0014	section	artifacts/sections/0011-Example 3- spherical-Cartesian transformation.md	supporting	736	3106	c15e88a83f053949850e2d11614ecff93d20e46bd8e710d01be28015e2303170	Example 3: spherical-Cartesian transformation	
+sec:0015	section	artifacts/sections/0012-Example 4.md	supporting	450	1859	aec4256d5b7f942b790a2b3daffaaa0c8c9e8b36f39d06fbe54ccdf292a2796d	Example 4	
+sec:0016	section	artifacts/sections/0013-Example 5.md	supporting	336	1363	6cc4df021171d0685c1bff85f253c21b987581eee096f4b48bd591c8f866783f	Example 5	
+sec:0017	section	artifacts/sections/0014-Other uses.md	supporting	31	122	08061d5930db504f3e9bb0ffc3c73f2d686556ae5ac77fbbedff83329ef32535	Other uses	
+sec:0018	section	artifacts/sections/0015-Dynamical systems.md	supporting	463	1858	dd8478d96f4d01a6b07da9a8d52d46aa203aee5178edbbdf36a7deb180d98124	Dynamical systems	
+sec:0019	section	artifacts/sections/0016-Newton&#39;s method.md	supporting	89	356	f201f69000ccc0d5bc788a8a838d8ea165c8e6a117cbed149431a338c759dafb	Newton&#39;s method	
+sec:0020	section	artifacts/sections/0017-Regression and least squares fitting.md	supporting	187	745	8bd2255d484a480b71b605d9e4febfc341b12d746120d18ac1217be3aca142d3	Regression and least squares fitting	
+sec:0021	section	artifacts/sections/0018-See also.md	supporting	86	341	3e4033fe78147018f90331720d814b19a8acf9f6d87e209a83f8f576f86166c4	See also	
+sec:0022	section	artifacts/sections/0019-Notes.md	supporting	89	357	feec7e50bcafe4ce2b913dbfe36494c2543623af458c9c6fc56db1817fac3f53	Notes	
+sec:0023	section	artifacts/sections/0020-References.md	supporting	1101	4431	3311d8716c24f11887a716bc53673230f8d9ba5c4dc48b98a3a15d84f05407ba	References	
+sec:0024	section	artifacts/sections/0021-Further reading.md	supporting	232	931	e658a04b2fb89c63c8dea0f3058e603fdce1a3d1801c879b5cb3f5c5c95adf02	Further reading	
+sec:0025	section	artifacts/sections/0022-External links.md	supporting	557	2227	bd17d4f6f62c7e92001997ef77eeba89c8f8303f79196522b0f6c0eefb22c4ec	External links	
+art:0026	provenance	artifacts/provenance/source-record.json	supporting	112	447	bb718d78eb11bc96a580bfc2b35c958e5f1b5a55e6769cb6b44ef23d42259a8a	Capture source identity and metadata	
+art:0027	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	54f6cdc37b64b173f1032484623a1070f60b2d73e2ad6d7157398a450c609095	Extraction engine and counts	
+art:0028	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Jacobian matrix and determinant
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%B5%D9%81%D9%88%D9%81%D8%A9_%D9%8A%D8%A7%D9%83%D9%88%D8%A8%D9%8A%D8%A9)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D1%8B%D1%86%D0%B0_%D0%AF%D0%BA%D0%BE%D0%B1%D1%96)
+- [Català](https://ca.wikipedia.org/wiki/Jacobi%C3%A0)
+- [Čeština](https://cs.wikipedia.org/wiki/Jacobiho_matice_a_determinant)
+- [Deutsch](https://de.wikipedia.org/wiki/Jacobi-Matrix)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%A0%CE%AF%CE%BD%CE%B1%CE%BA%CE%B1%CF%82_%CE%A4%CE%B6%CE%B1%CE%BA%CF%8C%CE%BC%CF%80%CE%B9)
+- [Esperanto](https://eo.wikipedia.org/wiki/Jakobia_matrico)
+- [Español](https://es.wikipedia.org/wiki/Matriz_y_determinante_jacobianos)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3_%DA%98%D8%A7%DA%A9%D9%88%D8%A8%DB%8C)
+- [Suomi](https://fi.wikipedia.org/wiki/Jacobin_matriisi)
+- [Français](https://fr.wikipedia.org/wiki/Matrice_jacobienne)
+- [Galego](https://gl.wikipedia.org/wiki/Matriz_e_determinante_jacobianos)
+- [עברית](https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%95%D7%91%D7%99%D7%90%D7%9F)
+- [Magyar](https://hu.wikipedia.org/wiki/Jacobi-m%C3%A1trix)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Matriks_Jacobi)
+- [Íslenska](https://is.wikipedia.org/wiki/Jacobi-fylki)
+- [Italiano](https://it.wikipedia.org/wiki/Matrice_jacobiana)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97)
+- [ಕನ್ನಡ](https://kn.wikipedia.org/wiki/%E0%B2%AF%E0%B2%BE%E0%B2%95%E0%B3%8B%E0%B2%AC%E0%B3%80%E0%B2%AF%E0%B2%A8%E0%B3%8D)
+- [한국어](https://ko.wikipedia.org/wiki/%EC%95%BC%EC%BD%94%EB%B9%84_%ED%96%89%EB%A0%AC)
+- [မြန်မာဘာသာ](https://my.wikipedia.org/wiki/%E1%80%82%E1%80%BB%E1%80%B1%E1%80%B8%E1%80%80%E1%80%AD%E1%80%AF%E1%80%98%E1%80%AE%E1%80%9A%E1%80%94%E1%80%BA_%E1%80%80%E1%80%AD%E1%80%94%E1%80%BA%E1%80%B8%E1%80%A1%E1%80%AF%E1%80%B6%E1%80%94%E1%80%BE%E1%80%84%E1%80%B7%E1%80%BA_%E1%80%A1%E1%80%86%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%A1%E1%80%96%E1%80%BC%E1%80%90%E1%80%BA%E1%80%90%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8)
+- [Nederlands](https://nl.wikipedia.org/wiki/Jacobi-matrix)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Jacobimatrise)
+- [Polski](https://pl.wikipedia.org/wiki/Macierz_Jacobiego)
+- [Português](https://pt.wikipedia.org/wiki/Matriz_jacobiana)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%AF%D0%BA%D0%BE%D0%B1%D0%B8)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Jacobijeva_matrika_in_determinanta)
+- [Shqip](https://sq.wikipedia.org/wiki/Jakobiani_dhe_p%C3%ABrcaktori_i_nj%C3%AB_matrice)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%88%D0%B0%D0%BA%D0%BE%D0%B1%D0%B8%D1%98%D0%B0%D0%BD)
+- [Svenska](https://sv.wikipedia.org/wiki/Jacobimatris)
+- [Türkçe](https://tr.wikipedia.org/wiki/Jacobi_matrisi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%8F_%D0%AF%D0%BA%D0%BE%D0%B1%D1%96)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/Ma_tr%E1%BA%ADn_Jacobi)
+- [中文](https://zh.wikipedia.org/wiki/%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q506041#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia (Redirected from [Jacobian matrix](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix&amp;redirect=no))  Matrix of partial derivatives of a vector-valued function &quot;Jacobian matrix&quot; redirects here. For the operator, see [Jacobi matrix (operator)](https://en.wikipedia.org/wiki/Jacobi_matrix_(operator)). Part of a series of articles about[Calculus](https://en.wikipedia.org/wiki/Calculus)     ∫  a   b    f ′  ( t )  d t = f ( b ) − f ( a )   {\displaystyle \int _{a}^{b}f&#39;(t)\,dt=f(b)-f(a)}
+- [Fundamental theorem](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus)
+
+- [Limits](https://en.wikipedia.org/wiki/Limit_of_a_function)
+- [Continuity](https://en.wikipedia.org/wiki/Continuous_function)
+
+- [Rolle&#39;s theorem](https://en.wikipedia.org/wiki/Rolle&#39;s_theorem)
+- [Mean value theorem](https://en.wikipedia.org/wiki/Mean_value_theorem)
+- [Inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem)
+  show[Differential](https://en.wikipedia.org/wiki/Differential_calculus)  show[Integral](https://en.wikipedia.org/wiki/Integral)  show[Series](https://en.wikipedia.org/wiki/Series_(mathematics))  show[Vector](https://en.wikipedia.org/wiki/Vector_calculus)  hide[Multivariable](https://en.wikipedia.org/wiki/Multivariable_calculus) Formalisms
+- [Matrix](https://en.wikipedia.org/wiki/Matrix_calculus)
+- [Tensor](https://en.wikipedia.org/wiki/Tensor_calculus)
+- [Exterior](https://en.wikipedia.org/wiki/Exterior_derivative)
+- [Geometric](https://en.wikipedia.org/wiki/Geometric_calculus)
+  Definitions
+- [Partial derivative](https://en.wikipedia.org/wiki/Partial_derivative)
+- [Multiple integral](https://en.wikipedia.org/wiki/Multiple_integral)
+- [Line integral](https://en.wikipedia.org/wiki/Line_integral)
+- [Surface integral](https://en.wikipedia.org/wiki/Surface_integral)
+- [Volume integral](https://en.wikipedia.org/wiki/Volume_integral)
+- [Jacobian](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant)
+- [Hessian](https://en.wikipedia.org/wiki/Hessian_matrix)
+  Theorems
+- [Clairaut&#39;s](https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives)
+- [Fubini&#39;s](https://en.wikipedia.org/wiki/Fubini&#39;s_theorem)
+   showAdvanced  showSpecialized  showMiscellanea
+- [v](https://en.wikipedia.org/wiki/Template:Calculus)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Calculus)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Calculus)
+
+In [vector calculus](https://en.wikipedia.org/wiki/Vector_calculus), the **Jacobian matrix** ([/dʒəˈkoʊbiən/](https://en.wikipedia.org/wiki/Help:IPA/English),[[1]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-3) [/dʒɪ-, jɪ-/](https://en.wikipedia.org/wiki/Help:IPA/English)) of a [vector-valued function](https://en.wikipedia.org/wiki/Vector-valued_function) of several variables is the [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of all its first-order [partial derivatives](https://en.wikipedia.org/wiki/Partial_derivative). If this matrix is [square](https://en.wikipedia.org/wiki/Square_matrix), that is, if the number of variables equals the number of [components](https://en.wikipedia.org/wiki/Euclidean_vector#Decomposition) of function values, then its [determinant](https://en.wikipedia.org/wiki/Determinant) is called the **Jacobian determinant**. Both the matrix and (if applicable) the determinant are often referred to simply as the **Jacobian**.[[4]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-4) They are named after [Carl Gustav Jacob Jacobi](https://en.wikipedia.org/wiki/Carl_Gustav_Jacob_Jacobi) (1804-1851).
+
+The Jacobian matrix is the natural generalization of the [derivative](https://en.wikipedia.org/wiki/Derivative) and the [differential](https://en.wikipedia.org/wiki/Differential_of_a_function) of a usual function to vector valued functions of several variables. This generalization includes generalizations of the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem) and the [implicit function theorem](https://en.wikipedia.org/wiki/Implicit_function_theorem), where the non-nullity of the derivative is replaced by the non-nullity of the Jacobian determinant, and the [multiplicative inverse](https://en.wikipedia.org/wiki/Multiplicative_inverse) of the derivative is replaced by the [inverse](https://en.wikipedia.org/wiki/Inverse_of_a_matrix) of the Jacobian matrix.
+
+The Jacobian determinant is fundamentally used for changes of variables in [multiple integrals](https://en.wikipedia.org/wiki/Multiple_integral).
+
+## Definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=1)]
+
+Let      f  :   R   n   →   R   m     {\textstyle \mathbf {f} :\mathbb {R} ^{n}\to \mathbb {R} ^{m}}  be a function such that each of its first-order partial derivatives exists on       R   n     {\textstyle \mathbb {R} ^{n}}  . This function takes a vector ⁠     x  = (  x  1   , … ,  x  n   ) ∈   R   n     {\displaystyle \mathbf {x} =(x_{1},\ldots ,x_{n})\in \mathbb {R} ^{n}}  ⁠ as input and produces the vector ⁠     f  (  x  ) = (  f  1   (  x  ) , … ,  f  m   (  x  ) ) ∈   R   m     {\displaystyle \mathbf {f} (\mathbf {x} )=(f_{1}(\mathbf {x} ),\ldots ,f_{m}(\mathbf {x} ))\in \mathbb {R} ^{m}}  ⁠ as output. Then the Jacobian matrix of **f**, denoted **Jf**, is the ⁠    m × n   {\displaystyle m\times n}  ⁠ matrix whose (*i*, *j*) entry is        ∂  f  i     ∂  x  j      ;   {\textstyle {\frac {\partial f_{i}}{\partial x_{j}}};}   explicitly       J  f    =   [        ∂  f    ∂  x  1         ⋯       ∂  f    ∂  x  n          ]   =   [     ∇   T     f  1       ⋮      ∇   T     f  m      ]   =   [        ∂  f  1     ∂  x  1         ⋯       ∂  f  1     ∂  x  n           ⋮   ⋱   ⋮         ∂  f  m     ∂  x  1         ⋯       ∂  f  m     ∂  x  n          ]     {\displaystyle \mathbf {J_{f}} ={\begin{bmatrix}{\dfrac {\partial \mathbf {f} }{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial \mathbf {f} }{\partial x_{n}}}\end{bmatrix}}={\begin{bmatrix}\nabla ^{\mathsf {T}}f_{1}\\\vdots \\\nabla ^{\mathsf {T}}f_{m}\end{bmatrix}}={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial f_{1}}{\partial x_{n}}}\\\vdots &amp;\ddots &amp;\vdots \\{\dfrac {\partial f_{m}}{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial f_{m}}{\partial x_{n}}}\end{bmatrix}}}  where      ∇   T     f  i     {\displaystyle \nabla ^{\mathsf {T}}f_{i}}   is the transpose (row vector) of the [gradient](https://en.wikipedia.org/wiki/Gradient) of the     i   {\displaystyle i}  -th component.
+
+The Jacobian matrix, whose entries are functions of **x**, is denoted in various ways; other common notations include *D***f**,     ∇  f    {\displaystyle \nabla \mathbf {f} }  , and        ∂ (  f  1   , … ,  f  m   )   ∂ (  x  1   , … ,  x  n   )      {\textstyle {\frac {\partial (f_{1},\ldots ,f_{m})}{\partial (x_{1},\ldots ,x_{n})}}}  .[[5]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-5)[[6]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-6) Some authors define the Jacobian as the [transpose](https://en.wikipedia.org/wiki/Transpose) of the form given above.
+
+The Jacobian matrix [represents](https://en.wikipedia.org/wiki/Matrix_(mathematics)#Linear_transformations) the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) of **f** at every point where **f** is differentiable. In detail, if **h** is a [displacement vector](https://en.wikipedia.org/wiki/Displacement_vector) represented by a [column matrix](https://en.wikipedia.org/wiki/Column_matrix), the [matrix product](https://en.wikipedia.org/wiki/Matrix_product) **Jf**(**x**) ⋅ **h** is another displacement vector, that is the best linear approximation of the change of **f** along **h** in a [neighborhood](https://en.wikipedia.org/wiki/Neighborhood_(mathematics)) of **x**, if **f**(**x**) is [differentiable](https://en.wikipedia.org/wiki/Differentiable_function) at **x**.[[a]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-7) This means that the function that maps **y** to **f**(**x**) + **Jf**(**x**) ⋅ (**y** – **x**) is the best [linear approximation](https://en.wikipedia.org/wiki/Linear_approximation) of **f**(**y**) for all points **y** close to **x**. The [linear map](https://en.wikipedia.org/wiki/Linear_map) **h** → **Jf**(**x**) ⋅ **h** is known as the *derivative* or the *differential* of **f** at **x**.
+
+When     m = n   {\textstyle m=n}  , the Jacobian matrix is square, so its [determinant](https://en.wikipedia.org/wiki/Determinant) is a well-defined function of **x**, known as the **Jacobian determinant** of **f**. It carries important information about the local behavior of **f**. In particular, the function **f** has a differentiable [inverse function](https://en.wikipedia.org/wiki/Inverse_function) in a neighborhood of a point **x** if and only if the Jacobian determinant is nonzero at **x** (see [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem) for an explanation of this and [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture) for a related problem of *global* invertibility). The Jacobian determinant also appears when changing the variables in [multiple integrals](https://en.wikipedia.org/wiki/Multiple_integral) (see [substitution rule for multiple variables](https://en.wikipedia.org/wiki/Integration_by_substitution#Substitution_for_multiple_variables)).
+
+When     m = 1   {\textstyle m=1}  , that is when     f :   R   n   →  R    {\textstyle f:\mathbb {R} ^{n}\to \mathbb {R} }   is a [scalar-valued function](https://en.wikipedia.org/wiki/Scalar_field), the Jacobian matrix reduces to the [row vector](https://en.wikipedia.org/wiki/Row_vector)      ∇   T    f   {\displaystyle \nabla ^{\mathsf {T}}f}  ; this row vector of all first-order partial derivatives of ⁠    f   {\displaystyle f}  ⁠ is the transpose of the [gradient](https://en.wikipedia.org/wiki/Gradient) of ⁠    f   {\displaystyle f}  ⁠, i.e.       J   f   =  ∇   T    f   {\displaystyle \mathbf {J} _{f}=\nabla ^{\mathsf {T}}f}  . Specializing further, when     m = n = 1   {\textstyle m=n=1}  , that is when     f :  R  →  R    {\textstyle f:\mathbb {R} \to \mathbb {R} }   is a [scalar-valued function](https://en.wikipedia.org/wiki/Scalar_field) of a single variable, the Jacobian matrix has a single entry; this entry is the derivative of the function ⁠    f   {\displaystyle f}  ⁠.
+
+## Jacobian matrix
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=2)]
+
+The Jacobian of a vector-valued function in several variables generalizes the [gradient](https://en.wikipedia.org/wiki/Gradient) of a [scalar](https://en.wikipedia.org/wiki/Scalar_(mathematics))-valued function in several variables, which in turn generalizes the derivative of a scalar-valued function of a single variable. In other words, the Jacobian matrix of a scalar-valued [function of several variables](https://en.wikipedia.org/wiki/Multivariate_function) is (the transpose of) its gradient and the gradient of a scalar-valued function of a single variable is its derivative.
+
+At each point where a function is differentiable, its Jacobian matrix can also be thought of as describing the amount of &quot;stretching&quot;, &quot;rotating&quot; or &quot;transforming&quot; that the function imposes locally near that point. For example, if (*x*′, *y*′) = **f**(*x*, *y*) is used to smoothly transform an image, the Jacobian matrix **J****f**(*x*, *y*), describes how the image in the neighborhood of (*x*, *y*) is transformed.
+
+If a function is differentiable at a point, its differential is given in coordinates by the Jacobian matrix. However, a function does not need to be differentiable for its Jacobian matrix to be defined, since only its first-order [partial derivatives](https://en.wikipedia.org/wiki/Partial_derivative) are required to exist.
+
+If **f** is [differentiable](https://en.wikipedia.org/wiki/Derivative) at a point **p** in **R***n*, then its [differential](https://en.wikipedia.org/wiki/Total_derivative#The_total_derivative_as_a_linear_map) is represented by **J****f**(**p**). In this case, the [linear transformation](https://en.wikipedia.org/wiki/Linear_transformation) represented by **J****f**(**p**) is the best [linear approximation](https://en.wikipedia.org/wiki/Linear_approximation) of **f** near the point **p**, in the sense that
+
+f  (  x  ) −  f  (  p  ) =   J    f    (  p  ) (  x  −  p  ) + o ( ‖  x  −  p  ‖ )  (  as    x  →  p  ) ,   {\displaystyle \mathbf {f} (\mathbf {x} )-\mathbf {f} (\mathbf {p} )=\mathbf {J} _{\mathbf {f} }(\mathbf {p} )(\mathbf {x} -\mathbf {p} )+o(\|\mathbf {x} -\mathbf {p} \|)\quad ({\text{as }}\mathbf {x} \to \mathbf {p} ),}
+
+where *o*(‖**x** − **p**‖) is a [quantity](https://en.wikipedia.org/wiki/Big_O_notation#Little-o_notation) that approaches zero much faster than the [distance](https://en.wikipedia.org/wiki/Euclidean_distance) between **x** and **p** does as **x** approaches **p**. This approximation specializes to the approximation of a scalar function of a single variable by its [Taylor polynomial](https://en.wikipedia.org/wiki/Taylor_polynomial) of degree one, namely
+
+f ( x ) − f ( p ) =  f ′  ( p ) ( x − p ) + o ( x − p )  (  as   x → p ) .   {\displaystyle f(x)-f(p)=f&#39;(p)(x-p)+o(x-p)\quad ({\text{as }}x\to p).}
+
+In this sense, the Jacobian may be regarded as a kind of &quot;[first-order derivative](https://en.wikipedia.org/wiki/Derivative)&quot; of a vector-valued function of several variables. In particular, this means that the [gradient](https://en.wikipedia.org/wiki/Gradient) of a scalar-valued function of several variables may too be regarded as its &quot;first-order derivative&quot;.
+
+Composable differentiable functions **f** : **R***n* → **R***m* and **g** : **R***m* → **R***k* satisfy the [chain rule](https://en.wikipedia.org/wiki/Chain_rule#General_rule), namely       J    g  ∘  f    (  x  ) =   J    g    (  f  (  x  ) )   J    f    (  x  )   {\displaystyle \mathbf {J} _{\mathbf {g} \circ \mathbf {f} }(\mathbf {x} )=\mathbf {J} _{\mathbf {g} }(\mathbf {f} (\mathbf {x} ))\mathbf {J} _{\mathbf {f} }(\mathbf {x} )}   for **x**  in **R***n*.
+
+The Jacobian of the gradient of a scalar function of several variables has a special name: the [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix), which in a sense is the &quot;[second derivative](https://en.wikipedia.org/wiki/Second_derivative)&quot; of the function in question.
+
+## Jacobian determinant
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=3)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Jacobian_determinant_and_distortion.svg/500px-Jacobian_determinant_and_distortion.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Jacobian_determinant_and_distortion.svg)A nonlinear map     f :   R   2   →   R   2     {\displaystyle f\colon \mathbb {R} ^{2}\to \mathbb {R} ^{2}}   sends a small square (left, in red) to a distorted parallelogram (right, in red). The Jacobian at a point gives the best linear approximation of the distorted parallelogram near that point (right, in translucent white), and the Jacobian determinant gives the ratio of the area of the approximating parallelogram to that of the original square.
+
+If *m* = *n*, then **f** is a function from **R***n* to itself and the Jacobian matrix is a [square matrix](https://en.wikipedia.org/wiki/Square_matrix). We can then form its [determinant](https://en.wikipedia.org/wiki/Determinant), known as the **Jacobian determinant**. The Jacobian determinant is sometimes simply referred to as &quot;the Jacobian&quot;.
+
+The Jacobian determinant at a given point gives important information about the behavior of **f** near that point. For instance, the [continuously differentiable function](https://en.wikipedia.org/wiki/Continuously_differentiable_function) **f** is [invertible](https://en.wikipedia.org/wiki/Invertible) near a point **p** ∈ **R***n* if the Jacobian determinant at **p** is non-zero. This is the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem). Furthermore, if the Jacobian determinant at **p** is [positive](https://en.wikipedia.org/wiki/Positive_number), then **f** preserves [orientation](https://en.wikipedia.org/wiki/Orientation_(vector_space)) near **p**; if it is [negative](https://en.wikipedia.org/wiki/Negative_number), **f** reverses orientation. The [absolute value](https://en.wikipedia.org/wiki/Absolute_value) of the Jacobian determinant at **p** gives us the factor by which the function **f** expands or shrinks [volumes](https://en.wikipedia.org/wiki/Volume) near **p**; this is why it occurs in the general [substitution rule](https://en.wikipedia.org/wiki/Substitution_rule).
+
+The Jacobian determinant is used when making a [change of variables](https://en.wikipedia.org/wiki/Integration_by_substitution#Substitution_for_multiple_variables) when evaluating a [multiple integral](https://en.wikipedia.org/wiki/Multiple_integral) of a function over a region within its domain. To accommodate for the change of coordinates the magnitude of the Jacobian determinant arises as a multiplicative factor within the integral. This is because the *n*-dimensional *dV* element is in general a [parallelepiped](https://en.wikipedia.org/wiki/Parallelepiped) in the new coordinate system, and the *n*-volume of a parallelepiped is the determinant of its edge vectors.
+
+The Jacobian can also be used to determine the stability of [equilibria](https://en.wikipedia.org/wiki/Equilibrium_point) for [systems of differential equations](https://en.wikipedia.org/wiki/Matrix_differential_equation) by approximating behavior near an equilibrium point.
+
+## Inverse
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=4)]
+
+According to the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem), the [matrix inverse](https://en.wikipedia.org/wiki/Invertible_matrix) of the Jacobian matrix of an [invertible function](https://en.wikipedia.org/wiki/Invertible_function) **f** : **R***n* → **R***n* is the Jacobian matrix of the *inverse* function. That is, the Jacobian matrix of the inverse function at a point **p** is
+
+J     f   − 1     (  p  ) =    J    f    − 1   (   f   − 1   (  p  ) )  ,   {\displaystyle \mathbf {J} _{\mathbf {f} ^{-1}}(\mathbf {p} )={\mathbf {J} _{\mathbf {f} }^{-1}(\mathbf {f} ^{-1}(\mathbf {p} ))},}
+
+and the Jacobian determinant is
+
+det (   J     f   − 1     (  p  ) ) =   1  det (   J    f    (   f   − 1   (  p  ) ) )    .   {\displaystyle \det(\mathbf {J} _{\mathbf {f} ^{-1}}(\mathbf {p} ))={\frac {1}{\det(\mathbf {J} _{\mathbf {f} }(\mathbf {f} ^{-1}(\mathbf {p} )))}}.}
+
+If the Jacobian is continuous and nonsingular at the point **p** in **R***n*, then **f** is invertible when restricted to some [neighbourhood](https://en.wikipedia.org/wiki/Neighbourhood_(mathematics)) of **p**. In other words, if the Jacobian determinant is not zero at a point, then the function is *locally invertible* near this point.
+
+The [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture) is related to global invertibility in the case of a polynomial function, that is a function defined by *n* [polynomials](https://en.wikipedia.org/wiki/Polynomial) in *n* variables. It asserts that, if the Jacobian determinant is a non-zero constant (or, equivalently, that it does not have any complex zero), then the function is invertible and its inverse is a polynomial function. The Jacobian conjecture has been proven false for     n &gt; 2   {\displaystyle n&gt;2}   and is still open for     n = 2   {\displaystyle n=2}  .
+
+## Critical points
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=5)] Main article: [Critical point](https://en.wikipedia.org/wiki/Critical_point_(mathematics))
+
+If **f** : **R***n* → **R***m* is a [differentiable function](https://en.wikipedia.org/wiki/Differentiable_function), a *critical point* of **f** is a point where the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of the Jacobian matrix is not maximal. This means that the rank at the critical point is lower than the rank at some neighbour point. In other words, let *k* be the maximal dimension of the [open balls](https://en.wikipedia.org/wiki/Open_ball) contained in the image of **f**; then a point is critical if all [minors](https://en.wikipedia.org/wiki/Minor_(linear_algebra)) of rank *k* of **f** are zero.
+
+In the case where *m* = *n* = *k*, a point is critical if the Jacobian determinant is zero.
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=6)]
+
+### Example 1
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=7)]
+
+Consider a function **f** : **R**2 → **R**3, with (*x*, *y*) ↦ (*f*1(*x*, *y*), *f*2(*x*, *y*), *f*3(*x*, *y*)), given by
+
+f   (   [    x     y    ]   )  =   [     f  1   ( x , y )      f  2   ( x , y )      f  3   ( x , y )    ]   =   [     x  2   y     5 x + sin ⁡ y     4 y    ]   .   {\displaystyle \mathbf {f} \left({\begin{bmatrix}x\\y\end{bmatrix}}\right)={\begin{bmatrix}f_{1}(x,y)\\f_{2}(x,y)\\f_{3}(x,y)\end{bmatrix}}={\begin{bmatrix}x^{2}y\\5x+\sin y\\4y\end{bmatrix}}.}
+
+The Jacobian matrix of **f** is
+
+J    f    ( x , y ) =   [        ∂  f  1     ∂ x           ∂  f  1     ∂ y             ∂  f  2     ∂ x           ∂  f  2     ∂ y             ∂  f  3     ∂ x           ∂  f  3     ∂ y        ]   =   [    2 x y    x  2       5   cos ⁡ y     0   4    ]     {\displaystyle \mathbf {J} _{\mathbf {f} }(x,y)={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x}}&amp;{\dfrac {\partial f_{1}}{\partial y}}\\[1em]{\dfrac {\partial f_{2}}{\partial x}}&amp;{\dfrac {\partial f_{2}}{\partial y}}\\[1em]{\dfrac {\partial f_{3}}{\partial x}}&amp;{\dfrac {\partial f_{3}}{\partial y}}\end{bmatrix}}={\begin{bmatrix}2xy&amp;x^{2}\\5&amp;\cos y\\0&amp;4\end{bmatrix}}}
+
+### Example 2: polar-Cartesian transformation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=8)]
+
+The transformation from [polar coordinates](https://en.wikipedia.org/wiki/Polar_coordinate_system) (*r*, *φ*) to [Cartesian coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) (*x*, *y*), is given by the function **F**: **R**+ × [0, 2π) → **R**2 with components
+
+x    = r cos ⁡ φ ;     y    = r sin ⁡ φ .       {\displaystyle {\begin{aligned}x&amp;=r\cos \varphi ;\\y&amp;=r\sin \varphi .\end{aligned}}}
+
+J    F    ( r , φ ) =   [       ∂ x   ∂ r         ∂ x   ∂ φ           ∂ y   ∂ r         ∂ y   ∂ φ       ]   =   [    cos ⁡ φ   − r sin ⁡ φ     sin ⁡ φ   r cos ⁡ φ    ]     {\displaystyle \mathbf {J} _{\mathbf {F} }(r,\varphi )={\begin{bmatrix}{\frac {\partial x}{\partial r}}&amp;{\frac {\partial x}{\partial \varphi }}\\[0.5ex]{\frac {\partial y}{\partial r}}&amp;{\frac {\partial y}{\partial \varphi }}\end{bmatrix}}={\begin{bmatrix}\cos \varphi &amp;-r\sin \varphi \\\sin \varphi &amp;r\cos \varphi \end{bmatrix}}}
+
+The Jacobian determinant is equal to *r*. This can be used to transform integrals between the two coordinate systems:
+
+∬   F  ( A )   f ( x , y )  d x  d y =  ∬  A   f ( r cos ⁡ φ , r sin ⁡ φ )  r  d r  d φ .   {\displaystyle \iint _{\mathbf {F} (A)}f(x,y)\,dx\,dy=\iint _{A}f(r\cos \varphi ,r\sin \varphi )\,r\,dr\,d\varphi .}
+
+### Example 3: spherical-Cartesian transformation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=9)]
+
+The transformation from [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system) (*ρ*, *φ*, *θ*)[[7]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-8) to [Cartesian coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) (*x*, *y*, *z*), is given by the function **F**: **R**+ × [0, *π*) × [0, 2*π*) → **R**3 with components
+
+x    = ρ sin ⁡ φ cos ⁡ θ ;     y    = ρ sin ⁡ φ sin ⁡ θ ;     z    = ρ cos ⁡ φ .       {\displaystyle {\begin{aligned}x&amp;=\rho \sin \varphi \cos \theta ;\\y&amp;=\rho \sin \varphi \sin \theta ;\\z&amp;=\rho \cos \varphi .\end{aligned}}}
+
+The Jacobian matrix for this coordinate change is
+
+J    F    ( ρ , φ , θ ) =   [        ∂ x   ∂ ρ           ∂ x   ∂ φ           ∂ x   ∂ θ             ∂ y   ∂ ρ           ∂ y   ∂ φ           ∂ y   ∂ θ             ∂ z   ∂ ρ           ∂ z   ∂ φ           ∂ z   ∂ θ        ]   =   [    sin ⁡ φ cos ⁡ θ   ρ cos ⁡ φ cos ⁡ θ   − ρ sin ⁡ φ sin ⁡ θ     sin ⁡ φ sin ⁡ θ   ρ cos ⁡ φ sin ⁡ θ   ρ sin ⁡ φ cos ⁡ θ     cos ⁡ φ   − ρ sin ⁡ φ   0    ]   .   {\displaystyle \mathbf {J} _{\mathbf {F} }(\rho ,\varphi ,\theta )={\begin{bmatrix}{\dfrac {\partial x}{\partial \rho }}&amp;{\dfrac {\partial x}{\partial \varphi }}&amp;{\dfrac {\partial x}{\partial \theta }}\\[1em]{\dfrac {\partial y}{\partial \rho }}&amp;{\dfrac {\partial y}{\partial \varphi }}&amp;{\dfrac {\partial y}{\partial \theta }}\\[1em]{\dfrac {\partial z}{\partial \rho }}&amp;{\dfrac {\partial z}{\partial \varphi }}&amp;{\dfrac {\partial z}{\partial \theta }}\end{bmatrix}}={\begin{bmatrix}\sin \varphi \cos \theta &amp;\rho \cos \varphi \cos \theta &amp;-\rho \sin \varphi \sin \theta \\\sin \varphi \sin \theta &amp;\rho \cos \varphi \sin \theta &amp;\rho \sin \varphi \cos \theta \\\cos \varphi &amp;-\rho \sin \varphi &amp;0\end{bmatrix}}.}
+
+The [determinant](https://en.wikipedia.org/wiki/Determinant) is *ρ*2 sin *φ*. Since *dV* = *dx* *dy* *dz* is the volume for a rectangular differential volume element (because the volume of a rectangular prism is the product of its sides), we can interpret *dV* = *ρ*2 sin *φ* *dρ* *dφ* *dθ* as the volume of the spherical [differential volume element](https://en.wikipedia.org/wiki/Differential_volume_element). Unlike rectangular differential volume element&#39;s volume, this differential volume element&#39;s volume is not a constant, and varies with coordinates (*ρ* and *φ*). It can be used to transform integrals between the two coordinate systems:
+
+∭   F  ( U )   f ( x , y , z )  d x  d y  d z =  ∭  U   f ( ρ sin ⁡ φ cos ⁡ θ , ρ sin ⁡ φ sin ⁡ θ , ρ cos ⁡ φ )   ρ  2   sin ⁡ φ  d ρ  d φ  d θ .   {\displaystyle \iiint _{\mathbf {F} (U)}f(x,y,z)\,dx\,dy\,dz=\iiint _{U}f(\rho \sin \varphi \cos \theta ,\rho \sin \varphi \sin \theta ,\rho \cos \varphi )\,\rho ^{2}\sin \varphi \,d\rho \,d\varphi \,d\theta .}
+
+### Example 4
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=10)]
+
+The Jacobian matrix of the function **F** : **R**3 → **R**4 with components
+
+y  1      =  x  1        y  2      = 5  x  3        y  3      = 4  x  2   2   − 2  x  3        y  4      =  x  3   sin ⁡  x  1         {\displaystyle {\begin{aligned}y_{1}&amp;=x_{1}\\y_{2}&amp;=5x_{3}\\y_{3}&amp;=4x_{2}^{2}-2x_{3}\\y_{4}&amp;=x_{3}\sin x_{1}\end{aligned}}}
+
+is
+
+J    F    (  x  1   ,  x  2   ,  x  3   ) =   [        ∂  y  1     ∂  x  1             ∂  y  1     ∂  x  2             ∂  y  1     ∂  x  3               ∂  y  2     ∂  x  1             ∂  y  2     ∂  x  2             ∂  y  2     ∂  x  3               ∂  y  3     ∂  x  1             ∂  y  3     ∂  x  2             ∂  y  3     ∂  x  3               ∂  y  4     ∂  x  1             ∂  y  4     ∂  x  2             ∂  y  4     ∂  x  3          ]   =   [    1   0   0     0   0   5     0   8  x  2     − 2      x  3   cos ⁡  x  1     0   sin ⁡  x  1      ]   .   {\displaystyle \mathbf {J} _{\mathbf {F} }(x_{1},x_{2},x_{3})={\begin{bmatrix}{\dfrac {\partial y_{1}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{1}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{1}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{2}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{2}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{2}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{3}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{3}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{3}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{4}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{4}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{4}}{\partial x_{3}}}\end{bmatrix}}={\begin{bmatrix}1&amp;0&amp;0\\0&amp;0&amp;5\\0&amp;8x_{2}&amp;-2\\x_{3}\cos x_{1}&amp;0&amp;\sin x_{1}\end{bmatrix}}.}
+
+This example shows that the Jacobian matrix need not be a square matrix.
+
+### Example 5
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=11)]
+
+The Jacobian determinant of the function **F** : **R**3 → **R**3 with components
+
+y  1      = 5  x  2        y  2      = 4  x  1   2   − 2 sin ⁡ (  x  2    x  3   )      y  3      =  x  2    x  3         {\displaystyle {\begin{aligned}y_{1}&amp;=5x_{2}\\y_{2}&amp;=4x_{1}^{2}-2\sin(x_{2}x_{3})\\y_{3}&amp;=x_{2}x_{3}\end{aligned}}}
+
+is
+
+|    0   5   0     8  x  1     − 2  x  3   cos ⁡ (  x  2    x  3   )   − 2  x  2   cos ⁡ (  x  2    x  3   )     0    x  3      x  2      |   = − 8  x  1     |    5   0      x  3      x  2      |   = − 40  x  1    x  2   .   {\displaystyle {\begin{vmatrix}0&amp;5&amp;0\\8x_{1}&amp;-2x_{3}\cos(x_{2}x_{3})&amp;-2x_{2}\cos(x_{2}x_{3})\\0&amp;x_{3}&amp;x_{2}\end{vmatrix}}=-8x_{1}{\begin{vmatrix}5&amp;0\\x_{3}&amp;x_{2}\end{vmatrix}}=-40x_{1}x_{2}.}
+
+From this we see that **F** reverses orientation near those points where *x*1 and *x*2 have the same sign; the function is [locally](https://en.wikipedia.org/wiki/Locally) invertible everywhere except near points where *x*1 = 0 or *x*2 = 0. Intuitively, if one starts with a tiny object around the point (1, 2, 3) and apply **F** to that object, one will get a resulting object with approximately 40 × 1 × 2 = 80 times the volume of the original one, with orientation reversed.
+
+## Other uses
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=12)]
+
+### Dynamical systems
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=13)]
+
+Consider a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) of the form         x  ˙    = F (  x  )   {\displaystyle {\dot {\mathbf {x} }}=F(\mathbf {x} )}  , where         x  ˙      {\displaystyle {\dot {\mathbf {x} }}}   is the (component-wise) derivative of      x    {\displaystyle \mathbf {x} }   with respect to the [evolution parameter](https://en.wikipedia.org/wiki/Evolution_parameter)     t   {\displaystyle t}   (time), and     F :   R   n   →   R   n     {\displaystyle F\colon \mathbb {R} ^{n}\to \mathbb {R} ^{n}}   is differentiable. If     F (   x   0   ) = 0   {\displaystyle F(\mathbf {x} _{0})=0}  , then       x   0     {\displaystyle \mathbf {x} _{0}}   is a [stationary point](https://en.wikipedia.org/wiki/Stationary_point) (also called a [steady state](https://en.wikipedia.org/wiki/Steady_state)). By the [Hartman–Grobman theorem](https://en.wikipedia.org/wiki/Hartman%E2%80%93Grobman_theorem), the behavior of the system near a stationary point is related to the [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalue) of       J   F    (   x   0   )    {\displaystyle \mathbf {J} _{F}\left(\mathbf {x} _{0}\right)}  , the Jacobian of     F   {\displaystyle F}   at the stationary point.[[8]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-9) Specifically, if the eigenvalues all have real parts that are negative, then the system is stable near the stationary point. If any eigenvalue has a real part that is positive, then the point is unstable. If the largest real part of the eigenvalues is zero, the Jacobian matrix does not allow for an evaluation of the stability.[[9]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-10)
+
+### Newton&#39;s method
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=14)]
+
+A square system of coupled nonlinear equations can be solved iteratively by [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method#Systems_of_equations). This method uses the Jacobian matrix of the system of equations.
+
+### Regression and least squares fitting
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=15)]
+
+The Jacobian serves as a linearized [design matrix](https://en.wikipedia.org/wiki/Design_matrix) in statistical [regression](https://en.wikipedia.org/wiki/Regression_analysis) and [curve fitting](https://en.wikipedia.org/wiki/Curve_fitting); see [non-linear least squares](https://en.wikipedia.org/wiki/Non-linear_least_squares). The Jacobian is also used in random matrices, moments, local sensitivity and statistical diagnostics.[[10]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-11)[[11]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-12)
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=16)]
+- [Center manifold](https://en.wikipedia.org/wiki/Center_manifold)
+- [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix)
+- [Pushforward (differential)](https://en.wikipedia.org/wiki/Pushforward_(differential))
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=17)]
+1. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-7) Differentiability at **x** implies, but is not implied by, the existence of all first-order partial derivatives at **x**, and hence is a stronger condition.
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=18)]
+1. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-1) [&quot;Jacobian - Definition of Jacobian in English by Oxford Dictionaries&quot;](https://web.archive.org/web/20171201043633/https://en.oxforddictionaries.com/definition/jacobian). *Oxford Dictionaries - English*. Archived from [the original](https://en.oxforddictionaries.com/definition/jacobian) on 1 December 2017. Retrieved 2 May 2018.
+2. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-2) [&quot;the definition of jacobian&quot;](http://www.dictionary.com/browse/jacobian). *Dictionary.com*. [Archived](https://web.archive.org/web/20171201040801/http://www.dictionary.com/browse/jacobian) from the original on 1 December 2017. Retrieved 2 May 2018.
+3. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-3) Team, Forvo. [&quot;Jacobian pronunciation: How to pronounce Jacobian in English&quot;](https://forvo.com/word/jacobian/). *forvo.com*. Retrieved 2 May 2018.
+4. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-4) W., Weisstein, Eric. [&quot;Jacobian&quot;](http://mathworld.wolfram.com/Jacobian.html). *mathworld.wolfram.com*. [Archived](https://web.archive.org/web/20171103144419/http://mathworld.wolfram.com/Jacobian.html) from the original on 3 November 2017. Retrieved 2 May 2018.`{{cite web}}`: CS1 maint: multiple names: authors list ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_multiple_names:_authors_list))
+5. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-5) Holder, Allen; Eichholz, Joseph (2019). *An Introduction to computational science*. International Series in Operations Research &amp; Management Science. Cham, Switzerland: Springer. p. 53. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-030-15679-4](https://en.wikipedia.org/wiki/Special:BookSources/978-3-030-15679-4).
+6. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-6) Lovett, Stephen (2019-12-16). [*Differential Geometry of Manifolds*](https://books.google.com/books?id=G1bGDwAAQBAJ). CRC Press. p. 16. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-429-60782-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-429-60782-0).
+7. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-8) Joel Hass, Christopher Heil, and Maurice Weir. *Thomas&#39; Calculus Early Transcendentals, 14e*. Pearson, 2018, p. 959.
+8. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-9) Arrowsmith, D. K.; Place, C. M. (1992). [&quot;The Linearization Theorem&quot;](https://books.google.com/books?id=8qCcP7KNaZ0C&amp;pg=PA77). *Dynamical Systems: Differential Equations, Maps, and Chaotic Behaviour*. London: Chapman &amp; Hall. pp. 77–81. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-412-39080-9](https://en.wikipedia.org/wiki/Special:BookSources/0-412-39080-9).
+9. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-10) Hirsch, Morris; Smale, Stephen (1974). *Differential Equations, Dynamical Systems and Linear Algebra*. Academic Press. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-12-349550-4](https://en.wikipedia.org/wiki/Special:BookSources/0-12-349550-4).
+10. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-11) Liu, Shuangzhe; Leiva, Victor; Zhuang, Dan; Ma, Tiefeng; Figueroa-Zúñiga, Jorge I. (March 2022). [&quot;Matrix differential calculus with applications in the multivariate linear model and its diagnostics&quot;](https://doi.org/10.1016%2Fj.jmva.2021.104849). *Journal of Multivariate Analysis*. **188** 104849. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.jmva.2021.104849](https://doi.org/10.1016%2Fj.jmva.2021.104849).
+11. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-12) Liu, Shuangzhe; Trenkler, Götz; Kollo, Tõnu; von Rosen, Dietrich; Baksalary, Oskar Maria (2023). &quot;Professor Heinz Neudecker and matrix differential calculus&quot;. *Statistical Papers*. **65** (4): 2605–2639. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/s00362-023-01499-w](https://doi.org/10.1007%2Fs00362-023-01499-w). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [263661094](https://api.semanticscholar.org/CorpusID:263661094).
+
+## Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=19)]
+- [Gandolfo, Giancarlo](https://en.wikipedia.org/wiki/Giancarlo_Gandolfo) (1996). [&quot;Comparative Statics and the Correspondence Principle&quot;](https://books.google.com/books?id=ZMwXi67nhHQC&amp;pg=PA305). *Economic Dynamics* (Third ed.). Berlin: Springer. pp. 305–330. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [3-540-60988-1](https://en.wikipedia.org/wiki/Special:BookSources/3-540-60988-1).
+- [Protter, Murray H.](https://en.wikipedia.org/wiki/Murray_H._Protter); [Morrey, Charles B. Jr.](https://en.wikipedia.org/wiki/Charles_B._Morrey_Jr.) (1985). &quot;Transformations and Jacobians&quot;. *Intermediate Calculus* (Second ed.). New York: Springer. pp. 412–420. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-96058-9](https://en.wikipedia.org/wiki/Special:BookSources/0-387-96058-9).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=20)]
+- [&quot;Jacobian&quot;](https://www.encyclopediaofmath.org/index.php?title=Jacobian), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Mathworld](http://mathworld.wolfram.com/Jacobian.html) A more technical explanation of Jacobians
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Matrix_classes)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Matrix_classes)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Matrix_classes)
+[Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) classes             Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;oldid=1371416189](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;oldid=1371416189)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Multivariable calculus](https://en.wikipedia.org/wiki/Category:Multivariable_calculus)
+- [Differential calculus](https://en.wikipedia.org/wiki/Category:Differential_calculus)
+- [Generalizations of the derivative](https://en.wikipedia.org/wiki/Category:Generalizations_of_the_derivative)
+- [Determinants](https://en.wikipedia.org/wiki/Category:Determinants)
+- [Matrices (mathematics)](https://en.wikipedia.org/wiki/Category:Matrices_(mathematics))
+- [Differential operators](https://en.wikipedia.org/wiki/Category:Differential_operators)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Pages using sidebar with the child parameter](https://en.wikipedia.org/wiki/Category:Pages_using_sidebar_with_the_child_parameter)
+- [CS1 maint: multiple names: authors list](https://en.wikipedia.org/wiki/Category:CS1_maint:_multiple_names:_authors_list)
+
+    [https://en\.wikipedia\.org/wiki/Jacobian\_matrix\_and\_determinant?action=edit\#Jacobian\_matrix](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant?action=edit#Jacobian_matrix)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Jacobian matrix and determinant</h3><pre># Jacobian matrix and determinant
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%B5%D9%81%D9%88%D9%81%D8%A9_%D9%8A%D8%A7%D9%83%D9%88%D8%A8%D9%8A%D8%A9)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D1%8B%D1%86%D0%B0_%D0%AF%D0%BA%D0%BE%D0%B1%D1%96)
+- [Català](https://ca.wikipedia.org/wiki/Jacobi%C3%A0)
+- [Čeština](https://cs.wikipedia.org/wiki/Jacobiho_matice_a_determinant)
+- [Deutsch](https://de.wikipedia.org/wiki/Jacobi-Matrix)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%A0%CE%AF%CE%BD%CE%B1%CE%BA%CE%B1%CF%82_%CE%A4%CE%B6%CE%B1%CE%BA%CF%8C%CE%BC%CF%80%CE%B9)
+- [Esperanto](https://eo.wikipedia.org/wiki/Jakobia_matrico)
+- [Español](https://es.wikipedia.org/wiki/Matriz_y_determinante_jacobianos)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3_%DA%98%D8%A7%DA%A9%D9%88%D8%A8%DB%8C)
+- [Suomi](https://fi.wikipedia.org/wiki/Jacobin_matriisi)
+- [Français](https://fr.wikipedia.org/wiki/Matrice_jacobienne)
+- [Galego](https://gl.wikipedia.org/wiki/Matriz_e_determinante_jacobianos)
+- [עברית](https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%95%D7%91%D7%99%D7%90%D7%9F)
+- [Magyar](https://hu.wikipedia.org/wiki/Jacobi-m%C3%A1trix)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Matriks_Jacobi)
+- [Íslenska](https://is.wikipedia.org/wiki/Jacobi-fylki)
+- [Italiano](https://it.wikipedia.org/wiki/Matrice_jacobiana)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97)
+- [ಕನ್ನಡ](https://kn.wikipedia.org/wiki/%E0%B2%AF%E0%B2%BE%E0%B2%95%E0%B3%8B%E0%B2%AC%E0%B3%80%E0%B2%AF%E0%B2%A8%E0%B3%8D)
+- [한국어](https://ko.wikipedia.org/wiki/%EC%95%BC%EC%BD%94%EB%B9%84_%ED%96%89%EB%A0%AC)
+- [မြန်မာဘာသာ](https://my.wikipedia.org/wiki/%E1%80%82%E1%80%BB%E1%80%B1%E1%80%B8%E1%80%80%E1%80%AD%E1%80%AF%E1%80%98%E1%80%AE%E1%80%9A%E1%80%94%E1%80%BA_%E1%80%80%E1%80%AD%E1%80%94%E1%80%BA%E1%80%B8%E1%80%A1%E1%80%AF%E1%80%B6%E1%80%94%E1%80%BE%E1%80%84%E1%80%B7%E1%80%BA_%E1%80%A1%E1%80%86%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%A1%E1%80%96%E1%80%BC%E1%80%90%E1%80%BA%E1%80%90%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8)
+- [Nederlands](https://nl.wikipedia.org/wiki/Jacobi-matrix)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Jacobimatrise)
+- [Polski](https://pl.wikipedia.org/wiki/Macierz_Jacobiego)
+- [Português](https://pt.wikipedia.org/wiki/Matriz_jacobiana)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%AF%D0%BA%D0%BE%D0%B1%D0%B8)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Jacobijeva_matrika_in_determinanta)
+- [Shqip](https://sq.wikipedia.org/wiki/Jakobiani_dhe_p%C3%ABrcaktori_i_nj%C3%AB_matrice)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%88%D0%B0%D0%BA%D0%BE%D0%B1%D0%B8%D1%98%D0%B0%D0%BD)
+- [Svenska](https://sv.wikipedia.org/wiki/Jacobimatris)
+- [Türkçe](https://tr.wikipedia.org/wiki/Jacobi_matrisi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%8F_%D0%AF%D0%BA%D0%BE%D0%B1%D1%96)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/Ma_tr%E1%BA%ADn_Jacobi)
+- [中文](https://zh.wikipedia.org/wiki/%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q506041#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia (Redirected from [Jacobian matrix](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix&amp;redirect=no))  Matrix of partial derivatives of a vector-valued function &quot;Jacobian matrix&quot; redirects here. For the operator, see [Jacobi matrix (operator)](https://en.wikipedia.org/wiki/Jacobi_matrix_(operator)). Part of a series of articles about[Calculus](https://en.wikipedia.org/wiki/Calculus)     ∫  a   b    f ′  ( t )  d t = f ( b ) − f ( a )   {\displaystyle \int _{a}^{b}f&#39;(t)\,dt=f(b)-f(a)}
+- [Fundamental theorem](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus)
+
+- [Limits](https://en.wikipedia.org/wiki/Limit_of_a_function)
+- [Continuity](https://en.wikipedia.org/wiki/Continuous_function)
+
+- [Rolle&#39;s theorem](https://en.wikipedia.org/wiki/Rolle&#39;s_theorem)
+- [Mean value theorem](https://en.wikipedia.org/wiki/Mean_value_theorem)
+- [Inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem)
+  show[Differential](https://en.wikipedia.org/wiki/Differential_calculus)  show[Integral](https://en.wikipedia.org/wiki/Integral)  show[Series](https://en.wikipedia.org/wiki/Series_(mathematics))  show[Vector](https://en.wikipedia.org/wiki/Vector_calculus)  hide[Multivariable](https://en.wikipedia.org/wiki/Multivariable_calculus) Formalisms
+- [Matrix](https://en.wikipedia.org/wiki/Matrix_calculus)
+- [Tensor](https://en.wikipedia.org/wiki/Tensor_calculus)
+- [Exterior](https://en.wikipedia.org/wiki/Exterior_derivative)
+- [Geometric](https://en.wikipedia.org/wiki/Geometric_calculus)
+  Definitions
+- [Partial derivative](https://en.wikipedia.org/wiki/Partial_derivative)
+- [Multiple integral](https://en.wikipedia.org/wiki/Multiple_integral)
+- [Line integral](https://en.wikipedia.org/wiki/Line_integral)
+- [Surface integral](https://en.wikipedia.org/wiki/Surface_integral)
+- [Volume integral](https://en.wikipedia.org/wiki/Volume_integral)
+- [Jacobian](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant)
+- [Hessian](https://en.wikipedia.org/wiki/Hessian_matrix)
+  Theorems
+- [Clairaut&#39;s](https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives)
+- [Fubini&#39;s](https://en.wikipedia.org/wiki/Fubini&#39;s_theorem)
+   showAdvanced  showSpecialized  showMiscellanea
+- [v](https://en.wikipedia.org/wiki/Template:Calculus)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Calculus)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Calculus)
+
+In [vector calculus](https://en.wikipedia.org/wiki/Vector_calculus), the **Jacobian matrix** ([/dʒəˈkoʊbiən/](https://en.wikipedia.org/wiki/Help:IPA/English),[[1]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-3) [/dʒɪ-, jɪ-/](https://en.wikipedia.org/wiki/Help:IPA/English)) of a [vector-valued function](https://en.wikipedia.org/wiki/Vector-valued_function) of several variables is the [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of all its first-order [partial derivatives](https://en.wikipedia.org/wiki/Partial_derivative). If this matrix is [square](https://en.wikipedia.org/wiki/Square_matrix), that is, if the number of variables equals the number of [components](https://en.wikipedia.org/wiki/Euclidean_vector#Decomposition) of function values, then its [determinant](https://en.wikipedia.org/wiki/Determinant) is called the **Jacobian determinant**. Both the matrix and (if applicable) the determinant are often referred to simply as the **Jacobian**.[[4]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-4) They are named after [Carl Gustav Jacob Jacobi](https://en.wikipedia.org/wiki/Carl_Gustav_Jacob_Jacobi) (1804-1851).
+
+The Jacobian matrix is the natural generalization of the [derivative](https://en.wikipedia.org/wiki/Derivative) and the [differential](https://en.wikipedia.org/wiki/Differential_of_a_function) of a usual function to vector valued functions of several variables. This generalization includes generalizations of the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem) and the [implicit function theorem](https://en.wikipedia.org/wiki/Implicit_function_theorem), where the non-nullity of the derivative is replaced by the non-nullity of the Jacobian determinant, and the [multiplicative inverse](https://en.wikipedia.org/wiki/Multiplicative_inverse) of the derivative is replaced by the [inverse](https://en.wikipedia.org/wiki/Inverse_of_a_matrix) of the Jacobian matrix.
+
+The Jacobian determinant is fundamentally used for changes of variables in [multiple integrals](https://en.wikipedia.org/wiki/Multiple_integral).
+</pre></article><article id="section-0003"><h3>Definition</h3><pre># Definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=1)]
+
+Let      f  :   R   n   →   R   m     {\textstyle \mathbf {f} :\mathbb {R} ^{n}\to \mathbb {R} ^{m}}  be a function such that each of its first-order partial derivatives exists on       R   n     {\textstyle \mathbb {R} ^{n}}  . This function takes a vector ⁠     x  = (  x  1   , … ,  x  n   ) ∈   R   n     {\displaystyle \mathbf {x} =(x_{1},\ldots ,x_{n})\in \mathbb {R} ^{n}}  ⁠ as input and produces the vector ⁠     f  (  x  ) = (  f  1   (  x  ) , … ,  f  m   (  x  ) ) ∈   R   m     {\displaystyle \mathbf {f} (\mathbf {x} )=(f_{1}(\mathbf {x} ),\ldots ,f_{m}(\mathbf {x} ))\in \mathbb {R} ^{m}}  ⁠ as output. Then the Jacobian matrix of **f**, denoted **Jf**, is the ⁠    m × n   {\displaystyle m\times n}  ⁠ matrix whose (*i*, *j*) entry is        ∂  f  i     ∂  x  j      ;   {\textstyle {\frac {\partial f_{i}}{\partial x_{j}}};}   explicitly       J  f    =   [        ∂  f    ∂  x  1         ⋯       ∂  f    ∂  x  n          ]   =   [     ∇   T     f  1       ⋮      ∇   T     f  m      ]   =   [        ∂  f  1     ∂  x  1         ⋯       ∂  f  1     ∂  x  n           ⋮   ⋱   ⋮         ∂  f  m     ∂  x  1         ⋯       ∂  f  m     ∂  x  n          ]     {\displaystyle \mathbf {J_{f}} ={\begin{bmatrix}{\dfrac {\partial \mathbf {f} }{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial \mathbf {f} }{\partial x_{n}}}\end{bmatrix}}={\begin{bmatrix}\nabla ^{\mathsf {T}}f_{1}\\\vdots \\\nabla ^{\mathsf {T}}f_{m}\end{bmatrix}}={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial f_{1}}{\partial x_{n}}}\\\vdots &amp;\ddots &amp;\vdots \\{\dfrac {\partial f_{m}}{\partial x_{1}}}&amp;\cdots &amp;{\dfrac {\partial f_{m}}{\partial x_{n}}}\end{bmatrix}}}  where      ∇   T     f  i     {\displaystyle \nabla ^{\mathsf {T}}f_{i}}   is the transpose (row vector) of the [gradient](https://en.wikipedia.org/wiki/Gradient) of the     i   {\displaystyle i}  -th component.
+
+The Jacobian matrix, whose entries are functions of **x**, is denoted in various ways; other common notations include *D***f**,     ∇  f    {\displaystyle \nabla \mathbf {f} }  , and        ∂ (  f  1   , … ,  f  m   )   ∂ (  x  1   , … ,  x  n   )      {\textstyle {\frac {\partial (f_{1},\ldots ,f_{m})}{\partial (x_{1},\ldots ,x_{n})}}}  .[[5]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-5)[[6]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-6) Some authors define the Jacobian as the [transpose](https://en.wikipedia.org/wiki/Transpose) of the form given above.
+
+The Jacobian matrix [represents](https://en.wikipedia.org/wiki/Matrix_(mathematics)#Linear_transformations) the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) of **f** at every point where **f** is differentiable. In detail, if **h** is a [displacement vector](https://en.wikipedia.org/wiki/Displacement_vector) represented by a [column matrix](https://en.wikipedia.org/wiki/Column_matrix), the [matrix product](https://en.wikipedia.org/wiki/Matrix_product) **Jf**(**x**) ⋅ **h** is another displacement vector, that is the best linear approximation of the change of **f** along **h** in a [neighborhood](https://en.wikipedia.org/wiki/Neighborhood_(mathematics)) of **x**, if **f**(**x**) is [differentiable](https://en.wikipedia.org/wiki/Differentiable_function) at **x**.[[a]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-7) This means that the function that maps **y** to **f**(**x**) + **Jf**(**x**) ⋅ (**y** – **x**) is the best [linear approximation](https://en.wikipedia.org/wiki/Linear_approximation) of **f**(**y**) for all points **y** close to **x**. The [linear map](https://en.wikipedia.org/wiki/Linear_map) **h** → **Jf**(**x**) ⋅ **h** is known as the *derivative* or the *differential* of **f** at **x**.
+
+When     m = n   {\textstyle m=n}  , the Jacobian matrix is square, so its [determinant](https://en.wikipedia.org/wiki/Determinant) is a well-defined function of **x**, known as the **Jacobian determinant** of **f**. It carries important information about the local behavior of **f**. In particular, the function **f** has a differentiable [inverse function](https://en.wikipedia.org/wiki/Inverse_function) in a neighborhood of a point **x** if and only if the Jacobian determinant is nonzero at **x** (see [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem) for an explanation of this and [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture) for a related problem of *global* invertibility). The Jacobian determinant also appears when changing the variables in [multiple integrals](https://en.wikipedia.org/wiki/Multiple_integral) (see [substitution rule for multiple variables](https://en.wikipedia.org/wiki/Integration_by_substitution#Substitution_for_multiple_variables)).
+
+When     m = 1   {\textstyle m=1}  , that is when     f :   R   n   →  R    {\textstyle f:\mathbb {R} ^{n}\to \mathbb {R} }   is a [scalar-valued function](https://en.wikipedia.org/wiki/Scalar_field), the Jacobian matrix reduces to the [row vector](https://en.wikipedia.org/wiki/Row_vector)      ∇   T    f   {\displaystyle \nabla ^{\mathsf {T}}f}  ; this row vector of all first-order partial derivatives of ⁠    f   {\displaystyle f}  ⁠ is the transpose of the [gradient](https://en.wikipedia.org/wiki/Gradient) of ⁠    f   {\displaystyle f}  ⁠, i.e.       J   f   =  ∇   T    f   {\displaystyle \mathbf {J} _{f}=\nabla ^{\mathsf {T}}f}  . Specializing further, when     m = n = 1   {\textstyle m=n=1}  , that is when     f :  R  →  R    {\textstyle f:\mathbb {R} \to \mathbb {R} }   is a [scalar-valued function](https://en.wikipedia.org/wiki/Scalar_field) of a single variable, the Jacobian matrix has a single entry; this entry is the derivative of the function ⁠    f   {\displaystyle f}  ⁠.
+</pre></article><article id="section-0004"><h3>Jacobian matrix</h3><pre># Jacobian matrix
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=2)]
+
+The Jacobian of a vector-valued function in several variables generalizes the [gradient](https://en.wikipedia.org/wiki/Gradient) of a [scalar](https://en.wikipedia.org/wiki/Scalar_(mathematics))-valued function in several variables, which in turn generalizes the derivative of a scalar-valued function of a single variable. In other words, the Jacobian matrix of a scalar-valued [function of several variables](https://en.wikipedia.org/wiki/Multivariate_function) is (the transpose of) its gradient and the gradient of a scalar-valued function of a single variable is its derivative.
+
+At each point where a function is differentiable, its Jacobian matrix can also be thought of as describing the amount of &quot;stretching&quot;, &quot;rotating&quot; or &quot;transforming&quot; that the function imposes locally near that point. For example, if (*x*′, *y*′) = **f**(*x*, *y*) is used to smoothly transform an image, the Jacobian matrix **J****f**(*x*, *y*), describes how the image in the neighborhood of (*x*, *y*) is transformed.
+
+If a function is differentiable at a point, its differential is given in coordinates by the Jacobian matrix. However, a function does not need to be differentiable for its Jacobian matrix to be defined, since only its first-order [partial derivatives](https://en.wikipedia.org/wiki/Partial_derivative) are required to exist.
+
+If **f** is [differentiable](https://en.wikipedia.org/wiki/Derivative) at a point **p** in **R***n*, then its [differential](https://en.wikipedia.org/wiki/Total_derivative#The_total_derivative_as_a_linear_map) is represented by **J****f**(**p**). In this case, the [linear transformation](https://en.wikipedia.org/wiki/Linear_transformation) represented by **J****f**(**p**) is the best [linear approximation](https://en.wikipedia.org/wiki/Linear_approximation) of **f** near the point **p**, in the sense that
+
+f  (  x  ) −  f  (  p  ) =   J    f    (  p  ) (  x  −  p  ) + o ( ‖  x  −  p  ‖ )  (  as    x  →  p  ) ,   {\displaystyle \mathbf {f} (\mathbf {x} )-\mathbf {f} (\mathbf {p} )=\mathbf {J} _{\mathbf {f} }(\mathbf {p} )(\mathbf {x} -\mathbf {p} )+o(\|\mathbf {x} -\mathbf {p} \|)\quad ({\text{as }}\mathbf {x} \to \mathbf {p} ),}
+
+where *o*(‖**x** − **p**‖) is a [quantity](https://en.wikipedia.org/wiki/Big_O_notation#Little-o_notation) that approaches zero much faster than the [distance](https://en.wikipedia.org/wiki/Euclidean_distance) between **x** and **p** does as **x** approaches **p**. This approximation specializes to the approximation of a scalar function of a single variable by its [Taylor polynomial](https://en.wikipedia.org/wiki/Taylor_polynomial) of degree one, namely
+
+f ( x ) − f ( p ) =  f ′  ( p ) ( x − p ) + o ( x − p )  (  as   x → p ) .   {\displaystyle f(x)-f(p)=f&#39;(p)(x-p)+o(x-p)\quad ({\text{as }}x\to p).}
+
+In this sense, the Jacobian may be regarded as a kind of &quot;[first-order derivative](https://en.wikipedia.org/wiki/Derivative)&quot; of a vector-valued function of several variables. In particular, this means that the [gradient](https://en.wikipedia.org/wiki/Gradient) of a scalar-valued function of several variables may too be regarded as its &quot;first-order derivative&quot;.
+
+Composable differentiable functions **f** : **R***n* → **R***m* and **g** : **R***m* → **R***k* satisfy the [chain rule](https://en.wikipedia.org/wiki/Chain_rule#General_rule), namely       J    g  ∘  f    (  x  ) =   J    g    (  f  (  x  ) )   J    f    (  x  )   {\displaystyle \mathbf {J} _{\mathbf {g} \circ \mathbf {f} }(\mathbf {x} )=\mathbf {J} _{\mathbf {g} }(\mathbf {f} (\mathbf {x} ))\mathbf {J} _{\mathbf {f} }(\mathbf {x} )}   for **x**  in **R***n*.
+
+The Jacobian of the gradient of a scalar function of several variables has a special name: the [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix), which in a sense is the &quot;[second derivative](https://en.wikipedia.org/wiki/Second_derivative)&quot; of the function in question.
+</pre></article><article id="section-0005"><h3>Jacobian determinant</h3><pre># Jacobian determinant
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=3)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Jacobian_determinant_and_distortion.svg/500px-Jacobian_determinant_and_distortion.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Jacobian_determinant_and_distortion.svg)A nonlinear map     f :   R   2   →   R   2     {\displaystyle f\colon \mathbb {R} ^{2}\to \mathbb {R} ^{2}}   sends a small square (left, in red) to a distorted parallelogram (right, in red). The Jacobian at a point gives the best linear approximation of the distorted parallelogram near that point (right, in translucent white), and the Jacobian determinant gives the ratio of the area of the approximating parallelogram to that of the original square.
+
+If *m* = *n*, then **f** is a function from **R***n* to itself and the Jacobian matrix is a [square matrix](https://en.wikipedia.org/wiki/Square_matrix). We can then form its [determinant](https://en.wikipedia.org/wiki/Determinant), known as the **Jacobian determinant**. The Jacobian determinant is sometimes simply referred to as &quot;the Jacobian&quot;.
+
+The Jacobian determinant at a given point gives important information about the behavior of **f** near that point. For instance, the [continuously differentiable function](https://en.wikipedia.org/wiki/Continuously_differentiable_function) **f** is [invertible](https://en.wikipedia.org/wiki/Invertible) near a point **p** ∈ **R***n* if the Jacobian determinant at **p** is non-zero. This is the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem). Furthermore, if the Jacobian determinant at **p** is [positive](https://en.wikipedia.org/wiki/Positive_number), then **f** preserves [orientation](https://en.wikipedia.org/wiki/Orientation_(vector_space)) near **p**; if it is [negative](https://en.wikipedia.org/wiki/Negative_number), **f** reverses orientation. The [absolute value](https://en.wikipedia.org/wiki/Absolute_value) of the Jacobian determinant at **p** gives us the factor by which the function **f** expands or shrinks [volumes](https://en.wikipedia.org/wiki/Volume) near **p**; this is why it occurs in the general [substitution rule](https://en.wikipedia.org/wiki/Substitution_rule).
+
+The Jacobian determinant is used when making a [change of variables](https://en.wikipedia.org/wiki/Integration_by_substitution#Substitution_for_multiple_variables) when evaluating a [multiple integral](https://en.wikipedia.org/wiki/Multiple_integral) of a function over a region within its domain. To accommodate for the change of coordinates the magnitude of the Jacobian determinant arises as a multiplicative factor within the integral. This is because the *n*-dimensional *dV* element is in general a [parallelepiped](https://en.wikipedia.org/wiki/Parallelepiped) in the new coordinate system, and the *n*-volume of a parallelepiped is the determinant of its edge vectors.
+
+The Jacobian can also be used to determine the stability of [equilibria](https://en.wikipedia.org/wiki/Equilibrium_point) for [systems of differential equations](https://en.wikipedia.org/wiki/Matrix_differential_equation) by approximating behavior near an equilibrium point.
+</pre></article><article id="section-0006"><h3>Inverse</h3><pre># Inverse
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=4)]
+
+According to the [inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem), the [matrix inverse](https://en.wikipedia.org/wiki/Invertible_matrix) of the Jacobian matrix of an [invertible function](https://en.wikipedia.org/wiki/Invertible_function) **f** : **R***n* → **R***n* is the Jacobian matrix of the *inverse* function. That is, the Jacobian matrix of the inverse function at a point **p** is
+
+J     f   − 1     (  p  ) =    J    f    − 1   (   f   − 1   (  p  ) )  ,   {\displaystyle \mathbf {J} _{\mathbf {f} ^{-1}}(\mathbf {p} )={\mathbf {J} _{\mathbf {f} }^{-1}(\mathbf {f} ^{-1}(\mathbf {p} ))},}
+
+and the Jacobian determinant is
+
+det (   J     f   − 1     (  p  ) ) =   1  det (   J    f    (   f   − 1   (  p  ) ) )    .   {\displaystyle \det(\mathbf {J} _{\mathbf {f} ^{-1}}(\mathbf {p} ))={\frac {1}{\det(\mathbf {J} _{\mathbf {f} }(\mathbf {f} ^{-1}(\mathbf {p} )))}}.}
+
+If the Jacobian is continuous and nonsingular at the point **p** in **R***n*, then **f** is invertible when restricted to some [neighbourhood](https://en.wikipedia.org/wiki/Neighbourhood_(mathematics)) of **p**. In other words, if the Jacobian determinant is not zero at a point, then the function is *locally invertible* near this point.
+
+The [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture) is related to global invertibility in the case of a polynomial function, that is a function defined by *n* [polynomials](https://en.wikipedia.org/wiki/Polynomial) in *n* variables. It asserts that, if the Jacobian determinant is a non-zero constant (or, equivalently, that it does not have any complex zero), then the function is invertible and its inverse is a polynomial function. The Jacobian conjecture has been proven false for     n &gt; 2   {\displaystyle n&gt;2}   and is still open for     n = 2   {\displaystyle n=2}  .
+</pre></article><article id="section-0007"><h3>Critical points</h3><pre># Critical points
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=5)] Main article: [Critical point](https://en.wikipedia.org/wiki/Critical_point_(mathematics))
+
+If **f** : **R***n* → **R***m* is a [differentiable function](https://en.wikipedia.org/wiki/Differentiable_function), a *critical point* of **f** is a point where the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of the Jacobian matrix is not maximal. This means that the rank at the critical point is lower than the rank at some neighbour point. In other words, let *k* be the maximal dimension of the [open balls](https://en.wikipedia.org/wiki/Open_ball) contained in the image of **f**; then a point is critical if all [minors](https://en.wikipedia.org/wiki/Minor_(linear_algebra)) of rank *k* of **f** are zero.
+
+In the case where *m* = *n* = *k*, a point is critical if the Jacobian determinant is zero.
+</pre></article><article id="section-0008"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=6)]
+</pre></article><article id="section-0009"><h3>Example 1</h3><pre># Example 1
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=7)]
+
+Consider a function **f** : **R**2 → **R**3, with (*x*, *y*) ↦ (*f*1(*x*, *y*), *f*2(*x*, *y*), *f*3(*x*, *y*)), given by
+
+f   (   [    x     y    ]   )  =   [     f  1   ( x , y )      f  2   ( x , y )      f  3   ( x , y )    ]   =   [     x  2   y     5 x + sin ⁡ y     4 y    ]   .   {\displaystyle \mathbf {f} \left({\begin{bmatrix}x\\y\end{bmatrix}}\right)={\begin{bmatrix}f_{1}(x,y)\\f_{2}(x,y)\\f_{3}(x,y)\end{bmatrix}}={\begin{bmatrix}x^{2}y\\5x+\sin y\\4y\end{bmatrix}}.}
+
+The Jacobian matrix of **f** is
+
+J    f    ( x , y ) =   [        ∂  f  1     ∂ x           ∂  f  1     ∂ y             ∂  f  2     ∂ x           ∂  f  2     ∂ y             ∂  f  3     ∂ x           ∂  f  3     ∂ y        ]   =   [    2 x y    x  2       5   cos ⁡ y     0   4    ]     {\displaystyle \mathbf {J} _{\mathbf {f} }(x,y)={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x}}&amp;{\dfrac {\partial f_{1}}{\partial y}}\\[1em]{\dfrac {\partial f_{2}}{\partial x}}&amp;{\dfrac {\partial f_{2}}{\partial y}}\\[1em]{\dfrac {\partial f_{3}}{\partial x}}&amp;{\dfrac {\partial f_{3}}{\partial y}}\end{bmatrix}}={\begin{bmatrix}2xy&amp;x^{2}\\5&amp;\cos y\\0&amp;4\end{bmatrix}}}
+</pre></article><article id="section-0010"><h3>Example 2: polar-Cartesian transformation</h3><pre># Example 2: polar-Cartesian transformation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=8)]
+
+The transformation from [polar coordinates](https://en.wikipedia.org/wiki/Polar_coordinate_system) (*r*, *φ*) to [Cartesian coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) (*x*, *y*), is given by the function **F**: **R**+ × [0, 2π) → **R**2 with components
+
+x    = r cos ⁡ φ ;     y    = r sin ⁡ φ .       {\displaystyle {\begin{aligned}x&amp;=r\cos \varphi ;\\y&amp;=r\sin \varphi .\end{aligned}}}
+
+J    F    ( r , φ ) =   [       ∂ x   ∂ r         ∂ x   ∂ φ           ∂ y   ∂ r         ∂ y   ∂ φ       ]   =   [    cos ⁡ φ   − r sin ⁡ φ     sin ⁡ φ   r cos ⁡ φ    ]     {\displaystyle \mathbf {J} _{\mathbf {F} }(r,\varphi )={\begin{bmatrix}{\frac {\partial x}{\partial r}}&amp;{\frac {\partial x}{\partial \varphi }}\\[0.5ex]{\frac {\partial y}{\partial r}}&amp;{\frac {\partial y}{\partial \varphi }}\end{bmatrix}}={\begin{bmatrix}\cos \varphi &amp;-r\sin \varphi \\\sin \varphi &amp;r\cos \varphi \end{bmatrix}}}
+
+The Jacobian determinant is equal to *r*. This can be used to transform integrals between the two coordinate systems:
+
+∬   F  ( A )   f ( x , y )  d x  d y =  ∬  A   f ( r cos ⁡ φ , r sin ⁡ φ )  r  d r  d φ .   {\displaystyle \iint _{\mathbf {F} (A)}f(x,y)\,dx\,dy=\iint _{A}f(r\cos \varphi ,r\sin \varphi )\,r\,dr\,d\varphi .}
+</pre></article><article id="section-0011"><h3>Example 3: spherical-Cartesian transformation</h3><pre># Example 3: spherical-Cartesian transformation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=9)]
+
+The transformation from [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system) (*ρ*, *φ*, *θ*)[[7]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-8) to [Cartesian coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) (*x*, *y*, *z*), is given by the function **F**: **R**+ × [0, *π*) × [0, 2*π*) → **R**3 with components
+
+x    = ρ sin ⁡ φ cos ⁡ θ ;     y    = ρ sin ⁡ φ sin ⁡ θ ;     z    = ρ cos ⁡ φ .       {\displaystyle {\begin{aligned}x&amp;=\rho \sin \varphi \cos \theta ;\\y&amp;=\rho \sin \varphi \sin \theta ;\\z&amp;=\rho \cos \varphi .\end{aligned}}}
+
+The Jacobian matrix for this coordinate change is
+
+J    F    ( ρ , φ , θ ) =   [        ∂ x   ∂ ρ           ∂ x   ∂ φ           ∂ x   ∂ θ             ∂ y   ∂ ρ           ∂ y   ∂ φ           ∂ y   ∂ θ             ∂ z   ∂ ρ           ∂ z   ∂ φ           ∂ z   ∂ θ        ]   =   [    sin ⁡ φ cos ⁡ θ   ρ cos ⁡ φ cos ⁡ θ   − ρ sin ⁡ φ sin ⁡ θ     sin ⁡ φ sin ⁡ θ   ρ cos ⁡ φ sin ⁡ θ   ρ sin ⁡ φ cos ⁡ θ     cos ⁡ φ   − ρ sin ⁡ φ   0    ]   .   {\displaystyle \mathbf {J} _{\mathbf {F} }(\rho ,\varphi ,\theta )={\begin{bmatrix}{\dfrac {\partial x}{\partial \rho }}&amp;{\dfrac {\partial x}{\partial \varphi }}&amp;{\dfrac {\partial x}{\partial \theta }}\\[1em]{\dfrac {\partial y}{\partial \rho }}&amp;{\dfrac {\partial y}{\partial \varphi }}&amp;{\dfrac {\partial y}{\partial \theta }}\\[1em]{\dfrac {\partial z}{\partial \rho }}&amp;{\dfrac {\partial z}{\partial \varphi }}&amp;{\dfrac {\partial z}{\partial \theta }}\end{bmatrix}}={\begin{bmatrix}\sin \varphi \cos \theta &amp;\rho \cos \varphi \cos \theta &amp;-\rho \sin \varphi \sin \theta \\\sin \varphi \sin \theta &amp;\rho \cos \varphi \sin \theta &amp;\rho \sin \varphi \cos \theta \\\cos \varphi &amp;-\rho \sin \varphi &amp;0\end{bmatrix}}.}
+
+The [determinant](https://en.wikipedia.org/wiki/Determinant) is *ρ*2 sin *φ*. Since *dV* = *dx* *dy* *dz* is the volume for a rectangular differential volume element (because the volume of a rectangular prism is the product of its sides), we can interpret *dV* = *ρ*2 sin *φ* *dρ* *dφ* *dθ* as the volume of the spherical [differential volume element](https://en.wikipedia.org/wiki/Differential_volume_element). Unlike rectangular differential volume element&#39;s volume, this differential volume element&#39;s volume is not a constant, and varies with coordinates (*ρ* and *φ*). It can be used to transform integrals between the two coordinate systems:
+
+∭   F  ( U )   f ( x , y , z )  d x  d y  d z =  ∭  U   f ( ρ sin ⁡ φ cos ⁡ θ , ρ sin ⁡ φ sin ⁡ θ , ρ cos ⁡ φ )   ρ  2   sin ⁡ φ  d ρ  d φ  d θ .   {\displaystyle \iiint _{\mathbf {F} (U)}f(x,y,z)\,dx\,dy\,dz=\iiint _{U}f(\rho \sin \varphi \cos \theta ,\rho \sin \varphi \sin \theta ,\rho \cos \varphi )\,\rho ^{2}\sin \varphi \,d\rho \,d\varphi \,d\theta .}
+</pre></article><article id="section-0012"><h3>Example 4</h3><pre># Example 4
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=10)]
+
+The Jacobian matrix of the function **F** : **R**3 → **R**4 with components
+
+y  1      =  x  1        y  2      = 5  x  3        y  3      = 4  x  2   2   − 2  x  3        y  4      =  x  3   sin ⁡  x  1         {\displaystyle {\begin{aligned}y_{1}&amp;=x_{1}\\y_{2}&amp;=5x_{3}\\y_{3}&amp;=4x_{2}^{2}-2x_{3}\\y_{4}&amp;=x_{3}\sin x_{1}\end{aligned}}}
+
+is
+
+J    F    (  x  1   ,  x  2   ,  x  3   ) =   [        ∂  y  1     ∂  x  1             ∂  y  1     ∂  x  2             ∂  y  1     ∂  x  3               ∂  y  2     ∂  x  1             ∂  y  2     ∂  x  2             ∂  y  2     ∂  x  3               ∂  y  3     ∂  x  1             ∂  y  3     ∂  x  2             ∂  y  3     ∂  x  3               ∂  y  4     ∂  x  1             ∂  y  4     ∂  x  2             ∂  y  4     ∂  x  3          ]   =   [    1   0   0     0   0   5     0   8  x  2     − 2      x  3   cos ⁡  x  1     0   sin ⁡  x  1      ]   .   {\displaystyle \mathbf {J} _{\mathbf {F} }(x_{1},x_{2},x_{3})={\begin{bmatrix}{\dfrac {\partial y_{1}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{1}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{1}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{2}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{2}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{2}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{3}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{3}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{3}}{\partial x_{3}}}\\[1em]{\dfrac {\partial y_{4}}{\partial x_{1}}}&amp;{\dfrac {\partial y_{4}}{\partial x_{2}}}&amp;{\dfrac {\partial y_{4}}{\partial x_{3}}}\end{bmatrix}}={\begin{bmatrix}1&amp;0&amp;0\\0&amp;0&amp;5\\0&amp;8x_{2}&amp;-2\\x_{3}\cos x_{1}&amp;0&amp;\sin x_{1}\end{bmatrix}}.}
+
+This example shows that the Jacobian matrix need not be a square matrix.
+</pre></article><article id="section-0013"><h3>Example 5</h3><pre># Example 5
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=11)]
+
+The Jacobian determinant of the function **F** : **R**3 → **R**3 with components
+
+y  1      = 5  x  2        y  2      = 4  x  1   2   − 2 sin ⁡ (  x  2    x  3   )      y  3      =  x  2    x  3         {\displaystyle {\begin{aligned}y_{1}&amp;=5x_{2}\\y_{2}&amp;=4x_{1}^{2}-2\sin(x_{2}x_{3})\\y_{3}&amp;=x_{2}x_{3}\end{aligned}}}
+
+is
+
+|    0   5   0     8  x  1     − 2  x  3   cos ⁡ (  x  2    x  3   )   − 2  x  2   cos ⁡ (  x  2    x  3   )     0    x  3      x  2      |   = − 8  x  1     |    5   0      x  3      x  2      |   = − 40  x  1    x  2   .   {\displaystyle {\begin{vmatrix}0&amp;5&amp;0\\8x_{1}&amp;-2x_{3}\cos(x_{2}x_{3})&amp;-2x_{2}\cos(x_{2}x_{3})\\0&amp;x_{3}&amp;x_{2}\end{vmatrix}}=-8x_{1}{\begin{vmatrix}5&amp;0\\x_{3}&amp;x_{2}\end{vmatrix}}=-40x_{1}x_{2}.}
+
+From this we see that **F** reverses orientation near those points where *x*1 and *x*2 have the same sign; the function is [locally](https://en.wikipedia.org/wiki/Locally) invertible everywhere except near points where *x*1 = 0 or *x*2 = 0. Intuitively, if one starts with a tiny object around the point (1, 2, 3) and apply **F** to that object, one will get a resulting object with approximately 40 × 1 × 2 = 80 times the volume of the original one, with orientation reversed.
+</pre></article><article id="section-0014"><h3>Other uses</h3><pre># Other uses
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=12)]
+</pre></article><article id="section-0015"><h3>Dynamical systems</h3><pre># Dynamical systems
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=13)]
+
+Consider a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) of the form         x  ˙    = F (  x  )   {\displaystyle {\dot {\mathbf {x} }}=F(\mathbf {x} )}  , where         x  ˙      {\displaystyle {\dot {\mathbf {x} }}}   is the (component-wise) derivative of      x    {\displaystyle \mathbf {x} }   with respect to the [evolution parameter](https://en.wikipedia.org/wiki/Evolution_parameter)     t   {\displaystyle t}   (time), and     F :   R   n   →   R   n     {\displaystyle F\colon \mathbb {R} ^{n}\to \mathbb {R} ^{n}}   is differentiable. If     F (   x   0   ) = 0   {\displaystyle F(\mathbf {x} _{0})=0}  , then       x   0     {\displaystyle \mathbf {x} _{0}}   is a [stationary point](https://en.wikipedia.org/wiki/Stationary_point) (also called a [steady state](https://en.wikipedia.org/wiki/Steady_state)). By the [Hartman–Grobman theorem](https://en.wikipedia.org/wiki/Hartman%E2%80%93Grobman_theorem), the behavior of the system near a stationary point is related to the [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalue) of       J   F    (   x   0   )    {\displaystyle \mathbf {J} _{F}\left(\mathbf {x} _{0}\right)}  , the Jacobian of     F   {\displaystyle F}   at the stationary point.[[8]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-9) Specifically, if the eigenvalues all have real parts that are negative, then the system is stable near the stationary point. If any eigenvalue has a real part that is positive, then the point is unstable. If the largest real part of the eigenvalues is zero, the Jacobian matrix does not allow for an evaluation of the stability.[[9]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-10)
+</pre></article><article id="section-0016"><h3>Newton&#39;s method</h3><pre># Newton&#39;s method
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=14)]
+
+A square system of coupled nonlinear equations can be solved iteratively by [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method#Systems_of_equations). This method uses the Jacobian matrix of the system of equations.
+</pre></article><article id="section-0017"><h3>Regression and least squares fitting</h3><pre># Regression and least squares fitting
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=15)]
+
+The Jacobian serves as a linearized [design matrix](https://en.wikipedia.org/wiki/Design_matrix) in statistical [regression](https://en.wikipedia.org/wiki/Regression_analysis) and [curve fitting](https://en.wikipedia.org/wiki/Curve_fitting); see [non-linear least squares](https://en.wikipedia.org/wiki/Non-linear_least_squares). The Jacobian is also used in random matrices, moments, local sensitivity and statistical diagnostics.[[10]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-11)[[11]](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_note-12)
+</pre></article><article id="section-0018"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=16)]
+- [Center manifold](https://en.wikipedia.org/wiki/Center_manifold)
+- [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix)
+- [Pushforward (differential)](https://en.wikipedia.org/wiki/Pushforward_(differential))
+</pre></article><article id="section-0019"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=17)]
+1. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-7) Differentiability at **x** implies, but is not implied by, the existence of all first-order partial derivatives at **x**, and hence is a stronger condition.
+</pre></article><article id="section-0020"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=18)]
+1. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-1) [&quot;Jacobian - Definition of Jacobian in English by Oxford Dictionaries&quot;](https://web.archive.org/web/20171201043633/https://en.oxforddictionaries.com/definition/jacobian). *Oxford Dictionaries - English*. Archived from [the original](https://en.oxforddictionaries.com/definition/jacobian) on 1 December 2017. Retrieved 2 May 2018.
+2. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-2) [&quot;the definition of jacobian&quot;](http://www.dictionary.com/browse/jacobian). *Dictionary.com*. [Archived](https://web.archive.org/web/20171201040801/http://www.dictionary.com/browse/jacobian) from the original on 1 December 2017. Retrieved 2 May 2018.
+3. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-3) Team, Forvo. [&quot;Jacobian pronunciation: How to pronounce Jacobian in English&quot;](https://forvo.com/word/jacobian/). *forvo.com*. Retrieved 2 May 2018.
+4. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-4) W., Weisstein, Eric. [&quot;Jacobian&quot;](http://mathworld.wolfram.com/Jacobian.html). *mathworld.wolfram.com*. [Archived](https://web.archive.org/web/20171103144419/http://mathworld.wolfram.com/Jacobian.html) from the original on 3 November 2017. Retrieved 2 May 2018.`{{cite web}}`: CS1 maint: multiple names: authors list ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_multiple_names:_authors_list))
+5. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-5) Holder, Allen; Eichholz, Joseph (2019). *An Introduction to computational science*. International Series in Operations Research &amp; Management Science. Cham, Switzerland: Springer. p. 53. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-030-15679-4](https://en.wikipedia.org/wiki/Special:BookSources/978-3-030-15679-4).
+6. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-6) Lovett, Stephen (2019-12-16). [*Differential Geometry of Manifolds*](https://books.google.com/books?id=G1bGDwAAQBAJ). CRC Press. p. 16. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-429-60782-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-429-60782-0).
+7. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-8) Joel Hass, Christopher Heil, and Maurice Weir. *Thomas&#39; Calculus Early Transcendentals, 14e*. Pearson, 2018, p. 959.
+8. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-9) Arrowsmith, D. K.; Place, C. M. (1992). [&quot;The Linearization Theorem&quot;](https://books.google.com/books?id=8qCcP7KNaZ0C&amp;pg=PA77). *Dynamical Systems: Differential Equations, Maps, and Chaotic Behaviour*. London: Chapman &amp; Hall. pp. 77–81. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-412-39080-9](https://en.wikipedia.org/wiki/Special:BookSources/0-412-39080-9).
+9. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-10) Hirsch, Morris; Smale, Stephen (1974). *Differential Equations, Dynamical Systems and Linear Algebra*. Academic Press. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-12-349550-4](https://en.wikipedia.org/wiki/Special:BookSources/0-12-349550-4).
+10. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-11) Liu, Shuangzhe; Leiva, Victor; Zhuang, Dan; Ma, Tiefeng; Figueroa-Zúñiga, Jorge I. (March 2022). [&quot;Matrix differential calculus with applications in the multivariate linear model and its diagnostics&quot;](https://doi.org/10.1016%2Fj.jmva.2021.104849). *Journal of Multivariate Analysis*. **188** 104849. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.jmva.2021.104849](https://doi.org/10.1016%2Fj.jmva.2021.104849).
+11. [↑](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#cite_ref-12) Liu, Shuangzhe; Trenkler, Götz; Kollo, Tõnu; von Rosen, Dietrich; Baksalary, Oskar Maria (2023). &quot;Professor Heinz Neudecker and matrix differential calculus&quot;. *Statistical Papers*. **65** (4): 2605–2639. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/s00362-023-01499-w](https://doi.org/10.1007%2Fs00362-023-01499-w). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [263661094](https://api.semanticscholar.org/CorpusID:263661094).
+</pre></article><article id="section-0021"><h3>Further reading</h3><pre># Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=19)]
+- [Gandolfo, Giancarlo](https://en.wikipedia.org/wiki/Giancarlo_Gandolfo) (1996). [&quot;Comparative Statics and the Correspondence Principle&quot;](https://books.google.com/books?id=ZMwXi67nhHQC&amp;pg=PA305). *Economic Dynamics* (Third ed.). Berlin: Springer. pp. 305–330. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [3-540-60988-1](https://en.wikipedia.org/wiki/Special:BookSources/3-540-60988-1).
+- [Protter, Murray H.](https://en.wikipedia.org/wiki/Murray_H._Protter); [Morrey, Charles B. Jr.](https://en.wikipedia.org/wiki/Charles_B._Morrey_Jr.) (1985). &quot;Transformations and Jacobians&quot;. *Intermediate Calculus* (Second ed.). New York: Springer. pp. 412–420. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-96058-9](https://en.wikipedia.org/wiki/Special:BookSources/0-387-96058-9).
+</pre></article><article id="section-0022"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;action=edit&amp;section=20)]
+- [&quot;Jacobian&quot;](https://www.encyclopediaofmath.org/index.php?title=Jacobian), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Mathworld](http://mathworld.wolfram.com/Jacobian.html) A more technical explanation of Jacobians
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Matrix_classes)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Matrix_classes)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Matrix_classes)
+[Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) classes             Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;oldid=1371416189](https://en.wikipedia.org/w/index.php?title=Jacobian_matrix_and_determinant&amp;oldid=1371416189)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Multivariable calculus](https://en.wikipedia.org/wiki/Category:Multivariable_calculus)
+- [Differential calculus](https://en.wikipedia.org/wiki/Category:Differential_calculus)
+- [Generalizations of the derivative](https://en.wikipedia.org/wiki/Category:Generalizations_of_the_derivative)
+- [Determinants](https://en.wikipedia.org/wiki/Category:Determinants)
+- [Matrices (mathematics)](https://en.wikipedia.org/wiki/Category:Matrices_(mathematics))
+- [Differential operators](https://en.wikipedia.org/wiki/Category:Differential_operators)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Pages using sidebar with the child parameter](https://en.wikipedia.org/wiki/Category:Pages_using_sidebar_with_the_child_parameter)
+- [CS1 maint: multiple names: authors list](https://en.wikipedia.org/wiki/Category:CS1_maint:_multiple_names:_authors_list)
+
+    [https://en\.wikipedia\.org/wiki/Jacobian\_matrix\_and\_determinant?action=edit\#Jacobian\_matrix](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant?action=edit#Jacobian_matrix)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

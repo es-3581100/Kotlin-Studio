@@ -1,0 +1,1053 @@
+[
+  {
+    "id": "sacred-computations",
+    "title": "Sacred Computations",
+    "cluster": "root",
+    "summary": "A provenance-first atlas of recurring mathematical structures and their translation into executable symbolic and numerical code.",
+    "formula": "",
+    "aliases": [],
+    "sources": [],
+    "bridge": null,
+    "tags": [
+      "atlas",
+      "symbolic",
+      "computation"
+    ],
+    "bridgeAvailable": false,
+    "x": 0,
+    "y": 0
+  },
+  {
+    "id": "golden-ratio",
+    "title": "Golden ratio φ",
+    "cluster": "ratios",
+    "summary": "Quadratic algebraic ratio tied to Fibonacci growth and the polynomial x² − x − 1.",
+    "formula": "x² − x − 1 = 0",
+    "aliases": [
+      "phi",
+      "φ"
+    ],
+    "sources": [
+      "golden:9e3dc7f4af23",
+      "golden:9c25b5be3752",
+      "golden:92bb83975755",
+      "golden:807b57bf9112",
+      "golden:5e4666df16c1",
+      "golden:cbe0725d0ec1"
+    ],
+    "bridge": "golden-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -473.7,
+    "y": -84.47
+  },
+  {
+    "id": "silver-ratio",
+    "title": "Silver ratio δₛ",
+    "cluster": "ratios",
+    "summary": "Positive root 1 + √2; the growth constant behind Pell-number recurrences and rational approximations to √2.",
+    "formula": "x² − 2x − 1 = 0",
+    "aliases": [
+      "silver mean",
+      "1+sqrt(2)",
+      "δs"
+    ],
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:0ee329914726"
+    ],
+    "bridge": "silver-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -524.02,
+    "y": -355.63
+  },
+  {
+    "id": "metallic-means",
+    "title": "Metallic means",
+    "cluster": "ratios",
+    "summary": "Family of quadratic means that places golden and silver ratios in one algebraic pattern.",
+    "formula": "x² − n x − 1 = 0",
+    "aliases": [
+      "metallic mean"
+    ],
+    "sources": [
+      "golden:f8236bc2722e"
+    ],
+    "bridge": "metallic-means",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -274.35,
+    "y": -107.19
+  },
+  {
+    "id": "plastic-ratio",
+    "title": "Plastic ratio ρ",
+    "cluster": "ratios",
+    "summary": "Cubic algebraic ratio associated with Padovan-style recurrences.",
+    "formula": "x³ − x − 1 = 0",
+    "aliases": [
+      "rho",
+      "ρ"
+    ],
+    "sources": [
+      "golden:45b1a203bab6",
+      "golden:e02aa594cfcb"
+    ],
+    "bridge": "plastic-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -344.67,
+    "y": -412.99
+  },
+  {
+    "id": "tribonacci-ratio",
+    "title": "Tribonacci ratio τ",
+    "cluster": "ratios",
+    "summary": "Unique real root of x³ = x² + x + 1 and the dominant eigenvalue of the Tribonacci companion matrix.",
+    "formula": "x³ − x² − x − 1 = 0",
+    "aliases": [
+      "tribonacci constant",
+      "tau",
+      "τ"
+    ],
+    "sources": [
+      "golden:10369e82d97e",
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "bridge": "tribonacci-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -135.0,
+    "y": -233.83
+  },
+  {
+    "id": "supergolden-ratio",
+    "title": "Supergolden ratio ψ",
+    "cluster": "ratios",
+    "summary": "Unique real solution of x³ = x² + 1; source material links it with Narayana-type recurrence structure.",
+    "formula": "x³ − x² − 1 = 0",
+    "aliases": [
+      "psi",
+      "ψ"
+    ],
+    "sources": [
+      "golden:83965d983aab"
+    ],
+    "bridge": "supergolden-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -225.33,
+    "y": -574.28
+  },
+  {
+    "id": "supersilver-ratio",
+    "title": "Supersilver ratio ς",
+    "cluster": "ratios",
+    "summary": "Unique real solution of x³ = 2x² + 1; source material links it with third-order Pell sequences.",
+    "formula": "x³ − 2x² − 1 = 0",
+    "aliases": [
+      "varsigma",
+      "ς"
+    ],
+    "sources": [
+      "golden:3e4fb49f5aac"
+    ],
+    "bridge": "supersilver-ratio",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": 4.35,
+    "y": -360.47
+  },
+  {
+    "id": "sqrt2",
+    "title": "√2",
+    "cluster": "ratios",
+    "summary": "Quadratic irrational approximated exceptionally well by ratios built from Pell numbers.",
+    "formula": "x² − 2 = 0",
+    "aliases": [
+      "square root of 2"
+    ],
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:0ee329914726"
+    ],
+    "bridge": "sqrt2",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -45.98,
+    "y": -631.63
+  },
+  {
+    "id": "pisot-number",
+    "title": "Pisot number",
+    "cluster": "ratios",
+    "summary": "Real algebraic integer greater than one whose other conjugates have modulus below one; appears in the Rauzy/Tribonacci material.",
+    "formula": "",
+    "aliases": [
+      "Pisot–Vijayaraghavan"
+    ],
+    "sources": [
+      "golden:b8290922fa5d",
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 203.7,
+    "y": -383.19
+  },
+  {
+    "id": "fibonacci",
+    "title": "Fibonacci sequence",
+    "cluster": "sequences",
+    "summary": "Second-order recurrence whose successive-term ratios approach φ.",
+    "formula": "Fₙ = Fₙ₋₁ + Fₙ₋₂",
+    "aliases": [
+      "fib"
+    ],
+    "sources": [
+      "golden:9e3dc7f4af23",
+      "golden:9c25b5be3752",
+      "golden:92bb83975755",
+      "golden:807b57bf9112",
+      "golden:5e4666df16c1",
+      "golden:cbe0725d0ec1"
+    ],
+    "bridge": "fibonacci",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -161.32,
+    "y": -491.4
+  },
+  {
+    "id": "lucas",
+    "title": "Lucas sequence",
+    "cluster": "sequences",
+    "summary": "A recurrence family sharing the Fibonacci characteristic polynomial while using different initial conditions.",
+    "formula": "Lₙ = Lₙ₋₁ + Lₙ₋₂",
+    "aliases": [
+      "Lucas numbers"
+    ],
+    "sources": [
+      "golden:e5e966d797d4",
+      "golden:e5d9d4faa850",
+      "golden:b338bacbb9fa",
+      "golden:4153199edc24",
+      "golden:a0f065e59a2e"
+    ],
+    "bridge": "lucas",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 63.17,
+    "y": -651.61
+  },
+  {
+    "id": "pell",
+    "title": "Pell numbers",
+    "cluster": "sequences",
+    "summary": "Second-order recurrence producing convergents closely approximating √2.",
+    "formula": "Pₙ = 2Pₙ₋₁ + Pₙ₋₂",
+    "aliases": [
+      "Pell sequence"
+    ],
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:0ee329914726"
+    ],
+    "bridge": "pell",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -56.48,
+    "y": -320.33
+  },
+  {
+    "id": "tribonacci",
+    "title": "Tribonacci sequence",
+    "cluster": "sequences",
+    "summary": "Third-order recurrence adding the previous three terms; its growth is controlled by τ.",
+    "formula": "Tₙ = Tₙ₋₁ + Tₙ₋₂ + Tₙ₋₃",
+    "aliases": [
+      "tribonacci"
+    ],
+    "sources": [
+      "golden:88e2e73c2a78",
+      "golden:10369e82d97e"
+    ],
+    "bridge": "tribonacci",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": 190.95,
+    "y": -513.3
+  },
+  {
+    "id": "padovan",
+    "title": "Padovan sequence",
+    "cluster": "sequences",
+    "summary": "Third-order recurrence whose dominant growth rate is the plastic ratio.",
+    "formula": "Pₙ = Pₙ₋₂ + Pₙ₋₃",
+    "aliases": [
+      "Padovan"
+    ],
+    "sources": [
+      "golden:ef222972ce12",
+      "golden:45b1a203bab6",
+      "golden:e02aa594cfcb"
+    ],
+    "bridge": "padovan",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": 117.18,
+    "y": -247.56
+  },
+  {
+    "id": "narayana",
+    "title": "Narayana-type recurrence",
+    "cluster": "sequences",
+    "summary": "Recurrence lane highlighted by the supergolden-ratio source material.",
+    "formula": "aₙ = aₙ₋₁ + aₙ₋₃",
+    "aliases": [
+      "Narayana sequence"
+    ],
+    "sources": [
+      "golden:83965d983aab"
+    ],
+    "bridge": "narayana",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 387.56,
+    "y": -473.3
+  },
+  {
+    "id": "third-order-pell",
+    "title": "Third-order Pell sequences",
+    "cluster": "sequences",
+    "summary": "Higher-order Pell-like recurrence lane attached to the supersilver ratio in the source bundle.",
+    "formula": "aₙ = 2aₙ₋₁ + aₙ₋₃",
+    "aliases": [
+      "3rd-order Pell"
+    ],
+    "sources": [
+      "golden:3e4fb49f5aac"
+    ],
+    "bridge": "third-order-pell",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 290.85,
+    "y": -174.78
+  },
+  {
+    "id": "fibonacci-word",
+    "title": "Fibonacci word",
+    "cluster": "sequences",
+    "summary": "A substitution-generated infinite word linking recurrence ideas to symbolic/combinatorial structure.",
+    "formula": "",
+    "aliases": [
+      "Fibonacci word"
+    ],
+    "sources": [
+      "golden:bbd43901d149",
+      "golden:e02c6640f036"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 515.34,
+    "y": -334.99
+  },
+  {
+    "id": "debruijn",
+    "title": "De Bruijn sequence",
+    "cluster": "sequences",
+    "summary": "Cyclic sequence containing every length-k word over a chosen alphabet exactly once.",
+    "formula": "",
+    "aliases": [
+      "de Bruijn"
+    ],
+    "sources": [
+      "golden:444b924da033"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 395.69,
+    "y": -3.71
+  },
+  {
+    "id": "thue-morse",
+    "title": "Thue–Morse sequence",
+    "cluster": "sequences",
+    "summary": "Automatic binary sequence used here as a bridge from recurrence-like generation to computation on symbolic words.",
+    "formula": "",
+    "aliases": [
+      "Thue-Morse"
+    ],
+    "sources": [
+      "golden:29984c4cc272"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 643.12,
+    "y": -196.69
+  },
+  {
+    "id": "continued-fractions",
+    "title": "Continued fractions",
+    "cluster": "number",
+    "summary": "A representation layer for rational approximations to irrational constants.",
+    "formula": "[a₀; a₁, a₂, …]",
+    "aliases": [
+      "continued fraction"
+    ],
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:83965d983aab",
+      "golden:10369e82d97e"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 345.23,
+    "y": -172.67
+  },
+  {
+    "id": "euclidean-algorithm",
+    "title": "Euclidean algorithm",
+    "cluster": "number",
+    "summary": "Classical gcd algorithm and a computational neighbor of continued-fraction expansion.",
+    "formula": "gcd(a,b)",
+    "aliases": [
+      "gcd"
+    ],
+    "sources": [
+      "golden:6d43220ed126"
+    ],
+    "bridge": "euclidean-algorithm",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 585.3,
+    "y": -36.92
+  },
+  {
+    "id": "diophantine",
+    "title": "Diophantine equations",
+    "cluster": "number",
+    "summary": "Polynomial equations constrained to integer solutions; connects exact arithmetic to generated solution families.",
+    "formula": "f(x₁,…,xₙ)=0 over ℤ",
+    "aliases": [
+      "integer equation"
+    ],
+    "sources": [
+      "golden:9e36c173ca6b"
+    ],
+    "bridge": "diophantine",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 234.49,
+    "y": -5.36
+  },
+  {
+    "id": "pythagorean-triples",
+    "title": "Pythagorean triples",
+    "cluster": "number",
+    "summary": "Integer solutions to a² + b² = c² with a standard polynomial parametrization.",
+    "formula": "a² + b² = c²",
+    "aliases": [
+      "3-4-5",
+      "pythagorean"
+    ],
+    "sources": [
+      "golden:c51a445557ff",
+      "golden:2779a3401828",
+      "golden:0efb0dfe8d71"
+    ],
+    "bridge": "pythagorean-triples",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": 513.96,
+    "y": 137.33
+  },
+  {
+    "id": "pseudoprimes",
+    "title": "Pseudoprimes",
+    "cluster": "number",
+    "summary": "Composite numbers that pass selected primality-style tests; source bundle includes Fermat, Lucas and Frobenius variants.",
+    "formula": "",
+    "aliases": [
+      "Fermat pseudoprime",
+      "Lucas pseudoprime"
+    ],
+    "sources": [
+      "golden:1e37344980f0",
+      "golden:8257ff4f5386",
+      "golden:e0dd8b18deb2",
+      "golden:b06b6353fd2f"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 241.93,
+    "y": 182.79
+  },
+  {
+    "id": "lucas-lehmer",
+    "title": "Lucas–Lehmer test",
+    "cluster": "number",
+    "summary": "Specialized recurrence-based primality test for Mersenne numbers.",
+    "formula": "",
+    "aliases": [
+      "Mersenne test"
+    ],
+    "sources": [
+      "golden:81fba236d525",
+      "golden:e5e966d797d4",
+      "golden:e5d9d4faa850",
+      "golden:8257ff4f5386",
+      "golden:b338bacbb9fa",
+      "golden:4153199edc24"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 560.79,
+    "y": 332.43
+  },
+  {
+    "id": "matrix-recurrence",
+    "title": "Companion / recurrence matrices",
+    "cluster": "geometry",
+    "summary": "Linear-state representation that turns an order-k recurrence into repeated matrix multiplication.",
+    "formula": "vₙ₊₁ = A vₙ",
+    "aliases": [
+      "companion matrix",
+      "state matrix"
+    ],
+    "sources": [
+      "golden:2235afd0cfcc",
+      "golden:f8eb010bc97e"
+    ],
+    "bridge": "companion-matrix",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 365.38,
+    "y": 196.91
+  },
+  {
+    "id": "cayley-hamilton",
+    "title": "Cayley–Hamilton theorem",
+    "cluster": "geometry",
+    "summary": "Every square matrix satisfies its own characteristic polynomial.",
+    "formula": "p_A(A)=0",
+    "aliases": [
+      "characteristic polynomial"
+    ],
+    "sources": [
+      "golden:2235afd0cfcc"
+    ],
+    "bridge": "cayley-hamilton",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 367.85,
+    "y": 472.69
+  },
+  {
+    "id": "jacobian",
+    "title": "Jacobian matrix",
+    "cluster": "geometry",
+    "summary": "Matrix of first derivatives that converts multivariable local behavior into a linear approximation.",
+    "formula": "Jᵢⱼ = ∂fᵢ/∂xⱼ",
+    "aliases": [
+      "Jacobian"
+    ],
+    "sources": [
+      "golden:f8eb010bc97e"
+    ],
+    "bridge": "jacobian",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 165.12,
+    "y": 184.66
+  },
+  {
+    "id": "rauzy-fractal",
+    "title": "Rauzy fractal",
+    "cluster": "geometry",
+    "summary": "Fractal representation generated from the Tribonacci substitution; source material explicitly exposes its characteristic polynomial and eigenvalues.",
+    "formula": "χ(x)=x³−x²−x−1",
+    "aliases": [
+      "tribonacci fractal"
+    ],
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "bridge": "rauzy-fractal",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": 181.27,
+    "y": 498.04
+  },
+  {
+    "id": "snub-polytopes",
+    "title": "Snub polytopes",
+    "cluster": "geometry",
+    "summary": "Chiral/high-dimensional polytope lane retained as an algebraic-geometry exploration surface rather than a rendering target.",
+    "formula": "",
+    "aliases": [
+      "snub",
+      "omnisnub"
+    ],
+    "sources": [
+      "golden:157e2ed81d95",
+      "golden:fd94c6807ea8",
+      "golden:972618618be6",
+      "golden:f8762ade6651",
+      "golden:2272321aefcb",
+      "golden:f6575db7796f"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 5.89,
+    "y": 285.18
+  },
+  {
+    "id": "snub-tesseract",
+    "title": "Snub tesseract",
+    "cluster": "geometry",
+    "summary": "4D snub polytope reference node from the supplied classification/capsule set.",
+    "formula": "",
+    "aliases": [
+      "4D snub"
+    ],
+    "sources": [
+      "golden:fd94c6807ea8",
+      "golden:972618618be6"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 35.73,
+    "y": 636.14
+  },
+  {
+    "id": "snub-tetracontoctachoron",
+    "title": "Snub tetracontoctachoron",
+    "cluster": "geometry",
+    "summary": "F₄-related 4D snub polytope reference node from the supplied source set.",
+    "formula": "",
+    "aliases": [
+      "snub 48-cell"
+    ],
+    "sources": [
+      "golden:f7407a547bea",
+      "golden:9b6ad836875f"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -153.33,
+    "y": 385.7
+  },
+  {
+    "id": "fourier-transform",
+    "title": "Fourier transform",
+    "cluster": "transforms",
+    "summary": "Transforms a function or signal into frequency-domain components; retained as a modern numerical/symbolic bridge.",
+    "formula": "f(t) ↔ F(ω)",
+    "aliases": [
+      "FFT",
+      "frequency domain"
+    ],
+    "sources": [
+      "golden:29fc22cf187f",
+      "golden:bade0869b058"
+    ],
+    "bridge": "fourier-transform",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -154.15,
+    "y": 284.26
+  },
+  {
+    "id": "chebyshev",
+    "title": "Chebyshev polynomials",
+    "cluster": "transforms",
+    "summary": "Orthogonal polynomial family with recurrence structure and numerical approximation applications.",
+    "formula": "Tₙ₊₁(x)=2xTₙ(x)−Tₙ₋₁(x)",
+    "aliases": [
+      "Chebyshev"
+    ],
+    "sources": [
+      "golden:a7a7954a641a",
+      "golden:12e06f78ab67",
+      "golden:d7d210d5ca9e"
+    ],
+    "bridge": "chebyshev",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -403.05,
+    "y": 403.05
+  },
+  {
+    "id": "binomial",
+    "title": "Binomial theorem",
+    "cluster": "transforms",
+    "summary": "Polynomial expansion rule that acts as a baseline symbolic-computation example.",
+    "formula": "(x+y)ⁿ = Σ C(n,k)xⁿ⁻ᵏyᵏ",
+    "aliases": [
+      "binomial"
+    ],
+    "sources": [
+      "golden:f46a50e59e9c"
+    ],
+    "bridge": "binomial",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -227.69,
+    "y": 97.58
+  },
+  {
+    "id": "chaos",
+    "title": "Chaos theory",
+    "cluster": "dynamics",
+    "summary": "Sensitivity and nonlinear dynamics lane connecting recurrences/iteration to fractal computation.",
+    "formula": "",
+    "aliases": [
+      "chaotic dynamics"
+    ],
+    "sources": [
+      "golden:3351ed97b34e"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -328.87,
+    "y": 202.11
+  },
+  {
+    "id": "lyapunov",
+    "title": "Lyapunov exponent",
+    "cluster": "dynamics",
+    "summary": "Quantifies average exponential separation or contraction of nearby trajectories.",
+    "formula": "λ ≈ lim (1/n) Σ log|f′(xₖ)|",
+    "aliases": [
+      "lyapunov"
+    ],
+    "sources": [
+      "fractal:132d11885530"
+    ],
+    "bridge": "lyapunov",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -579.86,
+    "y": 87.8
+  },
+  {
+    "id": "mandelbrot",
+    "title": "Mandelbrot set",
+    "cluster": "dynamics",
+    "summary": "Parameter-space iteration zₙ₊₁=zₙ²+c with z₀=0.",
+    "formula": "zₙ₊₁ = zₙ² + c",
+    "aliases": [
+      "Mandelbrot"
+    ],
+    "sources": [
+      "fractal:134018d58189",
+      "fractal:09237c6182c5",
+      "fractal:289a5619b644"
+    ],
+    "bridge": "mandelbrot",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -233.13,
+    "y": 25.78
+  },
+  {
+    "id": "julia",
+    "title": "Julia set",
+    "cluster": "dynamics",
+    "summary": "Complex dynamical set formed by iterating a fixed parameter c from varying initial z.",
+    "formula": "zₙ₊₁ = zₙ² + c",
+    "aliases": [
+      "Julia"
+    ],
+    "sources": [
+      "golden:ecb6324c05eb",
+      "fractal:2f57a514e1c5"
+    ],
+    "bridge": "julia",
+    "tags": [],
+    "bridgeAvailable": true,
+    "x": -523.97,
+    "y": -92.02
+  },
+  {
+    "id": "newton-fractal",
+    "title": "Newton fractal",
+    "cluster": "dynamics",
+    "summary": "Basins of attraction induced by Newton iteration on complex starting values.",
+    "formula": "zₙ₊₁ = zₙ − f(zₙ)/f′(zₙ)",
+    "aliases": [
+      "Newton method fractal"
+    ],
+    "sources": [
+      "fractal:abc99288687f",
+      "fractal:2e6a24d55603"
+    ],
+    "bridge": "newton-fractal",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -256.95,
+    "y": -161.01
+  },
+  {
+    "id": "hausdorff-dimension",
+    "title": "Hausdorff dimension",
+    "cluster": "dynamics",
+    "summary": "Dimension notion used to quantify fractal geometry beyond integer topological dimension.",
+    "formula": "",
+    "aliases": [
+      "fractal dimension"
+    ],
+    "sources": [
+      "golden:eb09a2ca5296",
+      "fractal:5b4481f04bf2",
+      "fractal:aa88bbebfbef",
+      "golden:28aa39300304"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -587.63,
+    "y": -282.29
+  },
+  {
+    "id": "sympy-core",
+    "title": "SymPy symbolic core",
+    "cluster": "symbolic",
+    "summary": "Exact symbolic expression layer used here to turn source equations into manipulable objects.",
+    "formula": "",
+    "aliases": [
+      "sympy"
+    ],
+    "sources": [
+      "sympy:72399676adce"
+    ],
+    "bridge": "sympy-core",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -366.21,
+    "y": -122.01
+  },
+  {
+    "id": "sympy-parsing",
+    "title": "Parsing into expressions",
+    "cluster": "symbolic",
+    "summary": "Turns textual mathematical expressions into symbolic objects; source docs include parser transformations and ANTLR/Lark backends.",
+    "formula": "",
+    "aliases": [
+      "parse_expr",
+      "ANTLR",
+      "Lark"
+    ],
+    "sources": [
+      "sympy:1bb964510eff"
+    ],
+    "bridge": "sympy-parsing",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -439.98,
+    "y": -387.76
+  },
+  {
+    "id": "sympy-solving",
+    "title": "Symbolic solving",
+    "cluster": "symbolic",
+    "summary": "Solves exact algebraic equations and systems before numerical execution.",
+    "formula": "",
+    "aliases": [
+      "solve",
+      "solveset"
+    ],
+    "sources": [
+      "sympy:3060d1eef8ad"
+    ],
+    "bridge": "sympy-solving",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -169.6,
+    "y": -162.02
+  },
+  {
+    "id": "sympy-matrices",
+    "title": "Symbolic matrices",
+    "cluster": "symbolic",
+    "summary": "Exact matrix, determinant, eigenvalue and characteristic-polynomial layer.",
+    "formula": "",
+    "aliases": [
+      "Matrix",
+      "charpoly",
+      "eigenvals"
+    ],
+    "sources": [
+      "sympy:fd06ab0bad69"
+    ],
+    "bridge": "sympy-matrices",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -266.31,
+    "y": -460.54
+  },
+  {
+    "id": "sympy-ntheory",
+    "title": "Symbolic number theory",
+    "cluster": "symbolic",
+    "summary": "Number-theory algorithms used as modern executable counterparts to integer-sequence and primality concepts.",
+    "formula": "",
+    "aliases": [
+      "ntheory"
+    ],
+    "sources": [
+      "sympy:6e65aa46e084"
+    ],
+    "bridge": "sympy-ntheory",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -41.82,
+    "y": -300.32
+  },
+  {
+    "id": "lambdify",
+    "title": "Lambdify / numerical kernel",
+    "cluster": "symbolic",
+    "summary": "Compiles a symbolic expression into a callable numerical function, commonly backed by Python math or NumPy.",
+    "formula": "",
+    "aliases": [
+      "lambdify",
+      "numpy"
+    ],
+    "sources": [
+      "sympy:af56dea4851a"
+    ],
+    "bridge": "lambdify",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -161.48,
+    "y": -631.61
+  },
+  {
+    "id": "codegen",
+    "title": "Code generation",
+    "cluster": "code",
+    "summary": "Emits expressions/routines for lower-level languages so exact symbolic derivations can become production kernels.",
+    "formula": "",
+    "aliases": [
+      "codegen",
+      "ccode",
+      "jscode",
+      "rust_code"
+    ],
+    "sources": [
+      "sympy:fa2231bb04a7",
+      "sympy:4074a42b467e",
+      "sympy:2b352c2e6ff1"
+    ],
+    "bridge": "codegen",
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": -4.35,
+    "y": -360.47
+  },
+  {
+    "id": "python-numpy",
+    "title": "Python / NumPy",
+    "cluster": "code",
+    "summary": "Numerical execution target for arrays, eigenvalue checks, iteration and visualization-ready data.",
+    "formula": "",
+    "aliases": [
+      "numpy",
+      "python"
+    ],
+    "sources": [
+      "golden:60df6350d152"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 205.33,
+    "y": -539.63
+  },
+  {
+    "id": "c-target",
+    "title": "C target",
+    "cluster": "code",
+    "summary": "Generated low-level expression target for compact numerical kernels.",
+    "formula": "",
+    "aliases": [
+      "C",
+      "ccode"
+    ],
+    "sources": [
+      "sympy:fa2231bb04a7"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 115.0,
+    "y": -199.19
+  },
+  {
+    "id": "javascript-target",
+    "title": "JavaScript target",
+    "cluster": "code",
+    "summary": "Generated browser/runtime expression target via SymPy printing.",
+    "formula": "",
+    "aliases": [
+      "JavaScript",
+      "jscode"
+    ],
+    "sources": [
+      "sympy:39ee5a18289c"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 344.67,
+    "y": -412.99
+  },
+  {
+    "id": "rust-target",
+    "title": "Rust target",
+    "cluster": "code",
+    "summary": "Generated systems-language expression target via SymPy printing.",
+    "formula": "",
+    "aliases": [
+      "Rust",
+      "rust_code"
+    ],
+    "sources": [
+      "sympy:39ee5a18289c"
+    ],
+    "bridge": null,
+    "tags": [],
+    "bridgeAvailable": false,
+    "x": 294.35,
+    "y": -141.83
+  }
+]

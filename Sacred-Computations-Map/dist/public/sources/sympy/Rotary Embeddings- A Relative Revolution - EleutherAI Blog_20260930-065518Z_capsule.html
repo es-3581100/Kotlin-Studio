@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Rotary Embeddings: A Relative Revolution | EleutherAI Blog — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Rotary Embeddings: A Relative Revolution | EleutherAI Blog</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://blog.eleuther.ai/rotary-embeddings/</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T06:55:18.740Z</div><div class="stat"><b>Records</b><br>23</div><div class="stat"><b>Sections</b><br>17</div></div><p>Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. We put it to the test.</p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 282 B · ~71 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 23404 B · ~5780 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 7661 B · ~1914 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 58 B · ~15 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Rotary Embeddings- A Relative Revolution.md</code></a> <small>markdown · 299 B · ~75 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-TL;DR-.md</code></a> <small>markdown · 683 B · ~171 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-What’s the Problem-.md</code></a> <small>markdown · 1204 B · ~298 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-What’s the Solution-.md</code></a> <small>markdown · 176 B · ~44 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Intuition.md</code></a> <small>markdown · 1808 B · ~440 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Visual Intuition.md</code></a> <small>markdown · 1054 B · ~263 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Derivation.md</code></a> <small>markdown · 3573 B · ~864 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Extension to multiple dimensions.md</code></a> <small>markdown · 884 B · ~216 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-How is this different from the sinusoidal embeddings used in “Attention is All You Need”-.md</code></a> <small>markdown · 592 B · ~145 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Okay, what About in Practice-.md</code></a> <small>markdown · 538 B · ~134 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Implementation.md</code></a> <small>markdown · 3307 B · ~827 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Experiments.md</code></a> <small>markdown · 3386 B · ~846 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Runtime.md</code></a> <small>markdown · 910 B · ~228 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Conclusion.md</code></a> <small>markdown · 317 B · ~80 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Citation Information.md</code></a> <small>markdown · 638 B · ~160 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-References.md</code></a> <small>markdown · 3950 B · ~972 tok</small></li><li><a href="#art-0021"><code>artifacts/provenance/source-record.json</code></a> <small>json · 559 B · ~140 tok</small></li><li><a href="#art-0022"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 319 B · ~80 tok</small></li><li><a href="#art-0023"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Rotary Embeddings: A Relative Revolution | EleutherAI Blog&quot;
+source: https://blog.eleuther.ai/rotary-embeddings/
+captured_at: 2026-09-30T06:55:18.740Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 23
+artifact_count: 23
+content_sha256: c55d97d9ca634db10c9f1b0fdbbddeb527d3db0ef2d33af0e4e2b8aa447395bd
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:282,&quot;sha256&quot;:&quot;b020c0f032df984360600d9138206dd1edddb9c3dacc865c826c3736ba8c444a&quot;,&quot;keywords&quot;:[&quot;blog&quot;,&quot;capsule&quot;,&quot;2026-09-30t06&quot;,&quot;740z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;eleuther&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:71,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:23404,&quot;sha256&quot;:&quot;c55d97d9ca634db10c9f1b0fdbbddeb527d3db0ef2d33af0e4e2b8aa447395bd&quot;,&quot;keywords&quot;:[&quot;arxiv&quot;,&quot;embeddings&quot;,&quot;positional&quot;,&quot;rotary&quot;,&quot;https&quot;,&quot;relative&quot;,&quot;position&quot;,&quot;absolute&quot;],&quot;summary&quot;:&quot;Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. We put it to the test.&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:5780,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:7661,&quot;sha256&quot;:&quot;4c93a838204673821894bf833bba1e7c849aebf4abd9d5ad6d17463c3c206cae&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;rel&quot;,&quot;arxiv&quot;,&quot;level&quot;,&quot;eleuther&quot;,&quot;www&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1914,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:58,&quot;sha256&quot;:&quot;8333838f5d6e25bedceb9a821f2f1828fe1119bb125658c41e960b16913c9423&quot;,&quot;keywords&quot;:[&quot;blog&quot;,&quot;introduction&quot;,&quot;back&quot;,&quot;eleuther&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:15,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Rotary Embeddings- A Relative Revolution.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:299,&quot;sha256&quot;:&quot;3a4b0186c0528f6ca9817183f9a37a511b2ca411e5840000f9bc1167a06f7ccf&quot;,&quot;keywords&quot;:[&quot;relative&quot;,&quot;rotary&quot;,&quot;embeddings&quot;,&quot;revolution&quot;,&quot;wang&quot;,&quot;2021&quot;,&quot;absolute&quot;,&quot;approaches&quot;],&quot;summary&quot;:&quot;Rotary Embeddings: A Relative Revolution&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:75,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-TL;DR-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:683,&quot;sha256&quot;:&quot;886c082df3ce1dbaee19257de18fe5a519718c4c9e58a671710f31e3b3ac1a3b&quot;,&quot;keywords&quot;:[&quot;new&quot;,&quot;positional&quot;,&quot;absolute&quot;,&quot;academic&quot;,&quot;across&quot;,&quot;already&quot;,&quot;approaches&quot;,&quot;attention&quot;],&quot;summary&quot;:&quot;TL;DR:&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:171,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-What’s the Problem-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1204,&quot;sha256&quot;:&quot;57259f208ef38fb2a9fda8654fb59c29ad4f37638b281c4e09a1074047ce92d7&quot;,&quot;keywords&quot;:[&quot;encoding&quot;,&quot;positional&quot;,&quot;attention&quot;,&quot;efficient&quot;,&quot;between&quot;,&quot;like&quot;,&quot;many&quot;,&quot;methods&quot;],&quot;summary&quot;:&quot;What’s the Problem?&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:298,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-What’s the Solution-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:176,&quot;sha256&quot;:&quot;dfca42d9098ad897b212690c7c11c6888c03dc84ed2ca26686a86f8722138ffb&quot;,&quot;keywords&quot;:[&quot;solution&quot;,&quot;what&quot;,&quot;before&quot;,&quot;begin&quot;,&quot;derivation&quot;,&quot;derive&quot;,&quot;discussing&quot;,&quot;embedding&quot;],&quot;summary&quot;:&quot;What’s the Solution?&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:44,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Intuition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1808,&quot;sha256&quot;:&quot;bfd780f544a28783f9df2dc20eba2f21fb010be7d24cdd846554052e30813344&quot;,&quot;keywords&quot;:[&quot;rope&quot;,&quot;between&quot;,&quot;position&quot;,&quot;product&quot;,&quot;dot&quot;,&quot;intuition&quot;,&quot;relative&quot;,&quot;them&quot;],&quot;summary&quot;:&quot;Intuition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:440,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Visual Intuition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1054,&quot;sha256&quot;:&quot;32d37723e3fd4cc6c3d618fe9c638ede8a1f5a4d4114eb3b4b5dd2f206a37157&quot;,&quot;keywords&quot;:[&quot;wave&quot;,&quot;angle&quot;,&quot;how&quot;,&quot;see&quot;,&quot;through&quot;,&quot;between&quot;,&quot;electromagnetic&quot;,&quot;intuition&quot;],&quot;summary&quot;:&quot;Visual Intuition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:263,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Derivation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3573,&quot;sha256&quot;:&quot;0f306fab477373e5c80fc90d8df9cc170381ec1b2f750ee2d04df86a0029ee40&quot;,&quot;keywords&quot;:[&quot;information&quot;,&quot;positional&quot;,&quot;absolute&quot;,&quot;attention&quot;,&quot;embedding&quot;,&quot;embeddings&quot;,&quot;equation&quot;,&quot;numbers&quot;],&quot;summary&quot;:&quot;Derivation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:864,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Extension to multiple dimensions.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:884,&quot;sha256&quot;:&quot;54c446d478cb2f14927f4cf5994921bd927a5a7b35f69bcd58e1a1423840e0ac&quot;,&quot;keywords&quot;:[&quot;dimensions&quot;,&quot;relative&quot;,&quot;embeddings&quot;,&quot;extended&quot;,&quot;extension&quot;,&quot;implement&quot;,&quot;multiple&quot;,&quot;rope&quot;],&quot;summary&quot;:&quot;Extension to multiple dimensions&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:216,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-How is this different from the sinusoidal embeddings used in “Attention is All You Need”-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:592,&quot;sha256&quot;:&quot;30f058f89d4849aa765d66a520bdde11c5d74de07672b2bdf64e25d7d8083c92&quot;,&quot;keywords&quot;:[&quot;embeddings&quot;,&quot;sinusoidal&quot;,&quot;different&quot;,&quot;how&quot;,&quot;rotary&quot;,&quot;attention&quot;,&quot;need&quot;,&quot;used&quot;],&quot;summary&quot;:&quot;How is this different from the sinusoidal embeddings used in “Attention is All You Need”?&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:145,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Okay, what About in Practice-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:538,&quot;sha256&quot;:&quot;ad42b551a5305fccdb0de2104bd5bd8d29c372dc86ed73acc8f288b2bc25551c&quot;,&quot;keywords&quot;:[&quot;positional&quot;,&quot;well&quot;,&quot;about&quot;,&quot;architecture&quot;,&quot;okay&quot;,&quot;practice&quot;,&quot;what&quot;,&quot;across&quot;],&quot;summary&quot;:&quot;Okay, what About in Practice?&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:134,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Implementation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3307,&quot;sha256&quot;:&quot;ebe3f9417859306281279f3fa2570ba0c2e38e70009eb0c3444f5c7f2b6954b2&quot;,&quot;keywords&quot;:[&quot;self&quot;,&quot;dim&quot;,&quot;torch&quot;,&quot;none&quot;,&quot;code&quot;,&quot;cos&quot;,&quot;def&quot;,&quot;inv_freq&quot;],&quot;summary&quot;:&quot;Implementation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:827,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Experiments.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3386,&quot;sha256&quot;:&quot;34f4b125a88ed61efdadea903149a9ec169e497da83b9cd3c7eb9491b95d78bd&quot;,&quot;keywords&quot;:[&quot;validation&quot;,&quot;loss&quot;,&quot;https&quot;,&quot;learned&quot;,&quot;performer&quot;,&quot;absolute&quot;,&quot;blog&quot;,&quot;embeddings&quot;],&quot;summary&quot;:&quot;Experiments&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:846,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Runtime.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:910,&quot;sha256&quot;:&quot;b85f52f2109047f610e0a40f36c2e381f3c0e6f8bbf4367e50534ad8077213d0&quot;,&quot;keywords&quot;:[&quot;embeddings&quot;,&quot;rotary&quot;,&quot;runtime&quot;,&quot;applying&quot;,&quot;find&quot;,&quot;positional&quot;,&quot;additive&quot;,&quot;about&quot;],&quot;summary&quot;:&quot;Runtime&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:228,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Conclusion.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:317,&quot;sha256&quot;:&quot;77d8d1c2790cdec224b9f026d1e13d2ed1f7de780eb429c8cd6ae1483da3e94b&quot;,&quot;keywords&quot;:[&quot;between&quot;,&quot;conclusion&quot;,&quot;architecture&quot;,&quot;attention&quot;,&quot;carry&quot;,&quot;different&quot;,&quot;efficient&quot;,&quot;embeddings&quot;],&quot;summary&quot;:&quot;Conclusion&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Citation Information.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:638,&quot;sha256&quot;:&quot;34822fa23b184600bceb3e2415ca2305bbae237aabdfcadf31df7bd6f58ed66e&quot;,&quot;keywords&quot;:[&quot;2021&quot;,&quot;arxiv&quot;,&quot;author&quot;,&quot;blog&quot;,&quot;citation&quot;,&quot;cite&quot;,&quot;information&quot;,&quot;please&quot;],&quot;summary&quot;:&quot;Citation Information&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:160,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3950,&quot;sha256&quot;:&quot;12c71259860402651b91749806b24d099179b32bd28cd58f280749da7bdd5189&quot;,&quot;keywords&quot;:[&quot;arxiv&quot;,&quot;https&quot;,&quot;abs&quot;,&quot;org&quot;,&quot;preprint&quot;,&quot;2021&quot;,&quot;language&quot;,&quot;transformer&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:972,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0021&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:559,&quot;sha256&quot;:&quot;ba643bc74c37b41f5fcf60deb43b28fbc5fcd08214d8a962c8fd2dc8382d3e0e&quot;,&quot;keywords&quot;:[&quot;blog&quot;,&quot;eleuther&quot;,&quot;eleutherai&quot;,&quot;https&quot;,&quot;relative&quot;,&quot;rotary&quot;,&quot;rotary-embeddings&quot;,&quot;2026-09-30t06&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:140,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0022&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:319,&quot;sha256&quot;:&quot;04ff8a77281dde7de8c77811697a269987001ad5a739bdff21fcb735675f5689&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;agent&quot;,&quot;authority&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0023&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T06:55:18.740Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	71	282	b020c0f032df984360600d9138206dd1edddb9c3dacc865c826c3736ba8c444a	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	5780	23404	c55d97d9ca634db10c9f1b0fdbbddeb527d3db0ef2d33af0e4e2b8aa447395bd	Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. We put it to the test.	
+art:0003	index	artifacts/index/page-index.json	supporting	1914	7661	4c93a838204673821894bf833bba1e7c849aebf4abd9d5ad6d17463c3c206cae	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	15	58	8333838f5d6e25bedceb9a821f2f1828fe1119bb125658c41e960b16913c9423	Introduction	
+sec:0005	section	artifacts/sections/0002-Rotary Embeddings- A Relative Revolution.md	primary	75	299	3a4b0186c0528f6ca9817183f9a37a511b2ca411e5840000f9bc1167a06f7ccf	Rotary Embeddings: A Relative Revolution	
+sec:0006	section	artifacts/sections/0003-TL;DR-.md	primary	171	683	886c082df3ce1dbaee19257de18fe5a519718c4c9e58a671710f31e3b3ac1a3b	TL;DR:	
+sec:0007	section	artifacts/sections/0004-What’s the Problem-.md	primary	298	1204	57259f208ef38fb2a9fda8654fb59c29ad4f37638b281c4e09a1074047ce92d7	What’s the Problem?	
+sec:0008	section	artifacts/sections/0005-What’s the Solution-.md	primary	44	176	dfca42d9098ad897b212690c7c11c6888c03dc84ed2ca26686a86f8722138ffb	What’s the Solution?	
+sec:0009	section	artifacts/sections/0006-Intuition.md	primary	440	1808	bfd780f544a28783f9df2dc20eba2f21fb010be7d24cdd846554052e30813344	Intuition	
+sec:0010	section	artifacts/sections/0007-Visual Intuition.md	primary	263	1054	32d37723e3fd4cc6c3d618fe9c638ede8a1f5a4d4114eb3b4b5dd2f206a37157	Visual Intuition	
+sec:0011	section	artifacts/sections/0008-Derivation.md	primary	864	3573	0f306fab477373e5c80fc90d8df9cc170381ec1b2f750ee2d04df86a0029ee40	Derivation	
+sec:0012	section	artifacts/sections/0009-Extension to multiple dimensions.md	supporting	216	884	54c446d478cb2f14927f4cf5994921bd927a5a7b35f69bcd58e1a1423840e0ac	Extension to multiple dimensions	
+sec:0013	section	artifacts/sections/0010-How is this different from the sinusoidal embeddings used in “Attention is All You Need”-.md	supporting	145	592	30f058f89d4849aa765d66a520bdde11c5d74de07672b2bdf64e25d7d8083c92	How is this different from the sinusoidal embeddings used in “Attention is All You Need”?	
+sec:0014	section	artifacts/sections/0011-Okay, what About in Practice-.md	supporting	134	538	ad42b551a5305fccdb0de2104bd5bd8d29c372dc86ed73acc8f288b2bc25551c	Okay, what About in Practice?	
+sec:0015	section	artifacts/sections/0012-Implementation.md	supporting	827	3307	ebe3f9417859306281279f3fa2570ba0c2e38e70009eb0c3444f5c7f2b6954b2	Implementation	
+sec:0016	section	artifacts/sections/0013-Experiments.md	supporting	846	3386	34f4b125a88ed61efdadea903149a9ec169e497da83b9cd3c7eb9491b95d78bd	Experiments	
+sec:0017	section	artifacts/sections/0014-Runtime.md	supporting	228	910	b85f52f2109047f610e0a40f36c2e381f3c0e6f8bbf4367e50534ad8077213d0	Runtime	
+sec:0018	section	artifacts/sections/0015-Conclusion.md	supporting	80	317	77d8d1c2790cdec224b9f026d1e13d2ed1f7de780eb429c8cd6ae1483da3e94b	Conclusion	
+sec:0019	section	artifacts/sections/0016-Citation Information.md	supporting	160	638	34822fa23b184600bceb3e2415ca2305bbae237aabdfcadf31df7bd6f58ed66e	Citation Information	
+sec:0020	section	artifacts/sections/0017-References.md	supporting	972	3950	12c71259860402651b91749806b24d099179b32bd28cd58f280749da7bdd5189	References	
+art:0021	provenance	artifacts/provenance/source-record.json	supporting	140	559	ba643bc74c37b41f5fcf60deb43b28fbc5fcd08214d8a962c8fd2dc8382d3e0e	Capture source identity and metadata	
+art:0022	provenance	artifacts/provenance/extraction-record.json	supporting	80	319	04ff8a77281dde7de8c77811697a269987001ad5a739bdff21fcb735675f5689	Extraction engine and counts	
+art:0023	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Back to blog](https://blog.eleuther.ai/)
+
+# Rotary Embeddings: A Relative Revolution
+
+Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. We put it to the test.
+
+  Apr 20, 2021 Stella Biderman, Sid Black, Charles Foster, Leo Gao, Eric Hallahan, Horace He, Ben Wang, Phil Wang
+
+## TL;DR:
+
+Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. Developed by Jianlin Su in a series of blog posts earlier this year [12, 13] and in a new preprint [14], it has already garnered widespread interest in some Chinese NLP circles. This post walks through the method as we understand it, with the goal of bringing it to the attention of the wider academic community. In general we have found that across a large suite of setups including regular, linear, and local self-attention, it **either matches or surpasses all other methods currently available for injecting positional information into transformers.**
+
+## What’s the Problem?
+
+Since Vaswani et al., 2017 [16] there have been many schemes introduced for encoding positional information in transformers. When applying self-attention to a given domain, the choice of position encoding typically involves tradeoffs between simplicity, flexibility, and efficiency. For example, learned absolute positional encoding is very simple, but may not generalize and is not always particularly meaningful due to the common practices [1, 3, 9, 15] of packing short sentences and phrases together in a single context and breaking up sentences across contexts.
+
+Another major limitation of existing methods is that they do not work with efficient transformers. Methods like T5’s relative positional bias [10] require constructing the full N×N attention matrix between positions, which is not possible when using many of the efficient alternatives to softmax attention, including kernelized variants like FAVOR+ [2].
+
+A principled, easy to implement, and generally-applicable method for relative position encoding—one that works for both vanilla and “efficient” attention—is of great interest. Rotary Positional Embedding (RoPE) is designed to address this need.
+
+## What’s the Solution?
+
+In this section we introduce and derive the rotary positional embedding. We begin with discussing the intuition, before presenting a full derivation.
+
+### Intuition
+
+We would like to find a positional encoding function f(x,ℓ) for an item x and its position ℓ such that, for two items q and k at positions m and n, the inner product between f(q,m) and f(k,n) is sensitive only to the values of q, k, and their relative position m−n. This is related in spirit to the kernel trick: we are searching for a feature map such that its kernel has certain properties. A key piece of information is the geometric definition of the dot product between Euclidean vectors: q⋅k=‖q‖‖k‖cos⁡(θqk)
+
+In plain English, the dot product between two vectors is a function of the magnitude of individual vectors and the angle between them. With this in mind, the intuition behind RoPE is that we can represent the token embeddings as complex numbers and their positions as pure rotations that we apply to them. If we shift both the query and key by the same amount, changing absolute position but not relative position, this will lead both representations to be additionally rotated in the same manner—as we will see in the derivation—thus the angle between them will remain unchanged and thus the dot product will also remain unchanged. By exploiting the nature of rotations, the dot product used in self-attention will have the property we are looking for, preserving relative positional information while discarding absolute position.
+
+The following is an example illustrating the core idea of RoPE—a more rigorous derivation is presented in a subsequent section. Some arbitrary 0&lt;ε≤π2N is chosen, where N is the maximum sequence length. When viewed elementwise on q and k, with j as the element index, RoPE can be viewed as follows:
+
+ RoPE(x,m)=xemiε⟨RoPE(qj,m),RoPE(kj,n)⟩=⟨qjemiε,kjeniε⟩=qjkjemiεeniε―=qjkje(m−n)iε=RoPE(qjkj,m−n)
+
+### Visual Intuition
+
+   A quarter-waveplate can change the polarization of an electromagnetic wave. (This figure is interactive, try dragging the cube!)
+
+To see how relative position might be preserved in this transformation, we can look to an analogous situation in classical electrodynamics.
+
+We imagine a linearly polarized electromagnetic wave that is sent through a quarter-wave plate at an angle of 45 degrees. This takes the incoming wave and shifts its phase on only one principal dimension as it travels. When the wave emerges from the waveplate, the polarization is no longer linear—it has become circular through a shift equal to quarter of a period.
+
+As the wave travels through the waveplate, we can see how the magnitude of the wave is preserved. We can also better see how the relative position may be encoded as the angle between subsequent timesteps: the angle between timesteps, and therefore distance along the axis of travel, is constant. This means the positional information must be orthogonal to the amplitude in the modulated wave.
+
+### Derivation
+
+We begin with absolute positional information: for each token, we know where it is in the sequence. However, dot products (and therefore attention) do not preserve absolute positional information, so if we encode that positional information in the absolute position of the embeddings, we will lose a significant amount of information. On the other hand, dot products do preserve relative position, so if we can encode the absolute positional information into the token embeddings in a way that only leverages relative positional information, that will be preserved by the attention function.
+
+While it is common in machine learning to restrict our attention to the real numbers, for rotary embeddings it is mathematically more convenient to use the complex numbers as the base field for our space. Instead of working in the usual Rd, we will work in Cd/2 by considering consecutive pairs of elements of the query and key vectors to be a single complex number. Specifically, instead of viewing q=(q1,q2,q3,q4,…,qd) as a d-dimensional real vector we view it as q=(q1+iq2,q3+iq4,…qd−1+iqd)∈Cd/2. As we will see, casting it in this fashion will make discussing the rotary embeddings easier. If d is odd, we can pad it with a dummy coordinate to ensure things line up correctly. Alternatively, we can simply increase d by one.
+
+Let q and k be query and key vectors respectively and let m and n be the absolute positions of the corresponding tokens. Let f(x,ℓ) be the function that takes the token embedding x in position ℓ and outputs a new embedding that contains (in some fashion) the relative positional information. Our goal is to find a “nice” function f that does this. Once the positional information is encoded, we need to compute the inner product like so:
+
+ ⟨f(q,m),f(k,n)⟩=g(q,k,m−n)
+
+where g(q,k,m−n) now represents the pre-softmax logit of the usual attention equation. Writing these three functions in exponential form gives
+
+ f(q,m)=Rf(q,m)eiΘf(q,m)f(k,n)=Rf(k,n)eiΘf(k,n)g(q,k,m−n)=Rg(q,k,m−n)eiΘg(q,k,m−n)
+
+Computing the inner product and equating corresponding components yields
+
+ Rf(q,m)Rf(k,n)=Rg(q,k,m−n)Θf(q,m)−Θf(k,n)=Θg(q,k,m−n)
+
+Substituting m=n and applying the initial condition f(x,0)=x gives
+
+ Rf(q,m)Rf(k,m)=Rg(q,k,0)=Rf(q,0)Rf(k,0)=qk
+
+As the prior equation is valid for all m, it means that Rf is independent of the value of m, so we can set Rf(x,y)=x. Similarly, if we denote Θ(x)=Θf(x,0) we obtain
+
+ Θf(q,m)−Θf(k,m)=Θg(q,k,0)=Θf(q,0)−Θf(k,0)=Θ(q)−Θ(k)
+
+which implies that Θf(q,m)−Θ(q)=Θf(k,m)−Θ(k) for all q,k,m. This allows us to decompose Θf as Θf(x,y)=Θ(x)+φ(y). Examining the case of m=n+1 reveals that
+
+ φ(m)−φ(m−1)=Θg(q,k,1)+Θ(q)−Θ(k)
+
+Since the right-hand side does not depend on m, the left hand side must not either and so φ is an arithmetic progression. Setting the initial values φ(0)=0 and φ(1)=θ, we have φ(m)=mθ.
+
+Putting all of these pieces together, we get the final formula for the rotary positional embedding:
+
+ f(q,m)=Rf(q,m)eiΘf(q,m)=qei(Θ(q)+mθ)=∑j=1d/2qjeimθjej→
+
+and likewise for k. Since computers tend to like real numbers and matrices more than complex numbers, it’s convenient to convert this expression into the matrix equation
+
+ f(q,m)=(M1M2⋱Md/2)(q1q2⋮qd)=ΘmQm=ΘmWqXm
+
+where Mj=(cos⁡mθj−sin⁡mθjsin⁡mθjcos⁡mθj), Θm is the block diagonal rotation matrix, Wq is the learned query weights, and Xm is the embedding of the m-th token. Again, we also have the corresponding equation for k.
+
+### Extension to multiple dimensions
+
+With relative ease RoPE can be extended into the multidimensional case. To represent two dimensions, two independent 1-dimensional rotary embeddings can be used. To implement this, we can split each of q and k in half and apply rotary piece-wise as follows:
+
+ ⟨f(q,m,i),f(k,n,j)⟩=⟨f1(q:d/2,m),f1(k:d/2,n)⟩+⟨f2(qd/2:,i),f2(kd/2:,j)⟩=g1(q:d/2,k:d/2,m−n)+g2(qd/2:,kd/2:,i−j)=g(q,k,m−n,i−j)
+
+This formulation can also be further extended to data of an arbitrary number of dimensions. This sort of multi-dimensional relative coding would let us, for example, implement relative timing and relative pitch embeddings similar to Music Transformer [4] in a drastically simpler manner. More generally, we believe there is potentially a large class of invariances that first-principles positional codes like RoPE may enable us to capture.
+
+### How is this different from the sinusoidal embeddings used in “Attention is All You Need”?
+
+A response many of us at EleutherAI had when first coming across this was “how does this differ from sinusoidal embeddings,” so we feel it is worth discussing this comparison. There are two ways that rotary embeddings are different from sinusoidal embeddings:
+
+1. Sinusoidal embeddings apply to each coordinate individually, while rotary embeddings mix pairs of coordinates
+2. Sinusoidal embeddings add a cos⁡(mθ) or sin⁡(mθ) term, while rotary embeddings use a multiplicative factor.
+
+## Okay, what About in Practice?
+
+After reading Jianlin Su’s original blog posts [12, 13], we were curious how well such a first-principles approach to positional encoding would stack up against existing methods. Despite a tremendous number of papers that have come out claiming to improve the transformer architecture, very few approaches generalize well across codebases and tasks. However, we have found that rotary positional embeddings perform as well or better than other positional techniques in every architecture we have tried.
+
+### Implementation
+
+A naive implementation of rotary positional embeddings would use the block diagonal matrix form shown earlier. In practice, implementing rotary positional embeddings this way is highly inefficient, and more optimized forms are readily available. The original implementations of RoPE are available in [roformer](https://github.com/ZhuiyiTechnology/roformer) and [bert4keras](https://github.com/bojone/bert4keras).
+
+Additionally, we have implemented rotary positional embeddings in [x-transformers](https://github.com/lucidrains/x-transformers), [GPT-Neo](https://github.com/EleutherAI/gpt-neo), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox), and [Mesh Transformer JAX](https://github.com/kingoflolz/mesh-transformer-jax). Below are implementations for PyTorch and JAX pulled from these codebases.
+
+ GPT-NeoX (PyTorch)
+
+```
+import torch
+
+class Rotary(torch.nn.Module):
+    def __init__(self, dim, base=10000):
+        super().__init__()
+        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
+        self.register_buffer(&quot;inv_freq&quot;, inv_freq)
+        self.seq_len_cached = None
+        self.cos_cached = None
+        self.sin_cached = None
+
+    def forward(self, x, seq_dim=1):
+        seq_len = x.shape[seq_dim]
+        if seq_len != self.seq_len_cached:
+            self.seq_len_cached = seq_len
+            t = torch.arange(x.shape[seq_dim], device=x.device).type_as(self.inv_freq)
+            freqs = torch.einsum(&quot;i,j-&gt;ij&quot;, t, self.inv_freq)
+            emb = torch.cat((freqs, freqs), dim=-1).to(x.device)
+            self.cos_cached = emb.cos()[:, None, None, :]
+            self.sin_cached = emb.sin()[:, None, None, :]
+        return self.cos_cached, self.sin_cached
+
+# rotary pos emb helpers:
+
+def rotate_half(x):
+    x1, x2 = x[..., : x.shape[-1] // 2], x[..., x.shape[-1] // 2 :]
+    return torch.cat(
+        (-x2, x1), dim=x1.ndim - 1
+    )  # dim=-1 triggers a bug in torch &lt; 1.8.0
+
+@torch.jit.script
+def apply_rotary_pos_emb(q, k, cos, sin):
+    return (q * cos) + (rotate_half(q) * sin), (k * cos) + (rotate_half(k) * sin)
+```
+
+```
+&lt;figcaption&gt;&lt;strong&gt;N.B:&lt;/strong&gt; The layout of the queries and keys in GPT-NeoX, following Megatron, is &lt;code&gt;[seq, batch, heads, hdim]&lt;/code&gt;, in order to avoid memory-intensive transpose operations. The code will need to be modified to work with the conventional layout of &lt;code&gt;[batch, seq, heads, hdim]&lt;/code&gt;.&lt;/figcaption&gt;
+```
+
+    Mesh Transformer JAX (JAX)
+
+```
+import jax.numpy as jnp
+import numpy as np
+from einops import rearrange, repeat
+
+def fixed_pos_embedding(x, seq_dim=0):
+    dim = x.shape[-1]
+    inv_freq = 1.0 / (10000 ** (np.arange(0, dim, 2) / dim))
+
+    sinusoid_inp = np.einsum(&quot;i , j -&gt; i j&quot;, np.arange(x.shape[seq_dim]), inv_freq)
+
+    return np.sin(sinusoid_inp), np.cos(sinusoid_inp)
+
+def rotate_every_two(x):
+    x1 = x[:, :, ::2]
+    x2 = x[:, :, 1::2]
+
+    x = jnp.stack((-x2, x1), axis=-1)
+
+    return rearrange(x, &quot;... d j -&gt; ... (d j)&quot;)
+
+def apply_rotary_pos_emb(x, sincos):
+    sin, cos = map(lambda t: repeat(t, &quot;b n -&gt; b (n j)&quot;, j=2)[:, None, :], sincos)
+    return (x * cos) + (rotate_every_two(x) * sin)
+```
+
+```
+&lt;figcaption&gt;&lt;strong&gt;N.B:&lt;/strong&gt; The layout of the queries and keys in Mesh Transformer JAX is &lt;code&gt;[seq, n_head, d_head]&lt;/code&gt; (no batch dim).&lt;/figcaption&gt;
+```
+
+### Experiments
+
+We have found rotary embeddings to be effective for many varieties of attention.
+
+#### Comparison against other PEs for Global attention
+
+We conducted [comparisons](https://wandb.ai/eleutherai/neox/reports/Rotary-Test-3--Vmlldzo2MTIwMDM) of rotary embeddings with learned absolute positional embeddings, used in GPT-3 [1], and the learned relative positional embeddings (henceforth RPE) used in T5 [10] using our GPT-NeoX codebase. Comparisons were done using 125M parameter models with the same hyperparameters as the equally-sized model from [1]. Models were trained on [OpenWebText2](https://www.eleuther.ai/projects/open-web-text2/), a large and diverse dataset of online text. We see faster convergence of training and validation curves and a lower overall validation loss with a minimal decrease in throughput.
+
+  ![GPT\-NeoX experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/rope-learned-rpe.png) OWT2 validation loss with 150M parameter models in GPT-NeoX      Type OWT2 Loss OWT2 Ppl.     Learned Absolute 2.809 16.59   T5 RPE 2.801 16.46   Rotary 2.759 15.78    Final validation loss / ppl scores on OWT2 validation set at 55k steps (~30B tokens)
+
+#### Billion+ parameter models
+
+We conducted additional larger scale experiments with the [mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax) codebase and 1.4B parameter models, against baselines of learned absolute position embeddings and T5 RPE. Hyperparameters similar to GPT3’s 1.3B model were used, with the dataset being the Pile [3]. A similar increase in convergence speed was observed as seen over learned absolute (~30%), and a smaller improvement (10-20%) was still seen over the T5 relative position encoding, demonstrating scalability into the billion parameter regime. For full details, see [here](https://wandb.ai/eleutherai/mesh-transformer-jax/reports/Position-encoding-shootout--Vmlldzo2MTg2MzY).
+
+  ![Jax experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/jax-experiments.png) Pile validation loss with 1.5B parameter models      Type Pile Loss Pile Ppl.     Learned Absolute 2.240 9.393   T5 RPE 2.223 9.234   Rotary 2.173 8.784    Final validation loss / ppl scores on Pile validation set at 8k steps (~8B tokens)
+
+#### Comparison against learned absolute for Performer
+
+Performer [2] is an example of an alternative attention mechanism designed to avoid quadratic bottlenecks with respect to sequence lengths. We ran small scale tests of Performer on enwiki8, for 8 layer char-based transformers with 512 dimensions and 8 heads. [These tests indicated](https://wandb.ai/lucidrains/eleuther-blogpost/reports/performer-rotary--Vmlldzo2MTgyNDg) that substituting rotary embeddings into the Performer leads to stark decreases in validation loss and to rapid convergence. Though these improvements do not close the gap between efficient and quadratic attention mechanisms, such a significant improvement makes mechanisms like Performer more attractive.
+
+In smaller scale tests, we have also put RoPE head to head against other alternatives including the relative position method of Shaw et al. [11], TUPE [5], and position-infused attention [8], seeing positive results across the board.
+
+  ![x\-transformers experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/performer.png) Enwik8 validation/train loss with performer
+
+### Runtime
+
+In general, we find that the runtime cost of rotary embeddings is fairly negligible. With the above implementation, we find that applying the rotary embeddings is naively about 4-5x the cost of applying additive positional embeddings. With the addition of a fusing optimizer like Torchscript, the runtime can be reduced to about 2-2.5x the runtime of additive positional embeddings. Concretely, for query and key tensors of shape [2048,16,12,64], applying rotary embeddings takes 5.3 milliseconds, while applying additive positional embeddings takes 2.1 milliseconds.
+
+Unlike standard positional embeddings, however, rotary embeddings must be applied at every layer. As large transformer models are typically dominated by matrix multiplies, we find that the overall overhead remains negligible. With fusion, we find that rotary embeddings impose a 1-3% overhead across a range of transformer sizes.
+
+## Conclusion
+
+Rotary embeddings make it possible to implement relative attention in a straightforward and efficient manner, and we look forward to the work it inspires. Simple improvements to the transformer architecture that carry over robustly between different types of self-attention are few and far between [6].
+
+### Citation Information
+
+To cite the RoPE methodology, please use:
+
+```
+@article{rope-paper,
+  title={RoFormer: Enhanced Transformer with Rotary Position Embedding},
+  author={Su, Jianlin and Lu, Yu and Pan, Shengfeng and Wen, Bo and Liu, Yunfeng},
+  journal={arXiv preprint arXiv:2104.09864},
+  year={2021}
+}
+```
+
+To cite this blog post, please use:
+
+```
+@misc{rope-eleutherai,
+  title = {Rotary Embeddings: A Relative Revolution},
+  author = {Biderman, Stella and Black, Sid and Foster, Charles and Gao, Leo and Hallahan, Eric and He, Horace and Wang, Ben and Wang, Phil},
+  howpublished = \url{blog.eleuther.ai/},
+  year = {2021}
+}
+```
+
+## References
+
+[1] Tom B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language Models are Few-Shot Learners. *arXiv preprint [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)*, 2020.
+
+[2] Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, et al. Rethinking Attention with Performers. *arXiv preprint [arXiv:2009.14794](https://arxiv.org/abs/2009.14794)*, 2020.
+
+[3] Leo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, et al. The Pile: An 800GB Dataset of Diverse Text for Language Modeling. *arXiv preprint [arXiv:2101.00027](https://arxiv.org/abs/2101.00027)*, 2021.
+
+[4] Cheng-Zhi Anna Huang, Ashish Vaswani, Jakob Uszkoreit, Noam Shazeer, Ian Simon, Curtis Hawthorne, Andrew M Dai, Matthew D Hoffman, Monica Dinculescu, and Douglas Eck. Music Transformer. *arXiv preprint [arXiv:1809.04281](https://arxiv.org/abs/1809.04281)*, 2018.
+
+[5] Guolin Ke, Di He, and Tie-Yan Liu. Rethinking Positional Encoding in Language Pre-training. *arXiv preprint [arXiv:2006.15595](https://arxiv.org/abs/2006.15595)*, 2020.
+
+[6] Sharan Narang, Hyung Won Chung, Yi Tay, William Fedus, Thibault Fevry, Michael Matena, Karishma Malkan, Noah Fiedel, Noam Shazeer, Zhenzhong Lan, et al. Do Transformer Modifications Transfer Across Implementations and Applications? *arXiv preprint [arXiv:2102.11972](https://arxiv.org/abs/2102.11972)*, 2021.
+
+[7] Deepak Narayanan, Mohammad Shoeybi, Jared Casper, Patrick LeGresley, Mostofa Patwary, Vijay Korthikanti, Dmitri Vainbrand, Prethvi Kashinkunti, Julie Bernauer, Bryan Catanzaro, et al. Efficient Large-Scale Language Model Training on GPU Clusters. *arXiv preprint [arXiv:2104.04473](https://arxiv.org/abs/2104.04473)*, 2021.
+
+[8] Ofir Press, Noah A Smith, and Mike Lewis. Shortformer: Better Language Modeling using Shorter Inputs. *arXiv preprint [arXiv:2012.15832](https://arxiv.org/abs/2012.15832)*, 2020.
+
+[9] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning Transferable Visual Models From Natural Language Supervision. *arXiv preprint [arXiv:2103.00020](https://arxiv.org/abs/2103.00020)*, 2021.
+
+[10] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. *arXiv preprint [arXiv:1910.10683](https://arxiv.org/abs/1910.10683)*, 2019.
+
+[11] Peter Shaw, Jakob Uszkoreit, and Ashish Vaswani. Self-Attention with Relative Position Representations. *arXiv preprint [arXiv:1803.02155](https://arxiv.org/abs/1803.02155)*, 2018.
+
+[12] Jianlin Su. 让研究人员绞尽脑汁的 Transformer 位置编码. [https://kexue.fm/archives/8130](https://kexue.fm/archives/8130), 2021. [Online; accessed 18-April-2021].
+
+[13] Jianlin Su. Transformer 升级之路：2、博采众长的旋转式位置编码. [https://kexue.fm/archives/8265](https://kexue.fm/archives/8265), 2021. [Online; accessed 18-April-2021].
+
+[14] Jianlin Su, Yu Lu, Shengfeng Pan, Bo Wen, and Yunfeng Liu. RoFormer: Enhanced Transformer with Rotary Position Embedding. *arXiv preprint [arXiv:2104.09864](https://arxiv.org/abs/2104.09864)*, 2021.
+
+[15] Hao Tan and Mohit Bansal. Vokenization: Improving Language Understanding with Contextualized, Visual-Grounded Supervision. *arXiv preprint [arXiv:2010.06775](https://arxiv.org/abs/2010.06775)*, 2020.
+
+[16] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need. *arXiv preprint [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)*, 2017.
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Back to blog](https://blog.eleuther.ai/)
+</pre></article><article id="section-0002"><h3>Rotary Embeddings: A Relative Revolution</h3><pre># Rotary Embeddings: A Relative Revolution
+
+Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. We put it to the test.
+
+  Apr 20, 2021 Stella Biderman, Sid Black, Charles Foster, Leo Gao, Eric Hallahan, Horace He, Ben Wang, Phil Wang
+</pre></article><article id="section-0003"><h3>TL;DR:</h3><pre># TL;DR:
+
+Rotary Positional Embedding (RoPE) is a new type of position encoding that unifies absolute and relative approaches. Developed by Jianlin Su in a series of blog posts earlier this year [12, 13] and in a new preprint [14], it has already garnered widespread interest in some Chinese NLP circles. This post walks through the method as we understand it, with the goal of bringing it to the attention of the wider academic community. In general we have found that across a large suite of setups including regular, linear, and local self-attention, it **either matches or surpasses all other methods currently available for injecting positional information into transformers.**
+</pre></article><article id="section-0004"><h3>What’s the Problem?</h3><pre># What’s the Problem?
+
+Since Vaswani et al., 2017 [16] there have been many schemes introduced for encoding positional information in transformers. When applying self-attention to a given domain, the choice of position encoding typically involves tradeoffs between simplicity, flexibility, and efficiency. For example, learned absolute positional encoding is very simple, but may not generalize and is not always particularly meaningful due to the common practices [1, 3, 9, 15] of packing short sentences and phrases together in a single context and breaking up sentences across contexts.
+
+Another major limitation of existing methods is that they do not work with efficient transformers. Methods like T5’s relative positional bias [10] require constructing the full N×N attention matrix between positions, which is not possible when using many of the efficient alternatives to softmax attention, including kernelized variants like FAVOR+ [2].
+
+A principled, easy to implement, and generally-applicable method for relative position encoding—one that works for both vanilla and “efficient” attention—is of great interest. Rotary Positional Embedding (RoPE) is designed to address this need.
+</pre></article><article id="section-0005"><h3>What’s the Solution?</h3><pre># What’s the Solution?
+
+In this section we introduce and derive the rotary positional embedding. We begin with discussing the intuition, before presenting a full derivation.
+</pre></article><article id="section-0006"><h3>Intuition</h3><pre># Intuition
+
+We would like to find a positional encoding function f(x,ℓ) for an item x and its position ℓ such that, for two items q and k at positions m and n, the inner product between f(q,m) and f(k,n) is sensitive only to the values of q, k, and their relative position m−n. This is related in spirit to the kernel trick: we are searching for a feature map such that its kernel has certain properties. A key piece of information is the geometric definition of the dot product between Euclidean vectors: q⋅k=‖q‖‖k‖cos⁡(θqk)
+
+In plain English, the dot product between two vectors is a function of the magnitude of individual vectors and the angle between them. With this in mind, the intuition behind RoPE is that we can represent the token embeddings as complex numbers and their positions as pure rotations that we apply to them. If we shift both the query and key by the same amount, changing absolute position but not relative position, this will lead both representations to be additionally rotated in the same manner—as we will see in the derivation—thus the angle between them will remain unchanged and thus the dot product will also remain unchanged. By exploiting the nature of rotations, the dot product used in self-attention will have the property we are looking for, preserving relative positional information while discarding absolute position.
+
+The following is an example illustrating the core idea of RoPE—a more rigorous derivation is presented in a subsequent section. Some arbitrary 0&lt;ε≤π2N is chosen, where N is the maximum sequence length. When viewed elementwise on q and k, with j as the element index, RoPE can be viewed as follows:
+
+ RoPE(x,m)=xemiε⟨RoPE(qj,m),RoPE(kj,n)⟩=⟨qjemiε,kjeniε⟩=qjkjemiεeniε―=qjkje(m−n)iε=RoPE(qjkj,m−n)
+</pre></article><article id="section-0007"><h3>Visual Intuition</h3><pre># Visual Intuition
+
+A quarter-waveplate can change the polarization of an electromagnetic wave. (This figure is interactive, try dragging the cube!)
+
+To see how relative position might be preserved in this transformation, we can look to an analogous situation in classical electrodynamics.
+
+We imagine a linearly polarized electromagnetic wave that is sent through a quarter-wave plate at an angle of 45 degrees. This takes the incoming wave and shifts its phase on only one principal dimension as it travels. When the wave emerges from the waveplate, the polarization is no longer linear—it has become circular through a shift equal to quarter of a period.
+
+As the wave travels through the waveplate, we can see how the magnitude of the wave is preserved. We can also better see how the relative position may be encoded as the angle between subsequent timesteps: the angle between timesteps, and therefore distance along the axis of travel, is constant. This means the positional information must be orthogonal to the amplitude in the modulated wave.
+</pre></article><article id="section-0008"><h3>Derivation</h3><pre># Derivation
+
+We begin with absolute positional information: for each token, we know where it is in the sequence. However, dot products (and therefore attention) do not preserve absolute positional information, so if we encode that positional information in the absolute position of the embeddings, we will lose a significant amount of information. On the other hand, dot products do preserve relative position, so if we can encode the absolute positional information into the token embeddings in a way that only leverages relative positional information, that will be preserved by the attention function.
+
+While it is common in machine learning to restrict our attention to the real numbers, for rotary embeddings it is mathematically more convenient to use the complex numbers as the base field for our space. Instead of working in the usual Rd, we will work in Cd/2 by considering consecutive pairs of elements of the query and key vectors to be a single complex number. Specifically, instead of viewing q=(q1,q2,q3,q4,…,qd) as a d-dimensional real vector we view it as q=(q1+iq2,q3+iq4,…qd−1+iqd)∈Cd/2. As we will see, casting it in this fashion will make discussing the rotary embeddings easier. If d is odd, we can pad it with a dummy coordinate to ensure things line up correctly. Alternatively, we can simply increase d by one.
+
+Let q and k be query and key vectors respectively and let m and n be the absolute positions of the corresponding tokens. Let f(x,ℓ) be the function that takes the token embedding x in position ℓ and outputs a new embedding that contains (in some fashion) the relative positional information. Our goal is to find a “nice” function f that does this. Once the positional information is encoded, we need to compute the inner product like so:
+
+ ⟨f(q,m),f(k,n)⟩=g(q,k,m−n)
+
+where g(q,k,m−n) now represents the pre-softmax logit of the usual attention equation. Writing these three functions in exponential form gives
+
+ f(q,m)=Rf(q,m)eiΘf(q,m)f(k,n)=Rf(k,n)eiΘf(k,n)g(q,k,m−n)=Rg(q,k,m−n)eiΘg(q,k,m−n)
+
+Computing the inner product and equating corresponding components yields
+
+ Rf(q,m)Rf(k,n)=Rg(q,k,m−n)Θf(q,m)−Θf(k,n)=Θg(q,k,m−n)
+
+Substituting m=n and applying the initial condition f(x,0)=x gives
+
+ Rf(q,m)Rf(k,m)=Rg(q,k,0)=Rf(q,0)Rf(k,0)=qk
+
+As the prior equation is valid for all m, it means that Rf is independent of the value of m, so we can set Rf(x,y)=x. Similarly, if we denote Θ(x)=Θf(x,0) we obtain
+
+ Θf(q,m)−Θf(k,m)=Θg(q,k,0)=Θf(q,0)−Θf(k,0)=Θ(q)−Θ(k)
+
+which implies that Θf(q,m)−Θ(q)=Θf(k,m)−Θ(k) for all q,k,m. This allows us to decompose Θf as Θf(x,y)=Θ(x)+φ(y). Examining the case of m=n+1 reveals that
+
+ φ(m)−φ(m−1)=Θg(q,k,1)+Θ(q)−Θ(k)
+
+Since the right-hand side does not depend on m, the left hand side must not either and so φ is an arithmetic progression. Setting the initial values φ(0)=0 and φ(1)=θ, we have φ(m)=mθ.
+
+Putting all of these pieces together, we get the final formula for the rotary positional embedding:
+
+ f(q,m)=Rf(q,m)eiΘf(q,m)=qei(Θ(q)+mθ)=∑j=1d/2qjeimθjej→
+
+and likewise for k. Since computers tend to like real numbers and matrices more than complex numbers, it’s convenient to convert this expression into the matrix equation
+
+ f(q,m)=(M1M2⋱Md/2)(q1q2⋮qd)=ΘmQm=ΘmWqXm
+
+where Mj=(cos⁡mθj−sin⁡mθjsin⁡mθjcos⁡mθj), Θm is the block diagonal rotation matrix, Wq is the learned query weights, and Xm is the embedding of the m-th token. Again, we also have the corresponding equation for k.
+</pre></article><article id="section-0009"><h3>Extension to multiple dimensions</h3><pre># Extension to multiple dimensions
+
+With relative ease RoPE can be extended into the multidimensional case. To represent two dimensions, two independent 1-dimensional rotary embeddings can be used. To implement this, we can split each of q and k in half and apply rotary piece-wise as follows:
+
+ ⟨f(q,m,i),f(k,n,j)⟩=⟨f1(q:d/2,m),f1(k:d/2,n)⟩+⟨f2(qd/2:,i),f2(kd/2:,j)⟩=g1(q:d/2,k:d/2,m−n)+g2(qd/2:,kd/2:,i−j)=g(q,k,m−n,i−j)
+
+This formulation can also be further extended to data of an arbitrary number of dimensions. This sort of multi-dimensional relative coding would let us, for example, implement relative timing and relative pitch embeddings similar to Music Transformer [4] in a drastically simpler manner. More generally, we believe there is potentially a large class of invariances that first-principles positional codes like RoPE may enable us to capture.
+</pre></article><article id="section-0010"><h3>How is this different from the sinusoidal embeddings used in “Attention is All You Need”?</h3><pre># How is this different from the sinusoidal embeddings used in “Attention is All You Need”?
+
+A response many of us at EleutherAI had when first coming across this was “how does this differ from sinusoidal embeddings,” so we feel it is worth discussing this comparison. There are two ways that rotary embeddings are different from sinusoidal embeddings:
+
+1. Sinusoidal embeddings apply to each coordinate individually, while rotary embeddings mix pairs of coordinates
+2. Sinusoidal embeddings add a cos⁡(mθ) or sin⁡(mθ) term, while rotary embeddings use a multiplicative factor.
+</pre></article><article id="section-0011"><h3>Okay, what About in Practice?</h3><pre># Okay, what About in Practice?
+
+After reading Jianlin Su’s original blog posts [12, 13], we were curious how well such a first-principles approach to positional encoding would stack up against existing methods. Despite a tremendous number of papers that have come out claiming to improve the transformer architecture, very few approaches generalize well across codebases and tasks. However, we have found that rotary positional embeddings perform as well or better than other positional techniques in every architecture we have tried.
+</pre></article><article id="section-0012"><h3>Implementation</h3><pre># Implementation
+
+A naive implementation of rotary positional embeddings would use the block diagonal matrix form shown earlier. In practice, implementing rotary positional embeddings this way is highly inefficient, and more optimized forms are readily available. The original implementations of RoPE are available in [roformer](https://github.com/ZhuiyiTechnology/roformer) and [bert4keras](https://github.com/bojone/bert4keras).
+
+Additionally, we have implemented rotary positional embeddings in [x-transformers](https://github.com/lucidrains/x-transformers), [GPT-Neo](https://github.com/EleutherAI/gpt-neo), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox), and [Mesh Transformer JAX](https://github.com/kingoflolz/mesh-transformer-jax). Below are implementations for PyTorch and JAX pulled from these codebases.
+
+ GPT-NeoX (PyTorch)
+
+```
+import torch
+
+class Rotary(torch.nn.Module):
+    def __init__(self, dim, base=10000):
+        super().__init__()
+        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
+        self.register_buffer(&quot;inv_freq&quot;, inv_freq)
+        self.seq_len_cached = None
+        self.cos_cached = None
+        self.sin_cached = None
+
+    def forward(self, x, seq_dim=1):
+        seq_len = x.shape[seq_dim]
+        if seq_len != self.seq_len_cached:
+            self.seq_len_cached = seq_len
+            t = torch.arange(x.shape[seq_dim], device=x.device).type_as(self.inv_freq)
+            freqs = torch.einsum(&quot;i,j-&gt;ij&quot;, t, self.inv_freq)
+            emb = torch.cat((freqs, freqs), dim=-1).to(x.device)
+            self.cos_cached = emb.cos()[:, None, None, :]
+            self.sin_cached = emb.sin()[:, None, None, :]
+        return self.cos_cached, self.sin_cached
+
+# rotary pos emb helpers:
+
+def rotate_half(x):
+    x1, x2 = x[..., : x.shape[-1] // 2], x[..., x.shape[-1] // 2 :]
+    return torch.cat(
+        (-x2, x1), dim=x1.ndim - 1
+    )  # dim=-1 triggers a bug in torch &lt; 1.8.0
+
+@torch.jit.script
+def apply_rotary_pos_emb(q, k, cos, sin):
+    return (q * cos) + (rotate_half(q) * sin), (k * cos) + (rotate_half(k) * sin)
+```
+
+```
+&lt;figcaption&gt;&lt;strong&gt;N.B:&lt;/strong&gt; The layout of the queries and keys in GPT-NeoX, following Megatron, is &lt;code&gt;[seq, batch, heads, hdim]&lt;/code&gt;, in order to avoid memory-intensive transpose operations. The code will need to be modified to work with the conventional layout of &lt;code&gt;[batch, seq, heads, hdim]&lt;/code&gt;.&lt;/figcaption&gt;
+```
+
+    Mesh Transformer JAX (JAX)
+
+```
+import jax.numpy as jnp
+import numpy as np
+from einops import rearrange, repeat
+
+def fixed_pos_embedding(x, seq_dim=0):
+    dim = x.shape[-1]
+    inv_freq = 1.0 / (10000 ** (np.arange(0, dim, 2) / dim))
+
+    sinusoid_inp = np.einsum(&quot;i , j -&gt; i j&quot;, np.arange(x.shape[seq_dim]), inv_freq)
+
+    return np.sin(sinusoid_inp), np.cos(sinusoid_inp)
+
+def rotate_every_two(x):
+    x1 = x[:, :, ::2]
+    x2 = x[:, :, 1::2]
+
+    x = jnp.stack((-x2, x1), axis=-1)
+
+    return rearrange(x, &quot;... d j -&gt; ... (d j)&quot;)
+
+def apply_rotary_pos_emb(x, sincos):
+    sin, cos = map(lambda t: repeat(t, &quot;b n -&gt; b (n j)&quot;, j=2)[:, None, :], sincos)
+    return (x * cos) + (rotate_every_two(x) * sin)
+```
+
+```
+&lt;figcaption&gt;&lt;strong&gt;N.B:&lt;/strong&gt; The layout of the queries and keys in Mesh Transformer JAX is &lt;code&gt;[seq, n_head, d_head]&lt;/code&gt; (no batch dim).&lt;/figcaption&gt;
+```
+</pre></article><article id="section-0013"><h3>Experiments</h3><pre># Experiments
+
+We have found rotary embeddings to be effective for many varieties of attention.
+
+#### Comparison against other PEs for Global attention
+
+We conducted [comparisons](https://wandb.ai/eleutherai/neox/reports/Rotary-Test-3--Vmlldzo2MTIwMDM) of rotary embeddings with learned absolute positional embeddings, used in GPT-3 [1], and the learned relative positional embeddings (henceforth RPE) used in T5 [10] using our GPT-NeoX codebase. Comparisons were done using 125M parameter models with the same hyperparameters as the equally-sized model from [1]. Models were trained on [OpenWebText2](https://www.eleuther.ai/projects/open-web-text2/), a large and diverse dataset of online text. We see faster convergence of training and validation curves and a lower overall validation loss with a minimal decrease in throughput.
+
+  ![GPT\-NeoX experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/rope-learned-rpe.png) OWT2 validation loss with 150M parameter models in GPT-NeoX      Type OWT2 Loss OWT2 Ppl.     Learned Absolute 2.809 16.59   T5 RPE 2.801 16.46   Rotary 2.759 15.78    Final validation loss / ppl scores on OWT2 validation set at 55k steps (~30B tokens)
+
+#### Billion+ parameter models
+
+We conducted additional larger scale experiments with the [mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax) codebase and 1.4B parameter models, against baselines of learned absolute position embeddings and T5 RPE. Hyperparameters similar to GPT3’s 1.3B model were used, with the dataset being the Pile [3]. A similar increase in convergence speed was observed as seen over learned absolute (~30%), and a smaller improvement (10-20%) was still seen over the T5 relative position encoding, demonstrating scalability into the billion parameter regime. For full details, see [here](https://wandb.ai/eleutherai/mesh-transformer-jax/reports/Position-encoding-shootout--Vmlldzo2MTg2MzY).
+
+  ![Jax experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/jax-experiments.png) Pile validation loss with 1.5B parameter models      Type Pile Loss Pile Ppl.     Learned Absolute 2.240 9.393   T5 RPE 2.223 9.234   Rotary 2.173 8.784    Final validation loss / ppl scores on Pile validation set at 8k steps (~8B tokens)
+
+#### Comparison against learned absolute for Performer
+
+Performer [2] is an example of an alternative attention mechanism designed to avoid quadratic bottlenecks with respect to sequence lengths. We ran small scale tests of Performer on enwiki8, for 8 layer char-based transformers with 512 dimensions and 8 heads. [These tests indicated](https://wandb.ai/lucidrains/eleuther-blogpost/reports/performer-rotary--Vmlldzo2MTgyNDg) that substituting rotary embeddings into the Performer leads to stark decreases in validation loss and to rapid convergence. Though these improvements do not close the gap between efficient and quadratic attention mechanisms, such a significant improvement makes mechanisms like Performer more attractive.
+
+In smaller scale tests, we have also put RoPE head to head against other alternatives including the relative position method of Shaw et al. [11], TUPE [5], and position-infused attention [8], seeing positive results across the board.
+
+  ![x\-transformers experiments](https://blog.eleuther.ai/images/blog/rotary-embeddings/performer.png) Enwik8 validation/train loss with performer
+</pre></article><article id="section-0014"><h3>Runtime</h3><pre># Runtime
+
+In general, we find that the runtime cost of rotary embeddings is fairly negligible. With the above implementation, we find that applying the rotary embeddings is naively about 4-5x the cost of applying additive positional embeddings. With the addition of a fusing optimizer like Torchscript, the runtime can be reduced to about 2-2.5x the runtime of additive positional embeddings. Concretely, for query and key tensors of shape [2048,16,12,64], applying rotary embeddings takes 5.3 milliseconds, while applying additive positional embeddings takes 2.1 milliseconds.
+
+Unlike standard positional embeddings, however, rotary embeddings must be applied at every layer. As large transformer models are typically dominated by matrix multiplies, we find that the overall overhead remains negligible. With fusion, we find that rotary embeddings impose a 1-3% overhead across a range of transformer sizes.
+</pre></article><article id="section-0015"><h3>Conclusion</h3><pre># Conclusion
+
+Rotary embeddings make it possible to implement relative attention in a straightforward and efficient manner, and we look forward to the work it inspires. Simple improvements to the transformer architecture that carry over robustly between different types of self-attention are few and far between [6].
+</pre></article><article id="section-0016"><h3>Citation Information</h3><pre># Citation Information
+
+To cite the RoPE methodology, please use:
+
+```
+@article{rope-paper,
+  title={RoFormer: Enhanced Transformer with Rotary Position Embedding},
+  author={Su, Jianlin and Lu, Yu and Pan, Shengfeng and Wen, Bo and Liu, Yunfeng},
+  journal={arXiv preprint arXiv:2104.09864},
+  year={2021}
+}
+```
+
+To cite this blog post, please use:
+
+```
+@misc{rope-eleutherai,
+  title = {Rotary Embeddings: A Relative Revolution},
+  author = {Biderman, Stella and Black, Sid and Foster, Charles and Gao, Leo and Hallahan, Eric and He, Horace and Wang, Ben and Wang, Phil},
+  howpublished = \url{blog.eleuther.ai/},
+  year = {2021}
+}
+```
+</pre></article><article id="section-0017"><h3>References</h3><pre># References
+
+[1] Tom B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language Models are Few-Shot Learners. *arXiv preprint [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)*, 2020.
+
+[2] Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, et al. Rethinking Attention with Performers. *arXiv preprint [arXiv:2009.14794](https://arxiv.org/abs/2009.14794)*, 2020.
+
+[3] Leo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, et al. The Pile: An 800GB Dataset of Diverse Text for Language Modeling. *arXiv preprint [arXiv:2101.00027](https://arxiv.org/abs/2101.00027)*, 2021.
+
+[4] Cheng-Zhi Anna Huang, Ashish Vaswani, Jakob Uszkoreit, Noam Shazeer, Ian Simon, Curtis Hawthorne, Andrew M Dai, Matthew D Hoffman, Monica Dinculescu, and Douglas Eck. Music Transformer. *arXiv preprint [arXiv:1809.04281](https://arxiv.org/abs/1809.04281)*, 2018.
+
+[5] Guolin Ke, Di He, and Tie-Yan Liu. Rethinking Positional Encoding in Language Pre-training. *arXiv preprint [arXiv:2006.15595](https://arxiv.org/abs/2006.15595)*, 2020.
+
+[6] Sharan Narang, Hyung Won Chung, Yi Tay, William Fedus, Thibault Fevry, Michael Matena, Karishma Malkan, Noah Fiedel, Noam Shazeer, Zhenzhong Lan, et al. Do Transformer Modifications Transfer Across Implementations and Applications? *arXiv preprint [arXiv:2102.11972](https://arxiv.org/abs/2102.11972)*, 2021.
+
+[7] Deepak Narayanan, Mohammad Shoeybi, Jared Casper, Patrick LeGresley, Mostofa Patwary, Vijay Korthikanti, Dmitri Vainbrand, Prethvi Kashinkunti, Julie Bernauer, Bryan Catanzaro, et al. Efficient Large-Scale Language Model Training on GPU Clusters. *arXiv preprint [arXiv:2104.04473](https://arxiv.org/abs/2104.04473)*, 2021.
+
+[8] Ofir Press, Noah A Smith, and Mike Lewis. Shortformer: Better Language Modeling using Shorter Inputs. *arXiv preprint [arXiv:2012.15832](https://arxiv.org/abs/2012.15832)*, 2020.
+
+[9] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning Transferable Visual Models From Natural Language Supervision. *arXiv preprint [arXiv:2103.00020](https://arxiv.org/abs/2103.00020)*, 2021.
+
+[10] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. *arXiv preprint [arXiv:1910.10683](https://arxiv.org/abs/1910.10683)*, 2019.
+
+[11] Peter Shaw, Jakob Uszkoreit, and Ashish Vaswani. Self-Attention with Relative Position Representations. *arXiv preprint [arXiv:1803.02155](https://arxiv.org/abs/1803.02155)*, 2018.
+
+[12] Jianlin Su. 让研究人员绞尽脑汁的 Transformer 位置编码. [https://kexue.fm/archives/8130](https://kexue.fm/archives/8130), 2021. [Online; accessed 18-April-2021].
+
+[13] Jianlin Su. Transformer 升级之路：2、博采众长的旋转式位置编码. [https://kexue.fm/archives/8265](https://kexue.fm/archives/8265), 2021. [Online; accessed 18-April-2021].
+
+[14] Jianlin Su, Yu Lu, Shengfeng Pan, Bo Wen, and Yunfeng Liu. RoFormer: Enhanced Transformer with Rotary Position Embedding. *arXiv preprint [arXiv:2104.09864](https://arxiv.org/abs/2104.09864)*, 2021.
+
+[15] Hao Tan and Mohit Bansal. Vokenization: Improving Language Understanding with Contextualized, Visual-Grounded Supervision. *arXiv preprint [arXiv:2010.06775](https://arxiv.org/abs/2010.06775)*, 2020.
+
+[16] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention Is All You Need. *arXiv preprint [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)*, 2017.
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

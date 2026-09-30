@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>De Moivre&#39;s formula - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · De Moivre&#39;s formula - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T04:42:46.670Z</div><div class="stat"><b>Records</b><br>22</div><div class="stat"><b>Sections</b><br>16</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 261 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 34246 B · ~8394 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 37265 B · ~9264 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 411 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-De Moivre&#39;s formula.md</code></a> <small>markdown · 7493 B · ~1821 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Example.md</code></a> <small>markdown · 924 B · ~227 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Relation to Euler&#39;s formula.md</code></a> <small>markdown · 1078 B · ~267 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Proof by induction.md</code></a> <small>markdown · 2874 B · ~695 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Formulae for cosine and sine individually.md</code></a> <small>markdown · 3254 B · ~793 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Failure for non-integer powers, and generalization.md</code></a> <small>markdown · 583 B · ~146 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Roots of complex numbers.md</code></a> <small>markdown · 934 B · ~231 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Complex numbers raised to an arbitrary power.md</code></a> <small>markdown · 1198 B · ~295 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Analogues in other settings.md</code></a> <small>markdown · 128 B · ~32 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Hyperbolic trigonometry.md</code></a> <small>markdown · 742 B · ~184 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Extension to complex numbers.md</code></a> <small>markdown · 719 B · ~172 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Quaternions.md</code></a> <small>markdown · 2614 B · ~642 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-2 × 2 matrices.md</code></a> <small>markdown · 785 B · ~189 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-References.md</code></a> <small>markdown · 7658 B · ~1891 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-External links.md</code></a> <small>markdown · 2832 B · ~708 tok</small></li><li><a href="#art-0020"><code>artifacts/provenance/source-record.json</code></a> <small>json · 397 B · ~100 tok</small></li><li><a href="#art-0021"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0022"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;De Moivre&#39;s formula - Wikipedia&quot;
+source: &quot;https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula&quot;
+captured_at: 2026-09-30T04:42:46.670Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 22
+artifact_count: 22
+content_sha256: aeeecbf2a47dd65cc4c64173ad98de5676ddb5dae2920b2edaf4c1d156f6d8d3
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:261,&quot;sha256&quot;:&quot;7b1c8b6a902c146d72e239993255bbcd676371241ed5ce8232a46bf82b192132&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t04&quot;,&quot;670z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;de_moivre&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:34246,&quot;sha256&quot;:&quot;aeeecbf2a47dd65cc4c64173ad98de5676ddb5dae2920b2edaf4c1d156f6d8d3&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;cos&quot;,&quot;wiki&quot;,&quot;sin&quot;,&quot;displaystyle&quot;,&quot;left&quot;],&quot;summary&quot;:&quot;De Moivre&#39;s formula - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:8394,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:37265,&quot;sha256&quot;:&quot;ca7f4ba902139804ddb29e7303fd096e52475aa4d3b2ed5214823b0539434a5b&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;rel&quot;,&quot;wiki&quot;,&quot;de_moivre&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:9264,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:411,&quot;sha256&quot;:&quot;0b81cc5014c044ee7ffca69aaef0334bb4c18d72e565f8a3e5a273478aade64b&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-De Moivre&#39;s formula.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7493,&quot;sha256&quot;:&quot;dbf27760728d3f938c967fe28b0df5ce0ffb9c77720cdc51ff45749558e5c80f&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;cos&quot;,&quot;sin&quot;,&quot;formula&quot;,&quot;moivre&quot;],&quot;summary&quot;:&quot;De Moivre&#39;s formula&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1821,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Example.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:924,&quot;sha256&quot;:&quot;780611c0552c6a7328cacf913b596778cbfb0f6d9c05322e8d772cb5b0231a73&quot;,&quot;keywords&quot;:[&quot;frac&quot;,&quot;bigg&quot;,&quot;cos&quot;,&quot;displaystyle&quot;,&quot;sin&quot;,&quot;example&quot;,&quot;left&quot;,&quot;cdot&quot;],&quot;summary&quot;:&quot;Example&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:227,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Relation to Euler&#39;s formula.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1078,&quot;sha256&quot;:&quot;bfda678f35eba054f99b2fd8b7f358ad08ffd15c08c9d71f0c3403293714ebed&quot;,&quot;keywords&quot;:[&quot;formula&quot;,&quot;cos&quot;,&quot;euler&quot;,&quot;sin&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Relation to Euler&#39;s formula&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:267,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Proof by induction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2874,&quot;sha256&quot;:&quot;9b9812b1ecb5a63529be5bbbe01004e16634bb81a1f59bd334eb04b7daae32f5&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;sin&quot;,&quot;left&quot;,&quot;right&quot;,&quot;induction&quot;,&quot;displaystyle&quot;,&quot;natural&quot;,&quot;qquad&quot;],&quot;summary&quot;:&quot;Proof by induction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:695,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Formulae for cosine and sine individually.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3254,&quot;sha256&quot;:&quot;7fd5c3e14c642d39a938183b17da9a443934af61b02080c8367be768ce65e774&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;sin&quot;,&quot;left&quot;,&quot;right&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Formulae for cosine and sine individually&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:793,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Failure for non-integer powers, and generalization.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:583,&quot;sha256&quot;:&quot;0fa37e94680a5fa332899e60fbc97c740b1067c0b57c9da6290e732e2319961a&quot;,&quot;keywords&quot;:[&quot;non-integer&quot;,&quot;failure&quot;,&quot;https&quot;,&quot;org&quot;,&quot;power&quot;,&quot;powers&quot;,&quot;wikipedia&quot;,&quot;complex&quot;],&quot;summary&quot;:&quot;Failure for non-integer powers, and generalization&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:146,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Roots of complex numbers.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:934,&quot;sha256&quot;:&quot;7ea4302f40525df7b989c542f8fcba9fabb0dcf07b899526a89546ebf6c4347a&quot;,&quot;keywords&quot;:[&quot;complex&quot;,&quot;cos&quot;,&quot;https&quot;,&quot;org&quot;,&quot;roots&quot;,&quot;sin&quot;,&quot;wikipedia&quot;,&quot;formula&quot;],&quot;summary&quot;:&quot;Roots of complex numbers&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:231,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Complex numbers raised to an arbitrary power.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1198,&quot;sha256&quot;:&quot;7bbe33ba6507cd49061d3268a7eeeef712aeaee2f1513c9aa15cb525db9b3129&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;sin&quot;,&quot;set&quot;,&quot;arbitrary&quot;,&quot;complex&quot;,&quot;displaystyle&quot;,&quot;https&quot;,&quot;numbers&quot;],&quot;summary&quot;:&quot;Complex numbers raised to an arbitrary power&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:295,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Analogues in other settings.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:128,&quot;sha256&quot;:&quot;0a9bf75353ba8bd366d327c451800bf0f6e6e6790db08f32d2f2ceddc23cddd3&quot;,&quot;keywords&quot;:[&quot;analogues&quot;,&quot;edit&quot;,&quot;other&quot;,&quot;settings&quot;,&quot;27s_formula&quot;,&quot;action&quot;,&quot;de_moivre&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Analogues in other settings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:32,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Hyperbolic trigonometry.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:742,&quot;sha256&quot;:&quot;4c8b22eb5f2fe43650346407ef9b88ad7273bc563ebedce996c8dc6ba29eb8ef&quot;,&quot;keywords&quot;:[&quot;cosh&quot;,&quot;sinh&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;hyperbolic&quot;,&quot;trigonometry&quot;],&quot;summary&quot;:&quot;Hyperbolic trigonometry&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:184,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Extension to complex numbers.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:719,&quot;sha256&quot;:&quot;dfce914470e5c5224cb1dd9e08195b68bbe64a7b2c012ce8d6f67d7fd6c1f836&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;sin&quot;,&quot;cosh&quot;,&quot;sinh&quot;,&quot;complex&quot;,&quot;displaystyle&quot;,&quot;aligned&quot;,&quot;any&quot;],&quot;summary&quot;:&quot;Extension to complex numbers&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:172,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Quaternions.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2614,&quot;sha256&quot;:&quot;0a5e8c3b9568e32dfd91eb03c059ea5cc3c9c7342862a544307dfa8e674964f3&quot;,&quot;keywords&quot;:[&quot;hat&quot;,&quot;mathbf&quot;,&quot;cos&quot;,&quot;sin&quot;,&quot;theta&quot;,&quot;displaystyle&quot;,&quot;frac&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Quaternions&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:642,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-2 × 2 matrices.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:785,&quot;sha256&quot;:&quot;758731d1366d94f5607e4ce5b391f575de2b51607f7fdfd4efbbab42bfe60a5a&quot;,&quot;keywords&quot;:[&quot;cos&quot;,&quot;phi&quot;,&quot;sin&quot;,&quot;pmatrix&quot;,&quot;matrices&quot;,&quot;begin&quot;,&quot;end&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;2 × 2 matrices&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:189,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7658,&quot;sha256&quot;:&quot;5fb28045723285ef5ea557b7455be8cdcf84bc2bf1085ca0d8fdc1a917cc4fde&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;cos&quot;,&quot;tfrac&quot;,&quot;sqrt&quot;,&quot;identifier&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1891,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2832,&quot;sha256&quot;:&quot;8e6b5ead3ae83f0113d31f641d4b19db28cb9002acb297343fe2bc42f7fbbf8b&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;category&quot;,&quot;articles&quot;,&quot;de_moivre&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:708,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0020&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:397,&quot;sha256&quot;:&quot;d1bdf5d9fdd9e1689f73e30c2c572dffb465a89f3b9a1107e1041964d52ad3a2&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;de_moivre&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t04&quot;,&quot;27s_formula&quot;,&quot;670z&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:100,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0021&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;14597c2490534633a75cbfbca20b64406d0226b1f68a72faabd3999c4dff0391&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;220&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0022&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T04:42:46.670Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	261	7b1c8b6a902c146d72e239993255bbcd676371241ed5ce8232a46bf82b192132	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	8394	34246	aeeecbf2a47dd65cc4c64173ad98de5676ddb5dae2920b2edaf4c1d156f6d8d3	De Moivre&#39;s formula - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	9264	37265	ca7f4ba902139804ddb29e7303fd096e52475aa4d3b2ed5214823b0539434a5b	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	411	0b81cc5014c044ee7ffca69aaef0334bb4c18d72e565f8a3e5a273478aade64b	Introduction	
+sec:0005	section	artifacts/sections/0002-De Moivre&#39;s formula.md	primary	1821	7493	dbf27760728d3f938c967fe28b0df5ce0ffb9c77720cdc51ff45749558e5c80f	De Moivre&#39;s formula	
+sec:0006	section	artifacts/sections/0003-Example.md	primary	227	924	780611c0552c6a7328cacf913b596778cbfb0f6d9c05322e8d772cb5b0231a73	Example	
+sec:0007	section	artifacts/sections/0004-Relation to Euler&#39;s formula.md	primary	267	1078	bfda678f35eba054f99b2fd8b7f358ad08ffd15c08c9d71f0c3403293714ebed	Relation to Euler&#39;s formula	
+sec:0008	section	artifacts/sections/0005-Proof by induction.md	primary	695	2874	9b9812b1ecb5a63529be5bbbe01004e16634bb81a1f59bd334eb04b7daae32f5	Proof by induction	
+sec:0009	section	artifacts/sections/0006-Formulae for cosine and sine individually.md	primary	793	3254	7fd5c3e14c642d39a938183b17da9a443934af61b02080c8367be768ce65e774	Formulae for cosine and sine individually	
+sec:0010	section	artifacts/sections/0007-Failure for non-integer powers, and generalization.md	primary	146	583	0fa37e94680a5fa332899e60fbc97c740b1067c0b57c9da6290e732e2319961a	Failure for non-integer powers, and generalization	
+sec:0011	section	artifacts/sections/0008-Roots of complex numbers.md	primary	231	934	7ea4302f40525df7b989c542f8fcba9fabb0dcf07b899526a89546ebf6c4347a	Roots of complex numbers	
+sec:0012	section	artifacts/sections/0009-Complex numbers raised to an arbitrary power.md	supporting	295	1198	7bbe33ba6507cd49061d3268a7eeeef712aeaee2f1513c9aa15cb525db9b3129	Complex numbers raised to an arbitrary power	
+sec:0013	section	artifacts/sections/0010-Analogues in other settings.md	supporting	32	128	0a9bf75353ba8bd366d327c451800bf0f6e6e6790db08f32d2f2ceddc23cddd3	Analogues in other settings	
+sec:0014	section	artifacts/sections/0011-Hyperbolic trigonometry.md	supporting	184	742	4c8b22eb5f2fe43650346407ef9b88ad7273bc563ebedce996c8dc6ba29eb8ef	Hyperbolic trigonometry	
+sec:0015	section	artifacts/sections/0012-Extension to complex numbers.md	supporting	172	719	dfce914470e5c5224cb1dd9e08195b68bbe64a7b2c012ce8d6f67d7fd6c1f836	Extension to complex numbers	
+sec:0016	section	artifacts/sections/0013-Quaternions.md	supporting	642	2614	0a5e8c3b9568e32dfd91eb03c059ea5cc3c9c7342862a544307dfa8e674964f3	Quaternions	
+sec:0017	section	artifacts/sections/0014-2 × 2 matrices.md	supporting	189	785	758731d1366d94f5607e4ce5b391f575de2b51607f7fdfd4efbbab42bfe60a5a	2 × 2 matrices	
+sec:0018	section	artifacts/sections/0015-References.md	supporting	1891	7658	5fb28045723285ef5ea557b7455be8cdcf84bc2bf1085ca0d8fdc1a917cc4fde	References	
+sec:0019	section	artifacts/sections/0016-External links.md	supporting	708	2832	8e6b5ead3ae83f0113d31f641d4b19db28cb9002acb297343fe2bc42f7fbbf8b	External links	
+art:0020	provenance	artifacts/provenance/source-record.json	supporting	100	397	d1bdf5d9fdd9e1689f73e30c2c572dffb465a89f3b9a1107e1041964d52ad3a2	Capture source identity and metadata	
+art:0021	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	14597c2490534633a75cbfbca20b64406d0226b1f68a72faabd3999c4dff0391	Extraction engine and counts	
+art:0022	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# De Moivre&#39;s formula
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%B5%D9%8A%D8%BA%D8%A9_%D8%AF%D9%8A_%D9%85%D9%88%D8%A7%D9%81%D8%B1)
+- [Azərbaycanca](https://az.wikipedia.org/wiki/Muavr_d%C3%BCsturu)
+- [Български](https://bg.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%9C%D0%BE%D0%B0%D0%B2%D1%8A%D1%80)
+- [বাংলা](https://bn.wikipedia.org/wiki/%E0%A6%A6%E0%A7%8D%E0%A6%AF_%E0%A6%AE%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AD%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%89%E0%A6%AA%E0%A6%AA%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%AF)
+- [Català](https://ca.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Čeština](https://cs.wikipedia.org/wiki/Moivreova_v%C4%9Bta)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%9C%D1%83%D0%B0%D0%B2%D1%80_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B8)
+- [Cymraeg](https://cy.wikipedia.org/wiki/Fformwla_de_Moivre)
+- [Dansk](https://da.wikipedia.org/wiki/De_Moivres_formel)
+- [Deutsch](https://de.wikipedia.org/wiki/Moivrescher_Satz)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%98%CE%B5%CF%8E%CF%81%CE%B7%CE%BC%CE%B1_%CE%BD%CF%84%CE%B5_%CE%9C%CE%BF%CF%85%CE%AC%CE%B2%CF%81)
+- [Esperanto](https://eo.wikipedia.org/wiki/Formulo_de_de_Moivre)
+- [Español](https://es.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Eesti](https://et.wikipedia.org/wiki/Moivre%27i_valem)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%81%D8%B1%D9%85%D9%88%D9%84_%D8%AF_%D9%85%D9%88%D8%A7%D9%88%D8%B1)
+- [Suomi](https://fi.wikipedia.org/wiki/De_Moivren_kaava)
+- [Français](https://fr.wikipedia.org/wiki/Formule_de_Moivre)
+- [Galego](https://gl.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98_%D7%93%D7%94_%D7%9E%D7%95%D7%90%D7%91%D7%A8)
+- [हिन्दी](https://hi.wikipedia.org/wiki/%E0%A4%A1%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%B5%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%AF)
+- [Hrvatski](https://hr.wikipedia.org/wiki/De_Moivreova_formula)
+- [Magyar](https://hu.wikipedia.org/wiki/De_Moivre-k%C3%A9plet)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D5%84%D5%B8%D6%82%D5%A1%D5%BE%D6%80%D5%AB_%D5%A2%D5%A1%D5%B6%D5%A1%D5%B1%D6%87)
+- [Italiano](https://it.wikipedia.org/wiki/Formula_di_de_Moivre)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%BB%E3%83%A2%E3%82%A2%E3%83%96%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86)
+- [ქართული](https://ka.wikipedia.org/wiki/%E1%83%9B%E1%83%A3%E1%83%90%E1%83%95%E1%83%A0%E1%83%98%E1%83%A1_%E1%83%A4%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%A3%E1%83%9A%E1%83%90)
+- [Қазақша](https://kk.wikipedia.org/wiki/%D0%9C%D1%83%D0%B0%D0%B2%D1%80_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0%D1%81%D1%8B)
+- [ភាសាខ្មែរ](https://km.wikipedia.org/wiki/%E1%9E%9A%E1%9E%BC%E1%9E%94%E1%9E%98%E1%9E%93%E1%9F%92%E1%9E%8F%E1%9E%8A%E1%9E%BA%E1%9E%98%E1%9F%90%E1%9E%9A)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%93%9C%EB%AC%B4%EC%95%84%EB%B8%8C%EB%A5%B4%EC%9D%98_%EA%B3%B5%EC%8B%9D)
+- [Nederlands](https://nl.wikipedia.org/wiki/Stelling_van_De_Moivre)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/De_Moivres_formel)
+- [Polski](https://pl.wikipedia.org/wiki/Wz%C3%B3r_de_Moivre%E2%80%99a)
+- [Piemontèis](https://pms.wikipedia.org/wiki/F%C3%B3rmola_%C3%ABd_De_Moivre)
+- [Português](https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Română](https://ro.wikipedia.org/wiki/Formula_lui_Moivre)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%9C%D1%83%D0%B0%D0%B2%D1%80%D0%B0)
+- [Simple English](https://simple.wikipedia.org/wiki/De_Moivre%27s_formula)
+- [Slovenščina](https://sl.wikipedia.org/wiki/De_Moivreova_formula)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B0%D0%B2%D1%80%D0%BE%D0%B2%D0%B0_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/De_Moivres_formel)
+- [தமிழ்](https://ta.wikipedia.org/wiki/%E0%AE%9F%E0%AE%BF_%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%A9%E0%AF%8D_%E0%AE%B5%E0%AE%BE%E0%AE%AF%E0%AF%8D%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AF%81)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%94%E0%B8%AD_%E0%B8%A1%E0%B8%A7%E0%B8%9F%E0%B8%A3%E0%B9%8C)
+- [Türkçe](https://tr.wikipedia.org/wiki/De_Moivre_form%C3%BCl%C3%BC)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%9C%D1%83%D0%B0%D0%B2%D1%80%D0%B0)
+- [اردو](https://ur.wikipedia.org/wiki/%DA%88%DB%8C_%D9%85%D9%88%D8%A7%D9%81%D8%B1_%DA%A9%D9%84%DB%8C%DB%81)
+- [Oʻzbekcha / ўзбекча](https://uz.wikipedia.org/wiki/Muavr_formulasi)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/C%C3%B4ng_th%E1%BB%A9c_De_Moivre)
+- [粵語](https://zh-yue.wikipedia.org/wiki/%E7%8B%84%E9%BB%98%E5%A4%AB%E5%85%AC%E5%BC%8F)
+- [中文](https://zh.wikipedia.org/wiki/%E6%A3%A3%E8%8E%AB%E5%BC%97%E5%85%AC%E5%BC%8F)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q190556#sitelinks-wikipedia)                         [![Listen to this article](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/20px-Gnome-mime-sound-openclipart.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg)   From Wikipedia, the free encyclopedia
+
+ Theorem: (cos x + i sin x)^n = cos nx + i sin nxNot to be confused with [De Moivre–Laplace theorem](https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem).
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), **de Moivre&#39;s formula** (also known as **de Moivre&#39;s theorem** and **de Moivre&#39;s identity**) states that for any [real number](https://en.wikipedia.org/wiki/Real_number) x and [integer](https://en.wikipedia.org/wiki/Integer) n,       (   cos ⁡ x + i sin ⁡ x    )    n   = cos ⁡ n x + i sin ⁡ n x ,   {\displaystyle {\big (}\cos x+i\sin x{\big )}^{n}=\cos nx+i\sin nx,}   where i is the [imaginary unit](https://en.wikipedia.org/wiki/Imaginary_unit) (*i*2 = −1). The formula is named after [Abraham de Moivre](https://en.wikipedia.org/wiki/Abraham_de_Moivre),[[1]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-1) although he never stated it in his works.[[2]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-2) The expression cos *x* + *i* sin *x* is sometimes abbreviated to [cis](https://en.wikipedia.org/wiki/Cis_(mathematics)) *x*.
+
+The formula is important because it connects [complex numbers](https://en.wikipedia.org/wiki/Complex_numbers) and [trigonometry](https://en.wikipedia.org/wiki/Trigonometry). By expanding the left hand side and then comparing the real and imaginary parts under the assumption that x is real, it is possible to derive useful expressions for cos *nx* and sin *nx* in terms of cos *x* and sin *x*.
+
+As written, the formula is not valid for non-integer powers n. However, there are generalizations of this formula valid for other exponents. These can be used to give explicit expressions for the nth [roots of unity](https://en.wikipedia.org/wiki/Root_of_unity), that is, [complex numbers](https://en.wikipedia.org/wiki/Complex_numbers) z such that *zn* = 1.
+
+Using the standard extensions of the sine and cosine functions to complex numbers, the formula is valid even when x is an arbitrary complex number.
+
+## Example
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=1)]
+
+For     x =   π 6     {\displaystyle x={\frac {\pi }{6}}}   and     n = 2   {\displaystyle n=2}  , de Moivre&#39;s formula asserts that       (  cos ⁡   (     π 6     )   + i sin ⁡   (     π 6     )    )   2   = cos ⁡   (   2 ⋅   π 6     )   + i sin ⁡   (   2 ⋅   π 6     )   ,   {\displaystyle \left(\cos {\bigg (}{\frac {\pi }{6}}{\bigg )}+i\sin {\bigg (}{\frac {\pi }{6}}{\bigg )}\right)^{2}=\cos {\bigg (}2\cdot {\frac {\pi }{6}}{\bigg )}+i\sin {\bigg (}2\cdot {\frac {\pi }{6}}{\bigg )},}   or equivalently that       (     3  2   +   i 2    )   2   =   1 2   +    i   3    2   .   {\displaystyle \left({\frac {\sqrt {3}}{2}}+{\frac {i}{2}}\right)^{2}={\frac {1}{2}}+{\frac {i{\sqrt {3}}}{2}}.}   In this example, it is easy to check the validity of the equation by multiplying out the left side.
+
+## Relation to Euler&#39;s formula
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=2)]
+
+De Moivre&#39;s formula is a precursor to [Euler&#39;s formula](https://en.wikipedia.org/wiki/Euler&#39;s_formula)      e  i x   = cos ⁡ x + i sin ⁡ x ,   {\displaystyle e^{ix}=\cos x+i\sin x,}   with x expressed in [radians](https://en.wikipedia.org/wiki/Radian) rather than [degrees](https://en.wikipedia.org/wiki/Degree_(angle)), which establishes the fundamental relationship between the trigonometric functions and the complex exponential function.
+
+One can derive de Moivre&#39;s formula using Euler&#39;s formula and the [exponential law](https://en.wikipedia.org/wiki/Exponentiation) for integer powers
+
+       (  e  i x   )   n   =  e  i n x   ,   {\displaystyle \left(e^{ix}\right)^{n}=e^{inx},}
+
+since Euler&#39;s formula implies that the left side is equal to       (  cos ⁡ x + i sin ⁡ x  )   n     {\displaystyle \left(\cos x+i\sin x\right)^{n}}   while the right side is equal to     cos ⁡ n x + i sin ⁡ n x .   {\displaystyle \cos nx+i\sin nx.}
+
+## Proof by induction
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=3)]
+
+The truth of de Moivre&#39;s theorem can be established by using mathematical induction for natural numbers, and extended to all integers from there. For an integer n, call the following statement S(*n*):
+
+     ( cos ⁡ x + i sin ⁡ x  )  n   = cos ⁡ n x + i sin ⁡ n x .   {\displaystyle (\cos x+i\sin x)^{n}=\cos nx+i\sin nx.}
+
+For *n* &gt; 0, we proceed by [mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction). S(1) is clearly true. For our hypothesis, we assume S(*k*) is true for some natural k. That is, we assume
+
+       (  cos ⁡ x + i sin ⁡ x  )   k   = cos ⁡ k x + i sin ⁡ k x .   {\displaystyle \left(\cos x+i\sin x\right)^{k}=\cos kx+i\sin kx.}
+
+Now, considering S(*k* + 1):
+
+           (  cos ⁡ x + i sin ⁡ x  )   k + 1      =   (  cos ⁡ x + i sin ⁡ x  )   k    (  cos ⁡ x + i sin ⁡ x  )        =  (  cos ⁡ k x + i sin ⁡ k x  )   (  cos ⁡ x + i sin ⁡ x  )       via induction hypothesis        = cos ⁡ k x cos ⁡ x − sin ⁡ k x sin ⁡ x + i  (  cos ⁡ k x sin ⁡ x + sin ⁡ k x cos ⁡ x  )        = cos ⁡ ( ( k + 1 ) x ) + i sin ⁡ ( ( k + 1 ) x )      via trigonometric identities        {\displaystyle {\begin{alignedat}{2}\left(\cos x+i\sin x\right)^{k+1}&amp;=\left(\cos x+i\sin x\right)^{k}\left(\cos x+i\sin x\right)\\&amp;=\left(\cos kx+i\sin kx\right)\left(\cos x+i\sin x\right)&amp;&amp;\qquad {\text{via induction hypothesis}}\\&amp;=\cos kx\cos x-\sin kx\sin x+i\left(\cos kx\sin x+\sin kx\cos x\right)\\&amp;=\cos((k+1)x)+i\sin((k+1)x)&amp;&amp;\qquad {\text{via trigonometric identities}}\end{alignedat}}}
+
+See [angle sum and difference identities](https://en.wikipedia.org/wiki/Trigonometric_identities#Angle_sum_and_difference_identities).
+
+We deduce that S(*k*) implies S(*k* + 1). By the principle of mathematical induction it follows that the result is true for all natural numbers. Now, S(0) is clearly true since cos(0*x*) + *i* sin(0*x*) = 1 + 0*i* = 1. Finally, for the negative integer cases, we consider an exponent of −*n* for natural n.
+
+           (  cos ⁡ x + i sin ⁡ x  )   − n      =   (     (  cos ⁡ x + i sin ⁡ x  )   n      )    − 1         =   (  cos ⁡ n x + i sin ⁡ n x  )   − 1         = cos ⁡ n x − i sin ⁡ n x   ( ∗ )       = cos ⁡ ( − n x ) + i sin ⁡ ( − n x ) .       {\displaystyle {\begin{aligned}\left(\cos x+i\sin x\right)^{-n}&amp;={\big (}\left(\cos x+i\sin x\right)^{n}{\big )}^{-1}\\&amp;=\left(\cos nx+i\sin nx\right)^{-1}\\&amp;=\cos nx-i\sin nx\qquad \qquad (*)\\&amp;=\cos(-nx)+i\sin(-nx).\\\end{aligned}}}
+
+The equation (*) is a result of the identity
+
+      z  − 1   =     z ¯     |  z   |   2      ,   {\displaystyle z^{-1}={\frac {\bar {z}}{|z|^{2}}},}
+
+for *z* = cos *nx* + *i* sin *nx*. Hence, S(*n*) holds for all integers n.
+
+## Formulae for cosine and sine individually
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=4)] See also: [List of trigonometric identities](https://en.wikipedia.org/wiki/List_of_trigonometric_identities)
+
+For an equality of [complex numbers](https://en.wikipedia.org/wiki/Complex_number), one necessarily has equality both of the [real parts](https://en.wikipedia.org/wiki/Real_part) and of the [imaginary parts](https://en.wikipedia.org/wiki/Imaginary_part) of both members of the equation. If x, and therefore also cos *x* and sin *x*, are [real numbers](https://en.wikipedia.org/wiki/Real_number), then the identity of these parts can be written using [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient). This formula was given by 16th century French mathematician [François Viète](https://en.wikipedia.org/wiki/Fran%C3%A7ois_Vi%C3%A8te):
+
+         sin ⁡ n x    =  ∑  k = 0   n      (   n k   )    ( cos ⁡ x  )  k    ( sin ⁡ x  )  n − k    sin ⁡    ( n − k ) π  2       cos ⁡ n x    =  ∑  k = 0   n      (   n k   )    ( cos ⁡ x  )  k    ( sin ⁡ x  )  n − k    cos ⁡    ( n − k ) π  2   .       {\displaystyle {\begin{aligned}\sin nx&amp;=\sum _{k=0}^{n}{\binom {n}{k}}(\cos x)^{k}\,(\sin x)^{n-k}\,\sin {\frac {(n-k)\pi }{2}}\\\cos nx&amp;=\sum _{k=0}^{n}{\binom {n}{k}}(\cos x)^{k}\,(\sin x)^{n-k}\,\cos {\frac {(n-k)\pi }{2}}.\end{aligned}}}
+
+In each of these two equations, the final [trigonometric function](https://en.wikipedia.org/wiki/Trigonometric_functions) equals one or minus one or zero, thus removing half the entries in each of the sums. These equations are in fact valid even for complex values of x, because both sides are [entire](https://en.wikipedia.org/wiki/Entire_function) (that is, [holomorphic](https://en.wikipedia.org/wiki/Holomorphic_function) on the whole [complex plane](https://en.wikipedia.org/wiki/Complex_plane)) functions of x, and two such functions that coincide on the real axis necessarily coincide everywhere. Here are the concrete instances of these equations for *n* = 2 and *n* = 3:
+
+         cos ⁡ 2 x    =   (  cos ⁡ x  )   2   +  (    (  cos ⁡ x  )   2   − 1  )      =     2   (  cos ⁡ x  )   2   − 1     sin ⁡ 2 x    = 2  (  sin ⁡ x  )   (  cos ⁡ x  )        cos ⁡ 3 x    =   (  cos ⁡ x  )   3   + 3 cos ⁡ x  (    (  cos ⁡ x  )   2   − 1  )      =     4   (  cos ⁡ x  )   3   − 3 cos ⁡ x     sin ⁡ 3 x    = 3   (  cos ⁡ x  )   2    (  sin ⁡ x  )  −   (  sin ⁡ x  )   3       =     3 sin ⁡ x − 4   (  sin ⁡ x  )   3   .       {\displaystyle {\begin{alignedat}{2}\cos 2x&amp;=\left(\cos x\right)^{2}+\left(\left(\cos x\right)^{2}-1\right)&amp;{}={}&amp;2\left(\cos x\right)^{2}-1\\\sin 2x&amp;=2\left(\sin x\right)\left(\cos x\right)&amp;&amp;\\\cos 3x&amp;=\left(\cos x\right)^{3}+3\cos x\left(\left(\cos x\right)^{2}-1\right)&amp;{}={}&amp;4\left(\cos x\right)^{3}-3\cos x\\\sin 3x&amp;=3\left(\cos x\right)^{2}\left(\sin x\right)-\left(\sin x\right)^{3}&amp;{}={}&amp;3\sin x-4\left(\sin x\right)^{3}.\end{alignedat}}}
+
+The right-hand side of the formula for cos *nx* is in fact the value *T**n*(cos *x*) of the [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomial) *T**n* at cos *x*.
+
+## Failure for non-integer powers, and generalization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=5)]
+
+De Moivre&#39;s formula does not hold for non-integer powers. The derivation of de Moivre&#39;s formula above involves a complex number raised to the integer power n. If a complex number is raised to a non-integer power, the result is [multiple-valued](https://en.wikipedia.org/wiki/Multiple-valued) (see [failure of power and logarithm identities](https://en.wikipedia.org/wiki/Exponentiation#Failure_of_power_and_logarithm_identities)).
+
+### Roots of complex numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=6)]
+
+A modest extension of the version of de Moivre&#39;s formula given in this article can be used to find [the n-th roots](https://en.wikipedia.org/wiki/Nth_root) of a complex number for a non-zero integer n. If z is a complex number, written in [polar form](https://en.wikipedia.org/wiki/Polar_form) as     z = r  (  cos ⁡ x + i sin ⁡ x  )  ,   {\displaystyle z=r\left(\cos x+i\sin x\right),}   then the n-th roots of z are given by      r   1 n     (  cos ⁡    x + 2 π k  n   + i sin ⁡    x + 2 π k  n    )    {\displaystyle r^{\frac {1}{n}}\left(\cos {\frac {x+2\pi k}{n}}+i\sin {\frac {x+2\pi k}{n}}\right)}   where k varies over the integer values from 0 to |*n*| − 1. This formula is also sometimes known as de Moivre&#39;s formula.[[3]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-3)
+
+### Complex numbers raised to an arbitrary power
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=7)]
+
+Generally, if     z = r  (  cos ⁡ x + i sin ⁡ x  )    {\displaystyle z=r\left(\cos x+i\sin x\right)}   (in polar form) and w are arbitrary complex numbers, then the set of possible values is      z  w   =  r  w     (  cos ⁡ x + i sin ⁡ x  )   w   = {  r  w   cos ⁡ ( x w + 2 π k w ) + i  r  w   sin ⁡ ( x w + 2 π k w )  |  k ∈  Z  }  .   {\displaystyle z^{w}=r^{w}\left(\cos x+i\sin x\right)^{w}=\lbrace r^{w}\cos(xw+2\pi kw)+ir^{w}\sin(xw+2\pi kw)|k\in \mathbb {Z} \rbrace \,.}   (Note that if w is a [rational number](https://en.wikipedia.org/wiki/Rational_number) that equals *p* / *q* in [lowest terms](https://en.wikipedia.org/wiki/Lowest_terms) then this set will have exactly q distinct values rather than infinitely many. In particular, if w is an integer then the set will have exactly one value, as previously discussed.) In contrast, de Moivre&#39;s formula gives      r  w   ( cos ⁡ x w + i sin ⁡ x w )  ,   {\displaystyle r^{w}(\cos xw+i\sin xw)\,,}   which is just the single value from this set corresponding to *k* = 0.
+
+## Analogues in other settings
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=8)]
+
+### Hyperbolic trigonometry
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=9)]
+
+Since cosh *x* + sinh *x* = *ex*, an analog to de Moivre&#39;s formula also applies to the [hyperbolic trigonometry](https://en.wikipedia.org/wiki/Hyperbolic_function). For all [integers](https://en.wikipedia.org/wiki/Integer) n,
+
+ **( cosh ⁡ x + sinh ⁡ x  )  n   = cosh ⁡ n x + sinh ⁡ n x .   {\displaystyle (\cosh x+\sinh x)^{n}=\cosh nx+\sinh nx.}**
+
+If n is a [rational number](https://en.wikipedia.org/wiki/Rational_number) (but not necessarily an integer), then cosh *nx* + sinh *nx* will be one of the values of (cosh *x* + sinh *x*)*n*.[[4]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-4)
+
+### Extension to complex numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=10)]
+
+For any integer n, the formula holds for any complex number     z = x + i y   {\displaystyle z=x+iy}
+
+     ( cos ⁡ z + i sin ⁡ z  )  n   = cos ⁡  n z  + i sin ⁡  n z  .   {\displaystyle (\cos z+i\sin z)^{n}=\cos {nz}+i\sin {nz}.}
+
+where
+
+         cos ⁡ z = cos ⁡ ( x + i y )    = cos ⁡ x cosh ⁡ y − i sin ⁡ x sinh ⁡ y  ,     sin ⁡ z = sin ⁡ ( x + i y )    = sin ⁡ x cosh ⁡ y + i cos ⁡ x sinh ⁡ y  .       {\displaystyle {\begin{aligned}\cos z=\cos(x+iy)&amp;=\cos x\cosh y-i\sin x\sinh y\,,\\\sin z=\sin(x+iy)&amp;=\sin x\cosh y+i\cos x\sinh y\,.\end{aligned}}}
+
+### Quaternions
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=11)]
+
+To find the roots of a [quaternion](https://en.wikipedia.org/wiki/Quaternion) there is an analogous form of de Moivre&#39;s formula. A quaternion in the form
+
+     q = d + a    i ^    + b    j ^    + c    k ^      {\displaystyle q=d+a\mathbf {\hat {i}} +b\mathbf {\hat {j}} +c\mathbf {\hat {k}} }
+
+can be represented in the form
+
+     q = k ( cos ⁡ θ + ε sin ⁡ θ )    for    0 ≤ θ &lt; 2 π .   {\displaystyle q=k(\cos \theta +\varepsilon \sin \theta )\qquad {\mbox{for }}0\leq \theta &lt;2\pi .}
+
+In this representation,
+
+     k =    d  2   +  a  2   +  b  2   +  c  2     ,   {\displaystyle k={\sqrt {d^{2}+a^{2}+b^{2}+c^{2}}},}
+
+and the trigonometric functions are defined as
+
+     cos ⁡ θ =   d k      and    sin ⁡ θ = ±     a  2   +  b  2   +  c  2    k   .   {\displaystyle \cos \theta ={\frac {d}{k}}\quad {\mbox{and}}\quad \sin \theta =\pm {\frac {\sqrt {a^{2}+b^{2}+c^{2}}}{k}}.}
+
+In the case that *a*2 + *b*2 + *c*2 ≠ 0,
+
+     ε = ±    a    i ^    + b    j ^    + c    k ^       a  2   +  b  2   +  c  2      ,   {\displaystyle \varepsilon =\pm {\frac {a\mathbf {\hat {i}} +b\mathbf {\hat {j}} +c\mathbf {\hat {k}} }{\sqrt {a^{2}+b^{2}+c^{2}}}},}
+
+that is, the [unit vector](https://en.wikipedia.org/wiki/Unit_vector). This leads to the variation of De Moivre&#39;s formula:
+
+      q  n   =  k  n   ( cos ⁡ n θ + ε sin ⁡ n θ ) .   {\displaystyle q^{n}=k^{n}(\cos n\theta +\varepsilon \sin n\theta ).}  [[5]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-5)
+
+#### Example
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=12)]
+
+To find the [cube roots](https://en.wikipedia.org/wiki/Cube_root) of
+
+     Q = 1 +    i ^    +    j ^    +    k ^    ,   {\displaystyle Q=1+\mathbf {\hat {i}} +\mathbf {\hat {j}} +\mathbf {\hat {k}} ,}
+
+write the quaternion in the form
+
+     Q = 2  (  cos ⁡   π 3   + ε sin ⁡   π 3    )     where    ε =       i ^    +    j ^    +    k ^      3    .   {\displaystyle Q=2\left(\cos {\frac {\pi }{3}}+\varepsilon \sin {\frac {\pi }{3}}\right)\qquad {\mbox{where }}\varepsilon ={\frac {\mathbf {\hat {i}} +\mathbf {\hat {j}} +\mathbf {\hat {k}} }{\sqrt {3}}}.}
+
+Then the cube roots are given by:
+
+       Q  3    =   2  3    ( cos ⁡ θ + ε sin ⁡ θ )    for    θ =   π 9   ,    7 π  9   ,    13 π  9   .   {\displaystyle {\sqrt[{3}]{Q}}={\sqrt[{3}]{2}}(\cos \theta +\varepsilon \sin \theta )\qquad {\mbox{for }}\theta ={\frac {\pi }{9}},{\frac {7\pi }{9}},{\frac {13\pi }{9}}.}
+
+### 2 × 2 matrices
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=13)]
+
+With matrices,        (    cos ⁡ ϕ   − sin ⁡ ϕ     sin ⁡ ϕ   cos ⁡ ϕ    )    n   =   (    cos ⁡ n ϕ   − sin ⁡ n ϕ     sin ⁡ n ϕ   cos ⁡ n ϕ    )     {\displaystyle {\begin{pmatrix}\cos \phi &amp;-\sin \phi \\\sin \phi &amp;\cos \phi \end{pmatrix}}^{n}={\begin{pmatrix}\cos n\phi &amp;-\sin n\phi \\\sin n\phi &amp;\cos n\phi \end{pmatrix}}}   when n is an integer. This is a direct consequence of the [isomorphism](https://en.wikipedia.org/wiki/Isomorphism) between the matrices of type       (    a   − b     b   a    )     {\displaystyle {\begin{pmatrix}a&amp;-b\\b&amp;a\end{pmatrix}}}   and the [complex plane](https://en.wikipedia.org/wiki/Complex_plane).
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=14)]
+- Abramowitz, Milton; Stegun, Irene A. (1964). *[Handbook of Mathematical Functions](https://en.wikipedia.org/wiki/Abramowitz_and_Stegun)*. New York: Dover Publications. p. [74](https://archive.org/details/handbookofmathe000abra/page/74). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-486-61272-4](https://en.wikipedia.org/wiki/Special:BookSources/0-486-61272-4). `{{cite book}}`: ISBN / Date incompatibility ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#invalid_isbn_date)).
+
+1. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-1) Moivre, Ab. de (1707). &quot;Aequationum quarundam potestatis tertiae, quintae, septimae, nonae, &amp; superiorum, ad infinitum usque pergendo, in termimis finitis, ad instar regularum pro cubicis quae vocantur Cardani, resolutio analytica&quot; [Of certain equations of the third, fifth, seventh, ninth, &amp; higher power, all the way to infinity, by proceeding, in finite terms, in the form of rules for cubics which are called by Cardano, resolution by analysis.]. *Philosophical Transactions of the Royal Society of London* (in Latin). **25** (309): 2368–2371. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1098/rstl.1706.0037](https://doi.org/10.1098%2Frstl.1706.0037). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [186209627](https://api.semanticscholar.org/CorpusID:186209627). English translation by Richard J. Pulskamp (2009) On p. 2370 de Moivre stated that if a series has the form     n y +     1 − n n   2 × 3     n  y  3   +     1 − n n   2 × 3         9 − n n   4 × 5     n  y  5   +     1 − n n   2 × 3         9 − n n   4 × 5         25 − n n   6 × 7     n  y  7   + ⋯ = a   {\displaystyle ny+{\tfrac {1-nn}{2\times 3}}ny^{3}+{\tfrac {1-nn}{2\times 3}}{\tfrac {9-nn}{4\times 5}}ny^{5}+{\tfrac {1-nn}{2\times 3}}{\tfrac {9-nn}{4\times 5}}{\tfrac {25-nn}{6\times 7}}ny^{7}+\cdots =a}   , where *n* is any given odd integer (positive or negative) and where *y* and *a* can be functions, then upon solving for *y*, the result is equation (2) on the same page:     y =    1 2       a +   a a − 1     n    +    1 2       a −   a a − 1     n      {\displaystyle y={\tfrac {1}{2}}{\sqrt[{n}]{a+{\sqrt {aa-1}}}}+{\tfrac {1}{2}}{\sqrt[{n}]{a-{\sqrt {aa-1}}}}}  . If *y* = cos x and *a* = cos nx , then the result is     cos ⁡ x =    1 2    ( cos ⁡ ( n x ) + i sin ⁡ ( n x )  )  1  /  n   +    1 2    ( cos ⁡ ( n x ) − i sin ⁡ ( n x )  )  1  /  n     {\displaystyle \cos x={\tfrac {1}{2}}(\cos(nx)+i\sin(nx))^{1/n}+{\tfrac {1}{2}}(\cos(nx)-i\sin(nx))^{1/n}}
+ In 1676, [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton) found the relation between two chord lengths where the corresponding arc lengths were in the ratio of n to 1; the relation was expressed by the series above. The series appears in a letter — *Epistola prior D. Issaci Newton, Mathescos Professoris in Celeberrima Academia Cantabrigiensi; …* — of 13 June 1676 from Isaac Newton to Henry Oldenburg, secretary of the Royal Society; a copy of the letter was sent to [Gottfried Wilhelm Leibniz](https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz). See p. 106 of: Biot, J.-B.; Lefort, F., eds. (1856). [*Commercium epistolicum J. Collins et aliorum de analysi promota, etc: ou …*](https://books.google.com/books?id=BHBtAAAAMAAJ&amp;pg=PA106) (in Latin). Paris, France: Mallet-Bachelier. pp. 102–112. In 1698, de Moivre derived the same series. See: de Moivre, A. (1698). [&quot;A method of extracting roots of an infinite equation&quot;](https://doi.org/10.1098%2Frstl.1698.0034). *Philosophical Transactions of the Royal Society of London*. **20** (240): 190–193. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1098/rstl.1698.0034](https://doi.org/10.1098%2Frstl.1698.0034). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [186214144](https://api.semanticscholar.org/CorpusID:186214144).; see p 192. In 1730, de Moivre explicitly considered the case where the functions are cos θ and cos nθ. See: Moivre, A. de (1730). [*Miscellanea Analytica de Seriebus et Quadraturis*](https://books.google.com/books?id=bMl5NAAACAAJ&amp;pg=PP5) (in Latin). London, England: J. Tonson &amp; J. Watts. p. 1. From p. 1: *&quot;Lemma 1. Si sint l &amp; x cosinus arcuum duorum A &amp; B, quorum uterque eodem radio 1 describatur, quorumque prior sit posterioris multiplex in ea ratione quam habet numerus n ad unitatem, tunc erit     x =    1 2       l +   l l − 1     n    +    1 2       1   l +   l l − 1     n        {\displaystyle x={\tfrac {1}{2}}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}+{\tfrac {1}{2}}{\tfrac {1}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}}}  .&quot;* (If l and x are cosines of two arcs A and B both of which are described by the same radius 1 and of which the former is a multiple of the latter in that ratio as the number n has to 1, then it will be [true that]     x =    1 2       l +   l l − 1     n    +    1 2       1   l +   l l − 1     n        {\displaystyle x={\tfrac {1}{2}}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}+{\tfrac {1}{2}}{\tfrac {1}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}}}  .) So if arc A = n × arc B, then l = cos A = cos nB and x = cos B. Hence     cos ⁡ B =    1 2    ( cos ⁡ ( n B ) +   − 1   sin ⁡ ( n B )  )  1  /  n   +    1 2    ( cos ⁡ ( n B ) +   − 1   sin ⁡ ( n B )  )  − 1  /  n     {\displaystyle \cos B={\tfrac {1}{2}}(\cos(nB)+{\sqrt {-1}}\sin(nB))^{1/n}+{\tfrac {1}{2}}(\cos(nB)+{\sqrt {-1}}\sin(nB))^{-1/n}}   See also: Cantor, Moritz (1898). [*Vorlesungen über Geschichte der Mathematik*](https://babel.hathitrust.org/cgi/pt?id=chi.11625415&amp;view=1up&amp;seq=644) [*Lectures on the History of Mathematics*]. Bibliotheca mathematica Teuberiana, Bd. 8-9 (in German). Vol. 3. Leipzig, Germany: B.G. Teubner. p. 624. Braunmühl, A. von (1901). [&quot;Zur Geschichte der Entstehung des sogenannten Moivreschen Satzes&quot;](https://babel.hathitrust.org/cgi/pt?id=hvd.32044102937091&amp;view=1up&amp;seq=112) [On the history of the origin of the so-called Moivre theorem]. *Bibliotheca Mathematica*. 3rd series (in German). **2**: 97–102.; see p. 98.
+2. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-2) Lial, Margaret L.; Hornsby, John; Schneider, David I.; Callie J., Daniels (2008). *College Algebra and Trigonometry* (4th ed.). Boston: Pearson/Addison Wesley. p. 792. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-49744-4](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-49744-4).
+3. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-3) [&quot;De Moivre formula&quot;](https://www.encyclopediaofmath.org/index.php?title=De_Moivre_formula), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+4. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-4) Mukhopadhyay, Utpal (August 2006). &quot;Some interesting features of hyperbolic functions&quot;. *Resonance*. **11** (8): 81–85. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF02855783](https://doi.org/10.1007%2FBF02855783). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119753430](https://api.semanticscholar.org/CorpusID:119753430).
+5. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-5) Brand, Louis (October 1942). &quot;The roots of a quaternion&quot;. *The American Mathematical Monthly*. **49** (8): 519–520. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2302858](https://doi.org/10.2307%2F2302858). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2302858](https://www.jstor.org/stable/2302858).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=15)]
+- [De Moivre&#39;s Theorem for Trig Identities](http://demonstrations.wolfram.com/DeMoivresTheoremForTrigIdentities/) by Michael Croucher, [Wolfram Demonstrations Project](https://en.wikipedia.org/wiki/Wolfram_Demonstrations_Project).
+ Listen to this article (18 minutes)[https://en\.wikipedia\.org/wiki/File:En\-De\_Moivres\_Formula\-article\.ogg](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg)Duration: 18 minutes and 7 seconds. ![Spoken Wikipedia icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/60px-Gnome-mime-sound-openclipart.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)[This audio file](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg) was created from a revision of this article dated 5 June 2021 (2021-06-05), and does not reflect subsequent edits.([Audio help](https://en.wikipedia.org/wiki/Wikipedia:Media_help) · [More spoken articles](https://en.wikipedia.org/wiki/Wikipedia:Spoken_articles))          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;oldid=1374418396](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;oldid=1374418396)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Theorems in complex analysis](https://en.wikipedia.org/wiki/Category:Theorems_in_complex_analysis)
+- [Abraham de Moivre](https://en.wikipedia.org/wiki/Category:Abraham_de_Moivre)
+Hidden categories:
+- [Use American English from March 2019](https://en.wikipedia.org/wiki/Category:Use_American_English_from_March_2019)
+- [All Wikipedia articles written in American English](https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_written_in_American_English)
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 Latin-language sources (la)](https://en.wikipedia.org/wiki/Category:CS1_Latin-language_sources_(la))
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+- [CS1 errors: ISBN date](https://en.wikipedia.org/wiki/Category:CS1_errors:_ISBN_date)
+- [Articles with hAudio microformats](https://en.wikipedia.org/wiki/Category:Articles_with_hAudio_microformats)
+- [Spoken articles](https://en.wikipedia.org/wiki/Category:Spoken_articles)
+- [Articles containing proofs](https://en.wikipedia.org/wiki/Category:Articles_containing_proofs)
+
+    [https://en\.wikipedia\.org/wiki/De\_Moivre&#39;s\_formula?action=edit](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>De Moivre&#39;s formula</h3><pre># De Moivre&#39;s formula
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%B5%D9%8A%D8%BA%D8%A9_%D8%AF%D9%8A_%D9%85%D9%88%D8%A7%D9%81%D8%B1)
+- [Azərbaycanca](https://az.wikipedia.org/wiki/Muavr_d%C3%BCsturu)
+- [Български](https://bg.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%9C%D0%BE%D0%B0%D0%B2%D1%8A%D1%80)
+- [বাংলা](https://bn.wikipedia.org/wiki/%E0%A6%A6%E0%A7%8D%E0%A6%AF_%E0%A6%AE%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AD%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%89%E0%A6%AA%E0%A6%AA%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%AF)
+- [Català](https://ca.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Čeština](https://cs.wikipedia.org/wiki/Moivreova_v%C4%9Bta)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%9C%D1%83%D0%B0%D0%B2%D1%80_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B8)
+- [Cymraeg](https://cy.wikipedia.org/wiki/Fformwla_de_Moivre)
+- [Dansk](https://da.wikipedia.org/wiki/De_Moivres_formel)
+- [Deutsch](https://de.wikipedia.org/wiki/Moivrescher_Satz)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%98%CE%B5%CF%8E%CF%81%CE%B7%CE%BC%CE%B1_%CE%BD%CF%84%CE%B5_%CE%9C%CE%BF%CF%85%CE%AC%CE%B2%CF%81)
+- [Esperanto](https://eo.wikipedia.org/wiki/Formulo_de_de_Moivre)
+- [Español](https://es.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Eesti](https://et.wikipedia.org/wiki/Moivre%27i_valem)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%81%D8%B1%D9%85%D9%88%D9%84_%D8%AF_%D9%85%D9%88%D8%A7%D9%88%D8%B1)
+- [Suomi](https://fi.wikipedia.org/wiki/De_Moivren_kaava)
+- [Français](https://fr.wikipedia.org/wiki/Formule_de_Moivre)
+- [Galego](https://gl.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98_%D7%93%D7%94_%D7%9E%D7%95%D7%90%D7%91%D7%A8)
+- [हिन्दी](https://hi.wikipedia.org/wiki/%E0%A4%A1%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%B5%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%AF)
+- [Hrvatski](https://hr.wikipedia.org/wiki/De_Moivreova_formula)
+- [Magyar](https://hu.wikipedia.org/wiki/De_Moivre-k%C3%A9plet)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D5%84%D5%B8%D6%82%D5%A1%D5%BE%D6%80%D5%AB_%D5%A2%D5%A1%D5%B6%D5%A1%D5%B1%D6%87)
+- [Italiano](https://it.wikipedia.org/wiki/Formula_di_de_Moivre)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%BB%E3%83%A2%E3%82%A2%E3%83%96%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86)
+- [ქართული](https://ka.wikipedia.org/wiki/%E1%83%9B%E1%83%A3%E1%83%90%E1%83%95%E1%83%A0%E1%83%98%E1%83%A1_%E1%83%A4%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%A3%E1%83%9A%E1%83%90)
+- [Қазақша](https://kk.wikipedia.org/wiki/%D0%9C%D1%83%D0%B0%D0%B2%D1%80_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0%D1%81%D1%8B)
+- [ភាសាខ្មែរ](https://km.wikipedia.org/wiki/%E1%9E%9A%E1%9E%BC%E1%9E%94%E1%9E%98%E1%9E%93%E1%9F%92%E1%9E%8F%E1%9E%8A%E1%9E%BA%E1%9E%98%E1%9F%90%E1%9E%9A)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%93%9C%EB%AC%B4%EC%95%84%EB%B8%8C%EB%A5%B4%EC%9D%98_%EA%B3%B5%EC%8B%9D)
+- [Nederlands](https://nl.wikipedia.org/wiki/Stelling_van_De_Moivre)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/De_Moivres_formel)
+- [Polski](https://pl.wikipedia.org/wiki/Wz%C3%B3r_de_Moivre%E2%80%99a)
+- [Piemontèis](https://pms.wikipedia.org/wiki/F%C3%B3rmola_%C3%ABd_De_Moivre)
+- [Português](https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_De_Moivre)
+- [Română](https://ro.wikipedia.org/wiki/Formula_lui_Moivre)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%9C%D1%83%D0%B0%D0%B2%D1%80%D0%B0)
+- [Simple English](https://simple.wikipedia.org/wiki/De_Moivre%27s_formula)
+- [Slovenščina](https://sl.wikipedia.org/wiki/De_Moivreova_formula)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B0%D0%B2%D1%80%D0%BE%D0%B2%D0%B0_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/De_Moivres_formel)
+- [தமிழ்](https://ta.wikipedia.org/wiki/%E0%AE%9F%E0%AE%BF_%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%A9%E0%AF%8D_%E0%AE%B5%E0%AE%BE%E0%AE%AF%E0%AF%8D%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AF%81)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%94%E0%B8%AD_%E0%B8%A1%E0%B8%A7%E0%B8%9F%E0%B8%A3%E0%B9%8C)
+- [Türkçe](https://tr.wikipedia.org/wiki/De_Moivre_form%C3%BCl%C3%BC)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%9C%D1%83%D0%B0%D0%B2%D1%80%D0%B0)
+- [اردو](https://ur.wikipedia.org/wiki/%DA%88%DB%8C_%D9%85%D9%88%D8%A7%D9%81%D8%B1_%DA%A9%D9%84%DB%8C%DB%81)
+- [Oʻzbekcha / ўзбекча](https://uz.wikipedia.org/wiki/Muavr_formulasi)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/C%C3%B4ng_th%E1%BB%A9c_De_Moivre)
+- [粵語](https://zh-yue.wikipedia.org/wiki/%E7%8B%84%E9%BB%98%E5%A4%AB%E5%85%AC%E5%BC%8F)
+- [中文](https://zh.wikipedia.org/wiki/%E6%A3%A3%E8%8E%AB%E5%BC%97%E5%85%AC%E5%BC%8F)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q190556#sitelinks-wikipedia)                         [![Listen to this article](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/20px-Gnome-mime-sound-openclipart.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg)   From Wikipedia, the free encyclopedia
+
+ Theorem: (cos x + i sin x)^n = cos nx + i sin nxNot to be confused with [De Moivre–Laplace theorem](https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem).
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), **de Moivre&#39;s formula** (also known as **de Moivre&#39;s theorem** and **de Moivre&#39;s identity**) states that for any [real number](https://en.wikipedia.org/wiki/Real_number) x and [integer](https://en.wikipedia.org/wiki/Integer) n,       (   cos ⁡ x + i sin ⁡ x    )    n   = cos ⁡ n x + i sin ⁡ n x ,   {\displaystyle {\big (}\cos x+i\sin x{\big )}^{n}=\cos nx+i\sin nx,}   where i is the [imaginary unit](https://en.wikipedia.org/wiki/Imaginary_unit) (*i*2 = −1). The formula is named after [Abraham de Moivre](https://en.wikipedia.org/wiki/Abraham_de_Moivre),[[1]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-1) although he never stated it in his works.[[2]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-2) The expression cos *x* + *i* sin *x* is sometimes abbreviated to [cis](https://en.wikipedia.org/wiki/Cis_(mathematics)) *x*.
+
+The formula is important because it connects [complex numbers](https://en.wikipedia.org/wiki/Complex_numbers) and [trigonometry](https://en.wikipedia.org/wiki/Trigonometry). By expanding the left hand side and then comparing the real and imaginary parts under the assumption that x is real, it is possible to derive useful expressions for cos *nx* and sin *nx* in terms of cos *x* and sin *x*.
+
+As written, the formula is not valid for non-integer powers n. However, there are generalizations of this formula valid for other exponents. These can be used to give explicit expressions for the nth [roots of unity](https://en.wikipedia.org/wiki/Root_of_unity), that is, [complex numbers](https://en.wikipedia.org/wiki/Complex_numbers) z such that *zn* = 1.
+
+Using the standard extensions of the sine and cosine functions to complex numbers, the formula is valid even when x is an arbitrary complex number.
+</pre></article><article id="section-0003"><h3>Example</h3><pre># Example
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=1)]
+
+For     x =   π 6     {\displaystyle x={\frac {\pi }{6}}}   and     n = 2   {\displaystyle n=2}  , de Moivre&#39;s formula asserts that       (  cos ⁡   (     π 6     )   + i sin ⁡   (     π 6     )    )   2   = cos ⁡   (   2 ⋅   π 6     )   + i sin ⁡   (   2 ⋅   π 6     )   ,   {\displaystyle \left(\cos {\bigg (}{\frac {\pi }{6}}{\bigg )}+i\sin {\bigg (}{\frac {\pi }{6}}{\bigg )}\right)^{2}=\cos {\bigg (}2\cdot {\frac {\pi }{6}}{\bigg )}+i\sin {\bigg (}2\cdot {\frac {\pi }{6}}{\bigg )},}   or equivalently that       (     3  2   +   i 2    )   2   =   1 2   +    i   3    2   .   {\displaystyle \left({\frac {\sqrt {3}}{2}}+{\frac {i}{2}}\right)^{2}={\frac {1}{2}}+{\frac {i{\sqrt {3}}}{2}}.}   In this example, it is easy to check the validity of the equation by multiplying out the left side.
+</pre></article><article id="section-0004"><h3>Relation to Euler&#39;s formula</h3><pre># Relation to Euler&#39;s formula
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=2)]
+
+De Moivre&#39;s formula is a precursor to [Euler&#39;s formula](https://en.wikipedia.org/wiki/Euler&#39;s_formula)      e  i x   = cos ⁡ x + i sin ⁡ x ,   {\displaystyle e^{ix}=\cos x+i\sin x,}   with x expressed in [radians](https://en.wikipedia.org/wiki/Radian) rather than [degrees](https://en.wikipedia.org/wiki/Degree_(angle)), which establishes the fundamental relationship between the trigonometric functions and the complex exponential function.
+
+One can derive de Moivre&#39;s formula using Euler&#39;s formula and the [exponential law](https://en.wikipedia.org/wiki/Exponentiation) for integer powers
+
+       (  e  i x   )   n   =  e  i n x   ,   {\displaystyle \left(e^{ix}\right)^{n}=e^{inx},}
+
+since Euler&#39;s formula implies that the left side is equal to       (  cos ⁡ x + i sin ⁡ x  )   n     {\displaystyle \left(\cos x+i\sin x\right)^{n}}   while the right side is equal to     cos ⁡ n x + i sin ⁡ n x .   {\displaystyle \cos nx+i\sin nx.}
+</pre></article><article id="section-0005"><h3>Proof by induction</h3><pre># Proof by induction
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=3)]
+
+The truth of de Moivre&#39;s theorem can be established by using mathematical induction for natural numbers, and extended to all integers from there. For an integer n, call the following statement S(*n*):
+
+     ( cos ⁡ x + i sin ⁡ x  )  n   = cos ⁡ n x + i sin ⁡ n x .   {\displaystyle (\cos x+i\sin x)^{n}=\cos nx+i\sin nx.}
+
+For *n* &gt; 0, we proceed by [mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction). S(1) is clearly true. For our hypothesis, we assume S(*k*) is true for some natural k. That is, we assume
+
+       (  cos ⁡ x + i sin ⁡ x  )   k   = cos ⁡ k x + i sin ⁡ k x .   {\displaystyle \left(\cos x+i\sin x\right)^{k}=\cos kx+i\sin kx.}
+
+Now, considering S(*k* + 1):
+
+           (  cos ⁡ x + i sin ⁡ x  )   k + 1      =   (  cos ⁡ x + i sin ⁡ x  )   k    (  cos ⁡ x + i sin ⁡ x  )        =  (  cos ⁡ k x + i sin ⁡ k x  )   (  cos ⁡ x + i sin ⁡ x  )       via induction hypothesis        = cos ⁡ k x cos ⁡ x − sin ⁡ k x sin ⁡ x + i  (  cos ⁡ k x sin ⁡ x + sin ⁡ k x cos ⁡ x  )        = cos ⁡ ( ( k + 1 ) x ) + i sin ⁡ ( ( k + 1 ) x )      via trigonometric identities        {\displaystyle {\begin{alignedat}{2}\left(\cos x+i\sin x\right)^{k+1}&amp;=\left(\cos x+i\sin x\right)^{k}\left(\cos x+i\sin x\right)\\&amp;=\left(\cos kx+i\sin kx\right)\left(\cos x+i\sin x\right)&amp;&amp;\qquad {\text{via induction hypothesis}}\\&amp;=\cos kx\cos x-\sin kx\sin x+i\left(\cos kx\sin x+\sin kx\cos x\right)\\&amp;=\cos((k+1)x)+i\sin((k+1)x)&amp;&amp;\qquad {\text{via trigonometric identities}}\end{alignedat}}}
+
+See [angle sum and difference identities](https://en.wikipedia.org/wiki/Trigonometric_identities#Angle_sum_and_difference_identities).
+
+We deduce that S(*k*) implies S(*k* + 1). By the principle of mathematical induction it follows that the result is true for all natural numbers. Now, S(0) is clearly true since cos(0*x*) + *i* sin(0*x*) = 1 + 0*i* = 1. Finally, for the negative integer cases, we consider an exponent of −*n* for natural n.
+
+           (  cos ⁡ x + i sin ⁡ x  )   − n      =   (     (  cos ⁡ x + i sin ⁡ x  )   n      )    − 1         =   (  cos ⁡ n x + i sin ⁡ n x  )   − 1         = cos ⁡ n x − i sin ⁡ n x   ( ∗ )       = cos ⁡ ( − n x ) + i sin ⁡ ( − n x ) .       {\displaystyle {\begin{aligned}\left(\cos x+i\sin x\right)^{-n}&amp;={\big (}\left(\cos x+i\sin x\right)^{n}{\big )}^{-1}\\&amp;=\left(\cos nx+i\sin nx\right)^{-1}\\&amp;=\cos nx-i\sin nx\qquad \qquad (*)\\&amp;=\cos(-nx)+i\sin(-nx).\\\end{aligned}}}
+
+The equation (*) is a result of the identity
+
+      z  − 1   =     z ¯     |  z   |   2      ,   {\displaystyle z^{-1}={\frac {\bar {z}}{|z|^{2}}},}
+
+for *z* = cos *nx* + *i* sin *nx*. Hence, S(*n*) holds for all integers n.
+</pre></article><article id="section-0006"><h3>Formulae for cosine and sine individually</h3><pre># Formulae for cosine and sine individually
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=4)] See also: [List of trigonometric identities](https://en.wikipedia.org/wiki/List_of_trigonometric_identities)
+
+For an equality of [complex numbers](https://en.wikipedia.org/wiki/Complex_number), one necessarily has equality both of the [real parts](https://en.wikipedia.org/wiki/Real_part) and of the [imaginary parts](https://en.wikipedia.org/wiki/Imaginary_part) of both members of the equation. If x, and therefore also cos *x* and sin *x*, are [real numbers](https://en.wikipedia.org/wiki/Real_number), then the identity of these parts can be written using [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient). This formula was given by 16th century French mathematician [François Viète](https://en.wikipedia.org/wiki/Fran%C3%A7ois_Vi%C3%A8te):
+
+         sin ⁡ n x    =  ∑  k = 0   n      (   n k   )    ( cos ⁡ x  )  k    ( sin ⁡ x  )  n − k    sin ⁡    ( n − k ) π  2       cos ⁡ n x    =  ∑  k = 0   n      (   n k   )    ( cos ⁡ x  )  k    ( sin ⁡ x  )  n − k    cos ⁡    ( n − k ) π  2   .       {\displaystyle {\begin{aligned}\sin nx&amp;=\sum _{k=0}^{n}{\binom {n}{k}}(\cos x)^{k}\,(\sin x)^{n-k}\,\sin {\frac {(n-k)\pi }{2}}\\\cos nx&amp;=\sum _{k=0}^{n}{\binom {n}{k}}(\cos x)^{k}\,(\sin x)^{n-k}\,\cos {\frac {(n-k)\pi }{2}}.\end{aligned}}}
+
+In each of these two equations, the final [trigonometric function](https://en.wikipedia.org/wiki/Trigonometric_functions) equals one or minus one or zero, thus removing half the entries in each of the sums. These equations are in fact valid even for complex values of x, because both sides are [entire](https://en.wikipedia.org/wiki/Entire_function) (that is, [holomorphic](https://en.wikipedia.org/wiki/Holomorphic_function) on the whole [complex plane](https://en.wikipedia.org/wiki/Complex_plane)) functions of x, and two such functions that coincide on the real axis necessarily coincide everywhere. Here are the concrete instances of these equations for *n* = 2 and *n* = 3:
+
+         cos ⁡ 2 x    =   (  cos ⁡ x  )   2   +  (    (  cos ⁡ x  )   2   − 1  )      =     2   (  cos ⁡ x  )   2   − 1     sin ⁡ 2 x    = 2  (  sin ⁡ x  )   (  cos ⁡ x  )        cos ⁡ 3 x    =   (  cos ⁡ x  )   3   + 3 cos ⁡ x  (    (  cos ⁡ x  )   2   − 1  )      =     4   (  cos ⁡ x  )   3   − 3 cos ⁡ x     sin ⁡ 3 x    = 3   (  cos ⁡ x  )   2    (  sin ⁡ x  )  −   (  sin ⁡ x  )   3       =     3 sin ⁡ x − 4   (  sin ⁡ x  )   3   .       {\displaystyle {\begin{alignedat}{2}\cos 2x&amp;=\left(\cos x\right)^{2}+\left(\left(\cos x\right)^{2}-1\right)&amp;{}={}&amp;2\left(\cos x\right)^{2}-1\\\sin 2x&amp;=2\left(\sin x\right)\left(\cos x\right)&amp;&amp;\\\cos 3x&amp;=\left(\cos x\right)^{3}+3\cos x\left(\left(\cos x\right)^{2}-1\right)&amp;{}={}&amp;4\left(\cos x\right)^{3}-3\cos x\\\sin 3x&amp;=3\left(\cos x\right)^{2}\left(\sin x\right)-\left(\sin x\right)^{3}&amp;{}={}&amp;3\sin x-4\left(\sin x\right)^{3}.\end{alignedat}}}
+
+The right-hand side of the formula for cos *nx* is in fact the value *T**n*(cos *x*) of the [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomial) *T**n* at cos *x*.
+</pre></article><article id="section-0007"><h3>Failure for non-integer powers, and generalization</h3><pre># Failure for non-integer powers, and generalization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=5)]
+
+De Moivre&#39;s formula does not hold for non-integer powers. The derivation of de Moivre&#39;s formula above involves a complex number raised to the integer power n. If a complex number is raised to a non-integer power, the result is [multiple-valued](https://en.wikipedia.org/wiki/Multiple-valued) (see [failure of power and logarithm identities](https://en.wikipedia.org/wiki/Exponentiation#Failure_of_power_and_logarithm_identities)).
+</pre></article><article id="section-0008"><h3>Roots of complex numbers</h3><pre># Roots of complex numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=6)]
+
+A modest extension of the version of de Moivre&#39;s formula given in this article can be used to find [the n-th roots](https://en.wikipedia.org/wiki/Nth_root) of a complex number for a non-zero integer n. If z is a complex number, written in [polar form](https://en.wikipedia.org/wiki/Polar_form) as     z = r  (  cos ⁡ x + i sin ⁡ x  )  ,   {\displaystyle z=r\left(\cos x+i\sin x\right),}   then the n-th roots of z are given by      r   1 n     (  cos ⁡    x + 2 π k  n   + i sin ⁡    x + 2 π k  n    )    {\displaystyle r^{\frac {1}{n}}\left(\cos {\frac {x+2\pi k}{n}}+i\sin {\frac {x+2\pi k}{n}}\right)}   where k varies over the integer values from 0 to |*n*| − 1. This formula is also sometimes known as de Moivre&#39;s formula.[[3]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-3)
+</pre></article><article id="section-0009"><h3>Complex numbers raised to an arbitrary power</h3><pre># Complex numbers raised to an arbitrary power
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=7)]
+
+Generally, if     z = r  (  cos ⁡ x + i sin ⁡ x  )    {\displaystyle z=r\left(\cos x+i\sin x\right)}   (in polar form) and w are arbitrary complex numbers, then the set of possible values is      z  w   =  r  w     (  cos ⁡ x + i sin ⁡ x  )   w   = {  r  w   cos ⁡ ( x w + 2 π k w ) + i  r  w   sin ⁡ ( x w + 2 π k w )  |  k ∈  Z  }  .   {\displaystyle z^{w}=r^{w}\left(\cos x+i\sin x\right)^{w}=\lbrace r^{w}\cos(xw+2\pi kw)+ir^{w}\sin(xw+2\pi kw)|k\in \mathbb {Z} \rbrace \,.}   (Note that if w is a [rational number](https://en.wikipedia.org/wiki/Rational_number) that equals *p* / *q* in [lowest terms](https://en.wikipedia.org/wiki/Lowest_terms) then this set will have exactly q distinct values rather than infinitely many. In particular, if w is an integer then the set will have exactly one value, as previously discussed.) In contrast, de Moivre&#39;s formula gives      r  w   ( cos ⁡ x w + i sin ⁡ x w )  ,   {\displaystyle r^{w}(\cos xw+i\sin xw)\,,}   which is just the single value from this set corresponding to *k* = 0.
+</pre></article><article id="section-0010"><h3>Analogues in other settings</h3><pre># Analogues in other settings
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=8)]
+</pre></article><article id="section-0011"><h3>Hyperbolic trigonometry</h3><pre># Hyperbolic trigonometry
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=9)]
+
+Since cosh *x* + sinh *x* = *ex*, an analog to de Moivre&#39;s formula also applies to the [hyperbolic trigonometry](https://en.wikipedia.org/wiki/Hyperbolic_function). For all [integers](https://en.wikipedia.org/wiki/Integer) n,
+
+ **( cosh ⁡ x + sinh ⁡ x  )  n   = cosh ⁡ n x + sinh ⁡ n x .   {\displaystyle (\cosh x+\sinh x)^{n}=\cosh nx+\sinh nx.}**
+
+If n is a [rational number](https://en.wikipedia.org/wiki/Rational_number) (but not necessarily an integer), then cosh *nx* + sinh *nx* will be one of the values of (cosh *x* + sinh *x*)*n*.[[4]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-4)
+</pre></article><article id="section-0012"><h3>Extension to complex numbers</h3><pre># Extension to complex numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=10)]
+
+For any integer n, the formula holds for any complex number     z = x + i y   {\displaystyle z=x+iy}
+
+     ( cos ⁡ z + i sin ⁡ z  )  n   = cos ⁡  n z  + i sin ⁡  n z  .   {\displaystyle (\cos z+i\sin z)^{n}=\cos {nz}+i\sin {nz}.}
+
+where
+
+         cos ⁡ z = cos ⁡ ( x + i y )    = cos ⁡ x cosh ⁡ y − i sin ⁡ x sinh ⁡ y  ,     sin ⁡ z = sin ⁡ ( x + i y )    = sin ⁡ x cosh ⁡ y + i cos ⁡ x sinh ⁡ y  .       {\displaystyle {\begin{aligned}\cos z=\cos(x+iy)&amp;=\cos x\cosh y-i\sin x\sinh y\,,\\\sin z=\sin(x+iy)&amp;=\sin x\cosh y+i\cos x\sinh y\,.\end{aligned}}}
+</pre></article><article id="section-0013"><h3>Quaternions</h3><pre># Quaternions
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=11)]
+
+To find the roots of a [quaternion](https://en.wikipedia.org/wiki/Quaternion) there is an analogous form of de Moivre&#39;s formula. A quaternion in the form
+
+     q = d + a    i ^    + b    j ^    + c    k ^      {\displaystyle q=d+a\mathbf {\hat {i}} +b\mathbf {\hat {j}} +c\mathbf {\hat {k}} }
+
+can be represented in the form
+
+     q = k ( cos ⁡ θ + ε sin ⁡ θ )    for    0 ≤ θ &lt; 2 π .   {\displaystyle q=k(\cos \theta +\varepsilon \sin \theta )\qquad {\mbox{for }}0\leq \theta &lt;2\pi .}
+
+In this representation,
+
+     k =    d  2   +  a  2   +  b  2   +  c  2     ,   {\displaystyle k={\sqrt {d^{2}+a^{2}+b^{2}+c^{2}}},}
+
+and the trigonometric functions are defined as
+
+     cos ⁡ θ =   d k      and    sin ⁡ θ = ±     a  2   +  b  2   +  c  2    k   .   {\displaystyle \cos \theta ={\frac {d}{k}}\quad {\mbox{and}}\quad \sin \theta =\pm {\frac {\sqrt {a^{2}+b^{2}+c^{2}}}{k}}.}
+
+In the case that *a*2 + *b*2 + *c*2 ≠ 0,
+
+     ε = ±    a    i ^    + b    j ^    + c    k ^       a  2   +  b  2   +  c  2      ,   {\displaystyle \varepsilon =\pm {\frac {a\mathbf {\hat {i}} +b\mathbf {\hat {j}} +c\mathbf {\hat {k}} }{\sqrt {a^{2}+b^{2}+c^{2}}}},}
+
+that is, the [unit vector](https://en.wikipedia.org/wiki/Unit_vector). This leads to the variation of De Moivre&#39;s formula:
+
+      q  n   =  k  n   ( cos ⁡ n θ + ε sin ⁡ n θ ) .   {\displaystyle q^{n}=k^{n}(\cos n\theta +\varepsilon \sin n\theta ).}  [[5]](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_note-5)
+
+#### Example
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=12)]
+
+To find the [cube roots](https://en.wikipedia.org/wiki/Cube_root) of
+
+     Q = 1 +    i ^    +    j ^    +    k ^    ,   {\displaystyle Q=1+\mathbf {\hat {i}} +\mathbf {\hat {j}} +\mathbf {\hat {k}} ,}
+
+write the quaternion in the form
+
+     Q = 2  (  cos ⁡   π 3   + ε sin ⁡   π 3    )     where    ε =       i ^    +    j ^    +    k ^      3    .   {\displaystyle Q=2\left(\cos {\frac {\pi }{3}}+\varepsilon \sin {\frac {\pi }{3}}\right)\qquad {\mbox{where }}\varepsilon ={\frac {\mathbf {\hat {i}} +\mathbf {\hat {j}} +\mathbf {\hat {k}} }{\sqrt {3}}}.}
+
+Then the cube roots are given by:
+
+       Q  3    =   2  3    ( cos ⁡ θ + ε sin ⁡ θ )    for    θ =   π 9   ,    7 π  9   ,    13 π  9   .   {\displaystyle {\sqrt[{3}]{Q}}={\sqrt[{3}]{2}}(\cos \theta +\varepsilon \sin \theta )\qquad {\mbox{for }}\theta ={\frac {\pi }{9}},{\frac {7\pi }{9}},{\frac {13\pi }{9}}.}
+</pre></article><article id="section-0014"><h3>2 × 2 matrices</h3><pre># 2 × 2 matrices
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=13)]
+
+With matrices,        (    cos ⁡ ϕ   − sin ⁡ ϕ     sin ⁡ ϕ   cos ⁡ ϕ    )    n   =   (    cos ⁡ n ϕ   − sin ⁡ n ϕ     sin ⁡ n ϕ   cos ⁡ n ϕ    )     {\displaystyle {\begin{pmatrix}\cos \phi &amp;-\sin \phi \\\sin \phi &amp;\cos \phi \end{pmatrix}}^{n}={\begin{pmatrix}\cos n\phi &amp;-\sin n\phi \\\sin n\phi &amp;\cos n\phi \end{pmatrix}}}   when n is an integer. This is a direct consequence of the [isomorphism](https://en.wikipedia.org/wiki/Isomorphism) between the matrices of type       (    a   − b     b   a    )     {\displaystyle {\begin{pmatrix}a&amp;-b\\b&amp;a\end{pmatrix}}}   and the [complex plane](https://en.wikipedia.org/wiki/Complex_plane).
+</pre></article><article id="section-0015"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=14)]
+- Abramowitz, Milton; Stegun, Irene A. (1964). *[Handbook of Mathematical Functions](https://en.wikipedia.org/wiki/Abramowitz_and_Stegun)*. New York: Dover Publications. p. [74](https://archive.org/details/handbookofmathe000abra/page/74). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-486-61272-4](https://en.wikipedia.org/wiki/Special:BookSources/0-486-61272-4). `{{cite book}}`: ISBN / Date incompatibility ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#invalid_isbn_date)).
+
+1. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-1) Moivre, Ab. de (1707). &quot;Aequationum quarundam potestatis tertiae, quintae, septimae, nonae, &amp; superiorum, ad infinitum usque pergendo, in termimis finitis, ad instar regularum pro cubicis quae vocantur Cardani, resolutio analytica&quot; [Of certain equations of the third, fifth, seventh, ninth, &amp; higher power, all the way to infinity, by proceeding, in finite terms, in the form of rules for cubics which are called by Cardano, resolution by analysis.]. *Philosophical Transactions of the Royal Society of London* (in Latin). **25** (309): 2368–2371. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1098/rstl.1706.0037](https://doi.org/10.1098%2Frstl.1706.0037). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [186209627](https://api.semanticscholar.org/CorpusID:186209627). English translation by Richard J. Pulskamp (2009) On p. 2370 de Moivre stated that if a series has the form     n y +     1 − n n   2 × 3     n  y  3   +     1 − n n   2 × 3         9 − n n   4 × 5     n  y  5   +     1 − n n   2 × 3         9 − n n   4 × 5         25 − n n   6 × 7     n  y  7   + ⋯ = a   {\displaystyle ny+{\tfrac {1-nn}{2\times 3}}ny^{3}+{\tfrac {1-nn}{2\times 3}}{\tfrac {9-nn}{4\times 5}}ny^{5}+{\tfrac {1-nn}{2\times 3}}{\tfrac {9-nn}{4\times 5}}{\tfrac {25-nn}{6\times 7}}ny^{7}+\cdots =a}   , where *n* is any given odd integer (positive or negative) and where *y* and *a* can be functions, then upon solving for *y*, the result is equation (2) on the same page:     y =    1 2       a +   a a − 1     n    +    1 2       a −   a a − 1     n      {\displaystyle y={\tfrac {1}{2}}{\sqrt[{n}]{a+{\sqrt {aa-1}}}}+{\tfrac {1}{2}}{\sqrt[{n}]{a-{\sqrt {aa-1}}}}}  . If *y* = cos x and *a* = cos nx , then the result is     cos ⁡ x =    1 2    ( cos ⁡ ( n x ) + i sin ⁡ ( n x )  )  1  /  n   +    1 2    ( cos ⁡ ( n x ) − i sin ⁡ ( n x )  )  1  /  n     {\displaystyle \cos x={\tfrac {1}{2}}(\cos(nx)+i\sin(nx))^{1/n}+{\tfrac {1}{2}}(\cos(nx)-i\sin(nx))^{1/n}}
+ In 1676, [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton) found the relation between two chord lengths where the corresponding arc lengths were in the ratio of n to 1; the relation was expressed by the series above. The series appears in a letter — *Epistola prior D. Issaci Newton, Mathescos Professoris in Celeberrima Academia Cantabrigiensi; …* — of 13 June 1676 from Isaac Newton to Henry Oldenburg, secretary of the Royal Society; a copy of the letter was sent to [Gottfried Wilhelm Leibniz](https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz). See p. 106 of: Biot, J.-B.; Lefort, F., eds. (1856). [*Commercium epistolicum J. Collins et aliorum de analysi promota, etc: ou …*](https://books.google.com/books?id=BHBtAAAAMAAJ&amp;pg=PA106) (in Latin). Paris, France: Mallet-Bachelier. pp. 102–112. In 1698, de Moivre derived the same series. See: de Moivre, A. (1698). [&quot;A method of extracting roots of an infinite equation&quot;](https://doi.org/10.1098%2Frstl.1698.0034). *Philosophical Transactions of the Royal Society of London*. **20** (240): 190–193. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1098/rstl.1698.0034](https://doi.org/10.1098%2Frstl.1698.0034). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [186214144](https://api.semanticscholar.org/CorpusID:186214144).; see p 192. In 1730, de Moivre explicitly considered the case where the functions are cos θ and cos nθ. See: Moivre, A. de (1730). [*Miscellanea Analytica de Seriebus et Quadraturis*](https://books.google.com/books?id=bMl5NAAACAAJ&amp;pg=PP5) (in Latin). London, England: J. Tonson &amp; J. Watts. p. 1. From p. 1: *&quot;Lemma 1. Si sint l &amp; x cosinus arcuum duorum A &amp; B, quorum uterque eodem radio 1 describatur, quorumque prior sit posterioris multiplex in ea ratione quam habet numerus n ad unitatem, tunc erit     x =    1 2       l +   l l − 1     n    +    1 2       1   l +   l l − 1     n        {\displaystyle x={\tfrac {1}{2}}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}+{\tfrac {1}{2}}{\tfrac {1}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}}}  .&quot;* (If l and x are cosines of two arcs A and B both of which are described by the same radius 1 and of which the former is a multiple of the latter in that ratio as the number n has to 1, then it will be [true that]     x =    1 2       l +   l l − 1     n    +    1 2       1   l +   l l − 1     n        {\displaystyle x={\tfrac {1}{2}}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}+{\tfrac {1}{2}}{\tfrac {1}{\sqrt[{n}]{l+{\sqrt {ll-1}}}}}}  .) So if arc A = n × arc B, then l = cos A = cos nB and x = cos B. Hence     cos ⁡ B =    1 2    ( cos ⁡ ( n B ) +   − 1   sin ⁡ ( n B )  )  1  /  n   +    1 2    ( cos ⁡ ( n B ) +   − 1   sin ⁡ ( n B )  )  − 1  /  n     {\displaystyle \cos B={\tfrac {1}{2}}(\cos(nB)+{\sqrt {-1}}\sin(nB))^{1/n}+{\tfrac {1}{2}}(\cos(nB)+{\sqrt {-1}}\sin(nB))^{-1/n}}   See also: Cantor, Moritz (1898). [*Vorlesungen über Geschichte der Mathematik*](https://babel.hathitrust.org/cgi/pt?id=chi.11625415&amp;view=1up&amp;seq=644) [*Lectures on the History of Mathematics*]. Bibliotheca mathematica Teuberiana, Bd. 8-9 (in German). Vol. 3. Leipzig, Germany: B.G. Teubner. p. 624. Braunmühl, A. von (1901). [&quot;Zur Geschichte der Entstehung des sogenannten Moivreschen Satzes&quot;](https://babel.hathitrust.org/cgi/pt?id=hvd.32044102937091&amp;view=1up&amp;seq=112) [On the history of the origin of the so-called Moivre theorem]. *Bibliotheca Mathematica*. 3rd series (in German). **2**: 97–102.; see p. 98.
+2. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-2) Lial, Margaret L.; Hornsby, John; Schneider, David I.; Callie J., Daniels (2008). *College Algebra and Trigonometry* (4th ed.). Boston: Pearson/Addison Wesley. p. 792. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-49744-4](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-49744-4).
+3. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-3) [&quot;De Moivre formula&quot;](https://www.encyclopediaofmath.org/index.php?title=De_Moivre_formula), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+4. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-4) Mukhopadhyay, Utpal (August 2006). &quot;Some interesting features of hyperbolic functions&quot;. *Resonance*. **11** (8): 81–85. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF02855783](https://doi.org/10.1007%2FBF02855783). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119753430](https://api.semanticscholar.org/CorpusID:119753430).
+5. [↑](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula#cite_ref-5) Brand, Louis (October 1942). &quot;The roots of a quaternion&quot;. *The American Mathematical Monthly*. **49** (8): 519–520. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2302858](https://doi.org/10.2307%2F2302858). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2302858](https://www.jstor.org/stable/2302858).
+</pre></article><article id="section-0016"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;action=edit&amp;section=15)]
+- [De Moivre&#39;s Theorem for Trig Identities](http://demonstrations.wolfram.com/DeMoivresTheoremForTrigIdentities/) by Michael Croucher, [Wolfram Demonstrations Project](https://en.wikipedia.org/wiki/Wolfram_Demonstrations_Project).
+ Listen to this article (18 minutes)[https://en\.wikipedia\.org/wiki/File:En\-De\_Moivres\_Formula\-article\.ogg](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg)Duration: 18 minutes and 7 seconds. ![Spoken Wikipedia icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/60px-Gnome-mime-sound-openclipart.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)[This audio file](https://en.wikipedia.org/wiki/File:En-De_Moivres_Formula-article.ogg) was created from a revision of this article dated 5 June 2021 (2021-06-05), and does not reflect subsequent edits.([Audio help](https://en.wikipedia.org/wiki/Wikipedia:Media_help) · [More spoken articles](https://en.wikipedia.org/wiki/Wikipedia:Spoken_articles))          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;oldid=1374418396](https://en.wikipedia.org/w/index.php?title=De_Moivre%27s_formula&amp;oldid=1374418396)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Theorems in complex analysis](https://en.wikipedia.org/wiki/Category:Theorems_in_complex_analysis)
+- [Abraham de Moivre](https://en.wikipedia.org/wiki/Category:Abraham_de_Moivre)
+Hidden categories:
+- [Use American English from March 2019](https://en.wikipedia.org/wiki/Category:Use_American_English_from_March_2019)
+- [All Wikipedia articles written in American English](https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_written_in_American_English)
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 Latin-language sources (la)](https://en.wikipedia.org/wiki/Category:CS1_Latin-language_sources_(la))
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+- [CS1 errors: ISBN date](https://en.wikipedia.org/wiki/Category:CS1_errors:_ISBN_date)
+- [Articles with hAudio microformats](https://en.wikipedia.org/wiki/Category:Articles_with_hAudio_microformats)
+- [Spoken articles](https://en.wikipedia.org/wiki/Category:Spoken_articles)
+- [Articles containing proofs](https://en.wikipedia.org/wiki/Category:Articles_containing_proofs)
+
+    [https://en\.wikipedia\.org/wiki/De\_Moivre&#39;s\_formula?action=edit](https://en.wikipedia.org/wiki/De_Moivre&#39;s_formula?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

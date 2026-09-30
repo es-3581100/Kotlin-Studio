@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Fermat&#39;s little theorem - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Fermat&#39;s little theorem - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T02:32:30.351Z</div><div class="stat"><b>Records</b><br>20</div><div class="stat"><b>Sections</b><br>14</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 269 B · ~68 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 36889 B · ~9101 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 49048 B · ~12193 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 415 B · ~104 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Fermat&#39;s little theorem.md</code></a> <small>markdown · 8641 B · ~2093 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-History.md</code></a> <small>markdown · 4035 B · ~1002 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Further history.md</code></a> <small>markdown · 705 B · ~175 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Proofs.md</code></a> <small>markdown · 431 B · ~108 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Generalizations.md</code></a> <small>markdown · 4030 B · ~995 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Converse.md</code></a> <small>markdown · 939 B · ~233 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Pseudoprimes.md</code></a> <small>markdown · 1054 B · ~261 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Miller–Rabin primality test.md</code></a> <small>markdown · 2697 B · ~662 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-See also.md</code></a> <small>markdown · 731 B · ~183 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Notes.md</code></a> <small>markdown · 4588 B · ~1134 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-References.md</code></a> <small>markdown · 1983 B · ~496 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Further reading.md</code></a> <small>markdown · 428 B · ~107 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-External links.md</code></a> <small>markdown · 6202 B · ~1551 tok</small></li><li><a href="#art-0018"><code>artifacts/provenance/source-record.json</code></a> <small>json · 409 B · ~103 tok</small></li><li><a href="#art-0019"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0020"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Fermat&#39;s little theorem - Wikipedia&quot;
+source: &quot;https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem&quot;
+captured_at: 2026-09-30T02:32:30.351Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 20
+artifact_count: 20
+content_sha256: 1bc40e0d792efa1d228c9d51bb11dc4eb6c698a222a65259d0e8e452a2b13138
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:269,&quot;sha256&quot;:&quot;605631f97dee8663244fff9e6ee5fb9af4f5fc0dfcc0c6fafc745ea4881d4f52&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;fermat&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t02&quot;,&quot;351z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:68,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:36889,&quot;sha256&quot;:&quot;1bc40e0d792efa1d228c9d51bb11dc4eb6c698a222a65259d0e8e452a2b13138&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fermat&quot;,&quot;theorem&quot;,&quot;s_little_theorem&quot;,&quot;little&quot;],&quot;summary&quot;:&quot;Fermat&#39;s little theorem - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:9101,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:49048,&quot;sha256&quot;:&quot;79e67867dbae25af9502b5929954469ced7bc0e12ca3d0bf5f4cdddb1eb7e183&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;org&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fermat&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:12193,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:415,&quot;sha256&quot;:&quot;f0a2e0a020e233ec09a51b6220be20f88360f4ff7e9f3f98f1b167e4a43eae0e&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:104,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Fermat&#39;s little theorem.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8641,&quot;sha256&quot;:&quot;5edbf0e69939f3285b37b29f947653bd0735c0f82c1e13b1ae4455b7ba2fb454&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;wikipedia&quot;,&quot;fermat&quot;,&quot;b0_&quot;,&quot;theorem&quot;,&quot;integer&quot;],&quot;summary&quot;:&quot;Fermat&#39;s little theorem&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2093,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-History.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4035,&quot;sha256&quot;:&quot;b11339ba8f188641d989eb8c82b1ad001dcbb22f8a42029429a22b7ce2682fa7&quot;,&quot;keywords&quot;:[&quot;fermat&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;first&quot;,&quot;s_little_theorem&quot;,&quot;one&quot;],&quot;summary&quot;:&quot;History&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1002,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Further history.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:705,&quot;sha256&quot;:&quot;4f4d487cf9c32659dd84c5fb027ae499be45afd29e3c2efc8458a50d23613338&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;fermat&quot;,&quot;hypothesis&quot;,&quot;wiki&quot;,&quot;341&quot;,&quot;chinese&quot;],&quot;summary&quot;:&quot;Further history&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:175,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Proofs.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:431,&quot;sha256&quot;:&quot;4d23fb6f1b4ac47e37ed19b1da75ca4f94bf8f0afd153cf766c35c5a17a3f899&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;proofs&quot;,&quot;wikipedia&quot;,&quot;fermat&quot;,&quot;theorem&quot;,&quot;wiki&quot;,&quot;corollary&quot;],&quot;summary&quot;:&quot;Proofs&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:108,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Generalizations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4030,&quot;sha256&quot;:&quot;3af68aba550bc4f9eb65db1f5e018e1729c700694cef954d1263a121c79129d6&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;equiv&quot;,&quot;theorem&quot;,&quot;mod&quot;,&quot;pmod&quot;],&quot;summary&quot;:&quot;Generalizations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:995,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Converse.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:939,&quot;sha256&quot;:&quot;bb8fc885b940c90dbb75ab4a5fae21e0b578772189e8e7921239f82ef500d227&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;converse&quot;,&quot;primality&quot;,&quot;theorem&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Converse&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:233,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1054,&quot;sha256&quot;:&quot;403dc5065f4fc3bcdf1280f80a8e5cd10e3e71051ac6fc410f954fd8ab5f0f73&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;fermat&quot;,&quot;number&quot;,&quot;pseudoprime&quot;,&quot;wiki&quot;,&quot;base&quot;],&quot;summary&quot;:&quot;Pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:261,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Miller–Rabin primality test.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2697,&quot;sha256&quot;:&quot;452ab209afa34855000c92086336478d73532e1fe508b9cf6c3fd9083af82213&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;mod&quot;,&quot;test&quot;,&quot;odd&quot;,&quot;prime&quot;],&quot;summary&quot;:&quot;Miller–Rabin primality test&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:662,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:731,&quot;sha256&quot;:&quot;50fbec753a614e3cc5d1c7b8d8876b1b1dcad9372f6cf155a140f1bdc855ba64&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fermat&quot;,&quot;also&quot;,&quot;edit&quot;,&quot;p-derivation&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:183,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4588,&quot;sha256&quot;:&quot;a4e665d2e8d39436348c75032ddfe9cd18c91621cfba689ec805e8911f71e2b9&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fermat&quot;,&quot;s_little_theorem&quot;,&quot;books&quot;,&quot;206&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1134,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1983,&quot;sha256&quot;:&quot;48d035fb20ae0d659e8f822ad370f23a77f8c37b3dcb4cf089291ad98e7a69d8&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;identifier&quot;,&quot;booksources&quot;,&quot;isbn&quot;,&quot;isbn_&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:496,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Further reading.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:428,&quot;sha256&quot;:&quot;92177511b326a2b92a5960bbc18f372783aad01d441051a53ff2d7eb57026470&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;0-387-94457-5&quot;,&quot;edit&quot;,&quot;further&quot;,&quot;new&quot;],&quot;summary&quot;:&quot;Further reading&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:107,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6202,&quot;sha256&quot;:&quot;c6adb39f007dfa3ef31429a1fa4ebef9e00274542ea8d40741eb2782ca1c4b76&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fermat&quot;,&quot;theorem&quot;,&quot;category&quot;,&quot;little&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1551,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0018&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:409,&quot;sha256&quot;:&quot;631d9205174b8b4353fe1c440459ff2e5082ab78b645e16cfc111f27dabef393&quot;,&quot;keywords&quot;:[&quot;fermat&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t02&quot;,&quot;27s_little_theorem&quot;,&quot;351z&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0019&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;7ee80d73f3e99ce9c61566d7bff3d17e79b3f866163186157172e3b1179d9db2&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;300&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0020&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T02:32:30.351Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	68	269	605631f97dee8663244fff9e6ee5fb9af4f5fc0dfcc0c6fafc745ea4881d4f52	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	9101	36889	1bc40e0d792efa1d228c9d51bb11dc4eb6c698a222a65259d0e8e452a2b13138	Fermat&#39;s little theorem - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	12193	49048	79e67867dbae25af9502b5929954469ced7bc0e12ca3d0bf5f4cdddb1eb7e183	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	104	415	f0a2e0a020e233ec09a51b6220be20f88360f4ff7e9f3f98f1b167e4a43eae0e	Introduction	
+sec:0005	section	artifacts/sections/0002-Fermat&#39;s little theorem.md	primary	2093	8641	5edbf0e69939f3285b37b29f947653bd0735c0f82c1e13b1ae4455b7ba2fb454	Fermat&#39;s little theorem	
+sec:0006	section	artifacts/sections/0003-History.md	primary	1002	4035	b11339ba8f188641d989eb8c82b1ad001dcbb22f8a42029429a22b7ce2682fa7	History	
+sec:0007	section	artifacts/sections/0004-Further history.md	primary	175	705	4f4d487cf9c32659dd84c5fb027ae499be45afd29e3c2efc8458a50d23613338	Further history	
+sec:0008	section	artifacts/sections/0005-Proofs.md	primary	108	431	4d23fb6f1b4ac47e37ed19b1da75ca4f94bf8f0afd153cf766c35c5a17a3f899	Proofs	
+sec:0009	section	artifacts/sections/0006-Generalizations.md	primary	995	4030	3af68aba550bc4f9eb65db1f5e018e1729c700694cef954d1263a121c79129d6	Generalizations	
+sec:0010	section	artifacts/sections/0007-Converse.md	primary	233	939	bb8fc885b940c90dbb75ab4a5fae21e0b578772189e8e7921239f82ef500d227	Converse	
+sec:0011	section	artifacts/sections/0008-Pseudoprimes.md	primary	261	1054	403dc5065f4fc3bcdf1280f80a8e5cd10e3e71051ac6fc410f954fd8ab5f0f73	Pseudoprimes	
+sec:0012	section	artifacts/sections/0009-Miller–Rabin primality test.md	supporting	662	2697	452ab209afa34855000c92086336478d73532e1fe508b9cf6c3fd9083af82213	Miller–Rabin primality test	
+sec:0013	section	artifacts/sections/0010-See also.md	supporting	183	731	50fbec753a614e3cc5d1c7b8d8876b1b1dcad9372f6cf155a140f1bdc855ba64	See also	
+sec:0014	section	artifacts/sections/0011-Notes.md	supporting	1134	4588	a4e665d2e8d39436348c75032ddfe9cd18c91621cfba689ec805e8911f71e2b9	Notes	
+sec:0015	section	artifacts/sections/0012-References.md	supporting	496	1983	48d035fb20ae0d659e8f822ad370f23a77f8c37b3dcb4cf089291ad98e7a69d8	References	
+sec:0016	section	artifacts/sections/0013-Further reading.md	supporting	107	428	92177511b326a2b92a5960bbc18f372783aad01d441051a53ff2d7eb57026470	Further reading	
+sec:0017	section	artifacts/sections/0014-External links.md	supporting	1551	6202	c6adb39f007dfa3ef31429a1fa4ebef9e00274542ea8d40741eb2782ca1c4b76	External links	
+art:0018	provenance	artifacts/provenance/source-record.json	supporting	103	409	631d9205174b8b4353fe1c440459ff2e5082ab78b645e16cfc111f27dabef393	Capture source identity and metadata	
+art:0019	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	7ee80d73f3e99ce9c61566d7bff3d17e79b3f866163186157172e3b1179d9db2	Extraction engine and counts	
+art:0020	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Fermat&#39;s little theorem
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%A8%D8%B1%D9%87%D9%86%D8%A9_%D9%81%D9%8A%D8%B1%D9%85%D8%A7_%D8%A7%D9%84%D8%B5%D8%BA%D8%B1%D9%89)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D1%8D%D0%B0%D1%80%D1%8D%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Български](https://bg.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%BA%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [বাংলা](https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%B0_%E0%A6%9B%E0%A7%8B%E0%A6%9F_%E0%A6%89%E0%A6%AA%E0%A6%AA%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%AF)
+- [Català](https://ca.wikipedia.org/wiki/Petit_teorema_de_Fermat)
+- [کوردی](https://ckb.wikipedia.org/wiki/%D8%AA%DB%8C%DB%86%D8%B1%D9%85%DB%8C_%D8%A8%DA%86%D9%88%D9%88%DA%A9%DB%8C_%D9%81%DB%8E%D8%B1%D9%85%D8%A7)
+- [Čeština](https://cs.wikipedia.org/wiki/Mal%C3%A1_Fermatova_v%C4%9Bta)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0_%D0%BA%C4%95%C3%A7%C4%95%D0%BD_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B8)
+- [Dansk](https://da.wikipedia.org/wiki/Fermats_lille_s%C3%A6tning)
+- [Deutsch](https://de.wikipedia.org/wiki/Kleiner_fermatscher_Satz)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%9C%CE%B9%CE%BA%CF%81%CF%8C_%CE%B8%CE%B5%CF%8E%CF%81%CE%B7%CE%BC%CE%B1_%CF%84%CE%BF%CF%85_%CE%A6%CE%B5%CF%81%CE%BC%CE%AC)
+- [Esperanto](https://eo.wikipedia.org/wiki/Malgranda_teoremo_de_Fermat)
+- [Español](https://es.wikipedia.org/wiki/Peque%C3%B1o_teorema_de_Fermat)
+- [Euskara](https://eu.wikipedia.org/wiki/Fermaten_teorema_txikia)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%82%D8%B6%DB%8C%D9%87_%DA%A9%D9%88%DA%86%DA%A9_%D9%81%D8%B1%D9%85%D8%A7)
+- [Suomi](https://fi.wikipedia.org/wiki/Fermat%E2%80%99n_pieni_lause)
+- [Võro](https://fiu-vro.wikipedia.org/wiki/Fermat%27_v%C3%A4ikene_teorem)
+- [Français](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat)
+- [Arpetan](https://frp.wikipedia.org/wiki/Peti%C3%B4t_t%C3%A8or%C3%A8mo_de_F%C3%A8rmat)
+- [Galego](https://gl.wikipedia.org/wiki/Pequeno_teorema_de_Fermat)
+- [עברית](https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%A4%D7%98_%D7%94%D7%A7%D7%98%D7%9F_%D7%A9%D7%9C_%D7%A4%D7%A8%D7%9E%D7%94)
+- [Magyar](https://hu.wikipedia.org/wiki/Kis_Fermat-t%C3%A9tel)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D5%96%D5%A5%D6%80%D5%B4%D5%A1%D5%B5%D5%AB_%D6%83%D5%B8%D6%84%D6%80_%D5%A9%D5%A5%D5%B8%D6%80%D5%A5%D5%B4)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Teorema_kecil_Fermat)
+- [Italiano](https://it.wikipedia.org/wiki/Piccolo_teorema_di_Fermat)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9E%E3%83%BC%E3%81%AE%E5%B0%8F%E5%AE%9A%E7%90%86)
+- [ქართული](https://ka.wikipedia.org/wiki/%E1%83%A4%E1%83%94%E1%83%A0%E1%83%9B%E1%83%90%E1%83%A1_%E1%83%9B%E1%83%AA%E1%83%98%E1%83%A0%E1%83%94_%E1%83%97%E1%83%94%E1%83%9D%E1%83%A0%E1%83%94%E1%83%9B%E1%83%90)
+- [Қазақша](https://kk.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D1%8B%D2%A3_%D0%BA%D1%96%D1%88%D1%96_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0%D1%81%D1%8B)
+- [한국어](https://ko.wikipedia.org/wiki/%ED%8E%98%EB%A5%B4%EB%A7%88%EC%9D%98_%EC%86%8C%EC%A0%95%EB%A6%AC)
+- [Lietuvių](https://lt.wikipedia.org/wiki/Ma%C5%BEoji_Ferma_teorema)
+- [Latviešu](https://lv.wikipedia.org/wiki/Ferm%C4%81_maz%C4%81_teor%C4%93ma)
+- [Македонски](https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BE%D0%B2%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0)
+- [മലയാളം](https://ml.wikipedia.org/wiki/%E0%B4%AB%E0%B5%86%E0%B5%BC%E0%B4%AE%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%9A%E0%B5%86%E0%B4%B1%E0%B4%BF%E0%B4%AF_%E0%B4%A8%E0%B4%BF%E0%B4%AF%E0%B4%AE%E0%B4%82)
+- [Монгол](https://mn.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD_%D0%B1%D0%B0%D0%B3%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC)
+- [မြန်မာဘာသာ](https://my.wikipedia.org/wiki/%E1%80%96%E1%80%B2%E1%80%99%E1%81%8F_%E1%80%9E%E1%80%AE%E1%80%A1%E1%80%AD%E1%80%AF%E1%80%9B%E1%80%99%E1%80%BA%E1%80%A1%E1%80%84%E1%80%9A%E1%80%BA)
+- [Nederlands](https://nl.wikipedia.org/wiki/Kleine_stelling_van_Fermat)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Fermats_lille_teorem)
+- [Polski](https://pl.wikipedia.org/wiki/Ma%C5%82e_twierdzenie_Fermata)
+- [Piemontèis](https://pms.wikipedia.org/wiki/Cit_teorema_%C3%ABd_Fermat)
+- [Português](https://pt.wikipedia.org/wiki/Pequeno_teorema_de_Fermat)
+- [Română](https://ro.wikipedia.org/wiki/Mica_teorem%C4%83_a_lui_Fermat)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Mala_Fermatova_teorema)
+- [Simple English](https://simple.wikipedia.org/wiki/Fermat%27s_little_theorem)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Mal%C3%A1_Fermatova_veta)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Fermatov_mali_izrek)
+- [Shqip](https://sq.wikipedia.org/wiki/Teorema_e_vog%C3%ABl_Fermat)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BE%D0%B2%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/Fermats_lilla_sats)
+- [தமிழ்](https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AF%86%E0%AE%B0%E0%AF%8D%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%A9%E0%AF%8D_%E0%AE%9A%E0%AE%BF%E0%AE%B1%E0%AE%BF%E0%AE%AF_%E0%AE%A4%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%AE%E0%AF%8D)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%97%E0%B8%A4%E0%B8%A9%E0%B8%8E%E0%B8%B5%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%B2)
+- [Türkçe](https://tr.wikipedia.org/wiki/Fermat%27n%C4%B1n_k%C3%BC%C3%A7%C3%BCk_teoremi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Oʻzbekcha / ўзбекча](https://uz.wikipedia.org/wiki/Fermaning_kichik_teoremasi)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_l%C3%BD_nh%E1%BB%8F_Fermat)
+- [閩南語 / Bân-lâm-gí](https://zh-min-nan.wikipedia.org/wiki/Fermat_si%C3%B3_t%C4%93ng-l%C3%AD)
+- [中文](https://zh.wikipedia.org/wiki/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q188295#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   A prime p divides a^p–a for any integer a For other theorems named after Pierre de Fermat, see [Fermat&#39;s theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem).
+
+In [number theory](https://en.wikipedia.org/wiki/Number_theory), **Fermat&#39;s little theorem** states that if p is a [prime number](https://en.wikipedia.org/wiki/Prime_number), then for any [integer](https://en.wikipedia.org/wiki/Integer) a, the number *a**p* − *a* is an integer multiple of p. In the notation of [modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic), this is expressed as      a  p   ≡ a   ( mod  p )  .   {\displaystyle a^{p}\equiv a{\pmod {p}}.}
+
+For example, if *a* = 2 and *p* = 7, then 27 = 128, and 128 − 2 = 126 = 7 × 18 is an integer multiple of 7.
+
+If a is not divisible by p; that is, if a is [coprime](https://en.wikipedia.org/wiki/Coprime) to p, then Fermat&#39;s little theorem is equivalent to the statement that *a**p* − 1 − 1 is an integer multiple of p, or in symbols:[[1]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-2)      a  p − 1   ≡ 1   ( mod  p )  .   {\displaystyle a^{p-1}\equiv 1{\pmod {p}}.}
+
+For example, if *a* = 2 and *p* = 7, then 26 = 64, and 64 − 1 = 63 = 7 × 9 is a multiple of 7.
+
+Fermat&#39;s little theorem is the basis for the [Fermat primality test](https://en.wikipedia.org/wiki/Fermat_primality_test) and is one of the fundamental results of [elementary number theory](https://en.wikipedia.org/wiki/Elementary_number_theory). The theorem is named after [Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat), who stated it in 1640. It is called the &quot;little theorem&quot; to distinguish it from [Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem).[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+
+## History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=1)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Pierre_de_Fermat.jpg/250px-Pierre_de_Fermat.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Pierre_de_Fermat.jpg)Pierre de Fermat
+
+Pierre de Fermat first stated the theorem in a letter dated October 18, 1640, to his friend and confidant [Frénicle de Bessy](https://en.wikipedia.org/wiki/Fr%C3%A9nicle_de_Bessy). His formulation is equivalent to the following:[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+
+&gt; If p is a prime and a is any integer not divisible by p, then a p − 1 − 1 is divisible by p.
+&gt;
+
+Fermat&#39;s original statement was
+
+&gt; Tout nombre premier mesure infailliblement une des puissances
+&gt;
+&gt;
+&gt;
+&gt;         −
+&gt;         1
+&gt;
+&gt;
+&gt;     {\displaystyle -1}
+&gt;
+&gt;  de quelque progression que ce soit, et l&#39;exposant de la dite puissance est sous-multiple du nombre premier donné
+&gt;
+&gt;
+&gt;
+&gt;         −
+&gt;         1
+&gt;
+&gt;
+&gt;     {\displaystyle -1}
+&gt;
+&gt; ; et, après qu&#39;on a trouvé la première puissance qui satisfait à la question, toutes celles dont les exposants sont multiples de l&#39;exposant de la première satisfont tout de même à la question.
+&gt;
+
+This may be translated, with explanations and formulas added in brackets for easier understanding, as:
+
+&gt;
+&gt; Every prime number [p] divides necessarily one of the powers minus one of any [geometric] progression [a, a2, a3, …] [that is, there exists t such that p divides at − 1], and the exponent of this power [t] divides the given prime minus one [divides p − 1]. After one has found the first power [t] that satisfies the question, all those whose exponents are multiples of the exponent of the first one satisfy similarly the question [that is, all multiples of the first t have the same property].
+&gt;
+
+Fermat did not consider the case where a is a multiple of p nor prove his assertion, only stating:[[4]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-4)
+
+&gt; Et cette proposition est généralement vraie en toutes progressions et en tous nombres premiers; de quoi je vous envoierois la démonstration, si je n&#39;appréhendois d&#39;être trop long.
+
+&gt; (And this proposition is generally true for all series [sic] and for all prime numbers; I would send you a demonstration of it, if I did not fear going on for too long.)[5]
+
+[Euler](https://en.wikipedia.org/wiki/Euler) provided the first published proof in 1736, in a paper titled &quot;Theorematum Quorundam ad Numeros Primos Spectantium Demonstratio&quot; (in English: &quot;Demonstration of Certain Theorems Concerning Prime Numbers&quot;) in the *Proceedings* of the St. Petersburg Academy,[[6]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-6)[[7]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-7) but [Leibniz](https://en.wikipedia.org/wiki/Gottfried_Leibniz) had given virtually the same proof in an unpublished manuscript from sometime before 1683.[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+
+The term &quot;Fermat&#39;s little theorem&quot; was probably first used in print in 1913 in *Zahlentheorie* by [Kurt Hensel](https://en.wikipedia.org/wiki/Kurt_Hensel):[[8]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-8)
+
+&gt; Für jede endliche Gruppe besteht nun ein Fundamentalsatz, welcher der kleine Fermatsche Satz genannt zu werden pflegt, weil ein ganz spezieller Teil desselben zuerst von Fermat bewiesen worden ist.
+
+&gt; (There is a fundamental theorem holding in every finite group, usually called Fermat&#39;s little theorem because Fermat was the first to have proved a very special part of it.)
+
+An early use in English occurs in [A.A. Albert](https://en.wikipedia.org/wiki/Abraham_Adrian_Albert)&#39;s *Modern Higher Algebra* (1937), which refers to &quot;the so-called &#39;little&#39; Fermat theorem&quot; on page 206.[[9]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-9)
+
+### Further history
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=2)] Main article: [Chinese hypothesis](https://en.wikipedia.org/wiki/Chinese_hypothesis)
+
+Some mathematicians independently made the related hypothesis (sometimes incorrectly called the Chinese hypothesis) that 2*p* ≡ 2 (mod *p*) if and only if p is prime. Indeed, the &quot;if&quot; part is true, and it is a special case of Fermat&#39;s little theorem. However, the &quot;only if&quot; part is false: For example, 2341 ≡ 2 (mod 341), but 341 = 11 × 31 is a [pseudoprime](https://en.wikipedia.org/wiki/Pseudoprime) to base 2. See [below](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#Pseudoprimes).
+
+## Proofs
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=3)] Main article: [Proofs of Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Proofs_of_Fermat&#39;s_little_theorem)
+
+Several proofs of Fermat&#39;s little theorem are known. It is frequently proved as a [corollary](https://en.wikipedia.org/wiki/Corollary) of [Euler&#39;s theorem](https://en.wikipedia.org/wiki/Euler&#39;s_theorem).
+
+## Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=4)]
+
+[Euler&#39;s theorem](https://en.wikipedia.org/wiki/Euler&#39;s_theorem) is a generalization of Fermat&#39;s little theorem: For any [modulus](https://en.wikipedia.org/wiki/Modular_arithmetic) n and any integer a coprime to n, one has
+
+a  φ ( n )   ≡ 1   ( mod  n )  ,   {\displaystyle a^{\varphi (n)}\equiv 1{\pmod {n}},}
+
+where *φ*(*n*) denotes [Euler&#39;s totient function](https://en.wikipedia.org/wiki/Euler&#39;s_totient_function) (which counts the integers from 1 to n that are coprime to n). Fermat&#39;s little theorem is indeed a special case, because if n is a prime number, then *φ*(*n*) = *n* − 1.
+
+A corollary of Euler&#39;s theorem is: For every positive integer n, if the integer a is [coprime](https://en.wikipedia.org/wiki/Coprime_integers) with n, then     x ≡ y   ( mod  φ ( n ) )    implies    a  x   ≡  a  y     ( mod  n )  ,   {\displaystyle x\equiv y{\pmod {\varphi (n)}}\quad {\text{implies}}\quad a^{x}\equiv a^{y}{\pmod {n}},}   for any integers x and y. This follows from Euler&#39;s theorem, since, if     x ≡ y   ( mod  φ ( n ) )    {\displaystyle x\equiv y{\pmod {\varphi (n)}}}  , then *x* = *y* + *kφ*(*n*) for some integer k, and one has      a  x   =  a  y + φ ( n ) k   =  a  y   (  a  φ ( n )    )  k   ≡  a  y    1  k   ≡  a  y     ( mod  n )  .   {\displaystyle a^{x}=a^{y+\varphi (n)k}=a^{y}(a^{\varphi (n)})^{k}\equiv a^{y}1^{k}\equiv a^{y}{\pmod {n}}.}
+
+If n is prime, this is also a corollary of Fermat&#39;s little theorem. This is widely used in [modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic), because this allows reducing [modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) with large exponents to exponents smaller than n.
+
+Euler&#39;s theorem is used with n not prime in [public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography), specifically in the [RSA cryptosystem](https://en.wikipedia.org/wiki/RSA_cryptosystem), typically in the following way:[[10]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-10) if     y =  x  e     ( mod  n )  ,   {\displaystyle y=x^{e}{\pmod {n}},}   retrieving x from the values of y, e and n is easy if one knows *φ*(*n*).[[11]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-11) In fact, the [extended Euclidean algorithm](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse#Extended_Euclidean_algorithm) allows computing the [modular inverse](https://en.wikipedia.org/wiki/Modular_inverse) of e modulo *φ*(*n*), that is, the integer f such that     e f ≡ 1   ( mod  φ ( n ) )  .   {\displaystyle ef\equiv 1{\pmod {\varphi (n)}}.}   It follows that     x ≡  x  e f   ≡ (  x  e    )  f   ≡  y  f     ( mod  n )  .   {\displaystyle x\equiv x^{ef}\equiv (x^{e})^{f}\equiv y^{f}{\pmod {n}}.}
+
+On the other hand, if *n* = *pq* is the product of two distinct prime numbers, then *φ*(*n*) = (*p* − 1)(*q* − 1). In this case, finding f from n and e is as difficult as computing *φ*(*n*) (this has not been proven, but no algorithm is known for computing f without knowing *φ*(*n*)). Knowing only n, the computation of *φ*(*n*) has essentially the same difficulty as the factorization of n, since *φ*(*n*) = (*p* − 1)(*q* − 1), and conversely, the factors p and q are the (integer) solutions of the equation *x*2 − (*n* − *φ*(*n*) + 1) *x* + *n* = 0.
+
+The basic idea of RSA cryptosystem is thus: If a message x is encrypted as *y* = *xe* (mod *n*), using public values of n and e, then, with the current knowledge, it cannot be decrypted without finding the (secret) factors p and q of n.
+
+Fermat&#39;s little theorem is also related to the [Carmichael function](https://en.wikipedia.org/wiki/Carmichael_function) and [Carmichael&#39;s theorem](https://en.wikipedia.org/wiki/Carmichael&#39;s_theorem), as well as to [Lagrange&#39;s theorem in group theory](https://en.wikipedia.org/wiki/Lagrange&#39;s_theorem_(group_theory)).
+
+## Converse
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=5)]
+
+The [converse](https://en.wikipedia.org/wiki/Logical_converse) of Fermat&#39;s little theorem fails for [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number). However, a slightly weaker variant of the converse is **Lehmer&#39;s theorem**:
+
+If there exists an integer a such that      a  p − 1   ≡ 1   ( mod  p )    {\displaystyle a^{p-1}\equiv 1{\pmod {p}}}   and for all primes q dividing *p* − 1 one has      a  ( p − 1 )  /  q   ≢ 1   ( mod  p )  ,   {\displaystyle a^{(p-1)/q}\not \equiv 1{\pmod {p}},}   then p is prime.
+
+This theorem forms the basis for the [Lucas primality test](https://en.wikipedia.org/wiki/Lucas_primality_test), an important [primality test](https://en.wikipedia.org/wiki/Primality_test), and Pratt&#39;s [primality certificate](https://en.wikipedia.org/wiki/Primality_certificate).
+
+## Pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=6)] Main article: [Pseudoprime](https://en.wikipedia.org/wiki/Pseudoprime)
+
+If a and p are coprime numbers such that *a**p*−1 − 1 is divisible by p, then p need not be prime. If it is not, then p is called a *(Fermat) pseudoprime* to base a. The first pseudoprime to base 2 was found in 1820 by [Pierre Frédéric Sarrus](https://en.wikipedia.org/wiki/Pierre_Fr%C3%A9d%C3%A9ric_Sarrus): 341 = 11 × 31.[[12]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-12)[[13]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-13)
+
+A number p that is a Fermat pseudoprime to base a for every number a coprime to p is called a [Carmichael number](https://en.wikipedia.org/wiki/Carmichael_number). Alternately, any number p satisfying the equality     gcd  (  p ,  ∑  a = 1   p − 1    a  p − 1    )  = 1   {\displaystyle \gcd \left(p,\sum _{a=1}^{p-1}a^{p-1}\right)=1}   is either a prime or a Carmichael number.
+
+## Miller–Rabin primality test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=7)]
+
+The [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test) uses the following extension of Fermat&#39;s little theorem:[[14]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-14)
+
+&gt; If p is an odd prime and p − 1 = 2sd with s &gt; 0 and d odd &gt; 0, then for every a coprime to p, either ad ≡ 1 (mod p) or there exists r such that 0 ≤ r &lt; s and a2rd ≡ −1 (mod p).
+
+This result may be deduced from Fermat&#39;s little theorem by the fact that, if p is an odd prime, then the integers modulo p form a [finite field](https://en.wikipedia.org/wiki/Finite_field), in which 1 modulo p has exactly two square roots, 1 and −1 modulo p.
+
+Note that *a**d* ≡ 1 (mod *p*) holds trivially for *a* ≡ 1 (mod *p*), because the congruence relation is [compatible with exponentiation](https://en.wikipedia.org/wiki/Modular_arithmetic#Properties). And *a**d* = *a*20*d* ≡ −1 (mod *p*) holds trivially for *a* ≡ −1 (mod *p*) since d is odd, for the same reason. That is why one usually chooses a random a in the interval 1 &lt; *a* &lt; *p* − 1.
+
+The Miller–Rabin test uses this property in the following way: given an odd integer p for which primality has to be tested, write *p* − 1 = 2*s**d* with s &gt; 0 and d odd &gt; 0, and choose a random a such that 1 &lt; *a* &lt; *p* − 1; then compute *b* = *a**d* mod *p*; if b is not 1 nor −1, then square it repeatedly modulo p until you get −1 or have squared *s* − 1 times. If *b* ≠ 1 and −1 has not been obtained by squaring, then p is a [*composite*](https://en.wikipedia.org/wiki/Composite_number) and a is a [witness](https://en.wikipedia.org/wiki/Witness_(mathematics)) for the compositeness of p. Otherwise, p is a *strong [probable prime](https://en.wikipedia.org/wiki/Probable_prime) to base a*; that is, it may be prime or not. If p is composite, the probability that the test declares it a strong probable prime anyway is at most 1⁄4, in which case p is a *[strong pseudoprime](https://en.wikipedia.org/wiki/Strong_pseudoprime)*, and a is a *strong liar*. Therefore after k non-conclusive random tests, the probability that p is composite is at most 4−*k*, and may thus be made as low as desired by increasing k.
+
+In summary, the test either proves that a number is composite or asserts that it is prime with a probability of error that may be chosen as low as desired. The test is very simple to implement and computationally more efficient than all known deterministic tests. Therefore, it is generally used before starting a proof of primality.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=8)]
+- [Fermat quotient](https://en.wikipedia.org/wiki/Fermat_quotient)
+- [Frobenius endomorphism](https://en.wikipedia.org/wiki/Frobenius_endomorphism)
+- [p-derivation](https://en.wikipedia.org/wiki/P-derivation)
+- [Fractions with prime denominators](https://en.wikipedia.org/wiki/Recurring_decimal#Fractions_with_prime_denominators): numbers with behavior relating to Fermat&#39;s little theorem
+- [RSA](https://en.wikipedia.org/wiki/RSA_(algorithm))
+- [Table of congruences](https://en.wikipedia.org/wiki/Table_of_congruences)
+- [Modular multiplicative inverse](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=9)]
+1. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-1) [Long 1972](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFLong1972), pp. 87–88.
+2. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-2) [Pettofrezzo &amp; Byrkit 1970](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFPettofrezzoByrkit1970), pp. 110–111.
+3. [Jump up to: 1](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-0) [2](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-1) [3](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-2) [Burton 2011](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFBurton2011), p. 514.
+4. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-4) Fermat, Pierre (1894), Tannery, P.; Henry, C. (eds.), [*Oeuvres de Fermat. Tome 2: Correspondance*](https://archive.org/stream/oeuvresdefermat02ferm#page/206/mode/2up), Paris: Gauthier-Villars, pp. 206–212 (in French)
+5. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-5) [Mahoney 1994](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFMahoney1994), p. 295 for the English translation
+6. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-6) Euler, Leonhard (1736). [&quot;Theorematum quorundam ad numeros primos spectantium demonstratio&quot;](https://www.biodiversitylibrary.org/item/38573#page/167/mode/1up) [Proof of certain theorems relating to prime numbers]. *Commentarii Academiae Scientiarum Imperialis Petropolitanae (Memoirs of the Imperial Academy of Sciences in St. Petersburg)* (in Latin). **8**: 141–146.
+7. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-7) [Ore 1988](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFOre1988), p. 273
+8. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-8) Hensel, Kurt (1913). [*Zahlentheorie*](https://books.google.com/books?id=SbhUAAAAYAAJ&amp;pg=PA103) [*Number Theory*] (in German). Berlin and Leipzig, Germany: G. J. Göschen. p. 103.
+9. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-9) [Albert 2015](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFAlbert2015), p. 206
+10. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-10) Trappe, Wade; Washington, Lawrence C. (2002), *Introduction to Cryptography with Coding Theory*, Prentice-Hall, p. 78, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-13-061814-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-061814-6)
+11. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-11) If y is not coprime with n, Euler&#39;s theorem does not work, but this case is sufficiently rare for not being considered. In fact, if it occurred by chance, this would provide an easy factorization of n, and thus break the considered instance of RSA.
+12. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-12) [Sloane, N. J. A.](https://en.wikipedia.org/wiki/Neil_Sloane) (ed.). [&quot;Sequence A128311 (Remainder upon division of 2*n*−1−1 by *n*.)&quot;](https://oeis.org/A128311). *The [On-Line Encyclopedia of Integer Sequences](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)*. OEIS Foundation.
+13. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-13) [Sarrus, Frédéric](https://en.wikipedia.org/wiki/Pierre_Fr%C3%A9d%C3%A9ric_Sarrus) (1819–1820). [&quot;Démonstration de la fausseté du théorème énoncé á la page 320 du IXe volume de ce recueil&quot;](https://www.numdam.org/item?id=AMPA_1819-1820__10__184_0) [Demonstration of the falsity of the theorem stated on page 320 of the 9th volume of this collection]. *Annales de Mathématiques Pures et Appliquées* (in French). **10**: 184–187.
+14. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-14) Rempe-Gillen, Lasse; [Waldecker, Rebecca](https://en.wikipedia.org/wiki/Rebecca_Waldecker) (2013-12-11). [&quot;4.5.1. Lemma (Roots of unity modulo a prime)&quot;](https://books.google.com/books?id=nQVZAgAAQBAJ&amp;q=The+Miller%E2%80%93Rabin+primality+test+uses+the+following+extension+of+Fermat%27s+little+theorem&amp;pg=PA144). [*Primality Testing for Beginners*](https://en.wikipedia.org/wiki/Primality_Testing_for_Beginners). American Mathematical Soc. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [9780821898833](https://en.wikipedia.org/wiki/Special:BookSources/9780821898833).
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=10)]
+- [Albert, A. Adrian](https://en.wikipedia.org/wiki/Abraham_Adrian_Albert) (2015) [1938], [*Modern higher algebra*](https://books.google.com/books?id=iVwZCgAAQBAJ&amp;pg=PA206), [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-107-54462-8](https://en.wikipedia.org/wiki/Special:BookSources/978-1-107-54462-8)
+- Burton, David M. (2011), *The History of Mathematics / An Introduction* (7th ed.), McGraw-Hill, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-07-338315-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-07-338315-6)
+- Long, Calvin T. (1972), *Elementary Introduction to Number Theory* (2nd ed.), Lexington: [D. C. Heath and Company](https://en.wikipedia.org/wiki/D._C._Heath_and_Company), [LCCN](https://en.wikipedia.org/wiki/LCCN_(identifier)) [77171950](https://lccn.loc.gov/77171950)
+- Mahoney, Michael Sean (1994), *The Mathematical Career of Pierre de Fermat, 1601–1665* (2nd ed.), Princeton University Press, [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1994mcpd.book.....M](https://ui.adsabs.harvard.edu/abs/1994mcpd.book.....M), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-691-03666-3](https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-03666-3)
+- Ore, Oystein (1988) [1948], [*Number Theory and Its History*](https://archive.org/details/numbertheoryitsh0000orey), Dover, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-486-65620-5](https://en.wikipedia.org/wiki/Special:BookSources/978-0-486-65620-5)
+- Pettofrezzo, Anthony J.; Byrkit, Donald R. (1970), *Elements of Number Theory*, Englewood Cliffs: [Prentice Hall](https://en.wikipedia.org/wiki/Prentice_Hall), [LCCN](https://en.wikipedia.org/wiki/LCCN_(identifier)) [71081766](https://lccn.loc.gov/71081766)
+
+## Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=11)]
+- [Paulo Ribenboim](https://en.wikipedia.org/wiki/Paulo_Ribenboim) (1995). *The New Book of Prime Number Records* (3rd ed.). New York: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94457-5](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94457-5). pp. 22–25, 49.
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=12)]
+- [![Wikimedia Commons logo](https://thumb.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Commons-logo.svg) Media related to [Fermat&#39;s little theorem](https://commons.wikimedia.org/wiki/Category:Fermat&#39;s%20little%20theorem) at Wikimedia Commons
+- [János Bolyai and the pseudoprimes](https://web.archive.org/web/20041022022031/http://bolyai.port5.com/kisfermat.htm) (in Hungarian)
+- [Fermat&#39;s Little Theorem](https://www.cut-the-knot.org/blue/Fermat.shtml) at [cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)
+- [Euler Function and Theorem](https://www.cut-the-knot.org/blue/Euler.shtml) at cut-the-knot
+- [Fermat&#39;s Little Theorem and Sophie&#39;s Proof](https://fermatslasttheorem.blogspot.com/2005/08/fermats-little-theorem.html)
+- [&quot;Fermat&#39;s little theorem&quot;](https://www.encyclopediaofmath.org/index.php?title=Fermat%27s_little_theorem), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fermat&#39;s Little Theorem&quot;](https://mathworld.wolfram.com/FermatsLittleTheorem.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fermat&#39;s Little Theorem Converse&quot;](https://mathworld.wolfram.com/FermatsLittleTheoremConverse.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+ [Portal](https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals):
+- [![icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Square_root_of_x.svg/20px-Square_root_of_x.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Square_root_of_x.svg) [Mathematics](https://en.wikipedia.org/wiki/Portal:Mathematics)
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Pierre_de_Fermat)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Pierre_de_Fermat)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Pierre_de_Fermat)
+[Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat)Work
+- [Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem)
+- [Fermat number](https://en.wikipedia.org/wiki/Fermat_number)
+- [Fermat&#39;s principle](https://en.wikipedia.org/wiki/Fermat&#39;s_principle)
+- [Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem)
+- [Fermat polygonal number theorem](https://en.wikipedia.org/wiki/Fermat_polygonal_number_theorem)
+- [Fermat pseudoprime](https://en.wikipedia.org/wiki/Fermat_pseudoprime)
+- [Fermat point](https://en.wikipedia.org/wiki/Fermat_point)
+- [Fermat&#39;s theorem (stationary points)](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem_(stationary_points))
+- [Fermat&#39;s theorem on sums of two squares](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem_on_sums_of_two_squares)
+- [Fermat&#39;s spiral](https://en.wikipedia.org/wiki/Fermat&#39;s_spiral)
+- [Fermat&#39;s right triangle theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_right_triangle_theorem)
+- [Primality test](https://en.wikipedia.org/wiki/Fermat_primality_test)
+- [Quotient](https://en.wikipedia.org/wiki/Fermat_quotient)
+ Related
+- [List of things named after Pierre de Fermat](https://en.wikipedia.org/wiki/List_of_things_named_after_Pierre_de_Fermat)
+- [Wiles&#39;s proof of Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Wiles&#39;s_proof_of_Fermat&#39;s_Last_Theorem)
+- [Fermat&#39;s Last Theorem in fiction](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem_in_fiction)
+- [Fermat Prize](https://en.wikipedia.org/wiki/Fermat_Prize)
+- *[Fermat&#39;s Last Tango](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Tango)* (2000 musical)
+- *[Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem_(book))* (popular science book)
+- [12007 Fermat](https://en.wikipedia.org/wiki/List_of_minor_planets:_12001%E2%80%9313000)
+  [Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control): National [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q188295#identifiers)
+- [Czech Republic](https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica=ph158529&amp;CON_LNG=ENG)
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;oldid=1375902312](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;oldid=1375902312)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Modular arithmetic](https://en.wikipedia.org/wiki/Category:Modular_arithmetic)
+- [Theorems about prime numbers](https://en.wikipedia.org/wiki/Category:Theorems_about_prime_numbers)
+- [Pierre de Fermat](https://en.wikipedia.org/wiki/Category:Pierre_de_Fermat)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles containing French-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_French-language_text)
+- [CS1 Latin-language sources (la)](https://en.wikipedia.org/wiki/Category:CS1_Latin-language_sources_(la))
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+- [Articles containing German-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_German-language_text)
+- [CS1 French-language sources (fr)](https://en.wikipedia.org/wiki/Category:CS1_French-language_sources_(fr))
+- [Commons category link from Wikidata](https://en.wikipedia.org/wiki/Category:Commons_category_link_from_Wikidata)
+
+    [https://en\.wikipedia\.org/wiki/Fermat&#39;s\_little\_theorem?action=edit](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Fermat&#39;s little theorem</h3><pre># Fermat&#39;s little theorem
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%A8%D8%B1%D9%87%D9%86%D8%A9_%D9%81%D9%8A%D8%B1%D9%85%D8%A7_%D8%A7%D9%84%D8%B5%D8%BA%D8%B1%D9%89)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D1%8D%D0%B0%D1%80%D1%8D%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Български](https://bg.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%BA%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [বাংলা](https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%B0_%E0%A6%9B%E0%A7%8B%E0%A6%9F_%E0%A6%89%E0%A6%AA%E0%A6%AA%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%AF)
+- [Català](https://ca.wikipedia.org/wiki/Petit_teorema_de_Fermat)
+- [کوردی](https://ckb.wikipedia.org/wiki/%D8%AA%DB%8C%DB%86%D8%B1%D9%85%DB%8C_%D8%A8%DA%86%D9%88%D9%88%DA%A9%DB%8C_%D9%81%DB%8E%D8%B1%D9%85%D8%A7)
+- [Čeština](https://cs.wikipedia.org/wiki/Mal%C3%A1_Fermatova_v%C4%9Bta)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0_%D0%BA%C4%95%C3%A7%C4%95%D0%BD_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B8)
+- [Dansk](https://da.wikipedia.org/wiki/Fermats_lille_s%C3%A6tning)
+- [Deutsch](https://de.wikipedia.org/wiki/Kleiner_fermatscher_Satz)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%9C%CE%B9%CE%BA%CF%81%CF%8C_%CE%B8%CE%B5%CF%8E%CF%81%CE%B7%CE%BC%CE%B1_%CF%84%CE%BF%CF%85_%CE%A6%CE%B5%CF%81%CE%BC%CE%AC)
+- [Esperanto](https://eo.wikipedia.org/wiki/Malgranda_teoremo_de_Fermat)
+- [Español](https://es.wikipedia.org/wiki/Peque%C3%B1o_teorema_de_Fermat)
+- [Euskara](https://eu.wikipedia.org/wiki/Fermaten_teorema_txikia)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%82%D8%B6%DB%8C%D9%87_%DA%A9%D9%88%DA%86%DA%A9_%D9%81%D8%B1%D9%85%D8%A7)
+- [Suomi](https://fi.wikipedia.org/wiki/Fermat%E2%80%99n_pieni_lause)
+- [Võro](https://fiu-vro.wikipedia.org/wiki/Fermat%27_v%C3%A4ikene_teorem)
+- [Français](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat)
+- [Arpetan](https://frp.wikipedia.org/wiki/Peti%C3%B4t_t%C3%A8or%C3%A8mo_de_F%C3%A8rmat)
+- [Galego](https://gl.wikipedia.org/wiki/Pequeno_teorema_de_Fermat)
+- [עברית](https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%A4%D7%98_%D7%94%D7%A7%D7%98%D7%9F_%D7%A9%D7%9C_%D7%A4%D7%A8%D7%9E%D7%94)
+- [Magyar](https://hu.wikipedia.org/wiki/Kis_Fermat-t%C3%A9tel)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D5%96%D5%A5%D6%80%D5%B4%D5%A1%D5%B5%D5%AB_%D6%83%D5%B8%D6%84%D6%80_%D5%A9%D5%A5%D5%B8%D6%80%D5%A5%D5%B4)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Teorema_kecil_Fermat)
+- [Italiano](https://it.wikipedia.org/wiki/Piccolo_teorema_di_Fermat)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9E%E3%83%BC%E3%81%AE%E5%B0%8F%E5%AE%9A%E7%90%86)
+- [ქართული](https://ka.wikipedia.org/wiki/%E1%83%A4%E1%83%94%E1%83%A0%E1%83%9B%E1%83%90%E1%83%A1_%E1%83%9B%E1%83%AA%E1%83%98%E1%83%A0%E1%83%94_%E1%83%97%E1%83%94%E1%83%9D%E1%83%A0%E1%83%94%E1%83%9B%E1%83%90)
+- [Қазақша](https://kk.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D1%8B%D2%A3_%D0%BA%D1%96%D1%88%D1%96_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0%D1%81%D1%8B)
+- [한국어](https://ko.wikipedia.org/wiki/%ED%8E%98%EB%A5%B4%EB%A7%88%EC%9D%98_%EC%86%8C%EC%A0%95%EB%A6%AC)
+- [Lietuvių](https://lt.wikipedia.org/wiki/Ma%C5%BEoji_Ferma_teorema)
+- [Latviešu](https://lv.wikipedia.org/wiki/Ferm%C4%81_maz%C4%81_teor%C4%93ma)
+- [Македонски](https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BE%D0%B2%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0)
+- [മലയാളം](https://ml.wikipedia.org/wiki/%E0%B4%AB%E0%B5%86%E0%B5%BC%E0%B4%AE%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%9A%E0%B5%86%E0%B4%B1%E0%B4%BF%E0%B4%AF_%E0%B4%A8%E0%B4%BF%E0%B4%AF%E0%B4%AE%E0%B4%82)
+- [Монгол](https://mn.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD_%D0%B1%D0%B0%D0%B3%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC)
+- [မြန်မာဘာသာ](https://my.wikipedia.org/wiki/%E1%80%96%E1%80%B2%E1%80%99%E1%81%8F_%E1%80%9E%E1%80%AE%E1%80%A1%E1%80%AD%E1%80%AF%E1%80%9B%E1%80%99%E1%80%BA%E1%80%A1%E1%80%84%E1%80%9A%E1%80%BA)
+- [Nederlands](https://nl.wikipedia.org/wiki/Kleine_stelling_van_Fermat)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Fermats_lille_teorem)
+- [Polski](https://pl.wikipedia.org/wiki/Ma%C5%82e_twierdzenie_Fermata)
+- [Piemontèis](https://pms.wikipedia.org/wiki/Cit_teorema_%C3%ABd_Fermat)
+- [Português](https://pt.wikipedia.org/wiki/Pequeno_teorema_de_Fermat)
+- [Română](https://ro.wikipedia.org/wiki/Mica_teorem%C4%83_a_lui_Fermat)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Mala_Fermatova_teorema)
+- [Simple English](https://simple.wikipedia.org/wiki/Fermat%27s_little_theorem)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Mal%C3%A1_Fermatova_veta)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Fermatov_mali_izrek)
+- [Shqip](https://sq.wikipedia.org/wiki/Teorema_e_vog%C3%ABl_Fermat)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0%D0%BE%D0%B2%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/Fermats_lilla_sats)
+- [தமிழ்](https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AF%86%E0%AE%B0%E0%AF%8D%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%A9%E0%AF%8D_%E0%AE%9A%E0%AE%BF%E0%AE%B1%E0%AE%BF%E0%AE%AF_%E0%AE%A4%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%AE%E0%AF%8D)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B8%97%E0%B8%A4%E0%B8%A9%E0%B8%8E%E0%B8%B5%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%B2)
+- [Türkçe](https://tr.wikipedia.org/wiki/Fermat%27n%C4%B1n_k%C3%BC%C3%A7%C3%BCk_teoremi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)
+- [Oʻzbekcha / ўзбекча](https://uz.wikipedia.org/wiki/Fermaning_kichik_teoremasi)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_l%C3%BD_nh%E1%BB%8F_Fermat)
+- [閩南語 / Bân-lâm-gí](https://zh-min-nan.wikipedia.org/wiki/Fermat_si%C3%B3_t%C4%93ng-l%C3%AD)
+- [中文](https://zh.wikipedia.org/wiki/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q188295#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   A prime p divides a^p–a for any integer a For other theorems named after Pierre de Fermat, see [Fermat&#39;s theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem).
+
+In [number theory](https://en.wikipedia.org/wiki/Number_theory), **Fermat&#39;s little theorem** states that if p is a [prime number](https://en.wikipedia.org/wiki/Prime_number), then for any [integer](https://en.wikipedia.org/wiki/Integer) a, the number *a**p* − *a* is an integer multiple of p. In the notation of [modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic), this is expressed as      a  p   ≡ a   ( mod  p )  .   {\displaystyle a^{p}\equiv a{\pmod {p}}.}
+
+For example, if *a* = 2 and *p* = 7, then 27 = 128, and 128 − 2 = 126 = 7 × 18 is an integer multiple of 7.
+
+If a is not divisible by p; that is, if a is [coprime](https://en.wikipedia.org/wiki/Coprime) to p, then Fermat&#39;s little theorem is equivalent to the statement that *a**p* − 1 − 1 is an integer multiple of p, or in symbols:[[1]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-2)      a  p − 1   ≡ 1   ( mod  p )  .   {\displaystyle a^{p-1}\equiv 1{\pmod {p}}.}
+
+For example, if *a* = 2 and *p* = 7, then 26 = 64, and 64 − 1 = 63 = 7 × 9 is a multiple of 7.
+
+Fermat&#39;s little theorem is the basis for the [Fermat primality test](https://en.wikipedia.org/wiki/Fermat_primality_test) and is one of the fundamental results of [elementary number theory](https://en.wikipedia.org/wiki/Elementary_number_theory). The theorem is named after [Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat), who stated it in 1640. It is called the &quot;little theorem&quot; to distinguish it from [Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem).[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+</pre></article><article id="section-0003"><h3>History</h3><pre># History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=1)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Pierre_de_Fermat.jpg/250px-Pierre_de_Fermat.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Pierre_de_Fermat.jpg)Pierre de Fermat
+
+Pierre de Fermat first stated the theorem in a letter dated October 18, 1640, to his friend and confidant [Frénicle de Bessy](https://en.wikipedia.org/wiki/Fr%C3%A9nicle_de_Bessy). His formulation is equivalent to the following:[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+
+&gt; If p is a prime and a is any integer not divisible by p, then a p − 1 − 1 is divisible by p.
+&gt;
+
+Fermat&#39;s original statement was
+
+&gt; Tout nombre premier mesure infailliblement une des puissances
+&gt;
+&gt;
+&gt;
+&gt;         −
+&gt;         1
+&gt;
+&gt;
+&gt;     {\displaystyle -1}
+&gt;
+&gt;  de quelque progression que ce soit, et l&#39;exposant de la dite puissance est sous-multiple du nombre premier donné
+&gt;
+&gt;
+&gt;
+&gt;         −
+&gt;         1
+&gt;
+&gt;
+&gt;     {\displaystyle -1}
+&gt;
+&gt; ; et, après qu&#39;on a trouvé la première puissance qui satisfait à la question, toutes celles dont les exposants sont multiples de l&#39;exposant de la première satisfont tout de même à la question.
+&gt;
+
+This may be translated, with explanations and formulas added in brackets for easier understanding, as:
+
+&gt;
+&gt; Every prime number [p] divides necessarily one of the powers minus one of any [geometric] progression [a, a2, a3, …] [that is, there exists t such that p divides at − 1], and the exponent of this power [t] divides the given prime minus one [divides p − 1]. After one has found the first power [t] that satisfies the question, all those whose exponents are multiples of the exponent of the first one satisfy similarly the question [that is, all multiples of the first t have the same property].
+&gt;
+
+Fermat did not consider the case where a is a multiple of p nor prove his assertion, only stating:[[4]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-4)
+
+&gt; Et cette proposition est généralement vraie en toutes progressions et en tous nombres premiers; de quoi je vous envoierois la démonstration, si je n&#39;appréhendois d&#39;être trop long.
+
+&gt; (And this proposition is generally true for all series [sic] and for all prime numbers; I would send you a demonstration of it, if I did not fear going on for too long.)[5]
+
+[Euler](https://en.wikipedia.org/wiki/Euler) provided the first published proof in 1736, in a paper titled &quot;Theorematum Quorundam ad Numeros Primos Spectantium Demonstratio&quot; (in English: &quot;Demonstration of Certain Theorems Concerning Prime Numbers&quot;) in the *Proceedings* of the St. Petersburg Academy,[[6]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-6)[[7]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-7) but [Leibniz](https://en.wikipedia.org/wiki/Gottfried_Leibniz) had given virtually the same proof in an unpublished manuscript from sometime before 1683.[[3]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-Burton-3)
+
+The term &quot;Fermat&#39;s little theorem&quot; was probably first used in print in 1913 in *Zahlentheorie* by [Kurt Hensel](https://en.wikipedia.org/wiki/Kurt_Hensel):[[8]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-8)
+
+&gt; Für jede endliche Gruppe besteht nun ein Fundamentalsatz, welcher der kleine Fermatsche Satz genannt zu werden pflegt, weil ein ganz spezieller Teil desselben zuerst von Fermat bewiesen worden ist.
+
+&gt; (There is a fundamental theorem holding in every finite group, usually called Fermat&#39;s little theorem because Fermat was the first to have proved a very special part of it.)
+
+An early use in English occurs in [A.A. Albert](https://en.wikipedia.org/wiki/Abraham_Adrian_Albert)&#39;s *Modern Higher Algebra* (1937), which refers to &quot;the so-called &#39;little&#39; Fermat theorem&quot; on page 206.[[9]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-9)
+</pre></article><article id="section-0004"><h3>Further history</h3><pre># Further history
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=2)] Main article: [Chinese hypothesis](https://en.wikipedia.org/wiki/Chinese_hypothesis)
+
+Some mathematicians independently made the related hypothesis (sometimes incorrectly called the Chinese hypothesis) that 2*p* ≡ 2 (mod *p*) if and only if p is prime. Indeed, the &quot;if&quot; part is true, and it is a special case of Fermat&#39;s little theorem. However, the &quot;only if&quot; part is false: For example, 2341 ≡ 2 (mod 341), but 341 = 11 × 31 is a [pseudoprime](https://en.wikipedia.org/wiki/Pseudoprime) to base 2. See [below](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#Pseudoprimes).
+</pre></article><article id="section-0005"><h3>Proofs</h3><pre># Proofs
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=3)] Main article: [Proofs of Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Proofs_of_Fermat&#39;s_little_theorem)
+
+Several proofs of Fermat&#39;s little theorem are known. It is frequently proved as a [corollary](https://en.wikipedia.org/wiki/Corollary) of [Euler&#39;s theorem](https://en.wikipedia.org/wiki/Euler&#39;s_theorem).
+</pre></article><article id="section-0006"><h3>Generalizations</h3><pre># Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=4)]
+
+[Euler&#39;s theorem](https://en.wikipedia.org/wiki/Euler&#39;s_theorem) is a generalization of Fermat&#39;s little theorem: For any [modulus](https://en.wikipedia.org/wiki/Modular_arithmetic) n and any integer a coprime to n, one has
+
+a  φ ( n )   ≡ 1   ( mod  n )  ,   {\displaystyle a^{\varphi (n)}\equiv 1{\pmod {n}},}
+
+where *φ*(*n*) denotes [Euler&#39;s totient function](https://en.wikipedia.org/wiki/Euler&#39;s_totient_function) (which counts the integers from 1 to n that are coprime to n). Fermat&#39;s little theorem is indeed a special case, because if n is a prime number, then *φ*(*n*) = *n* − 1.
+
+A corollary of Euler&#39;s theorem is: For every positive integer n, if the integer a is [coprime](https://en.wikipedia.org/wiki/Coprime_integers) with n, then     x ≡ y   ( mod  φ ( n ) )    implies    a  x   ≡  a  y     ( mod  n )  ,   {\displaystyle x\equiv y{\pmod {\varphi (n)}}\quad {\text{implies}}\quad a^{x}\equiv a^{y}{\pmod {n}},}   for any integers x and y. This follows from Euler&#39;s theorem, since, if     x ≡ y   ( mod  φ ( n ) )    {\displaystyle x\equiv y{\pmod {\varphi (n)}}}  , then *x* = *y* + *kφ*(*n*) for some integer k, and one has      a  x   =  a  y + φ ( n ) k   =  a  y   (  a  φ ( n )    )  k   ≡  a  y    1  k   ≡  a  y     ( mod  n )  .   {\displaystyle a^{x}=a^{y+\varphi (n)k}=a^{y}(a^{\varphi (n)})^{k}\equiv a^{y}1^{k}\equiv a^{y}{\pmod {n}}.}
+
+If n is prime, this is also a corollary of Fermat&#39;s little theorem. This is widely used in [modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic), because this allows reducing [modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) with large exponents to exponents smaller than n.
+
+Euler&#39;s theorem is used with n not prime in [public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography), specifically in the [RSA cryptosystem](https://en.wikipedia.org/wiki/RSA_cryptosystem), typically in the following way:[[10]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-10) if     y =  x  e     ( mod  n )  ,   {\displaystyle y=x^{e}{\pmod {n}},}   retrieving x from the values of y, e and n is easy if one knows *φ*(*n*).[[11]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-11) In fact, the [extended Euclidean algorithm](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse#Extended_Euclidean_algorithm) allows computing the [modular inverse](https://en.wikipedia.org/wiki/Modular_inverse) of e modulo *φ*(*n*), that is, the integer f such that     e f ≡ 1   ( mod  φ ( n ) )  .   {\displaystyle ef\equiv 1{\pmod {\varphi (n)}}.}   It follows that     x ≡  x  e f   ≡ (  x  e    )  f   ≡  y  f     ( mod  n )  .   {\displaystyle x\equiv x^{ef}\equiv (x^{e})^{f}\equiv y^{f}{\pmod {n}}.}
+
+On the other hand, if *n* = *pq* is the product of two distinct prime numbers, then *φ*(*n*) = (*p* − 1)(*q* − 1). In this case, finding f from n and e is as difficult as computing *φ*(*n*) (this has not been proven, but no algorithm is known for computing f without knowing *φ*(*n*)). Knowing only n, the computation of *φ*(*n*) has essentially the same difficulty as the factorization of n, since *φ*(*n*) = (*p* − 1)(*q* − 1), and conversely, the factors p and q are the (integer) solutions of the equation *x*2 − (*n* − *φ*(*n*) + 1) *x* + *n* = 0.
+
+The basic idea of RSA cryptosystem is thus: If a message x is encrypted as *y* = *xe* (mod *n*), using public values of n and e, then, with the current knowledge, it cannot be decrypted without finding the (secret) factors p and q of n.
+
+Fermat&#39;s little theorem is also related to the [Carmichael function](https://en.wikipedia.org/wiki/Carmichael_function) and [Carmichael&#39;s theorem](https://en.wikipedia.org/wiki/Carmichael&#39;s_theorem), as well as to [Lagrange&#39;s theorem in group theory](https://en.wikipedia.org/wiki/Lagrange&#39;s_theorem_(group_theory)).
+</pre></article><article id="section-0007"><h3>Converse</h3><pre># Converse
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=5)]
+
+The [converse](https://en.wikipedia.org/wiki/Logical_converse) of Fermat&#39;s little theorem fails for [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number). However, a slightly weaker variant of the converse is **Lehmer&#39;s theorem**:
+
+If there exists an integer a such that      a  p − 1   ≡ 1   ( mod  p )    {\displaystyle a^{p-1}\equiv 1{\pmod {p}}}   and for all primes q dividing *p* − 1 one has      a  ( p − 1 )  /  q   ≢ 1   ( mod  p )  ,   {\displaystyle a^{(p-1)/q}\not \equiv 1{\pmod {p}},}   then p is prime.
+
+This theorem forms the basis for the [Lucas primality test](https://en.wikipedia.org/wiki/Lucas_primality_test), an important [primality test](https://en.wikipedia.org/wiki/Primality_test), and Pratt&#39;s [primality certificate](https://en.wikipedia.org/wiki/Primality_certificate).
+</pre></article><article id="section-0008"><h3>Pseudoprimes</h3><pre># Pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=6)] Main article: [Pseudoprime](https://en.wikipedia.org/wiki/Pseudoprime)
+
+If a and p are coprime numbers such that *a**p*−1 − 1 is divisible by p, then p need not be prime. If it is not, then p is called a *(Fermat) pseudoprime* to base a. The first pseudoprime to base 2 was found in 1820 by [Pierre Frédéric Sarrus](https://en.wikipedia.org/wiki/Pierre_Fr%C3%A9d%C3%A9ric_Sarrus): 341 = 11 × 31.[[12]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-12)[[13]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-13)
+
+A number p that is a Fermat pseudoprime to base a for every number a coprime to p is called a [Carmichael number](https://en.wikipedia.org/wiki/Carmichael_number). Alternately, any number p satisfying the equality     gcd  (  p ,  ∑  a = 1   p − 1    a  p − 1    )  = 1   {\displaystyle \gcd \left(p,\sum _{a=1}^{p-1}a^{p-1}\right)=1}   is either a prime or a Carmichael number.
+</pre></article><article id="section-0009"><h3>Miller–Rabin primality test</h3><pre># Miller–Rabin primality test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=7)]
+
+The [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test) uses the following extension of Fermat&#39;s little theorem:[[14]](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_note-14)
+
+&gt; If p is an odd prime and p − 1 = 2sd with s &gt; 0 and d odd &gt; 0, then for every a coprime to p, either ad ≡ 1 (mod p) or there exists r such that 0 ≤ r &lt; s and a2rd ≡ −1 (mod p).
+
+This result may be deduced from Fermat&#39;s little theorem by the fact that, if p is an odd prime, then the integers modulo p form a [finite field](https://en.wikipedia.org/wiki/Finite_field), in which 1 modulo p has exactly two square roots, 1 and −1 modulo p.
+
+Note that *a**d* ≡ 1 (mod *p*) holds trivially for *a* ≡ 1 (mod *p*), because the congruence relation is [compatible with exponentiation](https://en.wikipedia.org/wiki/Modular_arithmetic#Properties). And *a**d* = *a*20*d* ≡ −1 (mod *p*) holds trivially for *a* ≡ −1 (mod *p*) since d is odd, for the same reason. That is why one usually chooses a random a in the interval 1 &lt; *a* &lt; *p* − 1.
+
+The Miller–Rabin test uses this property in the following way: given an odd integer p for which primality has to be tested, write *p* − 1 = 2*s**d* with s &gt; 0 and d odd &gt; 0, and choose a random a such that 1 &lt; *a* &lt; *p* − 1; then compute *b* = *a**d* mod *p*; if b is not 1 nor −1, then square it repeatedly modulo p until you get −1 or have squared *s* − 1 times. If *b* ≠ 1 and −1 has not been obtained by squaring, then p is a [*composite*](https://en.wikipedia.org/wiki/Composite_number) and a is a [witness](https://en.wikipedia.org/wiki/Witness_(mathematics)) for the compositeness of p. Otherwise, p is a *strong [probable prime](https://en.wikipedia.org/wiki/Probable_prime) to base a*; that is, it may be prime or not. If p is composite, the probability that the test declares it a strong probable prime anyway is at most 1⁄4, in which case p is a *[strong pseudoprime](https://en.wikipedia.org/wiki/Strong_pseudoprime)*, and a is a *strong liar*. Therefore after k non-conclusive random tests, the probability that p is composite is at most 4−*k*, and may thus be made as low as desired by increasing k.
+
+In summary, the test either proves that a number is composite or asserts that it is prime with a probability of error that may be chosen as low as desired. The test is very simple to implement and computationally more efficient than all known deterministic tests. Therefore, it is generally used before starting a proof of primality.
+</pre></article><article id="section-0010"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=8)]
+- [Fermat quotient](https://en.wikipedia.org/wiki/Fermat_quotient)
+- [Frobenius endomorphism](https://en.wikipedia.org/wiki/Frobenius_endomorphism)
+- [p-derivation](https://en.wikipedia.org/wiki/P-derivation)
+- [Fractions with prime denominators](https://en.wikipedia.org/wiki/Recurring_decimal#Fractions_with_prime_denominators): numbers with behavior relating to Fermat&#39;s little theorem
+- [RSA](https://en.wikipedia.org/wiki/RSA_(algorithm))
+- [Table of congruences](https://en.wikipedia.org/wiki/Table_of_congruences)
+- [Modular multiplicative inverse](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
+</pre></article><article id="section-0011"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=9)]
+1. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-1) [Long 1972](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFLong1972), pp. 87–88.
+2. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-2) [Pettofrezzo &amp; Byrkit 1970](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFPettofrezzoByrkit1970), pp. 110–111.
+3. [Jump up to: 1](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-0) [2](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-1) [3](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-Burton_3-2) [Burton 2011](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFBurton2011), p. 514.
+4. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-4) Fermat, Pierre (1894), Tannery, P.; Henry, C. (eds.), [*Oeuvres de Fermat. Tome 2: Correspondance*](https://archive.org/stream/oeuvresdefermat02ferm#page/206/mode/2up), Paris: Gauthier-Villars, pp. 206–212 (in French)
+5. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-5) [Mahoney 1994](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFMahoney1994), p. 295 for the English translation
+6. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-6) Euler, Leonhard (1736). [&quot;Theorematum quorundam ad numeros primos spectantium demonstratio&quot;](https://www.biodiversitylibrary.org/item/38573#page/167/mode/1up) [Proof of certain theorems relating to prime numbers]. *Commentarii Academiae Scientiarum Imperialis Petropolitanae (Memoirs of the Imperial Academy of Sciences in St. Petersburg)* (in Latin). **8**: 141–146.
+7. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-7) [Ore 1988](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFOre1988), p. 273
+8. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-8) Hensel, Kurt (1913). [*Zahlentheorie*](https://books.google.com/books?id=SbhUAAAAYAAJ&amp;pg=PA103) [*Number Theory*] (in German). Berlin and Leipzig, Germany: G. J. Göschen. p. 103.
+9. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-9) [Albert 2015](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#CITEREFAlbert2015), p. 206
+10. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-10) Trappe, Wade; Washington, Lawrence C. (2002), *Introduction to Cryptography with Coding Theory*, Prentice-Hall, p. 78, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-13-061814-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-061814-6)
+11. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-11) If y is not coprime with n, Euler&#39;s theorem does not work, but this case is sufficiently rare for not being considered. In fact, if it occurred by chance, this would provide an easy factorization of n, and thus break the considered instance of RSA.
+12. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-12) [Sloane, N. J. A.](https://en.wikipedia.org/wiki/Neil_Sloane) (ed.). [&quot;Sequence A128311 (Remainder upon division of 2*n*−1−1 by *n*.)&quot;](https://oeis.org/A128311). *The [On-Line Encyclopedia of Integer Sequences](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)*. OEIS Foundation.
+13. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-13) [Sarrus, Frédéric](https://en.wikipedia.org/wiki/Pierre_Fr%C3%A9d%C3%A9ric_Sarrus) (1819–1820). [&quot;Démonstration de la fausseté du théorème énoncé á la page 320 du IXe volume de ce recueil&quot;](https://www.numdam.org/item?id=AMPA_1819-1820__10__184_0) [Demonstration of the falsity of the theorem stated on page 320 of the 9th volume of this collection]. *Annales de Mathématiques Pures et Appliquées* (in French). **10**: 184–187.
+14. [↑](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem#cite_ref-14) Rempe-Gillen, Lasse; [Waldecker, Rebecca](https://en.wikipedia.org/wiki/Rebecca_Waldecker) (2013-12-11). [&quot;4.5.1. Lemma (Roots of unity modulo a prime)&quot;](https://books.google.com/books?id=nQVZAgAAQBAJ&amp;q=The+Miller%E2%80%93Rabin+primality+test+uses+the+following+extension+of+Fermat%27s+little+theorem&amp;pg=PA144). [*Primality Testing for Beginners*](https://en.wikipedia.org/wiki/Primality_Testing_for_Beginners). American Mathematical Soc. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [9780821898833](https://en.wikipedia.org/wiki/Special:BookSources/9780821898833).
+</pre></article><article id="section-0012"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=10)]
+- [Albert, A. Adrian](https://en.wikipedia.org/wiki/Abraham_Adrian_Albert) (2015) [1938], [*Modern higher algebra*](https://books.google.com/books?id=iVwZCgAAQBAJ&amp;pg=PA206), [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-107-54462-8](https://en.wikipedia.org/wiki/Special:BookSources/978-1-107-54462-8)
+- Burton, David M. (2011), *The History of Mathematics / An Introduction* (7th ed.), McGraw-Hill, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-07-338315-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-07-338315-6)
+- Long, Calvin T. (1972), *Elementary Introduction to Number Theory* (2nd ed.), Lexington: [D. C. Heath and Company](https://en.wikipedia.org/wiki/D._C._Heath_and_Company), [LCCN](https://en.wikipedia.org/wiki/LCCN_(identifier)) [77171950](https://lccn.loc.gov/77171950)
+- Mahoney, Michael Sean (1994), *The Mathematical Career of Pierre de Fermat, 1601–1665* (2nd ed.), Princeton University Press, [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1994mcpd.book.....M](https://ui.adsabs.harvard.edu/abs/1994mcpd.book.....M), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-691-03666-3](https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-03666-3)
+- Ore, Oystein (1988) [1948], [*Number Theory and Its History*](https://archive.org/details/numbertheoryitsh0000orey), Dover, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-486-65620-5](https://en.wikipedia.org/wiki/Special:BookSources/978-0-486-65620-5)
+- Pettofrezzo, Anthony J.; Byrkit, Donald R. (1970), *Elements of Number Theory*, Englewood Cliffs: [Prentice Hall](https://en.wikipedia.org/wiki/Prentice_Hall), [LCCN](https://en.wikipedia.org/wiki/LCCN_(identifier)) [71081766](https://lccn.loc.gov/71081766)
+</pre></article><article id="section-0013"><h3>Further reading</h3><pre># Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=11)]
+- [Paulo Ribenboim](https://en.wikipedia.org/wiki/Paulo_Ribenboim) (1995). *The New Book of Prime Number Records* (3rd ed.). New York: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94457-5](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94457-5). pp. 22–25, 49.
+</pre></article><article id="section-0014"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;action=edit&amp;section=12)]
+- [![Wikimedia Commons logo](https://thumb.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Commons-logo.svg) Media related to [Fermat&#39;s little theorem](https://commons.wikimedia.org/wiki/Category:Fermat&#39;s%20little%20theorem) at Wikimedia Commons
+- [János Bolyai and the pseudoprimes](https://web.archive.org/web/20041022022031/http://bolyai.port5.com/kisfermat.htm) (in Hungarian)
+- [Fermat&#39;s Little Theorem](https://www.cut-the-knot.org/blue/Fermat.shtml) at [cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)
+- [Euler Function and Theorem](https://www.cut-the-knot.org/blue/Euler.shtml) at cut-the-knot
+- [Fermat&#39;s Little Theorem and Sophie&#39;s Proof](https://fermatslasttheorem.blogspot.com/2005/08/fermats-little-theorem.html)
+- [&quot;Fermat&#39;s little theorem&quot;](https://www.encyclopediaofmath.org/index.php?title=Fermat%27s_little_theorem), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fermat&#39;s Little Theorem&quot;](https://mathworld.wolfram.com/FermatsLittleTheorem.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fermat&#39;s Little Theorem Converse&quot;](https://mathworld.wolfram.com/FermatsLittleTheoremConverse.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+ [Portal](https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals):
+- [![icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Square_root_of_x.svg/20px-Square_root_of_x.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Square_root_of_x.svg) [Mathematics](https://en.wikipedia.org/wiki/Portal:Mathematics)
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Pierre_de_Fermat)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Pierre_de_Fermat)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Pierre_de_Fermat)
+[Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat)Work
+- [Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem)
+- [Fermat number](https://en.wikipedia.org/wiki/Fermat_number)
+- [Fermat&#39;s principle](https://en.wikipedia.org/wiki/Fermat&#39;s_principle)
+- [Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem)
+- [Fermat polygonal number theorem](https://en.wikipedia.org/wiki/Fermat_polygonal_number_theorem)
+- [Fermat pseudoprime](https://en.wikipedia.org/wiki/Fermat_pseudoprime)
+- [Fermat point](https://en.wikipedia.org/wiki/Fermat_point)
+- [Fermat&#39;s theorem (stationary points)](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem_(stationary_points))
+- [Fermat&#39;s theorem on sums of two squares](https://en.wikipedia.org/wiki/Fermat&#39;s_theorem_on_sums_of_two_squares)
+- [Fermat&#39;s spiral](https://en.wikipedia.org/wiki/Fermat&#39;s_spiral)
+- [Fermat&#39;s right triangle theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_right_triangle_theorem)
+- [Primality test](https://en.wikipedia.org/wiki/Fermat_primality_test)
+- [Quotient](https://en.wikipedia.org/wiki/Fermat_quotient)
+ Related
+- [List of things named after Pierre de Fermat](https://en.wikipedia.org/wiki/List_of_things_named_after_Pierre_de_Fermat)
+- [Wiles&#39;s proof of Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Wiles&#39;s_proof_of_Fermat&#39;s_Last_Theorem)
+- [Fermat&#39;s Last Theorem in fiction](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem_in_fiction)
+- [Fermat Prize](https://en.wikipedia.org/wiki/Fermat_Prize)
+- *[Fermat&#39;s Last Tango](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Tango)* (2000 musical)
+- *[Fermat&#39;s Last Theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_Last_Theorem_(book))* (popular science book)
+- [12007 Fermat](https://en.wikipedia.org/wiki/List_of_minor_planets:_12001%E2%80%9313000)
+  [Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control): National [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q188295#identifiers)
+- [Czech Republic](https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica=ph158529&amp;CON_LNG=ENG)
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;oldid=1375902312](https://en.wikipedia.org/w/index.php?title=Fermat%27s_little_theorem&amp;oldid=1375902312)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Modular arithmetic](https://en.wikipedia.org/wiki/Category:Modular_arithmetic)
+- [Theorems about prime numbers](https://en.wikipedia.org/wiki/Category:Theorems_about_prime_numbers)
+- [Pierre de Fermat](https://en.wikipedia.org/wiki/Category:Pierre_de_Fermat)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles containing French-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_French-language_text)
+- [CS1 Latin-language sources (la)](https://en.wikipedia.org/wiki/Category:CS1_Latin-language_sources_(la))
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+- [Articles containing German-language text](https://en.wikipedia.org/wiki/Category:Articles_containing_German-language_text)
+- [CS1 French-language sources (fr)](https://en.wikipedia.org/wiki/Category:CS1_French-language_sources_(fr))
+- [Commons category link from Wikidata](https://en.wikipedia.org/wiki/Category:Commons_category_link_from_Wikidata)
+
+    [https://en\.wikipedia\.org/wiki/Fermat&#39;s\_little\_theorem?action=edit](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

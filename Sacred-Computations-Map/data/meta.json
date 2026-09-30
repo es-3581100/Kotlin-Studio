@@ -1,0 +1,12 @@
+{
+  "schema": "sacred-computations.v0.1",
+  "concepts": 53,
+  "relations": 85,
+  "sources": 245,
+  "sourceGroups": {
+    "golden": 176,
+    "sympy": 28,
+    "fractal": 41
+  },
+  "sympyBuildVersion": "1.14.0"
+}

@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Mandelbrot Fractal Set visualization in Python - GeeksforGeeks — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Mandelbrot Fractal Set visualization in Python - GeeksforGeeks</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://www.geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python/</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:57:44.612Z</div><div class="stat"><b>Records</b><br>25</div><div class="stat"><b>Sections</b><br>19</div></div><p>Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exams, and more.</p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 327 B · ~82 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 9479 B · ~2369 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 14272 B · ~3568 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 1105 B · ~277 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Mandelbrot Fractal Set visualization in Python.md</code></a> <small>markdown · 1503 B · ~375 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Plotting - The Image.md</code></a> <small>markdown · 2688 B · ~672 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Import necessary libraries.md</code></a> <small>markdown · 101 B · ~26 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-setting the width of the output image as 1024.md</code></a> <small>markdown · 62 B · ~16 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-a function to return a tuple of colors.md</code></a> <small>markdown · 41 B · ~11 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-as integer value of rgb.md</code></a> <small>markdown · 146 B · ~37 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-function defining a mandelbrot.md</code></a> <small>markdown · 216 B · ~54 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-creating the new image in RGB mode.md</code></a> <small>markdown · 398 B · ~100 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-to display the created fractal after.md</code></a> <small>markdown · 39 B · ~10 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-completing the given number of iterations.md</code></a> <small>markdown · 200 B · ~50 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-FB - 201003254.md</code></a> <small>markdown · 40 B · ~10 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-drawing area.md</code></a> <small>markdown · 54 B · ~14 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-max iterations allowed.md</code></a> <small>markdown · 38 B · ~10 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-image size.md</code></a> <small>markdown · 757 B · ~190 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-setting parameters (these values can be changed).md</code></a> <small>markdown · 302 B · ~76 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-computing 2-d array to represent the mandelbrot-set.md</code></a> <small>markdown · 427 B · ~107 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-plotting the data.md</code></a> <small>markdown · 1355 B · ~339 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-Explore.md</code></a> <small>markdown · 17 B · ~5 tok</small></li><li><a href="#art-0023"><code>artifacts/provenance/source-record.json</code></a> <small>json · 811 B · ~203 tok</small></li><li><a href="#art-0024"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 318 B · ~80 tok</small></li><li><a href="#art-0025"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Mandelbrot Fractal Set visualization in Python - GeeksforGeeks&quot;
+source: https://www.geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python/
+captured_at: 2026-09-30T05:57:44.612Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 25
+artifact_count: 25
+content_sha256: 0091a1819866c8be65ca0179debe4a4a44f0a2c7fc3ef84c169fefa7ea3bdd26
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:327,&quot;sha256&quot;:&quot;23dab77b2a22a02e41ae54597071b7f88d23fc100491fa5d817f68ea82b0b9c9&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;geeksforgeeks&quot;,&quot;python&quot;,&quot;2026-09-30t05&quot;,&quot;612z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:82,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:9479,&quot;sha256&quot;:&quot;0091a1819866c8be65ca0179debe4a4a44f0a2c7fc3ef84c169fefa7ea3bdd26&quot;,&quot;keywords&quot;:[&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;org&quot;,&quot;mandelbrot&quot;,&quot;set&quot;,&quot;python&quot;,&quot;image&quot;,&quot;www&quot;],&quot;summary&quot;:&quot;Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exam&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2369,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:14272,&quot;sha256&quot;:&quot;aab8a252c071c5059b5ab09da57242bc7246765a09edf1629aaa957bdd08662c&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;geeksforgeeks&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;www&quot;,&quot;org&quot;,&quot;python&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:3568,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1105,&quot;sha256&quot;:&quot;261d99e6636a37fa60979b52f33cc410a2258fe82ffb0bfcaecd6ab5bfbd07a5&quot;,&quot;keywords&quot;:[&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;org&quot;,&quot;www&quot;,&quot;python&quot;,&quot;dsa&quot;,&quot;data&quot;,&quot;interview&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:277,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Mandelbrot Fractal Set visualization in Python.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1503,&quot;sha256&quot;:&quot;5eaa62e1aae18b1639dd6f0887b6b5313f25eefdf4f87d61ca9890be63093652&quot;,&quot;keywords&quot;:[&quot;set&quot;,&quot;fractal&quot;,&quot;mandelbrot&quot;,&quot;which&quot;,&quot;fractals&quot;,&quot;over&quot;,&quot;complex&quot;,&quot;f_c&quot;],&quot;summary&quot;:&quot;Mandelbrot Fractal Set visualization in Python&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:375,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Plotting - The Image.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2688,&quot;sha256&quot;:&quot;b49bcc4923b388dfe332811e712dfb496295a2b41d4534b869a120eaf036dcbc&quot;,&quot;keywords&quot;:[&quot;iterationarray&quot;,&quot;iteration&quot;,&quot;mod&quot;,&quot;value&quot;,&quot;complexarray&quot;,&quot;max-iterations&quot;,&quot;bound&quot;,&quot;complex&quot;],&quot;summary&quot;:&quot;Plotting - The Image.&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:672,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Import necessary libraries.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:101,&quot;sha256&quot;:&quot;b6f67d7a84edc8683c7da5b0ea6b7679a4548eebd577f88ff21fb54dd600476f&quot;,&quot;keywords&quot;:[&quot;import&quot;,&quot;libraries&quot;,&quot;necessary&quot;,&quot;array&quot;,&quot;colorsys&quot;,&quot;complex&quot;,&quot;image&quot;,&quot;numpy&quot;],&quot;summary&quot;:&quot;Import necessary libraries&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:26,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-setting the width of the output image as 1024.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:62,&quot;sha256&quot;:&quot;0ee10884b33aa5633e223dddb27b10f014fc9963a14fbfe72b627f6d30d3e3ed&quot;,&quot;keywords&quot;:[&quot;1024&quot;,&quot;width&quot;,&quot;image&quot;,&quot;output&quot;,&quot;setting&quot;],&quot;summary&quot;:&quot;setting the width of the output image as 1024&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:16,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-a function to return a tuple of colors.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:41,&quot;sha256&quot;:&quot;14e4aad8c6518ca2799df8bcebeacf16c87290c5d79bc73699d7c9a93231768f&quot;,&quot;keywords&quot;:[&quot;colors&quot;,&quot;function&quot;,&quot;return&quot;,&quot;tuple&quot;],&quot;summary&quot;:&quot;a function to return a tuple of colors&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:11,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-as integer value of rgb.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:146,&quot;sha256&quot;:&quot;73dd3a6633632c351a34c25a32744008ce6be9bbb9baa449f50908882bac6788&quot;,&quot;keywords&quot;:[&quot;255&quot;,&quot;color&quot;,&quot;integer&quot;,&quot;rgb&quot;,&quot;value&quot;,&quot;array&quot;,&quot;astype&quot;,&quot;colorsys&quot;],&quot;summary&quot;:&quot;as integer value of rgb&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:37,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-function defining a mandelbrot.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:216,&quot;sha256&quot;:&quot;251136385d10fc63581c5814e7e50f3bfc39d9d1a51559af21ff0abf49ccd447&quot;,&quot;keywords&quot;:[&quot;mandelbrot&quot;,&quot;defining&quot;,&quot;function&quot;,&quot;return&quot;,&quot;1000&quot;,&quot;abs&quot;,&quot;complex&quot;,&quot;def&quot;],&quot;summary&quot;:&quot;function defining a mandelbrot&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:54,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-creating the new image in RGB mode.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:398,&quot;sha256&quot;:&quot;b91cb1c5450557877cfdb0364cb99605dd435fe89cde587006dee98de43d8d5a&quot;,&quot;keywords&quot;:[&quot;width&quot;,&quot;img&quot;,&quot;image&quot;,&quot;new&quot;,&quot;rgb&quot;,&quot;creating&quot;,&quot;mode&quot;,&quot;pixels&quot;],&quot;summary&quot;:&quot;creating the new image in RGB mode&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:100,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-to display the created fractal after.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:39,&quot;sha256&quot;:&quot;f6db47990f03ccbb901609b36299129886b08d92a26b60c8bed5ed8771066b13&quot;,&quot;keywords&quot;:[&quot;after&quot;,&quot;created&quot;,&quot;display&quot;,&quot;fractal&quot;],&quot;summary&quot;:&quot;to display the created fractal after&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:10,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-completing the given number of iterations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:200,&quot;sha256&quot;:&quot;bec2ce46e75fd82535aea7864fbba95a0eebad93fc4e637411f23063b55cbaa5&quot;,&quot;keywords&quot;:[&quot;completing&quot;,&quot;given&quot;,&quot;iterations&quot;,&quot;mandelbrot&quot;,&quot;number&quot;,&quot;code&quot;,&quot;fractal&quot;,&quot;geeksforgeeks&quot;],&quot;summary&quot;:&quot;completing the given number of iterations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:50,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-FB - 201003254.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:40,&quot;sha256&quot;:&quot;9d9a8519c8860d2414eba84fe83eddf6d4ca472ca8dcdacaefb449a05dc125f3&quot;,&quot;keywords&quot;:[&quot;201003254&quot;,&quot;image&quot;,&quot;import&quot;,&quot;pil&quot;],&quot;summary&quot;:&quot;FB - 201003254&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:10,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-drawing area.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:54,&quot;sha256&quot;:&quot;8c6d8daa4d3218a8d3cdd9aa9a51e032d20933831eabe460ba0a5f21b13b1df9&quot;,&quot;keywords&quot;:[&quot;area&quot;,&quot;drawing&quot;],&quot;summary&quot;:&quot;drawing area&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:14,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-max iterations allowed.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:38,&quot;sha256&quot;:&quot;0ad650a2d8a8c86e1a436f6c626bbd15cdd953823ab0bf6ec3c06ba165e916d8&quot;,&quot;keywords&quot;:[&quot;allowed&quot;,&quot;iterations&quot;,&quot;max&quot;,&quot;255&quot;,&quot;maxit&quot;],&quot;summary&quot;:&quot;max iterations allowed&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:10,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-image size.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:757,&quot;sha256&quot;:&quot;1d0138b0ba4634ca1e238e68973ed4cabfface6a1db5e70f3cd0aadea248a982&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;imgx&quot;,&quot;imgy&quot;,&quot;library&quot;,&quot;matplotlib&quot;,&quot;range&quot;,&quot;512&quot;,&quot;code&quot;],&quot;summary&quot;:&quot;image size&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:190,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-setting parameters (these values can be changed).md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:302,&quot;sha256&quot;:&quot;53a4acdd45a590d0339f7cfc53e341802c8c26e80bb7445d001e2da88455d8cc&quot;,&quot;keywords&quot;:[&quot;any&quot;,&quot;500&quot;,&quot;changed&quot;,&quot;colormap&quot;,&quot;linspace&quot;,&quot;parameters&quot;,&quot;positive&quot;,&quot;setting&quot;],&quot;summary&quot;:&quot;setting parameters (these values can be changed)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:76,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-computing 2-d array to represent the mandelbrot-set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:427,&quot;sha256&quot;:&quot;69d138210cc574449285ce43d6f36216bdb66d4deacf58f3e845e8794bcc89c8&quot;,&quot;keywords&quot;:[&quot;row&quot;,&quot;append&quot;,&quot;2-d&quot;,&quot;array&quot;,&quot;computing&quot;,&quot;else&quot;,&quot;iterationarray&quot;,&quot;iterationnumber&quot;],&quot;summary&quot;:&quot;computing 2-d array to represent the mandelbrot-set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:107,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-plotting the data.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1355,&quot;sha256&quot;:&quot;d9ab90f9ab599e0d5b021c88aafed4ab947b4febbe2fe7ccc6604636833d9615&quot;,&quot;keywords&quot;:[&quot;plt&quot;,&quot;code&quot;,&quot;set&quot;,&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;mandelbrot&quot;,&quot;multibrot&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;plotting the data&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:339,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-Explore.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:17,&quot;sha256&quot;:&quot;b85964e46ec4b9aea774aa4b5b6e23e05ee40f4f865fd980e83609870c24537c&quot;,&quot;keywords&quot;:[&quot;explore&quot;],&quot;summary&quot;:&quot;Explore&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:5,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0023&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:811,&quot;sha256&quot;:&quot;739d77a0d89c7ec4ea4a2fcefb72cb19900218d8f8ed88fe4cba2a509e1aec6a&quot;,&quot;keywords&quot;:[&quot;geeksforgeeks&quot;,&quot;python&quot;,&quot;https&quot;,&quot;mandelbrot-fractal-set-visualization-in-python&quot;,&quot;org&quot;,&quot;www&quot;,&quot;2018-10-03&quot;,&quot;2023-09-04&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:203,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0024&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:318,&quot;sha256&quot;:&quot;641d852e7021c2be5cbf8714a6ad0e261a10fe70e096ccb0a33e271fbac57fc5&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;agent&quot;,&quot;authority&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0024&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0025&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:57:44.612Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	82	327	23dab77b2a22a02e41ae54597071b7f88d23fc100491fa5d817f68ea82b0b9c9	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	2369	9479	0091a1819866c8be65ca0179debe4a4a44f0a2c7fc3ef84c169fefa7ea3bdd26	Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exam	
+art:0003	index	artifacts/index/page-index.json	supporting	3568	14272	aab8a252c071c5059b5ab09da57242bc7246765a09edf1629aaa957bdd08662c	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	277	1105	261d99e6636a37fa60979b52f33cc410a2258fe82ffb0bfcaecd6ab5bfbd07a5	Introduction	
+sec:0005	section	artifacts/sections/0002-Mandelbrot Fractal Set visualization in Python.md	primary	375	1503	5eaa62e1aae18b1639dd6f0887b6b5313f25eefdf4f87d61ca9890be63093652	Mandelbrot Fractal Set visualization in Python	
+sec:0006	section	artifacts/sections/0003-Plotting - The Image.md	primary	672	2688	b49bcc4923b388dfe332811e712dfb496295a2b41d4534b869a120eaf036dcbc	Plotting - The Image.	
+sec:0007	section	artifacts/sections/0004-Import necessary libraries.md	primary	26	101	b6f67d7a84edc8683c7da5b0ea6b7679a4548eebd577f88ff21fb54dd600476f	Import necessary libraries	
+sec:0008	section	artifacts/sections/0005-setting the width of the output image as 1024.md	primary	16	62	0ee10884b33aa5633e223dddb27b10f014fc9963a14fbfe72b627f6d30d3e3ed	setting the width of the output image as 1024	
+sec:0009	section	artifacts/sections/0006-a function to return a tuple of colors.md	primary	11	41	14e4aad8c6518ca2799df8bcebeacf16c87290c5d79bc73699d7c9a93231768f	a function to return a tuple of colors	
+sec:0010	section	artifacts/sections/0007-as integer value of rgb.md	primary	37	146	73dd3a6633632c351a34c25a32744008ce6be9bbb9baa449f50908882bac6788	as integer value of rgb	
+sec:0011	section	artifacts/sections/0008-function defining a mandelbrot.md	primary	54	216	251136385d10fc63581c5814e7e50f3bfc39d9d1a51559af21ff0abf49ccd447	function defining a mandelbrot	
+sec:0012	section	artifacts/sections/0009-creating the new image in RGB mode.md	supporting	100	398	b91cb1c5450557877cfdb0364cb99605dd435fe89cde587006dee98de43d8d5a	creating the new image in RGB mode	
+sec:0013	section	artifacts/sections/0010-to display the created fractal after.md	supporting	10	39	f6db47990f03ccbb901609b36299129886b08d92a26b60c8bed5ed8771066b13	to display the created fractal after	
+sec:0014	section	artifacts/sections/0011-completing the given number of iterations.md	supporting	50	200	bec2ce46e75fd82535aea7864fbba95a0eebad93fc4e637411f23063b55cbaa5	completing the given number of iterations	
+sec:0015	section	artifacts/sections/0012-FB - 201003254.md	supporting	10	40	9d9a8519c8860d2414eba84fe83eddf6d4ca472ca8dcdacaefb449a05dc125f3	FB - 201003254	
+sec:0016	section	artifacts/sections/0013-drawing area.md	supporting	14	54	8c6d8daa4d3218a8d3cdd9aa9a51e032d20933831eabe460ba0a5f21b13b1df9	drawing area	
+sec:0017	section	artifacts/sections/0014-max iterations allowed.md	supporting	10	38	0ad650a2d8a8c86e1a436f6c626bbd15cdd953823ab0bf6ec3c06ba165e916d8	max iterations allowed	
+sec:0018	section	artifacts/sections/0015-image size.md	supporting	190	757	1d0138b0ba4634ca1e238e68973ed4cabfface6a1db5e70f3cd0aadea248a982	image size	
+sec:0019	section	artifacts/sections/0016-setting parameters (these values can be changed).md	supporting	76	302	53a4acdd45a590d0339f7cfc53e341802c8c26e80bb7445d001e2da88455d8cc	setting parameters (these values can be changed)	
+sec:0020	section	artifacts/sections/0017-computing 2-d array to represent the mandelbrot-set.md	supporting	107	427	69d138210cc574449285ce43d6f36216bdb66d4deacf58f3e845e8794bcc89c8	computing 2-d array to represent the mandelbrot-set	
+sec:0021	section	artifacts/sections/0018-plotting the data.md	supporting	339	1355	d9ab90f9ab599e0d5b021c88aafed4ab947b4febbe2fe7ccc6604636833d9615	plotting the data	
+sec:0022	section	artifacts/sections/0019-Explore.md	supporting	5	17	b85964e46ec4b9aea774aa4b5b6e23e05ee40f4f865fd980e83609870c24537c	Explore	
+art:0023	provenance	artifacts/provenance/source-record.json	supporting	203	811	739d77a0d89c7ec4ea4a2fcefb72cb19900218d8f8ed88fe4cba2a509e1aec6a	Capture source identity and metadata	
+art:0024	provenance	artifacts/provenance/extraction-record.json	supporting	80	318	641d852e7021c2be5cbf8714a6ad0e261a10fe70e096ccb0a33e271fbac57fc5	Extraction engine and counts	
+art:0025	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)![search icon](https://media.geeksforgeeks.org/auth-dashboard-uploads/Property=Light---Default.svg)
+- CoursesSale**
+- Tutorials**
+- Interview Prep**
+**Switch to Dark Mode
+- [Python Tutorial](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+- [Data Types](https://www.geeksforgeeks.org/python/python-data-types/)
+- [Interview Questions](https://www.geeksforgeeks.org/python/python-interview-questions/)
+- [Examples](https://www.geeksforgeeks.org/python/python-programming-examples/)
+- [Quizzes](https://www.geeksforgeeks.org/python/python-quizzes/)
+- [DSA Python](https://www.geeksforgeeks.org/dsa/python-data-structures-and-algorithms/)
+- [Data Science](https://www.geeksforgeeks.org/data-science/data-science-with-python-tutorial/)
+- [NumPy](https://www.geeksforgeeks.org/python/numpy-tutorial/)
+- [Pandas](https://www.geeksforgeeks.org/pandas/pandas-tutorial/)
+- [Practice](https://www.geeksforgeeks.org/dsa/geeksforgeeks-practice-best-online-coding-platform/)
+
+# Mandelbrot Fractal Set visualization in Python
+
+Last Updated : 4 Sep, 2023
+-
+-
+-
+
+****Fractal:****
+
+A fractal is a curve or geometrical figure, each part of which has the same statistical character as the whole. They are useful in modeling structures (such as snowflakes) in which similar patterns recur at progressively smaller scales, and in describing partly random or chaotic phenomena such as crystal growth and galaxy formation. In simpler words, a fractal is a never-ending pattern. Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop. Driven by recursion, fractals are images of dynamic systems – the pictures of Chaos. Geometrically, they exist in between our familiar dimensions. Fractal patterns are extremely familiar since nature is full of fractals. For instance: trees, rivers, coastlines, mountains, clouds, seashells, hurricanes, etc. Abstract fractals – such as the Mandelbrot Set – can be generated by a computer calculating a simple equation over and over.
+
+****Mandelbrot set:****
+
+The Mandelbrot set is the set of complex numbers
+
+****c****for which the function f_c(z)=z^2 +c does not diverge when iterated from ****z****=0, i.e., for which the sequencef_c(0), f_c(f_c(0)), etc., remains bounded in absolute value. In simple words, Mandelbrot set is a particular set of complex numbers which has a highly convoluted fractal boundary when plotted.
+
+### Plotting - The Image.
+
+First, we discuss the idea and then show the code in Python.
+
+****The idea****
+
+![ComplexPlane](https://media.geeksforgeeks.org/wp-content/uploads/20230618014245/ComplexPlane.png)Complex Plane visualization for the idea
+
+Say you want to create the Mandelbrot set for x in range x1 to x5 and y in range y1 to y5 then visualize the complex plane as shown in Figure 1 where each green dot represents the complex number x + iy.
+
+Then visualize all those complex numbers (the green dots) in a 2-dimensional array (maintaining their positions with respect to each other) and call it as complexArray. The complexArray has dimensions m x n (i.e. m rows and n columns). For example, for the figure above m = 5 and n = 5.
+
+Now create a 2-dimensional array of integers of dimensions m x n and call it as iterationArray. Follow the following rules to fill the values in iterationArray - if (complexArray[i][j] belongs to the Mandelbrot-set): iterationArray[i][j] = 0, else: iterationArray[i][j] = number of iterations/recursions it took the mod to cross bound-value with complexArray[i][j]. Bit of examples to make the else condition clear - 1 if mod(f(z)) &gt; bound \space value, 2 if mod(f(f(z))) &gt; bound \space value, 3 if mod(f(f(f(z)))) &gt; bound \space value and so on.
+
+Create the heatmap of the iterationArray. (This can be accomplished in matplotlib with the help of pcolormesh and imshow methods)
+
+Here is the algorithm to find the value to be stored in iterationArray[i][j] -
+
+```
+c = complexArray[i][j]
+z = 0
+bound-value = &lt;some real number greater than 0&gt;
+iteration = 0
+max-iterations = &lt;some positive integer&gt;
+while(mod(z) &lt; bound-value and iteration &lt;= max-iterations){
+    z := (z raised to power n) + c
+    iteration += 1
+}
+if (iteration &gt; max-iterations) :  iterationArray[i][j] = 0  [since c belongs to the multibrot set for n]
+else : iterationArray[i][j] = iteration  [since c does not belong to the mandelbrot set for n]
+```
+
+Notes -
+
+- To increase the resolution of the image, increase the number of elements in xdomain and ydomain.
+- Ideally as per definitions, max-iterations should be infinity. But, this is practically impossible to compute, so, we set it to some finite positive integer and assume that if mod remains below the bound value for this recursion/iteration then it remains below it even for infinity. This also means that greater the value of max-iterations the greater the accuracy with which multibrot-set is obtained (accompanied by greater computation-time).
+
+Installation of needed Python modules:
+
+```
+pip install pillow
+pip install numpy
+pip install matplotlib
+```
+
+****Code #1:****
+
+  Python3  `# Python code for Mandelbrot Fractal
+
+# Import necessary libraries
+from PIL import Image
+from numpy import complex, array
+import colorsys
+
+# setting the width of the output image as 1024
+WIDTH = 1024
+
+# a function to return a tuple of colors
+# as integer value of rgb
+def rgb_conv(i):
+    color = 255 * array(colorsys.hsv_to_rgb(i / 255.0, 1.0, 0.5))
+    return tuple(color.astype(int))
+
+# function defining a mandelbrot
+def mandelbrot(x, y):
+    c0 = complex(x, y)
+    c = 0
+    for i in range(1, 1000):
+        if abs(c) &gt; 2:
+            return rgb_conv(i)
+        c = c * c + c0
+    return (0, 0, 0)
+
+# creating the new image in RGB mode
+img = Image.new(&#39;RGB&#39;, (WIDTH, int(WIDTH / 2)))
+pixels = img.load()
+
+for x in range(img.size[0]):
+
+    # displaying the progress as percentage
+    print(&quot;%.2f %%&quot; % (x / WIDTH * 100.0))
+    for y in range(img.size[1]):
+        pixels[x, y] = mandelbrot((x - (0.75 * WIDTH)) / (WIDTH / 4),
+                                      (y - (WIDTH / 4)) / (WIDTH / 4))
+
+# to display the created fractal after
+# completing the given number of iterations
+img.show()
+`
+
+****Output:****
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/mandelbrot.jpg)
+
+****Code #2:****
+
+  Python3  `# Mandelbrot fractal
+# FB - 201003254
+from PIL import Image
+
+# drawing area
+xa = -2.0
+xb = 1.0
+ya = -1.5
+yb = 1.5
+
+# max iterations allowed
+maxIt = 255
+
+# image size
+imgx = 512
+imgy = 512
+image = Image.new(&quot;RGB&quot;, (imgx, imgy))
+
+for y in range(imgy):
+    zy = y * (yb - ya) / (imgy - 1)  + ya
+    for x in range(imgx):
+        zx = x * (xb - xa) / (imgx - 1)  + xa
+        z = zx + zy * 1j
+        c = z
+        for i in range(maxIt):
+            if abs(z) &gt; 2.0: break
+            z = z * z + c
+        image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16))
+
+image.show()
+`
+
+****Output:****
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/mandelbrot_2.jpg)
+
+****Code #3:****
+
+This code utilizes the matplotlib library instead of the PIL library. Matplotlib is a powerful and popularly used data visualization library for python.
+
+  Python3  `import numpy as np
+import matplotlib.pyplot as plt
+
+# setting parameters (these values can be changed)
+xDomain, yDomain = np.linspace(-2,1.5,500), np.linspace(-2,2,500)
+bound = 2
+power = 2             # any positive floating point value (n)
+max_iterations = 50   # any positive integer value
+colormap = &#39;magma&#39;    # set to any matplotlib valid colormap
+
+# computing 2-d array to represent the mandelbrot-set
+iterationArray = []
+for y in yDomain:
+    row = []
+    for x in xDomain:
+        c = complex(x,y)
+        z = 0
+        for iterationNumber in range(max_iterations):
+            if(abs(z) &gt;= bound):
+                row.append(iterationNumber)
+                break
+            else: z = z**power + c
+        else:
+            row.append(0)
+
+    iterationArray.append(row)
+
+# plotting the data
+ax = plt.axes()
+plt.rc(&#39;text&#39;, usetex = True)   # adding this line so that tex can be used
+ax.set_aspect(&#39;equal&#39;)
+graph = ax.pcolormesh(xDomain, yDomain, iterationArray, cmap = colormap)
+plt.colorbar(graph)
+plt.xlabel(&quot;Real-Axis&quot;)
+plt.ylabel(&quot;Imaginary-Axis&quot;)
+plt.title(&#39;Multibrot set for $z_{{new}} = z^{{{}}} + c$&#39;.format(power))
+plt.gcf().set_size_inches(5,4)
+plt.show()
+`
+
+****Output:****
+
+![mandelbrot\_power2](https://media.geeksforgeeks.org/wp-content/uploads/20230616191221/mandelbrot_power2.png)Mandelbrot set created in matplotlib.
+
+Replace the last line in the code with -
+
+```
+plt.savefig(&#39;./MultibrotFractal&#39;, dpi = 100)
+```
+
+to save the figure with the name MultibrotFractal.png in the present working directory (i.e. the folder containg the python file).
+
+If you are confused by the term Multibrot set in the code and image above then you just need to know that Mandelbrot set is the special case of Multibrot sets for power 2. That makes the code more interesting because if you alter the value of n in the code above, you can create images for other powers too! Moreover, note that by using matplotlib, we have the advantage to add more details like labels, titles and a colorbar for the colormap.
+
+ Comment[R](https://www.geeksforgeeks.org/user/Rahul_Roy/)[Rahul_Roy](https://www.geeksforgeeks.org/user/Rahul_Roy/)7
+
+### Explore
+
+![]()
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)![search icon](https://media.geeksforgeeks.org/auth-dashboard-uploads/Property=Light---Default.svg)
+- CoursesSale**
+- Tutorials**
+- Interview Prep**
+**Switch to Dark Mode
+- [Python Tutorial](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+- [Data Types](https://www.geeksforgeeks.org/python/python-data-types/)
+- [Interview Questions](https://www.geeksforgeeks.org/python/python-interview-questions/)
+- [Examples](https://www.geeksforgeeks.org/python/python-programming-examples/)
+- [Quizzes](https://www.geeksforgeeks.org/python/python-quizzes/)
+- [DSA Python](https://www.geeksforgeeks.org/dsa/python-data-structures-and-algorithms/)
+- [Data Science](https://www.geeksforgeeks.org/data-science/data-science-with-python-tutorial/)
+- [NumPy](https://www.geeksforgeeks.org/python/numpy-tutorial/)
+- [Pandas](https://www.geeksforgeeks.org/pandas/pandas-tutorial/)
+- [Practice](https://www.geeksforgeeks.org/dsa/geeksforgeeks-practice-best-online-coding-platform/)
+</pre></article><article id="section-0002"><h3>Mandelbrot Fractal Set visualization in Python</h3><pre># Mandelbrot Fractal Set visualization in Python
+
+Last Updated : 4 Sep, 2023
+-
+-
+-
+
+****Fractal:****
+
+A fractal is a curve or geometrical figure, each part of which has the same statistical character as the whole. They are useful in modeling structures (such as snowflakes) in which similar patterns recur at progressively smaller scales, and in describing partly random or chaotic phenomena such as crystal growth and galaxy formation. In simpler words, a fractal is a never-ending pattern. Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop. Driven by recursion, fractals are images of dynamic systems – the pictures of Chaos. Geometrically, they exist in between our familiar dimensions. Fractal patterns are extremely familiar since nature is full of fractals. For instance: trees, rivers, coastlines, mountains, clouds, seashells, hurricanes, etc. Abstract fractals – such as the Mandelbrot Set – can be generated by a computer calculating a simple equation over and over.
+
+****Mandelbrot set:****
+
+The Mandelbrot set is the set of complex numbers
+
+****c****for which the function f_c(z)=z^2 +c does not diverge when iterated from ****z****=0, i.e., for which the sequencef_c(0), f_c(f_c(0)), etc., remains bounded in absolute value. In simple words, Mandelbrot set is a particular set of complex numbers which has a highly convoluted fractal boundary when plotted.
+</pre></article><article id="section-0003"><h3>Plotting - The Image.</h3><pre># Plotting - The Image.
+
+First, we discuss the idea and then show the code in Python.
+
+****The idea****
+
+![ComplexPlane](https://media.geeksforgeeks.org/wp-content/uploads/20230618014245/ComplexPlane.png)Complex Plane visualization for the idea
+
+Say you want to create the Mandelbrot set for x in range x1 to x5 and y in range y1 to y5 then visualize the complex plane as shown in Figure 1 where each green dot represents the complex number x + iy.
+
+Then visualize all those complex numbers (the green dots) in a 2-dimensional array (maintaining their positions with respect to each other) and call it as complexArray. The complexArray has dimensions m x n (i.e. m rows and n columns). For example, for the figure above m = 5 and n = 5.
+
+Now create a 2-dimensional array of integers of dimensions m x n and call it as iterationArray. Follow the following rules to fill the values in iterationArray - if (complexArray[i][j] belongs to the Mandelbrot-set): iterationArray[i][j] = 0, else: iterationArray[i][j] = number of iterations/recursions it took the mod to cross bound-value with complexArray[i][j]. Bit of examples to make the else condition clear - 1 if mod(f(z)) &gt; bound \space value, 2 if mod(f(f(z))) &gt; bound \space value, 3 if mod(f(f(f(z)))) &gt; bound \space value and so on.
+
+Create the heatmap of the iterationArray. (This can be accomplished in matplotlib with the help of pcolormesh and imshow methods)
+
+Here is the algorithm to find the value to be stored in iterationArray[i][j] -
+
+```
+c = complexArray[i][j]
+z = 0
+bound-value = &lt;some real number greater than 0&gt;
+iteration = 0
+max-iterations = &lt;some positive integer&gt;
+while(mod(z) &lt; bound-value and iteration &lt;= max-iterations){
+    z := (z raised to power n) + c
+    iteration += 1
+}
+if (iteration &gt; max-iterations) :  iterationArray[i][j] = 0  [since c belongs to the multibrot set for n]
+else : iterationArray[i][j] = iteration  [since c does not belong to the mandelbrot set for n]
+```
+
+Notes -
+
+- To increase the resolution of the image, increase the number of elements in xdomain and ydomain.
+- Ideally as per definitions, max-iterations should be infinity. But, this is practically impossible to compute, so, we set it to some finite positive integer and assume that if mod remains below the bound value for this recursion/iteration then it remains below it even for infinity. This also means that greater the value of max-iterations the greater the accuracy with which multibrot-set is obtained (accompanied by greater computation-time).
+
+Installation of needed Python modules:
+
+```
+pip install pillow
+pip install numpy
+pip install matplotlib
+```
+
+****Code #1:****
+
+  Python3  `# Python code for Mandelbrot Fractal
+</pre></article><article id="section-0004"><h3>Import necessary libraries</h3><pre># Import necessary libraries
+
+from PIL import Image
+from numpy import complex, array
+import colorsys
+</pre></article><article id="section-0005"><h3>setting the width of the output image as 1024</h3><pre># setting the width of the output image as 1024
+
+WIDTH = 1024
+</pre></article><article id="section-0006"><h3>a function to return a tuple of colors</h3><pre># a function to return a tuple of colors
+</pre></article><article id="section-0007"><h3>as integer value of rgb</h3><pre># as integer value of rgb
+
+def rgb_conv(i):
+    color = 255 * array(colorsys.hsv_to_rgb(i / 255.0, 1.0, 0.5))
+    return tuple(color.astype(int))
+</pre></article><article id="section-0008"><h3>function defining a mandelbrot</h3><pre># function defining a mandelbrot
+
+def mandelbrot(x, y):
+    c0 = complex(x, y)
+    c = 0
+    for i in range(1, 1000):
+        if abs(c) &gt; 2:
+            return rgb_conv(i)
+        c = c * c + c0
+    return (0, 0, 0)
+</pre></article><article id="section-0009"><h3>creating the new image in RGB mode</h3><pre># creating the new image in RGB mode
+
+img = Image.new(&#39;RGB&#39;, (WIDTH, int(WIDTH / 2)))
+pixels = img.load()
+
+for x in range(img.size[0]):
+
+    # displaying the progress as percentage
+    print(&quot;%.2f %%&quot; % (x / WIDTH * 100.0))
+    for y in range(img.size[1]):
+        pixels[x, y] = mandelbrot((x - (0.75 * WIDTH)) / (WIDTH / 4),
+                                      (y - (WIDTH / 4)) / (WIDTH / 4))
+</pre></article><article id="section-0010"><h3>to display the created fractal after</h3><pre># to display the created fractal after
+</pre></article><article id="section-0011"><h3>completing the given number of iterations</h3><pre># completing the given number of iterations
+
+img.show()
+`
+
+****Output:****
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/mandelbrot.jpg)
+
+****Code #2:****
+
+  Python3  `# Mandelbrot fractal
+</pre></article><article id="section-0012"><h3>FB - 201003254</h3><pre># FB - 201003254
+
+from PIL import Image
+</pre></article><article id="section-0013"><h3>drawing area</h3><pre># drawing area
+
+xa = -2.0
+xb = 1.0
+ya = -1.5
+yb = 1.5
+</pre></article><article id="section-0014"><h3>max iterations allowed</h3><pre># max iterations allowed
+
+maxIt = 255
+</pre></article><article id="section-0015"><h3>image size</h3><pre># image size
+
+imgx = 512
+imgy = 512
+image = Image.new(&quot;RGB&quot;, (imgx, imgy))
+
+for y in range(imgy):
+    zy = y * (yb - ya) / (imgy - 1)  + ya
+    for x in range(imgx):
+        zx = x * (xb - xa) / (imgx - 1)  + xa
+        z = zx + zy * 1j
+        c = z
+        for i in range(maxIt):
+            if abs(z) &gt; 2.0: break
+            z = z * z + c
+        image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16))
+
+image.show()
+`
+
+****Output:****
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/mandelbrot_2.jpg)
+
+****Code #3:****
+
+This code utilizes the matplotlib library instead of the PIL library. Matplotlib is a powerful and popularly used data visualization library for python.
+
+  Python3  `import numpy as np
+import matplotlib.pyplot as plt
+</pre></article><article id="section-0016"><h3>setting parameters (these values can be changed)</h3><pre># setting parameters (these values can be changed)
+
+xDomain, yDomain = np.linspace(-2,1.5,500), np.linspace(-2,2,500)
+bound = 2
+power = 2             # any positive floating point value (n)
+max_iterations = 50   # any positive integer value
+colormap = &#39;magma&#39;    # set to any matplotlib valid colormap
+</pre></article><article id="section-0017"><h3>computing 2-d array to represent the mandelbrot-set</h3><pre># computing 2-d array to represent the mandelbrot-set
+
+iterationArray = []
+for y in yDomain:
+    row = []
+    for x in xDomain:
+        c = complex(x,y)
+        z = 0
+        for iterationNumber in range(max_iterations):
+            if(abs(z) &gt;= bound):
+                row.append(iterationNumber)
+                break
+            else: z = z**power + c
+        else:
+            row.append(0)
+
+    iterationArray.append(row)
+</pre></article><article id="section-0018"><h3>plotting the data</h3><pre># plotting the data
+
+ax = plt.axes()
+plt.rc(&#39;text&#39;, usetex = True)   # adding this line so that tex can be used
+ax.set_aspect(&#39;equal&#39;)
+graph = ax.pcolormesh(xDomain, yDomain, iterationArray, cmap = colormap)
+plt.colorbar(graph)
+plt.xlabel(&quot;Real-Axis&quot;)
+plt.ylabel(&quot;Imaginary-Axis&quot;)
+plt.title(&#39;Multibrot set for $z_{{new}} = z^{{{}}} + c$&#39;.format(power))
+plt.gcf().set_size_inches(5,4)
+plt.show()
+`
+
+****Output:****
+
+![mandelbrot\_power2](https://media.geeksforgeeks.org/wp-content/uploads/20230616191221/mandelbrot_power2.png)Mandelbrot set created in matplotlib.
+
+Replace the last line in the code with -
+
+```
+plt.savefig(&#39;./MultibrotFractal&#39;, dpi = 100)
+```
+
+to save the figure with the name MultibrotFractal.png in the present working directory (i.e. the folder containg the python file).
+
+If you are confused by the term Multibrot set in the code and image above then you just need to know that Mandelbrot set is the special case of Multibrot sets for power 2. That makes the code more interesting because if you alter the value of n in the code above, you can create images for other powers too! Moreover, note that by using matplotlib, we have the advantage to add more details like labels, titles and a colorbar for the colormap.
+
+ Comment[R](https://www.geeksforgeeks.org/user/Rahul_Roy/)[Rahul_Roy](https://www.geeksforgeeks.org/user/Rahul_Roy/)7
+</pre></article><article id="section-0019"><h3>Explore</h3><pre># Explore
+
+![]()
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

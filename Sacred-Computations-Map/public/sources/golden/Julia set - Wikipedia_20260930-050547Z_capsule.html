@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Julia set - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Julia set - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Julia_set</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:05:47.123Z</div><div class="stat"><b>Records</b><br>27</div><div class="stat"><b>Sections</b><br>21</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 241 B · ~61 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 64810 B · ~16013 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 62253 B · ~15541 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 401 B · ~101 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Julia set.md</code></a> <small>markdown · 7146 B · ~1762 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Formal definition.md</code></a> <small>markdown · 5030 B · ~1252 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Equivalent descriptions of the Julia set.md</code></a> <small>markdown · 1329 B · ~329 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Properties of the Julia set and Fatou set.md</code></a> <small>markdown · 697 B · ~171 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Examples.md</code></a> <small>markdown · 2978 B · ~738 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Quadratic polynomials.md</code></a> <small>markdown · 8723 B · ~2162 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Generalizations.md</code></a> <small>markdown · 465 B · ~117 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Pseudocode.md</code></a> <small>markdown · 320 B · ~80 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Pseudocode for normal Julia sets.md</code></a> <small>markdown · 894 B · ~224 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Pseudocode for multi-Julia sets.md</code></a> <small>markdown · 2834 B · ~704 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-The potential function and the real iteration number.md</code></a> <small>markdown · 6421 B · ~1561 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Field lines.md</code></a> <small>markdown · 6301 B · ~1556 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Plotting the Julia set.md</code></a> <small>markdown · 771 B · ~193 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Using backwards (inverse) iteration (IIM).md</code></a> <small>markdown · 2010 B · ~502 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Using DEM-J.md</code></a> <small>markdown · 6862 B · ~1674 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-See also.md</code></a> <small>markdown · 802 B · ~201 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-Notes.md</code></a> <small>markdown · 490 B · ~122 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-References.md</code></a> <small>markdown · 2610 B · ~644 tok</small></li><li><a href="#section-0020"><code>artifacts/sections/0020-Bibliography.md</code></a> <small>markdown · 1823 B · ~455 tok</small></li><li><a href="#section-0021"><code>artifacts/sections/0021-External links.md</code></a> <small>markdown · 5876 B · ~1467 tok</small></li><li><a href="#art-0025"><code>artifacts/provenance/source-record.json</code></a> <small>json · 365 B · ~92 tok</small></li><li><a href="#art-0026"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0027"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Julia set - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Julia_set
+captured_at: 2026-09-30T05:05:47.123Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 27
+artifact_count: 27
+content_sha256: 48a827bd476b627c8a70f96528f48c820f22ea9b455fb9d464e48a201e2918ed
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:241,&quot;sha256&quot;:&quot;5aee72f315a2ef722688247b8da6a80d6b12e00dbea563c8a5939d799519628c&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;123z&quot;,&quot;2026-09-30t05&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;entry&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:61,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:64810,&quot;sha256&quot;:&quot;48a827bd476b627c8a70f96528f48c820f22ea9b455fb9d464e48a201e2918ed&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;displaystyle&quot;,&quot;set&quot;,&quot;julia&quot;,&quot;iteration&quot;],&quot;summary&quot;:&quot;Julia set - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:16013,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:62253,&quot;sha256&quot;:&quot;a79e640729bff22d625068b1e61214eec5a95751ba51794205cf3cd1f7e750c5&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;org&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:15541,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:401,&quot;sha256&quot;:&quot;287f48fc80389b0ae1bb426694ce450f8dd201b8c3e53873d011409430b6715c&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:101,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Julia set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7146,&quot;sha256&quot;:&quot;4183afb98a979af213bd7f3d23949f13ec106492bdfae39b0f074fc6ee210b95&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;set&quot;,&quot;julia&quot;,&quot;file&quot;,&quot;function&quot;],&quot;summary&quot;:&quot;Julia set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1762,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Formal definition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5030,&quot;sha256&quot;:&quot;bcb9ad97b515bc1921ba6454531ef53752c88f1b724201eb47b8693f61b39305&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;set&quot;,&quot;operatorname&quot;,&quot;fatou&quot;],&quot;summary&quot;:&quot;Formal definition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1252,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Equivalent descriptions of the Julia set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1329,&quot;sha256&quot;:&quot;18becc0a71a3d88391b4a98d7d9cbb92249e048e704d211e393336861ab68827&quot;,&quot;keywords&quot;:[&quot;set&quot;,&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;points&quot;,&quot;wikipedia&quot;,&quot;julia&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Equivalent descriptions of the Julia set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:329,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Properties of the Julia set and Fatou set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:697,&quot;sha256&quot;:&quot;09d8c29204a4514ac13d9d967dc331d8a6779612fa6d7eaf8dcba907767df738&quot;,&quot;keywords&quot;:[&quot;operatorname&quot;,&quot;set&quot;,&quot;fatou&quot;,&quot;https&quot;,&quot;julia&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Properties of the Julia set and Fatou set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:171,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2978,&quot;sha256&quot;:&quot;d86b50bc806c17ec08a113948766f86cb5d0c1a1d4a8747e9ec1198bccc2fee3&quot;,&quot;keywords&quot;:[&quot;set&quot;,&quot;julia&quot;,&quot;wikipedia&quot;,&quot;org&quot;,&quot;displaystyle&quot;,&quot;https&quot;,&quot;fatou&quot;,&quot;iteration&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:738,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Quadratic polynomials.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8723,&quot;sha256&quot;:&quot;13bfde3db6ef1e3b05ca400344ee91910c05ced9f5195c2eec2919302afaad96&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;set&quot;,&quot;png&quot;,&quot;julia&quot;,&quot;wiki&quot;,&quot;thumb&quot;],&quot;summary&quot;:&quot;Quadratic polynomials&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2162,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Generalizations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:465,&quot;sha256&quot;:&quot;54b854c8e4ca2b7a0649d967a38b7db03e90c896f04e1c10daf094dd1efeb5a3&quot;,&quot;keywords&quot;:[&quot;edit&quot;,&quot;generalizations&quot;,&quot;https&quot;,&quot;julia&quot;,&quot;maps&quot;,&quot;org&quot;,&quot;sets&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Generalizations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:117,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Pseudocode.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;09bdf205704a6c5a0f1372d3ab7540fa347550bca051ad0cea738a56638523c6&quot;,&quot;keywords&quot;:[&quot;pseudocode&quot;,&quot;code&quot;,&quot;edit&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;action&quot;,&quot;allow&quot;],&quot;summary&quot;:&quot;Pseudocode&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Pseudocode for normal Julia sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:894,&quot;sha256&quot;:&quot;d4a97205370183cd53d8627e0ac9872038202cc7c08dcee29547f6ce1880c479&quot;,&quot;keywords&quot;:[&quot;iteration&quot;,&quot;max_iteration&quot;,&quot;pixel&quot;,&quot;between&quot;,&quot;coordinate&quot;,&quot;edit&quot;,&quot;julia&quot;,&quot;normal&quot;],&quot;summary&quot;:&quot;Pseudocode for normal Julia sets&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:224,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Pseudocode for multi-Julia sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2834,&quot;sha256&quot;:&quot;398943a22a3dc5d447c0ae5d3e996e822c5402083becaa2d16dd84ae79830900&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;iteration&quot;,&quot;log&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;banding&quot;,&quot;color&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Pseudocode for multi-Julia sets&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:704,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-The potential function and the real iteration number.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6421,&quot;sha256&quot;:&quot;574204c5e67614e796ebcee4af49107069075aa484cfd6a233edccca64434fe3&quot;,&quot;keywords&quot;:[&quot;log&quot;,&quot;displaystyle&quot;,&quot;number&quot;,&quot;frac&quot;,&quot;lim&quot;,&quot;iteration&quot;,&quot;function&quot;,&quot;alpha&quot;],&quot;summary&quot;:&quot;The potential function and the real iteration number&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1561,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Field lines.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6301,&quot;sha256&quot;:&quot;1272d73164df30301eea66137b0afa6224c97c1f343ee4c8825c3815b1d579b6&quot;,&quot;keywords&quot;:[&quot;field&quot;,&quot;displaystyle&quot;,&quot;lines&quot;,&quot;iteration&quot;,&quot;number&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;domain&quot;],&quot;summary&quot;:&quot;Field lines&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1556,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Plotting the Julia set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:771,&quot;sha256&quot;:&quot;1657f6ba1a8c1c44a323318caacccf1e5365f7f96a8cc804c6fa075bd501fadd&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;internal&quot;,&quot;julia&quot;,&quot;org&quot;,&quot;set&quot;,&quot;wikipedia&quot;,&quot;file&quot;,&quot;ogv&quot;],&quot;summary&quot;:&quot;Plotting the Julia set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:193,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Using backwards (inverse) iteration (IIM).md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2010,&quot;sha256&quot;:&quot;7a0a3e5549fa9064de8ff5f80197fd8816cdfba1975052ce5ef9438b1563bd5d&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;set&quot;,&quot;https&quot;,&quot;julia&quot;,&quot;iim&quot;,&quot;random&quot;,&quot;thumb&quot;],&quot;summary&quot;:&quot;Using backwards (inverse) iteration (IIM)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:502,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Using DEM-J.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6862,&quot;sha256&quot;:&quot;ad13b9d7a0439c054cb6faa89c9ff3898b2dc53c57532f9b128a1a8b7837aa27&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;set&quot;,&quot;lim&quot;,&quot;thumb&quot;,&quot;distance&quot;],&quot;summary&quot;:&quot;Using DEM/J&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1674,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:802,&quot;sha256&quot;:&quot;2fc5689a6d41b067a6cdfb734a8501dcd5533d47ed5cdc81730571643b214ab9&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikimedia&quot;,&quot;commons&quot;,&quot;svg&quot;,&quot;also&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:201,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:490,&quot;sha256&quot;:&quot;d7110b5cc9e57faa88e62488650c5edabf1b9a6845d8295c7a6e30ef40c4bc55&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;edit&quot;,&quot;jacobian_matrix&quot;,&quot;julia_set&quot;,&quot;notation&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:122,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2610,&quot;sha256&quot;:&quot;c1aab90fb754109c5c4f8428d4569285b5c9d1031de9da1ccf75c2e9022d97eb&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;julia_set&quot;,&quot;iteration&quot;,&quot;beardon&quot;,&quot;des&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:644,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0023&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0020-Bibliography.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1823,&quot;sha256&quot;:&quot;e807e517be04e68990ff55395c293ebc83029f5ba96f5dce767cf1166feb51fb&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;math&quot;,&quot;http&quot;,&quot;complex&quot;,&quot;cut-the-knot&quot;],&quot;summary&quot;:&quot;Bibliography&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:455,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0024&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0021-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5876,&quot;sha256&quot;:&quot;6e84a081346a41f5a4821a65729706222b2f1bde176408cdafecd3e26d932e57&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;julia&quot;,&quot;wiki&quot;,&quot;http&quot;,&quot;category&quot;,&quot;fractals&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1467,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0025&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:365,&quot;sha256&quot;:&quot;153f1e36b10b6ab0eaf6f0511009788c4e97f46cf3dedba157372e8bfef488c5&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;julia_set&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;123z&quot;,&quot;2026-09-30t05&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:92,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0026&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;889777c39be133f16b7c5f5dbfaf1bf468c147023951c4a3b1d3ef07e72afcb7&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;421&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0026&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0027&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0027&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:05:47.123Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	61	241	5aee72f315a2ef722688247b8da6a80d6b12e00dbea563c8a5939d799519628c	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	16013	64810	48a827bd476b627c8a70f96528f48c820f22ea9b455fb9d464e48a201e2918ed	Julia set - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	15541	62253	a79e640729bff22d625068b1e61214eec5a95751ba51794205cf3cd1f7e750c5	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	101	401	287f48fc80389b0ae1bb426694ce450f8dd201b8c3e53873d011409430b6715c	Introduction	
+sec:0005	section	artifacts/sections/0002-Julia set.md	primary	1762	7146	4183afb98a979af213bd7f3d23949f13ec106492bdfae39b0f074fc6ee210b95	Julia set	
+sec:0006	section	artifacts/sections/0003-Formal definition.md	primary	1252	5030	bcb9ad97b515bc1921ba6454531ef53752c88f1b724201eb47b8693f61b39305	Formal definition	
+sec:0007	section	artifacts/sections/0004-Equivalent descriptions of the Julia set.md	primary	329	1329	18becc0a71a3d88391b4a98d7d9cbb92249e048e704d211e393336861ab68827	Equivalent descriptions of the Julia set	
+sec:0008	section	artifacts/sections/0005-Properties of the Julia set and Fatou set.md	primary	171	697	09d8c29204a4514ac13d9d967dc331d8a6779612fa6d7eaf8dcba907767df738	Properties of the Julia set and Fatou set	
+sec:0009	section	artifacts/sections/0006-Examples.md	primary	738	2978	d86b50bc806c17ec08a113948766f86cb5d0c1a1d4a8747e9ec1198bccc2fee3	Examples	
+sec:0010	section	artifacts/sections/0007-Quadratic polynomials.md	primary	2162	8723	13bfde3db6ef1e3b05ca400344ee91910c05ced9f5195c2eec2919302afaad96	Quadratic polynomials	
+sec:0011	section	artifacts/sections/0008-Generalizations.md	primary	117	465	54b854c8e4ca2b7a0649d967a38b7db03e90c896f04e1c10daf094dd1efeb5a3	Generalizations	
+sec:0012	section	artifacts/sections/0009-Pseudocode.md	supporting	80	320	09bdf205704a6c5a0f1372d3ab7540fa347550bca051ad0cea738a56638523c6	Pseudocode	
+sec:0013	section	artifacts/sections/0010-Pseudocode for normal Julia sets.md	supporting	224	894	d4a97205370183cd53d8627e0ac9872038202cc7c08dcee29547f6ce1880c479	Pseudocode for normal Julia sets	
+sec:0014	section	artifacts/sections/0011-Pseudocode for multi-Julia sets.md	supporting	704	2834	398943a22a3dc5d447c0ae5d3e996e822c5402083becaa2d16dd84ae79830900	Pseudocode for multi-Julia sets	
+sec:0015	section	artifacts/sections/0012-The potential function and the real iteration number.md	supporting	1561	6421	574204c5e67614e796ebcee4af49107069075aa484cfd6a233edccca64434fe3	The potential function and the real iteration number	
+sec:0016	section	artifacts/sections/0013-Field lines.md	supporting	1556	6301	1272d73164df30301eea66137b0afa6224c97c1f343ee4c8825c3815b1d579b6	Field lines	
+sec:0017	section	artifacts/sections/0014-Plotting the Julia set.md	supporting	193	771	1657f6ba1a8c1c44a323318caacccf1e5365f7f96a8cc804c6fa075bd501fadd	Plotting the Julia set	
+sec:0018	section	artifacts/sections/0015-Using backwards (inverse) iteration (IIM).md	supporting	502	2010	7a0a3e5549fa9064de8ff5f80197fd8816cdfba1975052ce5ef9438b1563bd5d	Using backwards (inverse) iteration (IIM)	
+sec:0019	section	artifacts/sections/0016-Using DEM-J.md	supporting	1674	6862	ad13b9d7a0439c054cb6faa89c9ff3898b2dc53c57532f9b128a1a8b7837aa27	Using DEM/J	
+sec:0020	section	artifacts/sections/0017-See also.md	supporting	201	802	2fc5689a6d41b067a6cdfb734a8501dcd5533d47ed5cdc81730571643b214ab9	See also	
+sec:0021	section	artifacts/sections/0018-Notes.md	supporting	122	490	d7110b5cc9e57faa88e62488650c5edabf1b9a6845d8295c7a6e30ef40c4bc55	Notes	
+sec:0022	section	artifacts/sections/0019-References.md	supporting	644	2610	c1aab90fb754109c5c4f8428d4569285b5c9d1031de9da1ccf75c2e9022d97eb	References	
+sec:0023	section	artifacts/sections/0020-Bibliography.md	supporting	455	1823	e807e517be04e68990ff55395c293ebc83029f5ba96f5dce767cf1166feb51fb	Bibliography	
+sec:0024	section	artifacts/sections/0021-External links.md	supporting	1467	5876	6e84a081346a41f5a4821a65729706222b2f1bde176408cdafecd3e26d932e57	External links	
+art:0025	provenance	artifacts/provenance/source-record.json	supporting	92	365	153f1e36b10b6ab0eaf6f0511009788c4e97f46cf3dedba157372e8bfef488c5	Capture source identity and metadata	
+art:0026	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	889777c39be133f16b7c5f5dbfaf1bf468c147023951c4a3b1d3ef07e72afcb7	Extraction engine and counts	
+art:0027	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Julia_set#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Julia set
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9_%D8%AC%D9%88%D9%84%D9%8A%D8%A7)
+- [Català](https://ca.wikipedia.org/wiki/Conjunt_de_Julia)
+- [Čeština](https://cs.wikipedia.org/wiki/Juliova_mno%C5%BEina)
+- [Dansk](https://da.wikipedia.org/wiki/Juliam%C3%A6ngde)
+- [Deutsch](https://de.wikipedia.org/wiki/Julia-Menge)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%A3%CF%8D%CE%BD%CE%BF%CE%BB%CE%BF_Julia)
+- [Español](https://es.wikipedia.org/wiki/Conjunto_de_Julia)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87_%DA%98%D9%88%D9%84%DB%8C%D8%A7)
+- [Français](https://fr.wikipedia.org/wiki/Ensemble_de_Julia)
+- [עברית](https://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%AA_%D7%96%27%D7%95%D7%9C%D7%99%D7%94)
+- [Hrvatski](https://hr.wikipedia.org/wiki/Julijev_skup)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Himpunan_Julia)
+- [Italiano](https://it.wikipedia.org/wiki/Insieme_di_Julia)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A5%E3%83%AA%E3%82%A2%E9%9B%86%E5%90%88)
+- [한국어](https://ko.wikipedia.org/wiki/%EC%A5%98%EB%A6%AC%EC%95%84_%EC%A7%91%ED%95%A9)
+- [Nederlands](https://nl.wikipedia.org/wiki/Juliaverzameling)
+- [Polski](https://pl.wikipedia.org/wiki/Zbi%C3%B3r_Julii)
+- [Português](https://pt.wikipedia.org/wiki/Conjunto_de_Julia)
+- [Română](https://ro.wikipedia.org/wiki/Mul%C8%9Bime_Julia)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%96%D1%8E%D0%BB%D0%B8%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Julijin_skup)
+- [Simple English](https://simple.wikipedia.org/wiki/Julia_set)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Juliova_mno%C5%BEina)
+- [Svenska](https://sv.wikipedia.org/wiki/Juliam%C3%A4ngden)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%8B%E0%B8%95%E0%B8%88%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B8%A2)
+- [Türkçe](https://tr.wikipedia.org/wiki/Julia_k%C3%BCmesi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B8%D0%BD%D0%B0_%D0%96%D1%83%D0%BB%D1%96%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E6%9C%B1%E5%88%A9%E4%BA%9A%E9%9B%86%E5%90%88)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q848427#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Fractal sets in complex dynamics of mathematics [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This article **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this article](https://en.wikipedia.org/wiki/Special:EditPage/Julia_set) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence).
+*Find sources:* [&quot;Julia set&quot;](https://www.google.com/search?as_eq=wikipedia&amp;q=%22Julia+set%22) – [news](https://www.google.com/search?tbm=nws&amp;q=%22Julia+set%22+-wikipedia&amp;tbs=ar:1) **·** [newspapers](https://www.google.com/search?&amp;q=%22Julia+set%22&amp;tbs=bkt:s&amp;tbm=bks) **·** [books](https://www.google.com/search?tbs=bks:1&amp;q=%22Julia+set%22+-wikipedia) **·** [scholar](https://scholar.google.com/scholar?q=%22Julia+set%22) **·** [JSTOR](https://www.jstor.org/action/doBasicSearch?Query=%22Julia+set%22&amp;acc=on&amp;wc=on) *(July 2021)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Julia_set%2C_plotted_with_Matplotlib.svg/330px-Julia_set%2C_plotted_with_Matplotlib.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_set,_plotted_with_Matplotlib.svg)A map of behavior of initial points     z   {\displaystyle z}   in the complex plane, by iterating the quadratic map     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}   where c is approximately -0.5125 + 0.5213i. The green and blue regions are the Fatou set, and the Julia set consists of the central yellow points [https://en\.wikipedia\.org/wiki/File:Julia\-Menge\.Zoomfahrt\.25p\.webm](https://en.wikipedia.org/wiki/File:Julia-Menge.Zoomfahrt.25p.webm)Duration: 13 seconds.[https://en\.wikipedia\.org/wiki/File:Julia\-Menge\.Zoomfahrt\.25p\.webm](https://en.wikipedia.org/wiki/File:Julia-Menge.Zoomfahrt.25p.webm)Zoom into a Julia set in the [complex-valued z-plane](https://en.wikipedia.org/wiki/Complex_number) with the complex-valued [polynomial function](https://en.wikipedia.org/wiki/Polynomial) of [second degree](https://en.wikipedia.org/wiki/Degree_of_a_polynomial)
+    p ( z ) =  z  2   + c   {\displaystyle p(z)=z^{2}+c}
+and the parameters
+cre = cim = -0.5251993 [https://en\.wikipedia\.org/wiki/File:Julia\_set\_3d\_slice\_animation\.ogg](https://en.wikipedia.org/wiki/File:Julia_set_3d_slice_animation.ogg)Duration: 6 seconds.[https://en\.wikipedia\.org/wiki/File:Julia\_set\_3d\_slice\_animation\.ogg](https://en.wikipedia.org/wiki/File:Julia_set_3d_slice_animation.ogg)Three-dimensional slices through the (four-dimensional) Julia set of a function on the [quaternions](https://en.wikipedia.org/wiki/Quaternion)
+
+In [complex dynamics](https://en.wikipedia.org/wiki/Complex_dynamics), the **Julia set** and the [Fatou set](https://en.wikipedia.org/wiki/Classification_of_Fatou_components) are two [complementary sets](https://en.wikipedia.org/wiki/Complement_set) (Julia &quot;laces&quot; and Fatou &quot;dusts&quot;) defined from a [function](https://en.wikipedia.org/wiki/Function_(mathematics)). Informally, the Fatou set of the function consists of values with the property that all nearby values behave similarly under [repeated iteration](https://en.wikipedia.org/wiki/Iterated_function) of the function, and the Julia set consists of values such that an arbitrarily small [perturbation](https://en.wikipedia.org/wiki/Perturbation_theory) can cause drastic changes in the sequence of iterated function values. Thus the behavior of the function on the Fatou set is &quot;regular&quot;, while on the Julia set its behavior is &quot;[chaotic](https://en.wikipedia.org/wiki/Chaos_theory)&quot;.
+
+The Julia set of a function  f  is commonly denoted     J ⁡ ( f ) ,   {\displaystyle \operatorname {J} (f),}   and the Fatou set is denoted     F ⁡ ( f ) .   {\displaystyle \operatorname {F} (f).}  [[a]](https://en.wikipedia.org/wiki/Julia_set#cite_note-1) These sets are named after the French mathematicians [Gaston Julia](https://en.wikipedia.org/wiki/Gaston_Julia)[[1]](https://en.wikipedia.org/wiki/Julia_set#cite_note-2) and [Pierre Fatou](https://en.wikipedia.org/wiki/Pierre_Fatou)[[2]](https://en.wikipedia.org/wiki/Julia_set#cite_note-3) whose work began the study of [complex dynamics](https://en.wikipedia.org/wiki/Complex_dynamics) during the early 20th century.
+
+## Formal definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=1)]
+
+Let     f ( z )   {\displaystyle f(z)}   be a non-constant [meromorphic function](https://en.wikipedia.org/wiki/Meromorphic_function) from the [Riemann sphere](https://en.wikipedia.org/wiki/Riemann_sphere) onto itself. Such functions     f ( z )   {\displaystyle f(z)}   are precisely the non-constant [complex](https://en.wikipedia.org/wiki/Complex_number) [rational functions](https://en.wikipedia.org/wiki/Rational_function), that is,     f ( z ) = p ( z )  /  q ( z )   {\displaystyle f(z)=p(z)/q(z)}   where     p ( z )   {\displaystyle p(z)}   and     q ( z )   {\displaystyle q(z)}   are [complex polynomials](https://en.wikipedia.org/wiki/Complex_polynomial). Assume that *p* and *q* have no common [roots](https://en.wikipedia.org/wiki/Root_of_a_polynomial), and at least one has [degree](https://en.wikipedia.org/wiki/Degree_of_a_polynomial) larger than 1. Then there is a finite number of [open sets](https://en.wikipedia.org/wiki/Open_set)      F  1   , . . . ,  F  r     {\displaystyle F_{1},...,F_{r}}   that are left invariant by     f ( z )   {\displaystyle f(z)}   and are such that:
+
+1. The [union](https://en.wikipedia.org/wiki/Union_(set_theory)) of the sets      F  i     {\displaystyle F_{i}}   is [dense](https://en.wikipedia.org/wiki/Dense_set) in the plane and
+2. f ( z )   {\displaystyle f(z)}   behaves in a regular and equal way on each of the sets      F  i     {\displaystyle F_{i}}  .
+
+The last statement means that the termini of the sequences of iterations generated by the points of      F  i     {\displaystyle F_{i}}   are either precisely the same set, which is then a finite cycle, or they are finite cycles of circular or annular shaped sets that are lying concentrically. In the first case the cycle is *attracting*, in the second case it is *neutral*.
+
+These sets      F  i     {\displaystyle F_{i}}   are the Fatou domains of     f ( z )   {\displaystyle f(z)}  , and their union is the Fatou set     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}   of     f ( z )   {\displaystyle f(z)}  . Each of the Fatou domains contains at least one [critical point](https://en.wikipedia.org/wiki/Critical_point_(mathematics)) of     f ( z )   {\displaystyle f(z)}  , that is, a (finite) point *z* satisfying      f ′  ( z ) = 0   {\displaystyle f&#39;(z)=0}  , or     f ( z ) = ∞   {\displaystyle f(z)=\infty }   if the degree of the numerator     p ( z )   {\displaystyle p(z)}   is at least two larger than the degree of the denominator     q ( z )   {\displaystyle q(z)}  , or if     f ( z ) = 1  /  g ( z ) + c   {\displaystyle f(z)=1/g(z)+c}   for some *c* and a rational function     g ( z )   {\displaystyle g(z)}   satisfying this condition.
+
+The complement of     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}   is the Julia set     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   of     f ( z )   {\displaystyle f(z)}  . If all the critical points are preperiodic, that is they are not periodic but eventually land on a periodic cycle, then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is all the sphere. Otherwise,     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is a nowhere dense set (it is without interior points) and an [uncountable](https://en.wikipedia.org/wiki/Uncountable) set (of the same [cardinality](https://en.wikipedia.org/wiki/Cardinality) as the real numbers). Like     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}  ,     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is left invariant by     f ( z )   {\displaystyle f(z)}  , and on this set the iteration is repelling, meaning that      |  f ( z ) − f ( w )  |  &gt;  |  z − w  |    {\displaystyle |f(z)-f(w)|&gt;|z-w|}   for all *w* in a neighbourhood of *z* (within     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}  ). This means that     f ( z )   {\displaystyle f(z)}   behaves chaotically on the Julia set. Although there are points in the Julia set whose sequence of iterations is finite, there are only a [countable](https://en.wikipedia.org/wiki/Countable) number of such points (and they make up an infinitesimal part of the Julia set). The sequences generated by points outside this set behave chaotically, a phenomenon called *[deterministic chaos](https://en.wikipedia.org/wiki/Deterministic_chaos)*.
+
+There has been extensive research on the Fatou set and Julia set of iterated [rational functions](https://en.wikipedia.org/wiki/Rational_functions), known as rational maps. For example, it is known that the Fatou set of a rational map has either 0, 1, 2 or infinitely many [components](https://en.wikipedia.org/wiki/Connected_component_(analysis)).[[3]](https://en.wikipedia.org/wiki/Julia_set#cite_note-4) Each component of the Fatou set of a rational map can be classified into one of [four different classes](https://en.wikipedia.org/wiki/Classification_of_Fatou_components).[[4]](https://en.wikipedia.org/wiki/Julia_set#cite_note-5)
+
+## Equivalent descriptions of the Julia set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=2)]
+- J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the smallest closed set containing at least three points which is completely invariant under *f*.
+- J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the [closure](https://en.wikipedia.org/wiki/Closure_(topology)) of the set of repelling [periodic points](https://en.wikipedia.org/wiki/Periodic_point).
+- For all but at most two points      z ∈ X  ,   {\displaystyle \;z\in X\;,}   the Julia set is the set of limit points of the full backwards orbit      ⋃  n    f  − n   ( z ) .   {\displaystyle \bigcup _{n}f^{-n}(z).}   (This suggests a simple algorithm for plotting Julia sets, see below.)
+- If *f* is an [entire function](https://en.wikipedia.org/wiki/Entire_function), then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the [boundary](https://en.wikipedia.org/wiki/Boundary_(topology)) of the set of points which converge to infinity under iteration.
+- If *f* is a polynomial, then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the boundary of the [filled Julia set](https://en.wikipedia.org/wiki/Filled_Julia_set); that is, those points whose orbits under iterations of *f* remain bounded.
+
+## Properties of the Julia set and Fatou set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=3)]
+
+The Julia set and the Fatou set of *f* are both [completely invariant](https://en.wikipedia.org/wiki/Invariant_(mathematics)) under iterations of the holomorphic function *f*:[[5]](https://en.wikipedia.org/wiki/Julia_set#cite_note-6)
+
+      f  − 1   ( J ⁡ ( f ) ) = f ( J ⁡ ( f ) ) = J ⁡ ( f ) ,   {\displaystyle f^{-1}(\operatorname {J} (f))=f(\operatorname {J} (f))=\operatorname {J} (f),}        f  − 1   ( F ⁡ ( f ) ) = f ( F ⁡ ( f ) ) = F ⁡ ( f ) .   {\displaystyle f^{-1}(\operatorname {F} (f))=f(\operatorname {F} (f))=\operatorname {F} (f).}
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=4)]
+
+For     f ( z ) =  z  2     {\displaystyle f(z)=z^{2}}   the Julia set is the unit circle and on this the iteration is given by doubling of angles (an operation that is chaotic on the points whose argument is not a rational fraction of     2 π   {\displaystyle 2\pi }  ). There are two Fatou domains: the interior and the exterior of the circle, with iteration towards 0 and ∞, respectively.
+
+For     g ( z ) =  z  2   − 2   {\displaystyle g(z)=z^{2}-2}   the Julia set is the line segment between −2 and 2. There is one [Fatou domain](https://en.wikipedia.org/wiki/Classification_of_Fatou_components): the points not on the line segment iterate towards ∞. (Apart from a shift and scaling of the domain, this iteration is equivalent to     x → 4 ( x −    1 2     )  2     {\displaystyle x\to 4(x-{\tfrac {1}{2}})^{2}}   on the unit interval, which is commonly used as an example of chaotic system.)
+
+The functions *f* and *g* are of the form      z  2   + c   {\displaystyle z^{2}+c}  , where *c* is a complex number. For such an iteration the Julia set is not in general a simple curve, but is a fractal, and for some values of *c* it can take surprising shapes. See the pictures below.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Julia-set_N_z3-1.png/250px-Julia-set_N_z3-1.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia-set_N_z3-1.png)Julia set (in white) for the rational function associated to [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for *f* : *z* → *z*3−1. Coloring of Fatou set in red, green and blue tones according to the three attractors (the three roots of *f*).
+
+For some functions *f*(*z*) we can say beforehand that the Julia set is a fractal and not a simple curve. This is because of the following result on the iterations of a rational function:
+
+**Theorem**—Each of the Fatou domains has the same boundary, which consequently is the Julia set.[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*]
+
+This means that each point of the Julia set is a point of accumulation for each of the Fatou domains. Therefore, if there are more than two Fatou domains, *each* point of the Julia set must have points of more than two different open sets infinitely close, and this means that the Julia set cannot be a simple curve. This phenomenon happens, for instance, when *f*(*z*) is the [Newton iteration](https://en.wikipedia.org/wiki/Newton_iteration) for solving the equation      P ( z ) :=  z  n   − 1 = 0   :   n &gt; 2    {\displaystyle \;P(z):=z^{n}-1=0~:~n&gt;2\;}  :
+
+     f ( z ) = z −    P ( z )    P ′  ( z )    =     1 + ( n − 1 )  z  n      n  z  n − 1        .   {\displaystyle f(z)=z-{\frac {P(z)}{P&#39;(z)}}={\frac {\;1+(n-1)z^{n}\;}{nz^{n-1}}}~.}
+
+The image on the right shows the case *n* = 3.
+
+## Quadratic polynomials
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=5)]
+
+A very popular complex dynamical system is given by the family of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial), a special case of [rational maps](https://en.wikipedia.org/wiki/Rational_function). Such quadratic polynomials can be expressed as
+
+      f  c   ( z ) =  z  2   + c   ,   {\displaystyle f_{c}(z)=z^{2}+c~,}
+
+where *c* is a complex parameter. Fix some     R &gt; 0   {\displaystyle R&gt;0}   large enough that      R  2   − R ≥  |  c  |  .   {\displaystyle R^{2}-R\geq |c|.}   (For example, if c is in the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set), then      |  c  |  ≤ 2 ,   {\displaystyle |c|\leq 2,}   so we may simply let     R = 2   .   {\displaystyle R=2~.}  ) Then the filled Julia set for this system is the subset of the complex plane given by
+
+     K (  f  c   ) =  {  z ∈  C  : ∀ n ∈  N  ,  |   f  c   n   ( z )  |  ≤ R  }    ,   {\displaystyle K(f_{c})=\left\{z\in \mathbb {C} :\forall n\in \mathbb {N} ,|f_{c}^{n}(z)|\leq R\right\}~,}
+
+where      f  c   n   ( z )   {\displaystyle f_{c}^{n}(z)}   is the *n*th [iterate](https://en.wikipedia.org/wiki/Iterated_function) of      f  c   ( z ) .   {\displaystyle f_{c}(z).}   The Julia set     J (  f  c   )   {\displaystyle J(f_{c})}   of this function is the boundary of     K (  f  c   )   {\displaystyle K(f_{c})}  .
+
+- [![Julia sets for                               z                      2                          \+        0\.7885                          e                      i            a                          ,              \{\\displaystyle z^\{2\}\+0\.7885\\,e^\{ia\},\}   where a ranges from 0 to                     2        π              \{\\displaystyle 2\\pi \}](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/JSr07885.gif/250px-JSr07885.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JSr07885.gif)Julia sets for      z  2   + 0.7885   e  i a   ,   {\displaystyle z^{2}+0.7885\,e^{ia},}   where *a* ranges from 0 to     2 π   {\displaystyle 2\pi }
+- [https://en\.wikipedia\.org/wiki/File:Julia\_circling\.ogg](https://en.wikipedia.org/wiki/File:Julia_circling.ogg)A video of the Julia sets as left
+- [![Filled Julia set for fc, c = 1 − φ, where φ is the golden ratio](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Julia-Menge.png/250px-Julia-Menge.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia-Menge.png)Filled Julia set for *fc*, *c* = 1 − *φ*, where *φ* is the [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio)
+- [![Julia set for fc, c = \(φ − 2\) \+ \(φ − 1\)i = −0\.4 \+ 0\.6i](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Julia_0.4_0.6.png/250px-Julia_0.4_0.6.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.4_0.6.png)Julia set for *fc*, *c* = (*φ* − 2) + (*φ* − 1)*i* = −0.4 + 0.6*i*
+- [![Julia set for fc, c = 0\.285 \+ 0i](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Julia_0.285_0.png/250px-Julia_0.285_0.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.285_0.png)Julia set for *fc*, *c* = 0.285 + 0*i*
+- [![Julia set for fc, c = 0\.285 \+ 0\.01i](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Julia_0.285_0.01.png/250px-Julia_0.285_0.01.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.285_0.01.png)Julia set for *fc*, *c* = 0.285 + 0.01*i*
+- [![Julia set for fc, c = 0\.45 \+ 0\.1428i](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Julia_0.45_0.1428.png/250px-Julia_0.45_0.1428.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.45_0.1428.png)Julia set for *fc*, *c* = 0.45 + 0.1428*i*
+- [![Julia set for fc, c = −0\.70176 − 0\.3842i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Julia_-0.70176_-0.3842.png/250px-Julia_-0.70176_-0.3842.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.70176_-0.3842.png)Julia set for *fc*, *c* = −0.70176 − 0.3842*i*
+- [![Julia set for fc, c = −0\.835 − 0\.2321i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Julia_-0.835_-0.2321.png/250px-Julia_-0.835_-0.2321.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.835_-0.2321.png)Julia set for *fc*, *c* = −0.835 − 0.2321*i*
+- [![Julia set for fc, c = −0\.8 \+ 0\.156i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Julia_-0.8_0.156.png/250px-Julia_-0.8_0.156.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.8_0.156.png)Julia set for *fc*, *c* = −0.8 + 0.156*i*
+- [![Julia set for fc, vc = −0\.7269 \+ 0\.1889i](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Julia_-0.7269_0.1889.png/250px-Julia_-0.7269_0.1889.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.7269_0.1889.png)Julia set for *fc*, v*c* = −0.7269 + 0.1889*i*
+- [![Julia set for fc, c = \-0\.8i](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Julia_0_0.8.png/250px-Julia_0_0.8.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0_0.8.png)Julia set for *fc*, *c* = -0.8*i*
+- [![Julia set for fc, c = 0\.35 \+ 0\.35i](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png/250px-2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png)Julia set for *fc*, *c* = 0.35 + 0.35*i*
+- [![Julia set for fc, c = 0\.4 \+ 0\.4i](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/JuliaSet.4.png/250px-JuliaSet.4.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliaSet.4.png)Julia set for *fc*, *c* = 0.4 + 0.4*i*
+- [![Collection of Julia sets laid out in a 100 × 100 grid such that the center of each image corresponds to the same position in the complex plane as the value of the set\. When laid out like this, the overall image resembles a Photographic mosaic depicting a Mandelbrot set\.](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Julia_Mandelbrot_Relationship.png/250px-Julia_Mandelbrot_Relationship.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_Mandelbrot_Relationship.png)Collection of Julia sets laid out in a 100 × 100 grid such that the center of each image corresponds to the same position in the complex plane as the value of the set. When laid out like this, the overall image resembles a [Photographic mosaic](https://en.wikipedia.org/wiki/Photographic_mosaic) depicting a [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set).
+
+The parameter plane of quadratic polynomials – that is, the plane of possible *c* values – gives rise to the famous [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set). Indeed, the Mandelbrot set is defined as the set of all *c* such that     J (  f  c   )   {\displaystyle J(f_{c})}   is [connected](https://en.wikipedia.org/wiki/Connected_set). For parameters outside the Mandelbrot set, the Julia set is a [Cantor space](https://en.wikipedia.org/wiki/Cantor_space): in this case it is sometimes referred to as **Fatou dust**.
+
+In many cases, the Julia set of *c* looks like the Mandelbrot set in sufficiently small neighborhoods of *c*. This is true, in particular, for so-called [Misiurewicz parameters](https://en.wikipedia.org/wiki/Misiurewicz_point), i.e. parameters *c* for which the critical point is pre-periodic. For instance:
+
+- At *c* = *i*, the shorter, front toe of the forefoot, the Julia set looks like a branched lightning bolt.
+- At *c* = −2, the tip of the long spiky tail, the Julia set is a straight line segment.
+
+In other words, the Julia sets     J (  f  c   )   {\displaystyle J(f_{c})}   are locally similar around [Misiurewicz points](https://en.wikipedia.org/wiki/Misiurewicz_point).[[6]](https://en.wikipedia.org/wiki/Julia_set#cite_note-7)
+
+## Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=6)]
+
+The definition of Julia and Fatou sets easily carries over to the case of certain maps whose image contains their domain; most notably [transcendental meromorphic functions](https://en.wikipedia.org/wiki/Meromorphic_function) and Adam Epstein&#39;s **finite-type maps**.
+
+Julia sets are also commonly defined in the study of dynamics in several complex variables.
+
+## Pseudocode
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=7)]
+
+The below pseudocode implementations hard code the functions for each fractal. Consider implementing [complex number](https://en.wikipedia.org/wiki/Complex_number) operations to allow for more dynamic and reusable code.
+
+### Pseudocode for normal Julia sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=8)]     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}
+
+```
+R = escape radius  # choose R &gt; 0 such that R**2 - R &gt;= sqrt(cx**2 + cy**2)
+
+for each pixel (x, y) on the screen, do:
+{
+    zx = scaled x coordinate of pixel; # (scale to be between -R and R)
+       # zx represents the real part of z.
+    zy = scaled y coordinate of pixel; # (scale to be between -R and R)
+       # zy represents the imaginary part of z.
+
+    iteration = 0;
+    max_iteration = 1000;
+
+    while (zx * zx + zy * zy &lt; R**2  AND  iteration &lt; max_iteration)
+    {
+        xtemp = zx * zx - zy * zy;
+        zy = 2 * zx * zy  + cy;
+        zx = xtemp + cx;
+
+        iteration = iteration + 1;
+    }
+
+    if (iteration == max_iteration)
+        return black;
+    else
+        return iteration;
+}
+```
+
+### Pseudocode for multi-Julia sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=9)]     f ( z ) =  z  n   + c   {\displaystyle f(z)=z^{n}+c}
+
+```
+R = escape radius #  choose R &gt; 0 such that R**n - R &gt;= sqrt(cx**2 + cy**2)
+
+for each pixel (x, y) on the screen, do:
+{
+    zx = scaled x coordinate of pixel; # (scale to be between -R and R)
+    zy = scaled y coordinate of pixel; # (scale to be between -R and R)
+
+    iteration = 0;
+    max_iteration = 1001;
+
+    while (zx * zx + zy * zy &lt; R**2  AND  iteration &lt; max_iteration)
+    {
+        xtmp = (zx * zx + zy * zy) ^ (n / 2) * cos(n * atan2(zy, zx)) + cx;
+	    zy = (zx * zx + zy * zy) ^ (n / 2) * sin(n * atan2(zy, zx)) + cy;
+	    zx = xtmp;
+
+        iteration = iteration + 1;
+    }
+    if (iteration == max_iteration)
+        return black;
+    else
+        return iteration;
+}
+```
+
+Another recommended option is to reduce color banding between iterations by using a renormalization formula for the iteration.[[7]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Renormalizing_the_Mandelbrot_Escape-8)
+
+Such formula is given to be,
+
+     m u = k + 1 −    log ⁡  log ⁡   |   z  k    |      log ⁡  n       {\displaystyle mu=k+1-{\frac {\log {\log {|z_{k}|}}}{\log {n}}}}       ∀  f  c , n   ( z ) =  z  n   +  lower power terms  + c   {\displaystyle \forall f_{c,n}(z)=z^{n}+{\text{lower power terms}}+c}
+
+where     k   {\displaystyle k}   is the escaping iteration, bounded by some     K   {\displaystyle K}   such that     0 ≤ k &lt; K   {\displaystyle 0\leq k&lt;K}   and     K ∈  N    {\displaystyle K\in \mathbb {N} }  , and      |   z  k    |    {\displaystyle |z_{k}|}   is the magnitude of the last iterate before escaping.
+
+This can be implemented, very simply, like so:
+
+```
+# simply replace the last 4 lines of code from the last example with these lines of code:
+
+if(iteration == max_iteration)
+    return black;
+else
+    abs_z = zx * zx + zy * zy;
+    return iteration + 1 - log(log(abs_z))/log(n);
+```
+
+The difference is shown below with a Julia set defined as      f  c , 2   ( z )   {\displaystyle f_{c,2}(z)}   where     c = − 0.835 − 0.321 i   {\displaystyle c=-0.835-0.321i}  .
+
+ Julia set with color banding and without
+- [![Julia set with color banding](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/JuliasetColorband.png/330px-JuliasetColorband.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliasetColorband.png)With color banding
+- [![Julia set without color banding](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/JuliasetNoColorband.png/330px-JuliasetNoColorband.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliasetNoColorband.png)Without color banding
+
+## The potential function and the real iteration number
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=10)]
+
+The Julia set for     f ( z ) =  z  2     {\displaystyle f(z)=z^{2}}   is the unit circle, and on the outer Fatou domain, the *potential function* *φ*(*z*) is defined by *φ*(*z*) = log|*z*|. The equipotential lines for this function are concentric circles. As      |  f ( z )  |  =  |  z   |   2     {\displaystyle |f(z)|=|z|^{2}}   we have
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    2  k     ,   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{2^{k}}},}
+
+where      z  k     {\displaystyle z_{k}}   is the sequence of iteration generated by *z*. For the more general iteration     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}  , it has been proved that if the Julia set is connected (that is, if *c* belongs to the (usual) Mandelbrot set), then there exist a [biholomorphic](https://en.wikipedia.org/wiki/Biholomorphic) map *ψ* between the outer Fatou domain and the outer of the unit circle such that      |  ψ ( f ( z ) )  |  =  |  ψ ( z )   |   2     {\displaystyle |\psi (f(z))|=|\psi (z)|^{2}}  .[[8]](https://en.wikipedia.org/wiki/Julia_set#cite_note-9) This means that the potential function on the outer Fatou domain defined by this correspondence is given by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    2  k     .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{2^{k}}}.}
+
+This formula has meaning also if the Julia set is not connected, so that we for all *c* can define the potential function on the Fatou domain containing ∞ by this formula. For a general rational function *f*(*z*) such that ∞ is a critical point and a fixed point, that is, such that the degree *m* of the numerator is at least two larger than the degree *n* of the denominator, we define the *potential function* on the Fatou domain containing ∞ by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    d  k     ,   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{d^{k}}},}
+
+where *d* = *m* − *n* is the degree of the rational function.[[9]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Peitgen1986-10)
+
+If *N* is a very large number (e.g. 10100), and if *k* is the first iteration number such that      |   z  k    |  &gt; N   {\displaystyle |z_{k}|&gt;N}  , we have that
+
+        log ⁡  |   z  k    |    d  k     =    log ⁡ ( N )   d  ν ( z )     ,   {\displaystyle {\frac {\log |z_{k}|}{d^{k}}}={\frac {\log(N)}{d^{\nu (z)}}},}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , which should be regarded as the **real iteration number**, and we have that:
+
+     ν ( z ) = k −    log ⁡ ( log ⁡  |   z  k    |   /  log ⁡ ( N ) )   log ⁡ ( d )    ,   {\displaystyle \nu (z)=k-{\frac {\log(\log |z_{k}|/\log(N))}{\log(d)}},}
+
+where the last number is in the interval [0, 1).
+
+For iteration towards a finite attracting cycle of order *r*, we have that if      z  ∗     {\displaystyle z^{*}}   is a point of the cycle, then     f ( f ( . . . f (  z  ∗   ) ) ) =  z  ∗     {\displaystyle f(f(...f(z^{*})))=z^{*}}   (the *r*-fold composition), and the number
+
+     α =   1  |  ( d ( f ( f ( ⋯ f ( z ) ) ) )  /  d z  )  z =  z  ∗      |     ( &gt; 1 )   {\displaystyle \alpha ={\frac {1}{\left|(d(f(f(\cdots f(z))))/dz)_{z=z^{*}}\right|}}\qquad (&gt;1)}
+
+is the *attraction* of the cycle. If *w* is a point very near      z  ∗     {\displaystyle z^{*}}   and *w*′ is *w* iterated *r* times, we have that
+
+     α =  lim  k → ∞       |  w −  z  ∗    |     |   w ′  −  z  ∗    |     .   {\displaystyle \alpha =\lim _{k\to \infty }{\frac {|w-z^{*}|}{|w&#39;-z^{*}|}}.}
+
+Therefore, the number      |   z  k r   −  z  ∗    |   α  k     {\displaystyle |z_{kr}-z^{*}|\alpha ^{k}}   is almost independent of *k*. We define the potential function on the Fatou domain by:
+
+     φ ( z ) =  lim  k → ∞     1  (  |   z  k r   −  z  ∗    |   α  k   )    .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {1}{(|z_{kr}-z^{*}|\alpha ^{k})}}.}
+
+If ε is a very small number and *k* is the first iteration number such that      |   z  k   −  z  ∗    |  &lt; ϵ   {\displaystyle |z_{k}-z^{*}|&lt;\epsilon }  , we have that
+
+     φ ( z ) =   1  ( ε  α  ν ( z )   )      {\displaystyle \varphi (z)={\frac {1}{(\varepsilon \alpha ^{\nu (z)})}}}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , which should be regarded as the real iteration number, and we have that:
+
+     ν ( z ) = k −    log ⁡ ( ε  /   |   z  k   −  z  ∗    |  )   log ⁡ ( α )    .   {\displaystyle \nu (z)=k-{\frac {\log(\varepsilon /|z_{k}-z^{*}|)}{\log(\alpha )}}.}
+
+If the attraction is ∞, meaning that the cycle is *super-attracting*, meaning again that one of the points of the cycle is a critical point, we must replace *α* by
+
+     α =  lim  k → ∞      log ⁡  |   w ′  −  z  ∗    |    log ⁡  |  w −  z  ∗    |     ,   {\displaystyle \alpha =\lim _{k\to \infty }{\frac {\log |w&#39;-z^{*}|}{\log |w-z^{*}|}},}
+
+where *w*′ is *w* iterated *r* times and the formula for *φ*(*z*) by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡ ( 1  /   |   z  k r   −  z  ∗    |  )   α  k     .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log(1/|z_{kr}-z^{*}|)}{\alpha ^{k}}}.}
+
+And now the real iteration number is given by:
+
+     ν ( z ) = k −    log ⁡ ( log ⁡  |   z  k   −  z  ∗    |   /  log ⁡ ( ε ) )   log ⁡ ( α )    .   {\displaystyle \nu (z)=k-{\frac {\log(\log |z_{k}-z^{*}|/\log(\varepsilon ))}{\log(\alpha )}}.}
+
+For the colouring we must have a cyclic scale of colours (constructed mathematically, for instance) and containing *H* colours numbered from 0 to *H*−1 (*H* = 500, for instance). We multiply the real number     ν ( z )   {\displaystyle \nu (z)}   by a fixed real number determining the density of the colours in the picture, and take the integral part of this number modulo *H*.
+
+The definition of the potential function and our way of colouring presuppose that the cycle is attracting, that is, not neutral. If the cycle is neutral, we cannot colour the Fatou domain in a natural way. As the terminus of the iteration is a revolving movement, we can, for instance, colour by the minimum distance from the cycle left fixed by the iteration.
+
+## Field lines
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=11)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Juliasetsdkfieldlines2.jpg/250px-Juliasetsdkfieldlines2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines2.jpg)The equipotential lines for iteration towards infinity[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Juliasetsdkfieldlines1.jpg/250px-Juliasetsdkfieldlines1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines1.jpg)Field lines for an iteration of the form        ( 1 −  z  3    /  6 )   ( z −  z  2    /  2  )  2      + c   {\displaystyle {\frac {(1-z^{3}/6)}{(z-z^{2}/2)^{2}}}+c}
+
+In each Fatou domain (that is not neutral) there are two systems of lines orthogonal to each other: the *equipotential lines* (for the potential function or the real iteration number) and the *field lines*.
+
+If we colour the Fatou domain according to the iteration number (and *not* the real iteration number     ν ( z )   {\displaystyle \nu (z)}  , as defined in the previous section), the bands of iteration show the course of the equipotential lines. If the iteration is towards ∞ (as is the case with the outer Fatou domain for the usual iteration      z  2   + c   {\displaystyle z^{2}+c}  ), we can easily show the course of the field lines, namely by altering the colour according as the last point in the sequence of iteration is above or below the *x*-axis (first picture), but in this case (more precisely: when the Fatou domain is super-attracting) we cannot draw the field lines coherently - at least not by the method we describe here. In this case a field line is also called an [external ray](https://en.wikipedia.org/wiki/External_ray).
+
+Let *z* be a point in the attracting Fatou domain. If we iterate *z* a large number of times, the terminus of the sequence of iteration is a finite cycle *C*, and the Fatou domain is (by definition) the set of points whose sequence of iteration converges towards *C*. The field lines issue from the points of *C* and from the (infinite number of) points that iterate *into* a point of *C*. And they end on the Julia set in points that are non-chaotic (that is, generating a finite cycle). Let *r* be the order of the cycle *C* (its number of points) and let      z  ∗     {\displaystyle z^{*}}   be a point in *C*. We have     f ( f ( … f (  z  ∗   ) ) ) =  z  ∗     {\displaystyle f(f(\dots f(z^{*})))=z^{*}}   (the r-fold composition), and we define the complex number α by
+
+     α = ( d ( f ( f ( … f ( z ) ) ) )  /  d z  )  z =  z  ∗     .   {\displaystyle \alpha =(d(f(f(\dots f(z))))/dz)_{z=z^{*}}.}
+
+If the points of *C* are      z  i   , i = 1 , … , r (  z  1   =  z  ∗   )   {\displaystyle z_{i},i=1,\dots ,r(z_{1}=z^{*})}  , α is the product of the *r* numbers      f ′  (  z  i   )   {\displaystyle f&#39;(z_{i})}  . The real number 1/|α| is the *attraction* of the cycle, and our assumption that the cycle is neither neutral nor super-attracting, means that 1 &lt; ⁠1/|*α*|⁠ &lt; ∞. The point      z  ∗     {\displaystyle z^{*}}   is a fixed point for     f ( f ( … f ( z ) ) )   {\displaystyle f(f(\dots f(z)))}  , and near this point the map     f ( f ( … f ( z ) ) )   {\displaystyle f(f(\dots f(z)))}   has (in connection with field lines) character of a rotation with the argument β of α (that is,     α =  |  α  |   e  β i     {\displaystyle \alpha =|\alpha |e^{\beta i}}  ).
+
+In order to colour the Fatou domain, we have chosen a small number ε and set the sequences of iteration      z  k   ( k = 0 , 1 , 2 , … ,  z  0   = z )   {\displaystyle z_{k}(k=0,1,2,\dots ,z_{0}=z)}   to stop when      |   z  k   −  z  ∗    |  &lt; ϵ   {\displaystyle |z_{k}-z^{*}|&lt;\epsilon }  , and we colour the point *z* according to the number *k* (or the real iteration number, if we prefer a smooth colouring). If we choose a direction from      z  ∗     {\displaystyle z^{*}}   given by an angle *θ*, the field line issuing from      z  ∗     {\displaystyle z^{*}}   in this direction consists of the points *z* such that the argument *ψ* of the number      z  k   −  z  ∗     {\displaystyle z_{k}-z^{*}}   satisfies the condition that
+
+     ψ − k β = θ  mod   π .    {\displaystyle \psi -k\beta =\theta \mod \pi .\,}
+
+For if we pass an iteration band in the direction of the field lines (and away from the cycle), the iteration number *k* is increased by 1 and the number ψ is increased by β, therefore the number     ψ − k β  mod   π   {\displaystyle \psi -k\beta \mod \pi }   is constant along the field line.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Juliasetsdkfieldlines4.jpg/250px-Juliasetsdkfieldlines4.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines4.jpg)Pictures in the field lines for an iteration of the form      z  2   + c   {\displaystyle z^{2}+c}
+
+A colouring of the field lines of the Fatou domain means that we colour the spaces between pairs of field lines: we choose a number of regularly situated directions issuing from      z  ∗     {\displaystyle z^{*}}  , and in each of these directions we choose two directions around this direction. As it can happen that the two field lines of a pair do not end in the same point of the Julia set, our coloured field lines can ramify (endlessly) in their way towards the Julia set. We can colour on the basis of the distance to the center line of the field line, and we can mix this colouring with the usual colouring. Such pictures can be very decorative (second picture).
+
+A coloured field line (the domain between two field lines) is divided up by the iteration bands, and such a part can be put into a one-to-one correspondence with the unit square: the one coordinate is (calculated from) the distance from one of the bounding field lines, the other is (calculated from) the distance from the inner of the bounding iteration bands (this number is the non-integral part of the real iteration number). Therefore, we can put pictures into the field lines (third picture).
+
+## Plotting the Julia set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=12)] [https://en\.wikipedia\.org/wiki/File:Quadratic\_Julia\_set\_with\_Internal\_binary\_decomposition\_for\_internal\_ray\_0\.ogv](https://en.wikipedia.org/wiki/File:Quadratic_Julia_set_with_Internal_binary_decomposition_for_internal_ray_0.ogv)Duration: 3 seconds.[https://en\.wikipedia\.org/wiki/File:Quadratic\_Julia\_set\_with\_Internal\_binary\_decomposition\_for\_internal\_ray\_0\.ogv](https://en.wikipedia.org/wiki/File:Quadratic_Julia_set_with_Internal_binary_decomposition_for_internal_ray_0.ogv)Binary decomposition of interior in case of internal angle 0
+
+Methods :
+
+- Distance Estimation Method for Julia set (DEM/J)
+- Inverse Iteration Method (IIM)
+
+### Using backwards (inverse) iteration (IIM)
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=13)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Reversed_Julia_set_C_%3D_%28_0.4_0.3_%29.gif/250px-Reversed_Julia_set_C_%3D_%28_0.4_0.3_%29.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Reversed_Julia_set_C_=_(_0.4_0.3_).gif)A Julia set plot, generated using random IIM [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miimcr.png/250px-Miimcr.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Miimcr.png)A Julia set plot, generated using MIIM
+
+As mentioned above, the Julia set can be found as the set of limit points of the set of pre-images of (essentially) any given point. So we can try to plot the Julia set of a given function as follows. Start with any point *z* we know to be in the Julia set, such as a repelling periodic point, and compute all pre-images of *z* under some high iterate      f  n     {\displaystyle f^{n}}   of *f*.
+
+Unfortunately, as the number of iterated pre-images grows exponentially, this is not feasible computationally. However, we can adjust this method, in a similar way as the &quot;random game&quot; method for [iterated function systems](https://en.wikipedia.org/wiki/Iterated_function_system). That is, in each step, we choose at random one of the inverse images of *f*.
+
+For example, for the quadratic polynomial *fc*, the backwards iteration is described by
+
+      z  n − 1   =    z  n   − c   .   {\displaystyle z_{n-1}={\sqrt {z_{n}-c}}.}
+
+At each step, one of the two square roots is selected at random.
+
+Note that certain parts of the Julia set are quite difficult to access with the reverse Julia algorithm. For this reason, one must modify IIM/J (an example of this is MIIM/J[[10]](https://en.wikipedia.org/wiki/Julia_set#cite_note-11)) or use other methods to produce better images.
+
+### Using DEM/J
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=14)]
+- Images of Julia sets for ⁠     f  c   ( z ) =  z  2   + c   {\displaystyle f_{c}(z)=z^{2}+c}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.74543
+        \+
+        0\.11301
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.74543\+0\.11301\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Demj.jpg/250px-Demj.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Demj.jpg)⁠    c = − 0.74543 + 0.11301 ∗ i   {\displaystyle c=-0.74543+0.11301*i}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.75
+        \+
+        0\.11
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.75\+0\.11\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Julia_dem.png/250px-Julia_dem.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_dem.png)⁠    c = − 0.75 + 0.11 ∗ i   {\displaystyle c=-0.75+0.11*i}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.1
+        \+
+        0\.651
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.1\+0\.651\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Julia_dem_c%3D-0.1%2B0.651.png/120px-Julia_dem_c%3D-0.1%2B0.651.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_dem_c=-0.1+0.651.png)⁠    c = − 0.1 + 0.651 ∗ i   {\displaystyle c=-0.1+0.651*i}  ⁠
+- [![Julia set drawn by distance estimation, the iteration is of the form ⁠
+
+        1
+        −
+
+          z
+
+            2
+
+        \+
+
+          z
+
+            5
+
+          /
+
+        \(
+        2
+        \+
+        4
+        z
+        \)
+        \+
+        c
+
+    \{\\displaystyle 1\-z^\{2\}\+z^\{5\}/\(2\+4z\)\+c\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Juliasetsdkjulia1.jpg/250px-Juliasetsdkjulia1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkjulia1.jpg)Julia set drawn by distance estimation, the iteration is of the form ⁠    1 −  z  2   +  z  5    /  ( 2 + 4 z ) + c   {\displaystyle 1-z^{2}+z^{5}/(2+4z)+c}  ⁠
+- [![Three\-dimensional rendering of Julia set using distance estimation](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Juliasetsdkland1.jpg/250px-Juliasetsdkland1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkland1.jpg)Three-dimensional rendering of Julia set using distance estimation
+
+As a Julia set is infinitely thin we cannot draw it effectively by backwards iteration from the pixels. It will appear fragmented because of the impracticality of examining infinitely many startpoints. Since the iteration count changes vigorously near the Julia set, a partial solution is to imply the outline of the set from the nearest color contours, but the set will tend to look muddy.
+
+A better way to draw the Julia set in black and white is to estimate the distance of pixels (DEM) from the set and to color every pixel whose center is close to the set. The formula for the distance estimation is derived from the formula for the potential function *φ*(*z*). When the equipotential lines for *φ*(*z*) lie close, the number      |   φ ′  ( z )  |    {\displaystyle |\varphi &#39;(z)|}   is large, and conversely, therefore the equipotential lines for the function     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|}   should lie approximately regularly. It has been proven that the value found by this formula (up to a constant factor) converges towards the true distance for z converging towards the Julia set.[[9]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Peitgen1986-10)
+
+We assume that *f*(*z*) is rational, that is,     f ( z ) = p ( z )  /  q ( z )   {\displaystyle f(z)=p(z)/q(z)}   where *p*(*z*) and *q*(*z*) are complex polynomials of degrees *m* and *n*, respectively, and we have to find the derivative of the above expressions for *φ*(*z*). And as it is only      z  k     {\displaystyle z_{k}}   that varies, we must calculate the derivative      z  k  ′    {\displaystyle z&#39;_{k}}   of      z  k     {\displaystyle z_{k}}   with respect to *z*. But as      z  k   = f ( f ( ⋯ f ( z ) ) )   {\displaystyle z_{k}=f(f(\cdots f(z)))}   (the *k*-fold composition),      z  k  ′    {\displaystyle z&#39;_{k}}   is the product of the numbers      f ′  (  z  k   )   {\displaystyle f&#39;(z_{k})}  , and this sequence can be calculated recursively by      z  k + 1  ′  =  f ′  (  z  k   )  z  k  ′    {\displaystyle z&#39;_{k+1}=f&#39;(z_{k})z&#39;_{k}}  , starting with      z  0  ′  = 1   {\displaystyle z&#39;_{0}=1}   (*before* the calculation of the next iteration      z  k + 1   = f (  z  k   )   {\displaystyle z_{k+1}=f(z_{k})}  ).
+
+For iteration towards ∞ (more precisely when *m* ≥ *n* + 2, so that ∞ is a super-attracting fixed point), we have
+
+      |   φ ′  ( z )  |  =  lim  k → ∞       |   z  k  ′   |     |   z  k    |   d  k      ,   {\displaystyle |\varphi &#39;(z)|=\lim _{k\to \infty }{\frac {|z&#39;_{k}|}{|z_{k}|d^{k}}},}
+
+(*d* = *m* − *n*) and consequently:
+
+     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |  =  lim  k → ∞   log ⁡  |   z  k    |   |   z  k    |   /   |   z  k  ′   |  .    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|=\lim _{k\to \infty }\log |z_{k}||z_{k}|/|z&#39;_{k}|.\,}
+
+For iteration towards a finite attracting cycle (that is not super-attracting) containing the point ⁠     z  ∗     {\displaystyle z^{*}}  ⁠ and having order *r*, we have
+
+      |   φ ′  ( z )  |  =  lim  k → ∞    |   z  k r  ′   |   /  (  |   z  k r   −  z  ∗     |   2    α  k   ) ,    {\displaystyle |\varphi &#39;(z)|=\lim _{k\to \infty }|z&#39;_{kr}|/(|z_{kr}-z^{*}|^{2}\alpha ^{k}),\,}
+
+and consequently:
+
+     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |  =  lim  k → ∞    |   z  k r   −  z  ∗    |   /   |   z  k r  ′   |  .    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|=\lim _{k\to \infty }|z_{kr}-z^{*}|/|z&#39;_{kr}|.\,}
+
+For a super-attracting cycle, the formula is:
+
+     δ ( z ) =  lim  k → ∞   log ⁡  |   z  k r   −  z  ∗     |   2    /   |   z  k r  ′   |  .    {\displaystyle \delta (z)=\lim _{k\to \infty }\log |z_{kr}-z^{*}|^{2}/|z&#39;_{kr}|.\,}
+
+We calculate this number when the iteration stops. Note that the distance estimation is independent of the attraction of the cycle. This means that it has meaning for transcendental functions of &quot;degree infinity&quot; (e.g. sin(*z*) and tan(*z*)).
+
+Besides drawing of the boundary, the distance function can be introduced as a 3rd dimension to create a solid fractal landscape.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=15)]   [![Wikimedia Commons logo](https://thumb.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Commons-logo.svg) Wikimedia Commons has media related to [Julia set](https://commons.wikimedia.org/wiki/Julia%20set).
+- [Douady rabbit](https://en.wikipedia.org/wiki/Douady_rabbit)
+- [Limit set](https://en.wikipedia.org/wiki/Limit_set)
+- [Stable and unstable sets](https://en.wikipedia.org/wiki/Stable_and_unstable_sets)
+- [No wandering domain theorem](https://en.wikipedia.org/wiki/No_wandering_domain_theorem)
+- [Chaos theory](https://en.wikipedia.org/wiki/Chaos_theory)
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=16)]
+1. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-1) Regarding notation: For other branches of mathematics the notation     J ⁡ ( f ) ,   {\displaystyle \operatorname {J} (f),}   can also represent the [Jacobian matrix](https://en.wikipedia.org/wiki/Jacobian_matrix#Jacobian_matrix) of a real-valued mapping f between [smooth manifolds](https://en.wikipedia.org/wiki/Smooth_manifold).
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=17)]
+1. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-2) Gaston Julia (1918) &quot;Mémoire sur l&#39;iteration des fonctions rationnelles&quot;, *Journal de Mathématiques Pures et Appliquées*, vol. 8, pages 47–245.
+2. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-3) Pierre Fatou (1917) &quot;Sur les substitutions rationnelles&quot;, *Comptes Rendus de l&#39;Académie des Sciences de Paris*, vol. 164, pages 806–808 and vol. 165, pages 992–995.
+3. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-4) Beardon, *Iteration of Rational Functions*, Theorem 5.6.2.
+4. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-5) Beardon, *Iteration of Rational Functions*, Theorem 7.1.1.
+5. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-6) Beardon, *Iteration of Rational Functions*, Theorem 3.2.4.
+6. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-7) [Tan Lei](https://en.wikipedia.org/wiki/Tan_Lei), [&quot;Similarity between the Mandelbrot set and Julia Sets&quot;](http://projecteuclid.org/euclid.cmp/1104201823), Communications in Mathematical Physics 134 (1990), pp. 587–617.
+7. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Renormalizing_the_Mandelbrot_Escape_8-0) Vepstas, Linas. [&quot;Renormalizing the Mandelbrot Escape&quot;](https://linas.org/art-gallery/escape/escape.html). *linas.org*. Creative Commons. Retrieved 5 November 2023.
+8. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-9) Douady, Adrien; Hubbard, John H. (1984). &quot;Etude dynamique des polynômes complexes&quot;. *Prépublications mathémathiques d&#39;Orsay*. **2**;   &quot;[*op.cit.*]&quot;. *Prépublications mathémathiques d&#39;Orsay*. **4**. 1985.
+9. [Jump up to: 1](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Peitgen1986_10-0) [2](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Peitgen1986_10-1) Peitgen, Heinz-Otto; Richter Peter (1986). *[The Beauty of Fractals](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals)*. Heidelberg: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-15851-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-15851-0).
+10. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-11) Saupe, Dietmar (October 1987). [&quot;Efficient computation of Julia sets and their fractal dimension&quot;](https://scixplorer.org/abs/1987PhyD...28..358S/abstract). *Physica D: Nonlinear Phenomena*. **28** (3): 358–370. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0167-2789(87)90024-8](https://doi.org/10.1016%2F0167-2789%2887%2990024-8). Retrieved 5 February 2026.
+
+## Bibliography
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=18)]
+- [Carleson, Lennart](https://en.wikipedia.org/wiki/Lennart_Carleson); [Gamelin, Theodore W.](https://en.wikipedia.org/wiki/Theodore_Gamelin) (1993). *Complex Dynamics*. Springer.
+- [Douady, Adrien](https://en.wikipedia.org/wiki/Adrien_Douady); [Hubbard, John H.](https://en.wikipedia.org/wiki/John_H._Hubbard) (1984). &quot;Etude dynamique des polynômes complexes&quot;. *Prépublications mathémathiques d&#39;Orsay*. **2**;   &quot;[*op.cit.*]&quot;. *Prépublications mathémathiques d&#39;Orsay*. **4**. 1985.
+- [Milnor, J.W.](https://en.wikipedia.org/wiki/John_W._Milnor) (2006) [1990]. *Dynamics in One Complex Variable*. Annals of Mathematics Studies. Vol. 160 (Third ed.). Princeton University Press;
+First appeared in as a [&quot;Stony Brook IMS Preprint&quot;](https://web.archive.org/web/20060424085751/http://www.math.sunysb.edu/preprints.html). Archived from [the original](http://www.math.sunysb.edu/preprints.html) on 2006-04-24. available as Milnor, John W. (1990). &quot;Dynamics in one complex variable: Introductory lectures&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math.DS/9201272](https://arxiv.org/abs/math.DS/9201272).
+- [Bogomolny, Alexander](https://en.wikipedia.org/wiki/Alexander_Bogomolny). [&quot;Mandelbrot Set and Indexing of Julia Sets&quot;](http://www.cut-the-knot.org/Curriculum/Algebra/JuliaIndexing.shtml). *[cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)*. Algebra curriculum.
+- Demidov, Evgeny (2003). [&quot;The Mandelbrot and Julia sets&#39; anatomy&quot;](http://ibiblio.org/e-notes/MSet/Contents.htm).
+- Beardon, Alan F. (1991). *Iteration of Rational Functions*. Springer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-95151-2](https://en.wikipedia.org/wiki/Special:BookSources/0-387-95151-2).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=19)]   [![Wikibooks logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg) Wikibooks has a book on the topic of: ***[Fractals](https://en.wikibooks.org/wiki/Fractals)***
+- [&quot;Julia set&quot;](https://www.encyclopediaofmath.org/index.php?title=Julia_set), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Julia Set&quot;](https://mathworld.wolfram.com/JuliaSet.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- Bourke, Paul. [&quot;Julia set fractal (2D)&quot;](http://paulbourke.net/fractals/juliaset/) (personal site).
+- Sawyer, Jamie (6 April 2007). [&quot;Julia sets&quot;](https://mathmo.blogspot.com/2007/04/essay-backtrack-julia-sets.html) (blog).
+- McGoodwin, Michael. [&quot;Julia jewels: An exploration of Julia sets&quot;](http://mcgoodwin.net/julia/juliajewels.html) (personal site).
+- Pringle, Lucy. [&quot;Crop circle Julia Set&quot;](http://www.lucypringle.co.uk/photos/1996/uk1996ck.shtml) (personal site).
+- Greig, Josh. [&quot;Interactive Julia Set Applet&quot;](https://web.archive.org/web/20120326020259/http://www.hightechdreams.com/weaver.php?topic=fractals). Archived from [the original](http://www.hightechdreams.com/weaver.php?topic=fractals) on 2012-03-26.
+- Joyce, David E. [&quot;Julia and Mandelbrot set explorer&quot;](http://aleph0.clarku.edu/~djoyce/julia/explorer.html) (academic personal site). Clark University.
+- [&quot;A simple program to generate Julia sets&quot;](https://web.archive.org/web/20110317020756/http://www.lizardie.com/links/download/fractal-generator). *liazardie.com*. Archived from [the original](http://www.lizardie.com/links/download/fractal-generator) on 2011-03-17. – Windows, 370 kB
+- [&quot;A collection of applets&quot;](https://ifs-tools.sourceforge.net/). *SourceForge*. – one of the applets can render Julia sets, via Iterated Function Systems.
+- [&quot;Julia meets HTML5&quot;](https://web.archive.org/web/20110218135200/http://juliamap.googlelabs.com/). Google Labs. Archived from [the original](http://juliamap.googlelabs.com/) on 2011-02-18. HTML5 Fractal generator for your browser
+- [&quot;Julia&quot;](https://cran.r-project.org/web/packages/Julia/index.html). *r-project.org*. GNU R Package. 25 November 2014. generate Julia or Mandelbrot set at a given region and resolution
+- [&quot;Julia sets&quot;](https://web.archive.org/web/20170616200359/http://dvdpedia.de/julia/julia.html). Archived from [the original](http://dvdpedia.de/julia/julia.html) on 2017-06-16. Retrieved 2011-08-24. – A visual explanation of Julia Sets.
+- [&quot;FractalTS&quot;](https://7affer.github.io/fractalTS/). *github.io*. – Mandelbrot, Burning ship and corresponding Julia set generator.
+- [&quot;Julia set images, online rendering&quot;](https://web.archive.org/web/20190622031041/http://julia.finengin.net/). *finengin.net*. Archived from [the original](http://julia.finengin.net/) on 2019-06-22. Retrieved 2017-01-24.
+- [&quot;Understanding Julia and Mandelbrot Sets&quot;](http://www.karlsims.com/julia.html). - A visual explanation.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal) show
+- [v](https://en.wikipedia.org/wiki/Template:Fractal_software)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractal_software)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractal_software)
+[Fractal software](https://en.wikipedia.org/wiki/Fractal-generating_software) show[Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control) [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q848427#identifiers)             Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Julia_set&amp;oldid=1362872831](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;oldid=1362872831)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Limit sets](https://en.wikipedia.org/wiki/Category:Limit_sets)
+- [Complex dynamics](https://en.wikipedia.org/wiki/Category:Complex_dynamics)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles needing additional references from July 2021](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_July_2021)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from October 2021](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2021)
+- [Commons link from Wikidata](https://en.wikipedia.org/wiki/Category:Commons_link_from_Wikidata)
+- [Articles containing video clips](https://en.wikipedia.org/wiki/Category:Articles_containing_video_clips)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+
+    [https://en\.wikipedia\.org/wiki/Julia\_set?action=edit](https://en.wikipedia.org/wiki/Julia_set?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Julia_set#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Julia set</h3><pre># Julia set
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9_%D8%AC%D9%88%D9%84%D9%8A%D8%A7)
+- [Català](https://ca.wikipedia.org/wiki/Conjunt_de_Julia)
+- [Čeština](https://cs.wikipedia.org/wiki/Juliova_mno%C5%BEina)
+- [Dansk](https://da.wikipedia.org/wiki/Juliam%C3%A6ngde)
+- [Deutsch](https://de.wikipedia.org/wiki/Julia-Menge)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%A3%CF%8D%CE%BD%CE%BF%CE%BB%CE%BF_Julia)
+- [Español](https://es.wikipedia.org/wiki/Conjunto_de_Julia)
+- [فارسی](https://fa.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87_%DA%98%D9%88%D9%84%DB%8C%D8%A7)
+- [Français](https://fr.wikipedia.org/wiki/Ensemble_de_Julia)
+- [עברית](https://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%AA_%D7%96%27%D7%95%D7%9C%D7%99%D7%94)
+- [Hrvatski](https://hr.wikipedia.org/wiki/Julijev_skup)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Himpunan_Julia)
+- [Italiano](https://it.wikipedia.org/wiki/Insieme_di_Julia)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A5%E3%83%AA%E3%82%A2%E9%9B%86%E5%90%88)
+- [한국어](https://ko.wikipedia.org/wiki/%EC%A5%98%EB%A6%AC%EC%95%84_%EC%A7%91%ED%95%A9)
+- [Nederlands](https://nl.wikipedia.org/wiki/Juliaverzameling)
+- [Polski](https://pl.wikipedia.org/wiki/Zbi%C3%B3r_Julii)
+- [Português](https://pt.wikipedia.org/wiki/Conjunto_de_Julia)
+- [Română](https://ro.wikipedia.org/wiki/Mul%C8%9Bime_Julia)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%96%D1%8E%D0%BB%D0%B8%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Julijin_skup)
+- [Simple English](https://simple.wikipedia.org/wiki/Julia_set)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Juliova_mno%C5%BEina)
+- [Svenska](https://sv.wikipedia.org/wiki/Juliam%C3%A4ngden)
+- [ไทย](https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%8B%E0%B8%95%E0%B8%88%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B8%A2)
+- [Türkçe](https://tr.wikipedia.org/wiki/Julia_k%C3%BCmesi)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B8%D0%BD%D0%B0_%D0%96%D1%83%D0%BB%D1%96%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E6%9C%B1%E5%88%A9%E4%BA%9A%E9%9B%86%E5%90%88)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q848427#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Fractal sets in complex dynamics of mathematics [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This article **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this article](https://en.wikipedia.org/wiki/Special:EditPage/Julia_set) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence).
+*Find sources:* [&quot;Julia set&quot;](https://www.google.com/search?as_eq=wikipedia&amp;q=%22Julia+set%22) – [news](https://www.google.com/search?tbm=nws&amp;q=%22Julia+set%22+-wikipedia&amp;tbs=ar:1) **·** [newspapers](https://www.google.com/search?&amp;q=%22Julia+set%22&amp;tbs=bkt:s&amp;tbm=bks) **·** [books](https://www.google.com/search?tbs=bks:1&amp;q=%22Julia+set%22+-wikipedia) **·** [scholar](https://scholar.google.com/scholar?q=%22Julia+set%22) **·** [JSTOR](https://www.jstor.org/action/doBasicSearch?Query=%22Julia+set%22&amp;acc=on&amp;wc=on) *(July 2021)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Julia_set%2C_plotted_with_Matplotlib.svg/330px-Julia_set%2C_plotted_with_Matplotlib.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_set,_plotted_with_Matplotlib.svg)A map of behavior of initial points     z   {\displaystyle z}   in the complex plane, by iterating the quadratic map     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}   where c is approximately -0.5125 + 0.5213i. The green and blue regions are the Fatou set, and the Julia set consists of the central yellow points [https://en\.wikipedia\.org/wiki/File:Julia\-Menge\.Zoomfahrt\.25p\.webm](https://en.wikipedia.org/wiki/File:Julia-Menge.Zoomfahrt.25p.webm)Duration: 13 seconds.[https://en\.wikipedia\.org/wiki/File:Julia\-Menge\.Zoomfahrt\.25p\.webm](https://en.wikipedia.org/wiki/File:Julia-Menge.Zoomfahrt.25p.webm)Zoom into a Julia set in the [complex-valued z-plane](https://en.wikipedia.org/wiki/Complex_number) with the complex-valued [polynomial function](https://en.wikipedia.org/wiki/Polynomial) of [second degree](https://en.wikipedia.org/wiki/Degree_of_a_polynomial)
+    p ( z ) =  z  2   + c   {\displaystyle p(z)=z^{2}+c}
+and the parameters
+cre = cim = -0.5251993 [https://en\.wikipedia\.org/wiki/File:Julia\_set\_3d\_slice\_animation\.ogg](https://en.wikipedia.org/wiki/File:Julia_set_3d_slice_animation.ogg)Duration: 6 seconds.[https://en\.wikipedia\.org/wiki/File:Julia\_set\_3d\_slice\_animation\.ogg](https://en.wikipedia.org/wiki/File:Julia_set_3d_slice_animation.ogg)Three-dimensional slices through the (four-dimensional) Julia set of a function on the [quaternions](https://en.wikipedia.org/wiki/Quaternion)
+
+In [complex dynamics](https://en.wikipedia.org/wiki/Complex_dynamics), the **Julia set** and the [Fatou set](https://en.wikipedia.org/wiki/Classification_of_Fatou_components) are two [complementary sets](https://en.wikipedia.org/wiki/Complement_set) (Julia &quot;laces&quot; and Fatou &quot;dusts&quot;) defined from a [function](https://en.wikipedia.org/wiki/Function_(mathematics)). Informally, the Fatou set of the function consists of values with the property that all nearby values behave similarly under [repeated iteration](https://en.wikipedia.org/wiki/Iterated_function) of the function, and the Julia set consists of values such that an arbitrarily small [perturbation](https://en.wikipedia.org/wiki/Perturbation_theory) can cause drastic changes in the sequence of iterated function values. Thus the behavior of the function on the Fatou set is &quot;regular&quot;, while on the Julia set its behavior is &quot;[chaotic](https://en.wikipedia.org/wiki/Chaos_theory)&quot;.
+
+The Julia set of a function  f  is commonly denoted     J ⁡ ( f ) ,   {\displaystyle \operatorname {J} (f),}   and the Fatou set is denoted     F ⁡ ( f ) .   {\displaystyle \operatorname {F} (f).}  [[a]](https://en.wikipedia.org/wiki/Julia_set#cite_note-1) These sets are named after the French mathematicians [Gaston Julia](https://en.wikipedia.org/wiki/Gaston_Julia)[[1]](https://en.wikipedia.org/wiki/Julia_set#cite_note-2) and [Pierre Fatou](https://en.wikipedia.org/wiki/Pierre_Fatou)[[2]](https://en.wikipedia.org/wiki/Julia_set#cite_note-3) whose work began the study of [complex dynamics](https://en.wikipedia.org/wiki/Complex_dynamics) during the early 20th century.
+</pre></article><article id="section-0003"><h3>Formal definition</h3><pre># Formal definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=1)]
+
+Let     f ( z )   {\displaystyle f(z)}   be a non-constant [meromorphic function](https://en.wikipedia.org/wiki/Meromorphic_function) from the [Riemann sphere](https://en.wikipedia.org/wiki/Riemann_sphere) onto itself. Such functions     f ( z )   {\displaystyle f(z)}   are precisely the non-constant [complex](https://en.wikipedia.org/wiki/Complex_number) [rational functions](https://en.wikipedia.org/wiki/Rational_function), that is,     f ( z ) = p ( z )  /  q ( z )   {\displaystyle f(z)=p(z)/q(z)}   where     p ( z )   {\displaystyle p(z)}   and     q ( z )   {\displaystyle q(z)}   are [complex polynomials](https://en.wikipedia.org/wiki/Complex_polynomial). Assume that *p* and *q* have no common [roots](https://en.wikipedia.org/wiki/Root_of_a_polynomial), and at least one has [degree](https://en.wikipedia.org/wiki/Degree_of_a_polynomial) larger than 1. Then there is a finite number of [open sets](https://en.wikipedia.org/wiki/Open_set)      F  1   , . . . ,  F  r     {\displaystyle F_{1},...,F_{r}}   that are left invariant by     f ( z )   {\displaystyle f(z)}   and are such that:
+
+1. The [union](https://en.wikipedia.org/wiki/Union_(set_theory)) of the sets      F  i     {\displaystyle F_{i}}   is [dense](https://en.wikipedia.org/wiki/Dense_set) in the plane and
+2. f ( z )   {\displaystyle f(z)}   behaves in a regular and equal way on each of the sets      F  i     {\displaystyle F_{i}}  .
+
+The last statement means that the termini of the sequences of iterations generated by the points of      F  i     {\displaystyle F_{i}}   are either precisely the same set, which is then a finite cycle, or they are finite cycles of circular or annular shaped sets that are lying concentrically. In the first case the cycle is *attracting*, in the second case it is *neutral*.
+
+These sets      F  i     {\displaystyle F_{i}}   are the Fatou domains of     f ( z )   {\displaystyle f(z)}  , and their union is the Fatou set     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}   of     f ( z )   {\displaystyle f(z)}  . Each of the Fatou domains contains at least one [critical point](https://en.wikipedia.org/wiki/Critical_point_(mathematics)) of     f ( z )   {\displaystyle f(z)}  , that is, a (finite) point *z* satisfying      f ′  ( z ) = 0   {\displaystyle f&#39;(z)=0}  , or     f ( z ) = ∞   {\displaystyle f(z)=\infty }   if the degree of the numerator     p ( z )   {\displaystyle p(z)}   is at least two larger than the degree of the denominator     q ( z )   {\displaystyle q(z)}  , or if     f ( z ) = 1  /  g ( z ) + c   {\displaystyle f(z)=1/g(z)+c}   for some *c* and a rational function     g ( z )   {\displaystyle g(z)}   satisfying this condition.
+
+The complement of     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}   is the Julia set     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   of     f ( z )   {\displaystyle f(z)}  . If all the critical points are preperiodic, that is they are not periodic but eventually land on a periodic cycle, then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is all the sphere. Otherwise,     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is a nowhere dense set (it is without interior points) and an [uncountable](https://en.wikipedia.org/wiki/Uncountable) set (of the same [cardinality](https://en.wikipedia.org/wiki/Cardinality) as the real numbers). Like     F ⁡ ( f )   {\displaystyle \operatorname {F} (f)}  ,     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is left invariant by     f ( z )   {\displaystyle f(z)}  , and on this set the iteration is repelling, meaning that      |  f ( z ) − f ( w )  |  &gt;  |  z − w  |    {\displaystyle |f(z)-f(w)|&gt;|z-w|}   for all *w* in a neighbourhood of *z* (within     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}  ). This means that     f ( z )   {\displaystyle f(z)}   behaves chaotically on the Julia set. Although there are points in the Julia set whose sequence of iterations is finite, there are only a [countable](https://en.wikipedia.org/wiki/Countable) number of such points (and they make up an infinitesimal part of the Julia set). The sequences generated by points outside this set behave chaotically, a phenomenon called *[deterministic chaos](https://en.wikipedia.org/wiki/Deterministic_chaos)*.
+
+There has been extensive research on the Fatou set and Julia set of iterated [rational functions](https://en.wikipedia.org/wiki/Rational_functions), known as rational maps. For example, it is known that the Fatou set of a rational map has either 0, 1, 2 or infinitely many [components](https://en.wikipedia.org/wiki/Connected_component_(analysis)).[[3]](https://en.wikipedia.org/wiki/Julia_set#cite_note-4) Each component of the Fatou set of a rational map can be classified into one of [four different classes](https://en.wikipedia.org/wiki/Classification_of_Fatou_components).[[4]](https://en.wikipedia.org/wiki/Julia_set#cite_note-5)
+</pre></article><article id="section-0004"><h3>Equivalent descriptions of the Julia set</h3><pre># Equivalent descriptions of the Julia set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=2)]
+- J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the smallest closed set containing at least three points which is completely invariant under *f*.
+- J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the [closure](https://en.wikipedia.org/wiki/Closure_(topology)) of the set of repelling [periodic points](https://en.wikipedia.org/wiki/Periodic_point).
+- For all but at most two points      z ∈ X  ,   {\displaystyle \;z\in X\;,}   the Julia set is the set of limit points of the full backwards orbit      ⋃  n    f  − n   ( z ) .   {\displaystyle \bigcup _{n}f^{-n}(z).}   (This suggests a simple algorithm for plotting Julia sets, see below.)
+- If *f* is an [entire function](https://en.wikipedia.org/wiki/Entire_function), then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the [boundary](https://en.wikipedia.org/wiki/Boundary_(topology)) of the set of points which converge to infinity under iteration.
+- If *f* is a polynomial, then     J ⁡ ( f )   {\displaystyle \operatorname {J} (f)}   is the boundary of the [filled Julia set](https://en.wikipedia.org/wiki/Filled_Julia_set); that is, those points whose orbits under iterations of *f* remain bounded.
+</pre></article><article id="section-0005"><h3>Properties of the Julia set and Fatou set</h3><pre># Properties of the Julia set and Fatou set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=3)]
+
+The Julia set and the Fatou set of *f* are both [completely invariant](https://en.wikipedia.org/wiki/Invariant_(mathematics)) under iterations of the holomorphic function *f*:[[5]](https://en.wikipedia.org/wiki/Julia_set#cite_note-6)
+
+      f  − 1   ( J ⁡ ( f ) ) = f ( J ⁡ ( f ) ) = J ⁡ ( f ) ,   {\displaystyle f^{-1}(\operatorname {J} (f))=f(\operatorname {J} (f))=\operatorname {J} (f),}        f  − 1   ( F ⁡ ( f ) ) = f ( F ⁡ ( f ) ) = F ⁡ ( f ) .   {\displaystyle f^{-1}(\operatorname {F} (f))=f(\operatorname {F} (f))=\operatorname {F} (f).}
+</pre></article><article id="section-0006"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=4)]
+
+For     f ( z ) =  z  2     {\displaystyle f(z)=z^{2}}   the Julia set is the unit circle and on this the iteration is given by doubling of angles (an operation that is chaotic on the points whose argument is not a rational fraction of     2 π   {\displaystyle 2\pi }  ). There are two Fatou domains: the interior and the exterior of the circle, with iteration towards 0 and ∞, respectively.
+
+For     g ( z ) =  z  2   − 2   {\displaystyle g(z)=z^{2}-2}   the Julia set is the line segment between −2 and 2. There is one [Fatou domain](https://en.wikipedia.org/wiki/Classification_of_Fatou_components): the points not on the line segment iterate towards ∞. (Apart from a shift and scaling of the domain, this iteration is equivalent to     x → 4 ( x −    1 2     )  2     {\displaystyle x\to 4(x-{\tfrac {1}{2}})^{2}}   on the unit interval, which is commonly used as an example of chaotic system.)
+
+The functions *f* and *g* are of the form      z  2   + c   {\displaystyle z^{2}+c}  , where *c* is a complex number. For such an iteration the Julia set is not in general a simple curve, but is a fractal, and for some values of *c* it can take surprising shapes. See the pictures below.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Julia-set_N_z3-1.png/250px-Julia-set_N_z3-1.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia-set_N_z3-1.png)Julia set (in white) for the rational function associated to [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for *f* : *z* → *z*3−1. Coloring of Fatou set in red, green and blue tones according to the three attractors (the three roots of *f*).
+
+For some functions *f*(*z*) we can say beforehand that the Julia set is a fractal and not a simple curve. This is because of the following result on the iterations of a rational function:
+
+**Theorem**—Each of the Fatou domains has the same boundary, which consequently is the Julia set.[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*]
+
+This means that each point of the Julia set is a point of accumulation for each of the Fatou domains. Therefore, if there are more than two Fatou domains, *each* point of the Julia set must have points of more than two different open sets infinitely close, and this means that the Julia set cannot be a simple curve. This phenomenon happens, for instance, when *f*(*z*) is the [Newton iteration](https://en.wikipedia.org/wiki/Newton_iteration) for solving the equation      P ( z ) :=  z  n   − 1 = 0   :   n &gt; 2    {\displaystyle \;P(z):=z^{n}-1=0~:~n&gt;2\;}  :
+
+     f ( z ) = z −    P ( z )    P ′  ( z )    =     1 + ( n − 1 )  z  n      n  z  n − 1        .   {\displaystyle f(z)=z-{\frac {P(z)}{P&#39;(z)}}={\frac {\;1+(n-1)z^{n}\;}{nz^{n-1}}}~.}
+
+The image on the right shows the case *n* = 3.
+</pre></article><article id="section-0007"><h3>Quadratic polynomials</h3><pre># Quadratic polynomials
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=5)]
+
+A very popular complex dynamical system is given by the family of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial), a special case of [rational maps](https://en.wikipedia.org/wiki/Rational_function). Such quadratic polynomials can be expressed as
+
+      f  c   ( z ) =  z  2   + c   ,   {\displaystyle f_{c}(z)=z^{2}+c~,}
+
+where *c* is a complex parameter. Fix some     R &gt; 0   {\displaystyle R&gt;0}   large enough that      R  2   − R ≥  |  c  |  .   {\displaystyle R^{2}-R\geq |c|.}   (For example, if c is in the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set), then      |  c  |  ≤ 2 ,   {\displaystyle |c|\leq 2,}   so we may simply let     R = 2   .   {\displaystyle R=2~.}  ) Then the filled Julia set for this system is the subset of the complex plane given by
+
+     K (  f  c   ) =  {  z ∈  C  : ∀ n ∈  N  ,  |   f  c   n   ( z )  |  ≤ R  }    ,   {\displaystyle K(f_{c})=\left\{z\in \mathbb {C} :\forall n\in \mathbb {N} ,|f_{c}^{n}(z)|\leq R\right\}~,}
+
+where      f  c   n   ( z )   {\displaystyle f_{c}^{n}(z)}   is the *n*th [iterate](https://en.wikipedia.org/wiki/Iterated_function) of      f  c   ( z ) .   {\displaystyle f_{c}(z).}   The Julia set     J (  f  c   )   {\displaystyle J(f_{c})}   of this function is the boundary of     K (  f  c   )   {\displaystyle K(f_{c})}  .
+
+- [![Julia sets for                               z                      2                          \+        0\.7885                          e                      i            a                          ,              \{\\displaystyle z^\{2\}\+0\.7885\\,e^\{ia\},\}   where a ranges from 0 to                     2        π              \{\\displaystyle 2\\pi \}](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/JSr07885.gif/250px-JSr07885.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JSr07885.gif)Julia sets for      z  2   + 0.7885   e  i a   ,   {\displaystyle z^{2}+0.7885\,e^{ia},}   where *a* ranges from 0 to     2 π   {\displaystyle 2\pi }
+- [https://en\.wikipedia\.org/wiki/File:Julia\_circling\.ogg](https://en.wikipedia.org/wiki/File:Julia_circling.ogg)A video of the Julia sets as left
+- [![Filled Julia set for fc, c = 1 − φ, where φ is the golden ratio](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Julia-Menge.png/250px-Julia-Menge.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia-Menge.png)Filled Julia set for *fc*, *c* = 1 − *φ*, where *φ* is the [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio)
+- [![Julia set for fc, c = \(φ − 2\) \+ \(φ − 1\)i = −0\.4 \+ 0\.6i](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Julia_0.4_0.6.png/250px-Julia_0.4_0.6.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.4_0.6.png)Julia set for *fc*, *c* = (*φ* − 2) + (*φ* − 1)*i* = −0.4 + 0.6*i*
+- [![Julia set for fc, c = 0\.285 \+ 0i](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Julia_0.285_0.png/250px-Julia_0.285_0.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.285_0.png)Julia set for *fc*, *c* = 0.285 + 0*i*
+- [![Julia set for fc, c = 0\.285 \+ 0\.01i](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Julia_0.285_0.01.png/250px-Julia_0.285_0.01.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.285_0.01.png)Julia set for *fc*, *c* = 0.285 + 0.01*i*
+- [![Julia set for fc, c = 0\.45 \+ 0\.1428i](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Julia_0.45_0.1428.png/250px-Julia_0.45_0.1428.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0.45_0.1428.png)Julia set for *fc*, *c* = 0.45 + 0.1428*i*
+- [![Julia set for fc, c = −0\.70176 − 0\.3842i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Julia_-0.70176_-0.3842.png/250px-Julia_-0.70176_-0.3842.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.70176_-0.3842.png)Julia set for *fc*, *c* = −0.70176 − 0.3842*i*
+- [![Julia set for fc, c = −0\.835 − 0\.2321i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Julia_-0.835_-0.2321.png/250px-Julia_-0.835_-0.2321.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.835_-0.2321.png)Julia set for *fc*, *c* = −0.835 − 0.2321*i*
+- [![Julia set for fc, c = −0\.8 \+ 0\.156i](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Julia_-0.8_0.156.png/250px-Julia_-0.8_0.156.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.8_0.156.png)Julia set for *fc*, *c* = −0.8 + 0.156*i*
+- [![Julia set for fc, vc = −0\.7269 \+ 0\.1889i](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Julia_-0.7269_0.1889.png/250px-Julia_-0.7269_0.1889.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_-0.7269_0.1889.png)Julia set for *fc*, v*c* = −0.7269 + 0.1889*i*
+- [![Julia set for fc, c = \-0\.8i](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Julia_0_0.8.png/250px-Julia_0_0.8.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_0_0.8.png)Julia set for *fc*, *c* = -0.8*i*
+- [![Julia set for fc, c = 0\.35 \+ 0\.35i](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png/250px-2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:2880x1800_quadratic_mandelbrot_julia_0.35_0.35i_10k_iterations.png)Julia set for *fc*, *c* = 0.35 + 0.35*i*
+- [![Julia set for fc, c = 0\.4 \+ 0\.4i](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/JuliaSet.4.png/250px-JuliaSet.4.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliaSet.4.png)Julia set for *fc*, *c* = 0.4 + 0.4*i*
+- [![Collection of Julia sets laid out in a 100 × 100 grid such that the center of each image corresponds to the same position in the complex plane as the value of the set\. When laid out like this, the overall image resembles a Photographic mosaic depicting a Mandelbrot set\.](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Julia_Mandelbrot_Relationship.png/250px-Julia_Mandelbrot_Relationship.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_Mandelbrot_Relationship.png)Collection of Julia sets laid out in a 100 × 100 grid such that the center of each image corresponds to the same position in the complex plane as the value of the set. When laid out like this, the overall image resembles a [Photographic mosaic](https://en.wikipedia.org/wiki/Photographic_mosaic) depicting a [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set).
+
+The parameter plane of quadratic polynomials – that is, the plane of possible *c* values – gives rise to the famous [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set). Indeed, the Mandelbrot set is defined as the set of all *c* such that     J (  f  c   )   {\displaystyle J(f_{c})}   is [connected](https://en.wikipedia.org/wiki/Connected_set). For parameters outside the Mandelbrot set, the Julia set is a [Cantor space](https://en.wikipedia.org/wiki/Cantor_space): in this case it is sometimes referred to as **Fatou dust**.
+
+In many cases, the Julia set of *c* looks like the Mandelbrot set in sufficiently small neighborhoods of *c*. This is true, in particular, for so-called [Misiurewicz parameters](https://en.wikipedia.org/wiki/Misiurewicz_point), i.e. parameters *c* for which the critical point is pre-periodic. For instance:
+
+- At *c* = *i*, the shorter, front toe of the forefoot, the Julia set looks like a branched lightning bolt.
+- At *c* = −2, the tip of the long spiky tail, the Julia set is a straight line segment.
+
+In other words, the Julia sets     J (  f  c   )   {\displaystyle J(f_{c})}   are locally similar around [Misiurewicz points](https://en.wikipedia.org/wiki/Misiurewicz_point).[[6]](https://en.wikipedia.org/wiki/Julia_set#cite_note-7)
+</pre></article><article id="section-0008"><h3>Generalizations</h3><pre># Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=6)]
+
+The definition of Julia and Fatou sets easily carries over to the case of certain maps whose image contains their domain; most notably [transcendental meromorphic functions](https://en.wikipedia.org/wiki/Meromorphic_function) and Adam Epstein&#39;s **finite-type maps**.
+
+Julia sets are also commonly defined in the study of dynamics in several complex variables.
+</pre></article><article id="section-0009"><h3>Pseudocode</h3><pre># Pseudocode
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=7)]
+
+The below pseudocode implementations hard code the functions for each fractal. Consider implementing [complex number](https://en.wikipedia.org/wiki/Complex_number) operations to allow for more dynamic and reusable code.
+</pre></article><article id="section-0010"><h3>Pseudocode for normal Julia sets</h3><pre># Pseudocode for normal Julia sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=8)]     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}
+
+```
+R = escape radius  # choose R &gt; 0 such that R**2 - R &gt;= sqrt(cx**2 + cy**2)
+
+for each pixel (x, y) on the screen, do:
+{
+    zx = scaled x coordinate of pixel; # (scale to be between -R and R)
+       # zx represents the real part of z.
+    zy = scaled y coordinate of pixel; # (scale to be between -R and R)
+       # zy represents the imaginary part of z.
+
+    iteration = 0;
+    max_iteration = 1000;
+
+    while (zx * zx + zy * zy &lt; R**2  AND  iteration &lt; max_iteration)
+    {
+        xtemp = zx * zx - zy * zy;
+        zy = 2 * zx * zy  + cy;
+        zx = xtemp + cx;
+
+        iteration = iteration + 1;
+    }
+
+    if (iteration == max_iteration)
+        return black;
+    else
+        return iteration;
+}
+```
+</pre></article><article id="section-0011"><h3>Pseudocode for multi-Julia sets</h3><pre># Pseudocode for multi-Julia sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=9)]     f ( z ) =  z  n   + c   {\displaystyle f(z)=z^{n}+c}
+
+```
+R = escape radius #  choose R &gt; 0 such that R**n - R &gt;= sqrt(cx**2 + cy**2)
+
+for each pixel (x, y) on the screen, do:
+{
+    zx = scaled x coordinate of pixel; # (scale to be between -R and R)
+    zy = scaled y coordinate of pixel; # (scale to be between -R and R)
+
+    iteration = 0;
+    max_iteration = 1001;
+
+    while (zx * zx + zy * zy &lt; R**2  AND  iteration &lt; max_iteration)
+    {
+        xtmp = (zx * zx + zy * zy) ^ (n / 2) * cos(n * atan2(zy, zx)) + cx;
+	    zy = (zx * zx + zy * zy) ^ (n / 2) * sin(n * atan2(zy, zx)) + cy;
+	    zx = xtmp;
+
+        iteration = iteration + 1;
+    }
+    if (iteration == max_iteration)
+        return black;
+    else
+        return iteration;
+}
+```
+
+Another recommended option is to reduce color banding between iterations by using a renormalization formula for the iteration.[[7]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Renormalizing_the_Mandelbrot_Escape-8)
+
+Such formula is given to be,
+
+     m u = k + 1 −    log ⁡  log ⁡   |   z  k    |      log ⁡  n       {\displaystyle mu=k+1-{\frac {\log {\log {|z_{k}|}}}{\log {n}}}}       ∀  f  c , n   ( z ) =  z  n   +  lower power terms  + c   {\displaystyle \forall f_{c,n}(z)=z^{n}+{\text{lower power terms}}+c}
+
+where     k   {\displaystyle k}   is the escaping iteration, bounded by some     K   {\displaystyle K}   such that     0 ≤ k &lt; K   {\displaystyle 0\leq k&lt;K}   and     K ∈  N    {\displaystyle K\in \mathbb {N} }  , and      |   z  k    |    {\displaystyle |z_{k}|}   is the magnitude of the last iterate before escaping.
+
+This can be implemented, very simply, like so:
+
+```
+# simply replace the last 4 lines of code from the last example with these lines of code:
+
+if(iteration == max_iteration)
+    return black;
+else
+    abs_z = zx * zx + zy * zy;
+    return iteration + 1 - log(log(abs_z))/log(n);
+```
+
+The difference is shown below with a Julia set defined as      f  c , 2   ( z )   {\displaystyle f_{c,2}(z)}   where     c = − 0.835 − 0.321 i   {\displaystyle c=-0.835-0.321i}  .
+
+ Julia set with color banding and without
+- [![Julia set with color banding](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/JuliasetColorband.png/330px-JuliasetColorband.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliasetColorband.png)With color banding
+- [![Julia set without color banding](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/JuliasetNoColorband.png/330px-JuliasetNoColorband.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:JuliasetNoColorband.png)Without color banding
+</pre></article><article id="section-0012"><h3>The potential function and the real iteration number</h3><pre># The potential function and the real iteration number
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=10)]
+
+The Julia set for     f ( z ) =  z  2     {\displaystyle f(z)=z^{2}}   is the unit circle, and on the outer Fatou domain, the *potential function* *φ*(*z*) is defined by *φ*(*z*) = log|*z*|. The equipotential lines for this function are concentric circles. As      |  f ( z )  |  =  |  z   |   2     {\displaystyle |f(z)|=|z|^{2}}   we have
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    2  k     ,   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{2^{k}}},}
+
+where      z  k     {\displaystyle z_{k}}   is the sequence of iteration generated by *z*. For the more general iteration     f ( z ) =  z  2   + c   {\displaystyle f(z)=z^{2}+c}  , it has been proved that if the Julia set is connected (that is, if *c* belongs to the (usual) Mandelbrot set), then there exist a [biholomorphic](https://en.wikipedia.org/wiki/Biholomorphic) map *ψ* between the outer Fatou domain and the outer of the unit circle such that      |  ψ ( f ( z ) )  |  =  |  ψ ( z )   |   2     {\displaystyle |\psi (f(z))|=|\psi (z)|^{2}}  .[[8]](https://en.wikipedia.org/wiki/Julia_set#cite_note-9) This means that the potential function on the outer Fatou domain defined by this correspondence is given by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    2  k     .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{2^{k}}}.}
+
+This formula has meaning also if the Julia set is not connected, so that we for all *c* can define the potential function on the Fatou domain containing ∞ by this formula. For a general rational function *f*(*z*) such that ∞ is a critical point and a fixed point, that is, such that the degree *m* of the numerator is at least two larger than the degree *n* of the denominator, we define the *potential function* on the Fatou domain containing ∞ by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡  |   z  k    |    d  k     ,   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log |z_{k}|}{d^{k}}},}
+
+where *d* = *m* − *n* is the degree of the rational function.[[9]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Peitgen1986-10)
+
+If *N* is a very large number (e.g. 10100), and if *k* is the first iteration number such that      |   z  k    |  &gt; N   {\displaystyle |z_{k}|&gt;N}  , we have that
+
+        log ⁡  |   z  k    |    d  k     =    log ⁡ ( N )   d  ν ( z )     ,   {\displaystyle {\frac {\log |z_{k}|}{d^{k}}}={\frac {\log(N)}{d^{\nu (z)}}},}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , which should be regarded as the **real iteration number**, and we have that:
+
+     ν ( z ) = k −    log ⁡ ( log ⁡  |   z  k    |   /  log ⁡ ( N ) )   log ⁡ ( d )    ,   {\displaystyle \nu (z)=k-{\frac {\log(\log |z_{k}|/\log(N))}{\log(d)}},}
+
+where the last number is in the interval [0, 1).
+
+For iteration towards a finite attracting cycle of order *r*, we have that if      z  ∗     {\displaystyle z^{*}}   is a point of the cycle, then     f ( f ( . . . f (  z  ∗   ) ) ) =  z  ∗     {\displaystyle f(f(...f(z^{*})))=z^{*}}   (the *r*-fold composition), and the number
+
+     α =   1  |  ( d ( f ( f ( ⋯ f ( z ) ) ) )  /  d z  )  z =  z  ∗      |     ( &gt; 1 )   {\displaystyle \alpha ={\frac {1}{\left|(d(f(f(\cdots f(z))))/dz)_{z=z^{*}}\right|}}\qquad (&gt;1)}
+
+is the *attraction* of the cycle. If *w* is a point very near      z  ∗     {\displaystyle z^{*}}   and *w*′ is *w* iterated *r* times, we have that
+
+     α =  lim  k → ∞       |  w −  z  ∗    |     |   w ′  −  z  ∗    |     .   {\displaystyle \alpha =\lim _{k\to \infty }{\frac {|w-z^{*}|}{|w&#39;-z^{*}|}}.}
+
+Therefore, the number      |   z  k r   −  z  ∗    |   α  k     {\displaystyle |z_{kr}-z^{*}|\alpha ^{k}}   is almost independent of *k*. We define the potential function on the Fatou domain by:
+
+     φ ( z ) =  lim  k → ∞     1  (  |   z  k r   −  z  ∗    |   α  k   )    .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {1}{(|z_{kr}-z^{*}|\alpha ^{k})}}.}
+
+If ε is a very small number and *k* is the first iteration number such that      |   z  k   −  z  ∗    |  &lt; ϵ   {\displaystyle |z_{k}-z^{*}|&lt;\epsilon }  , we have that
+
+     φ ( z ) =   1  ( ε  α  ν ( z )   )      {\displaystyle \varphi (z)={\frac {1}{(\varepsilon \alpha ^{\nu (z)})}}}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , which should be regarded as the real iteration number, and we have that:
+
+     ν ( z ) = k −    log ⁡ ( ε  /   |   z  k   −  z  ∗    |  )   log ⁡ ( α )    .   {\displaystyle \nu (z)=k-{\frac {\log(\varepsilon /|z_{k}-z^{*}|)}{\log(\alpha )}}.}
+
+If the attraction is ∞, meaning that the cycle is *super-attracting*, meaning again that one of the points of the cycle is a critical point, we must replace *α* by
+
+     α =  lim  k → ∞      log ⁡  |   w ′  −  z  ∗    |    log ⁡  |  w −  z  ∗    |     ,   {\displaystyle \alpha =\lim _{k\to \infty }{\frac {\log |w&#39;-z^{*}|}{\log |w-z^{*}|}},}
+
+where *w*′ is *w* iterated *r* times and the formula for *φ*(*z*) by:
+
+     φ ( z ) =  lim  k → ∞      log ⁡ ( 1  /   |   z  k r   −  z  ∗    |  )   α  k     .   {\displaystyle \varphi (z)=\lim _{k\to \infty }{\frac {\log(1/|z_{kr}-z^{*}|)}{\alpha ^{k}}}.}
+
+And now the real iteration number is given by:
+
+     ν ( z ) = k −    log ⁡ ( log ⁡  |   z  k   −  z  ∗    |   /  log ⁡ ( ε ) )   log ⁡ ( α )    .   {\displaystyle \nu (z)=k-{\frac {\log(\log |z_{k}-z^{*}|/\log(\varepsilon ))}{\log(\alpha )}}.}
+
+For the colouring we must have a cyclic scale of colours (constructed mathematically, for instance) and containing *H* colours numbered from 0 to *H*−1 (*H* = 500, for instance). We multiply the real number     ν ( z )   {\displaystyle \nu (z)}   by a fixed real number determining the density of the colours in the picture, and take the integral part of this number modulo *H*.
+
+The definition of the potential function and our way of colouring presuppose that the cycle is attracting, that is, not neutral. If the cycle is neutral, we cannot colour the Fatou domain in a natural way. As the terminus of the iteration is a revolving movement, we can, for instance, colour by the minimum distance from the cycle left fixed by the iteration.
+</pre></article><article id="section-0013"><h3>Field lines</h3><pre># Field lines
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=11)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Juliasetsdkfieldlines2.jpg/250px-Juliasetsdkfieldlines2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines2.jpg)The equipotential lines for iteration towards infinity[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Juliasetsdkfieldlines1.jpg/250px-Juliasetsdkfieldlines1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines1.jpg)Field lines for an iteration of the form        ( 1 −  z  3    /  6 )   ( z −  z  2    /  2  )  2      + c   {\displaystyle {\frac {(1-z^{3}/6)}{(z-z^{2}/2)^{2}}}+c}
+
+In each Fatou domain (that is not neutral) there are two systems of lines orthogonal to each other: the *equipotential lines* (for the potential function or the real iteration number) and the *field lines*.
+
+If we colour the Fatou domain according to the iteration number (and *not* the real iteration number     ν ( z )   {\displaystyle \nu (z)}  , as defined in the previous section), the bands of iteration show the course of the equipotential lines. If the iteration is towards ∞ (as is the case with the outer Fatou domain for the usual iteration      z  2   + c   {\displaystyle z^{2}+c}  ), we can easily show the course of the field lines, namely by altering the colour according as the last point in the sequence of iteration is above or below the *x*-axis (first picture), but in this case (more precisely: when the Fatou domain is super-attracting) we cannot draw the field lines coherently - at least not by the method we describe here. In this case a field line is also called an [external ray](https://en.wikipedia.org/wiki/External_ray).
+
+Let *z* be a point in the attracting Fatou domain. If we iterate *z* a large number of times, the terminus of the sequence of iteration is a finite cycle *C*, and the Fatou domain is (by definition) the set of points whose sequence of iteration converges towards *C*. The field lines issue from the points of *C* and from the (infinite number of) points that iterate *into* a point of *C*. And they end on the Julia set in points that are non-chaotic (that is, generating a finite cycle). Let *r* be the order of the cycle *C* (its number of points) and let      z  ∗     {\displaystyle z^{*}}   be a point in *C*. We have     f ( f ( … f (  z  ∗   ) ) ) =  z  ∗     {\displaystyle f(f(\dots f(z^{*})))=z^{*}}   (the r-fold composition), and we define the complex number α by
+
+     α = ( d ( f ( f ( … f ( z ) ) ) )  /  d z  )  z =  z  ∗     .   {\displaystyle \alpha =(d(f(f(\dots f(z))))/dz)_{z=z^{*}}.}
+
+If the points of *C* are      z  i   , i = 1 , … , r (  z  1   =  z  ∗   )   {\displaystyle z_{i},i=1,\dots ,r(z_{1}=z^{*})}  , α is the product of the *r* numbers      f ′  (  z  i   )   {\displaystyle f&#39;(z_{i})}  . The real number 1/|α| is the *attraction* of the cycle, and our assumption that the cycle is neither neutral nor super-attracting, means that 1 &lt; ⁠1/|*α*|⁠ &lt; ∞. The point      z  ∗     {\displaystyle z^{*}}   is a fixed point for     f ( f ( … f ( z ) ) )   {\displaystyle f(f(\dots f(z)))}  , and near this point the map     f ( f ( … f ( z ) ) )   {\displaystyle f(f(\dots f(z)))}   has (in connection with field lines) character of a rotation with the argument β of α (that is,     α =  |  α  |   e  β i     {\displaystyle \alpha =|\alpha |e^{\beta i}}  ).
+
+In order to colour the Fatou domain, we have chosen a small number ε and set the sequences of iteration      z  k   ( k = 0 , 1 , 2 , … ,  z  0   = z )   {\displaystyle z_{k}(k=0,1,2,\dots ,z_{0}=z)}   to stop when      |   z  k   −  z  ∗    |  &lt; ϵ   {\displaystyle |z_{k}-z^{*}|&lt;\epsilon }  , and we colour the point *z* according to the number *k* (or the real iteration number, if we prefer a smooth colouring). If we choose a direction from      z  ∗     {\displaystyle z^{*}}   given by an angle *θ*, the field line issuing from      z  ∗     {\displaystyle z^{*}}   in this direction consists of the points *z* such that the argument *ψ* of the number      z  k   −  z  ∗     {\displaystyle z_{k}-z^{*}}   satisfies the condition that
+
+     ψ − k β = θ  mod   π .    {\displaystyle \psi -k\beta =\theta \mod \pi .\,}
+
+For if we pass an iteration band in the direction of the field lines (and away from the cycle), the iteration number *k* is increased by 1 and the number ψ is increased by β, therefore the number     ψ − k β  mod   π   {\displaystyle \psi -k\beta \mod \pi }   is constant along the field line.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Juliasetsdkfieldlines4.jpg/250px-Juliasetsdkfieldlines4.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkfieldlines4.jpg)Pictures in the field lines for an iteration of the form      z  2   + c   {\displaystyle z^{2}+c}
+
+A colouring of the field lines of the Fatou domain means that we colour the spaces between pairs of field lines: we choose a number of regularly situated directions issuing from      z  ∗     {\displaystyle z^{*}}  , and in each of these directions we choose two directions around this direction. As it can happen that the two field lines of a pair do not end in the same point of the Julia set, our coloured field lines can ramify (endlessly) in their way towards the Julia set. We can colour on the basis of the distance to the center line of the field line, and we can mix this colouring with the usual colouring. Such pictures can be very decorative (second picture).
+
+A coloured field line (the domain between two field lines) is divided up by the iteration bands, and such a part can be put into a one-to-one correspondence with the unit square: the one coordinate is (calculated from) the distance from one of the bounding field lines, the other is (calculated from) the distance from the inner of the bounding iteration bands (this number is the non-integral part of the real iteration number). Therefore, we can put pictures into the field lines (third picture).
+</pre></article><article id="section-0014"><h3>Plotting the Julia set</h3><pre># Plotting the Julia set
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=12)] [https://en\.wikipedia\.org/wiki/File:Quadratic\_Julia\_set\_with\_Internal\_binary\_decomposition\_for\_internal\_ray\_0\.ogv](https://en.wikipedia.org/wiki/File:Quadratic_Julia_set_with_Internal_binary_decomposition_for_internal_ray_0.ogv)Duration: 3 seconds.[https://en\.wikipedia\.org/wiki/File:Quadratic\_Julia\_set\_with\_Internal\_binary\_decomposition\_for\_internal\_ray\_0\.ogv](https://en.wikipedia.org/wiki/File:Quadratic_Julia_set_with_Internal_binary_decomposition_for_internal_ray_0.ogv)Binary decomposition of interior in case of internal angle 0
+
+Methods :
+
+- Distance Estimation Method for Julia set (DEM/J)
+- Inverse Iteration Method (IIM)
+</pre></article><article id="section-0015"><h3>Using backwards (inverse) iteration (IIM)</h3><pre># Using backwards (inverse) iteration (IIM)
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=13)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Reversed_Julia_set_C_%3D_%28_0.4_0.3_%29.gif/250px-Reversed_Julia_set_C_%3D_%28_0.4_0.3_%29.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Reversed_Julia_set_C_=_(_0.4_0.3_).gif)A Julia set plot, generated using random IIM [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miimcr.png/250px-Miimcr.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Miimcr.png)A Julia set plot, generated using MIIM
+
+As mentioned above, the Julia set can be found as the set of limit points of the set of pre-images of (essentially) any given point. So we can try to plot the Julia set of a given function as follows. Start with any point *z* we know to be in the Julia set, such as a repelling periodic point, and compute all pre-images of *z* under some high iterate      f  n     {\displaystyle f^{n}}   of *f*.
+
+Unfortunately, as the number of iterated pre-images grows exponentially, this is not feasible computationally. However, we can adjust this method, in a similar way as the &quot;random game&quot; method for [iterated function systems](https://en.wikipedia.org/wiki/Iterated_function_system). That is, in each step, we choose at random one of the inverse images of *f*.
+
+For example, for the quadratic polynomial *fc*, the backwards iteration is described by
+
+      z  n − 1   =    z  n   − c   .   {\displaystyle z_{n-1}={\sqrt {z_{n}-c}}.}
+
+At each step, one of the two square roots is selected at random.
+
+Note that certain parts of the Julia set are quite difficult to access with the reverse Julia algorithm. For this reason, one must modify IIM/J (an example of this is MIIM/J[[10]](https://en.wikipedia.org/wiki/Julia_set#cite_note-11)) or use other methods to produce better images.
+</pre></article><article id="section-0016"><h3>Using DEM/J</h3><pre># Using DEM/J
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=14)]
+- Images of Julia sets for ⁠     f  c   ( z ) =  z  2   + c   {\displaystyle f_{c}(z)=z^{2}+c}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.74543
+        \+
+        0\.11301
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.74543\+0\.11301\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Demj.jpg/250px-Demj.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Demj.jpg)⁠    c = − 0.74543 + 0.11301 ∗ i   {\displaystyle c=-0.74543+0.11301*i}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.75
+        \+
+        0\.11
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.75\+0\.11\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Julia_dem.png/250px-Julia_dem.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_dem.png)⁠    c = − 0.75 + 0.11 ∗ i   {\displaystyle c=-0.75+0.11*i}  ⁠
+- [![⁠
+
+        c
+        =
+        −
+        0\.1
+        \+
+        0\.651
+        ∗
+        i
+
+    \{\\displaystyle c=\-0\.1\+0\.651\*i\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Julia_dem_c%3D-0.1%2B0.651.png/120px-Julia_dem_c%3D-0.1%2B0.651.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Julia_dem_c=-0.1+0.651.png)⁠    c = − 0.1 + 0.651 ∗ i   {\displaystyle c=-0.1+0.651*i}  ⁠
+- [![Julia set drawn by distance estimation, the iteration is of the form ⁠
+
+        1
+        −
+
+          z
+
+            2
+
+        \+
+
+          z
+
+            5
+
+          /
+
+        \(
+        2
+        \+
+        4
+        z
+        \)
+        \+
+        c
+
+    \{\\displaystyle 1\-z^\{2\}\+z^\{5\}/\(2\+4z\)\+c\}
+
+⁠](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Juliasetsdkjulia1.jpg/250px-Juliasetsdkjulia1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkjulia1.jpg)Julia set drawn by distance estimation, the iteration is of the form ⁠    1 −  z  2   +  z  5    /  ( 2 + 4 z ) + c   {\displaystyle 1-z^{2}+z^{5}/(2+4z)+c}  ⁠
+- [![Three\-dimensional rendering of Julia set using distance estimation](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Juliasetsdkland1.jpg/250px-Juliasetsdkland1.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Juliasetsdkland1.jpg)Three-dimensional rendering of Julia set using distance estimation
+
+As a Julia set is infinitely thin we cannot draw it effectively by backwards iteration from the pixels. It will appear fragmented because of the impracticality of examining infinitely many startpoints. Since the iteration count changes vigorously near the Julia set, a partial solution is to imply the outline of the set from the nearest color contours, but the set will tend to look muddy.
+
+A better way to draw the Julia set in black and white is to estimate the distance of pixels (DEM) from the set and to color every pixel whose center is close to the set. The formula for the distance estimation is derived from the formula for the potential function *φ*(*z*). When the equipotential lines for *φ*(*z*) lie close, the number      |   φ ′  ( z )  |    {\displaystyle |\varphi &#39;(z)|}   is large, and conversely, therefore the equipotential lines for the function     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|}   should lie approximately regularly. It has been proven that the value found by this formula (up to a constant factor) converges towards the true distance for z converging towards the Julia set.[[9]](https://en.wikipedia.org/wiki/Julia_set#cite_note-Peitgen1986-10)
+
+We assume that *f*(*z*) is rational, that is,     f ( z ) = p ( z )  /  q ( z )   {\displaystyle f(z)=p(z)/q(z)}   where *p*(*z*) and *q*(*z*) are complex polynomials of degrees *m* and *n*, respectively, and we have to find the derivative of the above expressions for *φ*(*z*). And as it is only      z  k     {\displaystyle z_{k}}   that varies, we must calculate the derivative      z  k  ′    {\displaystyle z&#39;_{k}}   of      z  k     {\displaystyle z_{k}}   with respect to *z*. But as      z  k   = f ( f ( ⋯ f ( z ) ) )   {\displaystyle z_{k}=f(f(\cdots f(z)))}   (the *k*-fold composition),      z  k  ′    {\displaystyle z&#39;_{k}}   is the product of the numbers      f ′  (  z  k   )   {\displaystyle f&#39;(z_{k})}  , and this sequence can be calculated recursively by      z  k + 1  ′  =  f ′  (  z  k   )  z  k  ′    {\displaystyle z&#39;_{k+1}=f&#39;(z_{k})z&#39;_{k}}  , starting with      z  0  ′  = 1   {\displaystyle z&#39;_{0}=1}   (*before* the calculation of the next iteration      z  k + 1   = f (  z  k   )   {\displaystyle z_{k+1}=f(z_{k})}  ).
+
+For iteration towards ∞ (more precisely when *m* ≥ *n* + 2, so that ∞ is a super-attracting fixed point), we have
+
+      |   φ ′  ( z )  |  =  lim  k → ∞       |   z  k  ′   |     |   z  k    |   d  k      ,   {\displaystyle |\varphi &#39;(z)|=\lim _{k\to \infty }{\frac {|z&#39;_{k}|}{|z_{k}|d^{k}}},}
+
+(*d* = *m* − *n*) and consequently:
+
+     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |  =  lim  k → ∞   log ⁡  |   z  k    |   |   z  k    |   /   |   z  k  ′   |  .    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|=\lim _{k\to \infty }\log |z_{k}||z_{k}|/|z&#39;_{k}|.\,}
+
+For iteration towards a finite attracting cycle (that is not super-attracting) containing the point ⁠     z  ∗     {\displaystyle z^{*}}  ⁠ and having order *r*, we have
+
+      |   φ ′  ( z )  |  =  lim  k → ∞    |   z  k r  ′   |   /  (  |   z  k r   −  z  ∗     |   2    α  k   ) ,    {\displaystyle |\varphi &#39;(z)|=\lim _{k\to \infty }|z&#39;_{kr}|/(|z_{kr}-z^{*}|^{2}\alpha ^{k}),\,}
+
+and consequently:
+
+     δ ( z ) = φ ( z )  /   |   φ ′  ( z )  |  =  lim  k → ∞    |   z  k r   −  z  ∗    |   /   |   z  k r  ′   |  .    {\displaystyle \delta (z)=\varphi (z)/|\varphi &#39;(z)|=\lim _{k\to \infty }|z_{kr}-z^{*}|/|z&#39;_{kr}|.\,}
+
+For a super-attracting cycle, the formula is:
+
+     δ ( z ) =  lim  k → ∞   log ⁡  |   z  k r   −  z  ∗     |   2    /   |   z  k r  ′   |  .    {\displaystyle \delta (z)=\lim _{k\to \infty }\log |z_{kr}-z^{*}|^{2}/|z&#39;_{kr}|.\,}
+
+We calculate this number when the iteration stops. Note that the distance estimation is independent of the attraction of the cycle. This means that it has meaning for transcendental functions of &quot;degree infinity&quot; (e.g. sin(*z*) and tan(*z*)).
+
+Besides drawing of the boundary, the distance function can be introduced as a 3rd dimension to create a solid fractal landscape.
+</pre></article><article id="section-0017"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=15)]   [![Wikimedia Commons logo](https://thumb.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Commons-logo.svg) Wikimedia Commons has media related to [Julia set](https://commons.wikimedia.org/wiki/Julia%20set).
+- [Douady rabbit](https://en.wikipedia.org/wiki/Douady_rabbit)
+- [Limit set](https://en.wikipedia.org/wiki/Limit_set)
+- [Stable and unstable sets](https://en.wikipedia.org/wiki/Stable_and_unstable_sets)
+- [No wandering domain theorem](https://en.wikipedia.org/wiki/No_wandering_domain_theorem)
+- [Chaos theory](https://en.wikipedia.org/wiki/Chaos_theory)
+</pre></article><article id="section-0018"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=16)]
+1. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-1) Regarding notation: For other branches of mathematics the notation     J ⁡ ( f ) ,   {\displaystyle \operatorname {J} (f),}   can also represent the [Jacobian matrix](https://en.wikipedia.org/wiki/Jacobian_matrix#Jacobian_matrix) of a real-valued mapping f between [smooth manifolds](https://en.wikipedia.org/wiki/Smooth_manifold).
+</pre></article><article id="section-0019"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=17)]
+1. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-2) Gaston Julia (1918) &quot;Mémoire sur l&#39;iteration des fonctions rationnelles&quot;, *Journal de Mathématiques Pures et Appliquées*, vol. 8, pages 47–245.
+2. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-3) Pierre Fatou (1917) &quot;Sur les substitutions rationnelles&quot;, *Comptes Rendus de l&#39;Académie des Sciences de Paris*, vol. 164, pages 806–808 and vol. 165, pages 992–995.
+3. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-4) Beardon, *Iteration of Rational Functions*, Theorem 5.6.2.
+4. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-5) Beardon, *Iteration of Rational Functions*, Theorem 7.1.1.
+5. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-6) Beardon, *Iteration of Rational Functions*, Theorem 3.2.4.
+6. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-7) [Tan Lei](https://en.wikipedia.org/wiki/Tan_Lei), [&quot;Similarity between the Mandelbrot set and Julia Sets&quot;](http://projecteuclid.org/euclid.cmp/1104201823), Communications in Mathematical Physics 134 (1990), pp. 587–617.
+7. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Renormalizing_the_Mandelbrot_Escape_8-0) Vepstas, Linas. [&quot;Renormalizing the Mandelbrot Escape&quot;](https://linas.org/art-gallery/escape/escape.html). *linas.org*. Creative Commons. Retrieved 5 November 2023.
+8. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-9) Douady, Adrien; Hubbard, John H. (1984). &quot;Etude dynamique des polynômes complexes&quot;. *Prépublications mathémathiques d&#39;Orsay*. **2**;   &quot;[*op.cit.*]&quot;. *Prépublications mathémathiques d&#39;Orsay*. **4**. 1985.
+9. [Jump up to: 1](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Peitgen1986_10-0) [2](https://en.wikipedia.org/wiki/Julia_set#cite_ref-Peitgen1986_10-1) Peitgen, Heinz-Otto; Richter Peter (1986). *[The Beauty of Fractals](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals)*. Heidelberg: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-15851-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-15851-0).
+10. [↑](https://en.wikipedia.org/wiki/Julia_set#cite_ref-11) Saupe, Dietmar (October 1987). [&quot;Efficient computation of Julia sets and their fractal dimension&quot;](https://scixplorer.org/abs/1987PhyD...28..358S/abstract). *Physica D: Nonlinear Phenomena*. **28** (3): 358–370. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0167-2789(87)90024-8](https://doi.org/10.1016%2F0167-2789%2887%2990024-8). Retrieved 5 February 2026.
+</pre></article><article id="section-0020"><h3>Bibliography</h3><pre># Bibliography
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=18)]
+- [Carleson, Lennart](https://en.wikipedia.org/wiki/Lennart_Carleson); [Gamelin, Theodore W.](https://en.wikipedia.org/wiki/Theodore_Gamelin) (1993). *Complex Dynamics*. Springer.
+- [Douady, Adrien](https://en.wikipedia.org/wiki/Adrien_Douady); [Hubbard, John H.](https://en.wikipedia.org/wiki/John_H._Hubbard) (1984). &quot;Etude dynamique des polynômes complexes&quot;. *Prépublications mathémathiques d&#39;Orsay*. **2**;   &quot;[*op.cit.*]&quot;. *Prépublications mathémathiques d&#39;Orsay*. **4**. 1985.
+- [Milnor, J.W.](https://en.wikipedia.org/wiki/John_W._Milnor) (2006) [1990]. *Dynamics in One Complex Variable*. Annals of Mathematics Studies. Vol. 160 (Third ed.). Princeton University Press;
+First appeared in as a [&quot;Stony Brook IMS Preprint&quot;](https://web.archive.org/web/20060424085751/http://www.math.sunysb.edu/preprints.html). Archived from [the original](http://www.math.sunysb.edu/preprints.html) on 2006-04-24. available as Milnor, John W. (1990). &quot;Dynamics in one complex variable: Introductory lectures&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math.DS/9201272](https://arxiv.org/abs/math.DS/9201272).
+- [Bogomolny, Alexander](https://en.wikipedia.org/wiki/Alexander_Bogomolny). [&quot;Mandelbrot Set and Indexing of Julia Sets&quot;](http://www.cut-the-knot.org/Curriculum/Algebra/JuliaIndexing.shtml). *[cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)*. Algebra curriculum.
+- Demidov, Evgeny (2003). [&quot;The Mandelbrot and Julia sets&#39; anatomy&quot;](http://ibiblio.org/e-notes/MSet/Contents.htm).
+- Beardon, Alan F. (1991). *Iteration of Rational Functions*. Springer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-95151-2](https://en.wikipedia.org/wiki/Special:BookSources/0-387-95151-2).
+</pre></article><article id="section-0021"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;action=edit&amp;section=19)]   [![Wikibooks logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg) Wikibooks has a book on the topic of: ***[Fractals](https://en.wikibooks.org/wiki/Fractals)***
+- [&quot;Julia set&quot;](https://www.encyclopediaofmath.org/index.php?title=Julia_set), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press, 2001 [1994]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Julia Set&quot;](https://mathworld.wolfram.com/JuliaSet.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- Bourke, Paul. [&quot;Julia set fractal (2D)&quot;](http://paulbourke.net/fractals/juliaset/) (personal site).
+- Sawyer, Jamie (6 April 2007). [&quot;Julia sets&quot;](https://mathmo.blogspot.com/2007/04/essay-backtrack-julia-sets.html) (blog).
+- McGoodwin, Michael. [&quot;Julia jewels: An exploration of Julia sets&quot;](http://mcgoodwin.net/julia/juliajewels.html) (personal site).
+- Pringle, Lucy. [&quot;Crop circle Julia Set&quot;](http://www.lucypringle.co.uk/photos/1996/uk1996ck.shtml) (personal site).
+- Greig, Josh. [&quot;Interactive Julia Set Applet&quot;](https://web.archive.org/web/20120326020259/http://www.hightechdreams.com/weaver.php?topic=fractals). Archived from [the original](http://www.hightechdreams.com/weaver.php?topic=fractals) on 2012-03-26.
+- Joyce, David E. [&quot;Julia and Mandelbrot set explorer&quot;](http://aleph0.clarku.edu/~djoyce/julia/explorer.html) (academic personal site). Clark University.
+- [&quot;A simple program to generate Julia sets&quot;](https://web.archive.org/web/20110317020756/http://www.lizardie.com/links/download/fractal-generator). *liazardie.com*. Archived from [the original](http://www.lizardie.com/links/download/fractal-generator) on 2011-03-17. – Windows, 370 kB
+- [&quot;A collection of applets&quot;](https://ifs-tools.sourceforge.net/). *SourceForge*. – one of the applets can render Julia sets, via Iterated Function Systems.
+- [&quot;Julia meets HTML5&quot;](https://web.archive.org/web/20110218135200/http://juliamap.googlelabs.com/). Google Labs. Archived from [the original](http://juliamap.googlelabs.com/) on 2011-02-18. HTML5 Fractal generator for your browser
+- [&quot;Julia&quot;](https://cran.r-project.org/web/packages/Julia/index.html). *r-project.org*. GNU R Package. 25 November 2014. generate Julia or Mandelbrot set at a given region and resolution
+- [&quot;Julia sets&quot;](https://web.archive.org/web/20170616200359/http://dvdpedia.de/julia/julia.html). Archived from [the original](http://dvdpedia.de/julia/julia.html) on 2017-06-16. Retrieved 2011-08-24. – A visual explanation of Julia Sets.
+- [&quot;FractalTS&quot;](https://7affer.github.io/fractalTS/). *github.io*. – Mandelbrot, Burning ship and corresponding Julia set generator.
+- [&quot;Julia set images, online rendering&quot;](https://web.archive.org/web/20190622031041/http://julia.finengin.net/). *finengin.net*. Archived from [the original](http://julia.finengin.net/) on 2019-06-22. Retrieved 2017-01-24.
+- [&quot;Understanding Julia and Mandelbrot Sets&quot;](http://www.karlsims.com/julia.html). - A visual explanation.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal) show
+- [v](https://en.wikipedia.org/wiki/Template:Fractal_software)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractal_software)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractal_software)
+[Fractal software](https://en.wikipedia.org/wiki/Fractal-generating_software) show[Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control) [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q848427#identifiers)             Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Julia_set&amp;oldid=1362872831](https://en.wikipedia.org/w/index.php?title=Julia_set&amp;oldid=1362872831)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Limit sets](https://en.wikipedia.org/wiki/Category:Limit_sets)
+- [Complex dynamics](https://en.wikipedia.org/wiki/Category:Complex_dynamics)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles needing additional references from July 2021](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_July_2021)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from October 2021](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2021)
+- [Commons link from Wikidata](https://en.wikipedia.org/wiki/Category:Commons_link_from_Wikidata)
+- [Articles containing video clips](https://en.wikipedia.org/wiki/Category:Articles_containing_video_clips)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+
+    [https://en\.wikipedia\.org/wiki/Julia\_set?action=edit](https://en.wikipedia.org/wiki/Julia_set?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

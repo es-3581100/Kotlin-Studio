@@ -1,0 +1,449 @@
+{
+  "golden-ratio": {
+    "id": "golden-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**2 - x - 1",
+    "exact": "1/2 + sqrt(5)/2",
+    "decimal": "1.61803398874989485",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "-0.618033988749895",
+      "1.61803398874989"
+    ],
+    "python": "1/2 + (1/2)*math.sqrt(5)",
+    "c": "1.0/2.0 + (1.0/2.0)*sqrt(5)",
+    "javascript": "1/2 + (1/2)*Math.sqrt(5)",
+    "rust": "1_f64/2.0 + (1_f64/2.0)*2.23606797749979",
+    "sympy": "poly = x**2 - x - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "silver-ratio": {
+    "id": "silver-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**2 - 2*x - 1",
+    "exact": "1 + sqrt(2)",
+    "decimal": "2.41421356237309505",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "-0.414213562373095",
+      "2.41421356237309"
+    ],
+    "python": "1 + math.sqrt(2)",
+    "c": "1 + M_SQRT2",
+    "javascript": "1 + Math.sqrt(2)",
+    "rust": "1.0 + 1.4142135623731",
+    "sympy": "poly = x**2 - 2*x - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "plastic-ratio": {
+    "id": "plastic-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**3 - x - 1",
+    "exact": "1/(3*(sqrt(69)/18 + 1/2)**(1/3)) + (sqrt(69)/18 + 1/2)**(1/3)",
+    "decimal": "1.32471795724474603",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "1.32471795724475",
+      "-0.662358978622373 + 0.562279512062301*I",
+      "-0.662358978622373 - 0.562279512062301*I"
+    ],
+    "python": "(1/3)/((1/18)*math.sqrt(69) + 1/2)**(1/3) + ((1/18)*math.sqrt(69) + 1/2)**(1/3)",
+    "c": "(1.0/3.0)/cbrt((1.0/18.0)*sqrt(69) + 1.0/2.0) + cbrt((1.0/18.0)*sqrt(69) + 1.0/2.0)",
+    "javascript": "(1/3)/Math.cbrt((1/18)*Math.sqrt(69) + 1/2) + Math.cbrt((1/18)*Math.sqrt(69) + 1/2)",
+    "rust": "(1_f64/3.0)/((1_f64/18.0)*8.30662386291807 + 1_f64/2.0).cbrt() + ((1_f64/18.0)*8.30662386291807 + 1_f64/2.0).cbrt()",
+    "sympy": "poly = x**3 - x - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "tribonacci-ratio": {
+    "id": "tribonacci-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**3 - x**2 - x - 1",
+    "exact": "1/3 + 4/(9*(sqrt(33)/9 + 19/27)**(1/3)) + (sqrt(33)/9 + 19/27)**(1/3)",
+    "decimal": "1.83928675521416113",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "1.83928675521416",
+      "-0.419643377607081 + 0.606290729207199*I",
+      "-0.419643377607081 - 0.606290729207199*I"
+    ],
+    "python": "1/3 + (4/9)/((1/9)*math.sqrt(33) + 19/27)**(1/3) + ((1/9)*math.sqrt(33) + 19/27)**(1/3)",
+    "c": "1.0/3.0 + (4.0/9.0)/cbrt((1.0/9.0)*sqrt(33) + 19.0/27.0) + cbrt((1.0/9.0)*sqrt(33) + 19.0/27.0)",
+    "javascript": "1/3 + (4/9)/Math.cbrt((1/9)*Math.sqrt(33) + 19/27) + Math.cbrt((1/9)*Math.sqrt(33) + 19/27)",
+    "rust": "1_f64/3.0 + (4_f64/9.0)/((1_f64/9.0)*5.74456264653803 + 19_f64/27.0).cbrt() + ((1_f64/9.0)*5.74456264653803 + 19_f64/27.0).cbrt()",
+    "sympy": "poly = x**3 - x**2 - x - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "supergolden-ratio": {
+    "id": "supergolden-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**3 - x**2 - 1",
+    "exact": "1/(9*(sqrt(93)/18 + 29/54)**(1/3)) + 1/3 + (sqrt(93)/18 + 29/54)**(1/3)",
+    "decimal": "1.46557123187676803",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "1",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "1.46557123187677",
+      "-0.232785615938384 + 0.792551992515448*I",
+      "-0.232785615938384 - 0.792551992515448*I"
+    ],
+    "python": "(1/9)/((1/18)*math.sqrt(93) + 29/54)**(1/3) + 1/3 + ((1/18)*math.sqrt(93) + 29/54)**(1/3)",
+    "c": "(1.0/9.0)/cbrt((1.0/18.0)*sqrt(93) + 29.0/54.0) + 1.0/3.0 + cbrt((1.0/18.0)*sqrt(93) + 29.0/54.0)",
+    "javascript": "(1/9)/Math.cbrt((1/18)*Math.sqrt(93) + 29/54) + 1/3 + Math.cbrt((1/18)*Math.sqrt(93) + 29/54)",
+    "rust": "(1_f64/9.0)/((1_f64/18.0)*9.64365076099295 + 29_f64/54.0).cbrt() + 1_f64/3.0 + ((1_f64/18.0)*9.64365076099295 + 29_f64/54.0).cbrt()",
+    "sympy": "poly = x**3 - x**2 - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "supersilver-ratio": {
+    "id": "supersilver-ratio",
+    "kind": "algebraic-root",
+    "polynomial": "x**3 - 2*x**2 - 1",
+    "exact": "4/(9*(sqrt(177)/18 + 43/54)**(1/3)) + 2/3 + (sqrt(177)/18 + 43/54)**(1/3)",
+    "decimal": "2.20556943040059031",
+    "residual": "0",
+    "companionMatrix": [
+      [
+        "2",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "eigenvalues": [
+      "2.20556943040059",
+      "-0.102784715200295 + 0.665456951152813*I",
+      "-0.102784715200295 - 0.665456951152813*I"
+    ],
+    "python": "(4/9)/((1/18)*math.sqrt(177) + 43/54)**(1/3) + 2/3 + ((1/18)*math.sqrt(177) + 43/54)**(1/3)",
+    "c": "(4.0/9.0)/cbrt((1.0/18.0)*sqrt(177) + 43.0/54.0) + 2.0/3.0 + cbrt((1.0/18.0)*sqrt(177) + 43.0/54.0)",
+    "javascript": "(4/9)/Math.cbrt((1/18)*Math.sqrt(177) + 43/54) + 2/3 + Math.cbrt((1/18)*Math.sqrt(177) + 43/54)",
+    "rust": "(4_f64/9.0)/((1_f64/18.0)*13.3041346956501 + 43_f64/54.0).cbrt() + 2_f64/3.0 + ((1_f64/18.0)*13.3041346956501 + 43_f64/54.0).cbrt()",
+    "sympy": "poly = x**3 - 2*x**2 - 1\nroot = max([r for r in solve(poly, x) if r.is_real], key=lambda r: N(r))",
+    "pipeline": [
+      "source equation",
+      "SymPy exact polynomial",
+      "exact algebraic root",
+      "recurrence matrix",
+      "numeric eigenvalue check",
+      "language printer/codegen"
+    ]
+  },
+  "pythagorean-triples": {
+    "id": "pythagorean-triples",
+    "kind": "identity",
+    "formula": "a=m²−n², b=2mn, c=m²+n²",
+    "sympy": "simplify((m**2-n**2)**2 + (2*m*n)**2 - (m**2+n**2)**2)",
+    "verified": "0",
+    "python": "def triple(m,n): return (m*m-n*n, 2*m*n, m*m+n*n)",
+    "c": "/* integer parametrization: a=m*m-n*n; b=2*m*n; c=m*m+n*n; */",
+    "javascript": "const triple=(m,n)=>[m*m-n*n,2*m*n,m*m+n*n];",
+    "rust": "fn triple(m:i64,n:i64)->(i64,i64,i64){(m*m-n*n,2*m*n,m*m+n*n)}",
+    "pipeline": [
+      "integer equation",
+      "symbolic parametrization",
+      "identity simplification",
+      "generated integer kernel"
+    ]
+  },
+  "mandelbrot": {
+    "id": "mandelbrot",
+    "kind": "iteration",
+    "formula": "z_next=z**2+c",
+    "sympy": "step = z**2 + c",
+    "python": "step = lambdify((z,c), z**2+c, modules=\"numpy\")",
+    "c": "z_next = c + pow(z, 2);",
+    "javascript": "z_next = c + Math.pow(z, 2);",
+    "rust": "z_next = c + z.powi(2);",
+    "pipeline": [
+      "symbolic recurrence",
+      "lambdify",
+      "NumPy array kernel",
+      "language printer"
+    ]
+  },
+  "julia": {
+    "id": "julia",
+    "kind": "iteration",
+    "formula": "z_next=z**2+c (fixed c)",
+    "sympy": "step = z**2 + c",
+    "python": "step = lambdify((z,c), z**2+c, modules=\"numpy\")",
+    "c": "z_next = c + pow(z, 2);",
+    "javascript": "z_next = c + Math.pow(z, 2);",
+    "rust": "z_next = c + z.powi(2);",
+    "pipeline": [
+      "symbolic recurrence",
+      "lambdify",
+      "NumPy array kernel",
+      "language printer"
+    ]
+  },
+  "chebyshev": {
+    "id": "chebyshev",
+    "kind": "polynomial",
+    "formula": "T5(x)",
+    "sympy": "expand(chebyshevt(5, x))",
+    "expanded": "16*x**5 - 20*x**3 + 5*x",
+    "python": "16*x**5 - 20*x**3 + 5*x",
+    "c": "16*pow(x, 5) - 20*pow(x, 3) + 5*x",
+    "javascript": "16*Math.pow(x, 5) - 20*Math.pow(x, 3) + 5*x",
+    "rust": "16*x.powi(5) - 20*x.powi(3) + 5*x",
+    "pipeline": [
+      "named polynomial",
+      "exact expansion",
+      "numeric callable",
+      "code printer"
+    ]
+  },
+  "fibonacci": {
+    "id": "fibonacci",
+    "kind": "recurrence",
+    "formula": "F_n=F_{n-1}+F_{n-2}",
+    "matrix": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "sympy": "A=Matrix([[1,1],[1,0]]); A.charpoly().as_expr()",
+    "charpoly": "lambda**2 - lambda - 1",
+    "python": "A = Matrix([[1,1],[1,0]])",
+    "pipeline": [
+      "recurrence",
+      "state matrix",
+      "characteristic polynomial",
+      "dominant root φ"
+    ]
+  },
+  "pell": {
+    "id": "pell",
+    "kind": "recurrence",
+    "formula": "P_n=2P_{n-1}+P_{n-2}",
+    "matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "sympy": "A=Matrix([[2,1],[1,0]]); A.charpoly().as_expr()",
+    "charpoly": "lambda**2 - 2*lambda - 1",
+    "python": "A = Matrix([[2,1],[1,0]])",
+    "pipeline": [
+      "recurrence",
+      "state matrix",
+      "x²−2x−1",
+      "dominant root 1+√2",
+      "Pell rational approximants"
+    ]
+  },
+  "tribonacci": {
+    "id": "tribonacci",
+    "kind": "recurrence",
+    "formula": "T_n=T_{n-1}+T_{n-2}+T_{n-3}",
+    "matrix": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "sympy": "A=Matrix([[1,1,1],[1,0,0],[0,1,0]]); A.charpoly().as_expr()",
+    "charpoly": "lambda**3 - lambda**2 - lambda - 1",
+    "python": "A = Matrix([[1,1,1],[1,0,0],[0,1,0]])",
+    "pipeline": [
+      "recurrence",
+      "state matrix",
+      "x³−x²−x−1",
+      "Tribonacci ratio",
+      "Rauzy eigensystem"
+    ]
+  },
+  "padovan": {
+    "id": "padovan",
+    "kind": "recurrence",
+    "formula": "P_n=P_{n-2}+P_{n-3}",
+    "matrix": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "sympy": "A=Matrix([[0,1,1],[1,0,0],[0,1,0]]); A.charpoly().as_expr()",
+    "charpoly": "lambda**3 - lambda - 1",
+    "python": "A = Matrix([[0,1,1],[1,0,0],[0,1,0]])",
+    "pipeline": [
+      "recurrence",
+      "state matrix",
+      "x³−x−1",
+      "plastic ratio"
+    ]
+  },
+  "rauzy-fractal": {
+    "id": "rauzy-fractal",
+    "kind": "eigensystem",
+    "formula": "χ(x)=x³−x²−x−1",
+    "sympy": "A=Matrix([[1,1,1],[1,0,0],[0,1,0]]); A.eigenvals()",
+    "python": "A = Matrix([[1,1,1],[1,0,0],[0,1,0]])",
+    "pipeline": [
+      "Tribonacci word",
+      "substitution matrix",
+      "characteristic polynomial",
+      "real Pisot eigenvalue",
+      "complex conjugate plane",
+      "fractal geometry"
+    ]
+  },
+  "binomial": {
+    "id": "binomial",
+    "kind": "expansion",
+    "formula": "(x+y)^n",
+    "sympy": "expand((x+y)**n)",
+    "python": "expand((x+y)**n)",
+    "pipeline": [
+      "symbolic expression",
+      "exact expansion",
+      "coefficients/code"
+    ]
+  }
+}

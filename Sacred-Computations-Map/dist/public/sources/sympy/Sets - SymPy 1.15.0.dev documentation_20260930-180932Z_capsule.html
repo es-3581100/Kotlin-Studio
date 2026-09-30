@@ -1,0 +1,3918 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Sets - SymPy 1.15.0.dev documentation — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Sets - SymPy 1.15.0.dev documentation</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://docs.sympy.org/dev/modules/sets.html</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T18:09:31.781Z</div><div class="stat"><b>Records</b><br>16</div><div class="stat"><b>Sections</b><br>10</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 262 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 61542 B · ~15273 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 78817 B · ~19699 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Sets[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 62 B · ~16 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Basic Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md</code></a> <small>markdown · 19536 B · ~4873 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Elementary Sets[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 5409 B · ~1348 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Compound Sets[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 8588 B · ~2139 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Singleton Sets[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 1638 B · ~409 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Special Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md</code></a> <small>markdown · 18566 B · ~4579 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Power sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md</code></a> <small>markdown · 1852 B · ~459 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Condition Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md</code></a> <small>markdown · 3139 B · ~775 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-SetKind[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 1502 B · ~375 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Iteration over sets[¶](https---docs.sympy.org-dev-modules-sets.md</code></a> <small>markdown · 1208 B · ~292 tok</small></li><li><a href="#art-0014"><code>artifacts/provenance/source-record.json</code></a> <small>json · 394 B · ~99 tok</small></li><li><a href="#art-0015"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0016"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Sets - SymPy 1.15.0.dev documentation&quot;
+source: https://docs.sympy.org/dev/modules/sets.html
+captured_at: 2026-09-30T18:09:31.781Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 16
+artifact_count: 16
+content_sha256: b40c33d7e52ed10240eda5aba703e56a423e73d01681ea92b7ddfffb626e0743
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:262,&quot;sha256&quot;:&quot;8f3f6a28da5c832642c76a574cc230f35188ce966291a6eec1a86613167fbce0&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;dev&quot;,&quot;sets&quot;,&quot;sympy&quot;,&quot;2026-09-30t18&quot;,&quot;781z&quot;,&quot;agent&quot;,&quot;canonical&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:61542,&quot;sha256&quot;:&quot;b40c33d7e52ed10240eda5aba703e56a423e73d01681ea92b7ddfffb626e0743&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;sets&quot;,&quot;interval&quot;,&quot;https&quot;,&quot;org&quot;,&quot;html&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Sets - SymPy 1.15.0.dev documentation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:15273,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:78817,&quot;sha256&quot;:&quot;6b5cd3c8a24ac7a8893ca94f922cd3625bd62e599c95e0cc482fa35476f5c0c8&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;https&quot;,&quot;text&quot;,&quot;href&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;html&quot;,&quot;dev&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:19699,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Sets[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:62,&quot;sha256&quot;:&quot;e1ee420381d6514ac914fc61da4250e35e454c833a35778f7cf1773d85faeaf0&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;modules&quot;,&quot;org&quot;,&quot;sympy&quot;],&quot;summary&quot;:&quot;Sets[¶](https://docs.sympy.org/dev/modules/sets.html#sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:16,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Basic Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:19536,&quot;sha256&quot;:&quot;fc498e39829e22630e4c647bf14d88cd0f7297a393dfff6b4d19bd4d889c4098&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;sympy&quot;,&quot;interval&quot;,&quot;https&quot;,&quot;org&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;],&quot;summary&quot;:&quot;Basic Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:4873,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Elementary Sets[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5409,&quot;sha256&quot;:&quot;60a2ba04562d238c8dd819983745f616d3df2cd14fc700f01b7d1866f06a4576&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;sympy&quot;,&quot;interval&quot;,&quot;https&quot;,&quot;org&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;],&quot;summary&quot;:&quot;Elementary Sets[¶](https://docs.sympy.org/dev/modules/sets.html#elementary-sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1348,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Compound Sets[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8588,&quot;sha256&quot;:&quot;68a071b4b18c7669efc6ac61447da9bc300efccc9fd0519799e345280eeb4286&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;sympy&quot;,&quot;https&quot;,&quot;org&quot;,&quot;html&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;interval&quot;],&quot;summary&quot;:&quot;Compound Sets[¶](https://docs.sympy.org/dev/modules/sets.html#compound-sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2139,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Singleton Sets[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1638,&quot;sha256&quot;:&quot;a0a0b11adebcfca8a665a97b30359ed6fd63c2cf6ef46fd8cff1c1bca10e3bc4&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;sympy&quot;,&quot;https&quot;,&quot;org&quot;,&quot;emptyset&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;],&quot;summary&quot;:&quot;Singleton Sets[¶](https://docs.sympy.org/dev/modules/sets.html#singleton-sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:409,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Special Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:18566,&quot;sha256&quot;:&quot;7f7081cda74397e9f453e6fe052bee8ff06f3de4c8e2b1c688094ee3a96820b0&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;sets&quot;,&quot;interval&quot;,&quot;fancysets&quot;,&quot;https&quot;,&quot;range&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Special Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.fancysets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:4579,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Power sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1852,&quot;sha256&quot;:&quot;520391ed92b834c744cae924378d7e20b1b38d398243e4a472e35d2417df8101&quot;,&quot;keywords&quot;:[&quot;powerset&quot;,&quot;set&quot;,&quot;sets&quot;,&quot;sympy&quot;,&quot;https&quot;,&quot;power&quot;,&quot;org&quot;,&quot;clipboard&quot;],&quot;summary&quot;:&quot;Power sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.powerset)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:459,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Condition Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3139,&quot;sha256&quot;:&quot;05bffe4351dcf720fa8688bee37898f8a490ccce65bf502d9e244198adbbc416&quot;,&quot;keywords&quot;:[&quot;conditionset&quot;,&quot;sympy&quot;,&quot;sets&quot;,&quot;https&quot;,&quot;clipboard&quot;,&quot;copy&quot;,&quot;org&quot;,&quot;set&quot;],&quot;summary&quot;:&quot;Condition Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.conditionset)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:775,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-SetKind[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1502,&quot;sha256&quot;:&quot;b3180a11521d3924c66d93265834a7c6f8370e362f9bb602c21646c98417b496&quot;,&quot;keywords&quot;:[&quot;kind&quot;,&quot;sympy&quot;,&quot;setkind&quot;,&quot;sets&quot;,&quot;core&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;SetKind[¶](https://docs.sympy.org/dev/modules/sets.html#setkind)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:375,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Iteration over sets[¶](https---docs.sympy.org-dev-modules-sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1208,&quot;sha256&quot;:&quot;74b89d9bfb89abdc2a00b8f246ab9cb1605c2e28fd56168fa4255b7266b8d0a5&quot;,&quot;keywords&quot;:[&quot;set&quot;,&quot;elements&quot;,&quot;sets&quot;,&quot;iteration&quot;,&quot;sympy&quot;,&quot;finiteset&quot;,&quot;like&quot;,&quot;over&quot;],&quot;summary&quot;:&quot;Iteration over sets[¶](https://docs.sympy.org/dev/modules/sets.html#iteration-over-sets)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:292,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0014&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:394,&quot;sha256&quot;:&quot;aac1c23d03f052abe88d9f478a6e94d459836ca0b869a26f55afe4e0ce159208&quot;,&quot;keywords&quot;:[&quot;sets&quot;,&quot;sympy&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;modules&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:99,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0015&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;7c46b1458a6ed806fc252d526bcae7d4dd0ed69f3d95dc836a0cdd709251cf5d&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;520&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0016&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T18:09:31.781Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	262	8f3f6a28da5c832642c76a574cc230f35188ce966291a6eec1a86613167fbce0	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	15273	61542	b40c33d7e52ed10240eda5aba703e56a423e73d01681ea92b7ddfffb626e0743	Sets - SymPy 1.15.0.dev documentation	
+art:0003	index	artifacts/index/page-index.json	supporting	19699	78817	6b5cd3c8a24ac7a8893ca94f922cd3625bd62e599c95e0cc482fa35476f5c0c8	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Sets[¶](https---docs.sympy.org-dev-modules-sets.md	primary	16	62	e1ee420381d6514ac914fc61da4250e35e454c833a35778f7cf1773d85faeaf0	Sets[¶](https://docs.sympy.org/dev/modules/sets.html#sets)	
+sec:0005	section	artifacts/sections/0002-Basic Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md	primary	4873	19536	fc498e39829e22630e4c647bf14d88cd0f7297a393dfff6b4d19bd4d889c4098	Basic Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.sets)	
+sec:0006	section	artifacts/sections/0003-Elementary Sets[¶](https---docs.sympy.org-dev-modules-sets.md	primary	1348	5409	60a2ba04562d238c8dd819983745f616d3df2cd14fc700f01b7d1866f06a4576	Elementary Sets[¶](https://docs.sympy.org/dev/modules/sets.html#elementary-sets)	
+sec:0007	section	artifacts/sections/0004-Compound Sets[¶](https---docs.sympy.org-dev-modules-sets.md	primary	2139	8588	68a071b4b18c7669efc6ac61447da9bc300efccc9fd0519799e345280eeb4286	Compound Sets[¶](https://docs.sympy.org/dev/modules/sets.html#compound-sets)	
+sec:0008	section	artifacts/sections/0005-Singleton Sets[¶](https---docs.sympy.org-dev-modules-sets.md	primary	409	1638	a0a0b11adebcfca8a665a97b30359ed6fd63c2cf6ef46fd8cff1c1bca10e3bc4	Singleton Sets[¶](https://docs.sympy.org/dev/modules/sets.html#singleton-sets)	
+sec:0009	section	artifacts/sections/0006-Special Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md	primary	4579	18566	7f7081cda74397e9f453e6fe052bee8ff06f3de4c8e2b1c688094ee3a96820b0	Special Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.fancysets)	
+sec:0010	section	artifacts/sections/0007-Power sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md	primary	459	1852	520391ed92b834c744cae924378d7e20b1b38d398243e4a472e35d2417df8101	Power sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.powerset)	
+sec:0011	section	artifacts/sections/0008-Condition Sets[¶](https---docs.sympy.org-dev-modules-sets.html#module-sympy.sets.md	primary	775	3139	05bffe4351dcf720fa8688bee37898f8a490ccce65bf502d9e244198adbbc416	Condition Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.conditionset)	
+sec:0012	section	artifacts/sections/0009-SetKind[¶](https---docs.sympy.org-dev-modules-sets.md	supporting	375	1502	b3180a11521d3924c66d93265834a7c6f8370e362f9bb602c21646c98417b496	SetKind[¶](https://docs.sympy.org/dev/modules/sets.html#setkind)	
+sec:0013	section	artifacts/sections/0010-Iteration over sets[¶](https---docs.sympy.org-dev-modules-sets.md	supporting	292	1208	74b89d9bfb89abdc2a00b8f246ab9cb1605c2e28fd56168fa4255b7266b8d0a5	Iteration over sets[¶](https://docs.sympy.org/dev/modules/sets.html#iteration-over-sets)	
+art:0014	provenance	artifacts/provenance/source-record.json	supporting	99	394	aac1c23d03f052abe88d9f478a6e94d459836ca0b869a26f55afe4e0ce159208	Capture source identity and metadata	
+art:0015	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	7c46b1458a6ed806fc252d526bcae7d4dd0ed69f3d95dc836a0cdd709251cf5d	Extraction engine and counts	
+art:0016	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre># Sets[¶](https://docs.sympy.org/dev/modules/sets.html#sets)
+
+## Basic Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.sets)
+
+   class sympy.sets.sets.Set(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L47-L851)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)
+
+The base class for any kind of set.
+
+Explanation
+
+This is not meant to be used directly as a container of items. It does not behave like the builtin `set`; see [`FiniteSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet) for that.
+
+Real intervals are represented by the [`Interval`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval) class and unions of sets by the [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union) class. The empty set is represented by the [`EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet) class and available as a singleton as `S.EmptySet`.
+
+   as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L849-L851)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.as_relational)
+
+Rewrites the set as a relational.
+
+    property boundary[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.boundary)
+
+The boundary or frontier of a set.
+
+Explanation
+
+A point x is on the boundary of a set S if
+
+1. x is in the closure of S. I.e. Every neighborhood of x contains a point in S.
+2. x is not in the interior of S. I.e. There does not exist an open set centered on x contained entirely within S.
+
+There are the points on the outer rim of S. If S is open then these points need not actually be contained within S.
+
+For example, the boundary of an interval is its start and end points. This is true regardless of whether or not the interval is open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).boundary
+{0, 1}
+&gt;&gt;&gt; Interval(0, 1, True, False).boundary
+{0, 1}
+```
+
+  Copy to clipboard          property closure[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.closure)
+
+Property method which returns the closure of a set. The closure is defined as the union of the set itself and its boundary.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.Reals.closure
+Reals
+&gt;&gt;&gt; Interval(0, 1).closure
+Interval(0, 1)
+```
+
+  Copy to clipboard          complement(*universe*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L219-L234)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.complement)
+
+The complement of ‘self’ w.r.t the given universe.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; Interval(0, 1).complement(S.Reals)
+Union(Interval.open(-oo, 0), Interval.open(1, oo))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1).complement(S.UniversalSet)
+Complement(UniversalSet, Interval(0, 1))
+```
+
+  Copy to clipboard          contains(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L341-L387)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.contains)
+
+Returns a SymPy value indicating whether `other` is contained in `self`: `true` if it is, `false` if it is not, else an unevaluated `Contains` expression (or, as in the case of ConditionSet and a union of FiniteSet/Intervals, an expression indicating the conditions for containment).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; from sympy.abc import x
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1).contains(0.5)
+True
+```
+
+  Copy to clipboard
+
+As a shortcut it is possible to use the `in` operator, but that will raise an error unless an affirmative true or false is not obtained.
+
+```
+&gt;&gt;&gt; Interval(0, 1).contains(x)
+(0 &lt;= x) &amp; (x &lt;= 1)
+&gt;&gt;&gt; x in Interval(0, 1)
+Traceback (most recent call last):
+...
+TypeError: did not evaluate to a bool: None
+```
+
+  Copy to clipboard
+
+The result of ‘in’ is a bool, not a SymPy value
+
+```
+&gt;&gt;&gt; 1 in Interval(0, 2)
+True
+&gt;&gt;&gt; _ is S.true
+False
+```
+
+  Copy to clipboard          property inf[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.inf)
+
+The infimum of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).inf
+0
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).inf
+0
+```
+
+  Copy to clipboard          property interior[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.interior)
+
+Property method which returns the interior of a set. The interior of a set S consists all points of S that do not belong to the boundary of S.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).interior
+Interval.open(0, 1)
+&gt;&gt;&gt; Interval(0, 1).boundary.interior
+EmptySet
+```
+
+  Copy to clipboard          intersect(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L166-L185)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersect)
+
+Returns the intersection of ‘self’ and ‘other’.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 3).intersect(Interval(1, 2))
+Interval(1, 2)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; from sympy import imageset, Lambda, symbols, S
+&gt;&gt;&gt; n, m = symbols(&#39;n m&#39;)
+&gt;&gt;&gt; a = imageset(Lambda(n, 2*n), S.Integers)
+&gt;&gt;&gt; a.intersect(imageset(Lambda(m, 2*m + 1), S.Integers))
+EmptySet
+```
+
+  Copy to clipboard          intersection(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L187-L191)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersection)
+
+Alias for [`intersect()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersect)
+
+    property is_closed[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_closed)
+
+A property method to check whether a set is closed.
+
+Explanation
+
+A set is closed if its complement is an open set. The closedness of a subset of the reals is determined with respect to R and its standard topology.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).is_closed
+True
+```
+
+  Copy to clipboard          is_disjoint(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L193-L211)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_disjoint)
+
+Returns True if `self` and `other` are disjoint.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 2).is_disjoint(Interval(1, 2))
+False
+&gt;&gt;&gt; Interval(0, 2).is_disjoint(Interval(3, 4))
+True
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1179](https://docs.sympy.org/dev/modules/sets.html#id1)]
+
+[https://en.wikipedia.org/wiki/Disjoint_sets](https://en.wikipedia.org/wiki/Disjoint_sets)
+
+      property is_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_open)
+
+Property method to check whether a set is open.
+
+Explanation
+
+A set is open if and only if it has an empty intersection with its boundary. In particular, a subset A of the reals is open if and only if each one of its points is contained in an open interval that is a subset of A.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S
+&gt;&gt;&gt; S.Reals.is_open
+True
+&gt;&gt;&gt; S.Rationals.is_open
+False
+```
+
+  Copy to clipboard          is_proper_subset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L476-L496)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_proper_subset)
+
+Returns True if `self` is a proper subset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_proper_subset(Interval(0, 1))
+True
+&gt;&gt;&gt; Interval(0, 1).is_proper_subset(Interval(0, 1))
+False
+```
+
+  Copy to clipboard          is_proper_superset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L524-L541)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_proper_superset)
+
+Returns True if `self` is a proper superset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).is_proper_superset(Interval(0, 0.5))
+True
+&gt;&gt;&gt; Interval(0, 1).is_proper_superset(Interval(0, 1))
+False
+```
+
+  Copy to clipboard          is_subset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L419-L459)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_subset)
+
+Returns True if `self` is a subset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_subset(Interval(0, 1))
+True
+&gt;&gt;&gt; Interval(0, 1).is_subset(Interval(0, 1, left_open=True))
+False
+```
+
+  Copy to clipboard          is_superset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L498-L515)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_superset)
+
+Returns True if `self` is a superset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_superset(Interval(0, 1))
+False
+&gt;&gt;&gt; Interval(0, 1).is_superset(Interval(0, 1, left_open=True))
+True
+```
+
+  Copy to clipboard          isdisjoint(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L213-L217)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.isdisjoint)
+
+Alias for [`is_disjoint()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_disjoint)
+
+    issubset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L470-L474)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.issubset)
+
+Alias for [`is_subset()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_subset)
+
+    issuperset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L518-L522)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.issuperset)
+
+Alias for [`is_superset()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_superset)
+
+    property kind[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.kind)
+
+The kind of a Set
+
+Explanation
+
+Any [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set) will have kind [`SetKind`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.SetKind) which is parametrised by the kind of the elements of the set. For example most sets are sets of numbers and will have kind `SetKind(NumberKind)`. If elements of sets are different in kind than their kind will `SetKind(UndefinedKind)`. See [`sympy.core.kind.Kind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.Kind) for an explanation of the kind system.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Matrix, FiniteSet, EmptySet, ProductSet, PowerSet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; FiniteSet(Matrix([1, 2])).kind
+SetKind(MatrixKind(NumberKind))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).kind
+SetKind(NumberKind)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; EmptySet.kind
+SetKind()
+```
+
+  Copy to clipboard
+
+A [`sympy.sets.powerset.PowerSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet) is a set of sets:
+
+```
+&gt;&gt;&gt; PowerSet({1, 2, 3}).kind
+SetKind(SetKind(NumberKind))
+```
+
+  Copy to clipboard
+
+A [`ProductSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet) represents the set of tuples of elements of other sets. Its kind is [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind) parametrised by the kinds of the elements of those sets:
+
+```
+&gt;&gt;&gt; p = ProductSet(FiniteSet(1, 2), FiniteSet(3, 4))
+&gt;&gt;&gt; list(p)
+[(1, 3), (2, 3), (1, 4), (2, 4)]
+&gt;&gt;&gt; p.kind
+SetKind(TupleKind(NumberKind, NumberKind))
+```
+
+  Copy to clipboard
+
+When all elements of the set do not have same kind, the kind will be returned as `SetKind(UndefinedKind)`:
+
+```
+&gt;&gt;&gt; FiniteSet(0, Matrix([1, 2])).kind
+SetKind(UndefinedKind)
+```
+
+  Copy to clipboard
+
+The kind of the elements of a set are given by the `element_kind` attribute of `SetKind`:
+
+```
+&gt;&gt;&gt; Interval(1, 2).kind.element_kind
+NumberKind
+```
+
+  Copy to clipboard
+
+See also
+
+[`NumberKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.NumberKind), [`sympy.core.kind.UndefinedKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.UndefinedKind), [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind), [`MatrixKind`](https://docs.sympy.org/dev/modules/matrices/kind.html#sympy.matrices.kind.MatrixKind), [`sympy.matrices.expressions.sets.MatrixSet`](https://docs.sympy.org/dev/modules/matrices/expressions.html#sympy.matrices.expressions.MatrixSet), [`sympy.sets.conditionset.ConditionSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.ConditionSet), [`Rationals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Rationals), [`Naturals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals), [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers), [`sympy.sets.fancysets.ImageSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet), [`sympy.sets.fancysets.Range`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range), [`sympy.sets.fancysets.ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`sympy.sets.powerset.PowerSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet), [`sympy.sets.sets.ProductSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet), [`sympy.sets.sets.Interval`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval), [`sympy.sets.sets.Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union), [`sympy.sets.sets.Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection), [`sympy.sets.sets.Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement), [`sympy.sets.sets.EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet), [`sympy.sets.sets.UniversalSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet), [`sympy.sets.sets.FiniteSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet), [`sympy.sets.sets.SymmetricDifference`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference), [`sympy.sets.sets.DisjointUnion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.DisjointUnion)
+
+     property measure[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.measure)
+
+The (Lebesgue) measure of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).measure
+1
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).measure
+2
+```
+
+  Copy to clipboard          powerset()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L547-L580)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.powerset)
+
+Find the Power set of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import EmptySet, FiniteSet, Interval
+```
+
+  Copy to clipboard
+
+A power set of an empty set:
+
+```
+&gt;&gt;&gt; A = EmptySet
+&gt;&gt;&gt; A.powerset()
+{EmptySet}
+```
+
+  Copy to clipboard
+
+A power set of a finite set:
+
+```
+&gt;&gt;&gt; A = FiniteSet(1, 2)
+&gt;&gt;&gt; a, b, c = FiniteSet(1), FiniteSet(2), FiniteSet(1, 2)
+&gt;&gt;&gt; A.powerset() == FiniteSet(a, b, c, EmptySet)
+True
+```
+
+  Copy to clipboard
+
+A power set of an interval:
+
+```
+&gt;&gt;&gt; Interval(1, 2).powerset()
+PowerSet(Interval(1, 2))
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1180](https://docs.sympy.org/dev/modules/sets.html#id2)]
+
+[https://en.wikipedia.org/wiki/Power_set](https://en.wikipedia.org/wiki/Power_set)
+
+      property sup[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.sup)
+
+The supremum of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).sup
+1
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).sup
+3
+```
+
+  Copy to clipboard          symmetric_difference(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L272-L294)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.symmetric_difference)
+
+Returns symmetric difference of `self` and `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; Interval(1, 3).symmetric_difference(S.Reals)
+Union(Interval.open(-oo, 1), Interval.open(3, oo))
+&gt;&gt;&gt; Interval(1, 10).symmetric_difference(S.Reals)
+Union(Interval.open(-oo, 1), Interval.open(10, oo))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; from sympy import S, EmptySet
+&gt;&gt;&gt; S.Reals.symmetric_difference(EmptySet)
+Reals
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1181](https://docs.sympy.org/dev/modules/sets.html#id3)]
+
+[https://en.wikipedia.org/wiki/Symmetric_difference](https://en.wikipedia.org/wiki/Symmetric_difference)
+
+      union(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L139-L164)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.union)
+
+Returns the union of `self` and `other`.
+
+Examples
+
+As a shortcut it is possible to use the `+` operator:
+
+```
+&gt;&gt;&gt; from sympy import Interval, FiniteSet
+&gt;&gt;&gt; Interval(0, 1).union(Interval(2, 3))
+Union(Interval(0, 1), Interval(2, 3))
+&gt;&gt;&gt; Interval(0, 1) + Interval(2, 3)
+Union(Interval(0, 1), Interval(2, 3))
+&gt;&gt;&gt; Interval(1, 2, True, True) + FiniteSet(2, 3)
+Union({3}, Interval.Lopen(1, 2))
+```
+
+  Copy to clipboard
+
+Similarly it is possible to use the `-` operator for set differences:
+
+```
+&gt;&gt;&gt; Interval(0, 2) - Interval(0, 1)
+Interval.Lopen(1, 2)
+&gt;&gt;&gt; Interval(1, 3) - FiniteSet(2)
+Union(Interval.Ropen(1, 2), Interval.Lopen(2, 3))
+```
+
+  Copy to clipboard           sympy.sets.sets.imageset(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2442-L2567)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.imageset)
+
+Return an image of the set under transformation `f`.
+
+Explanation
+
+If this function cannot compute the image, it returns an unevaluated ImageSet object.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, imageset, sin, Lambda
+&gt;&gt;&gt; from sympy.abc import x
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(x, 2*x, Interval(0, 2))
+Interval(0, 4)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(lambda x: 2*x, Interval(0, 2))
+Interval(0, 4)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(Lambda(x, sin(x)), Interval(-2, 1))
+ImageSet(Lambda(x, sin(x)), Interval(-2, 1))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(sin, Interval(-2, 1))
+ImageSet(Lambda(x, sin(x)), Interval(-2, 1))
+&gt;&gt;&gt; imageset(lambda y: x + y, Interval(-2, 1))
+ImageSet(Lambda(y, x + y), Interval(-2, 1))
+```
+
+  Copy to clipboard
+
+Expressions applied to the set of Integers are simplified to show as few negatives as possible and linear expressions are converted to a canonical form. If this is not desirable then the unevaluated ImageSet should be used.
+
+```
+&gt;&gt;&gt; imageset(x, -2*x + 5, S.Integers)
+ImageSet(Lambda(x, 2*x + 1), Integers)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.sets.fancysets.ImageSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet)
+
+## Elementary Sets[¶](https://docs.sympy.org/dev/modules/sets.html#elementary-sets)
+
+   class sympy.sets.sets.Interval(  *start*, *end*, *left_open=False*, *right_open=False*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1035-L1316)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval)
+
+Represents a real interval as a Set.
+
+  Usage:
+
+Returns an interval with end points `start` and `end`.
+
+For `left_open=True` (default `left_open` is `False`) the interval will be open on the left. Similarly, for `right_open=True` the interval will be open on the right.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Interval
+&gt;&gt;&gt; Interval(0, 1)
+Interval(0, 1)
+&gt;&gt;&gt; Interval.Ropen(0, 1)
+Interval.Ropen(0, 1)
+&gt;&gt;&gt; Interval.Ropen(0, 1)
+Interval.Ropen(0, 1)
+&gt;&gt;&gt; Interval.Lopen(0, 1)
+Interval.Lopen(0, 1)
+&gt;&gt;&gt; Interval.open(0, 1)
+Interval.open(0, 1)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; a = Symbol(&#39;a&#39;, real=True)
+&gt;&gt;&gt; Interval(0, a)
+Interval(0, a)
+```
+
+  Copy to clipboard
+
+Notes
+
+- Only real end points are supported
+- `Interval(a, b)` with 𝑎 &gt;𝑏 will return the empty set
+- Use the `evalf()` method to turn an Interval into an mpmath `mpi` interval instance
+
+References
+
+   [[R1182](https://docs.sympy.org/dev/modules/sets.html#id4)]
+
+[https://en.wikipedia.org/wiki/Interval_%28mathematics%29](https://en.wikipedia.org/wiki/Interval_%28mathematics%29)
+
+     classmethod Lopen(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1192-L1195)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.Lopen)
+
+Return an interval not including the left boundary.
+
+    classmethod Ropen(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1197-L1200)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.Ropen)
+
+Return an interval not including the right boundary.
+
+    as_relational(*x*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1264-L1275)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.as_relational)
+
+Rewrite an interval in terms of inequalities and logic operators.
+
+    property end[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.end)
+
+The right end point of the interval.
+
+This property takes the same value as the `sup` property.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).end
+1
+```
+
+  Copy to clipboard          property is_left_unbounded[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.is_left_unbounded)
+
+Return `True` if the left endpoint is negative infinity.
+
+    property is_right_unbounded[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.is_right_unbounded)
+
+Return `True` if the right endpoint is positive infinity.
+
+    property left_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.left_open)
+
+True if interval is left-open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1, left_open=True).left_open
+True
+&gt;&gt;&gt; Interval(0, 1, left_open=False).left_open
+False
+```
+
+  Copy to clipboard          classmethod open(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1187-L1190)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.open)
+
+Return an interval including neither boundary.
+
+    property right_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.right_open)
+
+True if interval is right-open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1, right_open=True).right_open
+True
+&gt;&gt;&gt; Interval(0, 1, right_open=False).right_open
+False
+```
+
+  Copy to clipboard          property start[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.start)
+
+The left end point of the interval.
+
+This property takes the same value as the `inf` property.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).start
+0
+```
+
+  Copy to clipboard           class sympy.sets.sets.FiniteSet(**args*, ***kwargs*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1974-L2211)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet)
+
+Represents a finite set of Sympy expressions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import FiniteSet, Symbol, Interval, Naturals0
+&gt;&gt;&gt; FiniteSet(1, 2, 3, 4)
+{1, 2, 3, 4}
+&gt;&gt;&gt; 3 in FiniteSet(1, 2, 3, 4)
+True
+&gt;&gt;&gt; FiniteSet(1, (1, 2), Symbol(&#39;x&#39;))
+{1, x, (1, 2)}
+&gt;&gt;&gt; FiniteSet(Interval(1, 2), Naturals0, {1, 2})
+FiniteSet({1, 2}, Interval(1, 2), Naturals0)
+&gt;&gt;&gt; members = [1, 2, 3, 4]
+&gt;&gt;&gt; f = FiniteSet(*members)
+&gt;&gt;&gt; f
+{1, 2, 3, 4}
+&gt;&gt;&gt; f - FiniteSet(2)
+{1, 3, 4}
+&gt;&gt;&gt; f + FiniteSet(2, 5)
+{1, 2, 3, 4, 5}
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1183](https://docs.sympy.org/dev/modules/sets.html#id5)]
+
+[https://en.wikipedia.org/wiki/Finite_set](https://en.wikipedia.org/wiki/Finite_set)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2147-L2149)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet.as_relational)
+
+Rewrite a FiniteSet in terms of equalities and logic operators.
+
+## Compound Sets[¶](https://docs.sympy.org/dev/modules/sets.html#compound-sets)
+
+   class sympy.sets.sets.Union(**args*, ***kwargs*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1319-L1506)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+Represents a union of sets as a [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set).
+
+  Parameters:
+
+**args** : iterable[Set]
+
+&gt;
+&gt; The input sets to be united.
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; If True (default from sympy.core.parameters.global_parameters.evaluate),
+&gt; the constructor simplifies the union.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Union, Interval
+&gt;&gt;&gt; Union(Interval(1, 2), Interval(3, 4))
+Union(Interval(1, 2), Interval(3, 4))
+```
+
+  Copy to clipboard
+
+The Union constructor will always try to merge overlapping intervals, if possible. For example:
+
+```
+&gt;&gt;&gt; Union(Interval(1, 2), Interval(2, 3))
+Interval(1, 3)
+```
+
+  Copy to clipboard
+
+See also
+
+[`Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection)
+
+References
+
+   [[R1184](https://docs.sympy.org/dev/modules/sets.html#id6)]
+
+[https://en.wikipedia.org/wiki/Union_%28set_theory%29](https://en.wikipedia.org/wiki/Union_%28set_theory%29)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1484-L1499)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union.as_relational)
+
+Rewrite a Union in terms of equalities and logic operators.
+
+     class sympy.sets.sets.Intersection(**args*, *evaluate=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1509-L1745)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection)
+
+Represents an intersection of sets as a [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set).
+
+  Parameters:
+
+**args** : iterable[Set]
+
+&gt;
+&gt; The input sets to be intersected.
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; If True (default from sympy.core.parameters.global_parameters.evaluate),
+&gt; the constructor simplifies the intersection.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Intersection, Interval
+&gt;&gt;&gt; Intersection(Interval(1, 3), Interval(2, 4))
+Interval(2, 3)
+```
+
+  Copy to clipboard
+
+We often use the .intersect method
+
+```
+&gt;&gt;&gt; Interval(1,3).intersect(Interval(2,4))
+Interval(2, 3)
+```
+
+  Copy to clipboard
+
+See also
+
+[`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1185](https://docs.sympy.org/dev/modules/sets.html#id7)]
+
+[https://en.wikipedia.org/wiki/Intersection_%28set_theory%29](https://en.wikipedia.org/wiki/Intersection_%28set_theory%29)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1743-L1745)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection.as_relational)
+
+Rewrite an Intersection in terms of equalities and logic operators
+
+     class sympy.sets.sets.ProductSet(**sets*, ***assumptions*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L854-L1032)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet)
+
+Represents a Cartesian Product of Sets.
+
+Explanation
+
+Returns a Cartesian product given several sets as either an iterable or individual arguments.
+
+Can use `*` operator on any sets for convenient shorthand.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, FiniteSet, ProductSet
+&gt;&gt;&gt; I = Interval(0, 5); S = FiniteSet(1, 2, 3)
+&gt;&gt;&gt; ProductSet(I, S)
+ProductSet(Interval(0, 5), {1, 2, 3})
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; (2, 2) in ProductSet(I, S)
+True
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1) * Interval(0, 1) # The unit square
+ProductSet(Interval(0, 1), Interval(0, 1))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; coin = FiniteSet(&#39;H&#39;, &#39;T&#39;)
+&gt;&gt;&gt; set(coin**2)
+{(H, H), (H, T), (T, H), (T, T)}
+```
+
+  Copy to clipboard
+
+The Cartesian product is not commutative or associative e.g.:
+
+```
+&gt;&gt;&gt; I*S == S*I
+False
+&gt;&gt;&gt; (I*I)*I == I*(I*I)
+False
+```
+
+  Copy to clipboard
+
+Notes
+
+- Passes most operations down to the argument sets
+
+References
+
+   [[R1186](https://docs.sympy.org/dev/modules/sets.html#id8)]
+
+[https://en.wikipedia.org/wiki/Cartesian_product](https://en.wikipedia.org/wiki/Cartesian_product)
+
+     property is_iterable[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet.is_iterable)
+
+A property method which tests whether a set is iterable or not. Returns True if set is iterable, otherwise returns False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import FiniteSet, Interval
+&gt;&gt;&gt; I = Interval(0, 1)
+&gt;&gt;&gt; A = FiniteSet(1, 2, 3, 4, 5)
+&gt;&gt;&gt; I.is_iterable
+False
+&gt;&gt;&gt; A.is_iterable
+True
+```
+
+  Copy to clipboard           class sympy.sets.sets.Complement(*a*, *b*, *evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1748-L1843)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement)
+
+Represents the set difference or relative complement of a set with another set.
+
+  𝐴−𝐵={𝑥∈𝐴∣𝑥∉𝐵}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Complement, FiniteSet
+&gt;&gt;&gt; Complement(FiniteSet(0, 1, 2), FiniteSet(1))
+{0, 2}
+```
+
+  Copy to clipboard
+
+See also
+
+[`Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection), [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1187](https://docs.sympy.org/dev/modules/sets.html#id9)]
+
+[https://mathworld.wolfram.com/ComplementSet.html](https://mathworld.wolfram.com/ComplementSet.html)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1810-L1818)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement.as_relational)
+
+Rewrite a complement in terms of equalities and logic operators
+
+    static reduce(*A*, *B*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1782-L1798)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement.reduce)
+
+Simplify a [`Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement).
+
+     class sympy.sets.sets.SymmetricDifference(*a*, *b*, *evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2218-L2283)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference)
+
+Represents the set of elements which are in either of the sets and not in their intersection.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import SymmetricDifference, FiniteSet
+&gt;&gt;&gt; SymmetricDifference(FiniteSet(1, 2, 3), FiniteSet(3, 4, 5))
+{1, 2, 4, 5}
+```
+
+  Copy to clipboard
+
+See also
+
+[`Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement), [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1188](https://docs.sympy.org/dev/modules/sets.html#id10)]
+
+[https://en.wikipedia.org/wiki/Symmetric_difference](https://en.wikipedia.org/wiki/Symmetric_difference)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2256-L2264)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference.as_relational)
+
+Rewrite a symmetric_difference in terms of equalities and logic operators
+
+     class sympy.sets.sets.DisjointUnion(**sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2287-L2439)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.DisjointUnion)
+
+Represents the disjoint union (also known as the external disjoint union) of a finite number of sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import DisjointUnion, FiniteSet, Interval, Union, Symbol
+&gt;&gt;&gt; A = FiniteSet(1, 2, 3)
+&gt;&gt;&gt; B = Interval(0, 5)
+&gt;&gt;&gt; DisjointUnion(A, B)
+DisjointUnion({1, 2, 3}, Interval(0, 5))
+&gt;&gt;&gt; DisjointUnion(A, B).rewrite(Union)
+Union(ProductSet({1, 2, 3}, {0}), ProductSet(Interval(0, 5), {1}))
+&gt;&gt;&gt; C = FiniteSet(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;), Symbol(&#39;z&#39;))
+&gt;&gt;&gt; DisjointUnion(C, C)
+DisjointUnion({x, y, z}, {x, y, z})
+&gt;&gt;&gt; DisjointUnion(C, C).rewrite(Union)
+ProductSet({x, y, z}, {0, 1})
+```
+
+  Copy to clipboard
+
+References
+
+[https://en.wikipedia.org/wiki/Disjoint_union](https://en.wikipedia.org/wiki/Disjoint_union)
+
+## Singleton Sets[¶](https://docs.sympy.org/dev/modules/sets.html#singleton-sets)
+
+   class sympy.sets.sets.EmptySet[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1846-L1917)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet)
+
+Represents the empty set. The empty set is available as a singleton as `S.EmptySet`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.EmptySet
+EmptySet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).intersect(S.EmptySet)
+EmptySet
+```
+
+  Copy to clipboard
+
+See also
+
+[`UniversalSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet)
+
+References
+
+   [[R1189](https://docs.sympy.org/dev/modules/sets.html#id11)]
+
+[https://en.wikipedia.org/wiki/Empty_set](https://en.wikipedia.org/wiki/Empty_set)
+
+      class sympy.sets.sets.UniversalSet[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1920-L1971)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet)
+
+Represents the set of all things. The universal set is available as a singleton as `S.UniversalSet`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.UniversalSet
+UniversalSet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).intersect(S.UniversalSet)
+Interval(1, 2)
+```
+
+  Copy to clipboard
+
+See also
+
+[`EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet)
+
+References
+
+   [[R1190](https://docs.sympy.org/dev/modules/sets.html#id12)]
+
+[https://en.wikipedia.org/wiki/Universal_set](https://en.wikipedia.org/wiki/Universal_set)
+
+## Special Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.fancysets)
+
+   class sympy.sets.fancysets.Rationals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L25-L71)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Rationals)
+
+Represents the rational numbers. This set is also available as the singleton `S.Rationals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S
+&gt;&gt;&gt; S.Half in S.Rationals
+True
+&gt;&gt;&gt; iterable = iter(S.Rationals)
+&gt;&gt;&gt; [next(iterable) for i in range(12)]
+[0, 1, -1, 1/2, 2, -1/2, -2, 1/3, 3, -1/3, -3, 2/3]
+```
+
+  Copy to clipboard          class sympy.sets.fancysets.Naturals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L74-L137)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals)
+
+Represents the natural numbers (or counting numbers) which are all positive integers starting from 1. This set is also available as the singleton `S.Naturals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, pprint
+&gt;&gt;&gt; 5 in S.Naturals
+True
+&gt;&gt;&gt; iterable = iter(S.Naturals)
+&gt;&gt;&gt; next(iterable)
+1
+&gt;&gt;&gt; next(iterable)
+2
+&gt;&gt;&gt; next(iterable)
+3
+&gt;&gt;&gt; pprint(S.Naturals.intersect(Interval(0, 10)))
+{1, 2, ..., 10}
+```
+
+  Copy to clipboard
+
+See also
+
+  [`Naturals0`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+non-negative integers (i.e. includes 0, too)
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+also includes negative integers
+
+       class sympy.sets.fancysets.Naturals0[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L140-L164)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+Represents the whole numbers which are all the non-negative integers, inclusive of zero.
+
+See also
+
+  [`Naturals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals)
+
+positive integers; does not include 0
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+also includes the negative integers
+
+       class sympy.sets.fancysets.Integers[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L167-L237)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+Represents all integers: positive, negative and zero. This set is also available as the singleton `S.Integers`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, pprint
+&gt;&gt;&gt; 5 in S.Naturals
+True
+&gt;&gt;&gt; iterable = iter(S.Integers)
+&gt;&gt;&gt; next(iterable)
+0
+&gt;&gt;&gt; next(iterable)
+1
+&gt;&gt;&gt; next(iterable)
+-1
+&gt;&gt;&gt; next(iterable)
+2
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; pprint(S.Integers.intersect(Interval(-4, 4)))
+{-4, -3, ..., 4}
+```
+
+  Copy to clipboard
+
+See also
+
+  [`Naturals0`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+non-negative integers
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+positive and negative integers and zero
+
+       class sympy.sets.fancysets.Reals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L240-L289)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Reals)
+
+Represents all real numbers from negative infinity to positive infinity, including all integer, rational and irrational numbers. This set is also available as the singleton `S.Reals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Rational, pi, I
+&gt;&gt;&gt; 5 in S.Reals
+True
+&gt;&gt;&gt; Rational(-1, 2) in S.Reals
+True
+&gt;&gt;&gt; pi in S.Reals
+True
+&gt;&gt;&gt; 3*I in S.Reals
+False
+&gt;&gt;&gt; S.Reals.contains(pi)
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+     class sympy.sets.fancysets.Complexes[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1494-L1524)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+The `Set` of all complex numbers
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, I
+&gt;&gt;&gt; S.Complexes
+Complexes
+&gt;&gt;&gt; 1 + I in S.Complexes
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`Reals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Reals), [`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+     class sympy.sets.fancysets.ImageSet(*flambda*, **sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L292-L517)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet)
+
+Image of a set under a mathematical function. The transformation must be given as a Lambda function which has as many arguments as the elements of the set upon which it operates, e.g. 1 argument when acting on the set of integers or 2 arguments when acting on a complex region.
+
+This function is not normally called directly, but is called from `imageset`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, S, pi, Dummy, Lambda
+&gt;&gt;&gt; from sympy import FiniteSet, ImageSet, Interval
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;)
+&gt;&gt;&gt; N = S.Naturals
+&gt;&gt;&gt; squares = ImageSet(Lambda(x, x**2), N) # {x**2 for x in N}
+&gt;&gt;&gt; 4 in squares
+True
+&gt;&gt;&gt; 5 in squares
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; FiniteSet(0, 1, 2, 3, 4, 5, 6, 7, 9, 10).intersect(squares)
+{1, 4, 9}
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; square_iterable = iter(squares)
+&gt;&gt;&gt; for i in range(4):
+...     next(square_iterable)
+1
+4
+9
+16
+```
+
+  Copy to clipboard
+
+If you want to get value for 𝑥 = 2, 1/2 etc. (Please check whether the 𝑥 value is in `base_set` or not before passing it as args)
+
+```
+&gt;&gt;&gt; squares.lamda(2)
+4
+&gt;&gt;&gt; squares.lamda(S(1)/2)
+1/4
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; n = Dummy(&#39;n&#39;)
+&gt;&gt;&gt; solutions = ImageSet(Lambda(n, n*pi), S.Integers) # solutions of sin(x) = 0
+&gt;&gt;&gt; dom = Interval(-1, 1)
+&gt;&gt;&gt; dom.intersect(solutions)
+{0}
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.sets.sets.imageset`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.imageset)
+
+     class sympy.sets.fancysets.Range(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L520-L1021)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range)
+
+Represents a range of integers. Can be called as `Range(stop)`, `Range(start, stop)`, or `Range(start, stop, step)`; when `step` is not given it defaults to 1.
+
+`Range(stop)` is the same as `Range(0, stop, 1)` and the stop value (just as for Python ranges) is not included in the Range values.
+
+```
+&gt;&gt;&gt; from sympy import Range
+&gt;&gt;&gt; list(Range(3))
+[0, 1, 2]
+```
+
+  Copy to clipboard
+
+The step can also be negative:
+
+```
+&gt;&gt;&gt; list(Range(10, 0, -2))
+[10, 8, 6, 4, 2]
+```
+
+  Copy to clipboard
+
+The stop value is made canonical so equivalent ranges always have the same args:
+
+```
+&gt;&gt;&gt; Range(0, 10, 3)
+Range(0, 12, 3)
+```
+
+  Copy to clipboard
+
+Infinite ranges are allowed. `oo` and `-oo` are never included in the set (`Range` is always a subset of `Integers`). If the starting point is infinite, then the final value is `stop - step`. To iterate such a range, it needs to be reversed:
+
+```
+&gt;&gt;&gt; from sympy import oo
+&gt;&gt;&gt; r = Range(-oo, 1)
+&gt;&gt;&gt; r[-1]
+0
+&gt;&gt;&gt; next(iter(r))
+Traceback (most recent call last):
+...
+TypeError: Cannot iterate over Range with infinite start
+&gt;&gt;&gt; next(iter(r.reversed))
+0
+```
+
+  Copy to clipboard
+
+Although `Range` is a `Set` (and supports the normal set operations) it maintains the order of the elements and can be used in contexts where `range` would be used.
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Range(0, 10, 2).intersect(Interval(3, 7))
+Range(4, 8, 2)
+&gt;&gt;&gt; list(_)
+[4, 6]
+```
+
+  Copy to clipboard
+
+Although slicing of a Range will always return a Range – possibly empty – an empty set will be returned from any intersection that is empty:
+
+```
+&gt;&gt;&gt; Range(3)[:0]
+Range(0, 0, 1)
+&gt;&gt;&gt; Range(3).intersect(Interval(4, oo))
+EmptySet
+&gt;&gt;&gt; Range(3).intersect(Range(4, oo))
+EmptySet
+```
+
+  Copy to clipboard
+
+Range will accept symbolic arguments but has very limited support for doing anything other than displaying the Range:
+
+```
+&gt;&gt;&gt; from sympy import Symbol, pprint
+&gt;&gt;&gt; from sympy.abc import i, j, k
+&gt;&gt;&gt; Range(i, j, k).start
+i
+&gt;&gt;&gt; Range(i, j, k).inf
+Traceback (most recent call last):
+...
+ValueError: invalid method for symbolic range
+```
+
+  Copy to clipboard
+
+Better success will be had when using integer symbols:
+
+```
+&gt;&gt;&gt; n = Symbol(&#39;n&#39;, integer=True)
+&gt;&gt;&gt; r = Range(n, n + 20, 3)
+&gt;&gt;&gt; r.inf
+n
+&gt;&gt;&gt; pprint(r)
+{n, n + 3, ..., n + 18}
+```
+
+  Copy to clipboard         as_relational(*x*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L991-L1021)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range.as_relational)
+
+Rewrite a Range in terms of equalities and logic operators.
+
+    property reversed[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range.reversed)
+
+Return an equivalent Range in the opposite order.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Range
+&gt;&gt;&gt; Range(10).reversed
+Range(9, -1, -1)
+```
+
+  Copy to clipboard           class sympy.sets.fancysets.ComplexRegion(*sets*, *polar=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1111-L1384)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+Represents the Set of all Complex Numbers. It can represent a region of Complex Plane in both the standard forms Polar and Rectangular coordinates.
+
+- Polar Form Input is in the form of the ProductSet or Union of ProductSets of the intervals of `r` and `theta`, and use the flag `polar=True`.   𝑍={𝑧∈ℂ∣𝑧=𝑟×(cos⁡(𝜃)+𝐼⁢sin⁡(𝜃)),𝑟∈[𝚛],𝜃∈[𝚝𝚑𝚎𝚝𝚊]}
+- Rectangular Form Input is in the form of the ProductSet or Union of ProductSets of interval of x and y, the real and imaginary parts of the Complex numbers in a plane. Default input type is in rectangular form.
+   𝑍={𝑧∈ℂ∣𝑧=𝑥+𝐼⁢𝑦,𝑥∈[re⁡(𝑧)],𝑦∈[im⁡(𝑧)]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, Interval, S, I, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 6)
+&gt;&gt;&gt; c1 = ComplexRegion(a*b)  # Rectangular Form
+&gt;&gt;&gt; c1
+CartesianComplexRegion(ProductSet(Interval(2, 3), Interval(4, 6)))
+```
+
+  Copy to clipboard
+- c1 represents the rectangular region in complex plane surrounded by the coordinates (2, 4), (3, 4), (3, 6) and (2, 6), of the four vertices.
+
+```
+&gt;&gt;&gt; c = Interval(1, 8)
+&gt;&gt;&gt; c2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; c2
+CartesianComplexRegion(Union(ProductSet(Interval(2, 3), Interval(4, 6)), ProductSet(Interval(4, 6), Interval(1, 8))))
+```
+
+  Copy to clipboard
+- c2 represents the Union of two rectangular regions in complex plane. One of them surrounded by the coordinates of c1 and other surrounded by the coordinates (4, 1), (6, 1), (6, 8) and (4, 8).
+
+```
+&gt;&gt;&gt; 2.5 + 4.5*I in c1
+True
+&gt;&gt;&gt; 2.5 + 6.5*I in c1
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; r = Interval(0, 1)
+&gt;&gt;&gt; theta = Interval(0, 2*S.Pi)
+&gt;&gt;&gt; c2 = ComplexRegion(r*theta, polar=True)  # Polar Form
+&gt;&gt;&gt; c2  # unit Disk
+PolarComplexRegion(ProductSet(Interval(0, 1), Interval.Ropen(0, 2*pi)))
+```
+
+  Copy to clipboard
+- c2 represents the region in complex plane inside the Unit Disk centered at the origin.
+
+```
+&gt;&gt;&gt; 0.5 + 0.5*I in c2
+True
+&gt;&gt;&gt; 1 + 2*I in c2
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; unit_disk = ComplexRegion(Interval(0, 1)*Interval(0, 2*S.Pi), polar=True)
+&gt;&gt;&gt; upper_half_unit_disk = ComplexRegion(Interval(0, 1)*Interval(0, S.Pi), polar=True)
+&gt;&gt;&gt; intersection = unit_disk.intersect(upper_half_unit_disk)
+&gt;&gt;&gt; intersection
+PolarComplexRegion(ProductSet(Interval(0, 1), Interval(0, pi)))
+&gt;&gt;&gt; intersection == upper_half_unit_disk
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`CartesianComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion), [`PolarComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+    property a_interval[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.a_interval)
+
+Return the union of intervals of 𝑥 when, self is in rectangular form, or the union of intervals of 𝑟 when self is in polar form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.a_interval
+Interval(2, 3)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.a_interval
+Union(Interval(2, 3), Interval(4, 5))
+```
+
+  Copy to clipboard          property b_interval[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.b_interval)
+
+Return the union of intervals of 𝑦 when, self is in rectangular form, or the union of intervals of 𝑡⁢ℎ⁡𝑒⁢𝑡⁢𝑎 when self is in polar form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.b_interval
+Interval(4, 5)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.b_interval
+Interval(1, 7)
+```
+
+  Copy to clipboard          classmethod from_real(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1330-L1347)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.from_real)
+
+Converts given subset of real numbers to a complex region.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion
+&gt;&gt;&gt; unit = Interval(0,1)
+&gt;&gt;&gt; ComplexRegion.from_real(unit)
+CartesianComplexRegion(ProductSet(Interval(0, 1), {0}))
+```
+
+  Copy to clipboard          property psets[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.psets)
+
+Return a tuple of sets (ProductSets) input of the self.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.psets
+(ProductSet(Interval(2, 3), Interval(4, 5)),)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.psets
+(ProductSet(Interval(2, 3), Interval(4, 5)), ProductSet(Interval(4, 5), Interval(1, 7)))
+```
+
+  Copy to clipboard          property sets[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.sets)
+
+Return raw input sets to the self.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.sets
+ProductSet(Interval(2, 3), Interval(4, 5))
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.sets
+Union(ProductSet(Interval(2, 3), Interval(4, 5)), ProductSet(Interval(4, 5), Interval(1, 7)))
+```
+
+  Copy to clipboard           class sympy.sets.fancysets.CartesianComplexRegion(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1387-L1438)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion)
+
+Set representing a square region of the complex plane.
+
+   𝑍={𝑧∈ℂ∣𝑧=𝑥+𝐼⁢𝑦,𝑥∈[re⁡(𝑧)],𝑦∈[im⁡(𝑧)]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, I, Interval
+&gt;&gt;&gt; region = ComplexRegion(Interval(1, 3) * Interval(4, 6))
+&gt;&gt;&gt; 2 + 5*I in region
+True
+&gt;&gt;&gt; 5*I in region
+False
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`PolarComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+     class sympy.sets.fancysets.PolarComplexRegion(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1441-L1491)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion)
+
+Set representing a polar region of the complex plane.
+
+   𝑍={𝑧∈ℂ∣𝑧=𝑟×(cos⁡(𝜃)+𝐼⁢sin⁡(𝜃)),𝑟∈[𝚛],𝜃∈[𝚝𝚑𝚎𝚝𝚊]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, Interval, oo, pi, I
+&gt;&gt;&gt; rset = Interval(0, oo)
+&gt;&gt;&gt; thetaset = Interval(0, pi)
+&gt;&gt;&gt; upper_half_plane = ComplexRegion(rset * thetaset, polar=True)
+&gt;&gt;&gt; 1 + I in upper_half_plane
+True
+&gt;&gt;&gt; 1 - I in upper_half_plane
+False
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`CartesianComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+     sympy.sets.fancysets.normalize_theta_set(*theta*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1026-L1108)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.normalize_theta_set)
+
+Normalize a Real Set 𝑡⁢ℎ⁡𝑒⁢𝑡⁢𝑎 in the interval [0,2⁢𝜋). It returns a normalized value of theta in the Set. For Interval, a maximum of one cycle [0,2⁢𝜋], is returned i.e. for theta equal to [0,10⁢𝜋], returned normalized value would be [0,2⁢𝜋). As of now intervals with end points as non-multiples of `pi` is not supported.
+
+  Raises:
+
+**NotImplementedError**
+
+&gt;
+&gt; The algorithms for Normalizing theta Set are not yet
+&gt; implemented.
+&gt;
+
+**ValueError**
+
+&gt;
+&gt; The input is not valid, i.e. the input is not a real set.
+&gt;
+
+**RuntimeError**
+
+&gt;
+&gt; It is a bug, please report to the github issue tracker.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.sets.fancysets import normalize_theta_set
+&gt;&gt;&gt; from sympy import Interval, FiniteSet, pi
+&gt;&gt;&gt; normalize_theta_set(Interval(9*pi/2, 5*pi))
+Interval(pi/2, pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-3*pi/2, pi/2))
+Interval.Ropen(0, 2*pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-pi/2, pi/2))
+Union(Interval(0, pi/2), Interval.Ropen(3*pi/2, 2*pi))
+&gt;&gt;&gt; normalize_theta_set(Interval(-4*pi, 3*pi))
+Interval.Ropen(0, 2*pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-3*pi/2, -pi/2))
+Interval(pi/2, 3*pi/2)
+&gt;&gt;&gt; normalize_theta_set(FiniteSet(0, pi, 3*pi))
+{0, pi}
+```
+
+  Copy to clipboard
+
+## Power sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.powerset)
+
+   class sympy.sets.powerset.PowerSet(*arg*, *evaluate=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/powerset.py#L12-L128)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet)
+
+A symbolic object representing a power set.
+
+  Parameters:
+
+**arg** : Set
+
+&gt;
+&gt; The set to take power of.
+&gt;
+
+**evaluate** : bool
+
+&gt;
+&gt; The flag to control evaluation.
+&gt; If the evaluation is disabled for finite sets, it can take
+&gt; advantage of using subset test as a membership test.
+&gt;
+
+Notes
+
+Power set P⁡(𝑆) is defined as a set containing all the subsets of 𝑆.
+
+If the set 𝑆 is a finite set, its power set would have 2|𝑆| elements, where |𝑆| denotes the cardinality of 𝑆.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import PowerSet, S, FiniteSet
+```
+
+  Copy to clipboard
+
+A power set of a finite set:
+
+```
+&gt;&gt;&gt; PowerSet(FiniteSet(1, 2, 3))
+PowerSet({1, 2, 3})
+```
+
+  Copy to clipboard
+
+A power set of an empty set:
+
+```
+&gt;&gt;&gt; PowerSet(S.EmptySet)
+PowerSet(EmptySet)
+&gt;&gt;&gt; PowerSet(PowerSet(S.EmptySet))
+PowerSet(PowerSet(EmptySet))
+```
+
+  Copy to clipboard
+
+A power set of an infinite set:
+
+```
+&gt;&gt;&gt; PowerSet(S.Reals)
+PowerSet(Reals)
+```
+
+  Copy to clipboard
+
+Evaluating the power set of a finite set to its explicit form:
+
+```
+&gt;&gt;&gt; PowerSet(FiniteSet(1, 2, 3)).rewrite(FiniteSet)
+FiniteSet(EmptySet, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3})
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1191](https://docs.sympy.org/dev/modules/sets.html#id13)]
+
+[https://en.wikipedia.org/wiki/Power_set](https://en.wikipedia.org/wiki/Power_set)
+
+   [[R1192](https://docs.sympy.org/dev/modules/sets.html#id14)]
+
+[https://en.wikipedia.org/wiki/Axiom_of_power_set](https://en.wikipedia.org/wiki/Axiom_of_power_set)
+
+## Condition Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.conditionset)
+
+   class sympy.sets.conditionset.ConditionSet(  *sym*, *condition*, *base_set=UniversalSet*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/conditionset.py#L20-L247)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.ConditionSet)
+
+Set of elements which satisfies a given condition.
+
+   {𝑥∣condition⁡(𝑥)=𝚃𝚛𝚞𝚎,𝑥∈𝑆}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, S, ConditionSet, pi, Eq, sin, Interval
+&gt;&gt;&gt; from sympy.abc import x, y, z
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; sin_sols = ConditionSet(x, Eq(sin(x), 0), Interval(0, 2*pi))
+&gt;&gt;&gt; 2*pi in sin_sols
+True
+&gt;&gt;&gt; pi/2 in sin_sols
+False
+&gt;&gt;&gt; 3*pi in sin_sols
+False
+&gt;&gt;&gt; 5 in ConditionSet(x, x**2 &gt; 4, S.Reals)
+True
+```
+
+  Copy to clipboard
+
+If the value is not in the base set, the result is false:
+
+```
+&gt;&gt;&gt; 5 in ConditionSet(x, x**2 &gt; 4, Interval(2, 4))
+False
+```
+
+  Copy to clipboard
+
+Notes
+
+Symbols with assumptions should be avoided or else the condition may evaluate without consideration of the set:
+
+```
+&gt;&gt;&gt; n = Symbol(&#39;n&#39;, negative=True)
+&gt;&gt;&gt; cond = (n &gt; 0); cond
+False
+&gt;&gt;&gt; ConditionSet(n, cond, S.Integers)
+EmptySet
+```
+
+  Copy to clipboard
+
+Only free symbols can be changed by using 𝑠⁢𝑢⁢𝑏⁢𝑠:
+
+```
+&gt;&gt;&gt; c = ConditionSet(x, x &lt; 1, {x, z})
+&gt;&gt;&gt; c.subs(x, y)
+ConditionSet(x, x &lt; 1, {y, z})
+```
+
+  Copy to clipboard
+
+To check if `pi` is in `c` use:
+
+```
+&gt;&gt;&gt; pi in c
+False
+```
+
+  Copy to clipboard
+
+If no base set is specified, the universal set is implied:
+
+```
+&gt;&gt;&gt; ConditionSet(x, x &lt; 1).base_set
+UniversalSet
+```
+
+  Copy to clipboard
+
+Only symbols or symbol-like expressions can be used:
+
+```
+&gt;&gt;&gt; ConditionSet(x + 1, x + 1 &lt; 1, S.Integers)
+Traceback (most recent call last):
+...
+ValueError: non-symbol dummy not recognized in condition
+```
+
+  Copy to clipboard
+
+When the base set is a ConditionSet, the symbols will be unified if possible with preference for the outermost symbols:
+
+```
+&gt;&gt;&gt; ConditionSet(x, x &lt; y, ConditionSet(z, z + y &lt; 2, S.Integers))
+ConditionSet(x, (x &lt; y) &amp; (x + y &lt; 2), Integers)
+```
+
+  Copy to clipboard          class sympy.sets.conditionset.Contains(  *x: [Basic](https://docs.sympy.org/dev/modules/core.html#sympy.core.basic.Basic)*, *s: [Set](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)*, *evaluate: bool | None = None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/contains.py#L15-L71)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.Contains)
+
+Asserts that x is an element of the set S.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Integer, S, Contains
+&gt;&gt;&gt; Contains(Integer(2), S.Integers)
+True
+&gt;&gt;&gt; Contains(Integer(-2), S.Naturals)
+False
+&gt;&gt;&gt; i = Symbol(&#39;i&#39;, integer=True)
+&gt;&gt;&gt; Contains(i, S.Naturals)
+Contains(i, Naturals)
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1193](https://docs.sympy.org/dev/modules/sets.html#id15)]
+
+[https://en.wikipedia.org/wiki/Element_%28mathematics%29](https://en.wikipedia.org/wiki/Element_%28mathematics%29)
+
+## SetKind[¶](https://docs.sympy.org/dev/modules/sets.html#setkind)
+
+   class sympy.sets.conditionset.SetKind(*element_kind=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2785-L2830)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.SetKind)
+
+SetKind is kind for all Sets
+
+Every instance of Set will have kind `SetKind` parametrised by the kind of the elements of the `Set`. The kind of the elements might be `NumberKind`, or `TupleKind` or something else. When not all elements have the same kind then the kind of the elements will be given as `UndefinedKind`.
+
+  Parameters:
+
+**element_kind: Kind (optional)**
+
+&gt;
+&gt; The kind of the elements of the set. In a well defined set all elements
+&gt; will have the same kind. Otherwise the kind should
+&gt; sympy.core.kind.UndefinedKind. The element_kind argument is optional but
+&gt; should only be omitted in the case of EmptySet whose kind is simply
+&gt; SetKind()
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(1, 2).kind
+SetKind(NumberKind)
+&gt;&gt;&gt; Interval(1,2).kind.element_kind
+NumberKind
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.core.kind.NumberKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.NumberKind), [`sympy.matrices.kind.MatrixKind`](https://docs.sympy.org/dev/modules/matrices/kind.html#sympy.matrices.kind.MatrixKind), [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind)
+
+## Iteration over sets[¶](https://docs.sympy.org/dev/modules/sets.html#iteration-over-sets)
+
+For set unions, {𝑎,𝑏} ∪{𝑥,𝑦} can be treated as {𝑎,𝑏,𝑥,𝑦} for iteration regardless of the distinctiveness of the elements, however, for set intersections, assuming that {𝑎,𝑏} ∩{𝑥,𝑦} is ∅ or {𝑎,𝑏} would not always be valid, since some of 𝑎, 𝑏, 𝑥 or 𝑦 may or may not be the elements of the intersection.
+
+Iterating over the elements of a set involving intersection, complement, or symmetric difference yields (possibly duplicate) elements of the set provided that all elements are known to be the elements of the set. If any element cannot be determined to be a member of a set then the iteration gives `TypeError`. This happens in the same cases where `x in y` would give an error.
+
+There are some reasons to implement like this, even if it breaks the consistency with how the python set iterator works. We keep in mind that sympy set comprehension like `FiniteSet(*s)` from a existing sympy sets could be a common usage. And this approach would make `FiniteSet(*s)` to be consistent with any symbolic set processing methods like `FiniteSet(*simplify(s))`.
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Sets[¶](https://docs.sympy.org/dev/modules/sets.html#sets)</h3><pre># Sets[¶](https://docs.sympy.org/dev/modules/sets.html#sets)
+</pre></article><article id="section-0002"><h3>Basic Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.sets)</h3><pre># Basic Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.sets)
+
+class sympy.sets.sets.Set(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L47-L851)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)
+
+The base class for any kind of set.
+
+Explanation
+
+This is not meant to be used directly as a container of items. It does not behave like the builtin `set`; see [`FiniteSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet) for that.
+
+Real intervals are represented by the [`Interval`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval) class and unions of sets by the [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union) class. The empty set is represented by the [`EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet) class and available as a singleton as `S.EmptySet`.
+
+   as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L849-L851)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.as_relational)
+
+Rewrites the set as a relational.
+
+    property boundary[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.boundary)
+
+The boundary or frontier of a set.
+
+Explanation
+
+A point x is on the boundary of a set S if
+
+1. x is in the closure of S. I.e. Every neighborhood of x contains a point in S.
+2. x is not in the interior of S. I.e. There does not exist an open set centered on x contained entirely within S.
+
+There are the points on the outer rim of S. If S is open then these points need not actually be contained within S.
+
+For example, the boundary of an interval is its start and end points. This is true regardless of whether or not the interval is open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).boundary
+{0, 1}
+&gt;&gt;&gt; Interval(0, 1, True, False).boundary
+{0, 1}
+```
+
+  Copy to clipboard          property closure[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.closure)
+
+Property method which returns the closure of a set. The closure is defined as the union of the set itself and its boundary.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.Reals.closure
+Reals
+&gt;&gt;&gt; Interval(0, 1).closure
+Interval(0, 1)
+```
+
+  Copy to clipboard          complement(*universe*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L219-L234)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.complement)
+
+The complement of ‘self’ w.r.t the given universe.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; Interval(0, 1).complement(S.Reals)
+Union(Interval.open(-oo, 0), Interval.open(1, oo))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1).complement(S.UniversalSet)
+Complement(UniversalSet, Interval(0, 1))
+```
+
+  Copy to clipboard          contains(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L341-L387)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.contains)
+
+Returns a SymPy value indicating whether `other` is contained in `self`: `true` if it is, `false` if it is not, else an unevaluated `Contains` expression (or, as in the case of ConditionSet and a union of FiniteSet/Intervals, an expression indicating the conditions for containment).
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; from sympy.abc import x
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1).contains(0.5)
+True
+```
+
+  Copy to clipboard
+
+As a shortcut it is possible to use the `in` operator, but that will raise an error unless an affirmative true or false is not obtained.
+
+```
+&gt;&gt;&gt; Interval(0, 1).contains(x)
+(0 &lt;= x) &amp; (x &lt;= 1)
+&gt;&gt;&gt; x in Interval(0, 1)
+Traceback (most recent call last):
+...
+TypeError: did not evaluate to a bool: None
+```
+
+  Copy to clipboard
+
+The result of ‘in’ is a bool, not a SymPy value
+
+```
+&gt;&gt;&gt; 1 in Interval(0, 2)
+True
+&gt;&gt;&gt; _ is S.true
+False
+```
+
+  Copy to clipboard          property inf[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.inf)
+
+The infimum of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).inf
+0
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).inf
+0
+```
+
+  Copy to clipboard          property interior[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.interior)
+
+Property method which returns the interior of a set. The interior of a set S consists all points of S that do not belong to the boundary of S.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).interior
+Interval.open(0, 1)
+&gt;&gt;&gt; Interval(0, 1).boundary.interior
+EmptySet
+```
+
+  Copy to clipboard          intersect(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L166-L185)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersect)
+
+Returns the intersection of ‘self’ and ‘other’.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 3).intersect(Interval(1, 2))
+Interval(1, 2)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; from sympy import imageset, Lambda, symbols, S
+&gt;&gt;&gt; n, m = symbols(&#39;n m&#39;)
+&gt;&gt;&gt; a = imageset(Lambda(n, 2*n), S.Integers)
+&gt;&gt;&gt; a.intersect(imageset(Lambda(m, 2*m + 1), S.Integers))
+EmptySet
+```
+
+  Copy to clipboard          intersection(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L187-L191)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersection)
+
+Alias for [`intersect()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.intersect)
+
+    property is_closed[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_closed)
+
+A property method to check whether a set is closed.
+
+Explanation
+
+A set is closed if its complement is an open set. The closedness of a subset of the reals is determined with respect to R and its standard topology.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).is_closed
+True
+```
+
+  Copy to clipboard          is_disjoint(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L193-L211)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_disjoint)
+
+Returns True if `self` and `other` are disjoint.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 2).is_disjoint(Interval(1, 2))
+False
+&gt;&gt;&gt; Interval(0, 2).is_disjoint(Interval(3, 4))
+True
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1179](https://docs.sympy.org/dev/modules/sets.html#id1)]
+
+[https://en.wikipedia.org/wiki/Disjoint_sets](https://en.wikipedia.org/wiki/Disjoint_sets)
+
+      property is_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_open)
+
+Property method to check whether a set is open.
+
+Explanation
+
+A set is open if and only if it has an empty intersection with its boundary. In particular, a subset A of the reals is open if and only if each one of its points is contained in an open interval that is a subset of A.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S
+&gt;&gt;&gt; S.Reals.is_open
+True
+&gt;&gt;&gt; S.Rationals.is_open
+False
+```
+
+  Copy to clipboard          is_proper_subset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L476-L496)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_proper_subset)
+
+Returns True if `self` is a proper subset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_proper_subset(Interval(0, 1))
+True
+&gt;&gt;&gt; Interval(0, 1).is_proper_subset(Interval(0, 1))
+False
+```
+
+  Copy to clipboard          is_proper_superset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L524-L541)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_proper_superset)
+
+Returns True if `self` is a proper superset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).is_proper_superset(Interval(0, 0.5))
+True
+&gt;&gt;&gt; Interval(0, 1).is_proper_superset(Interval(0, 1))
+False
+```
+
+  Copy to clipboard          is_subset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L419-L459)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_subset)
+
+Returns True if `self` is a subset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_subset(Interval(0, 1))
+True
+&gt;&gt;&gt; Interval(0, 1).is_subset(Interval(0, 1, left_open=True))
+False
+```
+
+  Copy to clipboard          is_superset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L498-L515)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_superset)
+
+Returns True if `self` is a superset of `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 0.5).is_superset(Interval(0, 1))
+False
+&gt;&gt;&gt; Interval(0, 1).is_superset(Interval(0, 1, left_open=True))
+True
+```
+
+  Copy to clipboard          isdisjoint(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L213-L217)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.isdisjoint)
+
+Alias for [`is_disjoint()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_disjoint)
+
+    issubset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L470-L474)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.issubset)
+
+Alias for [`is_subset()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_subset)
+
+    issuperset(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L518-L522)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.issuperset)
+
+Alias for [`is_superset()`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.is_superset)
+
+    property kind[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.kind)
+
+The kind of a Set
+
+Explanation
+
+Any [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set) will have kind [`SetKind`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.SetKind) which is parametrised by the kind of the elements of the set. For example most sets are sets of numbers and will have kind `SetKind(NumberKind)`. If elements of sets are different in kind than their kind will `SetKind(UndefinedKind)`. See [`sympy.core.kind.Kind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.Kind) for an explanation of the kind system.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Matrix, FiniteSet, EmptySet, ProductSet, PowerSet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; FiniteSet(Matrix([1, 2])).kind
+SetKind(MatrixKind(NumberKind))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).kind
+SetKind(NumberKind)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; EmptySet.kind
+SetKind()
+```
+
+  Copy to clipboard
+
+A [`sympy.sets.powerset.PowerSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet) is a set of sets:
+
+```
+&gt;&gt;&gt; PowerSet({1, 2, 3}).kind
+SetKind(SetKind(NumberKind))
+```
+
+  Copy to clipboard
+
+A [`ProductSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet) represents the set of tuples of elements of other sets. Its kind is [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind) parametrised by the kinds of the elements of those sets:
+
+```
+&gt;&gt;&gt; p = ProductSet(FiniteSet(1, 2), FiniteSet(3, 4))
+&gt;&gt;&gt; list(p)
+[(1, 3), (2, 3), (1, 4), (2, 4)]
+&gt;&gt;&gt; p.kind
+SetKind(TupleKind(NumberKind, NumberKind))
+```
+
+  Copy to clipboard
+
+When all elements of the set do not have same kind, the kind will be returned as `SetKind(UndefinedKind)`:
+
+```
+&gt;&gt;&gt; FiniteSet(0, Matrix([1, 2])).kind
+SetKind(UndefinedKind)
+```
+
+  Copy to clipboard
+
+The kind of the elements of a set are given by the `element_kind` attribute of `SetKind`:
+
+```
+&gt;&gt;&gt; Interval(1, 2).kind.element_kind
+NumberKind
+```
+
+  Copy to clipboard
+
+See also
+
+[`NumberKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.NumberKind), [`sympy.core.kind.UndefinedKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.UndefinedKind), [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind), [`MatrixKind`](https://docs.sympy.org/dev/modules/matrices/kind.html#sympy.matrices.kind.MatrixKind), [`sympy.matrices.expressions.sets.MatrixSet`](https://docs.sympy.org/dev/modules/matrices/expressions.html#sympy.matrices.expressions.MatrixSet), [`sympy.sets.conditionset.ConditionSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.ConditionSet), [`Rationals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Rationals), [`Naturals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals), [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers), [`sympy.sets.fancysets.ImageSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet), [`sympy.sets.fancysets.Range`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range), [`sympy.sets.fancysets.ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`sympy.sets.powerset.PowerSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet), [`sympy.sets.sets.ProductSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet), [`sympy.sets.sets.Interval`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval), [`sympy.sets.sets.Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union), [`sympy.sets.sets.Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection), [`sympy.sets.sets.Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement), [`sympy.sets.sets.EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet), [`sympy.sets.sets.UniversalSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet), [`sympy.sets.sets.FiniteSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet), [`sympy.sets.sets.SymmetricDifference`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference), [`sympy.sets.sets.DisjointUnion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.DisjointUnion)
+
+     property measure[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.measure)
+
+The (Lebesgue) measure of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).measure
+1
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).measure
+2
+```
+
+  Copy to clipboard          powerset()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L547-L580)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.powerset)
+
+Find the Power set of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import EmptySet, FiniteSet, Interval
+```
+
+  Copy to clipboard
+
+A power set of an empty set:
+
+```
+&gt;&gt;&gt; A = EmptySet
+&gt;&gt;&gt; A.powerset()
+{EmptySet}
+```
+
+  Copy to clipboard
+
+A power set of a finite set:
+
+```
+&gt;&gt;&gt; A = FiniteSet(1, 2)
+&gt;&gt;&gt; a, b, c = FiniteSet(1), FiniteSet(2), FiniteSet(1, 2)
+&gt;&gt;&gt; A.powerset() == FiniteSet(a, b, c, EmptySet)
+True
+```
+
+  Copy to clipboard
+
+A power set of an interval:
+
+```
+&gt;&gt;&gt; Interval(1, 2).powerset()
+PowerSet(Interval(1, 2))
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1180](https://docs.sympy.org/dev/modules/sets.html#id2)]
+
+[https://en.wikipedia.org/wiki/Power_set](https://en.wikipedia.org/wiki/Power_set)
+
+      property sup[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.sup)
+
+The supremum of `self`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, Union
+&gt;&gt;&gt; Interval(0, 1).sup
+1
+&gt;&gt;&gt; Union(Interval(0, 1), Interval(2, 3)).sup
+3
+```
+
+  Copy to clipboard          symmetric_difference(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L272-L294)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.symmetric_difference)
+
+Returns symmetric difference of `self` and `other`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, S
+&gt;&gt;&gt; Interval(1, 3).symmetric_difference(S.Reals)
+Union(Interval.open(-oo, 1), Interval.open(3, oo))
+&gt;&gt;&gt; Interval(1, 10).symmetric_difference(S.Reals)
+Union(Interval.open(-oo, 1), Interval.open(10, oo))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; from sympy import S, EmptySet
+&gt;&gt;&gt; S.Reals.symmetric_difference(EmptySet)
+Reals
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1181](https://docs.sympy.org/dev/modules/sets.html#id3)]
+
+[https://en.wikipedia.org/wiki/Symmetric_difference](https://en.wikipedia.org/wiki/Symmetric_difference)
+
+      union(*other*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L139-L164)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set.union)
+
+Returns the union of `self` and `other`.
+
+Examples
+
+As a shortcut it is possible to use the `+` operator:
+
+```
+&gt;&gt;&gt; from sympy import Interval, FiniteSet
+&gt;&gt;&gt; Interval(0, 1).union(Interval(2, 3))
+Union(Interval(0, 1), Interval(2, 3))
+&gt;&gt;&gt; Interval(0, 1) + Interval(2, 3)
+Union(Interval(0, 1), Interval(2, 3))
+&gt;&gt;&gt; Interval(1, 2, True, True) + FiniteSet(2, 3)
+Union({3}, Interval.Lopen(1, 2))
+```
+
+  Copy to clipboard
+
+Similarly it is possible to use the `-` operator for set differences:
+
+```
+&gt;&gt;&gt; Interval(0, 2) - Interval(0, 1)
+Interval.Lopen(1, 2)
+&gt;&gt;&gt; Interval(1, 3) - FiniteSet(2)
+Union(Interval.Ropen(1, 2), Interval.Lopen(2, 3))
+```
+
+  Copy to clipboard           sympy.sets.sets.imageset(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2442-L2567)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.imageset)
+
+Return an image of the set under transformation `f`.
+
+Explanation
+
+If this function cannot compute the image, it returns an unevaluated ImageSet object.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, imageset, sin, Lambda
+&gt;&gt;&gt; from sympy.abc import x
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(x, 2*x, Interval(0, 2))
+Interval(0, 4)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(lambda x: 2*x, Interval(0, 2))
+Interval(0, 4)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(Lambda(x, sin(x)), Interval(-2, 1))
+ImageSet(Lambda(x, sin(x)), Interval(-2, 1))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; imageset(sin, Interval(-2, 1))
+ImageSet(Lambda(x, sin(x)), Interval(-2, 1))
+&gt;&gt;&gt; imageset(lambda y: x + y, Interval(-2, 1))
+ImageSet(Lambda(y, x + y), Interval(-2, 1))
+```
+
+  Copy to clipboard
+
+Expressions applied to the set of Integers are simplified to show as few negatives as possible and linear expressions are converted to a canonical form. If this is not desirable then the unevaluated ImageSet should be used.
+
+```
+&gt;&gt;&gt; imageset(x, -2*x + 5, S.Integers)
+ImageSet(Lambda(x, 2*x + 1), Integers)
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.sets.fancysets.ImageSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet)
+</pre></article><article id="section-0003"><h3>Elementary Sets[¶](https://docs.sympy.org/dev/modules/sets.html#elementary-sets)</h3><pre># Elementary Sets[¶](https://docs.sympy.org/dev/modules/sets.html#elementary-sets)
+
+class sympy.sets.sets.Interval(  *start*, *end*, *left_open=False*, *right_open=False*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1035-L1316)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval)
+
+Represents a real interval as a Set.
+
+  Usage:
+
+Returns an interval with end points `start` and `end`.
+
+For `left_open=True` (default `left_open` is `False`) the interval will be open on the left. Similarly, for `right_open=True` the interval will be open on the right.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Interval
+&gt;&gt;&gt; Interval(0, 1)
+Interval(0, 1)
+&gt;&gt;&gt; Interval.Ropen(0, 1)
+Interval.Ropen(0, 1)
+&gt;&gt;&gt; Interval.Ropen(0, 1)
+Interval.Ropen(0, 1)
+&gt;&gt;&gt; Interval.Lopen(0, 1)
+Interval.Lopen(0, 1)
+&gt;&gt;&gt; Interval.open(0, 1)
+Interval.open(0, 1)
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; a = Symbol(&#39;a&#39;, real=True)
+&gt;&gt;&gt; Interval(0, a)
+Interval(0, a)
+```
+
+  Copy to clipboard
+
+Notes
+
+- Only real end points are supported
+- `Interval(a, b)` with 𝑎 &gt;𝑏 will return the empty set
+- Use the `evalf()` method to turn an Interval into an mpmath `mpi` interval instance
+
+References
+
+   [[R1182](https://docs.sympy.org/dev/modules/sets.html#id4)]
+
+[https://en.wikipedia.org/wiki/Interval_%28mathematics%29](https://en.wikipedia.org/wiki/Interval_%28mathematics%29)
+
+     classmethod Lopen(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1192-L1195)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.Lopen)
+
+Return an interval not including the left boundary.
+
+    classmethod Ropen(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1197-L1200)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.Ropen)
+
+Return an interval not including the right boundary.
+
+    as_relational(*x*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1264-L1275)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.as_relational)
+
+Rewrite an interval in terms of inequalities and logic operators.
+
+    property end[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.end)
+
+The right end point of the interval.
+
+This property takes the same value as the `sup` property.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).end
+1
+```
+
+  Copy to clipboard          property is_left_unbounded[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.is_left_unbounded)
+
+Return `True` if the left endpoint is negative infinity.
+
+    property is_right_unbounded[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.is_right_unbounded)
+
+Return `True` if the right endpoint is positive infinity.
+
+    property left_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.left_open)
+
+True if interval is left-open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1, left_open=True).left_open
+True
+&gt;&gt;&gt; Interval(0, 1, left_open=False).left_open
+False
+```
+
+  Copy to clipboard          classmethod open(*a*, *b*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1187-L1190)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.open)
+
+Return an interval including neither boundary.
+
+    property right_open[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.right_open)
+
+True if interval is right-open.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1, right_open=True).right_open
+True
+&gt;&gt;&gt; Interval(0, 1, right_open=False).right_open
+False
+```
+
+  Copy to clipboard          property start[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Interval.start)
+
+The left end point of the interval.
+
+This property takes the same value as the `inf` property.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(0, 1).start
+0
+```
+
+  Copy to clipboard           class sympy.sets.sets.FiniteSet(**args*, ***kwargs*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1974-L2211)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet)
+
+Represents a finite set of Sympy expressions.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import FiniteSet, Symbol, Interval, Naturals0
+&gt;&gt;&gt; FiniteSet(1, 2, 3, 4)
+{1, 2, 3, 4}
+&gt;&gt;&gt; 3 in FiniteSet(1, 2, 3, 4)
+True
+&gt;&gt;&gt; FiniteSet(1, (1, 2), Symbol(&#39;x&#39;))
+{1, x, (1, 2)}
+&gt;&gt;&gt; FiniteSet(Interval(1, 2), Naturals0, {1, 2})
+FiniteSet({1, 2}, Interval(1, 2), Naturals0)
+&gt;&gt;&gt; members = [1, 2, 3, 4]
+&gt;&gt;&gt; f = FiniteSet(*members)
+&gt;&gt;&gt; f
+{1, 2, 3, 4}
+&gt;&gt;&gt; f - FiniteSet(2)
+{1, 3, 4}
+&gt;&gt;&gt; f + FiniteSet(2, 5)
+{1, 2, 3, 4, 5}
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1183](https://docs.sympy.org/dev/modules/sets.html#id5)]
+
+[https://en.wikipedia.org/wiki/Finite_set](https://en.wikipedia.org/wiki/Finite_set)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2147-L2149)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.FiniteSet.as_relational)
+
+Rewrite a FiniteSet in terms of equalities and logic operators.
+</pre></article><article id="section-0004"><h3>Compound Sets[¶](https://docs.sympy.org/dev/modules/sets.html#compound-sets)</h3><pre># Compound Sets[¶](https://docs.sympy.org/dev/modules/sets.html#compound-sets)
+
+class sympy.sets.sets.Union(**args*, ***kwargs*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1319-L1506)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+Represents a union of sets as a [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set).
+
+  Parameters:
+
+**args** : iterable[Set]
+
+&gt;
+&gt; The input sets to be united.
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; If True (default from sympy.core.parameters.global_parameters.evaluate),
+&gt; the constructor simplifies the union.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Union, Interval
+&gt;&gt;&gt; Union(Interval(1, 2), Interval(3, 4))
+Union(Interval(1, 2), Interval(3, 4))
+```
+
+  Copy to clipboard
+
+The Union constructor will always try to merge overlapping intervals, if possible. For example:
+
+```
+&gt;&gt;&gt; Union(Interval(1, 2), Interval(2, 3))
+Interval(1, 3)
+```
+
+  Copy to clipboard
+
+See also
+
+[`Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection)
+
+References
+
+   [[R1184](https://docs.sympy.org/dev/modules/sets.html#id6)]
+
+[https://en.wikipedia.org/wiki/Union_%28set_theory%29](https://en.wikipedia.org/wiki/Union_%28set_theory%29)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1484-L1499)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union.as_relational)
+
+Rewrite a Union in terms of equalities and logic operators.
+
+     class sympy.sets.sets.Intersection(**args*, *evaluate=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1509-L1745)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection)
+
+Represents an intersection of sets as a [`Set`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set).
+
+  Parameters:
+
+**args** : iterable[Set]
+
+&gt;
+&gt; The input sets to be intersected.
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; If True (default from sympy.core.parameters.global_parameters.evaluate),
+&gt; the constructor simplifies the intersection.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Intersection, Interval
+&gt;&gt;&gt; Intersection(Interval(1, 3), Interval(2, 4))
+Interval(2, 3)
+```
+
+  Copy to clipboard
+
+We often use the .intersect method
+
+```
+&gt;&gt;&gt; Interval(1,3).intersect(Interval(2,4))
+Interval(2, 3)
+```
+
+  Copy to clipboard
+
+See also
+
+[`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1185](https://docs.sympy.org/dev/modules/sets.html#id7)]
+
+[https://en.wikipedia.org/wiki/Intersection_%28set_theory%29](https://en.wikipedia.org/wiki/Intersection_%28set_theory%29)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1743-L1745)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection.as_relational)
+
+Rewrite an Intersection in terms of equalities and logic operators
+
+     class sympy.sets.sets.ProductSet(**sets*, ***assumptions*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L854-L1032)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet)
+
+Represents a Cartesian Product of Sets.
+
+Explanation
+
+Returns a Cartesian product given several sets as either an iterable or individual arguments.
+
+Can use `*` operator on any sets for convenient shorthand.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, FiniteSet, ProductSet
+&gt;&gt;&gt; I = Interval(0, 5); S = FiniteSet(1, 2, 3)
+&gt;&gt;&gt; ProductSet(I, S)
+ProductSet(Interval(0, 5), {1, 2, 3})
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; (2, 2) in ProductSet(I, S)
+True
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(0, 1) * Interval(0, 1) # The unit square
+ProductSet(Interval(0, 1), Interval(0, 1))
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; coin = FiniteSet(&#39;H&#39;, &#39;T&#39;)
+&gt;&gt;&gt; set(coin**2)
+{(H, H), (H, T), (T, H), (T, T)}
+```
+
+  Copy to clipboard
+
+The Cartesian product is not commutative or associative e.g.:
+
+```
+&gt;&gt;&gt; I*S == S*I
+False
+&gt;&gt;&gt; (I*I)*I == I*(I*I)
+False
+```
+
+  Copy to clipboard
+
+Notes
+
+- Passes most operations down to the argument sets
+
+References
+
+   [[R1186](https://docs.sympy.org/dev/modules/sets.html#id8)]
+
+[https://en.wikipedia.org/wiki/Cartesian_product](https://en.wikipedia.org/wiki/Cartesian_product)
+
+     property is_iterable[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.ProductSet.is_iterable)
+
+A property method which tests whether a set is iterable or not. Returns True if set is iterable, otherwise returns False.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import FiniteSet, Interval
+&gt;&gt;&gt; I = Interval(0, 1)
+&gt;&gt;&gt; A = FiniteSet(1, 2, 3, 4, 5)
+&gt;&gt;&gt; I.is_iterable
+False
+&gt;&gt;&gt; A.is_iterable
+True
+```
+
+  Copy to clipboard           class sympy.sets.sets.Complement(*a*, *b*, *evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1748-L1843)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement)
+
+Represents the set difference or relative complement of a set with another set.
+
+  𝐴−𝐵={𝑥∈𝐴∣𝑥∉𝐵}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Complement, FiniteSet
+&gt;&gt;&gt; Complement(FiniteSet(0, 1, 2), FiniteSet(1))
+{0, 2}
+```
+
+  Copy to clipboard
+
+See also
+
+[`Intersection`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Intersection), [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1187](https://docs.sympy.org/dev/modules/sets.html#id9)]
+
+[https://mathworld.wolfram.com/ComplementSet.html](https://mathworld.wolfram.com/ComplementSet.html)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1810-L1818)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement.as_relational)
+
+Rewrite a complement in terms of equalities and logic operators
+
+    static reduce(*A*, *B*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1782-L1798)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement.reduce)
+
+Simplify a [`Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement).
+
+     class sympy.sets.sets.SymmetricDifference(*a*, *b*, *evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2218-L2283)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference)
+
+Represents the set of elements which are in either of the sets and not in their intersection.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import SymmetricDifference, FiniteSet
+&gt;&gt;&gt; SymmetricDifference(FiniteSet(1, 2, 3), FiniteSet(3, 4, 5))
+{1, 2, 4, 5}
+```
+
+  Copy to clipboard
+
+See also
+
+[`Complement`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Complement), [`Union`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Union)
+
+References
+
+   [[R1188](https://docs.sympy.org/dev/modules/sets.html#id10)]
+
+[https://en.wikipedia.org/wiki/Symmetric_difference](https://en.wikipedia.org/wiki/Symmetric_difference)
+
+     as_relational(*symbol*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2256-L2264)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.SymmetricDifference.as_relational)
+
+Rewrite a symmetric_difference in terms of equalities and logic operators
+
+     class sympy.sets.sets.DisjointUnion(**sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2287-L2439)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.DisjointUnion)
+
+Represents the disjoint union (also known as the external disjoint union) of a finite number of sets.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import DisjointUnion, FiniteSet, Interval, Union, Symbol
+&gt;&gt;&gt; A = FiniteSet(1, 2, 3)
+&gt;&gt;&gt; B = Interval(0, 5)
+&gt;&gt;&gt; DisjointUnion(A, B)
+DisjointUnion({1, 2, 3}, Interval(0, 5))
+&gt;&gt;&gt; DisjointUnion(A, B).rewrite(Union)
+Union(ProductSet({1, 2, 3}, {0}), ProductSet(Interval(0, 5), {1}))
+&gt;&gt;&gt; C = FiniteSet(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;), Symbol(&#39;z&#39;))
+&gt;&gt;&gt; DisjointUnion(C, C)
+DisjointUnion({x, y, z}, {x, y, z})
+&gt;&gt;&gt; DisjointUnion(C, C).rewrite(Union)
+ProductSet({x, y, z}, {0, 1})
+```
+
+  Copy to clipboard
+
+References
+
+[https://en.wikipedia.org/wiki/Disjoint_union](https://en.wikipedia.org/wiki/Disjoint_union)
+</pre></article><article id="section-0005"><h3>Singleton Sets[¶](https://docs.sympy.org/dev/modules/sets.html#singleton-sets)</h3><pre># Singleton Sets[¶](https://docs.sympy.org/dev/modules/sets.html#singleton-sets)
+
+class sympy.sets.sets.EmptySet[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1846-L1917)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet)
+
+Represents the empty set. The empty set is available as a singleton as `S.EmptySet`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.EmptySet
+EmptySet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).intersect(S.EmptySet)
+EmptySet
+```
+
+  Copy to clipboard
+
+See also
+
+[`UniversalSet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet)
+
+References
+
+   [[R1189](https://docs.sympy.org/dev/modules/sets.html#id11)]
+
+[https://en.wikipedia.org/wiki/Empty_set](https://en.wikipedia.org/wiki/Empty_set)
+
+      class sympy.sets.sets.UniversalSet[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L1920-L1971)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.UniversalSet)
+
+Represents the set of all things. The universal set is available as a singleton as `S.UniversalSet`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval
+&gt;&gt;&gt; S.UniversalSet
+UniversalSet
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; Interval(1, 2).intersect(S.UniversalSet)
+Interval(1, 2)
+```
+
+  Copy to clipboard
+
+See also
+
+[`EmptySet`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.EmptySet)
+
+References
+
+   [[R1190](https://docs.sympy.org/dev/modules/sets.html#id12)]
+
+[https://en.wikipedia.org/wiki/Universal_set](https://en.wikipedia.org/wiki/Universal_set)
+</pre></article><article id="section-0006"><h3>Special Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.fancysets)</h3><pre># Special Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.fancysets)
+
+class sympy.sets.fancysets.Rationals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L25-L71)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Rationals)
+
+Represents the rational numbers. This set is also available as the singleton `S.Rationals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S
+&gt;&gt;&gt; S.Half in S.Rationals
+True
+&gt;&gt;&gt; iterable = iter(S.Rationals)
+&gt;&gt;&gt; [next(iterable) for i in range(12)]
+[0, 1, -1, 1/2, 2, -1/2, -2, 1/3, 3, -1/3, -3, 2/3]
+```
+
+  Copy to clipboard          class sympy.sets.fancysets.Naturals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L74-L137)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals)
+
+Represents the natural numbers (or counting numbers) which are all positive integers starting from 1. This set is also available as the singleton `S.Naturals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, pprint
+&gt;&gt;&gt; 5 in S.Naturals
+True
+&gt;&gt;&gt; iterable = iter(S.Naturals)
+&gt;&gt;&gt; next(iterable)
+1
+&gt;&gt;&gt; next(iterable)
+2
+&gt;&gt;&gt; next(iterable)
+3
+&gt;&gt;&gt; pprint(S.Naturals.intersect(Interval(0, 10)))
+{1, 2, ..., 10}
+```
+
+  Copy to clipboard
+
+See also
+
+  [`Naturals0`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+non-negative integers (i.e. includes 0, too)
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+also includes negative integers
+
+       class sympy.sets.fancysets.Naturals0[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L140-L164)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+Represents the whole numbers which are all the non-negative integers, inclusive of zero.
+
+See also
+
+  [`Naturals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals)
+
+positive integers; does not include 0
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+also includes the negative integers
+
+       class sympy.sets.fancysets.Integers[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L167-L237)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+Represents all integers: positive, negative and zero. This set is also available as the singleton `S.Integers`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Interval, pprint
+&gt;&gt;&gt; 5 in S.Naturals
+True
+&gt;&gt;&gt; iterable = iter(S.Integers)
+&gt;&gt;&gt; next(iterable)
+0
+&gt;&gt;&gt; next(iterable)
+1
+&gt;&gt;&gt; next(iterable)
+-1
+&gt;&gt;&gt; next(iterable)
+2
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; pprint(S.Integers.intersect(Interval(-4, 4)))
+{-4, -3, ..., 4}
+```
+
+  Copy to clipboard
+
+See also
+
+  [`Naturals0`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Naturals0)
+
+non-negative integers
+
+  [`Integers`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Integers)
+
+positive and negative integers and zero
+
+       class sympy.sets.fancysets.Reals[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L240-L289)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Reals)
+
+Represents all real numbers from negative infinity to positive infinity, including all integer, rational and irrational numbers. This set is also available as the singleton `S.Reals`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, Rational, pi, I
+&gt;&gt;&gt; 5 in S.Reals
+True
+&gt;&gt;&gt; Rational(-1, 2) in S.Reals
+True
+&gt;&gt;&gt; pi in S.Reals
+True
+&gt;&gt;&gt; 3*I in S.Reals
+False
+&gt;&gt;&gt; S.Reals.contains(pi)
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+     class sympy.sets.fancysets.Complexes[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1494-L1524)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+The `Set` of all complex numbers
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import S, I
+&gt;&gt;&gt; S.Complexes
+Complexes
+&gt;&gt;&gt; 1 + I in S.Complexes
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`Reals`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Reals), [`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+     class sympy.sets.fancysets.ImageSet(*flambda*, **sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L292-L517)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ImageSet)
+
+Image of a set under a mathematical function. The transformation must be given as a Lambda function which has as many arguments as the elements of the set upon which it operates, e.g. 1 argument when acting on the set of integers or 2 arguments when acting on a complex region.
+
+This function is not normally called directly, but is called from `imageset`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, S, pi, Dummy, Lambda
+&gt;&gt;&gt; from sympy import FiniteSet, ImageSet, Interval
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; x = Symbol(&#39;x&#39;)
+&gt;&gt;&gt; N = S.Naturals
+&gt;&gt;&gt; squares = ImageSet(Lambda(x, x**2), N) # {x**2 for x in N}
+&gt;&gt;&gt; 4 in squares
+True
+&gt;&gt;&gt; 5 in squares
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; FiniteSet(0, 1, 2, 3, 4, 5, 6, 7, 9, 10).intersect(squares)
+{1, 4, 9}
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; square_iterable = iter(squares)
+&gt;&gt;&gt; for i in range(4):
+...     next(square_iterable)
+1
+4
+9
+16
+```
+
+  Copy to clipboard
+
+If you want to get value for 𝑥 = 2, 1/2 etc. (Please check whether the 𝑥 value is in `base_set` or not before passing it as args)
+
+```
+&gt;&gt;&gt; squares.lamda(2)
+4
+&gt;&gt;&gt; squares.lamda(S(1)/2)
+1/4
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; n = Dummy(&#39;n&#39;)
+&gt;&gt;&gt; solutions = ImageSet(Lambda(n, n*pi), S.Integers) # solutions of sin(x) = 0
+&gt;&gt;&gt; dom = Interval(-1, 1)
+&gt;&gt;&gt; dom.intersect(solutions)
+{0}
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.sets.sets.imageset`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.imageset)
+
+     class sympy.sets.fancysets.Range(**args*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L520-L1021)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range)
+
+Represents a range of integers. Can be called as `Range(stop)`, `Range(start, stop)`, or `Range(start, stop, step)`; when `step` is not given it defaults to 1.
+
+`Range(stop)` is the same as `Range(0, stop, 1)` and the stop value (just as for Python ranges) is not included in the Range values.
+
+```
+&gt;&gt;&gt; from sympy import Range
+&gt;&gt;&gt; list(Range(3))
+[0, 1, 2]
+```
+
+  Copy to clipboard
+
+The step can also be negative:
+
+```
+&gt;&gt;&gt; list(Range(10, 0, -2))
+[10, 8, 6, 4, 2]
+```
+
+  Copy to clipboard
+
+The stop value is made canonical so equivalent ranges always have the same args:
+
+```
+&gt;&gt;&gt; Range(0, 10, 3)
+Range(0, 12, 3)
+```
+
+  Copy to clipboard
+
+Infinite ranges are allowed. `oo` and `-oo` are never included in the set (`Range` is always a subset of `Integers`). If the starting point is infinite, then the final value is `stop - step`. To iterate such a range, it needs to be reversed:
+
+```
+&gt;&gt;&gt; from sympy import oo
+&gt;&gt;&gt; r = Range(-oo, 1)
+&gt;&gt;&gt; r[-1]
+0
+&gt;&gt;&gt; next(iter(r))
+Traceback (most recent call last):
+...
+TypeError: Cannot iterate over Range with infinite start
+&gt;&gt;&gt; next(iter(r.reversed))
+0
+```
+
+  Copy to clipboard
+
+Although `Range` is a `Set` (and supports the normal set operations) it maintains the order of the elements and can be used in contexts where `range` would be used.
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Range(0, 10, 2).intersect(Interval(3, 7))
+Range(4, 8, 2)
+&gt;&gt;&gt; list(_)
+[4, 6]
+```
+
+  Copy to clipboard
+
+Although slicing of a Range will always return a Range – possibly empty – an empty set will be returned from any intersection that is empty:
+
+```
+&gt;&gt;&gt; Range(3)[:0]
+Range(0, 0, 1)
+&gt;&gt;&gt; Range(3).intersect(Interval(4, oo))
+EmptySet
+&gt;&gt;&gt; Range(3).intersect(Range(4, oo))
+EmptySet
+```
+
+  Copy to clipboard
+
+Range will accept symbolic arguments but has very limited support for doing anything other than displaying the Range:
+
+```
+&gt;&gt;&gt; from sympy import Symbol, pprint
+&gt;&gt;&gt; from sympy.abc import i, j, k
+&gt;&gt;&gt; Range(i, j, k).start
+i
+&gt;&gt;&gt; Range(i, j, k).inf
+Traceback (most recent call last):
+...
+ValueError: invalid method for symbolic range
+```
+
+  Copy to clipboard
+
+Better success will be had when using integer symbols:
+
+```
+&gt;&gt;&gt; n = Symbol(&#39;n&#39;, integer=True)
+&gt;&gt;&gt; r = Range(n, n + 20, 3)
+&gt;&gt;&gt; r.inf
+n
+&gt;&gt;&gt; pprint(r)
+{n, n + 3, ..., n + 18}
+```
+
+  Copy to clipboard         as_relational(*x*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L991-L1021)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range.as_relational)
+
+Rewrite a Range in terms of equalities and logic operators.
+
+    property reversed[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Range.reversed)
+
+Return an equivalent Range in the opposite order.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Range
+&gt;&gt;&gt; Range(10).reversed
+Range(9, -1, -1)
+```
+
+  Copy to clipboard           class sympy.sets.fancysets.ComplexRegion(*sets*, *polar=False*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1111-L1384)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion)
+
+Represents the Set of all Complex Numbers. It can represent a region of Complex Plane in both the standard forms Polar and Rectangular coordinates.
+
+- Polar Form Input is in the form of the ProductSet or Union of ProductSets of the intervals of `r` and `theta`, and use the flag `polar=True`.   𝑍={𝑧∈ℂ∣𝑧=𝑟×(cos⁡(𝜃)+𝐼⁢sin⁡(𝜃)),𝑟∈[𝚛],𝜃∈[𝚝𝚑𝚎𝚝𝚊]}
+- Rectangular Form Input is in the form of the ProductSet or Union of ProductSets of interval of x and y, the real and imaginary parts of the Complex numbers in a plane. Default input type is in rectangular form.
+   𝑍={𝑧∈ℂ∣𝑧=𝑥+𝐼⁢𝑦,𝑥∈[re⁡(𝑧)],𝑦∈[im⁡(𝑧)]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, Interval, S, I, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 6)
+&gt;&gt;&gt; c1 = ComplexRegion(a*b)  # Rectangular Form
+&gt;&gt;&gt; c1
+CartesianComplexRegion(ProductSet(Interval(2, 3), Interval(4, 6)))
+```
+
+  Copy to clipboard
+- c1 represents the rectangular region in complex plane surrounded by the coordinates (2, 4), (3, 4), (3, 6) and (2, 6), of the four vertices.
+
+```
+&gt;&gt;&gt; c = Interval(1, 8)
+&gt;&gt;&gt; c2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; c2
+CartesianComplexRegion(Union(ProductSet(Interval(2, 3), Interval(4, 6)), ProductSet(Interval(4, 6), Interval(1, 8))))
+```
+
+  Copy to clipboard
+- c2 represents the Union of two rectangular regions in complex plane. One of them surrounded by the coordinates of c1 and other surrounded by the coordinates (4, 1), (6, 1), (6, 8) and (4, 8).
+
+```
+&gt;&gt;&gt; 2.5 + 4.5*I in c1
+True
+&gt;&gt;&gt; 2.5 + 6.5*I in c1
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; r = Interval(0, 1)
+&gt;&gt;&gt; theta = Interval(0, 2*S.Pi)
+&gt;&gt;&gt; c2 = ComplexRegion(r*theta, polar=True)  # Polar Form
+&gt;&gt;&gt; c2  # unit Disk
+PolarComplexRegion(ProductSet(Interval(0, 1), Interval.Ropen(0, 2*pi)))
+```
+
+  Copy to clipboard
+- c2 represents the region in complex plane inside the Unit Disk centered at the origin.
+
+```
+&gt;&gt;&gt; 0.5 + 0.5*I in c2
+True
+&gt;&gt;&gt; 1 + 2*I in c2
+False
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; unit_disk = ComplexRegion(Interval(0, 1)*Interval(0, 2*S.Pi), polar=True)
+&gt;&gt;&gt; upper_half_unit_disk = ComplexRegion(Interval(0, 1)*Interval(0, S.Pi), polar=True)
+&gt;&gt;&gt; intersection = unit_disk.intersect(upper_half_unit_disk)
+&gt;&gt;&gt; intersection
+PolarComplexRegion(ProductSet(Interval(0, 1), Interval(0, pi)))
+&gt;&gt;&gt; intersection == upper_half_unit_disk
+True
+```
+
+  Copy to clipboard
+
+See also
+
+[`CartesianComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion), [`PolarComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+    property a_interval[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.a_interval)
+
+Return the union of intervals of 𝑥 when, self is in rectangular form, or the union of intervals of 𝑟 when self is in polar form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.a_interval
+Interval(2, 3)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.a_interval
+Union(Interval(2, 3), Interval(4, 5))
+```
+
+  Copy to clipboard          property b_interval[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.b_interval)
+
+Return the union of intervals of 𝑦 when, self is in rectangular form, or the union of intervals of 𝑡⁢ℎ⁡𝑒⁢𝑡⁢𝑎 when self is in polar form.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.b_interval
+Interval(4, 5)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.b_interval
+Interval(1, 7)
+```
+
+  Copy to clipboard          classmethod from_real(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1330-L1347)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.from_real)
+
+Converts given subset of real numbers to a complex region.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion
+&gt;&gt;&gt; unit = Interval(0,1)
+&gt;&gt;&gt; ComplexRegion.from_real(unit)
+CartesianComplexRegion(ProductSet(Interval(0, 1), {0}))
+```
+
+  Copy to clipboard          property psets[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.psets)
+
+Return a tuple of sets (ProductSets) input of the self.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.psets
+(ProductSet(Interval(2, 3), Interval(4, 5)),)
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.psets
+(ProductSet(Interval(2, 3), Interval(4, 5)), ProductSet(Interval(4, 5), Interval(1, 7)))
+```
+
+  Copy to clipboard          property sets[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion.sets)
+
+Return raw input sets to the self.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval, ComplexRegion, Union
+&gt;&gt;&gt; a = Interval(2, 3)
+&gt;&gt;&gt; b = Interval(4, 5)
+&gt;&gt;&gt; c = Interval(1, 7)
+&gt;&gt;&gt; C1 = ComplexRegion(a*b)
+&gt;&gt;&gt; C1.sets
+ProductSet(Interval(2, 3), Interval(4, 5))
+&gt;&gt;&gt; C2 = ComplexRegion(Union(a*b, b*c))
+&gt;&gt;&gt; C2.sets
+Union(ProductSet(Interval(2, 3), Interval(4, 5)), ProductSet(Interval(4, 5), Interval(1, 7)))
+```
+
+  Copy to clipboard           class sympy.sets.fancysets.CartesianComplexRegion(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1387-L1438)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion)
+
+Set representing a square region of the complex plane.
+
+   𝑍={𝑧∈ℂ∣𝑧=𝑥+𝐼⁢𝑦,𝑥∈[re⁡(𝑧)],𝑦∈[im⁡(𝑧)]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, I, Interval
+&gt;&gt;&gt; region = ComplexRegion(Interval(1, 3) * Interval(4, 6))
+&gt;&gt;&gt; 2 + 5*I in region
+True
+&gt;&gt;&gt; 5*I in region
+False
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`PolarComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+     class sympy.sets.fancysets.PolarComplexRegion(*sets*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1441-L1491)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.PolarComplexRegion)
+
+Set representing a polar region of the complex plane.
+
+   𝑍={𝑧∈ℂ∣𝑧=𝑟×(cos⁡(𝜃)+𝐼⁢sin⁡(𝜃)),𝑟∈[𝚛],𝜃∈[𝚝𝚑𝚎𝚝𝚊]}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import ComplexRegion, Interval, oo, pi, I
+&gt;&gt;&gt; rset = Interval(0, oo)
+&gt;&gt;&gt; thetaset = Interval(0, pi)
+&gt;&gt;&gt; upper_half_plane = ComplexRegion(rset * thetaset, polar=True)
+&gt;&gt;&gt; 1 + I in upper_half_plane
+True
+&gt;&gt;&gt; 1 - I in upper_half_plane
+False
+```
+
+  Copy to clipboard
+
+See also
+
+[`ComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.ComplexRegion), [`CartesianComplexRegion`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.CartesianComplexRegion), [`Complexes`](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.Complexes)
+
+     sympy.sets.fancysets.normalize_theta_set(*theta*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/fancysets.py#L1026-L1108)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.fancysets.normalize_theta_set)
+
+Normalize a Real Set 𝑡⁢ℎ⁡𝑒⁢𝑡⁢𝑎 in the interval [0,2⁢𝜋). It returns a normalized value of theta in the Set. For Interval, a maximum of one cycle [0,2⁢𝜋], is returned i.e. for theta equal to [0,10⁢𝜋], returned normalized value would be [0,2⁢𝜋). As of now intervals with end points as non-multiples of `pi` is not supported.
+
+  Raises:
+
+**NotImplementedError**
+
+&gt;
+&gt; The algorithms for Normalizing theta Set are not yet
+&gt; implemented.
+&gt;
+
+**ValueError**
+
+&gt;
+&gt; The input is not valid, i.e. the input is not a real set.
+&gt;
+
+**RuntimeError**
+
+&gt;
+&gt; It is a bug, please report to the github issue tracker.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.sets.fancysets import normalize_theta_set
+&gt;&gt;&gt; from sympy import Interval, FiniteSet, pi
+&gt;&gt;&gt; normalize_theta_set(Interval(9*pi/2, 5*pi))
+Interval(pi/2, pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-3*pi/2, pi/2))
+Interval.Ropen(0, 2*pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-pi/2, pi/2))
+Union(Interval(0, pi/2), Interval.Ropen(3*pi/2, 2*pi))
+&gt;&gt;&gt; normalize_theta_set(Interval(-4*pi, 3*pi))
+Interval.Ropen(0, 2*pi)
+&gt;&gt;&gt; normalize_theta_set(Interval(-3*pi/2, -pi/2))
+Interval(pi/2, 3*pi/2)
+&gt;&gt;&gt; normalize_theta_set(FiniteSet(0, pi, 3*pi))
+{0, pi}
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0007"><h3>Power sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.powerset)</h3><pre># Power sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.powerset)
+
+class sympy.sets.powerset.PowerSet(*arg*, *evaluate=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/powerset.py#L12-L128)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.powerset.PowerSet)
+
+A symbolic object representing a power set.
+
+  Parameters:
+
+**arg** : Set
+
+&gt;
+&gt; The set to take power of.
+&gt;
+
+**evaluate** : bool
+
+&gt;
+&gt; The flag to control evaluation.
+&gt; If the evaluation is disabled for finite sets, it can take
+&gt; advantage of using subset test as a membership test.
+&gt;
+
+Notes
+
+Power set P⁡(𝑆) is defined as a set containing all the subsets of 𝑆.
+
+If the set 𝑆 is a finite set, its power set would have 2|𝑆| elements, where |𝑆| denotes the cardinality of 𝑆.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import PowerSet, S, FiniteSet
+```
+
+  Copy to clipboard
+
+A power set of a finite set:
+
+```
+&gt;&gt;&gt; PowerSet(FiniteSet(1, 2, 3))
+PowerSet({1, 2, 3})
+```
+
+  Copy to clipboard
+
+A power set of an empty set:
+
+```
+&gt;&gt;&gt; PowerSet(S.EmptySet)
+PowerSet(EmptySet)
+&gt;&gt;&gt; PowerSet(PowerSet(S.EmptySet))
+PowerSet(PowerSet(EmptySet))
+```
+
+  Copy to clipboard
+
+A power set of an infinite set:
+
+```
+&gt;&gt;&gt; PowerSet(S.Reals)
+PowerSet(Reals)
+```
+
+  Copy to clipboard
+
+Evaluating the power set of a finite set to its explicit form:
+
+```
+&gt;&gt;&gt; PowerSet(FiniteSet(1, 2, 3)).rewrite(FiniteSet)
+FiniteSet(EmptySet, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3})
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1191](https://docs.sympy.org/dev/modules/sets.html#id13)]
+
+[https://en.wikipedia.org/wiki/Power_set](https://en.wikipedia.org/wiki/Power_set)
+
+   [[R1192](https://docs.sympy.org/dev/modules/sets.html#id14)]
+
+[https://en.wikipedia.org/wiki/Axiom_of_power_set](https://en.wikipedia.org/wiki/Axiom_of_power_set)
+</pre></article><article id="section-0008"><h3>Condition Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.conditionset)</h3><pre># Condition Sets[¶](https://docs.sympy.org/dev/modules/sets.html#module-sympy.sets.conditionset)
+
+class sympy.sets.conditionset.ConditionSet(  *sym*, *condition*, *base_set=UniversalSet*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/conditionset.py#L20-L247)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.ConditionSet)
+
+Set of elements which satisfies a given condition.
+
+   {𝑥∣condition⁡(𝑥)=𝚃𝚛𝚞𝚎,𝑥∈𝑆}
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, S, ConditionSet, pi, Eq, sin, Interval
+&gt;&gt;&gt; from sympy.abc import x, y, z
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; sin_sols = ConditionSet(x, Eq(sin(x), 0), Interval(0, 2*pi))
+&gt;&gt;&gt; 2*pi in sin_sols
+True
+&gt;&gt;&gt; pi/2 in sin_sols
+False
+&gt;&gt;&gt; 3*pi in sin_sols
+False
+&gt;&gt;&gt; 5 in ConditionSet(x, x**2 &gt; 4, S.Reals)
+True
+```
+
+  Copy to clipboard
+
+If the value is not in the base set, the result is false:
+
+```
+&gt;&gt;&gt; 5 in ConditionSet(x, x**2 &gt; 4, Interval(2, 4))
+False
+```
+
+  Copy to clipboard
+
+Notes
+
+Symbols with assumptions should be avoided or else the condition may evaluate without consideration of the set:
+
+```
+&gt;&gt;&gt; n = Symbol(&#39;n&#39;, negative=True)
+&gt;&gt;&gt; cond = (n &gt; 0); cond
+False
+&gt;&gt;&gt; ConditionSet(n, cond, S.Integers)
+EmptySet
+```
+
+  Copy to clipboard
+
+Only free symbols can be changed by using 𝑠⁢𝑢⁢𝑏⁢𝑠:
+
+```
+&gt;&gt;&gt; c = ConditionSet(x, x &lt; 1, {x, z})
+&gt;&gt;&gt; c.subs(x, y)
+ConditionSet(x, x &lt; 1, {y, z})
+```
+
+  Copy to clipboard
+
+To check if `pi` is in `c` use:
+
+```
+&gt;&gt;&gt; pi in c
+False
+```
+
+  Copy to clipboard
+
+If no base set is specified, the universal set is implied:
+
+```
+&gt;&gt;&gt; ConditionSet(x, x &lt; 1).base_set
+UniversalSet
+```
+
+  Copy to clipboard
+
+Only symbols or symbol-like expressions can be used:
+
+```
+&gt;&gt;&gt; ConditionSet(x + 1, x + 1 &lt; 1, S.Integers)
+Traceback (most recent call last):
+...
+ValueError: non-symbol dummy not recognized in condition
+```
+
+  Copy to clipboard
+
+When the base set is a ConditionSet, the symbols will be unified if possible with preference for the outermost symbols:
+
+```
+&gt;&gt;&gt; ConditionSet(x, x &lt; y, ConditionSet(z, z + y &lt; 2, S.Integers))
+ConditionSet(x, (x &lt; y) &amp; (x + y &lt; 2), Integers)
+```
+
+  Copy to clipboard          class sympy.sets.conditionset.Contains(  *x: [Basic](https://docs.sympy.org/dev/modules/core.html#sympy.core.basic.Basic)*, *s: [Set](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.sets.Set)*, *evaluate: bool | None = None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/contains.py#L15-L71)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.Contains)
+
+Asserts that x is an element of the set S.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Symbol, Integer, S, Contains
+&gt;&gt;&gt; Contains(Integer(2), S.Integers)
+True
+&gt;&gt;&gt; Contains(Integer(-2), S.Naturals)
+False
+&gt;&gt;&gt; i = Symbol(&#39;i&#39;, integer=True)
+&gt;&gt;&gt; Contains(i, S.Naturals)
+Contains(i, Naturals)
+```
+
+  Copy to clipboard
+
+References
+
+   [[R1193](https://docs.sympy.org/dev/modules/sets.html#id15)]
+
+[https://en.wikipedia.org/wiki/Element_%28mathematics%29](https://en.wikipedia.org/wiki/Element_%28mathematics%29)
+</pre></article><article id="section-0009"><h3>SetKind[¶](https://docs.sympy.org/dev/modules/sets.html#setkind)</h3><pre># SetKind[¶](https://docs.sympy.org/dev/modules/sets.html#setkind)
+
+class sympy.sets.conditionset.SetKind(*element_kind=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/sets/sets.py#L2785-L2830)[¶](https://docs.sympy.org/dev/modules/sets.html#sympy.sets.conditionset.SetKind)
+
+SetKind is kind for all Sets
+
+Every instance of Set will have kind `SetKind` parametrised by the kind of the elements of the `Set`. The kind of the elements might be `NumberKind`, or `TupleKind` or something else. When not all elements have the same kind then the kind of the elements will be given as `UndefinedKind`.
+
+  Parameters:
+
+**element_kind: Kind (optional)**
+
+&gt;
+&gt; The kind of the elements of the set. In a well defined set all elements
+&gt; will have the same kind. Otherwise the kind should
+&gt; sympy.core.kind.UndefinedKind. The element_kind argument is optional but
+&gt; should only be omitted in the case of EmptySet whose kind is simply
+&gt; SetKind()
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy import Interval
+&gt;&gt;&gt; Interval(1, 2).kind
+SetKind(NumberKind)
+&gt;&gt;&gt; Interval(1,2).kind.element_kind
+NumberKind
+```
+
+  Copy to clipboard
+
+See also
+
+[`sympy.core.kind.NumberKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.kind.NumberKind), [`sympy.matrices.kind.MatrixKind`](https://docs.sympy.org/dev/modules/matrices/kind.html#sympy.matrices.kind.MatrixKind), [`sympy.core.containers.TupleKind`](https://docs.sympy.org/dev/modules/core.html#sympy.core.containers.TupleKind)
+</pre></article><article id="section-0010"><h3>Iteration over sets[¶](https://docs.sympy.org/dev/modules/sets.html#iteration-over-sets)</h3><pre># Iteration over sets[¶](https://docs.sympy.org/dev/modules/sets.html#iteration-over-sets)
+
+For set unions, {𝑎,𝑏} ∪{𝑥,𝑦} can be treated as {𝑎,𝑏,𝑥,𝑦} for iteration regardless of the distinctiveness of the elements, however, for set intersections, assuming that {𝑎,𝑏} ∩{𝑥,𝑦} is ∅ or {𝑎,𝑏} would not always be valid, since some of 𝑎, 𝑏, 𝑥 or 𝑦 may or may not be the elements of the intersection.
+
+Iterating over the elements of a set involving intersection, complement, or symmetric difference yields (possibly duplicate) elements of the set provided that all elements are known to be the elements of the set. If any element cannot be determined to be a member of a set then the iteration gives `TypeError`. This happens in the same cases where `x in y` would give an error.
+
+There are some reasons to implement like this, even if it breaks the consistency with how the python set iterator works. We keep in mind that sympy set comprehension like `FiniteSet(*s)` from a existing sympy sets could be a common usage. And this approach would make `FiniteSet(*s)` to be consistent with any symbolic set processing methods like `FiniteSet(*simplify(s))`.
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

@@ -1,0 +1,1921 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Parsing - SymPy 1.15.0.dev documentation — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Parsing - SymPy 1.15.0.dev documentation</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://docs.sympy.org/dev/modules/parsing.html</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T18:13:18.743Z</div><div class="stat"><b>Records</b><br>19</div><div class="stat"><b>Sections</b><br>13</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 268 B · ~67 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 40824 B · ~10183 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 67503 B · ~16862 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Parsing[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.md</code></a> <small>markdown · 84 B · ~21 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 8136 B · ~2028 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Parsing Transformations Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 10210 B · ~2545 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Experimental Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 421 B · ~105 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 1671 B · ~418 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-ANTLR Backend[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 715 B · ~179 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Lark Backend[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 8012 B · ~2001 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 386 B · ~96 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Experimental SMT-LIB Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 440 B · ~110 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-SMT-LIB Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 1770 B · ~442 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-SMT-LIB Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 1243 B · ~310 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-SymPy Expression Reference[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.parsing.md</code></a> <small>markdown · 6949 B · ~1735 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Runtime Installation[¶](https---docs.sympy.org-dev-modules-parsing.md</code></a> <small>markdown · 743 B · ~186 tok</small></li><li><a href="#art-0017"><code>artifacts/provenance/source-record.json</code></a> <small>json · 403 B · ~101 tok</small></li><li><a href="#art-0018"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0019"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Parsing - SymPy 1.15.0.dev documentation&quot;
+source: https://docs.sympy.org/dev/modules/parsing.html
+captured_at: 2026-09-30T18:13:18.743Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 19
+artifact_count: 19
+content_sha256: 2363da29ee8d52447ee7e546376bbbc5c59a562884554c8024b300b66d2c6b85
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:268,&quot;sha256&quot;:&quot;a72fafb18597340d86a4bebe9cad8ee7784399c01f39c04f2b519d924d5ae44c&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;dev&quot;,&quot;parsing&quot;,&quot;sympy&quot;,&quot;2026-09-30t18&quot;,&quot;743z&quot;,&quot;agent&quot;,&quot;canonical&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:67,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:40824,&quot;sha256&quot;:&quot;2363da29ee8d52447ee7e546376bbbc5c59a562884554c8024b300b66d2c6b85&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;https&quot;,&quot;str&quot;,&quot;sympy_parser&quot;,&quot;dev&quot;,&quot;org&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Parsing - SymPy 1.15.0.dev documentation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:10183,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:67503,&quot;sha256&quot;:&quot;47605c4ae39c6d34283066340067bbe837a1509f63cfbdaeafbefc65d0c64d73&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;dev&quot;,&quot;docs&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:16862,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Parsing[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:84,&quot;sha256&quot;:&quot;2512208898ac5db6a1a070c005f3b50fd15a97b5db7eb10507a4c5df669b76a4&quot;,&quot;keywords&quot;:[&quot;parsing&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;module-sympy&quot;,&quot;modules&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:21,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8136,&quot;sha256&quot;:&quot;c1f4087b14da8c635cecaf86f896d506ed03e4bfb81d99592ad35e8541b0e5aa&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;str&quot;,&quot;transformations&quot;,&quot;sympy_parser&quot;,&quot;clipboard&quot;,&quot;copy&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-functions-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2028,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Parsing Transformations Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:10210,&quot;sha256&quot;:&quot;e3a1798945c3e44dad139717cb4068994bcf0c23a2dd9caeb7cb16afc27e3e46&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;sympy_parser&quot;,&quot;str&quot;,&quot;https&quot;,&quot;any&quot;,&quot;dict&quot;,&quot;dev&quot;],&quot;summary&quot;:&quot;Parsing Transformations Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-transformations-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2545,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Experimental Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:421,&quot;sha256&quot;:&quot;3d61eb0e4a11365605d77c26a38b4c9bd56f12878d3e2c7331725eb3354ec312&quot;,&quot;keywords&quot;:[&quot;parsing&quot;,&quot;experimental&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;experimental-mathrm-latex-parsing&quot;,&quot;html&quot;,&quot;https&quot;,&quot;might&quot;],&quot;summary&quot;:&quot;Experimental  Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-mathrm-latex-parsing)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:105,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1671,&quot;sha256&quot;:&quot;ba0566ed907f8c1f02ca5f85e75a2883c9b0897a5dfdd539ee9ce28f2b534b25&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;latex&quot;,&quot;parsing&quot;,&quot;backend&quot;,&quot;antlr&quot;,&quot;parse_latex&quot;,&quot;expr&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-functions-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:418,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-ANTLR Backend[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:715,&quot;sha256&quot;:&quot;fd2b1c65aeda361109aac162ba22d4a0d7ea1b7db4fbf91817a14d2f1ed73165&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;parsing&quot;,&quot;antlr&quot;,&quot;backend&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;ANTLR Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-backend)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:179,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Lark Backend[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8012,&quot;sha256&quot;:&quot;a4ee9f3b4a9b1db0bb7f2835b94011f42edc3e02943cf9742c9cdda08ebeb565&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;lark&quot;,&quot;parser&quot;,&quot;https&quot;,&quot;latex&quot;,&quot;class&quot;,&quot;like&quot;],&quot;summary&quot;:&quot;Lark Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-backend)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2001,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:386,&quot;sha256&quot;:&quot;3e110a335bac053b6c64a0eb160d09bd8b82a1332c93d5fc8d2d6b59b5b5c70b&quot;,&quot;keywords&quot;:[&quot;parsing&quot;,&quot;sympy&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;latex&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-exceptions-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:96,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Experimental SMT-LIB Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:440,&quot;sha256&quot;:&quot;8c3a9ceff50b73d0679401f083a8b2737f69df387124c9c0f3d74a60c10f666d&quot;,&quot;keywords&quot;:[&quot;parsing&quot;,&quot;smt-lib&quot;,&quot;experimental&quot;,&quot;https&quot;,&quot;sympy&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;experimental-smt-lib-parsing&quot;],&quot;summary&quot;:&quot;Experimental SMT-LIB Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-smt-lib-parsing)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:110,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-SMT-LIB Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1770,&quot;sha256&quot;:&quot;fa223a138712daaf0c71fea03d03f0302e67a4cfac4e87ba9611d00e425c3d74&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;assertions&quot;,&quot;symbols&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;],&quot;summary&quot;:&quot;SMT-LIB Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-functions-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:442,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-SMT-LIB Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1243,&quot;sha256&quot;:&quot;1a4863cbe5f254da9982addd62b02afe927032914dda3b200a2206029576bc67&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;smtlib&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;modules&quot;],&quot;summary&quot;:&quot;SMT-LIB Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-exceptions-reference)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:310,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-SymPy Expression Reference[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6949,&quot;sha256&quot;:&quot;2c4dbb7938e0444caf926cd6db81a7b8f1fb3b8c0e8aa12c63e6cc064e381662&quot;,&quot;keywords&quot;:[&quot;sympy&quot;,&quot;parsing&quot;,&quot;sympyexpression&quot;,&quot;integer&quot;,&quot;sym_expr&quot;,&quot;variable&quot;,&quot;https&quot;,&quot;source&quot;],&quot;summary&quot;:&quot;SymPy Expression Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing.sym_expr)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1735,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Runtime Installation[¶](https---docs.sympy.org-dev-modules-parsing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:743,&quot;sha256&quot;:&quot;f5bc643f7839036cea35655184a92881124fb3c841f6e180d38bb58546d0e7c1&quot;,&quot;keywords&quot;:[&quot;install&quot;,&quot;parser&quot;,&quot;clipboard&quot;,&quot;conda&quot;,&quot;copy&quot;,&quot;https&quot;,&quot;org&quot;,&quot;package&quot;],&quot;summary&quot;:&quot;Runtime Installation[¶](https://docs.sympy.org/dev/modules/parsing.html#runtime-installation)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:186,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0017&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:403,&quot;sha256&quot;:&quot;1ab26688441aff1efd18d753bf0aa1ee6c68b2b619bcc201f39d316db15b5531&quot;,&quot;keywords&quot;:[&quot;parsing&quot;,&quot;sympy&quot;,&quot;dev&quot;,&quot;docs&quot;,&quot;html&quot;,&quot;https&quot;,&quot;modules&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:101,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0018&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;f89ccb83ae363fb8b2161826143b12b253027bb2fe56992d5af5ac34e0592f6e&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;435&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0019&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T18:13:18.743Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	67	268	a72fafb18597340d86a4bebe9cad8ee7784399c01f39c04f2b519d924d5ae44c	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	10183	40824	2363da29ee8d52447ee7e546376bbbc5c59a562884554c8024b300b66d2c6b85	Parsing - SymPy 1.15.0.dev documentation	
+art:0003	index	artifacts/index/page-index.json	supporting	16862	67503	47605c4ae39c6d34283066340067bbe837a1509f63cfbdaeafbefc65d0c64d73	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Parsing[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.md	primary	21	84	2512208898ac5db6a1a070c005f3b50fd15a97b5db7eb10507a4c5df669b76a4	Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing)	
+sec:0005	section	artifacts/sections/0002-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	2028	8136	c1f4087b14da8c635cecaf86f896d506ed03e4bfb81d99592ad35e8541b0e5aa	Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-functions-reference)	
+sec:0006	section	artifacts/sections/0003-Parsing Transformations Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	2545	10210	e3a1798945c3e44dad139717cb4068994bcf0c23a2dd9caeb7cb16afc27e3e46	Parsing Transformations Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-transformations-reference)	
+sec:0007	section	artifacts/sections/0004-Experimental Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	105	421	3d61eb0e4a11365605d77c26a38b4c9bd56f12878d3e2c7331725eb3354ec312	Experimental  Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-mathrm-latex-parsing)	
+sec:0008	section	artifacts/sections/0005-Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	418	1671	ba0566ed907f8c1f02ca5f85e75a2883c9b0897a5dfdd539ee9ce28f2b534b25	Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-functions-reference)	
+sec:0009	section	artifacts/sections/0006-ANTLR Backend[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	179	715	fd2b1c65aeda361109aac162ba22d4a0d7ea1b7db4fbf91817a14d2f1ed73165	ANTLR Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-backend)	
+sec:0010	section	artifacts/sections/0007-Lark Backend[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	2001	8012	a4ee9f3b4a9b1db0bb7f2835b94011f42edc3e02943cf9742c9cdda08ebeb565	Lark Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-backend)	
+sec:0011	section	artifacts/sections/0008-Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	primary	96	386	3e110a335bac053b6c64a0eb160d09bd8b82a1332c93d5fc8d2d6b59b5b5c70b	Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-exceptions-reference)	
+sec:0012	section	artifacts/sections/0009-Experimental SMT-LIB Parsing[¶](https---docs.sympy.org-dev-modules-parsing.md	supporting	110	440	8c3a9ceff50b73d0679401f083a8b2737f69df387124c9c0f3d74a60c10f666d	Experimental SMT-LIB Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-smt-lib-parsing)	
+sec:0013	section	artifacts/sections/0010-SMT-LIB Parsing Functions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	supporting	442	1770	fa223a138712daaf0c71fea03d03f0302e67a4cfac4e87ba9611d00e425c3d74	SMT-LIB Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-functions-reference)	
+sec:0014	section	artifacts/sections/0011-SMT-LIB Parsing Exceptions Reference[¶](https---docs.sympy.org-dev-modules-parsing.md	supporting	310	1243	1a4863cbe5f254da9982addd62b02afe927032914dda3b200a2206029576bc67	SMT-LIB Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-exceptions-reference)	
+sec:0015	section	artifacts/sections/0012-SymPy Expression Reference[¶](https---docs.sympy.org-dev-modules-parsing.html#module-sympy.parsing.md	supporting	1735	6949	2c4dbb7938e0444caf926cd6db81a7b8f1fb3b8c0e8aa12c63e6cc064e381662	SymPy Expression Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing.sym_expr)	
+sec:0016	section	artifacts/sections/0013-Runtime Installation[¶](https---docs.sympy.org-dev-modules-parsing.md	supporting	186	743	f5bc643f7839036cea35655184a92881124fb3c841f6e180d38bb58546d0e7c1	Runtime Installation[¶](https://docs.sympy.org/dev/modules/parsing.html#runtime-installation)	
+art:0017	provenance	artifacts/provenance/source-record.json	supporting	101	403	1ab26688441aff1efd18d753bf0aa1ee6c68b2b619bcc201f39d316db15b5531	Capture source identity and metadata	
+art:0018	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	f89ccb83ae363fb8b2161826143b12b253027bb2fe56992d5af5ac34e0592f6e	Extraction engine and counts	
+art:0019	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre># Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing)
+
+## Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-functions-reference)
+
+   sympy.parsing.sympy_parser.parse_expr(*s: str, local_dict: dict[str, ~typing.Any] | None = None, transformations: tuple[~typing.Callable[[list[tuple[int, str]], dict[str, ~typing.Any], dict[str, ~typing.Any]], list[tuple[int, str]]], ...] | str = (&lt;function lambda_notation&gt;, &lt;function auto_symbol&gt;, &lt;function repeated_decimals&gt;, &lt;function auto_number&gt;, &lt;function factorial_notation&gt;), global_dict: dict[str, ~typing.Any] | None = None, evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L913-L1093)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr)
+
+Converts the string `s` to a SymPy expression, in `local_dict`.
+
+Warning
+
+Note that this function uses `eval`, and thus shouldn’t be used on unsanitized input.
+
+   Parameters:
+
+**s** : str
+
+&gt;
+&gt; The string to parse.
+&gt;
+
+**local_dict** : dict, optional
+
+&gt;
+&gt; A dictionary of local variables to use when parsing.
+&gt;
+
+**global_dict** : dict, optional
+
+&gt;
+&gt; A dictionary of global variables. By default, this is initialized
+&gt; with from sympy import *; provide this parameter to override
+&gt; this behavior (for instance, to parse &quot;Q &amp; S&quot;).
+&gt;
+
+**transformations** : tuple or str
+
+&gt;
+&gt; A tuple of transformation functions used to modify the tokens of the
+&gt; parsed expression before evaluation. The default transformations
+&gt; convert numeric literals into their SymPy equivalents, convert
+&gt; undefined variables into SymPy symbols, and allow the use of standard
+&gt; mathematical factorial notation (e.g. x!). Selection via
+&gt; string is available (see below).
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; When False, the order of the arguments will remain as they were in the
+&gt; string and automatic simplification that would normally occur is
+&gt; suppressed. (see examples)
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import parse_expr
+&gt;&gt;&gt; parse_expr(&quot;1/2&quot;)
+1/2
+&gt;&gt;&gt; type(_)
+&lt;class &#39;sympy.core.numbers.Half&#39;&gt;
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import standard_transformations,\
+... implicit_multiplication_application
+&gt;&gt;&gt; transformations = (standard_transformations +
+...     (implicit_multiplication_application,))
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=transformations)
+2*x
+```
+
+  Copy to clipboard
+
+When evaluate=False, some automatic simplifications will not occur:
+
+```
+&gt;&gt;&gt; parse_expr(&quot;2**3&quot;), parse_expr(&quot;2**3&quot;, evaluate=False)
+(8, 2**3)
+```
+
+  Copy to clipboard
+
+In addition the order of the arguments will not be made canonical. This feature allows one to tell exactly how the expression was entered:
+
+```
+&gt;&gt;&gt; a = parse_expr(&#39;1 + x&#39;, evaluate=False)
+&gt;&gt;&gt; b = parse_expr(&#39;x + 1&#39;, evaluate=False)
+&gt;&gt;&gt; a == b
+False
+&gt;&gt;&gt; a.args
+(1, x)
+&gt;&gt;&gt; b.args
+(x, 1)
+```
+
+  Copy to clipboard
+
+Note, however, that when these expressions are printed they will appear the same:
+
+```
+&gt;&gt;&gt; assert str(a) == str(b)
+```
+
+  Copy to clipboard
+
+As a convenience, transformations can be seen by printing `transformations`:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import transformations
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; print(transformations)
+0: lambda_notation
+1: auto_symbol
+2: repeated_decimals
+3: auto_number
+4: factorial_notation
+5: implicit_multiplication_application
+6: convert_xor
+7: implicit_application
+8: implicit_multiplication
+9: convert_equals_signs
+10: function_exponentiation
+11: rationalize
+```
+
+  Copy to clipboard
+
+The `T` object provides a way to select these transformations:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import T
+```
+
+  Copy to clipboard
+
+If you print it, you will see the same list as shown above.
+
+```
+&gt;&gt;&gt; str(T) == str(transformations)
+True
+```
+
+  Copy to clipboard
+
+Standard slicing will return a tuple of transformations:
+
+```
+&gt;&gt;&gt; T[:5] == standard_transformations
+True
+```
+
+  Copy to clipboard
+
+So `T` can be used to specify the parsing transformations:
+
+```
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=T[:5])
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=T[:6])
+2*x
+&gt;&gt;&gt; parse_expr(&#39;.3&#39;, transformations=T[3, 11])
+3/10
+&gt;&gt;&gt; parse_expr(&#39;.3x&#39;, transformations=T[:])
+3*x/10
+```
+
+  Copy to clipboard
+
+As a further convenience, strings ‘implicit’ and ‘all’ can be used to select 0-5 and all the transformations, respectively.
+
+```
+&gt;&gt;&gt; parse_expr(&#39;.3x&#39;, transformations=&#39;all&#39;)
+3*x/10
+```
+
+  Copy to clipboard
+
+See also
+
+[`stringify_expr`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.stringify_expr), [`eval_expr`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.eval_expr), [`standard_transformations`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations), [`implicit_multiplication_application`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication_application)
+
+     sympy.parsing.sympy_parser.stringify_expr(  *s: str*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*, *transformations: tuple[Callable[[list[tuple[int, str]], dict[str, Any], dict[str, Any]], list[tuple[int, str]]], ...]*,  ) → str[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L883-L899)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.stringify_expr)
+
+Converts the string `s` to Python code, in `local_dict`
+
+Generally, `parse_expr` should be used.
+
+    sympy.parsing.sympy_parser.eval_expr(  *code*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L902-L910)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.eval_expr)
+
+Evaluate Python code generated by `stringify_expr`.
+
+Generally, `parse_expr` should be used.
+
+    sympy.parsing.maxima.parse_maxima(*str*, *globals=None*, *name_dict={}*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/maxima.py#L52-L72)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.maxima.parse_maxima)    sympy.parsing.mathematica.parse_mathematica(*s*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/mathematica.py#L33-L91)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.mathematica.parse_mathematica)
+
+Translate a string containing a Wolfram Mathematica expression to a SymPy expression.
+
+If the translator is unable to find a suitable SymPy expression, the `FullForm` of the Mathematica expression will be output, using SymPy `Function` objects as nodes of the syntax tree.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.mathematica import parse_mathematica
+&gt;&gt;&gt; parse_mathematica(&quot;Sin[x]^2 Tan[y]&quot;)
+sin(x)**2*tan(y)
+&gt;&gt;&gt; e = parse_mathematica(&quot;F[7,5,3]&quot;)
+&gt;&gt;&gt; e
+F(7, 5, 3)
+&gt;&gt;&gt; from sympy import Function, Max, Min
+&gt;&gt;&gt; e.replace(Function(&quot;F&quot;), lambda *x: Max(*x)*Min(*x))
+21
+```
+
+  Copy to clipboard
+
+Both standard input form and Mathematica full form are supported:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;x*(a + b)&quot;)
+x*(a + b)
+&gt;&gt;&gt; parse_mathematica(&quot;Times[x, Plus[a, b]]&quot;)
+x*(a + b)
+```
+
+  Copy to clipboard
+
+Derivatives written with a prime are translated as such:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;f&#39;[x] + f&#39;&#39;[x]&quot;)
+Derivative(f(x), x) + Derivative(f(x), (x, 2))
+&gt;&gt;&gt; parse_mathematica(&quot;Sin&#39;[x]&quot;)
+cos(x)
+```
+
+  Copy to clipboard
+
+To get a matrix from Wolfram’s code:
+
+```
+&gt;&gt;&gt; m = parse_mathematica(&quot;{{a, b}, {c, d}}&quot;)
+&gt;&gt;&gt; m
+((a, b), (c, d))
+&gt;&gt;&gt; from sympy import Matrix
+&gt;&gt;&gt; Matrix(m)
+Matrix([
+[a, b],
+[c, d]])
+```
+
+  Copy to clipboard
+
+If the translation into equivalent SymPy expressions fails, an SymPy expression equivalent to Wolfram Mathematica’s “FullForm” will be created:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;x_.&quot;)
+Optional(Pattern(x, Blank()))
+&gt;&gt;&gt; parse_mathematica(&quot;Plus @@ {x, y, z}&quot;)
+Apply(Plus, (x, y, z))
+&gt;&gt;&gt; parse_mathematica(&quot;f[x_, 3] := x^3 /; x &gt; 0&quot;)
+SetDelayed(f(Pattern(x, Blank()), 3), Condition(x**3, x &gt; 0))
+```
+
+  Copy to clipboard
+
+## Parsing Transformations Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-transformations-reference)
+
+A transformation is a function that accepts the arguments `tokens,
+local_dict, global_dict` and returns a list of transformed tokens. They can be used by passing a list of functions to [`parse_expr()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr) and are applied in the order given.
+
+   sympy.parsing.sympy_parser.standard_transformations: tuple[Callable[[list[tuple[int, str]], dict[str, Any], dict[str, Any]], list[tuple[int, str]]], ...] = (&lt;function lambda_notation&gt;, &lt;function auto_symbol&gt;, &lt;function repeated_decimals&gt;, &lt;function auto_number&gt;, &lt;function factorial_notation&gt;)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations)
+
+Standard transformations for [`parse_expr()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr). Inserts calls to [`Symbol`](https://docs.sympy.org/dev/modules/core.html#sympy.core.symbol.Symbol), [`Integer`](https://docs.sympy.org/dev/modules/core.html#sympy.core.numbers.Integer), and other SymPy datatypes and allows the use of standard factorial notation (e.g. `x!`).
+
+    sympy.parsing.sympy_parser.split_symbols(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L389-L443)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.split_symbols)
+
+Splits symbol names for implicit multiplication.
+
+Intended to let expressions like `xyz` be parsed as `x*y*z`. Does not split Greek character names, so `theta` will *not* become `t*h*e*t*a`. Generally this should be used with `implicit_multiplication`.
+
+    sympy.parsing.sympy_parser.split_symbols_custom(  *predicate: Callable[[str], bool]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L367-L445)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.split_symbols_custom)
+
+Creates a transformation that splits symbol names.
+
+`predicate` should return True if the symbol name is to be split.
+
+For instance, to retain the default behavior but avoid splitting certain symbol names, a predicate like this would work:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr, _token_splittable,
+... standard_transformations, implicit_multiplication,
+... split_symbols_custom)
+&gt;&gt;&gt; def can_split(symbol):
+...     if symbol not in (&#39;list&#39;, &#39;of&#39;, &#39;unsplittable&#39;, &#39;names&#39;):
+...             return _token_splittable(symbol)
+...     return False
+...
+&gt;&gt;&gt; transformation = split_symbols_custom(can_split)
+&gt;&gt;&gt; parse_expr(&#39;unsplittable&#39;, transformations=standard_transformations +
+... (transformation, implicit_multiplication))
+unsplittable
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_multiplication(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L457-L478)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication)
+
+Makes the multiplication operator optional in most cases.
+
+Use this before [`implicit_application()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_application), otherwise expressions like `sin 2x` will be parsed as `x * sin(2)` rather than `sin(2*x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_multiplication)
+&gt;&gt;&gt; transformations = standard_transformations + (implicit_multiplication,)
+&gt;&gt;&gt; parse_expr(&#39;3 x y&#39;, transformations=transformations)
+3*x*y
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_application(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L481-L502)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_application)
+
+Makes parentheses optional in some cases for function calls.
+
+Use this after [`implicit_multiplication()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication), otherwise expressions like `sin 2x` will be parsed as `x * sin(2)` rather than `sin(2*x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_application)
+&gt;&gt;&gt; transformations = standard_transformations + (implicit_application,)
+&gt;&gt;&gt; parse_expr(&#39;cot z + csc z&#39;, transformations=transformations)
+cot(z) + csc(z)
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.function_exponentiation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L315-L364)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.function_exponentiation)
+
+Allows functions to be exponentiated, e.g. `cos**2(x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, function_exponentiation)
+&gt;&gt;&gt; transformations = standard_transformations + (function_exponentiation,)
+&gt;&gt;&gt; parse_expr(&#39;sin**4(x)&#39;, transformations=transformations)
+sin(x)**4
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_multiplication_application(  *result: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L505-L533)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication_application)
+
+Allows a slightly relaxed syntax.
+
+- Parentheses for single-argument method calls are optional.
+- Multiplication is implicit.
+- Symbol names can be split (i.e. spaces are not needed between symbols).
+- Functions can be exponentiated.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_multiplication_application)
+&gt;&gt;&gt; parse_expr(&quot;10sin**2 x**2 + 3xyz + tan theta&quot;,
+... transformations=(standard_transformations +
+... (implicit_multiplication_application,)))
+3*x*y*z + 10*sin(x**2)**2 + tan(theta)
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.rationalize(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L791-L807)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.rationalize)
+
+Converts floats into `Rational`. Run AFTER `auto_number`.
+
+    sympy.parsing.sympy_parser.convert_xor(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L654-L666)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.convert_xor)
+
+Treats XOR, `^`, as exponentiation, `**`.
+
+These are included in [`sympy.parsing.sympy_parser.standard_transformations`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations) and generally don’t need to be manually added by the user.
+
+   sympy.parsing.sympy_parser.lambda_notation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L587-L624)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.lambda_notation)
+
+Substitutes “lambda” with its SymPy equivalent Lambda(). However, the conversion does not take place if only “lambda” is passed because that is a syntax error.
+
+    sympy.parsing.sympy_parser.auto_symbol(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L536-L584)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.auto_symbol)
+
+Inserts calls to `Symbol`/`Function` for undefined variables.
+
+    sympy.parsing.sympy_parser.repeated_decimals(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L669-L754)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.repeated_decimals)
+
+Allows 0.2[1] notation to represent the repeated decimal 0.2111… (19/90)
+
+Run this before auto_number.
+
+    sympy.parsing.sympy_parser.auto_number(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L757-L788)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.auto_number)
+
+Converts numeric literals to use SymPy equivalents.
+
+Complex numbers use `I`, integer literals use `Integer`, and float literals use `Float`.
+
+    sympy.parsing.sympy_parser.factorial_notation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L627-L651)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.factorial_notation)
+
+Allows standard notation for factorial.
+
+## Experimental  Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-mathrm-latex-parsing)
+
+The current implementations are experimental. The behavior, parser backend(s) and API might change in the future. Unlike some of the other parsers,  is designed as a *type-setting* language, not a *computer algebra system* and so can contain typographical conventions that might be interpreted multiple ways.
+
+## Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-functions-reference)
+
+   sympy.parsing.latex.parse_latex(*s*, *strict=False*, *backend=&#39;antlr&#39;*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/__init__.py#L160-L219)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.parse_latex)
+
+Converts the input LaTeX string `s` to a SymPy `Expr`.
+
+  Parameters:
+
+**s** : str
+
+&gt;
+&gt; The LaTeX string to parse. In Python source containing LaTeX,
+&gt; raw strings (denoted with r&quot;, like this one) are preferred,
+&gt; as LaTeX makes liberal use of the \ character, which would
+&gt; trigger escaping in normal Python strings.
+&gt;
+
+**backend** : str, optional
+
+&gt;
+&gt; Currently, there are two backends supported: ANTLR, and Lark.
+&gt; The default setting is to use the ANTLR backend, which can be
+&gt; changed to Lark if preferred.
+&gt; Use backend=&quot;antlr&quot; for the ANTLR-based parser, and
+&gt; backend=&quot;lark&quot; for the Lark-based parser.
+&gt; The backend option is case-sensitive, and must be in
+&gt; all lowercase.
+&gt;
+
+**strict** : bool, optional
+
+&gt;
+&gt; This option is only available with the ANTLR backend.
+&gt; If True, raise an exception if the string cannot be parsed as
+&gt; valid LaTeX. If False, try to recover gracefully from common
+&gt; mistakes.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.latex import parse_latex
+&gt;&gt;&gt; expr = parse_latex(r&quot;\frac {1 + \sqrt {\a}} {\b}&quot;)
+&gt;&gt;&gt; expr
+(sqrt(a) + 1)/b
+&gt;&gt;&gt; expr.evalf(4, subs=dict(a=5, b=2))
+1.618
+&gt;&gt;&gt; func = parse_latex(r&quot;\int_1^\alpha \dfrac{\mathrm{d}t}{t}&quot;, backend=&quot;lark&quot;)
+&gt;&gt;&gt; func.evalf(subs={&quot;alpha&quot;: 2})
+0.693147180559945
+```
+
+  Copy to clipboard
+
+### ANTLR Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-backend)
+
+The ANTLR-based  parser was ported from [latex2sympy](https://github.com/augustt198/latex2sympy). While functional and its API should remain stable, the parsing behavior or backend may change in future releases.
+
+#### ANTLR  Parser Caveats[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-mathrm-latex-parser-caveats)
+
+In its current definition, the parser may fail to fully parse an expression, yet not throw a warning:
+
+```
+parse_latex(r&#39;x -&#39;)
+```
+
+  Copy to clipboard
+
+will simply find `x`. What is covered by this behavior will almost certainly change between releases, and become stricter, more relaxed, or some mix.
+
+### Lark Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-backend)
+
+The Lark-based LaTeX parser is newer, and is intended to eventually completely replace the ANTLR-based parser. It has most of the features that the ANTLR-based parser provides, with some extras.
+
+#### Lark  Parser Features[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-features)
+
+One thing to note is that the Lark backend does not support ill-formed expressions, and it does not try to fix any sort of common mistakes that may have occurred. For example, as mentioned in [the earlier section](https://docs.sympy.org/dev/modules/parsing.html#antlr-parser-caveats), the ANTLR-based parser would simply find `x` if we run:
+
+```
+parse_latex(r&#39;x -&#39;, backend=&#39;antlr&#39;)
+```
+
+  Copy to clipboard
+
+However, running:
+
+```
+parse_latex(r&#39;x -&#39;, backend=&#39;lark&#39;)
+```
+
+  Copy to clipboard
+
+will raise an `lark.exceptions.UnexpectedEOF` exception.
+
+Apart from that, there are a couple of extra things that the Lark-based parser supports that the ANTLR-based parser does not. They are:
+
+1. Detecting ambiguous expressions, and
+2. Allowing user-customization of the  grammar at runtime.
+
+Expressions like  are technically ambiguous  expressions because the  might be a function or a variable name. Lark has the capability to point out these ambiguities and notify the user, or even return all possible interpretations.
+
+The Lark-based parser exposes a number of internals which allow the user to customize the parser’s behavior. For example, the user can specify their own  grammar by passing the path to the grammar file to the `LarkLaTeXParser` while instantiating the parser.
+
+The user can also specify their own custom transformer class to the  class.
+
+The two examples mentioned above can be found in the [test_custom_latex.py](https://github.com/sympy/sympy/blob/395e820b114d2b169483354f1f4ee2f439faa292/sympy/parsing/tests/test_custom_latex.py) file.
+
+#### Lark  Parser Capabilities[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-capabilities)
+
+In order to use the Lark-based LaTeX parser, it is important to know what it can and cannot do. As the parser is still experimental, it supports many things, but some features are still only partially implemented, or not available.
+
+As such, we will list the types of expressions that it can parse, and then list some expression types of interest where it may fail.
+
+Here is a list of the things which are supported:
+
+- Symbols which consist of one letter, e.g., `a`, `b`, `x`, etc. Greek symbols and symbols with subscripts are also supported. Numbers are also supported, as is `\infty`.
+- Symbols with multiple letters are supported, as long as they are wrapped in `\mathit`.
+- Expressions with , , , , and alternative operators like `\cdot`, `\times`, `\div`, etc. If two expressions are next to each other, like  or , then it is treated as implicit multiplication.
+- Relations with , , , , , and .
+- Commonly used functions like   Square roots, factorials, complex conjugation (like ) , , , absolute value (e.g., ). Note that  is parsed as `Abs(Abs(x))`. floor (e.g., ) and ceiling (e.g., ),  and .
+- All the trigonometric functions and their inverses trigonometric functions. Powers like `\sin^4` are also supported. The power  is interpreted as the inverse function (i.e., `\sin^{-1} x` is interpreted as `\arcsin x`).
+- Hyperbolic trigonometric functions (currently only , , and ) and their inverses. As mentioned in the previous point, powers like `\tanh^2` are also supported, and  is interpreted as the inverse function (i.e., `\tanh^{-1} x` is interpreted as `\arctanh x`).
+- `AppliedFunctions`, like .
+- All types of fractions (`\frac`, `\tfrac`, `\dfrac`, `\nicefrac`) and binomials (`\binom`, `\tbinom`, `\dbinom`) are supported.
+- Integrals, both definite and indefinite. When the integrand is a fraction, having the differential in the numerator is allowed. The differential is allowed to be `d`, `\text{d}`, or `\mathrm{d}`.
+- Derivatives in one variable. I.e., things like . Higher order derivatives and partial derivatives are not supported yet.
+- Limits in one variable. E.g., .
+- Sums and products with simple conditions. For example,  is allowed because the condition on  is simple. An expression like  is not allowed because the condition on  in the subscript is complicated. Expressions with the index variable specified in the superscript are also allowed. For example,  is parsed correctly.
+- Bra (e.g., ), and Ket (e.g., ) notation. Parsing Inner (e.g., ) and Outer Products (e.g., ) is also supported.
+
+Here is a(n incomplete) list of things which are currently not supported, which may be added in the future:
+
+- Matrices. Stuff like `\begin{env}...\end{env}`, where `env` is any of `matrix`, `bmatrix`, `pmatrix`, `smallmatrix`, and `array`.
+- Matrix operations like matrix-matrix addition, scalar-matrix multiplication, matrix-matrix multiplication.
+- Higher order derivatives and partial derivatives.
+- Double and triple integrals.
+
+#### Lark  Parser Functions[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-functions)
+
+   sympy.parsing.latex.parse_latex_lark(*s: str*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/latex_parser.py#L113-L122)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.parse_latex_lark)
+
+Experimental LaTeX parser using Lark.
+
+This function is still under development and its API may change with the next releases of SymPy.
+
+#### Lark  Parser Classes[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-classes)
+
+   class sympy.parsing.latex.lark.LarkLaTeXParser(  *print_debug_output=False*, *transform=True*, *grammar_file=None*, *transformer=None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/latex_parser.py#L14-L106)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.LarkLaTeXParser)
+
+Class for converting input  strings into SymPy Expressions. It holds all the necessary internal data for doing so, and exposes hooks for customizing its behavior.
+
+  Parameters:
+
+**print_debug_output** : bool, optional
+
+&gt;
+&gt; If set to True, prints debug output to the logger. Defaults to False.
+&gt;
+
+**transform** : bool, optional
+
+&gt;
+&gt; If set to True, the class runs the Transformer class on the parse tree
+&gt; generated by running Lark.parse on the input string. Defaults to True.
+&gt; Setting it to False can help with debugging the  grammar.
+&gt;
+
+**grammar_file** : str, optional
+
+&gt;
+&gt; The path to the grammar file that the parser should use. If set to None,
+&gt; it uses the default grammar, which is in grammar/latex.lark, relative to
+&gt; the sympy/parsing/latex/lark/ directory.
+&gt;
+
+**transformer** : str, optional
+
+&gt;
+&gt; The name of the Transformer class to use. If set to None, it uses the
+&gt; default transformer class, which is TransformToSymPyExpr().
+&gt;
+
+      class sympy.parsing.latex.lark.TransformToSymPyExpr[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/transformer.py#L27-L670)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.TransformToSymPyExpr)
+
+Returns a SymPy expression that is generated by traversing the `lark.Tree` passed to the `.transform()` function.
+
+  Parameters:
+
+**visit_tokens** : bool, optional
+
+&gt;
+&gt; For information about what this option does, see here.
+&gt; Note that the option must be set to True for the default parser to work.
+&gt;
+
+Notes
+
+**This class is never supposed to be used directly.**
+
+In order to tweak the behavior of this class, it has to be subclassed and then after the required modifications are made, the name of the new class should be passed to the [`LarkLaTeXParser`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.LarkLaTeXParser) class by using the `transformer` argument in the constructor.
+
+## Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-exceptions-reference)
+
+   class sympy.parsing.latex.LaTeXParsingError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/errors.py#L2-L3)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.LaTeXParsingError)
+
+## Experimental SMT-LIB Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-smt-lib-parsing)
+
+Warning
+
+The SMT-LIB parser is still under heavy development. The `parse_smtlib` function is entirely experimental, and its API may change in future versions of SymPy.
+
+The SMT-LIB parser is based on [Lark](https://lark-parser.readthedocs.io/en/latest/), so the `lark` Python package needs to be installed in order to use it.
+
+## SMT-LIB Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-functions-reference)
+
+   sympy.parsing.smtlib.parse_smtlib(*s*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L96-L150)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.parse_smtlib)
+
+Parses a string in the SMT-LIB format and returns the declared symbols and the list of assertions.
+
+  Parameters:
+
+**s** : str
+
+&gt;
+&gt; The SMT-LIB source text to parse. This must be the text itself; to
+&gt; parse a file, read its contents first, e.g. with
+&gt; Path(filename).read_text().
+&gt;
+
+  Returns:
+
+tuple
+
+&gt;
+&gt; A tuple (symbols, assertions) where symbols is a dictionary
+&gt; mapping symbol names to SymPy symbols, and assertions is a list
+&gt; of SymPy expressions representing the assertions.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.smtlib import parse_smtlib
+&gt;&gt;&gt; source = &#39;&#39;&#39;
+... (declare-const x Int)
+... (declare-const y Int)
+... (assert (= (+ x y) 10))
+... &#39;&#39;&#39;
+&gt;&gt;&gt; symbols, assertions = parse_smtlib(source)
+&gt;&gt;&gt; symbols[&#39;x&#39;]
+x
+&gt;&gt;&gt; assertions
+[Q.integer(x), Q.integer(y), Eq(x + y, 10)]
+```
+
+  Copy to clipboard
+
+Notes
+
+Declaring a constant of sort `Int` or `Real` appends a corresponding assumption predicate (`Q.integer` or `Q.real`) to the returned `assertions` list, as shown in the example above. This is intentional: the sort information is part of what the input asserts about each symbol, and including it in the assertions makes it available to functions that consume them, such as [`satisfiable()`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.inference.satisfiable). Constants of other sorts (including uninterpreted sorts) produce no assumption predicate.
+
+## SMT-LIB Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-exceptions-reference)
+
+   class sympy.parsing.smtlib.SMTLibSyntaxError(*message*, *line=None*, *col=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L18-L23)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.SMTLibSyntaxError)
+
+Raised when the input is not syntactically valid SMT-LIB.
+
+    class sympy.parsing.smtlib.UnknownSMTLibCommandError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L26-L27)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.UnknownSMTLibCommandError)
+
+Raised for SMT-LIB commands that the parser does not recognize.
+
+    class sympy.parsing.smtlib.UnknownSMTLibOperatorError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L30-L32)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.UnknownSMTLibOperatorError)
+
+Raised for operators or functions in a term that the parser does not recognize.
+
+## SymPy Expression Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing.sym_expr)
+
+   class sympy.parsing.sym_expr.SymPyExpression(*source_code=None*, *mode=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L14-L280)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression)
+
+Class to store and handle SymPy expressions
+
+This class will hold SymPy Expressions and handle the API for the conversion to and from different languages.
+
+It works with the C and the Fortran Parser to generate SymPy expressions which are stored here and which can be converted to multiple language’s source code.
+
+Notes
+
+The module and its API are currently under development and experimental and can be changed during development.
+
+The Fortran parser does not support numeric assignments, so all the variables have been Initialized to zero.
+
+The module also depends on external dependencies:
+
+- LFortran which is required to use the Fortran parser
+- Clang which is required for the C parser
+
+Examples
+
+Example of parsing C code:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src = &#39;&#39;&#39;
+... int a,b;
+... float c = 2, d =4;
+... &#39;&#39;&#39;
+&gt;&gt;&gt; a = SymPyExpression(src, &#39;c&#39;)
+&gt;&gt;&gt; a.return_expr()
+[Declaration(Variable(a, type=intc)),
+Declaration(Variable(b, type=intc)),
+Declaration(Variable(c, type=float32, value=2.0)),
+Declaration(Variable(d, type=float32, value=4.0))]
+```
+
+  Copy to clipboard
+
+An example of variable definition:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_c()
+[&#39;int a = 0&#39;, &#39;int b = 0&#39;, &#39;int c = 0&#39;, &#39;int d = 0&#39;, &#39;double p = 0.0&#39;, &#39;double q = 0.0&#39;, &#39;double r = 0.0&#39;, &#39;double s = 0.0&#39;]
+```
+
+  Copy to clipboard
+
+An example of Assignment:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer :: a, b, c, d, e
+... d = a + b - c
+... e = b * d + c * e / a
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_python()
+[&#39;a = 0&#39;, &#39;b = 0&#39;, &#39;c = 0&#39;, &#39;d = 0&#39;, &#39;e = 0&#39;, &#39;d = a + b - c&#39;, &#39;e = b*d + c*e/a&#39;]
+```
+
+  Copy to clipboard
+
+An example of function definition:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src = &#39;&#39;&#39;
+... integer function f(a,b)
+... integer, intent(in) :: a, b
+... integer :: r
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; a = SymPyExpression(src, &#39;f&#39;)
+&gt;&gt;&gt; a.convert_to_python()
+[&#39;def f(a, b):\n   f = 0\n    r = 0\n    return f&#39;]
+```
+
+  Copy to clipboard         convert_to_c()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L202-L227)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_c)
+
+Returns a list with the c source code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_c()
+[&#39;int a = 0&#39;, &#39;int b = 0&#39;, &#39;int c = 0&#39;, &#39;int d = 0&#39;, &#39;double p = 0.0&#39;, &#39;double q = 0.0&#39;, &#39;double r = 0.0&#39;, &#39;double s = 0.0&#39;, &#39;c = a/b;&#39;, &#39;d = c/a;&#39;, &#39;s = p/q;&#39;, &#39;r = q/p;&#39;]
+```
+
+  Copy to clipboard          convert_to_expr(*src_code*, *mode*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L121-L175)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_expr)
+
+Converts the given source code to SymPy Expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer function f(a,b) result(r)
+... integer, intent(in) :: a, b
+... integer :: x
+... r = a + b -x
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.return_expr()
+[FunctionDefinition(integer, name=f, parameters=(Variable(a), Variable(b)), body=CodeBlock(
+Declaration(Variable(r, type=integer, value=0)),
+Declaration(Variable(x, type=integer, value=0)),
+Assignment(Variable(r), a + b - x),
+Return(Variable(r))
+))]
+```
+
+  Copy to clipboard
+
+Attributes
+
+src_code
+
+(String) the source code or filename of the source code that is to be converted
+
+mode: String
+
+the mode to determine which parser is to be used according to the language of the source code f or F for Fortran c or C for C/C++
+
+        convert_to_fortran()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L229-L252)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_fortran)
+
+Returns a list with the fortran source code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_fortran()
+[&#39;      integer*4 a&#39;, &#39;      integer*4 b&#39;, &#39;      integer*4 c&#39;, &#39;      integer*4 d&#39;, &#39;      real*8 p&#39;, &#39;      real*8 q&#39;, &#39;      real*8 r&#39;, &#39;      real*8 s&#39;, &#39;      c = a/b&#39;, &#39;      d = c/a&#39;, &#39;      s = p/q&#39;, &#39;      r = q/p&#39;]
+```
+
+  Copy to clipboard          convert_to_python()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L177-L200)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_python)
+
+Returns a list with Python code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_python()
+[&#39;a = 0&#39;, &#39;b = 0&#39;, &#39;c = 0&#39;, &#39;d = 0&#39;, &#39;p = 0.0&#39;, &#39;q = 0.0&#39;, &#39;r = 0.0&#39;, &#39;s = 0.0&#39;, &#39;c = a/b&#39;, &#39;d = c/a&#39;, &#39;s = p/q&#39;, &#39;r = q/p&#39;]
+```
+
+  Copy to clipboard          return_expr()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L254-L280)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.return_expr)
+
+Returns the expression list
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer function f(a,b)
+... integer, intent(in) :: a, b
+... integer :: r
+... r = a+b
+... f = r
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.return_expr()
+[FunctionDefinition(integer, name=f, parameters=(Variable(a), Variable(b)), body=CodeBlock(
+Declaration(Variable(f, type=integer, value=0)),
+Declaration(Variable(r, type=integer, value=0)),
+Assignment(Variable(f), Variable(r)),
+Return(Variable(f))
+))]
+```
+
+  Copy to clipboard
+
+## Runtime Installation[¶](https://docs.sympy.org/dev/modules/parsing.html#runtime-installation)
+
+The currently-packaged LaTeX parser backend is partially generated with [ANTLR4](https://www.antlr.org/), but to use the parser, you only need the `antlr4` Python package available.
+
+Depending on your package manager, you can install the right package with, for example, `pip`:
+
+```
+$ pip install antlr4-python3-runtime==4.11
+```
+
+  Copy to clipboard
+
+or `conda`:
+
+```
+$ conda install -c conda-forge antlr-python-runtime==4.11
+```
+
+  Copy to clipboard
+
+The C parser depends on `clang` and the Fortran parser depends on `LFortran`. You can install these packages using:
+
+```
+$ conda install -c conda-forge lfortran clang
+```
+
+  Copy to clipboard
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing)</h3><pre># Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing)
+</pre></article><article id="section-0002"><h3>Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-functions-reference)</h3><pre># Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-functions-reference)
+
+sympy.parsing.sympy_parser.parse_expr(*s: str, local_dict: dict[str, ~typing.Any] | None = None, transformations: tuple[~typing.Callable[[list[tuple[int, str]], dict[str, ~typing.Any], dict[str, ~typing.Any]], list[tuple[int, str]]], ...] | str = (&lt;function lambda_notation&gt;, &lt;function auto_symbol&gt;, &lt;function repeated_decimals&gt;, &lt;function auto_number&gt;, &lt;function factorial_notation&gt;), global_dict: dict[str, ~typing.Any] | None = None, evaluate=True*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L913-L1093)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr)
+
+Converts the string `s` to a SymPy expression, in `local_dict`.
+
+Warning
+
+Note that this function uses `eval`, and thus shouldn’t be used on unsanitized input.
+
+   Parameters:
+
+**s** : str
+
+&gt;
+&gt; The string to parse.
+&gt;
+
+**local_dict** : dict, optional
+
+&gt;
+&gt; A dictionary of local variables to use when parsing.
+&gt;
+
+**global_dict** : dict, optional
+
+&gt;
+&gt; A dictionary of global variables. By default, this is initialized
+&gt; with from sympy import *; provide this parameter to override
+&gt; this behavior (for instance, to parse &quot;Q &amp; S&quot;).
+&gt;
+
+**transformations** : tuple or str
+
+&gt;
+&gt; A tuple of transformation functions used to modify the tokens of the
+&gt; parsed expression before evaluation. The default transformations
+&gt; convert numeric literals into their SymPy equivalents, convert
+&gt; undefined variables into SymPy symbols, and allow the use of standard
+&gt; mathematical factorial notation (e.g. x!). Selection via
+&gt; string is available (see below).
+&gt;
+
+**evaluate** : bool, optional
+
+&gt;
+&gt; When False, the order of the arguments will remain as they were in the
+&gt; string and automatic simplification that would normally occur is
+&gt; suppressed. (see examples)
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import parse_expr
+&gt;&gt;&gt; parse_expr(&quot;1/2&quot;)
+1/2
+&gt;&gt;&gt; type(_)
+&lt;class &#39;sympy.core.numbers.Half&#39;&gt;
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import standard_transformations,\
+... implicit_multiplication_application
+&gt;&gt;&gt; transformations = (standard_transformations +
+...     (implicit_multiplication_application,))
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=transformations)
+2*x
+```
+
+  Copy to clipboard
+
+When evaluate=False, some automatic simplifications will not occur:
+
+```
+&gt;&gt;&gt; parse_expr(&quot;2**3&quot;), parse_expr(&quot;2**3&quot;, evaluate=False)
+(8, 2**3)
+```
+
+  Copy to clipboard
+
+In addition the order of the arguments will not be made canonical. This feature allows one to tell exactly how the expression was entered:
+
+```
+&gt;&gt;&gt; a = parse_expr(&#39;1 + x&#39;, evaluate=False)
+&gt;&gt;&gt; b = parse_expr(&#39;x + 1&#39;, evaluate=False)
+&gt;&gt;&gt; a == b
+False
+&gt;&gt;&gt; a.args
+(1, x)
+&gt;&gt;&gt; b.args
+(x, 1)
+```
+
+  Copy to clipboard
+
+Note, however, that when these expressions are printed they will appear the same:
+
+```
+&gt;&gt;&gt; assert str(a) == str(b)
+```
+
+  Copy to clipboard
+
+As a convenience, transformations can be seen by printing `transformations`:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import transformations
+```
+
+  Copy to clipboard
+
+```
+&gt;&gt;&gt; print(transformations)
+0: lambda_notation
+1: auto_symbol
+2: repeated_decimals
+3: auto_number
+4: factorial_notation
+5: implicit_multiplication_application
+6: convert_xor
+7: implicit_application
+8: implicit_multiplication
+9: convert_equals_signs
+10: function_exponentiation
+11: rationalize
+```
+
+  Copy to clipboard
+
+The `T` object provides a way to select these transformations:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import T
+```
+
+  Copy to clipboard
+
+If you print it, you will see the same list as shown above.
+
+```
+&gt;&gt;&gt; str(T) == str(transformations)
+True
+```
+
+  Copy to clipboard
+
+Standard slicing will return a tuple of transformations:
+
+```
+&gt;&gt;&gt; T[:5] == standard_transformations
+True
+```
+
+  Copy to clipboard
+
+So `T` can be used to specify the parsing transformations:
+
+```
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=T[:5])
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+&gt;&gt;&gt; parse_expr(&quot;2x&quot;, transformations=T[:6])
+2*x
+&gt;&gt;&gt; parse_expr(&#39;.3&#39;, transformations=T[3, 11])
+3/10
+&gt;&gt;&gt; parse_expr(&#39;.3x&#39;, transformations=T[:])
+3*x/10
+```
+
+  Copy to clipboard
+
+As a further convenience, strings ‘implicit’ and ‘all’ can be used to select 0-5 and all the transformations, respectively.
+
+```
+&gt;&gt;&gt; parse_expr(&#39;.3x&#39;, transformations=&#39;all&#39;)
+3*x/10
+```
+
+  Copy to clipboard
+
+See also
+
+[`stringify_expr`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.stringify_expr), [`eval_expr`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.eval_expr), [`standard_transformations`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations), [`implicit_multiplication_application`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication_application)
+
+     sympy.parsing.sympy_parser.stringify_expr(  *s: str*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*, *transformations: tuple[Callable[[list[tuple[int, str]], dict[str, Any], dict[str, Any]], list[tuple[int, str]]], ...]*,  ) → str[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L883-L899)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.stringify_expr)
+
+Converts the string `s` to Python code, in `local_dict`
+
+Generally, `parse_expr` should be used.
+
+    sympy.parsing.sympy_parser.eval_expr(  *code*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L902-L910)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.eval_expr)
+
+Evaluate Python code generated by `stringify_expr`.
+
+Generally, `parse_expr` should be used.
+
+    sympy.parsing.maxima.parse_maxima(*str*, *globals=None*, *name_dict={}*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/maxima.py#L52-L72)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.maxima.parse_maxima)    sympy.parsing.mathematica.parse_mathematica(*s*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/mathematica.py#L33-L91)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.mathematica.parse_mathematica)
+
+Translate a string containing a Wolfram Mathematica expression to a SymPy expression.
+
+If the translator is unable to find a suitable SymPy expression, the `FullForm` of the Mathematica expression will be output, using SymPy `Function` objects as nodes of the syntax tree.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.mathematica import parse_mathematica
+&gt;&gt;&gt; parse_mathematica(&quot;Sin[x]^2 Tan[y]&quot;)
+sin(x)**2*tan(y)
+&gt;&gt;&gt; e = parse_mathematica(&quot;F[7,5,3]&quot;)
+&gt;&gt;&gt; e
+F(7, 5, 3)
+&gt;&gt;&gt; from sympy import Function, Max, Min
+&gt;&gt;&gt; e.replace(Function(&quot;F&quot;), lambda *x: Max(*x)*Min(*x))
+21
+```
+
+  Copy to clipboard
+
+Both standard input form and Mathematica full form are supported:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;x*(a + b)&quot;)
+x*(a + b)
+&gt;&gt;&gt; parse_mathematica(&quot;Times[x, Plus[a, b]]&quot;)
+x*(a + b)
+```
+
+  Copy to clipboard
+
+Derivatives written with a prime are translated as such:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;f&#39;[x] + f&#39;&#39;[x]&quot;)
+Derivative(f(x), x) + Derivative(f(x), (x, 2))
+&gt;&gt;&gt; parse_mathematica(&quot;Sin&#39;[x]&quot;)
+cos(x)
+```
+
+  Copy to clipboard
+
+To get a matrix from Wolfram’s code:
+
+```
+&gt;&gt;&gt; m = parse_mathematica(&quot;{{a, b}, {c, d}}&quot;)
+&gt;&gt;&gt; m
+((a, b), (c, d))
+&gt;&gt;&gt; from sympy import Matrix
+&gt;&gt;&gt; Matrix(m)
+Matrix([
+[a, b],
+[c, d]])
+```
+
+  Copy to clipboard
+
+If the translation into equivalent SymPy expressions fails, an SymPy expression equivalent to Wolfram Mathematica’s “FullForm” will be created:
+
+```
+&gt;&gt;&gt; parse_mathematica(&quot;x_.&quot;)
+Optional(Pattern(x, Blank()))
+&gt;&gt;&gt; parse_mathematica(&quot;Plus @@ {x, y, z}&quot;)
+Apply(Plus, (x, y, z))
+&gt;&gt;&gt; parse_mathematica(&quot;f[x_, 3] := x^3 /; x &gt; 0&quot;)
+SetDelayed(f(Pattern(x, Blank()), 3), Condition(x**3, x &gt; 0))
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0003"><h3>Parsing Transformations Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-transformations-reference)</h3><pre># Parsing Transformations Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#parsing-transformations-reference)
+
+A transformation is a function that accepts the arguments `tokens,
+local_dict, global_dict` and returns a list of transformed tokens. They can be used by passing a list of functions to [`parse_expr()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr) and are applied in the order given.
+
+   sympy.parsing.sympy_parser.standard_transformations: tuple[Callable[[list[tuple[int, str]], dict[str, Any], dict[str, Any]], list[tuple[int, str]]], ...] = (&lt;function lambda_notation&gt;, &lt;function auto_symbol&gt;, &lt;function repeated_decimals&gt;, &lt;function auto_number&gt;, &lt;function factorial_notation&gt;)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations)
+
+Standard transformations for [`parse_expr()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.parse_expr). Inserts calls to [`Symbol`](https://docs.sympy.org/dev/modules/core.html#sympy.core.symbol.Symbol), [`Integer`](https://docs.sympy.org/dev/modules/core.html#sympy.core.numbers.Integer), and other SymPy datatypes and allows the use of standard factorial notation (e.g. `x!`).
+
+    sympy.parsing.sympy_parser.split_symbols(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L389-L443)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.split_symbols)
+
+Splits symbol names for implicit multiplication.
+
+Intended to let expressions like `xyz` be parsed as `x*y*z`. Does not split Greek character names, so `theta` will *not* become `t*h*e*t*a`. Generally this should be used with `implicit_multiplication`.
+
+    sympy.parsing.sympy_parser.split_symbols_custom(  *predicate: Callable[[str], bool]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L367-L445)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.split_symbols_custom)
+
+Creates a transformation that splits symbol names.
+
+`predicate` should return True if the symbol name is to be split.
+
+For instance, to retain the default behavior but avoid splitting certain symbol names, a predicate like this would work:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr, _token_splittable,
+... standard_transformations, implicit_multiplication,
+... split_symbols_custom)
+&gt;&gt;&gt; def can_split(symbol):
+...     if symbol not in (&#39;list&#39;, &#39;of&#39;, &#39;unsplittable&#39;, &#39;names&#39;):
+...             return _token_splittable(symbol)
+...     return False
+...
+&gt;&gt;&gt; transformation = split_symbols_custom(can_split)
+&gt;&gt;&gt; parse_expr(&#39;unsplittable&#39;, transformations=standard_transformations +
+... (transformation, implicit_multiplication))
+unsplittable
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_multiplication(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L457-L478)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication)
+
+Makes the multiplication operator optional in most cases.
+
+Use this before [`implicit_application()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_application), otherwise expressions like `sin 2x` will be parsed as `x * sin(2)` rather than `sin(2*x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_multiplication)
+&gt;&gt;&gt; transformations = standard_transformations + (implicit_multiplication,)
+&gt;&gt;&gt; parse_expr(&#39;3 x y&#39;, transformations=transformations)
+3*x*y
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_application(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L481-L502)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_application)
+
+Makes parentheses optional in some cases for function calls.
+
+Use this after [`implicit_multiplication()`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication), otherwise expressions like `sin 2x` will be parsed as `x * sin(2)` rather than `sin(2*x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_application)
+&gt;&gt;&gt; transformations = standard_transformations + (implicit_application,)
+&gt;&gt;&gt; parse_expr(&#39;cot z + csc z&#39;, transformations=transformations)
+cot(z) + csc(z)
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.function_exponentiation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L315-L364)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.function_exponentiation)
+
+Allows functions to be exponentiated, e.g. `cos**2(x)`.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, function_exponentiation)
+&gt;&gt;&gt; transformations = standard_transformations + (function_exponentiation,)
+&gt;&gt;&gt; parse_expr(&#39;sin**4(x)&#39;, transformations=transformations)
+sin(x)**4
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.implicit_multiplication_application(  *result: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  ) → list[tuple[int, str]][[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L505-L533)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.implicit_multiplication_application)
+
+Allows a slightly relaxed syntax.
+
+- Parentheses for single-argument method calls are optional.
+- Multiplication is implicit.
+- Symbol names can be split (i.e. spaces are not needed between symbols).
+- Functions can be exponentiated.
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sympy_parser import (parse_expr,
+... standard_transformations, implicit_multiplication_application)
+&gt;&gt;&gt; parse_expr(&quot;10sin**2 x**2 + 3xyz + tan theta&quot;,
+... transformations=(standard_transformations +
+... (implicit_multiplication_application,)))
+3*x*y*z + 10*sin(x**2)**2 + tan(theta)
+```
+
+  Copy to clipboard          sympy.parsing.sympy_parser.rationalize(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L791-L807)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.rationalize)
+
+Converts floats into `Rational`. Run AFTER `auto_number`.
+
+    sympy.parsing.sympy_parser.convert_xor(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L654-L666)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.convert_xor)
+
+Treats XOR, `^`, as exponentiation, `**`.
+
+These are included in [`sympy.parsing.sympy_parser.standard_transformations`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.standard_transformations) and generally don’t need to be manually added by the user.
+
+   sympy.parsing.sympy_parser.lambda_notation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L587-L624)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.lambda_notation)
+
+Substitutes “lambda” with its SymPy equivalent Lambda(). However, the conversion does not take place if only “lambda” is passed because that is a syntax error.
+
+    sympy.parsing.sympy_parser.auto_symbol(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L536-L584)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.auto_symbol)
+
+Inserts calls to `Symbol`/`Function` for undefined variables.
+
+    sympy.parsing.sympy_parser.repeated_decimals(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L669-L754)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.repeated_decimals)
+
+Allows 0.2[1] notation to represent the repeated decimal 0.2111… (19/90)
+
+Run this before auto_number.
+
+    sympy.parsing.sympy_parser.auto_number(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L757-L788)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.auto_number)
+
+Converts numeric literals to use SymPy equivalents.
+
+Complex numbers use `I`, integer literals use `Integer`, and float literals use `Float`.
+
+    sympy.parsing.sympy_parser.factorial_notation(  *tokens: list[tuple[int, str]]*, *local_dict: dict[str, Any]*, *global_dict: dict[str, Any]*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sympy_parser.py#L627-L651)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sympy_parser.factorial_notation)
+
+Allows standard notation for factorial.
+</pre></article><article id="section-0004"><h3>Experimental  Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-mathrm-latex-parsing)</h3><pre># Experimental  Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-mathrm-latex-parsing)
+
+The current implementations are experimental. The behavior, parser backend(s) and API might change in the future. Unlike some of the other parsers,  is designed as a *type-setting* language, not a *computer algebra system* and so can contain typographical conventions that might be interpreted multiple ways.
+</pre></article><article id="section-0005"><h3>Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-functions-reference)</h3><pre># Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-functions-reference)
+
+sympy.parsing.latex.parse_latex(*s*, *strict=False*, *backend=&#39;antlr&#39;*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/__init__.py#L160-L219)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.parse_latex)
+
+Converts the input LaTeX string `s` to a SymPy `Expr`.
+
+  Parameters:
+
+**s** : str
+
+&gt;
+&gt; The LaTeX string to parse. In Python source containing LaTeX,
+&gt; raw strings (denoted with r&quot;, like this one) are preferred,
+&gt; as LaTeX makes liberal use of the \ character, which would
+&gt; trigger escaping in normal Python strings.
+&gt;
+
+**backend** : str, optional
+
+&gt;
+&gt; Currently, there are two backends supported: ANTLR, and Lark.
+&gt; The default setting is to use the ANTLR backend, which can be
+&gt; changed to Lark if preferred.
+&gt; Use backend=&quot;antlr&quot; for the ANTLR-based parser, and
+&gt; backend=&quot;lark&quot; for the Lark-based parser.
+&gt; The backend option is case-sensitive, and must be in
+&gt; all lowercase.
+&gt;
+
+**strict** : bool, optional
+
+&gt;
+&gt; This option is only available with the ANTLR backend.
+&gt; If True, raise an exception if the string cannot be parsed as
+&gt; valid LaTeX. If False, try to recover gracefully from common
+&gt; mistakes.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.latex import parse_latex
+&gt;&gt;&gt; expr = parse_latex(r&quot;\frac {1 + \sqrt {\a}} {\b}&quot;)
+&gt;&gt;&gt; expr
+(sqrt(a) + 1)/b
+&gt;&gt;&gt; expr.evalf(4, subs=dict(a=5, b=2))
+1.618
+&gt;&gt;&gt; func = parse_latex(r&quot;\int_1^\alpha \dfrac{\mathrm{d}t}{t}&quot;, backend=&quot;lark&quot;)
+&gt;&gt;&gt; func.evalf(subs={&quot;alpha&quot;: 2})
+0.693147180559945
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0006"><h3>ANTLR Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-backend)</h3><pre># ANTLR Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-backend)
+
+The ANTLR-based  parser was ported from [latex2sympy](https://github.com/augustt198/latex2sympy). While functional and its API should remain stable, the parsing behavior or backend may change in future releases.
+
+#### ANTLR  Parser Caveats[¶](https://docs.sympy.org/dev/modules/parsing.html#antlr-mathrm-latex-parser-caveats)
+
+In its current definition, the parser may fail to fully parse an expression, yet not throw a warning:
+
+```
+parse_latex(r&#39;x -&#39;)
+```
+
+  Copy to clipboard
+
+will simply find `x`. What is covered by this behavior will almost certainly change between releases, and become stricter, more relaxed, or some mix.
+</pre></article><article id="section-0007"><h3>Lark Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-backend)</h3><pre># Lark Backend[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-backend)
+
+The Lark-based LaTeX parser is newer, and is intended to eventually completely replace the ANTLR-based parser. It has most of the features that the ANTLR-based parser provides, with some extras.
+
+#### Lark  Parser Features[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-features)
+
+One thing to note is that the Lark backend does not support ill-formed expressions, and it does not try to fix any sort of common mistakes that may have occurred. For example, as mentioned in [the earlier section](https://docs.sympy.org/dev/modules/parsing.html#antlr-parser-caveats), the ANTLR-based parser would simply find `x` if we run:
+
+```
+parse_latex(r&#39;x -&#39;, backend=&#39;antlr&#39;)
+```
+
+  Copy to clipboard
+
+However, running:
+
+```
+parse_latex(r&#39;x -&#39;, backend=&#39;lark&#39;)
+```
+
+  Copy to clipboard
+
+will raise an `lark.exceptions.UnexpectedEOF` exception.
+
+Apart from that, there are a couple of extra things that the Lark-based parser supports that the ANTLR-based parser does not. They are:
+
+1. Detecting ambiguous expressions, and
+2. Allowing user-customization of the  grammar at runtime.
+
+Expressions like  are technically ambiguous  expressions because the  might be a function or a variable name. Lark has the capability to point out these ambiguities and notify the user, or even return all possible interpretations.
+
+The Lark-based parser exposes a number of internals which allow the user to customize the parser’s behavior. For example, the user can specify their own  grammar by passing the path to the grammar file to the `LarkLaTeXParser` while instantiating the parser.
+
+The user can also specify their own custom transformer class to the  class.
+
+The two examples mentioned above can be found in the [test_custom_latex.py](https://github.com/sympy/sympy/blob/395e820b114d2b169483354f1f4ee2f439faa292/sympy/parsing/tests/test_custom_latex.py) file.
+
+#### Lark  Parser Capabilities[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-capabilities)
+
+In order to use the Lark-based LaTeX parser, it is important to know what it can and cannot do. As the parser is still experimental, it supports many things, but some features are still only partially implemented, or not available.
+
+As such, we will list the types of expressions that it can parse, and then list some expression types of interest where it may fail.
+
+Here is a list of the things which are supported:
+
+- Symbols which consist of one letter, e.g., `a`, `b`, `x`, etc. Greek symbols and symbols with subscripts are also supported. Numbers are also supported, as is `\infty`.
+- Symbols with multiple letters are supported, as long as they are wrapped in `\mathit`.
+- Expressions with , , , , and alternative operators like `\cdot`, `\times`, `\div`, etc. If two expressions are next to each other, like  or , then it is treated as implicit multiplication.
+- Relations with , , , , , and .
+- Commonly used functions like   Square roots, factorials, complex conjugation (like ) , , , absolute value (e.g., ). Note that  is parsed as `Abs(Abs(x))`. floor (e.g., ) and ceiling (e.g., ),  and .
+- All the trigonometric functions and their inverses trigonometric functions. Powers like `\sin^4` are also supported. The power  is interpreted as the inverse function (i.e., `\sin^{-1} x` is interpreted as `\arcsin x`).
+- Hyperbolic trigonometric functions (currently only , , and ) and their inverses. As mentioned in the previous point, powers like `\tanh^2` are also supported, and  is interpreted as the inverse function (i.e., `\tanh^{-1} x` is interpreted as `\arctanh x`).
+- `AppliedFunctions`, like .
+- All types of fractions (`\frac`, `\tfrac`, `\dfrac`, `\nicefrac`) and binomials (`\binom`, `\tbinom`, `\dbinom`) are supported.
+- Integrals, both definite and indefinite. When the integrand is a fraction, having the differential in the numerator is allowed. The differential is allowed to be `d`, `\text{d}`, or `\mathrm{d}`.
+- Derivatives in one variable. I.e., things like . Higher order derivatives and partial derivatives are not supported yet.
+- Limits in one variable. E.g., .
+- Sums and products with simple conditions. For example,  is allowed because the condition on  is simple. An expression like  is not allowed because the condition on  in the subscript is complicated. Expressions with the index variable specified in the superscript are also allowed. For example,  is parsed correctly.
+- Bra (e.g., ), and Ket (e.g., ) notation. Parsing Inner (e.g., ) and Outer Products (e.g., ) is also supported.
+
+Here is a(n incomplete) list of things which are currently not supported, which may be added in the future:
+
+- Matrices. Stuff like `\begin{env}...\end{env}`, where `env` is any of `matrix`, `bmatrix`, `pmatrix`, `smallmatrix`, and `array`.
+- Matrix operations like matrix-matrix addition, scalar-matrix multiplication, matrix-matrix multiplication.
+- Higher order derivatives and partial derivatives.
+- Double and triple integrals.
+
+#### Lark  Parser Functions[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-functions)
+
+   sympy.parsing.latex.parse_latex_lark(*s: str*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/latex_parser.py#L113-L122)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.parse_latex_lark)
+
+Experimental LaTeX parser using Lark.
+
+This function is still under development and its API may change with the next releases of SymPy.
+
+#### Lark  Parser Classes[¶](https://docs.sympy.org/dev/modules/parsing.html#lark-mathrm-latex-parser-classes)
+
+   class sympy.parsing.latex.lark.LarkLaTeXParser(  *print_debug_output=False*, *transform=True*, *grammar_file=None*, *transformer=None*,  )[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/latex_parser.py#L14-L106)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.LarkLaTeXParser)
+
+Class for converting input  strings into SymPy Expressions. It holds all the necessary internal data for doing so, and exposes hooks for customizing its behavior.
+
+  Parameters:
+
+**print_debug_output** : bool, optional
+
+&gt;
+&gt; If set to True, prints debug output to the logger. Defaults to False.
+&gt;
+
+**transform** : bool, optional
+
+&gt;
+&gt; If set to True, the class runs the Transformer class on the parse tree
+&gt; generated by running Lark.parse on the input string. Defaults to True.
+&gt; Setting it to False can help with debugging the  grammar.
+&gt;
+
+**grammar_file** : str, optional
+
+&gt;
+&gt; The path to the grammar file that the parser should use. If set to None,
+&gt; it uses the default grammar, which is in grammar/latex.lark, relative to
+&gt; the sympy/parsing/latex/lark/ directory.
+&gt;
+
+**transformer** : str, optional
+
+&gt;
+&gt; The name of the Transformer class to use. If set to None, it uses the
+&gt; default transformer class, which is TransformToSymPyExpr().
+&gt;
+
+      class sympy.parsing.latex.lark.TransformToSymPyExpr[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/lark/transformer.py#L27-L670)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.TransformToSymPyExpr)
+
+Returns a SymPy expression that is generated by traversing the `lark.Tree` passed to the `.transform()` function.
+
+  Parameters:
+
+**visit_tokens** : bool, optional
+
+&gt;
+&gt; For information about what this option does, see here.
+&gt; Note that the option must be set to True for the default parser to work.
+&gt;
+
+Notes
+
+**This class is never supposed to be used directly.**
+
+In order to tweak the behavior of this class, it has to be subclassed and then after the required modifications are made, the name of the new class should be passed to the [`LarkLaTeXParser`](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.lark.LarkLaTeXParser) class by using the `transformer` argument in the constructor.
+</pre></article><article id="section-0008"><h3>Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-exceptions-reference)</h3><pre># Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#mathrm-latex-parsing-exceptions-reference)
+
+class sympy.parsing.latex.LaTeXParsingError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/latex/errors.py#L2-L3)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.latex.LaTeXParsingError)
+</pre></article><article id="section-0009"><h3>Experimental SMT-LIB Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-smt-lib-parsing)</h3><pre># Experimental SMT-LIB Parsing[¶](https://docs.sympy.org/dev/modules/parsing.html#experimental-smt-lib-parsing)
+
+Warning
+
+The SMT-LIB parser is still under heavy development. The `parse_smtlib` function is entirely experimental, and its API may change in future versions of SymPy.
+
+The SMT-LIB parser is based on [Lark](https://lark-parser.readthedocs.io/en/latest/), so the `lark` Python package needs to be installed in order to use it.
+</pre></article><article id="section-0010"><h3>SMT-LIB Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-functions-reference)</h3><pre># SMT-LIB Parsing Functions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-functions-reference)
+
+sympy.parsing.smtlib.parse_smtlib(*s*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L96-L150)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.parse_smtlib)
+
+Parses a string in the SMT-LIB format and returns the declared symbols and the list of assertions.
+
+  Parameters:
+
+**s** : str
+
+&gt;
+&gt; The SMT-LIB source text to parse. This must be the text itself; to
+&gt; parse a file, read its contents first, e.g. with
+&gt; Path(filename).read_text().
+&gt;
+
+  Returns:
+
+tuple
+
+&gt;
+&gt; A tuple (symbols, assertions) where symbols is a dictionary
+&gt; mapping symbol names to SymPy symbols, and assertions is a list
+&gt; of SymPy expressions representing the assertions.
+&gt;
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.smtlib import parse_smtlib
+&gt;&gt;&gt; source = &#39;&#39;&#39;
+... (declare-const x Int)
+... (declare-const y Int)
+... (assert (= (+ x y) 10))
+... &#39;&#39;&#39;
+&gt;&gt;&gt; symbols, assertions = parse_smtlib(source)
+&gt;&gt;&gt; symbols[&#39;x&#39;]
+x
+&gt;&gt;&gt; assertions
+[Q.integer(x), Q.integer(y), Eq(x + y, 10)]
+```
+
+  Copy to clipboard
+
+Notes
+
+Declaring a constant of sort `Int` or `Real` appends a corresponding assumption predicate (`Q.integer` or `Q.real`) to the returned `assertions` list, as shown in the example above. This is intentional: the sort information is part of what the input asserts about each symbol, and including it in the assertions makes it available to functions that consume them, such as [`satisfiable()`](https://docs.sympy.org/dev/modules/logic.html#sympy.logic.inference.satisfiable). Constants of other sorts (including uninterpreted sorts) produce no assumption predicate.
+</pre></article><article id="section-0011"><h3>SMT-LIB Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-exceptions-reference)</h3><pre># SMT-LIB Parsing Exceptions Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#smt-lib-parsing-exceptions-reference)
+
+class sympy.parsing.smtlib.SMTLibSyntaxError(*message*, *line=None*, *col=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L18-L23)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.SMTLibSyntaxError)
+
+Raised when the input is not syntactically valid SMT-LIB.
+
+    class sympy.parsing.smtlib.UnknownSMTLibCommandError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L26-L27)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.UnknownSMTLibCommandError)
+
+Raised for SMT-LIB commands that the parser does not recognize.
+
+    class sympy.parsing.smtlib.UnknownSMTLibOperatorError[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/smtlib/lark/smtlib_parser.py#L30-L32)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.smtlib.UnknownSMTLibOperatorError)
+
+Raised for operators or functions in a term that the parser does not recognize.
+</pre></article><article id="section-0012"><h3>SymPy Expression Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing.sym_expr)</h3><pre># SymPy Expression Reference[¶](https://docs.sympy.org/dev/modules/parsing.html#module-sympy.parsing.sym_expr)
+
+class sympy.parsing.sym_expr.SymPyExpression(*source_code=None*, *mode=None*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L14-L280)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression)
+
+Class to store and handle SymPy expressions
+
+This class will hold SymPy Expressions and handle the API for the conversion to and from different languages.
+
+It works with the C and the Fortran Parser to generate SymPy expressions which are stored here and which can be converted to multiple language’s source code.
+
+Notes
+
+The module and its API are currently under development and experimental and can be changed during development.
+
+The Fortran parser does not support numeric assignments, so all the variables have been Initialized to zero.
+
+The module also depends on external dependencies:
+
+- LFortran which is required to use the Fortran parser
+- Clang which is required for the C parser
+
+Examples
+
+Example of parsing C code:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src = &#39;&#39;&#39;
+... int a,b;
+... float c = 2, d =4;
+... &#39;&#39;&#39;
+&gt;&gt;&gt; a = SymPyExpression(src, &#39;c&#39;)
+&gt;&gt;&gt; a.return_expr()
+[Declaration(Variable(a, type=intc)),
+Declaration(Variable(b, type=intc)),
+Declaration(Variable(c, type=float32, value=2.0)),
+Declaration(Variable(d, type=float32, value=4.0))]
+```
+
+  Copy to clipboard
+
+An example of variable definition:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_c()
+[&#39;int a = 0&#39;, &#39;int b = 0&#39;, &#39;int c = 0&#39;, &#39;int d = 0&#39;, &#39;double p = 0.0&#39;, &#39;double q = 0.0&#39;, &#39;double r = 0.0&#39;, &#39;double s = 0.0&#39;]
+```
+
+  Copy to clipboard
+
+An example of Assignment:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer :: a, b, c, d, e
+... d = a + b - c
+... e = b * d + c * e / a
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_python()
+[&#39;a = 0&#39;, &#39;b = 0&#39;, &#39;c = 0&#39;, &#39;d = 0&#39;, &#39;e = 0&#39;, &#39;d = a + b - c&#39;, &#39;e = b*d + c*e/a&#39;]
+```
+
+  Copy to clipboard
+
+An example of function definition:
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src = &#39;&#39;&#39;
+... integer function f(a,b)
+... integer, intent(in) :: a, b
+... integer :: r
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; a = SymPyExpression(src, &#39;f&#39;)
+&gt;&gt;&gt; a.convert_to_python()
+[&#39;def f(a, b):\n   f = 0\n    r = 0\n    return f&#39;]
+```
+
+  Copy to clipboard         convert_to_c()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L202-L227)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_c)
+
+Returns a list with the c source code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_c()
+[&#39;int a = 0&#39;, &#39;int b = 0&#39;, &#39;int c = 0&#39;, &#39;int d = 0&#39;, &#39;double p = 0.0&#39;, &#39;double q = 0.0&#39;, &#39;double r = 0.0&#39;, &#39;double s = 0.0&#39;, &#39;c = a/b;&#39;, &#39;d = c/a;&#39;, &#39;s = p/q;&#39;, &#39;r = q/p;&#39;]
+```
+
+  Copy to clipboard          convert_to_expr(*src_code*, *mode*)[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L121-L175)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_expr)
+
+Converts the given source code to SymPy Expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer function f(a,b) result(r)
+... integer, intent(in) :: a, b
+... integer :: x
+... r = a + b -x
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.return_expr()
+[FunctionDefinition(integer, name=f, parameters=(Variable(a), Variable(b)), body=CodeBlock(
+Declaration(Variable(r, type=integer, value=0)),
+Declaration(Variable(x, type=integer, value=0)),
+Assignment(Variable(r), a + b - x),
+Return(Variable(r))
+))]
+```
+
+  Copy to clipboard
+
+Attributes
+
+src_code
+
+(String) the source code or filename of the source code that is to be converted
+
+mode: String
+
+the mode to determine which parser is to be used according to the language of the source code f or F for Fortran c or C for C/C++
+
+        convert_to_fortran()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L229-L252)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_fortran)
+
+Returns a list with the fortran source code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_fortran()
+[&#39;      integer*4 a&#39;, &#39;      integer*4 b&#39;, &#39;      integer*4 c&#39;, &#39;      integer*4 d&#39;, &#39;      real*8 p&#39;, &#39;      real*8 q&#39;, &#39;      real*8 r&#39;, &#39;      real*8 s&#39;, &#39;      c = a/b&#39;, &#39;      d = c/a&#39;, &#39;      s = p/q&#39;, &#39;      r = q/p&#39;]
+```
+
+  Copy to clipboard          convert_to_python()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L177-L200)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.convert_to_python)
+
+Returns a list with Python code for the SymPy expressions
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src2 = &#39;&#39;&#39;
+... integer :: a, b, c, d
+... real :: p, q, r, s
+... c = a/b
+... d = c/a
+... s = p/q
+... r = q/p
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression(src2, &#39;f&#39;)
+&gt;&gt;&gt; p.convert_to_python()
+[&#39;a = 0&#39;, &#39;b = 0&#39;, &#39;c = 0&#39;, &#39;d = 0&#39;, &#39;p = 0.0&#39;, &#39;q = 0.0&#39;, &#39;r = 0.0&#39;, &#39;s = 0.0&#39;, &#39;c = a/b&#39;, &#39;d = c/a&#39;, &#39;s = p/q&#39;, &#39;r = q/p&#39;]
+```
+
+  Copy to clipboard          return_expr()[[source]](https://github.com/sympy/sympy/blob/2d283a82d15f2b46beff7be5399546c79613c445/sympy/parsing/sym_expr.py#L254-L280)[¶](https://docs.sympy.org/dev/modules/parsing.html#sympy.parsing.sym_expr.SymPyExpression.return_expr)
+
+Returns the expression list
+
+Examples
+
+```
+&gt;&gt;&gt; from sympy.parsing.sym_expr import SymPyExpression
+&gt;&gt;&gt; src3 = &#39;&#39;&#39;
+... integer function f(a,b)
+... integer, intent(in) :: a, b
+... integer :: r
+... r = a+b
+... f = r
+... end function
+... &#39;&#39;&#39;
+&gt;&gt;&gt; p = SymPyExpression()
+&gt;&gt;&gt; p.convert_to_expr(src3, &#39;f&#39;)
+&gt;&gt;&gt; p.return_expr()
+[FunctionDefinition(integer, name=f, parameters=(Variable(a), Variable(b)), body=CodeBlock(
+Declaration(Variable(f, type=integer, value=0)),
+Declaration(Variable(r, type=integer, value=0)),
+Assignment(Variable(f), Variable(r)),
+Return(Variable(f))
+))]
+```
+
+  Copy to clipboard
+</pre></article><article id="section-0013"><h3>Runtime Installation[¶](https://docs.sympy.org/dev/modules/parsing.html#runtime-installation)</h3><pre># Runtime Installation[¶](https://docs.sympy.org/dev/modules/parsing.html#runtime-installation)
+
+The currently-packaged LaTeX parser backend is partially generated with [ANTLR4](https://www.antlr.org/), but to use the parser, you only need the `antlr4` Python package available.
+
+Depending on your package manager, you can install the right package with, for example, `pip`:
+
+```
+$ pip install antlr4-python3-runtime==4.11
+```
+
+  Copy to clipboard
+
+or `conda`:
+
+```
+$ conda install -c conda-forge antlr-python-runtime==4.11
+```
+
+  Copy to clipboard
+
+The C parser depends on `clang` and the Fortran parser depends on `LFortran`. You can install these packages using:
+
+```
+$ conda install -c conda-forge lfortran clang
+```
+
+  Copy to clipboard
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

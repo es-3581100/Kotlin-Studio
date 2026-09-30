@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Chebyshev nodes - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Chebyshev nodes - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Chebyshev_nodes</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T04:45:41.517Z</div><div class="stat"><b>Records</b><br>17</div><div class="stat"><b>Sections</b><br>11</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 253 B · ~64 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 20478 B · ~5058 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 27080 B · ~6767 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 407 B · ~102 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Chebyshev nodes.md</code></a> <small>markdown · 4462 B · ~1106 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Definition.md</code></a> <small>markdown · 2572 B · ~624 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Properties.md</code></a> <small>markdown · 189 B · ~48 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Examples.md</code></a> <small>markdown · 1169 B · ~290 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Approximation.md</code></a> <small>markdown · 2620 B · ~639 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Modified even-order nodes.md</code></a> <small>markdown · 1184 B · ~293 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-See also.md</code></a> <small>markdown · 324 B · ~81 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Notes.md</code></a> <small>markdown · 2031 B · ~502 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-References.md</code></a> <small>markdown · 664 B · ~166 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Further reading.md</code></a> <small>markdown · 4853 B · ~1210 tok</small></li><li><a href="#art-0015"><code>artifacts/provenance/source-record.json</code></a> <small>json · 383 B · ~96 tok</small></li><li><a href="#art-0016"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0017"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Chebyshev nodes - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Chebyshev_nodes
+captured_at: 2026-09-30T04:45:41.517Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 17
+artifact_count: 17
+content_sha256: 412cda42c12af62381b4512715e9eb36343ff69e381f00afff285c67f0160e51
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:253,&quot;sha256&quot;:&quot;d79f610c598a0e3248b90571e8332e24a7b91858331d697b4e4ca7091ce60965&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t04&quot;,&quot;517z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;chebyshev&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:64,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:20478,&quot;sha256&quot;:&quot;412cda42c12af62381b4512715e9eb36343ff69e381f00afff285c67f0160e51&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;chebyshev&quot;,&quot;displaystyle&quot;,&quot;chebyshev_nodes&quot;,&quot;nodes&quot;],&quot;summary&quot;:&quot;Chebyshev nodes - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:5058,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:27080,&quot;sha256&quot;:&quot;07ae427bc35dba8d872b7b9dfd1325b03e69c34ec083352a92419c95b9fbee94&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;org&quot;,&quot;https&quot;,&quot;href&quot;,&quot;wikipedia&quot;,&quot;rel&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:6767,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:407,&quot;sha256&quot;:&quot;b104c078d5742f4ef79ff3fcf1cd441ea2d65d6dea519f824e40fcbd4e75926c&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:102,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Chebyshev nodes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4462,&quot;sha256&quot;:&quot;7e9b230e938663cc04933150b201cdb784f7415a76b19f9e24ebf6343a216f8b&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;chebyshev&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;nodes&quot;,&quot;kind&quot;,&quot;polynomial&quot;],&quot;summary&quot;:&quot;Chebyshev nodes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1106,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Definition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2572,&quot;sha256&quot;:&quot;282eb2923ad9c55e0954ec9b94b75064339adea6897ea82ba09dc0d84012cd45&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;chebyshev&quot;,&quot;https&quot;,&quot;nodes&quot;,&quot;points&quot;,&quot;also&quot;],&quot;summary&quot;:&quot;Definition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:624,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Properties.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:189,&quot;sha256&quot;:&quot;dfd770975d0682e56dc8f701eaa259e3c6907fa24800b38ba7cc275c1bcad90c&quot;,&quot;keywords&quot;:[&quot;edit&quot;,&quot;properties&quot;,&quot;about&quot;,&quot;action&quot;,&quot;always&quot;,&quot;both&quot;,&quot;chebyshev_nodes&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Properties&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:48,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1169,&quot;sha256&quot;:&quot;ff107dfb361721d0a8644e048461b10eed3a7e01cf8d42840f5c66cf758bb6dd&quot;,&quot;keywords&quot;:[&quot;roots&quot;,&quot;text&quot;,&quot;extrema&quot;,&quot;aligned&quot;,&quot;displaystyle&quot;,&quot;edit&quot;,&quot;examples&quot;,&quot;sets&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:290,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Approximation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2620,&quot;sha256&quot;:&quot;14447ccd2645753020cf55f9c910ac3074b88caea0c89a60c5f9fcbb9c84c113&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;n-1&quot;,&quot;https&quot;,&quot;max&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;left&quot;,&quot;polynomial&quot;],&quot;summary&quot;:&quot;Approximation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:639,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Modified even-order nodes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1184,&quot;sha256&quot;:&quot;e4855912d804dcc1d2fa96f4acf61e3f18af5840c475582bf8f7f4f0c7d488c8&quot;,&quot;keywords&quot;:[&quot;nodes&quot;,&quot;3827&quot;,&quot;910180&quot;,&quot;9239&quot;,&quot;chebyshev&quot;,&quot;displaystyle&quot;,&quot;even-order&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Modified even-order nodes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:293,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:324,&quot;sha256&quot;:&quot;41e806dacb1a4c70b70393274660b2ba68dee8ac1953a82c66b713c40af1fcaa&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;chebfun&quot;,&quot;chebyshev&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:81,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2031,&quot;sha256&quot;:&quot;c9f3b6f2f876be351ec1475d77755889a2a924d654ec31ec076fac849216b175&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;chebyshev_nodes&quot;,&quot;chebyshev&quot;,&quot;lobatto&quot;,&quot;nodes&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:502,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:664,&quot;sha256&quot;:&quot;0e26780f642334d4dfe50459ed9ffeadd3db747caa8a04757bc34c1fcca59839&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;978-0-89871-362-6&quot;,&quot;approximation&quot;,&quot;edit&quot;,&quot;numerical&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:166,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Further reading.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4853,&quot;sha256&quot;:&quot;826b3e2c61211f83e7caffc7e9ba417cb36520d804d762a47ff4b8c915fed335&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;root&quot;,&quot;square&quot;,&quot;ratio&quot;,&quot;category&quot;],&quot;summary&quot;:&quot;Further reading&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1210,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0015&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:383,&quot;sha256&quot;:&quot;f5f113469effe9a8ebd8e95b9a0d751a6ab4bc5672bea8035539241593a0d64d&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;chebyshev_nodes&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t04&quot;,&quot;517z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:96,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0016&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;95ff74c5f600edcb6b8dd4df6933d917711772cd62837f038984d6540348921f&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;178&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0017&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T04:45:41.517Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	64	253	d79f610c598a0e3248b90571e8332e24a7b91858331d697b4e4ca7091ce60965	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	5058	20478	412cda42c12af62381b4512715e9eb36343ff69e381f00afff285c67f0160e51	Chebyshev nodes - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	6767	27080	07ae427bc35dba8d872b7b9dfd1325b03e69c34ec083352a92419c95b9fbee94	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	102	407	b104c078d5742f4ef79ff3fcf1cd441ea2d65d6dea519f824e40fcbd4e75926c	Introduction	
+sec:0005	section	artifacts/sections/0002-Chebyshev nodes.md	primary	1106	4462	7e9b230e938663cc04933150b201cdb784f7415a76b19f9e24ebf6343a216f8b	Chebyshev nodes	
+sec:0006	section	artifacts/sections/0003-Definition.md	primary	624	2572	282eb2923ad9c55e0954ec9b94b75064339adea6897ea82ba09dc0d84012cd45	Definition	
+sec:0007	section	artifacts/sections/0004-Properties.md	primary	48	189	dfd770975d0682e56dc8f701eaa259e3c6907fa24800b38ba7cc275c1bcad90c	Properties	
+sec:0008	section	artifacts/sections/0005-Examples.md	primary	290	1169	ff107dfb361721d0a8644e048461b10eed3a7e01cf8d42840f5c66cf758bb6dd	Examples	
+sec:0009	section	artifacts/sections/0006-Approximation.md	primary	639	2620	14447ccd2645753020cf55f9c910ac3074b88caea0c89a60c5f9fcbb9c84c113	Approximation	
+sec:0010	section	artifacts/sections/0007-Modified even-order nodes.md	primary	293	1184	e4855912d804dcc1d2fa96f4acf61e3f18af5840c475582bf8f7f4f0c7d488c8	Modified even-order nodes	
+sec:0011	section	artifacts/sections/0008-See also.md	primary	81	324	41e806dacb1a4c70b70393274660b2ba68dee8ac1953a82c66b713c40af1fcaa	See also	
+sec:0012	section	artifacts/sections/0009-Notes.md	supporting	502	2031	c9f3b6f2f876be351ec1475d77755889a2a924d654ec31ec076fac849216b175	Notes	
+sec:0013	section	artifacts/sections/0010-References.md	supporting	166	664	0e26780f642334d4dfe50459ed9ffeadd3db747caa8a04757bc34c1fcca59839	References	
+sec:0014	section	artifacts/sections/0011-Further reading.md	supporting	1210	4853	826b3e2c61211f83e7caffc7e9ba417cb36520d804d762a47ff4b8c915fed335	Further reading	
+art:0015	provenance	artifacts/provenance/source-record.json	supporting	96	383	f5f113469effe9a8ebd8e95b9a0d751a6ab4bc5672bea8035539241593a0d64d	Capture source identity and metadata	
+art:0016	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	95ff74c5f600edcb6b8dd4df6933d917711772cd62837f038984d6540348921f	Extraction engine and counts	
+art:0017	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Chebyshev_nodes#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Chebyshev nodes
+
+- [Català](https://ca.wikipedia.org/wiki/Nodes_de_Txebixov)
+- [Magyar](https://hu.wikipedia.org/wiki/Csebisev-csom%C3%B3pontok)
+- [Italiano](https://it.wikipedia.org/wiki/Nodi_di_%C4%8Ceby%C5%A1%C3%ABv)
+- [Polski](https://pl.wikipedia.org/wiki/W%C4%99z%C5%82y_Czebyszewa)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D0%BB%D1%8B_%D0%A7%D0%B5%D0%B1%D1%8B%D1%88%D1%91%D0%B2%D0%B0)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Vozli_%C4%8Cebi%C5%A1ova)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1052508#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Roots of the Chebyshev polynomials of the first kind [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Chebyshev_nodes_from_the_circle.png/250px-Chebyshev_nodes_from_the_circle.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Chebyshev_nodes_from_the_circle.png)Chebyshev zeros (solid dots, red lines) and extrema (hollow squares, blue lines) are the projection of two sets of equispaced points on the unit circle onto the x-axis. 2*n* equispaced points on the circle project onto n Chebyshev zeros or n+1 Chebyshev extrema. (Here *n* = 5.) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chebyshev_nodes.png/250px-Chebyshev_nodes.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Chebyshev_nodes.png)The Chebyshev zeros (solid dots) are roots of a Chebyshev polynomial of the first kind (red). The Chebyshev extrema (hollow squares) are roots of a Chebyshev polynomial of the second kind (blue), and also the extrema (crosses) of a Chebyshev polynomial of the first kind.
+
+In [numerical analysis](https://en.wikipedia.org/wiki/Numerical_analysis), **Chebyshev nodes** (also called **Chebyshev points** or a **Chebyshev grid**) are a set of specific [algebraic numbers](https://en.wikipedia.org/wiki/Algebraic_number) used as nodes for [polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation) and [numerical integration](https://en.wikipedia.org/wiki/Numerical_integration). They are the [projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra)) of a set of equispaced points on the [unit circle](https://en.wikipedia.org/wiki/Unit_circle) onto the [real interval](https://en.wikipedia.org/wiki/Real_interval)     [ − 1 , 1 ]   {\displaystyle [-1,1]}  , the circle&#39;s [diameter](https://en.wikipedia.org/wiki/Diameter).
+
+There are two kinds of Chebyshev nodes. The ⁠    n   {\displaystyle n}  ⁠ *Chebyshev nodes of the first kind*, also called the **Chebyshev–Gauss nodes**[[1]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-1) or **Chebyshev zeros**, are the [zeros](https://en.wikipedia.org/wiki/Zero_of_a_function) of a [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomial) of the first kind, ⁠     T  n     {\displaystyle T_{n}}  ⁠. The corresponding ⁠    n + 1   {\displaystyle n+1}  ⁠ *Chebyshev nodes of the second kind*, also called the **Chebyshev–Lobatto nodes**[[2]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-2) or **Chebyshev extrema**, are the [extrema](https://en.wikipedia.org/wiki/Maximum_and_minimum) of ⁠     T  n     {\displaystyle T_{n}}  ⁠, which are also the zeros of a Chebyshev polynomial of the second kind, ⁠     U  n − 1     {\displaystyle U_{n-1}}  ⁠, along with the two endpoints of the interval. Both types of numbers are commonly referred to as *Chebyshev nodes* or *Chebyshev points* in literature.[[3]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-3) They are named after 19th century Russian mathematician [Pafnuty Chebyshev](https://en.wikipedia.org/wiki/Pafnuty_Chebyshev), who first introduced Chebyshev polynomials.
+
+Unlike some other interpolation nodes, the Chebyshev nodes &quot;nest&quot;: the existing nodes are retained when doubling the number of nodes, reducing computation for each grid refinement by half. Polynomial interpolants constructed from Chebyshev nodes minimize the effect of [Runge&#39;s phenomenon](https://en.wikipedia.org/wiki/Runge&#39;s_phenomenon).[[4]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-4) They can be easily converted to a representation as a weighted sum of Chebyshev polynomials using the [fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform).
+
+## Definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=1)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/ChebyshevNodes2.jpg/250px-ChebyshevNodes2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:ChebyshevNodes2.jpg)Chebyshev nodes of both kinds from     n = 2   {\displaystyle n=2}   to     n = 50   {\displaystyle n=50}  .
+
+For a given positive integer     n   {\displaystyle n}  , the ⁠    n   {\displaystyle n}  ⁠ Chebyshev nodes of the first kind are given by
+
+x  k   = cos ⁡      (   k +    1 2      )   π  n   ,  k = 0 , … , n − 1.   {\displaystyle x_{k}=\cos {\frac {{\bigl (}k+{\tfrac {1}{2}}{\bigr )}\pi }{n}},\quad k=0,\ldots ,n-1.}
+
+This is the projection of ⁠    2 n   {\displaystyle 2n}  ⁠ equispaced points on the unit circle onto the interval ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, the circle&#39;s diameter. These points are also the roots of ⁠     T  n     {\displaystyle T_{n}}  ⁠, the Chebyshev polynomial of the first kind with degree ⁠    n   {\displaystyle n}  ⁠.
+
+The ⁠    n + 1   {\displaystyle n+1}  ⁠ Chebyshev nodes of the second kind are given by
+
+x  k   = cos ⁡    k π  n   ,  k = 0 , … , n .   {\displaystyle x_{k}=\cos {\frac {k\pi }{n}},\quad k=0,\ldots ,n.}
+
+This is also the projection of ⁠    2 n   {\displaystyle 2n}  ⁠ equispaced points on the unit circle onto ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, this time including the endpoints of the interval, each of which is only the projection of one point on the circle rather than two. These points are also the extrema of ⁠     T  n     {\displaystyle T_{n}}  ⁠ in ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, the places where it takes the value ⁠    ± 1   {\displaystyle \pm 1}  ⁠.[[5]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-5) The interior points among the nodes, not including the endpoints, are also the zeros of ⁠     U  n − 1     {\displaystyle U_{n-1}}  ⁠, a Chebyshev polynomial of the second kind, a rescaling of the derivative of ⁠     T  n     {\displaystyle T_{n}}  ⁠.
+
+For nodes over an arbitrary interval     [ a , b ]   {\displaystyle [a,b]}   an [affine transformation](https://en.wikipedia.org/wiki/Affine_transformation) from     [ − 1 , 1 ]   {\displaystyle [-1,1]}   can be used:         x ~     k   =    1 2    ( a + b ) +    1 2    ( b − a )  x  k   .   {\displaystyle {\tilde {x}}_{k}={\tfrac {1}{2}}(a+b)+{\tfrac {1}{2}}(b-a)x_{k}.}
+
+## Properties
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=2)]
+
+Both kinds of nodes are always symmetric about zero, the midpoint of the interval.
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=3)]
+
+The node sets for the first few integers     n   {\displaystyle n}   are:          roots  (  T  0   )    = { } ,    roots  (  U  0   )    = { } ,    extrema  (  T  1   )    = { − 1 , + 1 } ,      roots  (  T  1   )    = { 0 } ,    roots  (  U  1   )    = { 0 } ,    extrema  (  T  2   )    = { − 1 , 0 , + 1 } ,      roots  (  T  2   )    = { − 1  /    2   , + 1  /    2   } ,    roots  (  U  2   )    = { − 1  /  2 , + 1  /  2 } ,    extrema  (  T  3   )    = { − 1 , − 1  /  2 , + 1  /  2 , + 1 }       {\displaystyle {\begin{aligned}{\text{roots}}(T_{0})&amp;=\{\},&amp;{\text{roots}}(U_{0})&amp;=\{\},&amp;{\text{extrema}}(T_{1})&amp;=\{-1,+1\},\\{\text{roots}}(T_{1})&amp;=\{0\},&amp;{\text{roots}}(U_{1})&amp;=\{0\},&amp;{\text{extrema}}(T_{2})&amp;=\{-1,0,+1\},\\{\text{roots}}(T_{2})&amp;=\{-1/{\sqrt {2}},+1/{\sqrt {2}}\},&amp;{\text{roots}}(U_{2})&amp;=\{-1/2,+1/2\},&amp;{\text{extrema}}(T_{3})&amp;=\{-1,-1/2,+1/2,+1\}\\\end{aligned}}}
+
+While these sets are sorted by ascending values, the defining formulas given above generate the Chebyshev nodes in reverse order from the greatest to the smallest.
+
+## Approximation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=4)]
+
+The Chebyshev nodes are important in [approximation theory](https://en.wikipedia.org/wiki/Approximation_theory) because they form a particularly good set of nodes for [polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation). Given a function *f* on the interval     [ − 1 , + 1 ]   {\displaystyle [-1,+1]}   and     n   {\displaystyle n}   points      x  1   ,  x  2   , … ,  x  n   ,   {\displaystyle x_{1},x_{2},\ldots ,x_{n},}   in that interval, the interpolation polynomial is that unique polynomial      P  n − 1     {\displaystyle P_{n-1}}   of degree at most     n − 1   {\displaystyle n-1}   which has value     f (  x  i   )   {\displaystyle f(x_{i})}   at each point      x  i     {\displaystyle x_{i}}  . The interpolation error at     x   {\displaystyle x}   is     f ( x ) −  P  n − 1   ( x ) =     f  ( n )   ( ξ )   n !     ∏  i = 1   n   ( x −  x  i   )   {\displaystyle f(x)-P_{n-1}(x)={\frac {f^{(n)}(\xi )}{n!}}\prod _{i=1}^{n}(x-x_{i})}   for some     ξ   {\displaystyle \xi }   (depending on x) in [−1, 1].[[6]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-6) So it is logical to try to minimize      max  x ∈ [ − 1 , 1 ]     |    ∏  i = 1   n   ( x −  x  i   )   |   .   {\displaystyle \max _{x\in [-1,1]}{\biggl |}\prod _{i=1}^{n}(x-x_{i}){\biggr |}.}
+
+This product is a *[monic](https://en.wikipedia.org/wiki/Monic_polynomial)* polynomial of degree n. It may be shown that the maximum absolute value (maximum norm) of any such polynomial is bounded from below by 21−*n*. This bound is attained by the scaled Chebyshev polynomials 21−*n* *T**n*, which are also monic. (Recall that |*T**n*(*x*)| ≤ 1 for *x* ∈ [−1, 1].[[7]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-7)) Therefore, when the interpolation nodes *x**i* are the roots of *T**n*, the error satisfies      |  f ( x ) −  P  n − 1   ( x )  |  ≤   1   2  n − 1   n !     max  ξ ∈ [ − 1 , 1 ]    |   f  ( n )   ( ξ )  |  .   {\displaystyle \left|f(x)-P_{n-1}(x)\right|\leq {\frac {1}{2^{n-1}n!}}\max _{\xi \in [-1,1]}\left|f^{(n)}(\xi )\right|.}   For an arbitrary interval [*a*, *b*] a change of variable shows that      |  f ( x ) −  P  n − 1   ( x )  |  ≤   1   2  n − 1   n !      (    b − a  2   )   n    max  ξ ∈ [ a , b ]    |   f  ( n )   ( ξ )  |  .   {\displaystyle \left|f(x)-P_{n-1}(x)\right|\leq {\frac {1}{2^{n-1}n!}}\left({\frac {b-a}{2}}\right)^{n}\max _{\xi \in [a,b]}\left|f^{(n)}(\xi )\right|.}
+
+## Modified even-order nodes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=5)]
+
+Some applications for interpolation nodes, such as the design of equally terminated passive [Chebyshev filters](https://en.wikipedia.org/wiki/Chebyshev_filter), cannot use even-order Chebyshev nodes directly due to the lack of a root at 0. Instead, the Chebyshev nodes can be moved toward zero, with a double root at zero directly, using a transformation:[[8]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-:02-8)
+
+x ~     k   = sgn ⁡ (  x  k   )      x  k   2   −  x  n  /  2   2     1 −  x  n  /  2   2         {\displaystyle {\tilde {x}}_{k}=\operatorname {sgn} (x_{k}){\sqrt {\frac {x_{k}^{2}-x_{n/2}^{2}}{1-x_{n/2}^{2}}}}}
+
+For example, Chebyshev nodes of the first kind of order 4 are      0.9239 , 0.3827 , − 0.3827 , − 0.9239    {\displaystyle {0.9239,0.3827,-0.3827,-0.9239}}  , with      x  n  /  2   = 0.382683   {\displaystyle x_{n/2}=0.382683}  . Applying the transformation yields new nodes      0.910180 , 0 , 0 , − 0.910180    {\displaystyle {0.910180,0,0,-0.910180}}  . The modified even-order nodes now include zero twice.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=6)]
+- [Chebfun](https://en.wikipedia.org/wiki/Chebfun)
+- [Chebyshev–Gauss quadrature](https://en.wikipedia.org/wiki/Chebyshev%E2%80%93Gauss_quadrature)
+- [Lebesgue constant](https://en.wikipedia.org/wiki/Lebesgue_constant)
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=7)]
+1. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-1) The name *Chebyshev–Gauss nodes* comes from the use of Chebyshev zeros in numerical integration, which can be seen as a variant of [Gaussian quadrature](https://en.wikipedia.org/wiki/Gaussian_quadrature).
+2. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-2) The name *Chebyshev–Lobatto nodes* comes from [Rehuel Lobatto](https://en.wikipedia.org/wiki/Rehuel_Lobatto), who made a variant of Gaussian quadrature, known as *[Lobatto quadrature](https://en.wikipedia.org/wiki/Lobatto_quadrature)*, whose nodes included the ends of the interval, a feature shared by the Chebyshev extrema.
+3. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-3) [Trefethen 2013](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFTrefethen2013), pp. 7
+4. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-4) [Fink &amp; Mathews 1999](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFFinkMathews1999), pp. 236–238
+5. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-5) [Trefethen 2013](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFTrefethen2013), pp. 14
+6. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-6) [Stewart 1996](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFStewart1996), (20.3)
+7. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-7) [Stewart 1996](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFStewart1996), Lecture 20, §14
+8. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-:02_8-0) Saal, Rudolf (January 1979). [*Handbook of Filter Design*](https://archive.org/details/handbuchzumfilte0000saal) (in English and German) (1st ed.). Munich, Germany: Allgemeine Elektricitäts-Gesellschaft. pp. 25, 26, 56–61, 116, 117. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [3-87087-070-2](https://en.wikipedia.org/wiki/Special:BookSources/3-87087-070-2).
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=8)]
+- Fink, Kurtis D.; Mathews, John H. (1999). *Numerical Methods using MATLAB* (3rd ed.). Upper Saddle River NJ: Prentice Hall.
+- Stewart, Gilbert W. (1996). *Afternotes on Numerical Analysis*. [SIAM](https://en.wikipedia.org/wiki/Society_for_Industrial_and_Applied_Mathematics). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-89871-362-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-89871-362-6).
+- Trefethen, Lloyd N. (2013), [*Approximation Theory and Approximation Practice*](https://people.maths.ox.ac.uk/trefethen/ATAP/), SIAM
+
+## Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=9)]
+- Burden, Richard L.; Faires, J. Douglas: *Numerical Analysis*, 8th ed., pages 503–512, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-534-39200-8](https://en.wikipedia.org/wiki/Special:BookSources/0-534-39200-8).
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Algebraic_numbers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Algebraic_numbers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Algebraic_numbers)
+[Algebraic numbers](https://en.wikipedia.org/wiki/Algebraic_number)Individual numbers[Degree 2](https://en.wikipedia.org/wiki/Quadratic_irrational_number)
+- [Square root of 2](https://en.wikipedia.org/wiki/Square_root_of_2)
+- [Lieb&#39;s square ice constant](https://en.wikipedia.org/wiki/Lieb&#39;s_square_ice_constant)
+- [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio) (φ)
+- [Square root of 3](https://en.wikipedia.org/wiki/Square_root_of_3)
+- [Square root of 5](https://en.wikipedia.org/wiki/Square_root_of_5)
+- [Silver ratio](https://en.wikipedia.org/wiki/Silver_ratio) (σ)
+- [Square root of 6](https://en.wikipedia.org/wiki/Square_root_of_6)
+- [Square root of 7](https://en.wikipedia.org/wiki/Square_root_of_7)
+- [Square root of 8](https://en.wikipedia.org/wiki/Square_root_of_8)
+- [Square root of 10](https://en.wikipedia.org/wiki/Square_root_of_10)
+- [Imaginary unit (i)](https://en.wikipedia.org/wiki/Imaginary_unit)
+ Degree 3
+- [Cube root of 2](https://en.wikipedia.org/wiki/Doubling_the_cube)
+- [Plastic ratio](https://en.wikipedia.org/wiki/Plastic_ratio) (ρ)
+- [Supergolden ratio](https://en.wikipedia.org/wiki/Supergolden_ratio) (ψ)
+- [Tribonacci ratio](https://en.wikipedia.org/wiki/Tribonacci_ratio) (τ)
+- [Supersilver ratio](https://en.wikipedia.org/wiki/Supersilver_ratio) (ς)
+ Degree ≥ 4
+- [Twelfth root of 2](https://en.wikipedia.org/wiki/Twelfth_root_of_2)
+- [Flag of Nepal aspect ratio](https://en.wikipedia.org/wiki/Flag_of_Nepal)
+- [Conway&#39;s constant (λ)](https://en.wikipedia.org/wiki/Look-and-say_sequence)
+- [Hard hexagon entropy constant](https://en.wikipedia.org/wiki/Hard_hexagon_model)
+ Types
+- [Algebraic integer](https://en.wikipedia.org/wiki/Algebraic_integer) [Eisenstein](https://en.wikipedia.org/wiki/Eisenstein_integer) [Gaussian](https://en.wikipedia.org/wiki/Gaussian_integer) [Perron](https://en.wikipedia.org/wiki/Perron_number) [Pisot–Vijayaraghavan](https://en.wikipedia.org/wiki/Pisot%E2%80%93Vijayaraghavan_number) [Salem](https://en.wikipedia.org/wiki/Salem_number)
+- [Chebyshev nodes](https://en.wikipedia.org/wiki/Chebyshev_nodes)
+- [Constructible](https://en.wikipedia.org/wiki/Constructible_number)
+- [Gaussian rational](https://en.wikipedia.org/wiki/Gaussian_rational)
+- [Quadratic](https://en.wikipedia.org/wiki/Quadratic_irrational_number)
+- [Rational](https://en.wikipedia.org/wiki/Rational_number)
+- [Root of unity](https://en.wikipedia.org/wiki/Root_of_unity)
+ Related topics
+- [Algebraic function](https://en.wikipedia.org/wiki/Algebraic_function) [field](https://en.wikipedia.org/wiki/Algebraic_function_field)
+- [Algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field) [Biquadratic](https://en.wikipedia.org/wiki/Biquadratic_field) [CM](https://en.wikipedia.org/wiki/CM-field) [Cubic](https://en.wikipedia.org/wiki/Cubic_field) [Cyclotomic](https://en.wikipedia.org/wiki/Cyclotomic_field) [Golden](https://en.wikipedia.org/wiki/Golden_field) [Quadratic](https://en.wikipedia.org/wiki/Quadratic_field)
+- [Transcendental number](https://en.wikipedia.org/wiki/Transcendental_number)
+ **[![icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Square_root_of_x.svg/20px-Square_root_of_x.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Square_root_of_x.svg) [Mathematics portal](https://en.wikipedia.org/wiki/Portal:Mathematics)**         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;oldid=1287274907](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;oldid=1287274907)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Numerical analysis](https://en.wikipedia.org/wiki/Category:Numerical_analysis)
+- [Algebraic numbers](https://en.wikipedia.org/wiki/Category:Algebraic_numbers)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+
+    [https://en\.wikipedia\.org/wiki/Chebyshev\_nodes?action=edit](https://en.wikipedia.org/wiki/Chebyshev_nodes?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Chebyshev_nodes#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Chebyshev nodes</h3><pre># Chebyshev nodes
+
+- [Català](https://ca.wikipedia.org/wiki/Nodes_de_Txebixov)
+- [Magyar](https://hu.wikipedia.org/wiki/Csebisev-csom%C3%B3pontok)
+- [Italiano](https://it.wikipedia.org/wiki/Nodi_di_%C4%8Ceby%C5%A1%C3%ABv)
+- [Polski](https://pl.wikipedia.org/wiki/W%C4%99z%C5%82y_Czebyszewa)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D0%BB%D1%8B_%D0%A7%D0%B5%D0%B1%D1%8B%D1%88%D1%91%D0%B2%D0%B0)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Vozli_%C4%8Cebi%C5%A1ova)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1052508#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Roots of the Chebyshev polynomials of the first kind [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Chebyshev_nodes_from_the_circle.png/250px-Chebyshev_nodes_from_the_circle.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Chebyshev_nodes_from_the_circle.png)Chebyshev zeros (solid dots, red lines) and extrema (hollow squares, blue lines) are the projection of two sets of equispaced points on the unit circle onto the x-axis. 2*n* equispaced points on the circle project onto n Chebyshev zeros or n+1 Chebyshev extrema. (Here *n* = 5.) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chebyshev_nodes.png/250px-Chebyshev_nodes.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Chebyshev_nodes.png)The Chebyshev zeros (solid dots) are roots of a Chebyshev polynomial of the first kind (red). The Chebyshev extrema (hollow squares) are roots of a Chebyshev polynomial of the second kind (blue), and also the extrema (crosses) of a Chebyshev polynomial of the first kind.
+
+In [numerical analysis](https://en.wikipedia.org/wiki/Numerical_analysis), **Chebyshev nodes** (also called **Chebyshev points** or a **Chebyshev grid**) are a set of specific [algebraic numbers](https://en.wikipedia.org/wiki/Algebraic_number) used as nodes for [polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation) and [numerical integration](https://en.wikipedia.org/wiki/Numerical_integration). They are the [projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra)) of a set of equispaced points on the [unit circle](https://en.wikipedia.org/wiki/Unit_circle) onto the [real interval](https://en.wikipedia.org/wiki/Real_interval)     [ − 1 , 1 ]   {\displaystyle [-1,1]}  , the circle&#39;s [diameter](https://en.wikipedia.org/wiki/Diameter).
+
+There are two kinds of Chebyshev nodes. The ⁠    n   {\displaystyle n}  ⁠ *Chebyshev nodes of the first kind*, also called the **Chebyshev–Gauss nodes**[[1]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-1) or **Chebyshev zeros**, are the [zeros](https://en.wikipedia.org/wiki/Zero_of_a_function) of a [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomial) of the first kind, ⁠     T  n     {\displaystyle T_{n}}  ⁠. The corresponding ⁠    n + 1   {\displaystyle n+1}  ⁠ *Chebyshev nodes of the second kind*, also called the **Chebyshev–Lobatto nodes**[[2]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-2) or **Chebyshev extrema**, are the [extrema](https://en.wikipedia.org/wiki/Maximum_and_minimum) of ⁠     T  n     {\displaystyle T_{n}}  ⁠, which are also the zeros of a Chebyshev polynomial of the second kind, ⁠     U  n − 1     {\displaystyle U_{n-1}}  ⁠, along with the two endpoints of the interval. Both types of numbers are commonly referred to as *Chebyshev nodes* or *Chebyshev points* in literature.[[3]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-3) They are named after 19th century Russian mathematician [Pafnuty Chebyshev](https://en.wikipedia.org/wiki/Pafnuty_Chebyshev), who first introduced Chebyshev polynomials.
+
+Unlike some other interpolation nodes, the Chebyshev nodes &quot;nest&quot;: the existing nodes are retained when doubling the number of nodes, reducing computation for each grid refinement by half. Polynomial interpolants constructed from Chebyshev nodes minimize the effect of [Runge&#39;s phenomenon](https://en.wikipedia.org/wiki/Runge&#39;s_phenomenon).[[4]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-4) They can be easily converted to a representation as a weighted sum of Chebyshev polynomials using the [fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform).
+</pre></article><article id="section-0003"><h3>Definition</h3><pre># Definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=1)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/ChebyshevNodes2.jpg/250px-ChebyshevNodes2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:ChebyshevNodes2.jpg)Chebyshev nodes of both kinds from     n = 2   {\displaystyle n=2}   to     n = 50   {\displaystyle n=50}  .
+
+For a given positive integer     n   {\displaystyle n}  , the ⁠    n   {\displaystyle n}  ⁠ Chebyshev nodes of the first kind are given by
+
+x  k   = cos ⁡      (   k +    1 2      )   π  n   ,  k = 0 , … , n − 1.   {\displaystyle x_{k}=\cos {\frac {{\bigl (}k+{\tfrac {1}{2}}{\bigr )}\pi }{n}},\quad k=0,\ldots ,n-1.}
+
+This is the projection of ⁠    2 n   {\displaystyle 2n}  ⁠ equispaced points on the unit circle onto the interval ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, the circle&#39;s diameter. These points are also the roots of ⁠     T  n     {\displaystyle T_{n}}  ⁠, the Chebyshev polynomial of the first kind with degree ⁠    n   {\displaystyle n}  ⁠.
+
+The ⁠    n + 1   {\displaystyle n+1}  ⁠ Chebyshev nodes of the second kind are given by
+
+x  k   = cos ⁡    k π  n   ,  k = 0 , … , n .   {\displaystyle x_{k}=\cos {\frac {k\pi }{n}},\quad k=0,\ldots ,n.}
+
+This is also the projection of ⁠    2 n   {\displaystyle 2n}  ⁠ equispaced points on the unit circle onto ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, this time including the endpoints of the interval, each of which is only the projection of one point on the circle rather than two. These points are also the extrema of ⁠     T  n     {\displaystyle T_{n}}  ⁠ in ⁠    [ − 1 , 1 ]   {\displaystyle [-1,1]}  ⁠, the places where it takes the value ⁠    ± 1   {\displaystyle \pm 1}  ⁠.[[5]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-5) The interior points among the nodes, not including the endpoints, are also the zeros of ⁠     U  n − 1     {\displaystyle U_{n-1}}  ⁠, a Chebyshev polynomial of the second kind, a rescaling of the derivative of ⁠     T  n     {\displaystyle T_{n}}  ⁠.
+
+For nodes over an arbitrary interval     [ a , b ]   {\displaystyle [a,b]}   an [affine transformation](https://en.wikipedia.org/wiki/Affine_transformation) from     [ − 1 , 1 ]   {\displaystyle [-1,1]}   can be used:         x ~     k   =    1 2    ( a + b ) +    1 2    ( b − a )  x  k   .   {\displaystyle {\tilde {x}}_{k}={\tfrac {1}{2}}(a+b)+{\tfrac {1}{2}}(b-a)x_{k}.}
+</pre></article><article id="section-0004"><h3>Properties</h3><pre># Properties
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=2)]
+
+Both kinds of nodes are always symmetric about zero, the midpoint of the interval.
+</pre></article><article id="section-0005"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=3)]
+
+The node sets for the first few integers     n   {\displaystyle n}   are:          roots  (  T  0   )    = { } ,    roots  (  U  0   )    = { } ,    extrema  (  T  1   )    = { − 1 , + 1 } ,      roots  (  T  1   )    = { 0 } ,    roots  (  U  1   )    = { 0 } ,    extrema  (  T  2   )    = { − 1 , 0 , + 1 } ,      roots  (  T  2   )    = { − 1  /    2   , + 1  /    2   } ,    roots  (  U  2   )    = { − 1  /  2 , + 1  /  2 } ,    extrema  (  T  3   )    = { − 1 , − 1  /  2 , + 1  /  2 , + 1 }       {\displaystyle {\begin{aligned}{\text{roots}}(T_{0})&amp;=\{\},&amp;{\text{roots}}(U_{0})&amp;=\{\},&amp;{\text{extrema}}(T_{1})&amp;=\{-1,+1\},\\{\text{roots}}(T_{1})&amp;=\{0\},&amp;{\text{roots}}(U_{1})&amp;=\{0\},&amp;{\text{extrema}}(T_{2})&amp;=\{-1,0,+1\},\\{\text{roots}}(T_{2})&amp;=\{-1/{\sqrt {2}},+1/{\sqrt {2}}\},&amp;{\text{roots}}(U_{2})&amp;=\{-1/2,+1/2\},&amp;{\text{extrema}}(T_{3})&amp;=\{-1,-1/2,+1/2,+1\}\\\end{aligned}}}
+
+While these sets are sorted by ascending values, the defining formulas given above generate the Chebyshev nodes in reverse order from the greatest to the smallest.
+</pre></article><article id="section-0006"><h3>Approximation</h3><pre># Approximation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=4)]
+
+The Chebyshev nodes are important in [approximation theory](https://en.wikipedia.org/wiki/Approximation_theory) because they form a particularly good set of nodes for [polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation). Given a function *f* on the interval     [ − 1 , + 1 ]   {\displaystyle [-1,+1]}   and     n   {\displaystyle n}   points      x  1   ,  x  2   , … ,  x  n   ,   {\displaystyle x_{1},x_{2},\ldots ,x_{n},}   in that interval, the interpolation polynomial is that unique polynomial      P  n − 1     {\displaystyle P_{n-1}}   of degree at most     n − 1   {\displaystyle n-1}   which has value     f (  x  i   )   {\displaystyle f(x_{i})}   at each point      x  i     {\displaystyle x_{i}}  . The interpolation error at     x   {\displaystyle x}   is     f ( x ) −  P  n − 1   ( x ) =     f  ( n )   ( ξ )   n !     ∏  i = 1   n   ( x −  x  i   )   {\displaystyle f(x)-P_{n-1}(x)={\frac {f^{(n)}(\xi )}{n!}}\prod _{i=1}^{n}(x-x_{i})}   for some     ξ   {\displaystyle \xi }   (depending on x) in [−1, 1].[[6]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-6) So it is logical to try to minimize      max  x ∈ [ − 1 , 1 ]     |    ∏  i = 1   n   ( x −  x  i   )   |   .   {\displaystyle \max _{x\in [-1,1]}{\biggl |}\prod _{i=1}^{n}(x-x_{i}){\biggr |}.}
+
+This product is a *[monic](https://en.wikipedia.org/wiki/Monic_polynomial)* polynomial of degree n. It may be shown that the maximum absolute value (maximum norm) of any such polynomial is bounded from below by 21−*n*. This bound is attained by the scaled Chebyshev polynomials 21−*n* *T**n*, which are also monic. (Recall that |*T**n*(*x*)| ≤ 1 for *x* ∈ [−1, 1].[[7]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-7)) Therefore, when the interpolation nodes *x**i* are the roots of *T**n*, the error satisfies      |  f ( x ) −  P  n − 1   ( x )  |  ≤   1   2  n − 1   n !     max  ξ ∈ [ − 1 , 1 ]    |   f  ( n )   ( ξ )  |  .   {\displaystyle \left|f(x)-P_{n-1}(x)\right|\leq {\frac {1}{2^{n-1}n!}}\max _{\xi \in [-1,1]}\left|f^{(n)}(\xi )\right|.}   For an arbitrary interval [*a*, *b*] a change of variable shows that      |  f ( x ) −  P  n − 1   ( x )  |  ≤   1   2  n − 1   n !      (    b − a  2   )   n    max  ξ ∈ [ a , b ]    |   f  ( n )   ( ξ )  |  .   {\displaystyle \left|f(x)-P_{n-1}(x)\right|\leq {\frac {1}{2^{n-1}n!}}\left({\frac {b-a}{2}}\right)^{n}\max _{\xi \in [a,b]}\left|f^{(n)}(\xi )\right|.}
+</pre></article><article id="section-0007"><h3>Modified even-order nodes</h3><pre># Modified even-order nodes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=5)]
+
+Some applications for interpolation nodes, such as the design of equally terminated passive [Chebyshev filters](https://en.wikipedia.org/wiki/Chebyshev_filter), cannot use even-order Chebyshev nodes directly due to the lack of a root at 0. Instead, the Chebyshev nodes can be moved toward zero, with a double root at zero directly, using a transformation:[[8]](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_note-:02-8)
+
+x ~     k   = sgn ⁡ (  x  k   )      x  k   2   −  x  n  /  2   2     1 −  x  n  /  2   2         {\displaystyle {\tilde {x}}_{k}=\operatorname {sgn} (x_{k}){\sqrt {\frac {x_{k}^{2}-x_{n/2}^{2}}{1-x_{n/2}^{2}}}}}
+
+For example, Chebyshev nodes of the first kind of order 4 are      0.9239 , 0.3827 , − 0.3827 , − 0.9239    {\displaystyle {0.9239,0.3827,-0.3827,-0.9239}}  , with      x  n  /  2   = 0.382683   {\displaystyle x_{n/2}=0.382683}  . Applying the transformation yields new nodes      0.910180 , 0 , 0 , − 0.910180    {\displaystyle {0.910180,0,0,-0.910180}}  . The modified even-order nodes now include zero twice.
+</pre></article><article id="section-0008"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=6)]
+- [Chebfun](https://en.wikipedia.org/wiki/Chebfun)
+- [Chebyshev–Gauss quadrature](https://en.wikipedia.org/wiki/Chebyshev%E2%80%93Gauss_quadrature)
+- [Lebesgue constant](https://en.wikipedia.org/wiki/Lebesgue_constant)
+</pre></article><article id="section-0009"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=7)]
+1. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-1) The name *Chebyshev–Gauss nodes* comes from the use of Chebyshev zeros in numerical integration, which can be seen as a variant of [Gaussian quadrature](https://en.wikipedia.org/wiki/Gaussian_quadrature).
+2. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-2) The name *Chebyshev–Lobatto nodes* comes from [Rehuel Lobatto](https://en.wikipedia.org/wiki/Rehuel_Lobatto), who made a variant of Gaussian quadrature, known as *[Lobatto quadrature](https://en.wikipedia.org/wiki/Lobatto_quadrature)*, whose nodes included the ends of the interval, a feature shared by the Chebyshev extrema.
+3. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-3) [Trefethen 2013](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFTrefethen2013), pp. 7
+4. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-4) [Fink &amp; Mathews 1999](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFFinkMathews1999), pp. 236–238
+5. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-5) [Trefethen 2013](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFTrefethen2013), pp. 14
+6. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-6) [Stewart 1996](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFStewart1996), (20.3)
+7. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-7) [Stewart 1996](https://en.wikipedia.org/wiki/Chebyshev_nodes#CITEREFStewart1996), Lecture 20, §14
+8. [↑](https://en.wikipedia.org/wiki/Chebyshev_nodes#cite_ref-:02_8-0) Saal, Rudolf (January 1979). [*Handbook of Filter Design*](https://archive.org/details/handbuchzumfilte0000saal) (in English and German) (1st ed.). Munich, Germany: Allgemeine Elektricitäts-Gesellschaft. pp. 25, 26, 56–61, 116, 117. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [3-87087-070-2](https://en.wikipedia.org/wiki/Special:BookSources/3-87087-070-2).
+</pre></article><article id="section-0010"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=8)]
+- Fink, Kurtis D.; Mathews, John H. (1999). *Numerical Methods using MATLAB* (3rd ed.). Upper Saddle River NJ: Prentice Hall.
+- Stewart, Gilbert W. (1996). *Afternotes on Numerical Analysis*. [SIAM](https://en.wikipedia.org/wiki/Society_for_Industrial_and_Applied_Mathematics). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-89871-362-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-89871-362-6).
+- Trefethen, Lloyd N. (2013), [*Approximation Theory and Approximation Practice*](https://people.maths.ox.ac.uk/trefethen/ATAP/), SIAM
+</pre></article><article id="section-0011"><h3>Further reading</h3><pre># Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;action=edit&amp;section=9)]
+- Burden, Richard L.; Faires, J. Douglas: *Numerical Analysis*, 8th ed., pages 503–512, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-534-39200-8](https://en.wikipedia.org/wiki/Special:BookSources/0-534-39200-8).
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Algebraic_numbers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Algebraic_numbers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Algebraic_numbers)
+[Algebraic numbers](https://en.wikipedia.org/wiki/Algebraic_number)Individual numbers[Degree 2](https://en.wikipedia.org/wiki/Quadratic_irrational_number)
+- [Square root of 2](https://en.wikipedia.org/wiki/Square_root_of_2)
+- [Lieb&#39;s square ice constant](https://en.wikipedia.org/wiki/Lieb&#39;s_square_ice_constant)
+- [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio) (φ)
+- [Square root of 3](https://en.wikipedia.org/wiki/Square_root_of_3)
+- [Square root of 5](https://en.wikipedia.org/wiki/Square_root_of_5)
+- [Silver ratio](https://en.wikipedia.org/wiki/Silver_ratio) (σ)
+- [Square root of 6](https://en.wikipedia.org/wiki/Square_root_of_6)
+- [Square root of 7](https://en.wikipedia.org/wiki/Square_root_of_7)
+- [Square root of 8](https://en.wikipedia.org/wiki/Square_root_of_8)
+- [Square root of 10](https://en.wikipedia.org/wiki/Square_root_of_10)
+- [Imaginary unit (i)](https://en.wikipedia.org/wiki/Imaginary_unit)
+ Degree 3
+- [Cube root of 2](https://en.wikipedia.org/wiki/Doubling_the_cube)
+- [Plastic ratio](https://en.wikipedia.org/wiki/Plastic_ratio) (ρ)
+- [Supergolden ratio](https://en.wikipedia.org/wiki/Supergolden_ratio) (ψ)
+- [Tribonacci ratio](https://en.wikipedia.org/wiki/Tribonacci_ratio) (τ)
+- [Supersilver ratio](https://en.wikipedia.org/wiki/Supersilver_ratio) (ς)
+ Degree ≥ 4
+- [Twelfth root of 2](https://en.wikipedia.org/wiki/Twelfth_root_of_2)
+- [Flag of Nepal aspect ratio](https://en.wikipedia.org/wiki/Flag_of_Nepal)
+- [Conway&#39;s constant (λ)](https://en.wikipedia.org/wiki/Look-and-say_sequence)
+- [Hard hexagon entropy constant](https://en.wikipedia.org/wiki/Hard_hexagon_model)
+ Types
+- [Algebraic integer](https://en.wikipedia.org/wiki/Algebraic_integer) [Eisenstein](https://en.wikipedia.org/wiki/Eisenstein_integer) [Gaussian](https://en.wikipedia.org/wiki/Gaussian_integer) [Perron](https://en.wikipedia.org/wiki/Perron_number) [Pisot–Vijayaraghavan](https://en.wikipedia.org/wiki/Pisot%E2%80%93Vijayaraghavan_number) [Salem](https://en.wikipedia.org/wiki/Salem_number)
+- [Chebyshev nodes](https://en.wikipedia.org/wiki/Chebyshev_nodes)
+- [Constructible](https://en.wikipedia.org/wiki/Constructible_number)
+- [Gaussian rational](https://en.wikipedia.org/wiki/Gaussian_rational)
+- [Quadratic](https://en.wikipedia.org/wiki/Quadratic_irrational_number)
+- [Rational](https://en.wikipedia.org/wiki/Rational_number)
+- [Root of unity](https://en.wikipedia.org/wiki/Root_of_unity)
+ Related topics
+- [Algebraic function](https://en.wikipedia.org/wiki/Algebraic_function) [field](https://en.wikipedia.org/wiki/Algebraic_function_field)
+- [Algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field) [Biquadratic](https://en.wikipedia.org/wiki/Biquadratic_field) [CM](https://en.wikipedia.org/wiki/CM-field) [Cubic](https://en.wikipedia.org/wiki/Cubic_field) [Cyclotomic](https://en.wikipedia.org/wiki/Cyclotomic_field) [Golden](https://en.wikipedia.org/wiki/Golden_field) [Quadratic](https://en.wikipedia.org/wiki/Quadratic_field)
+- [Transcendental number](https://en.wikipedia.org/wiki/Transcendental_number)
+ **[![icon](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Square_root_of_x.svg/20px-Square_root_of_x.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Square_root_of_x.svg) [Mathematics portal](https://en.wikipedia.org/wiki/Portal:Mathematics)**         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;oldid=1287274907](https://en.wikipedia.org/w/index.php?title=Chebyshev_nodes&amp;oldid=1287274907)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Numerical analysis](https://en.wikipedia.org/wiki/Category:Numerical_analysis)
+- [Algebraic numbers](https://en.wikipedia.org/wiki/Category:Algebraic_numbers)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 German-language sources (de)](https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de))
+
+    [https://en\.wikipedia\.org/wiki/Chebyshev\_nodes?action=edit](https://en.wikipedia.org/wiki/Chebyshev_nodes?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

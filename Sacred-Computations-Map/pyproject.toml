@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sacred-computations"
+version = "0.1.0"
+description = "Provenance-first symbolic computation atlas bridging mathematical structures to modern code."
+requires-python = ">=3.10"
+dependencies = ["sympy>=1.14,<2"]
+
+[project.scripts]
+sacred-compute = "sacred_computations.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+[tool.setuptools.packages.find]
+where = ["python"]

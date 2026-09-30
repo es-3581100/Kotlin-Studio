@@ -1,0 +1,47 @@
+{
+  "root": {
+    "label": "Atlas",
+    "angle": -90,
+    "radius": 0
+  },
+  "ratios": {
+    "label": "Algebraic ratios",
+    "angle": -120,
+    "radius": 420
+  },
+  "sequences": {
+    "label": "Recurrences & sequences",
+    "angle": -55,
+    "radius": 420
+  },
+  "number": {
+    "label": "Number theory & approximation",
+    "angle": 10,
+    "radius": 420
+  },
+  "geometry": {
+    "label": "Geometry & high dimensions",
+    "angle": 70,
+    "radius": 420
+  },
+  "transforms": {
+    "label": "Transforms & polynomials",
+    "angle": 135,
+    "radius": 420
+  },
+  "dynamics": {
+    "label": "Dynamics & fractals",
+    "angle": 185,
+    "radius": 420
+  },
+  "symbolic": {
+    "label": "SymPy bridge",
+    "angle": 235,
+    "radius": 420
+  },
+  "code": {
+    "label": "Modern code targets",
+    "angle": 300,
+    "radius": 420
+  }
+}

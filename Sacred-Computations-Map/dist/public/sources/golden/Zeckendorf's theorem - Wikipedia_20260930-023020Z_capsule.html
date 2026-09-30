@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Zeckendorf&#39;s theorem - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Zeckendorf&#39;s theorem - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T02:30:20.610Z</div><div class="stat"><b>Records</b><br>14</div><div class="stat"><b>Sections</b><br>8</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 263 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 17339 B · ~4283 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 21400 B · ~5340 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 412 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Zeckendorf&#39;s theorem.md</code></a> <small>markdown · 3953 B · ~977 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Proof.md</code></a> <small>markdown · 4784 B · ~1180 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Fibonacci multiplication.md</code></a> <small>markdown · 1792 B · ~442 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Representation with negafibonacci numbers.md</code></a> <small>markdown · 1888 B · ~456 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-See also.md</code></a> <small>markdown · 390 B · ~98 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-References.md</code></a> <small>markdown · 1608 B · ~400 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-External links.md</code></a> <small>markdown · 2515 B · ~629 tok</small></li><li><a href="#art-0012"><code>artifacts/provenance/source-record.json</code></a> <small>json · 400 B · ~100 tok</small></li><li><a href="#art-0013"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 318 B · ~80 tok</small></li><li><a href="#art-0014"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Zeckendorf&#39;s theorem - Wikipedia&quot;
+source: &quot;https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem&quot;
+captured_at: 2026-09-30T02:30:20.610Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 14
+artifact_count: 14
+content_sha256: d17b6ac802d166d92b5ff1e8710cf67b1b2df8c331067de31aa6fcad5da5fd68
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:263,&quot;sha256&quot;:&quot;6bc0e931a08ce2178cabe33a3ff09bfa5c454216dbe9ded009bb818f2e793db0&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;zeckendorf&quot;,&quot;2026-09-30t02&quot;,&quot;610z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:17339,&quot;sha256&quot;:&quot;d17b6ac802d166d92b5ff1e8710cf67b1b2df8c331067de31aa6fcad5da5fd68&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;displaystyle&quot;,&quot;zeckendorf&quot;,&quot;sum&quot;,&quot;fibonacci&quot;],&quot;summary&quot;:&quot;Zeckendorf&#39;s theorem - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:4283,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:21400,&quot;sha256&quot;:&quot;b1f37ec673416704a3434fd39b2b4b44bcf0b5a59b48aa760bdf4066f4e2411c&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;org&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;zeckendorf&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:5340,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:412,&quot;sha256&quot;:&quot;b35ceb1f2c494910d2424beb416d608a907dedf5c735dc890a3bd24c826b139c&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Zeckendorf&#39;s theorem.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3953,&quot;sha256&quot;:&quot;803621073a9e6b8ea3de3a55cb9e58c45de57ca13528e69012a472b30e087787&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;fibonacci&quot;,&quot;zeckendorf&quot;,&quot;numbers&quot;,&quot;representation&quot;],&quot;summary&quot;:&quot;Zeckendorf&#39;s theorem&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:977,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Proof.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4784,&quot;sha256&quot;:&quot;0837e52d6de845a6ce29810266923b60dcb21ae041c9eed25525eefa769f2bbb&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;zeckendorf&quot;,&quot;sum&quot;,&quot;representation&quot;,&quot;largest&quot;,&quot;two&quot;,&quot;n-f_&quot;,&quot;one&quot;],&quot;summary&quot;:&quot;Proof&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1180,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Fibonacci multiplication.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1792,&quot;sha256&quot;:&quot;285d5fe1a3cf6f7479b8064513e7f43be39064c270fce460e46a76dcfabbf416&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;zeckendorf&quot;,&quot;circ&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;sum&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Fibonacci multiplication&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:442,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Representation with negafibonacci numbers.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1888,&quot;sha256&quot;:&quot;70982dd89166bdc18aeaa3d924b48ca0bd9accb76048611571796f9e995d29e3&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;negafibonacci&quot;,&quot;wiki&quot;,&quot;numbers&quot;,&quot;representation&quot;,&quot;represented&quot;],&quot;summary&quot;:&quot;Representation with negafibonacci numbers&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:456,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:390,&quot;sha256&quot;:&quot;cf47e5a7d5156c801d41e082ee3318339db56a82cdaafbf828be1e4640dc989b&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;edit&quot;,&quot;fibonacci&quot;,&quot;see&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:98,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1608,&quot;sha256&quot;:&quot;b2f8ef1a5f2f62a40825909375c6fd91083f49405bb928a85609623aba18f127&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;identifier&quot;,&quot;10011&quot;,&quot;issn&quot;,&quot;zeckendorf&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:400,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2515,&quot;sha256&quot;:&quot;53348088048378337d2e9ba40653ab8f07067a11a09c60e9df289c49008669d0&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;zeckendorf&quot;,&quot;category&quot;,&quot;mathworld&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:629,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0012&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:400,&quot;sha256&quot;:&quot;c8af181f6dcc1c1e5845e5cb0ef64c6fb5191506d5e176e8bffedea3fc6c88ad&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;zeckendorf&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t02&quot;,&quot;27s_theorem&quot;,&quot;610z&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:100,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0013&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:318,&quot;sha256&quot;:&quot;a6b36598ad052bc0ad399a8a67b6250a874fdc249dc02196904502011b744b1a&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;135&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0014&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T02:30:20.610Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	263	6bc0e931a08ce2178cabe33a3ff09bfa5c454216dbe9ded009bb818f2e793db0	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	4283	17339	d17b6ac802d166d92b5ff1e8710cf67b1b2df8c331067de31aa6fcad5da5fd68	Zeckendorf&#39;s theorem - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	5340	21400	b1f37ec673416704a3434fd39b2b4b44bcf0b5a59b48aa760bdf4066f4e2411c	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	412	b35ceb1f2c494910d2424beb416d608a907dedf5c735dc890a3bd24c826b139c	Introduction	
+sec:0005	section	artifacts/sections/0002-Zeckendorf&#39;s theorem.md	primary	977	3953	803621073a9e6b8ea3de3a55cb9e58c45de57ca13528e69012a472b30e087787	Zeckendorf&#39;s theorem	
+sec:0006	section	artifacts/sections/0003-Proof.md	primary	1180	4784	0837e52d6de845a6ce29810266923b60dcb21ae041c9eed25525eefa769f2bbb	Proof	
+sec:0007	section	artifacts/sections/0004-Fibonacci multiplication.md	primary	442	1792	285d5fe1a3cf6f7479b8064513e7f43be39064c270fce460e46a76dcfabbf416	Fibonacci multiplication	
+sec:0008	section	artifacts/sections/0005-Representation with negafibonacci numbers.md	primary	456	1888	70982dd89166bdc18aeaa3d924b48ca0bd9accb76048611571796f9e995d29e3	Representation with negafibonacci numbers	
+sec:0009	section	artifacts/sections/0006-See also.md	primary	98	390	cf47e5a7d5156c801d41e082ee3318339db56a82cdaafbf828be1e4640dc989b	See also	
+sec:0010	section	artifacts/sections/0007-References.md	primary	400	1608	b2f8ef1a5f2f62a40825909375c6fd91083f49405bb928a85609623aba18f127	References	
+sec:0011	section	artifacts/sections/0008-External links.md	primary	629	2515	53348088048378337d2e9ba40653ab8f07067a11a09c60e9df289c49008669d0	External links	
+art:0012	provenance	artifacts/provenance/source-record.json	supporting	100	400	c8af181f6dcc1c1e5845e5cb0ef64c6fb5191506d5e176e8bffedea3fc6c88ad	Capture source identity and metadata	
+art:0013	provenance	artifacts/provenance/extraction-record.json	supporting	80	318	a6b36598ad052bc0ad399a8a67b6250a874fdc249dc02196904502011b744b1a	Extraction engine and counts	
+art:0014	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Zeckendorf&#39;s theorem
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%D9%8A%D8%A9_%D8%AA%D8%B3%D9%8A%D9%83%D9%8A%D9%86%D8%AF%D9%88%D8%B1%D9%81)
+- [Català](https://ca.wikipedia.org/wiki/Teorema_de_Zeckendorf)
+- [Deutsch](https://de.wikipedia.org/wiki/Satz_von_Zeckendorf)
+- [Suomi](https://fi.wikipedia.org/wiki/Zeckendorfin_lause)
+- [Français](https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Zeckendorf)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98_%D7%96%D7%A7%D7%A0%D7%93%D7%95%D7%A8%D7%A3)
+- [Magyar](https://hu.wikipedia.org/wiki/Zeckendorf-t%C3%A9tel)
+- [Italiano](https://it.wikipedia.org/wiki/Teorema_di_Zeckendorf)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%83%E3%82%B1%E3%83%B3%E3%83%89%E3%83%AB%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86)
+- [Nederlands](https://nl.wikipedia.org/wiki/Stelling_van_Zeckendorf)
+- [Polski](https://pl.wikipedia.org/wiki/Twierdzenie_Zeckendorfa)
+- [Português](https://pt.wikipedia.org/wiki/Teorema_de_Zeckendorf)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A6%D0%B5%D0%BA%D0%B5%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A6%D0%B5%D0%BA%D0%B5%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E9%BD%8A%E8%82%AF%E5%A4%9A%E5%A4%AB%E5%AE%9A%E7%90%86)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1188392#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   On the unique representation of integers as sums of non-consecutive Fibonacci numbers [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Zeckendorf_representations_89px.png/330px-Zeckendorf_representations_89px.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Zeckendorf_representations_89px.png)The first 89 [natural numbers](https://en.wikipedia.org/wiki/Natural_number) in Zeckendorf form. Each rectangle has a Fibonacci number *F**j* as width (blue number in the center) and *F**j*−1 as height. The vertical bands have width 10.
+
+**Zeckendorf&#39;s theorem**, named after amateur [mathematician](https://en.wikipedia.org/wiki/Mathematician) [Edouard Zeckendorf](https://en.wikipedia.org/wiki/Edouard_Zeckendorf), is a result about the representation of [integers](https://en.wikipedia.org/wiki/Integer) as sums of [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number). It states that every [positive integer](https://en.wikipedia.org/wiki/Positive_integer) can be represented [uniquely](https://en.wikipedia.org/wiki/Uniqueness_quantification) as the sum of one or more *distinct* Fibonacci numbers in such a way that the sum does not include any two consecutive Fibonacci numbers. More precisely, if N is any positive integer, there exist positive integers *c**i* ≥ 2, with *c**i* + 1 &gt; *c**i* + 1, such that
+
+     N =  ∑  i = 0   k    F   c  i     ,   {\displaystyle N=\sum _{i=0}^{k}F_{c_{i}},}
+
+where Fn is the nth Fibonacci number. Such a sum is called the **Zeckendorf representation** of N. The [Fibonacci coding](https://en.wikipedia.org/wiki/Fibonacci_coding) of N can be derived from its Zeckendorf representation.
+
+For example, the Zeckendorf representation of 64 is
+
+ 64 = 55 + 8 + 1.
+
+There are other ways of representing 64 as the sum of Fibonacci numbers
+
+ 64 = 55 + 5 + 3 + 1 64 = 34 + 21 + 8 + 1 64 = 34 + 21 + 5 + 3 + 1 64 = 34 + 13 + 8 + 5 + 3 + 1
+
+but these are not Zeckendorf representations because 34 and 21 are consecutive Fibonacci numbers, as are 5 and 3.
+
+For any given positive integer, its Zeckendorf representation can be found by using a [greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm), choosing the largest possible Fibonacci number at each stage. For instance, 11 = 8 + 3, whereas 13 = 13 (not 8 + 5), and 31 = 21 + 8 + 2.
+
+## Proof
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=1)]
+
+Zeckendorf&#39;s theorem has two parts:
+
+1. **Existence**: every positive integer n has a Zeckendorf representation.
+2. **Uniqueness**: no positive integer n has two different Zeckendorf representations.
+
+The existence part of Zeckendorf&#39;s theorem can be proven by [induction](https://en.wikipedia.org/wiki/Mathematical_induction). The base case     n = 1   {\displaystyle n=1}   has the Zeckendorf representation     n = 1 =  F  2     {\displaystyle n=1=F_{2}}  . Assuming that all     k &lt; n   {\displaystyle k&lt;n}   have a Zeckendorf representation let     j   {\displaystyle j}   be such that      F  j   &lt; n &lt;  F  j + 1     {\displaystyle F_{j}&lt;n&lt;F_{j+1}}  . Then,     n −  F  j   &lt; n   {\displaystyle n-F_{j}&lt;n}  . Therefore, there exists a Zeckendorf representation for     n −  F  j     {\displaystyle n-F_{j}}  . The assumption      F  j   &lt; n &lt;  F  j + 1     {\displaystyle F_{j}&lt;n&lt;F_{j+1}}   also implies that      F  j − 1   =  F  j + 1   −  F  j   &gt; n −  F  j     {\displaystyle F_{j-1}=F_{j+1}-F_{j}&gt;n-F_{j}}  . Therefore, the largest Fibonacci number in the Zeckendorf representation of     n −  F  j     {\displaystyle n-F_{j}}   must be strictly less than      F  j − 1     {\displaystyle F_{j-1}}  . This implies that the Zeckendorf representation of     n −  F  j     {\displaystyle n-F_{j}}   together with      F  j     {\displaystyle F_{j}}   is a valid Zeckendorf representation for     n   {\displaystyle n}  .
+
+To prove uniqueness, one can use the identity
+
+      ∑  i = 0   ⌊ n  /  2 ⌋ − 1    F  n − 2 i   =  F  n + 1   − 1   {\displaystyle \sum _{i=0}^{\lfloor n/2\rfloor -1}F_{n-2i}=F_{n+1}-1}
+
+This can be proven by induction, or by a [counting argument](https://en.wikipedia.org/wiki/Fibonacci_sequence#Combinatorial_identities) in which one realizes both sides of the identity are two ways of counting the number of ways of writing     n   {\displaystyle n}   using sums of     1   {\displaystyle 1}   and at least one     2   {\displaystyle 2}  .
+
+To get a contradiction, assume that there are integers      c  i     {\displaystyle c_{i}}  , for     i = 0 , 1 , … , r   {\displaystyle i=0,1,\ldots ,r}  , and      d  i     {\displaystyle d_{i}}  , for     i = 0 , 1 , … , s   {\displaystyle i=0,1,\ldots ,s}  , such that      c  0   ,  d  0   ≥ 2   {\displaystyle c_{0},d_{0}\geq 2}  ,      c  i + 1   &gt;  c  i   + 1   {\displaystyle c_{i+1}&gt;c_{i}+1}  ,      d  i + 1   &gt;  d  i   + 1   {\displaystyle d_{i+1}&gt;d_{i}+1}  , and
+
+      ∑  i = 0   r    F   c  i     =  ∑  i = 0   s    F   d  i       {\displaystyle \sum _{i=0}^{r}F_{c_{i}}=\sum _{i=0}^{s}F_{d_{i}}}
+
+The lengths     r   {\displaystyle r}   and     s   {\displaystyle s}   can be assumed to be the smallest possible.
+
+If      c  r   =  d  s     {\displaystyle c_{r}=d_{s}}  , that is if the largest terms      F   c  r       {\displaystyle F_{c_{r}}}   and      F   d  s       {\displaystyle F_{d_{s}}}   of the two Zeckendorf representations are equal, then they can be deleted from both representations and obtain two new Zeckendorf representations that are equal and have fewer number of summands. This contradicts that     r , s   {\displaystyle r,s}   were the smallest possible. Therefore,      c  r   ≠  d  s     {\displaystyle c_{r}\neq d_{s}}  . By swapping the names     c   {\displaystyle c}   and     d   {\displaystyle d}  , if necessary, one can assume that      c  r   &gt;  d  s     {\displaystyle c_{r}&gt;d_{s}}  . However, the sum
+
+      ∑  i = 0   s    F   d  i     ≤  ∑  i = 0   ⌊  d  s    /  2 ⌋ − 1    F   d  s   − 2 i   =  F   d  s   + 1   − 1 ≤  F   c  r     − 1 &lt;  F   c  r       {\displaystyle \sum _{i=0}^{s}F_{d_{i}}\leq \sum _{i=0}^{\lfloor d_{s}/2\rfloor -1}F_{d_{s}-2i}=F_{d_{s}+1}-1\leq F_{c_{r}}-1&lt;F_{c_{r}}}
+
+Here the first inequality compares the sum with that of the Zeckendorf representation, which largest term is      F   d  s       {\displaystyle F_{d_{s}}}  , and uses the largest Fibonacci numbers allowed. That is, using every second Fibonacci number descending from      F   d  s       {\displaystyle F_{d_{s}}}   and stopping at      F  2     {\displaystyle F_{2}}   or      F  3     {\displaystyle F_{3}}  . The equation is the identity above. This shows that, even if the sum      ∑  i = 0   s    F   d  s       {\displaystyle \sum _{i=0}^{s}F_{d_{s}}}   uses all the largest Fibonacci numbers allowed, its sum is still strictly less than the largest term      F   c  r       {\displaystyle F_{c_{r}}}   in the sum      ∑  i = 0   r    F   c  i       {\displaystyle \sum _{i=0}^{r}F_{c_{i}}}  . Therefore, one cannot have two different Zeckendorf representations giving the same sum.
+
+## Fibonacci multiplication
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=2)]
+
+One can define the following operation     a ∘ b   {\displaystyle a\circ b}   on natural numbers a, b: given the Zeckendorf representations     a =  ∑  i = 0   k    F   c  i      (  c  i   ≥ 2 )   {\displaystyle a=\sum _{i=0}^{k}F_{c_{i}}\;(c_{i}\geq 2)}   and     b =  ∑  j = 0   l    F   d  j      (  d  j   ≥ 2 )   {\displaystyle b=\sum _{j=0}^{l}F_{d_{j}}\;(d_{j}\geq 2)}   we define the **Fibonacci product**     a ∘ b =  ∑  i = 0   k    ∑  j = 0   l    F   c  i   +  d  j     .   {\displaystyle a\circ b=\sum _{i=0}^{k}\sum _{j=0}^{l}F_{c_{i}+d_{j}}.}
+
+For example, the Zeckendorf representation of 2 is      F  3     {\displaystyle F_{3}}  , and the Zeckendorf representation of 4 is      F  4   +  F  2     {\displaystyle F_{4}+F_{2}}   (     F  1     {\displaystyle F_{1}}   is disallowed from representations), so     2 ∘ 4 =  F  3 + 4   +  F  3 + 2   = 13 + 5 = 18.   {\displaystyle 2\circ 4=F_{3+4}+F_{3+2}=13+5=18.}
+
+(The product is not always in Zeckendorf form. For example,     4 ∘ 4 = (  F  4   +  F  2   ) ∘ (  F  4   +  F  2   ) =  F  4 + 4   + 2  F  4 + 2   +  F  2 + 2   = 21 + 2 ⋅ 8 + 3 = 40 =  F  9   +  F  5   +  F  2   .   {\displaystyle 4\circ 4=(F_{4}+F_{2})\circ (F_{4}+F_{2})=F_{4+4}+2F_{4+2}+F_{2+2}=21+2\cdot 8+3=40=F_{9}+F_{5}+F_{2}.}  )
+
+A simple rearrangement of sums shows that this is a [commutative](https://en.wikipedia.org/wiki/Commutative) operation; however, [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) proved the surprising fact that this operation is also [associative](https://en.wikipedia.org/wiki/Associative).[[1]](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_note-1)
+
+## Representation with negafibonacci numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=3)]
+
+The Fibonacci sequence can be extended to negative index n using the rearranged [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
+
+      F  n − 2   =  F  n   −  F  n − 1   ,   {\displaystyle F_{n-2}=F_{n}-F_{n-1},}
+
+which yields the sequence of &quot;[negafibonacci](https://en.wikipedia.org/wiki/Negafibonacci)&quot; numbers satisfying
+
+      F  − n   = ( − 1  )  n + 1    F  n   .   {\displaystyle F_{-n}=(-1)^{n+1}F_{n}.}
+
+Any integer can be uniquely represented[[2]](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_note-2) as a sum of negafibonacci numbers in which no two consecutive negafibonacci numbers are used. For example:
+
+- −11 = *F*−4 + *F*−6 = (−3) + (−8)
+- 12 = *F*−2 + *F*−7 = (−1) + 13
+- 24 = *F*−1 + *F*−4 + *F*−6 + *F*−9 = 1 + (−3) + (−8) + 34
+- −43 = *F*−2 + *F*−7 + *F*−10 = (−1) + 13 + (−55)
+- 0 is represented by the [empty sum](https://en.wikipedia.org/wiki/Empty_sum).
+
+0 = *F*−1 + *F*−2 , for example, so the uniqueness of the representation does depend on the condition that no two consecutive negafibonacci numbers are used.
+
+This gives a [system](https://en.wikipedia.org/wiki/NegaFibonacci_coding) of coding [integers](https://en.wikipedia.org/wiki/Integers), similar to the representation of Zeckendorf&#39;s theorem. In the string representing the integer x, the nth digit is 1 if F−n appears in the sum that represents x; that digit is 0 otherwise. For example, 24 may be represented by the string 100101001, which has the digit 1 in places 9, 6, 4, and 1, because 24 = *F*−1 + *F*−4 + *F*−6 + *F*−9 . The integer x is represented by a string of odd length [if and only if](https://en.wikipedia.org/wiki/If_and_only_if) *x* &gt; 0.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=4)]
+- [Complete sequence](https://en.wikipedia.org/wiki/Complete_sequence)
+- [Fibonacci coding](https://en.wikipedia.org/wiki/Fibonacci_coding)
+- [Fibonacci nim](https://en.wikipedia.org/wiki/Fibonacci_nim)
+- [Ostrowski numeration](https://en.wikipedia.org/wiki/Ostrowski_numeration)
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=5)]
+1. [↑](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_ref-1) [Knuth, Donald E.](https://en.wikipedia.org/wiki/Donald_Knuth) (1988). [&quot;Fibonacci multiplication&quot;](http://www.cs.umb.edu/~rvetro/vetroBioComp/compression/FIBO/KnuthFibb.pdf) (PDF). *[Applied Mathematics Letters](https://en.wikipedia.org/wiki/Applied_Mathematics_Letters)*. **1** (1): 57–60. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0893-9659(88)90176-0](https://doi.org/10.1016%2F0893-9659%2888%2990176-0). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0893-9659](https://search.worldcat.org/issn/0893-9659). [Zbl](https://en.wikipedia.org/wiki/Zbl_(identifier)) [0633.10011](https://zbmath.org/?format=complete&amp;q=an:0633.10011).
+2. [↑](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_ref-2) [Knuth, Donald](https://en.wikipedia.org/wiki/Donald_Knuth) (2008-12-11). [*Negafibonacci Numbers and the Hyperbolic Plane*](http://www.allacademic.com/meta/p206842_index.html). Annual meeting, Mathematical Association of America. The Fairmont Hotel, San Jose, CA.
+
+- Zeckendorf, E. (1972). &quot;Représentation des nombres naturels par une somme de nombres de Fibonacci ou de nombres de Lucas&quot;. *Bull. Soc. R. Sci. Liège* (in French). **41**: 179–182. [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0037-9565](https://search.worldcat.org/issn/0037-9565). [Zbl](https://en.wikipedia.org/wiki/Zbl_(identifier)) [0252.10011](https://zbmath.org/?format=complete&amp;q=an:0252.10011).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=6)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Zeckendorf&#39;s Theorem&quot;](https://mathworld.wolfram.com/ZeckendorfsTheorem.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Zeckendorf Representation&quot;](https://mathworld.wolfram.com/ZeckendorfRepresentation.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Zeckendorf&#39;s theorem](http://www.cut-the-knot.org/ctk/OnePile.shtml#fibnim) at [cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)
+- G.M. Phillips (2001) [1994], [&quot;Zeckendorf representation&quot;](https://www.encyclopediaofmath.org/index.php?title=Zeckendorf_representation), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press
+- OEIS [sequence A101330 (Knuth&#39;s Fibonacci (or circle) product)](https://oeis.org/A101330)
+
+*This article incorporates material from proof that the Zeckendorf representation of a positive integer is unique on [PlanetMath](https://en.wikipedia.org/wiki/PlanetMath), which is licensed under the [Creative Commons Attribution/Share-Alike License](https://en.wikipedia.org/wiki/Wikipedia:CC-BY-SA).*
+
+          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;oldid=1373883588](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;oldid=1373883588)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fibonacci numbers](https://en.wikipedia.org/wiki/Category:Fibonacci_numbers)
+- [Theorems in number theory](https://en.wikipedia.org/wiki/Category:Theorems_in_number_theory)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 French-language sources (fr)](https://en.wikipedia.org/wiki/Category:CS1_French-language_sources_(fr))
+- [Wikipedia articles incorporating text from PlanetMath](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_incorporating_text_from_PlanetMath)
+- [Articles containing proofs](https://en.wikipedia.org/wiki/Category:Articles_containing_proofs)
+
+    [https://en\.wikipedia\.org/wiki/Zeckendorf&#39;s\_theorem?action=edit](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Zeckendorf&#39;s theorem</h3><pre># Zeckendorf&#39;s theorem
+
+- [العربية](https://ar.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%D9%8A%D8%A9_%D8%AA%D8%B3%D9%8A%D9%83%D9%8A%D9%86%D8%AF%D9%88%D8%B1%D9%81)
+- [Català](https://ca.wikipedia.org/wiki/Teorema_de_Zeckendorf)
+- [Deutsch](https://de.wikipedia.org/wiki/Satz_von_Zeckendorf)
+- [Suomi](https://fi.wikipedia.org/wiki/Zeckendorfin_lause)
+- [Français](https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Zeckendorf)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98_%D7%96%D7%A7%D7%A0%D7%93%D7%95%D7%A8%D7%A3)
+- [Magyar](https://hu.wikipedia.org/wiki/Zeckendorf-t%C3%A9tel)
+- [Italiano](https://it.wikipedia.org/wiki/Teorema_di_Zeckendorf)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%83%E3%82%B1%E3%83%B3%E3%83%89%E3%83%AB%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86)
+- [Nederlands](https://nl.wikipedia.org/wiki/Stelling_van_Zeckendorf)
+- [Polski](https://pl.wikipedia.org/wiki/Twierdzenie_Zeckendorfa)
+- [Português](https://pt.wikipedia.org/wiki/Teorema_de_Zeckendorf)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A6%D0%B5%D0%BA%D0%B5%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A6%D0%B5%D0%BA%D0%B5%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E9%BD%8A%E8%82%AF%E5%A4%9A%E5%A4%AB%E5%AE%9A%E7%90%86)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1188392#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   On the unique representation of integers as sums of non-consecutive Fibonacci numbers [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Zeckendorf_representations_89px.png/330px-Zeckendorf_representations_89px.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Zeckendorf_representations_89px.png)The first 89 [natural numbers](https://en.wikipedia.org/wiki/Natural_number) in Zeckendorf form. Each rectangle has a Fibonacci number *F**j* as width (blue number in the center) and *F**j*−1 as height. The vertical bands have width 10.
+
+**Zeckendorf&#39;s theorem**, named after amateur [mathematician](https://en.wikipedia.org/wiki/Mathematician) [Edouard Zeckendorf](https://en.wikipedia.org/wiki/Edouard_Zeckendorf), is a result about the representation of [integers](https://en.wikipedia.org/wiki/Integer) as sums of [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number). It states that every [positive integer](https://en.wikipedia.org/wiki/Positive_integer) can be represented [uniquely](https://en.wikipedia.org/wiki/Uniqueness_quantification) as the sum of one or more *distinct* Fibonacci numbers in such a way that the sum does not include any two consecutive Fibonacci numbers. More precisely, if N is any positive integer, there exist positive integers *c**i* ≥ 2, with *c**i* + 1 &gt; *c**i* + 1, such that
+
+     N =  ∑  i = 0   k    F   c  i     ,   {\displaystyle N=\sum _{i=0}^{k}F_{c_{i}},}
+
+where Fn is the nth Fibonacci number. Such a sum is called the **Zeckendorf representation** of N. The [Fibonacci coding](https://en.wikipedia.org/wiki/Fibonacci_coding) of N can be derived from its Zeckendorf representation.
+
+For example, the Zeckendorf representation of 64 is
+
+ 64 = 55 + 8 + 1.
+
+There are other ways of representing 64 as the sum of Fibonacci numbers
+
+ 64 = 55 + 5 + 3 + 1 64 = 34 + 21 + 8 + 1 64 = 34 + 21 + 5 + 3 + 1 64 = 34 + 13 + 8 + 5 + 3 + 1
+
+but these are not Zeckendorf representations because 34 and 21 are consecutive Fibonacci numbers, as are 5 and 3.
+
+For any given positive integer, its Zeckendorf representation can be found by using a [greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm), choosing the largest possible Fibonacci number at each stage. For instance, 11 = 8 + 3, whereas 13 = 13 (not 8 + 5), and 31 = 21 + 8 + 2.
+</pre></article><article id="section-0003"><h3>Proof</h3><pre># Proof
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=1)]
+
+Zeckendorf&#39;s theorem has two parts:
+
+1. **Existence**: every positive integer n has a Zeckendorf representation.
+2. **Uniqueness**: no positive integer n has two different Zeckendorf representations.
+
+The existence part of Zeckendorf&#39;s theorem can be proven by [induction](https://en.wikipedia.org/wiki/Mathematical_induction). The base case     n = 1   {\displaystyle n=1}   has the Zeckendorf representation     n = 1 =  F  2     {\displaystyle n=1=F_{2}}  . Assuming that all     k &lt; n   {\displaystyle k&lt;n}   have a Zeckendorf representation let     j   {\displaystyle j}   be such that      F  j   &lt; n &lt;  F  j + 1     {\displaystyle F_{j}&lt;n&lt;F_{j+1}}  . Then,     n −  F  j   &lt; n   {\displaystyle n-F_{j}&lt;n}  . Therefore, there exists a Zeckendorf representation for     n −  F  j     {\displaystyle n-F_{j}}  . The assumption      F  j   &lt; n &lt;  F  j + 1     {\displaystyle F_{j}&lt;n&lt;F_{j+1}}   also implies that      F  j − 1   =  F  j + 1   −  F  j   &gt; n −  F  j     {\displaystyle F_{j-1}=F_{j+1}-F_{j}&gt;n-F_{j}}  . Therefore, the largest Fibonacci number in the Zeckendorf representation of     n −  F  j     {\displaystyle n-F_{j}}   must be strictly less than      F  j − 1     {\displaystyle F_{j-1}}  . This implies that the Zeckendorf representation of     n −  F  j     {\displaystyle n-F_{j}}   together with      F  j     {\displaystyle F_{j}}   is a valid Zeckendorf representation for     n   {\displaystyle n}  .
+
+To prove uniqueness, one can use the identity
+
+      ∑  i = 0   ⌊ n  /  2 ⌋ − 1    F  n − 2 i   =  F  n + 1   − 1   {\displaystyle \sum _{i=0}^{\lfloor n/2\rfloor -1}F_{n-2i}=F_{n+1}-1}
+
+This can be proven by induction, or by a [counting argument](https://en.wikipedia.org/wiki/Fibonacci_sequence#Combinatorial_identities) in which one realizes both sides of the identity are two ways of counting the number of ways of writing     n   {\displaystyle n}   using sums of     1   {\displaystyle 1}   and at least one     2   {\displaystyle 2}  .
+
+To get a contradiction, assume that there are integers      c  i     {\displaystyle c_{i}}  , for     i = 0 , 1 , … , r   {\displaystyle i=0,1,\ldots ,r}  , and      d  i     {\displaystyle d_{i}}  , for     i = 0 , 1 , … , s   {\displaystyle i=0,1,\ldots ,s}  , such that      c  0   ,  d  0   ≥ 2   {\displaystyle c_{0},d_{0}\geq 2}  ,      c  i + 1   &gt;  c  i   + 1   {\displaystyle c_{i+1}&gt;c_{i}+1}  ,      d  i + 1   &gt;  d  i   + 1   {\displaystyle d_{i+1}&gt;d_{i}+1}  , and
+
+      ∑  i = 0   r    F   c  i     =  ∑  i = 0   s    F   d  i       {\displaystyle \sum _{i=0}^{r}F_{c_{i}}=\sum _{i=0}^{s}F_{d_{i}}}
+
+The lengths     r   {\displaystyle r}   and     s   {\displaystyle s}   can be assumed to be the smallest possible.
+
+If      c  r   =  d  s     {\displaystyle c_{r}=d_{s}}  , that is if the largest terms      F   c  r       {\displaystyle F_{c_{r}}}   and      F   d  s       {\displaystyle F_{d_{s}}}   of the two Zeckendorf representations are equal, then they can be deleted from both representations and obtain two new Zeckendorf representations that are equal and have fewer number of summands. This contradicts that     r , s   {\displaystyle r,s}   were the smallest possible. Therefore,      c  r   ≠  d  s     {\displaystyle c_{r}\neq d_{s}}  . By swapping the names     c   {\displaystyle c}   and     d   {\displaystyle d}  , if necessary, one can assume that      c  r   &gt;  d  s     {\displaystyle c_{r}&gt;d_{s}}  . However, the sum
+
+      ∑  i = 0   s    F   d  i     ≤  ∑  i = 0   ⌊  d  s    /  2 ⌋ − 1    F   d  s   − 2 i   =  F   d  s   + 1   − 1 ≤  F   c  r     − 1 &lt;  F   c  r       {\displaystyle \sum _{i=0}^{s}F_{d_{i}}\leq \sum _{i=0}^{\lfloor d_{s}/2\rfloor -1}F_{d_{s}-2i}=F_{d_{s}+1}-1\leq F_{c_{r}}-1&lt;F_{c_{r}}}
+
+Here the first inequality compares the sum with that of the Zeckendorf representation, which largest term is      F   d  s       {\displaystyle F_{d_{s}}}  , and uses the largest Fibonacci numbers allowed. That is, using every second Fibonacci number descending from      F   d  s       {\displaystyle F_{d_{s}}}   and stopping at      F  2     {\displaystyle F_{2}}   or      F  3     {\displaystyle F_{3}}  . The equation is the identity above. This shows that, even if the sum      ∑  i = 0   s    F   d  s       {\displaystyle \sum _{i=0}^{s}F_{d_{s}}}   uses all the largest Fibonacci numbers allowed, its sum is still strictly less than the largest term      F   c  r       {\displaystyle F_{c_{r}}}   in the sum      ∑  i = 0   r    F   c  i       {\displaystyle \sum _{i=0}^{r}F_{c_{i}}}  . Therefore, one cannot have two different Zeckendorf representations giving the same sum.
+</pre></article><article id="section-0004"><h3>Fibonacci multiplication</h3><pre># Fibonacci multiplication
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=2)]
+
+One can define the following operation     a ∘ b   {\displaystyle a\circ b}   on natural numbers a, b: given the Zeckendorf representations     a =  ∑  i = 0   k    F   c  i      (  c  i   ≥ 2 )   {\displaystyle a=\sum _{i=0}^{k}F_{c_{i}}\;(c_{i}\geq 2)}   and     b =  ∑  j = 0   l    F   d  j      (  d  j   ≥ 2 )   {\displaystyle b=\sum _{j=0}^{l}F_{d_{j}}\;(d_{j}\geq 2)}   we define the **Fibonacci product**     a ∘ b =  ∑  i = 0   k    ∑  j = 0   l    F   c  i   +  d  j     .   {\displaystyle a\circ b=\sum _{i=0}^{k}\sum _{j=0}^{l}F_{c_{i}+d_{j}}.}
+
+For example, the Zeckendorf representation of 2 is      F  3     {\displaystyle F_{3}}  , and the Zeckendorf representation of 4 is      F  4   +  F  2     {\displaystyle F_{4}+F_{2}}   (     F  1     {\displaystyle F_{1}}   is disallowed from representations), so     2 ∘ 4 =  F  3 + 4   +  F  3 + 2   = 13 + 5 = 18.   {\displaystyle 2\circ 4=F_{3+4}+F_{3+2}=13+5=18.}
+
+(The product is not always in Zeckendorf form. For example,     4 ∘ 4 = (  F  4   +  F  2   ) ∘ (  F  4   +  F  2   ) =  F  4 + 4   + 2  F  4 + 2   +  F  2 + 2   = 21 + 2 ⋅ 8 + 3 = 40 =  F  9   +  F  5   +  F  2   .   {\displaystyle 4\circ 4=(F_{4}+F_{2})\circ (F_{4}+F_{2})=F_{4+4}+2F_{4+2}+F_{2+2}=21+2\cdot 8+3=40=F_{9}+F_{5}+F_{2}.}  )
+
+A simple rearrangement of sums shows that this is a [commutative](https://en.wikipedia.org/wiki/Commutative) operation; however, [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) proved the surprising fact that this operation is also [associative](https://en.wikipedia.org/wiki/Associative).[[1]](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_note-1)
+</pre></article><article id="section-0005"><h3>Representation with negafibonacci numbers</h3><pre># Representation with negafibonacci numbers
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=3)]
+
+The Fibonacci sequence can be extended to negative index n using the rearranged [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
+
+      F  n − 2   =  F  n   −  F  n − 1   ,   {\displaystyle F_{n-2}=F_{n}-F_{n-1},}
+
+which yields the sequence of &quot;[negafibonacci](https://en.wikipedia.org/wiki/Negafibonacci)&quot; numbers satisfying
+
+      F  − n   = ( − 1  )  n + 1    F  n   .   {\displaystyle F_{-n}=(-1)^{n+1}F_{n}.}
+
+Any integer can be uniquely represented[[2]](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_note-2) as a sum of negafibonacci numbers in which no two consecutive negafibonacci numbers are used. For example:
+
+- −11 = *F*−4 + *F*−6 = (−3) + (−8)
+- 12 = *F*−2 + *F*−7 = (−1) + 13
+- 24 = *F*−1 + *F*−4 + *F*−6 + *F*−9 = 1 + (−3) + (−8) + 34
+- −43 = *F*−2 + *F*−7 + *F*−10 = (−1) + 13 + (−55)
+- 0 is represented by the [empty sum](https://en.wikipedia.org/wiki/Empty_sum).
+
+0 = *F*−1 + *F*−2 , for example, so the uniqueness of the representation does depend on the condition that no two consecutive negafibonacci numbers are used.
+
+This gives a [system](https://en.wikipedia.org/wiki/NegaFibonacci_coding) of coding [integers](https://en.wikipedia.org/wiki/Integers), similar to the representation of Zeckendorf&#39;s theorem. In the string representing the integer x, the nth digit is 1 if F−n appears in the sum that represents x; that digit is 0 otherwise. For example, 24 may be represented by the string 100101001, which has the digit 1 in places 9, 6, 4, and 1, because 24 = *F*−1 + *F*−4 + *F*−6 + *F*−9 . The integer x is represented by a string of odd length [if and only if](https://en.wikipedia.org/wiki/If_and_only_if) *x* &gt; 0.
+</pre></article><article id="section-0006"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=4)]
+- [Complete sequence](https://en.wikipedia.org/wiki/Complete_sequence)
+- [Fibonacci coding](https://en.wikipedia.org/wiki/Fibonacci_coding)
+- [Fibonacci nim](https://en.wikipedia.org/wiki/Fibonacci_nim)
+- [Ostrowski numeration](https://en.wikipedia.org/wiki/Ostrowski_numeration)
+</pre></article><article id="section-0007"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=5)]
+1. [↑](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_ref-1) [Knuth, Donald E.](https://en.wikipedia.org/wiki/Donald_Knuth) (1988). [&quot;Fibonacci multiplication&quot;](http://www.cs.umb.edu/~rvetro/vetroBioComp/compression/FIBO/KnuthFibb.pdf) (PDF). *[Applied Mathematics Letters](https://en.wikipedia.org/wiki/Applied_Mathematics_Letters)*. **1** (1): 57–60. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0893-9659(88)90176-0](https://doi.org/10.1016%2F0893-9659%2888%2990176-0). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0893-9659](https://search.worldcat.org/issn/0893-9659). [Zbl](https://en.wikipedia.org/wiki/Zbl_(identifier)) [0633.10011](https://zbmath.org/?format=complete&amp;q=an:0633.10011).
+2. [↑](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem#cite_ref-2) [Knuth, Donald](https://en.wikipedia.org/wiki/Donald_Knuth) (2008-12-11). [*Negafibonacci Numbers and the Hyperbolic Plane*](http://www.allacademic.com/meta/p206842_index.html). Annual meeting, Mathematical Association of America. The Fairmont Hotel, San Jose, CA.
+
+- Zeckendorf, E. (1972). &quot;Représentation des nombres naturels par une somme de nombres de Fibonacci ou de nombres de Lucas&quot;. *Bull. Soc. R. Sci. Liège* (in French). **41**: 179–182. [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0037-9565](https://search.worldcat.org/issn/0037-9565). [Zbl](https://en.wikipedia.org/wiki/Zbl_(identifier)) [0252.10011](https://zbmath.org/?format=complete&amp;q=an:0252.10011).
+</pre></article><article id="section-0008"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;action=edit&amp;section=6)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Zeckendorf&#39;s Theorem&quot;](https://mathworld.wolfram.com/ZeckendorfsTheorem.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Zeckendorf Representation&quot;](https://mathworld.wolfram.com/ZeckendorfRepresentation.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Zeckendorf&#39;s theorem](http://www.cut-the-knot.org/ctk/OnePile.shtml#fibnim) at [cut-the-knot](https://en.wikipedia.org/wiki/Cut-the-knot)
+- G.M. Phillips (2001) [1994], [&quot;Zeckendorf representation&quot;](https://www.encyclopediaofmath.org/index.php?title=Zeckendorf_representation), *[Encyclopedia of Mathematics](https://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics)*, EMS Press
+- OEIS [sequence A101330 (Knuth&#39;s Fibonacci (or circle) product)](https://oeis.org/A101330)
+
+*This article incorporates material from proof that the Zeckendorf representation of a positive integer is unique on [PlanetMath](https://en.wikipedia.org/wiki/PlanetMath), which is licensed under the [Creative Commons Attribution/Share-Alike License](https://en.wikipedia.org/wiki/Wikipedia:CC-BY-SA).*
+
+          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;oldid=1373883588](https://en.wikipedia.org/w/index.php?title=Zeckendorf%27s_theorem&amp;oldid=1373883588)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fibonacci numbers](https://en.wikipedia.org/wiki/Category:Fibonacci_numbers)
+- [Theorems in number theory](https://en.wikipedia.org/wiki/Category:Theorems_in_number_theory)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 French-language sources (fr)](https://en.wikipedia.org/wiki/Category:CS1_French-language_sources_(fr))
+- [Wikipedia articles incorporating text from PlanetMath](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_incorporating_text_from_PlanetMath)
+- [Articles containing proofs](https://en.wikipedia.org/wiki/Category:Articles_containing_proofs)
+
+    [https://en\.wikipedia\.org/wiki/Zeckendorf&#39;s\_theorem?action=edit](https://en.wikipedia.org/wiki/Zeckendorf&#39;s_theorem?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

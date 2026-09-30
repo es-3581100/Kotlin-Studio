@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>De Bruijn sequence - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · De Bruijn sequence - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/De_Bruijn_sequence</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:32:33.703Z</div><div class="stat"><b>Records</b><br>25</div><div class="stat"><b>Sections</b><br>19</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 259 B · ~65 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 46429 B · ~11553 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 54010 B · ~13486 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 410 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-De Bruijn sequence.md</code></a> <small>markdown · 4666 B · ~1158 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-History.md</code></a> <small>markdown · 2895 B · ~713 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Examples.md</code></a> <small>markdown · 466 B · ~117 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Construction.md</code></a> <small>markdown · 2102 B · ~525 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Example using de Bruijn graph.md</code></a> <small>markdown · 2656 B · ~663 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Example using inverse Burrows—Wheeler transform.md</code></a> <small>markdown · 3270 B · ~811 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Algorithm.md</code></a> <small>markdown · 2342 B · ~586 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Uses.md</code></a> <small>markdown · 575 B · ~144 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Angle detection.md</code></a> <small>markdown · 760 B · ~190 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Finding least- or most-significant set bit in a word.md</code></a> <small>markdown · 3002 B · ~751 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Brute-force attacks on locks.md</code></a> <small>markdown · 2281 B · ~570 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Multi de Bruijn sequences.md</code></a> <small>markdown · 607 B · ~152 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-de Bruijn torus.md</code></a> <small>markdown · 641 B · ~161 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-de Bruijn decoding.md</code></a> <small>markdown · 810 B · ~201 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-See also.md</code></a> <small>markdown · 456 B · ~114 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-Notes.md</code></a> <small>markdown · 4972 B · ~1234 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-References.md</code></a> <small>markdown · 10905 B · ~2712 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-External links.md</code></a> <small>markdown · 2588 B · ~647 tok</small></li><li><a href="#art-0023"><code>artifacts/provenance/source-record.json</code></a> <small>json · 392 B · ~98 tok</small></li><li><a href="#art-0024"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0025"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;De Bruijn sequence - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/De_Bruijn_sequence
+captured_at: 2026-09-30T05:32:33.703Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 25
+artifact_count: 25
+content_sha256: b97ed8c10cb3a682d81090c45dc60246f279f015104ac8ab1e9cdc6e7345de6f
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:259,&quot;sha256&quot;:&quot;5b66fa54ee22b56888fca014230ca632148ae4ffcbda6f807a7d14051bb0b94d&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t05&quot;,&quot;703z&quot;,&quot;agent&quot;,&quot;bruijn&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:65,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:46429,&quot;sha256&quot;:&quot;b97ed8c10cb3a682d81090c45dc60246f279f015104ac8ab1e9cdc6e7345de6f&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;de_bruijn_sequence&quot;,&quot;bruijn&quot;,&quot;sequence&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;De Bruijn sequence - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:11553,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:54010,&quot;sha256&quot;:&quot;c3c337fd5a789e862a09ef24714d7ddb00303a441e108af5d82c2965bd92ade0&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;de_bruijn_sequence&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:13486,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:410,&quot;sha256&quot;:&quot;1179e3a92ee57d26bfd3aa5830eba0e0fa67b58a78d8cd8bcc9eee074851d704&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-De Bruijn sequence.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4666,&quot;sha256&quot;:&quot;82fff8ee60ce203f799c9a930b907f12131ff38527a350d361ec28338a979fd5&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;bruijn&quot;,&quot;sequence&quot;,&quot;sequences&quot;,&quot;de_bruijn_sequence&quot;],&quot;summary&quot;:&quot;De Bruijn sequence&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1158,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-History.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2895,&quot;sha256&quot;:&quot;958e9da486db41bea2a4172f302886f58812b921fb6b501386fc5aa61cecf01e&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;long&quot;,&quot;de_bruijn_sequence&quot;,&quot;displaystyle&quot;,&quot;pattern&quot;],&quot;summary&quot;:&quot;History&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:713,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:466,&quot;sha256&quot;:&quot;2d38b6d80dd375808c5b5a1d633fd986065f3a1d4d44f46b34b5ce851c3c3051&quot;,&quot;keywords&quot;:[&quot;two&quot;,&quot;alphabet&quot;,&quot;edit&quot;,&quot;examples&quot;,&quot;possible&quot;,&quot;same&quot;,&quot;00000100011001010011101011011111&quot;,&quot;00000101001000111110111001101011&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:117,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Construction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2102,&quot;sha256&quot;:&quot;d3e78823d18c7140cbacf88bf2d41f75367979b1ac421d6457a6103aebcf26b7&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;de_bruijn_sequence&quot;,&quot;bruijn&quot;,&quot;every&quot;,&quot;exactly&quot;],&quot;summary&quot;:&quot;Construction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:525,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Example using de Bruijn graph.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2656,&quot;sha256&quot;:&quot;d5d6aeb9f0682aba84e4ce765387bad1dcd817edb418a31d666eb0f026a17368&quot;,&quot;keywords&quot;:[&quot;bruijn&quot;,&quot;each&quot;,&quot;edge&quot;,&quot;sequence&quot;,&quot;once&quot;,&quot;sequences&quot;,&quot;000&quot;,&quot;exactly&quot;],&quot;summary&quot;:&quot;Example using de Bruijn graph&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:663,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Example using inverse Burrows—Wheeler transform.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3270,&quot;sha256&quot;:&quot;280e86d5796167626ca39937350bb0fd00c25f7820aa5ca36adb387b8829c382&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;each&quot;,&quot;https&quot;,&quot;burrows&quot;,&quot;permutation&quot;,&quot;inverse&quot;,&quot;lyndon&quot;],&quot;summary&quot;:&quot;Example using inverse Burrows—Wheeler transform&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:811,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2342,&quot;sha256&quot;:&quot;bfa2be451c32808c454a447ca82a86ef73d22816ff2b64ecf31e4441793f8ee2&quot;,&quot;keywords&quot;:[&quot;word_len&quot;,&quot;alphabet&quot;,&quot;buffer&quot;,&quot;sequence&quot;,&quot;period&quot;,&quot;word&quot;,&quot;generate&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:586,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Uses.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:575,&quot;sha256&quot;:&quot;f672851800f83b44e926bce98fbc94cb00142479b7fb0044f5e7e3381267fe8d&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;de_bruijn_sequence&quot;,&quot;wiki&quot;,&quot;edit&quot;,&quot;use&quot;,&quot;uses&quot;],&quot;summary&quot;:&quot;Uses&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:144,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Angle detection.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:760,&quot;sha256&quot;:&quot;4c8cc586db821d63386755719e7c934a6332710a9f57240fe6fdd6a4ca24eae4&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;angle&quot;,&quot;de_bruijn_sequence&quot;,&quot;detection&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;Angle detection&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:190,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Finding least- or most-significant set bit in a word.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3002,&quot;sha256&quot;:&quot;8ae50394a3652403aa1c80cad178f64639160b72e799086eee5418bd16ce3cf2&quot;,&quot;keywords&quot;:[&quot;bit&quot;,&quot;set&quot;,&quot;sequence&quot;,&quot;index&quot;,&quot;bruijn&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Finding least- or most-significant set bit in a word&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:751,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Brute-force attacks on locks.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2281,&quot;sha256&quot;:&quot;0bc4fc6d31be87ca036aa51609b1189a354636bb2a2276baee7a541396e29ae6&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;svg&quot;,&quot;wiki&quot;,&quot;brute-force&quot;,&quot;lock&quot;,&quot;digits&quot;],&quot;summary&quot;:&quot;Brute-force attacks on locks&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:570,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Multi de Bruijn sequences.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:607,&quot;sha256&quot;:&quot;ec003a073780c04a1d6342cbc2f6a9d8ca61ed7b59cd1a7b5dc6442495c597e5&quot;,&quot;keywords&quot;:[&quot;sequence&quot;,&quot;alphabet&quot;,&quot;bruijn&quot;,&quot;multi&quot;,&quot;sequences&quot;,&quot;size&quot;,&quot;cyclic&quot;,&quot;de_bruijn_sequence&quot;],&quot;summary&quot;:&quot;Multi de Bruijn sequences&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:152,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-de Bruijn torus.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:641,&quot;sha256&quot;:&quot;496d3ec7513ac66822acc86d3ac8c8dd1e571c9da9bfccfc06202ca8426b470d&quot;,&quot;keywords&quot;:[&quot;bruijn&quot;,&quot;torus&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;by-&quot;,&quot;de_bruijn_torus&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;de Bruijn torus&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:161,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-de Bruijn decoding.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:810,&quot;sha256&quot;:&quot;9bb999fa2138cbdcc5e3e9dfdd9fda337a30766f1931bd142fdcbbed07be13a5&quot;,&quot;keywords&quot;:[&quot;bruijn&quot;,&quot;decoding&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;de_bruijn_sequence&quot;,&quot;wiki&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;de Bruijn decoding&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:201,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:456,&quot;sha256&quot;:&quot;7378ab35973fad342983c748b332f34233c91652c6dd776e3631440bf9a9f53e&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;edit&quot;,&quot;see&quot;,&quot;superpermutation&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:114,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4972,&quot;sha256&quot;:&quot;0e5e3c21977eb6edc7f81d49126135dc94161d2753d65313f34ebbc8463bc3f4&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;wikipedia&quot;,&quot;de_bruijn_sequence&quot;,&quot;bruijn&quot;,&quot;2017&quot;,&quot;aguirre&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1234,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:10905,&quot;sha256&quot;:&quot;49879a37e740fab6b6ba272d3241943f5b9ef79fd3add983bc805386f260ff0e&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;wikipedia&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;pdf&quot;,&quot;1016&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2712,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2588,&quot;sha256&quot;:&quot;60e32df710d18f6ef0cdc0657a0df4c36482b55d9fac83cf5c530c9fdc02ce27&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;bruijn&quot;,&quot;category&quot;,&quot;http&quot;,&quot;sequence&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:647,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0023&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:392,&quot;sha256&quot;:&quot;7083f9b7e2a42712c829401ef577f04c4c2676dd9f54085498765adac68fe811&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;de_bruijn_sequence&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t05&quot;,&quot;703z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:98,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0024&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;2b8963e385f7a954b7a968e32adf2e18d390006f9aa0e5e489f44c7da35ba728&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;329&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0024&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0025&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:32:33.703Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	65	259	5b66fa54ee22b56888fca014230ca632148ae4ffcbda6f807a7d14051bb0b94d	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	11553	46429	b97ed8c10cb3a682d81090c45dc60246f279f015104ac8ab1e9cdc6e7345de6f	De Bruijn sequence - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	13486	54010	c3c337fd5a789e862a09ef24714d7ddb00303a441e108af5d82c2965bd92ade0	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	410	1179e3a92ee57d26bfd3aa5830eba0e0fa67b58a78d8cd8bcc9eee074851d704	Introduction	
+sec:0005	section	artifacts/sections/0002-De Bruijn sequence.md	primary	1158	4666	82fff8ee60ce203f799c9a930b907f12131ff38527a350d361ec28338a979fd5	De Bruijn sequence	
+sec:0006	section	artifacts/sections/0003-History.md	primary	713	2895	958e9da486db41bea2a4172f302886f58812b921fb6b501386fc5aa61cecf01e	History	
+sec:0007	section	artifacts/sections/0004-Examples.md	primary	117	466	2d38b6d80dd375808c5b5a1d633fd986065f3a1d4d44f46b34b5ce851c3c3051	Examples	
+sec:0008	section	artifacts/sections/0005-Construction.md	primary	525	2102	d3e78823d18c7140cbacf88bf2d41f75367979b1ac421d6457a6103aebcf26b7	Construction	
+sec:0009	section	artifacts/sections/0006-Example using de Bruijn graph.md	primary	663	2656	d5d6aeb9f0682aba84e4ce765387bad1dcd817edb418a31d666eb0f026a17368	Example using de Bruijn graph	
+sec:0010	section	artifacts/sections/0007-Example using inverse Burrows—Wheeler transform.md	primary	811	3270	280e86d5796167626ca39937350bb0fd00c25f7820aa5ca36adb387b8829c382	Example using inverse Burrows—Wheeler transform	
+sec:0011	section	artifacts/sections/0008-Algorithm.md	primary	586	2342	bfa2be451c32808c454a447ca82a86ef73d22816ff2b64ecf31e4441793f8ee2	Algorithm	
+sec:0012	section	artifacts/sections/0009-Uses.md	supporting	144	575	f672851800f83b44e926bce98fbc94cb00142479b7fb0044f5e7e3381267fe8d	Uses	
+sec:0013	section	artifacts/sections/0010-Angle detection.md	supporting	190	760	4c8cc586db821d63386755719e7c934a6332710a9f57240fe6fdd6a4ca24eae4	Angle detection	
+sec:0014	section	artifacts/sections/0011-Finding least- or most-significant set bit in a word.md	supporting	751	3002	8ae50394a3652403aa1c80cad178f64639160b72e799086eee5418bd16ce3cf2	Finding least- or most-significant set bit in a word	
+sec:0015	section	artifacts/sections/0012-Brute-force attacks on locks.md	supporting	570	2281	0bc4fc6d31be87ca036aa51609b1189a354636bb2a2276baee7a541396e29ae6	Brute-force attacks on locks	
+sec:0016	section	artifacts/sections/0013-Multi de Bruijn sequences.md	supporting	152	607	ec003a073780c04a1d6342cbc2f6a9d8ca61ed7b59cd1a7b5dc6442495c597e5	Multi de Bruijn sequences	
+sec:0017	section	artifacts/sections/0014-de Bruijn torus.md	supporting	161	641	496d3ec7513ac66822acc86d3ac8c8dd1e571c9da9bfccfc06202ca8426b470d	de Bruijn torus	
+sec:0018	section	artifacts/sections/0015-de Bruijn decoding.md	supporting	201	810	9bb999fa2138cbdcc5e3e9dfdd9fda337a30766f1931bd142fdcbbed07be13a5	de Bruijn decoding	
+sec:0019	section	artifacts/sections/0016-See also.md	supporting	114	456	7378ab35973fad342983c748b332f34233c91652c6dd776e3631440bf9a9f53e	See also	
+sec:0020	section	artifacts/sections/0017-Notes.md	supporting	1234	4972	0e5e3c21977eb6edc7f81d49126135dc94161d2753d65313f34ebbc8463bc3f4	Notes	
+sec:0021	section	artifacts/sections/0018-References.md	supporting	2712	10905	49879a37e740fab6b6ba272d3241943f5b9ef79fd3add983bc805386f260ff0e	References	
+sec:0022	section	artifacts/sections/0019-External links.md	supporting	647	2588	60e32df710d18f6ef0cdc0657a0df4c36482b55d9fac83cf5c530c9fdc02ce27	External links	
+art:0023	provenance	artifacts/provenance/source-record.json	supporting	98	392	7083f9b7e2a42712c829401ef577f04c4c2676dd9f54085498765adac68fe811	Capture source identity and metadata	
+art:0024	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	2b8963e385f7a954b7a968e32adf2e18d390006f9aa0e5e489f44c7da35ba728	Extraction engine and counts	
+art:0025	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/De_Bruijn_sequence#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# De Bruijn sequence
+
+- [Català](https://ca.wikipedia.org/wiki/Seq%C3%BC%C3%A8ncia_de_De_Bruijn)
+- [Čeština](https://cs.wikipedia.org/wiki/De_Bruijnova_posloupnost)
+- [Deutsch](https://de.wikipedia.org/wiki/De-Bruijn-Folge)
+- [Français](https://fr.wikipedia.org/wiki/Suite_de_de_Bruijn)
+- [עברית](https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%AA_%D7%93%D7%94_%D7%91%D7%A8%D7%95%D7%99%D7%99%D7%9F)
+- [Magyar](https://hu.wikipedia.org/wiki/De_Bruijn-sz%C3%B3)
+- [Nederlands](https://nl.wikipedia.org/wiki/Debruijnrij)
+- [Polski](https://pl.wikipedia.org/wiki/Cykl_de_Bruijna)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%B4%D0%B5_%D0%91%D1%80%D1%91%D0%B9%D0%BD%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/De_Bruijn-sekvens)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%BE%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%B4%D0%B5_%D0%91%D1%80%D0%B5%D0%B9%D0%BD%D0%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1953457#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Cycle through all length-k sequences Not to be confused with the [Moser–de Bruijn sequence](https://en.wikipedia.org/wiki/Moser%E2%80%93de_Bruijn_sequence), an integer sequence from number theory. [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/De_Bruijn_sequence.svg/250px-De_Bruijn_sequence.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_sequence.svg)The de Bruijn sequence for alphabet size *k* = 2 and substring length *n* = 2. In general there are many sequences for a particular *n* and *k* but in this example it is unique, [up to](https://en.wikipedia.org/wiki/Up_to) cycling.
+
+In [combinatorial](https://en.wikipedia.org/wiki/Combinatorics) [mathematics](https://en.wikipedia.org/wiki/Mathematics), a **de Bruijn sequence** of order *n* on a size-*k* [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) *A* is a [cyclic sequence](https://en.wikipedia.org/wiki/Cyclic_sequence) in which every possible length-*n* [string](https://en.wikipedia.org/wiki/String_(computer_science)#Formal_theory) on *A* occurs exactly once as a [substring](https://en.wikipedia.org/wiki/Substring) (i.e., as a *contiguous* [subsequence](https://en.wikipedia.org/wiki/Subsequence)). Such a sequence is denoted by *B*(*k*, *n*) and has length *k**n*, which is also the number of distinct strings of length *n* on *A*. Each of these distinct strings, when taken as a substring of *B*(*k*, *n*), must start at a different position, because substrings starting at the same position are not distinct. Therefore, *B*(*k*, *n*) must have *at least* *k**n* symbols. And since *B*(*k*, *n*) has *exactly* *k**n* symbols, de Bruijn sequences are optimally short with respect to the property of containing every string of length *n* at least once.
+
+The number of distinct de Bruijn sequences *B*(*k*, *n*) is
+
+          (  k !  )    k  n − 1      k  n      .   {\displaystyle {\dfrac {\left(k!\right)^{k^{n-1}}}{k^{n}}}.}
+
+For a binary alphabet this is      2   2  ( n − 1 )   − n     {\displaystyle 2^{2^{(n-1)}-n}}  , leading to the following sequence for positive     n   {\displaystyle n}  :   1, 1, 2, 16, 2048, 67108864... (sequence [A016031](https://oeis.org/A016031) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+The sequences are named after the Dutch mathematician [Nicolaas Govert de Bruijn](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn), who wrote about them in 1946.[[1]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1946-1) As he later wrote,[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2) the existence of de Bruijn sequences for each order together with the above properties were first [proved](https://en.wikipedia.org/wiki/Mathematical_proof), for the case of alphabets with two elements, by Camille Flye Sainte-Marie ([1894](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFFlye_Sainte-Marie1894)). The generalization to larger alphabets is due to [Tatyana van Aardenne-Ehrenfest](https://en.wikipedia.org/wiki/Tatyana_Pavlovna_Ehrenfest) and de Bruijn ([1951](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFvan_Aardenne-Ehrenfestde_Bruijn1951)). [Automata](https://en.wikipedia.org/wiki/Automata_theory) for recognizing these sequences are denoted as de Bruijn automata.
+
+In many applications, *A* = {0,1}.
+
+## History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=1)]
+
+The earliest known example of a de Bruijn sequence comes from [Sanskrit prosody](https://en.wikipedia.org/wiki/Sanskrit_prosody) where, since the work of [Pingala](https://en.wikipedia.org/wiki/Pingala), each possible three-syllable pattern of long and short syllables is given a name, such as &#39;y&#39; for short–long–long and &#39;m&#39; for long–long–long. To remember these names, the mnemonic *yamātārājabhānasalagām* is used, in which each three-syllable pattern occurs starting at its name: &#39;yamātā&#39; has a short–long–long pattern, &#39;mātārā&#39; has a long–long–long pattern, and so on, until &#39;salagām&#39; which has a short–short–long pattern. This mnemonic, equivalent to a de Bruijn sequence on binary 3-tuples, is of unknown antiquity, but is at least as old as [Charles Philip Brown](https://en.wikipedia.org/wiki/Charles_Philip_Brown)&#39;s 1869 book on Sanskrit prosody that mentions it and considers it &quot;an ancient line, written by [Pāṇini](https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini)&quot;.[[3]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-3)
+
+In 1894, A. de Rivière raised the question in an issue of the French problem journal *[L&#39;Intermédiaire des Mathématiciens](https://en.wikipedia.org/wiki/L&#39;Interm%C3%A9diaire_des_Math%C3%A9maticiens)*, of the existence of a circular arrangement of zeroes and ones of size      2  n     {\displaystyle 2^{n}}   that contains all      2  n     {\displaystyle 2^{n}}   binary sequences of length     n   {\displaystyle n}  . The problem was solved (in the affirmative), along with the count of      2   2  n − 1   − n     {\displaystyle 2^{2^{n-1}-n}}   distinct solutions, by Camille Flye Sainte-Marie in the same year.[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2) This was largely forgotten, and [Martin (1934)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFMartin1934) proved the existence of such cycles for general alphabet size in place of 2, with an algorithm for constructing them. Finally, when in 1944 [Kees Posthumus](https://en.wikipedia.org/wiki/Kees_Posthumus) [conjectured](https://en.wikipedia.org/wiki/Conjecture) the count      2   2  n − 1   − n     {\displaystyle 2^{2^{n-1}-n}}   for binary sequences, de Bruijn proved the conjecture in 1946, through which the problem became well known.[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2)
+
+[Karl Popper](https://en.wikipedia.org/wiki/Karl_Popper) independently describes these objects in his *[The Logic of Scientific Discovery](https://en.wikipedia.org/wiki/The_Logic_of_Scientific_Discovery)* (1934), calling them &quot;shortest random-like sequences&quot;.[[4]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEPopper2002-4)
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=2)]
+- Taking *A* = {0, 1}, there are two distinct *B*(2, 3): 00010111 and 11101000, one being the reverse or negation of the other.
+- Two of the 16 possible *B*(2, 4) in the same alphabet are 0000100110101111 and 0000111101100101.
+- Two of the 2048 possible *B*(2, 5) in the same alphabet are 00000100011001010011101011011111 and 00000101001000111110111001101011.
+
+## Construction
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=3)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/De_bruijn_graph-for_binary_sequence_of_order_4.svg/250px-De_bruijn_graph-for_binary_sequence_of_order_4.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_bruijn_graph-for_binary_sequence_of_order_4.svg)A de Bruijn graph. Every four-digit sequence occurs exactly once if one traverses every edge exactly once and returns to one&#39;s starting point (a Eulerian cycle). Every three-digit sequence occurs exactly once if one visits every vertex exactly once (a Hamiltonian path).
+
+The de Bruijn sequences can be constructed by taking a [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path) of an *n*-dimensional [de Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph) over *k* symbols (or equivalently, an [Eulerian cycle](https://en.wikipedia.org/wiki/Eulerian_cycle) of an (*n* − 1)-dimensional de Bruijn graph).[[5]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEKlein2013-5)
+
+An alternative construction involves concatenating together, in [lexicographic order](https://en.wikipedia.org/wiki/Lexicographic_order), all the [Lyndon words](https://en.wikipedia.org/wiki/Lyndon_word) whose length divides *n*.[[6]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-6)
+
+An inverse [Burrows–Wheeler transform](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) can be used to generate the required Lyndon words in lexicographic order.[[7]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHiggins2012-7)
+
+de Bruijn sequences can also be constructed using [shift registers](https://en.wikipedia.org/wiki/Shift_register)[[8]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEGoreskyKlapper2012-8) or via [finite fields](https://en.wikipedia.org/wiki/Finite_field).[[9]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTERalston1982136%E2%80%93139-9)
+
+### Example using de Bruijn graph
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=4)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/De_Bruijn_binary_graph.svg/330px-De_Bruijn_binary_graph.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_binary_graph.svg)Directed graphs of two *B*(2,3) de Bruijn sequences and a *B*(2,4) sequence. In *B*(2,3), each vertex is visited once, whereas in *B*(2,4), each edge is traversed once.
+
+Goal: to construct a *B*(2, 4) de Bruijn sequence of length 24 = 16 using Eulerian (*n* − 1 = 4 − 1 = 3) 3D de Bruijn graph cycle.
+
+Each edge in this 3-dimensional de Bruijn graph corresponds to a sequence of four digits: the three digits that label the vertex that the edge is leaving followed by the one that labels the edge. If one traverses the edge labeled 1 from 000, one arrives at 001, thereby indicating the presence of the subsequence 0001 in the de Bruijn sequence. To traverse each edge exactly once is to use each of the 16 four-digit sequences exactly once.
+
+For example, suppose we follow the following Eulerian path through these vertices:
+
+ 000, 000, 001, 011, 111, 111, 110, 101, 011, 110, 100, 001, 010, 101, 010, 100, 000.
+
+These are the output sequences of length *k*:
+
+ 0 0 0 0 _ 0 0 0 1 _ _ 0 0 1 1
+
+This corresponds to the following de Bruijn sequence:
+
+ 0 0 0 0 1 1 1 1 0 1 1 0 0 1 0 1
+
+The eight vertices appear in the sequence in the following way:
+
+```
+{0  0  0  0} 1  1  1  1  0  1  1  0  0  1  0  1
+       0 {0  0  0  1} 1  1  1  0  1  1  0  0  1  0  1
+       0  0 {0  0  1  1} 1  1  0  1  1  0  0  1  0  1
+       0  0  0 {0  1  1  1} 1  0  1  1  0  0  1  0  1
+       0  0  0  0 {1  1  1  1} 0  1  1  0  0  1  0  1
+       0  0  0  0  1 {1  1  1  0} 1  1  0  0  1  0  1
+       0  0  0  0  1  1 {1  1  0  1} 1  0  0  1  0  1
+       0  0  0  0  1  1  1 {1  0  1  1} 0  0  1  0  1
+       0  0  0  0  1  1  1  1 {0  1  1  0} 0  1  0  1
+       0  0  0  0  1  1  1  1  0 {1  1  0  0} 1  0  1
+       0  0  0  0  1  1  1  1  0  1 {1  0  0  1} 0  1
+       0  0  0  0  1  1  1  1  0  1  1 {0  0  1  0} 1
+       0  0  0  0  1  1  1  1  0  1  1  0 {0  1  0  1}
+       0} 0  0  0  1  1  1  1  0  1  1  0  0 {1  0  1 ...
+   ... 0  0} 0  0  1  1  1  1  0  1  1  0  0  1 {0  1 ...
+   ... 0  0  0} 0  1  1  1  1  0  1  1  0  0  1  0 {1 ...
+```
+
+...and then we return to the starting point. Each of the eight 3-digit sequences (corresponding to the eight vertices) appears exactly twice, and each of the sixteen 4-digit sequences (corresponding to the 16 edges) appears exactly once.
+
+### Example using inverse Burrows—Wheeler transform
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=5)]
+
+Mathematically, an inverse [Burrows—Wheeler transform](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) on a word w generates a multi-set of [equivalence classes](https://en.wikipedia.org/wiki/Equivalence_class) consisting of strings and their rotations.[[7]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHiggins2012-7) These equivalence classes of strings each contain a [Lyndon word](https://en.wikipedia.org/wiki/Lyndon_word) as a unique minimum element, so the inverse Burrows—Wheeler transform can be considered to generate a set of Lyndon words. It can be shown that if we perform the inverse Burrows—Wheeler transform on a word w consisting of the size-*k* alphabet repeated *k**n*−1 times (so that it will produce a word the same length as the desired de Bruijn sequence), then the result will be the set of all Lyndon words whose length divides *n*. It follows that arranging these Lyndon words in lexicographic order will yield a de Bruijn sequence *B*(*k*,*n*), and that this will be the first de Bruijn sequence in lexicographic order. The following method can be used to perform the inverse Burrows—Wheeler transform, using its *standard permutation*:
+
+1. Sort the characters in the string w, yielding a new string w′
+2. Position the string w′ above the string w, and map each letter&#39;s position in w′ to its position in w while preserving order. This process defines the [Standard Permutation](http://mathworld.wolfram.com/PermutationCycle.html).
+3. Write this permutation in [cycle notation](https://en.wikipedia.org/wiki/Permutation) with the smallest position in each cycle first, and the cycles sorted in increasing order.
+4. For each cycle, replace each number with the corresponding letter from string w′ in that position.
+5. Each cycle has now become a Lyndon word, and they are arranged in lexicographic order, so dropping the parentheses yields the first de Bruijn sequence.
+
+For example, to construct the smallest *B*(2,4) de Bruijn sequence of length 24 = 16, repeat the alphabet (ab) 8 times yielding *w*=abababababababab. Sort the characters in w, yielding *w′*=aaaaaaaabbbbbbbb. Position w′ above w as shown, and map each element in w′ to the corresponding element in w by drawing a line. Number the columns as shown so we can read the cycles of the permutation:
+
+[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/BurrowsWheeler-_standard_permutation.svg/960px-BurrowsWheeler-_standard_permutation.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:BurrowsWheeler-_standard_permutation.svg)
+
+Starting from the left, the Standard Permutation notation cycles are: (1) (2 3 5 9) (4 7 13 10) (6 11) (8 15 14 12) (16). ([Standard Permutation](http://mathworld.wolfram.com/PermutationCycle.html))
+
+Then, replacing each number by the corresponding letter in w′ from that column yields: (a)(aaab)(aabb)(ab)(abbb)(b).
+
+These are all of the Lyndon words whose length divides 4, in lexicographic order, so dropping the parentheses gives *B*(2,4) = aaaabaabbababbbb.
+
+### Algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=6)]
+
+The following [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) code calculates a de Bruijn sequence, given *k* and *n*, based on an algorithm from [Frank Ruskey](https://en.wikipedia.org/wiki/Frank_Ruskey)&#39;s *Combinatorial Generation*.[[10]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-10)
+
+```
+from typing import Iterable, Any
+
+def de_bruijn(k: Iterable[str] | int, n: int) -&gt; str:
+    &quot;&quot;&quot;de Bruijn sequence for alphabet k and subsequences of length n,
+    from the concatenation of Lyndon words with lengths that divide n.
+    &quot;&quot;&quot;
+    # Two kinds of alphabet input: an integer expands
+    # to a list of integers as the alphabet..
+    if isinstance(k, int):
+        alphabet = list(map(str, range(k)))
+    else:
+        # While any sort of list becomes used as it is
+        alphabet = k
+        k = len(k)
+
+    buffer = [0] * n
+    sequence = []
+
+    # Recursive method to iterate through Lyndon words in the buffer.
+    def generate(word_len, period):
+        if word_len &gt;= n:
+            if n % period == 0:
+                # This Lyndon word divides n, so we join it to the end.
+                sequence.extend(buffer[:period])
+
+            # No word longer than n can divide n,
+            # so there&#39;s no need to recurse further in this case.
+            return
+
+        # Extend the current word cyclically.
+        # Except when initializing the very first entry with 0,
+        # this does not produce a new Lyndon word by itself
+        # because either the extended sequence is not lexicographically minimal
+        # or it is periodic.
+        buffer[word_len] = 0 if word_len == 0 else buffer[word_len - period]
+        generate(word_len + 1, period)
+
+        # Walk through the alphabet at the end of the word, breaking the old periodicity.
+        while buffer[word_len] + 1 &lt; k:
+            buffer[word_len] += 1
+            generate(word_len + 1, word_len + 1)
+
+    generate(0, 1)
+
+    return &quot;&quot;.join(alphabet[i] for i in sequence)
+
+print(de_bruijn(2, 3))
+print(de_bruijn(&quot;abcd&quot;, 2))
+```
+
+which prints
+
+```
+00010111
+aabacadbbcbdccdd
+```
+
+Note that these sequences are understood to &quot;wrap around&quot; in a cycle. For example, the first sequence contains 110 and 100 in this fashion.
+
+## Uses
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=7)]
+
+de Bruijn cycles are of general use in neuroscience and psychology experiments that examine the effect of stimulus order upon neural systems,[[11]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEAguirreMattarMagis-Weinberg2011-11) and can be specially crafted for use with [functional magnetic resonance imaging](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging).[[12]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-12)
+
+### Angle detection
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=8)]
+
+The symbols of a de Bruijn sequence written around a circular object (such as a wheel of a [robot](https://en.wikipedia.org/wiki/Robot)) can be used to identify its [angle](https://en.wikipedia.org/wiki/Angle) by examining the *n* consecutive symbols facing a fixed point. This angle-encoding problem is known as the &quot;rotating drum problem&quot;.[[13]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEvan_LintWilson2001-13) [Gray codes](https://en.wikipedia.org/wiki/Gray_code) can be used as similar rotary positional encoding mechanisms, a method commonly found in [rotary encoders](https://en.wikipedia.org/wiki/Rotary_encoder).
+
+### Finding least- or most-significant set bit in a word
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=9)]
+
+A de Bruijn sequence can be used to quickly find the index of the least significant set bit (&quot;right-most 1&quot;) or the most significant set bit (&quot;left-most 1&quot;) in a [word](https://en.wikipedia.org/wiki/Word_(data_type)) using [bitwise operations](https://en.wikipedia.org/wiki/Bitwise_operation) and multiplication.[[14]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-14) The following example uses a de Bruijn sequence to determine the index of the least significant set bit (equivalent to counting the number of trailing &#39;0&#39; bits) in a 32 bit unsigned [integer](https://en.wikipedia.org/wiki/Integer):
+
+```
+uint8_t lowestBitIndex(uint32_t v)
+{
+  static const uint8_t BitPositionLookup[32] = // lookup table
+  {
+    0, 1, 28, 2, 29, 14, 24, 3, 30, 22, 20, 15, 25, 17, 4, 8,
+    31, 27, 13, 23, 21, 19, 16, 7, 26, 12, 18, 6, 11, 5, 10, 9
+  };
+  return BitPositionLookup[((uint32_t)((v &amp; -v) * 0x077CB531U)) &gt;&gt; 27];
+}
+```
+
+The `lowestBitIndex()` function returns the index of the least-significant set bit in *v*, or zero if *v* has no set bits. The constant 0x077CB531U in the expression is the *B* (2, 5) sequence 0000 0111 0111 1100 1011 0101 0011 0001 (spaces added for clarity). The operation `(v &amp; -v)` zeros all bits except the least-significant bit set, resulting in a new value which is a power of 2. This power of 2 is multiplied (arithmetic modulo 232) by the de Bruijn sequence, thus producing a 32-bit product in which the bit sequence of the 5 MSBs is unique for each power of 2. The 5 MSBs are shifted into the LSB positions to produce a hash code in the range [0, 31], which is then used as an index into [hash table](https://en.wikipedia.org/wiki/Hash_table) BitPositionLookup. The selected hash table value is the bit index of the least significant set bit in *v*.
+
+The following example determines the index of the most significant bit set in a 32 bit unsigned integer:
+
+```
+uint32_t keepHighestBit(uint32_t n)
+{
+    n |= (n &gt;&gt;  1);
+    n |= (n &gt;&gt;  2);
+    n |= (n &gt;&gt;  4);
+    n |= (n &gt;&gt;  8);
+    n |= (n &gt;&gt; 16);
+    return n - (n &gt;&gt; 1);
+}
+
+uint8_t highestBitIndex(uint32_t v)
+{
+    static const uint8_t BitPositionLookup[32] = { // hash table
+         0,  1, 16,  2, 29, 17,  3, 22, 30, 20, 18, 11, 13,  4,  7, 23,
+        31, 15, 28, 21, 19, 10, 12,  6, 14, 27,  9,  5, 26,  8, 25, 24,
+    };
+    return BitPositionLookup[(keepHighestBit(v) * 0x06EB14F9U) &gt;&gt; 27];
+}
+```
+
+In the above example an alternative de Bruijn sequence (0x06EB14F9U) is used, with corresponding reordering of array values. The choice of this particular de Bruijn sequence is arbitrary, but the hash table values must be ordered to match the chosen de Bruijn sequence. The `keepHighestBit()` function zeros all bits except the most-significant set bit, resulting in a value which is a power of 2, which is then processed as in the previous example.
+
+### Brute-force attacks on locks
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=10)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/De_Bruijn_sequence_10_4.svg/250px-De_Bruijn_sequence_10_4.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_sequence_10_4.svg)One possible *B* (10, 4) sequence. The 2530 substrings are read from top to bottom then left to right, and their digits are concatenated. To get the string to brute-force a combination lock, the last three digits in brackets (000) are appended. The 10003-digit string is hence &quot;0 0001 0002 0003 0004 0005 0006 0007 0008 0009 0011 ... 79 7988 7989 7998 7999 8 8889 8899 89 8999 9 000&quot; (spaces added for readability).   showB{10,3} with digits read from top to bottom
+then left to right;[[15]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-15) appending &quot;00&quot; yields
+a string to brute-force a 3-digit combination lock
+
+A de Bruijn sequence can be used to shorten a [brute-force attack](https://en.wikipedia.org/wiki/Brute-force_attack) on a [PIN](https://en.wikipedia.org/wiki/Personal_Identification_Number)-like code lock that does not have an &quot;enter&quot; key and accepts the last *n* digits entered. For example, a [digital door lock](https://en.wikipedia.org/wiki/Digital_door_lock) with a 4-digit code (each digit having 10 possibilities, from 0 to 9) would have *B* (10, 4) solutions, with length 10000. Therefore, only at most 10000 + 3 = 10003 (as the solutions are cyclic) presses are needed to open the lock, whereas trying all codes separately would require 4 × 10000 = 40000 presses.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Anoto_paper_principle.svg/250px-Anoto_paper_principle.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Anoto_paper_principle.svg)Simplified principle of the Anoto digital pen.
+The camera identifies a 6×6 matrix of dots, each displaced from the blue grid (not printed) in one of 4 directions.
+The combinations of relative displacements of a 6-bit de Bruijn sequence between the columns, and between the rows gives its absolute position on the digital paper.
+
+## Multi de Bruijn sequences
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=11)]
+
+Multi de Bruijn sequence: a cyclic or linear sequence that contains every k-mer over an alphabet of size q exactly m times.[[16]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-16) For example, over the binary alphabet {0, 1}, the cyclic sequence (00010111) and the linear sequence 000101110 each contain two instances of each 2-mer 00, 01, 10, 11. There are two sequences for multiplicity m=2, alphabet size q = 2, and word size k=1: (0011), and (0101), and 5 for k=2.
+
+## de Bruijn torus
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=12)] Main article: [De Bruijn torus](https://en.wikipedia.org/wiki/De_Bruijn_torus)
+
+A [de Bruijn torus](https://en.wikipedia.org/wiki/De_Bruijn_torus) is a toroidal array with the property that every *k*-ary *m*-by-*n* matrix occurs exactly once.
+
+Such a pattern can be used for two-dimensional positional encoding in a fashion analogous to that described above for rotary encoding. Position can be determined by examining the *m*-by-*n* matrix directly adjacent to the sensor, and calculating its position on the de Bruijn torus.
+
+## de Bruijn decoding
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=13)]
+
+Computing the position of a particular unique tuple or matrix in a de Bruijn sequence or torus is known as the *de Bruijn decoding problem*. Efficient [⁠     O ( n log ⁡ n )    {\displaystyle \color {Blue}O(n\log n)}  ⁠](https://en.wikipedia.org/wiki/Analysis_of_algorithms) decoding algorithms exist for special, recursively constructed sequences[[17]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTETuliani2001-17) and extend to the two-dimensional case.[[18]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHurlbertIsaak1993-18) de Bruijn decoding is of interest, e.g., in cases where large sequences or tori are used for positional encoding.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=14)]
+- [Normal number](https://en.wikipedia.org/wiki/Normal_number)
+- [Linear-feedback shift register](https://en.wikipedia.org/wiki/Linear-feedback_shift_register)
+- [*n*-sequence](https://en.wikipedia.org/wiki/N-sequence)
+- [BEST theorem](https://en.wikipedia.org/wiki/BEST_theorem)
+- [Superpermutation](https://en.wikipedia.org/wiki/Superpermutation)
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=15)]
+1. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1946_1-0) [de Bruijn (1946)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFde_Bruijn1946).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-0) [2](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-1) [3](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-2) [de Bruijn (1975)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFde_Bruijn1975).
+3. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-3) [Brown (1869)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBrown1869); [Stein (1963)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFStein1963); [Kak (2000)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKak2000); [Knuth (2006)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKnuth2006); [Hall (2008)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHall2008).
+4. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEPopper2002_4-0) [Popper (2002)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFPopper2002).
+5. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEKlein2013_5-0) [Klein (2013)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKlein2013).
+6. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-6) According to [Berstel &amp; Perrin (2007)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBerstelPerrin2007), the sequence generated in this way was first described (with a different generation method) by [Martin (1934)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFMartin1934), and the connection between it and Lyndon words was observed by [Fredricksen &amp; Maiorana (1978)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFFredricksenMaiorana1978).
+7. [Jump up to: 1](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHiggins2012_7-0) [2](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHiggins2012_7-1) [Higgins (2012)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHiggins2012).
+8. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEGoreskyKlapper2012_8-0) [Goresky &amp; Klapper (2012)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFGoreskyKlapper2012).
+9. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTERalston1982136%E2%80%93139_9-0) [Ralston (1982)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFRalston1982), pp. 136–139.
+10. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-10) [&quot;De Bruijn sequences&quot;](https://github.com/sagemath/sage/blob/28da5476f102272f0b0f149ecc6bb2c2f9ece54b/src/sage/combinat/debruijn_sequence.pyx). *Sage*. Retrieved 2023-03-07.
+11. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEAguirreMattarMagis-Weinberg2011_11-0) [Aguirre, Mattar &amp; Magis-Weinberg (2011)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFAguirreMattarMagis-Weinberg2011).
+12. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-12) [&quot;de Bruijn cycle generator&quot;](https://web.archive.org/web/20160126133108/https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn_software). Archived from [the original](https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn_software) on 2016-01-26. Retrieved 2015-09-15.
+13. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEvan_LintWilson2001_13-0) [van Lint &amp; Wilson (2001)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFvan_LintWilson2001).
+14. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-14) [Anderson (1997–2009)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFAnderson1997%E2%80%932009); [Busch (2009)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBusch2009)
+15. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-15) [&quot;de Bruijn (DeBruijn) sequence (K=10, n=3)&quot;](http://hakank.org/comb/debruijn.cgi?k=10&amp;n=3).
+16. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-16) Tesler, Glenn (2017). &quot;Multi de Bruijn sequences&quot;. *Journal of Combinatorics*. **8** (3): 439–474. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1708.03654](https://arxiv.org/abs/1708.03654). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.4310/JOC.2017.v8.n3.a3](https://doi.org/10.4310%2FJOC.2017.v8.n3.a3).
+17. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTETuliani2001_17-0) [Tuliani (2001)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFTuliani2001).
+18. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHurlbertIsaak1993_18-0) [Hurlbert &amp; Isaak (1993)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHurlbertIsaak1993).
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=16)]
+- [van Aardenne-Ehrenfest, Tanja](https://en.wikipedia.org/wiki/Tatyana_Pavlovna_Ehrenfest); [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1951). [&quot;Circuits and trees in oriented linear graphs&quot;](http://alexandria.tue.nl/repository/freearticles/597493.pdf) (PDF). *[Simon Stevin](https://en.wikipedia.org/wiki/Simon_Stevin_(journal))*. **28**: 203–217. [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0047311](https://mathscinet.ams.org/mathscinet-getitem?mr=0047311).
+- Aguirre, G. K.; Mattar, M. G.; Magis-Weinberg, L. (2011). [&quot;de Bruijn cycles for neural decoding&quot;](https://web.archive.org/web/20160126134333/https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn). *NeuroImage*. **56** (3): 1293–1300. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.neuroimage.2011.02.005](https://doi.org/10.1016%2Fj.neuroimage.2011.02.005). [PMC](https://en.wikipedia.org/wiki/PMC_(identifier)) [3104402](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3104402). [PMID](https://en.wikipedia.org/wiki/PMID_(identifier)) [21315160](https://pubmed.ncbi.nlm.nih.gov/21315160). Archived from [the original](https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn) on 2016-01-26. Retrieved 2015-06-04.
+- Anderson, Sean Eron (1997–2009). [&quot;Bit Twiddling Hacks&quot;](http://graphics.stanford.edu/~seander/bithacks.html). [Stanford University](https://en.wikipedia.org/wiki/Stanford_University). Retrieved 2009-02-12.
+- [Berstel, Jean](https://en.wikipedia.org/wiki/Jean_Berstel); [Perrin, Dominique](https://en.wikipedia.org/wiki/Dominique_Perrin) (2007). [&quot;The origins of combinatorics on words&quot;](http://www-igm.univ-mlv.fr/~berstel/Articles/2007Origins.pdf) (PDF). *[European Journal of Combinatorics](https://en.wikipedia.org/wiki/European_Journal_of_Combinatorics)*. **28** (3): 996–1022. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.ejc.2005.07.019](https://doi.org/10.1016%2Fj.ejc.2005.07.019). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [2300777](https://mathscinet.ams.org/mathscinet-getitem?mr=2300777).
+- [Brown, C. P.](https://en.wikipedia.org/wiki/C._P._Brown) (1869). [*Sanskrit Prosody and Numerical Symbols Explained*](https://archive.org/stream/sanskritprosody00browgoog#page/n44/mode/2up). p. 28.
+- [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1946). [&quot;A combinatorial problem&quot;](http://www.dwc.knaw.nl/DL/publications/PU00018235.pdf) (PDF). *Proc. Koninklijke Nederlandse Akademie V. Wetenschappen*. **49**: 758–764. [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0018142](https://mathscinet.ams.org/mathscinet-getitem?mr=0018142), *[Indagationes Mathematicae](https://en.wikipedia.org/wiki/Indagationes_Mathematicae)* **8**: 461–467`{{cite journal}}`: CS1 maint: postscript ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_postscript))
+- [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1975). [*Acknowledgement of Priority to C. Flye Sainte-Marie on the counting of circular arrangements of 2n zeros and ones that show each n-letter word exactly once*](http://alexandria.tue.nl/repository/books/252901.pdf) (PDF). T.H.-Report 75-WSK-06. Technological University Eindhoven.
+- Busch, Philip (2009). [&quot;Computing Trailing Zeros HOWTO&quot;](https://web.archive.org/web/20150129233016/http://7ooo.mooo.com/text/ComputingTrailingZerosHOWTO.html). Archived from [the original](http://7ooo.mooo.com/text/ComputingTrailingZerosHOWTO.html) on 2015-01-29. Retrieved 2015-01-29.
+- Flye Sainte-Marie, Camille (1894). &quot;Solution to question nr. 48&quot;. *L&#39;Intermédiaire des Mathématiciens*. **1**: 107–110.
+- [Goresky, Mark](https://en.wikipedia.org/wiki/Mark_Goresky); Klapper, Andrew (2012). &quot;8.2.5 Shift register generation of de Bruijn sequences&quot;. [*Algebraic Shift Register Sequences*](https://books.google.com/books?id=sd9AqHeeHh4C&amp;pg=PA174). [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). pp. 174–175. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-10701499-2](https://en.wikipedia.org/wiki/Special:BookSources/978-1-10701499-2).
+- Hall, Rachel W. (2008). [&quot;Math for poets and drummers&quot;](https://web.archive.org/web/20120212145748/http://www.sju.edu/~rhall/mathforpoets.pdf) (PDF). *Math Horizons*. **15** (3): 10–11. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/10724117.2008.11974752](https://doi.org/10.1080%2F10724117.2008.11974752). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [3637061](https://api.semanticscholar.org/CorpusID:3637061). Archived from [the original](http://www.sju.edu/~rhall/mathforpoets.pdf) (PDF) on 2012-02-12. Retrieved 2008-10-22.
+- Higgins, Peter (November 2012). [&quot;Burrows-Wheeler transforms and de Bruijn words&quot;](http://www.macs.hw.ac.uk/~markl/Higgins.pdf) (PDF). Retrieved 2017-02-11.
+- Hurlbert, Glenn; Isaak, Garth (1993). [&quot;On the de Bruijn torus problem&quot;](https://doi.org/10.1016%2F0097-3165%2893%2990087-O). *[Journal of Combinatorial Theory](https://en.wikipedia.org/wiki/Journal_of_Combinatorial_Theory)*. Series A. **64** (1): 50–62. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0097-3165(93)90087-O](https://doi.org/10.1016%2F0097-3165%2893%2990087-O). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1239511](https://mathscinet.ams.org/mathscinet-getitem?mr=1239511).
+- [Kak, Subhash](https://en.wikipedia.org/wiki/Subhash_Kak) (2000). [&quot;Yamātārājabhānasalagāṃ an interesting combinatoric sūtra&quot;](https://web.archive.org/web/20141029120230/http://202.41.82.144/rawdataupload/upload/insa/INSA_2/200059d2_123.pdf) (PDF). *Indian Journal of History of Science*. **35** (2): 123–127. Archived from [the original](http://202.41.82.144/rawdataupload/upload/insa/INSA_2/200059d2_123.pdf) (PDF) on 2014-10-29.
+- Klein, Andreas (2013). [*Stream Ciphers*](https://books.google.com/books?id=GYpEAAAAQBAJ&amp;pg=PA59). Springer. p. 59. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-44715079-4](https://en.wikipedia.org/wiki/Special:BookSources/978-1-44715079-4).
+- [Knuth, Donald Ervin](https://en.wikipedia.org/wiki/Donald_Ervin_Knuth) (2006). [*The Art of Computer Programming, Fascicle 4: Generating All Trees – History of Combinatorial Generation*](https://books.google.com/books?id=56LNfE2QGtYC&amp;pg=PA50). [Addison–Wesley](https://en.wikipedia.org/wiki/Addison%E2%80%93Wesley). p. 50. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-33570-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-33570-8).
+- Fredricksen, Harold; Maiorana, James (1978). [&quot;Necklaces of beads in *k* colors and *k*-ary de Bruijn sequences&quot;](https://doi.org/10.1016%2F0012-365X%2878%2990002-X). *[Discrete Mathematics](https://en.wikipedia.org/wiki/Discrete_Mathematics_(journal))*. **23** (3): 207–210. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0012-365X(78)90002-X](https://doi.org/10.1016%2F0012-365X%2878%2990002-X). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0523071](https://mathscinet.ams.org/mathscinet-getitem?mr=0523071).
+- Martin, Monroe H. (1934). [&quot;A problem in arrangements&quot;](https://www.ams.org/journals/bull/1934-40-12/S0002-9904-1934-05988-3/S0002-9904-1934-05988-3.pdf) (PDF). *[Bulletin of the American Mathematical Society](https://en.wikipedia.org/wiki/Bulletin_of_the_American_Mathematical_Society)*. **40** (12): 859–864. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0002-9904-1934-05988-3](https://doi.org/10.1090%2FS0002-9904-1934-05988-3). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1562989](https://mathscinet.ams.org/mathscinet-getitem?mr=1562989).
+- Osipov, Vladimir (2016). &quot;Wavelet Analysis on Symbolic Sequences and Two-Fold de Bruijn Sequences&quot;. *[Journal of Statistical Physics](https://en.wikipedia.org/wiki/Journal_of_Statistical_Physics)*. **164** (1): 142–165. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1601.02097](https://arxiv.org/abs/1601.02097). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2016JSP...164..142O](https://ui.adsabs.harvard.edu/abs/2016JSP...164..142O). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/s10955-016-1537-5](https://doi.org/10.1007%2Fs10955-016-1537-5). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [1572-9613](https://search.worldcat.org/issn/1572-9613). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [16535836](https://api.semanticscholar.org/CorpusID:16535836).
+- [Popper, Karl](https://en.wikipedia.org/wiki/Karl_Popper) (2002) [1934]. [*The logic of scientific discovery*](https://books.google.com/books?id=0a5bLBbe_dMC&amp;pg=PA295). Routledge. p. 294. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-415-27843-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-415-27843-0).
+- Ralston, Anthony (1982). &quot;de Bruijn sequences—a model example of the interaction of discrete mathematics and computer science&quot;. *[Mathematics Magazine](https://en.wikipedia.org/wiki/Mathematics_Magazine)*. **55** (3): 131–143. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2690079](https://doi.org/10.2307%2F2690079). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2690079](https://www.jstor.org/stable/2690079). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0653429](https://mathscinet.ams.org/mathscinet-getitem?mr=0653429).
+- [Stein, Sherman K.](https://en.wikipedia.org/wiki/Sherman_K._Stein) (1963). &quot;Yamátárájabhánasalagám&quot;. *The Man-made Universe: An Introduction to the Spirit of Mathematics*. pp. 110–118. Reprinted in Wardhaugh, Benjamin, ed. (2012), *A Wealth of Numbers: An Anthology of 500 Years of Popular Mathematics Writing*, [Princeton University Press](https://en.wikipedia.org/wiki/Princeton_University_Press), pp. 139–144.
+- Tuliani, Jonathan (2001). &quot;de Bruijn sequences with efficient decoding algorithms&quot;. *[Discrete Mathematics](https://en.wikipedia.org/wiki/Discrete_Mathematics_(journal))*. **226** (1–3): 313–336. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/S0012-365X(00)00117-5](https://doi.org/10.1016%2FS0012-365X%2800%2900117-5). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1802599](https://mathscinet.ams.org/mathscinet-getitem?mr=1802599).
+- [van Lint, J. H.](https://en.wikipedia.org/wiki/J._H._van_Lint); [Wilson, Richard Michael](https://en.wikipedia.org/wiki/R._M._Wilson) (2001). [*A Course in Combinatorics*](https://books.google.com/books?id=5l5ps2JkyT0C&amp;pg=PA71). [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). p. 71. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-52100601-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-52100601-9).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=17)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;de Bruijn Sequence&quot;](https://mathworld.wolfram.com/deBruijnSequence.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- OEIS [sequence A166315 (Lexicographically smallest binary de Bruijn sequences)](https://oeis.org/A166315)
+- [De Bruijn sequence](http://chessprogramming.wikispaces.com/De+Bruijn+sequence) [Archived](https://web.archive.org/web/20110411012217/http://chessprogramming.wikispaces.com/De+Bruijn+sequence) 2011-04-11 at the [Wayback Machine](https://en.wikipedia.org/wiki/Wayback_Machine)
+- [CGI generator](http://www.hakank.org/comb/debruijn.cgi)
+- [Applet generator](http://www.hakank.org/comb/deBruijnApplet.html)
+- [Javascript generator and decoder](https://jgeisler0303.github.io/deBruijnDecode/). Implementation of J. Tuliani&#39;s algorithm.
+- [Door code lock](https://web.archive.org/web/20051202021442/http://www.stefangeens.com/000435.html)
+- [Minimal arrays containing all sub-array combinations of symbols: de Bruijn sequences and tori](https://web.archive.org/web/20140527202958/http://lcni.uoregon.edu/~dow/Geek_art/Minimal_combinatorics/Minimal_arrays_containing_all_combinations.html)
+- [http://debruijnsequence.org](http://debruijnsequence.org/) has many kinds of de Bruijn sequences.
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;oldid=1377614958](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;oldid=1377614958)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Binary sequences](https://en.wikipedia.org/wiki/Category:Binary_sequences)
+- [Enumerative combinatorics](https://en.wikipedia.org/wiki/Category:Enumerative_combinatorics)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 maint: postscript](https://en.wikipedia.org/wiki/Category:CS1_maint:_postscript)
+- [Webarchive template wayback links](https://en.wikipedia.org/wiki/Category:Webarchive_template_wayback_links)
+- [Articles with example Python (programming language) code](https://en.wikipedia.org/wiki/Category:Articles_with_example_Python_(programming_language)_code)
+
+    [https://en\.wikipedia\.org/wiki/De\_Bruijn\_sequence?action=edit](https://en.wikipedia.org/wiki/De_Bruijn_sequence?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/De_Bruijn_sequence#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>De Bruijn sequence</h3><pre># De Bruijn sequence
+
+- [Català](https://ca.wikipedia.org/wiki/Seq%C3%BC%C3%A8ncia_de_De_Bruijn)
+- [Čeština](https://cs.wikipedia.org/wiki/De_Bruijnova_posloupnost)
+- [Deutsch](https://de.wikipedia.org/wiki/De-Bruijn-Folge)
+- [Français](https://fr.wikipedia.org/wiki/Suite_de_de_Bruijn)
+- [עברית](https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%AA_%D7%93%D7%94_%D7%91%D7%A8%D7%95%D7%99%D7%99%D7%9F)
+- [Magyar](https://hu.wikipedia.org/wiki/De_Bruijn-sz%C3%B3)
+- [Nederlands](https://nl.wikipedia.org/wiki/Debruijnrij)
+- [Polski](https://pl.wikipedia.org/wiki/Cykl_de_Bruijna)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%B4%D0%B5_%D0%91%D1%80%D1%91%D0%B9%D0%BD%D0%B0)
+- [Svenska](https://sv.wikipedia.org/wiki/De_Bruijn-sekvens)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%BE%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%B4%D0%B5_%D0%91%D1%80%D0%B5%D0%B9%D0%BD%D0%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1953457#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Cycle through all length-k sequences Not to be confused with the [Moser–de Bruijn sequence](https://en.wikipedia.org/wiki/Moser%E2%80%93de_Bruijn_sequence), an integer sequence from number theory. [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/De_Bruijn_sequence.svg/250px-De_Bruijn_sequence.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_sequence.svg)The de Bruijn sequence for alphabet size *k* = 2 and substring length *n* = 2. In general there are many sequences for a particular *n* and *k* but in this example it is unique, [up to](https://en.wikipedia.org/wiki/Up_to) cycling.
+
+In [combinatorial](https://en.wikipedia.org/wiki/Combinatorics) [mathematics](https://en.wikipedia.org/wiki/Mathematics), a **de Bruijn sequence** of order *n* on a size-*k* [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) *A* is a [cyclic sequence](https://en.wikipedia.org/wiki/Cyclic_sequence) in which every possible length-*n* [string](https://en.wikipedia.org/wiki/String_(computer_science)#Formal_theory) on *A* occurs exactly once as a [substring](https://en.wikipedia.org/wiki/Substring) (i.e., as a *contiguous* [subsequence](https://en.wikipedia.org/wiki/Subsequence)). Such a sequence is denoted by *B*(*k*, *n*) and has length *k**n*, which is also the number of distinct strings of length *n* on *A*. Each of these distinct strings, when taken as a substring of *B*(*k*, *n*), must start at a different position, because substrings starting at the same position are not distinct. Therefore, *B*(*k*, *n*) must have *at least* *k**n* symbols. And since *B*(*k*, *n*) has *exactly* *k**n* symbols, de Bruijn sequences are optimally short with respect to the property of containing every string of length *n* at least once.
+
+The number of distinct de Bruijn sequences *B*(*k*, *n*) is
+
+          (  k !  )    k  n − 1      k  n      .   {\displaystyle {\dfrac {\left(k!\right)^{k^{n-1}}}{k^{n}}}.}
+
+For a binary alphabet this is      2   2  ( n − 1 )   − n     {\displaystyle 2^{2^{(n-1)}-n}}  , leading to the following sequence for positive     n   {\displaystyle n}  :   1, 1, 2, 16, 2048, 67108864... (sequence [A016031](https://oeis.org/A016031) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+The sequences are named after the Dutch mathematician [Nicolaas Govert de Bruijn](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn), who wrote about them in 1946.[[1]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1946-1) As he later wrote,[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2) the existence of de Bruijn sequences for each order together with the above properties were first [proved](https://en.wikipedia.org/wiki/Mathematical_proof), for the case of alphabets with two elements, by Camille Flye Sainte-Marie ([1894](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFFlye_Sainte-Marie1894)). The generalization to larger alphabets is due to [Tatyana van Aardenne-Ehrenfest](https://en.wikipedia.org/wiki/Tatyana_Pavlovna_Ehrenfest) and de Bruijn ([1951](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFvan_Aardenne-Ehrenfestde_Bruijn1951)). [Automata](https://en.wikipedia.org/wiki/Automata_theory) for recognizing these sequences are denoted as de Bruijn automata.
+
+In many applications, *A* = {0,1}.
+</pre></article><article id="section-0003"><h3>History</h3><pre># History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=1)]
+
+The earliest known example of a de Bruijn sequence comes from [Sanskrit prosody](https://en.wikipedia.org/wiki/Sanskrit_prosody) where, since the work of [Pingala](https://en.wikipedia.org/wiki/Pingala), each possible three-syllable pattern of long and short syllables is given a name, such as &#39;y&#39; for short–long–long and &#39;m&#39; for long–long–long. To remember these names, the mnemonic *yamātārājabhānasalagām* is used, in which each three-syllable pattern occurs starting at its name: &#39;yamātā&#39; has a short–long–long pattern, &#39;mātārā&#39; has a long–long–long pattern, and so on, until &#39;salagām&#39; which has a short–short–long pattern. This mnemonic, equivalent to a de Bruijn sequence on binary 3-tuples, is of unknown antiquity, but is at least as old as [Charles Philip Brown](https://en.wikipedia.org/wiki/Charles_Philip_Brown)&#39;s 1869 book on Sanskrit prosody that mentions it and considers it &quot;an ancient line, written by [Pāṇini](https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini)&quot;.[[3]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-3)
+
+In 1894, A. de Rivière raised the question in an issue of the French problem journal *[L&#39;Intermédiaire des Mathématiciens](https://en.wikipedia.org/wiki/L&#39;Interm%C3%A9diaire_des_Math%C3%A9maticiens)*, of the existence of a circular arrangement of zeroes and ones of size      2  n     {\displaystyle 2^{n}}   that contains all      2  n     {\displaystyle 2^{n}}   binary sequences of length     n   {\displaystyle n}  . The problem was solved (in the affirmative), along with the count of      2   2  n − 1   − n     {\displaystyle 2^{2^{n-1}-n}}   distinct solutions, by Camille Flye Sainte-Marie in the same year.[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2) This was largely forgotten, and [Martin (1934)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFMartin1934) proved the existence of such cycles for general alphabet size in place of 2, with an algorithm for constructing them. Finally, when in 1944 [Kees Posthumus](https://en.wikipedia.org/wiki/Kees_Posthumus) [conjectured](https://en.wikipedia.org/wiki/Conjecture) the count      2   2  n − 1   − n     {\displaystyle 2^{2^{n-1}-n}}   for binary sequences, de Bruijn proved the conjecture in 1946, through which the problem became well known.[[2]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEde_Bruijn1975-2)
+
+[Karl Popper](https://en.wikipedia.org/wiki/Karl_Popper) independently describes these objects in his *[The Logic of Scientific Discovery](https://en.wikipedia.org/wiki/The_Logic_of_Scientific_Discovery)* (1934), calling them &quot;shortest random-like sequences&quot;.[[4]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEPopper2002-4)
+</pre></article><article id="section-0004"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=2)]
+- Taking *A* = {0, 1}, there are two distinct *B*(2, 3): 00010111 and 11101000, one being the reverse or negation of the other.
+- Two of the 16 possible *B*(2, 4) in the same alphabet are 0000100110101111 and 0000111101100101.
+- Two of the 2048 possible *B*(2, 5) in the same alphabet are 00000100011001010011101011011111 and 00000101001000111110111001101011.
+</pre></article><article id="section-0005"><h3>Construction</h3><pre># Construction
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=3)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/De_bruijn_graph-for_binary_sequence_of_order_4.svg/250px-De_bruijn_graph-for_binary_sequence_of_order_4.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_bruijn_graph-for_binary_sequence_of_order_4.svg)A de Bruijn graph. Every four-digit sequence occurs exactly once if one traverses every edge exactly once and returns to one&#39;s starting point (a Eulerian cycle). Every three-digit sequence occurs exactly once if one visits every vertex exactly once (a Hamiltonian path).
+
+The de Bruijn sequences can be constructed by taking a [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path) of an *n*-dimensional [de Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph) over *k* symbols (or equivalently, an [Eulerian cycle](https://en.wikipedia.org/wiki/Eulerian_cycle) of an (*n* − 1)-dimensional de Bruijn graph).[[5]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEKlein2013-5)
+
+An alternative construction involves concatenating together, in [lexicographic order](https://en.wikipedia.org/wiki/Lexicographic_order), all the [Lyndon words](https://en.wikipedia.org/wiki/Lyndon_word) whose length divides *n*.[[6]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-6)
+
+An inverse [Burrows–Wheeler transform](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) can be used to generate the required Lyndon words in lexicographic order.[[7]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHiggins2012-7)
+
+de Bruijn sequences can also be constructed using [shift registers](https://en.wikipedia.org/wiki/Shift_register)[[8]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEGoreskyKlapper2012-8) or via [finite fields](https://en.wikipedia.org/wiki/Finite_field).[[9]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTERalston1982136%E2%80%93139-9)
+</pre></article><article id="section-0006"><h3>Example using de Bruijn graph</h3><pre># Example using de Bruijn graph
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=4)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/De_Bruijn_binary_graph.svg/330px-De_Bruijn_binary_graph.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_binary_graph.svg)Directed graphs of two *B*(2,3) de Bruijn sequences and a *B*(2,4) sequence. In *B*(2,3), each vertex is visited once, whereas in *B*(2,4), each edge is traversed once.
+
+Goal: to construct a *B*(2, 4) de Bruijn sequence of length 24 = 16 using Eulerian (*n* − 1 = 4 − 1 = 3) 3D de Bruijn graph cycle.
+
+Each edge in this 3-dimensional de Bruijn graph corresponds to a sequence of four digits: the three digits that label the vertex that the edge is leaving followed by the one that labels the edge. If one traverses the edge labeled 1 from 000, one arrives at 001, thereby indicating the presence of the subsequence 0001 in the de Bruijn sequence. To traverse each edge exactly once is to use each of the 16 four-digit sequences exactly once.
+
+For example, suppose we follow the following Eulerian path through these vertices:
+
+ 000, 000, 001, 011, 111, 111, 110, 101, 011, 110, 100, 001, 010, 101, 010, 100, 000.
+
+These are the output sequences of length *k*:
+
+ 0 0 0 0 _ 0 0 0 1 _ _ 0 0 1 1
+
+This corresponds to the following de Bruijn sequence:
+
+ 0 0 0 0 1 1 1 1 0 1 1 0 0 1 0 1
+
+The eight vertices appear in the sequence in the following way:
+
+```
+{0  0  0  0} 1  1  1  1  0  1  1  0  0  1  0  1
+       0 {0  0  0  1} 1  1  1  0  1  1  0  0  1  0  1
+       0  0 {0  0  1  1} 1  1  0  1  1  0  0  1  0  1
+       0  0  0 {0  1  1  1} 1  0  1  1  0  0  1  0  1
+       0  0  0  0 {1  1  1  1} 0  1  1  0  0  1  0  1
+       0  0  0  0  1 {1  1  1  0} 1  1  0  0  1  0  1
+       0  0  0  0  1  1 {1  1  0  1} 1  0  0  1  0  1
+       0  0  0  0  1  1  1 {1  0  1  1} 0  0  1  0  1
+       0  0  0  0  1  1  1  1 {0  1  1  0} 0  1  0  1
+       0  0  0  0  1  1  1  1  0 {1  1  0  0} 1  0  1
+       0  0  0  0  1  1  1  1  0  1 {1  0  0  1} 0  1
+       0  0  0  0  1  1  1  1  0  1  1 {0  0  1  0} 1
+       0  0  0  0  1  1  1  1  0  1  1  0 {0  1  0  1}
+       0} 0  0  0  1  1  1  1  0  1  1  0  0 {1  0  1 ...
+   ... 0  0} 0  0  1  1  1  1  0  1  1  0  0  1 {0  1 ...
+   ... 0  0  0} 0  1  1  1  1  0  1  1  0  0  1  0 {1 ...
+```
+
+...and then we return to the starting point. Each of the eight 3-digit sequences (corresponding to the eight vertices) appears exactly twice, and each of the sixteen 4-digit sequences (corresponding to the 16 edges) appears exactly once.
+</pre></article><article id="section-0007"><h3>Example using inverse Burrows—Wheeler transform</h3><pre># Example using inverse Burrows—Wheeler transform
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=5)]
+
+Mathematically, an inverse [Burrows—Wheeler transform](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) on a word w generates a multi-set of [equivalence classes](https://en.wikipedia.org/wiki/Equivalence_class) consisting of strings and their rotations.[[7]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHiggins2012-7) These equivalence classes of strings each contain a [Lyndon word](https://en.wikipedia.org/wiki/Lyndon_word) as a unique minimum element, so the inverse Burrows—Wheeler transform can be considered to generate a set of Lyndon words. It can be shown that if we perform the inverse Burrows—Wheeler transform on a word w consisting of the size-*k* alphabet repeated *k**n*−1 times (so that it will produce a word the same length as the desired de Bruijn sequence), then the result will be the set of all Lyndon words whose length divides *n*. It follows that arranging these Lyndon words in lexicographic order will yield a de Bruijn sequence *B*(*k*,*n*), and that this will be the first de Bruijn sequence in lexicographic order. The following method can be used to perform the inverse Burrows—Wheeler transform, using its *standard permutation*:
+
+1. Sort the characters in the string w, yielding a new string w′
+2. Position the string w′ above the string w, and map each letter&#39;s position in w′ to its position in w while preserving order. This process defines the [Standard Permutation](http://mathworld.wolfram.com/PermutationCycle.html).
+3. Write this permutation in [cycle notation](https://en.wikipedia.org/wiki/Permutation) with the smallest position in each cycle first, and the cycles sorted in increasing order.
+4. For each cycle, replace each number with the corresponding letter from string w′ in that position.
+5. Each cycle has now become a Lyndon word, and they are arranged in lexicographic order, so dropping the parentheses yields the first de Bruijn sequence.
+
+For example, to construct the smallest *B*(2,4) de Bruijn sequence of length 24 = 16, repeat the alphabet (ab) 8 times yielding *w*=abababababababab. Sort the characters in w, yielding *w′*=aaaaaaaabbbbbbbb. Position w′ above w as shown, and map each element in w′ to the corresponding element in w by drawing a line. Number the columns as shown so we can read the cycles of the permutation:
+
+[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/BurrowsWheeler-_standard_permutation.svg/960px-BurrowsWheeler-_standard_permutation.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:BurrowsWheeler-_standard_permutation.svg)
+
+Starting from the left, the Standard Permutation notation cycles are: (1) (2 3 5 9) (4 7 13 10) (6 11) (8 15 14 12) (16). ([Standard Permutation](http://mathworld.wolfram.com/PermutationCycle.html))
+
+Then, replacing each number by the corresponding letter in w′ from that column yields: (a)(aaab)(aabb)(ab)(abbb)(b).
+
+These are all of the Lyndon words whose length divides 4, in lexicographic order, so dropping the parentheses gives *B*(2,4) = aaaabaabbababbbb.
+</pre></article><article id="section-0008"><h3>Algorithm</h3><pre># Algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=6)]
+
+The following [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) code calculates a de Bruijn sequence, given *k* and *n*, based on an algorithm from [Frank Ruskey](https://en.wikipedia.org/wiki/Frank_Ruskey)&#39;s *Combinatorial Generation*.[[10]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-10)
+
+```
+from typing import Iterable, Any
+
+def de_bruijn(k: Iterable[str] | int, n: int) -&gt; str:
+    &quot;&quot;&quot;de Bruijn sequence for alphabet k and subsequences of length n,
+    from the concatenation of Lyndon words with lengths that divide n.
+    &quot;&quot;&quot;
+    # Two kinds of alphabet input: an integer expands
+    # to a list of integers as the alphabet..
+    if isinstance(k, int):
+        alphabet = list(map(str, range(k)))
+    else:
+        # While any sort of list becomes used as it is
+        alphabet = k
+        k = len(k)
+
+    buffer = [0] * n
+    sequence = []
+
+    # Recursive method to iterate through Lyndon words in the buffer.
+    def generate(word_len, period):
+        if word_len &gt;= n:
+            if n % period == 0:
+                # This Lyndon word divides n, so we join it to the end.
+                sequence.extend(buffer[:period])
+
+            # No word longer than n can divide n,
+            # so there&#39;s no need to recurse further in this case.
+            return
+
+        # Extend the current word cyclically.
+        # Except when initializing the very first entry with 0,
+        # this does not produce a new Lyndon word by itself
+        # because either the extended sequence is not lexicographically minimal
+        # or it is periodic.
+        buffer[word_len] = 0 if word_len == 0 else buffer[word_len - period]
+        generate(word_len + 1, period)
+
+        # Walk through the alphabet at the end of the word, breaking the old periodicity.
+        while buffer[word_len] + 1 &lt; k:
+            buffer[word_len] += 1
+            generate(word_len + 1, word_len + 1)
+
+    generate(0, 1)
+
+    return &quot;&quot;.join(alphabet[i] for i in sequence)
+
+print(de_bruijn(2, 3))
+print(de_bruijn(&quot;abcd&quot;, 2))
+```
+
+which prints
+
+```
+00010111
+aabacadbbcbdccdd
+```
+
+Note that these sequences are understood to &quot;wrap around&quot; in a cycle. For example, the first sequence contains 110 and 100 in this fashion.
+</pre></article><article id="section-0009"><h3>Uses</h3><pre># Uses
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=7)]
+
+de Bruijn cycles are of general use in neuroscience and psychology experiments that examine the effect of stimulus order upon neural systems,[[11]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEAguirreMattarMagis-Weinberg2011-11) and can be specially crafted for use with [functional magnetic resonance imaging](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging).[[12]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-12)
+</pre></article><article id="section-0010"><h3>Angle detection</h3><pre># Angle detection
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=8)]
+
+The symbols of a de Bruijn sequence written around a circular object (such as a wheel of a [robot](https://en.wikipedia.org/wiki/Robot)) can be used to identify its [angle](https://en.wikipedia.org/wiki/Angle) by examining the *n* consecutive symbols facing a fixed point. This angle-encoding problem is known as the &quot;rotating drum problem&quot;.[[13]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEvan_LintWilson2001-13) [Gray codes](https://en.wikipedia.org/wiki/Gray_code) can be used as similar rotary positional encoding mechanisms, a method commonly found in [rotary encoders](https://en.wikipedia.org/wiki/Rotary_encoder).
+</pre></article><article id="section-0011"><h3>Finding least- or most-significant set bit in a word</h3><pre># Finding least- or most-significant set bit in a word
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=9)]
+
+A de Bruijn sequence can be used to quickly find the index of the least significant set bit (&quot;right-most 1&quot;) or the most significant set bit (&quot;left-most 1&quot;) in a [word](https://en.wikipedia.org/wiki/Word_(data_type)) using [bitwise operations](https://en.wikipedia.org/wiki/Bitwise_operation) and multiplication.[[14]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-14) The following example uses a de Bruijn sequence to determine the index of the least significant set bit (equivalent to counting the number of trailing &#39;0&#39; bits) in a 32 bit unsigned [integer](https://en.wikipedia.org/wiki/Integer):
+
+```
+uint8_t lowestBitIndex(uint32_t v)
+{
+  static const uint8_t BitPositionLookup[32] = // lookup table
+  {
+    0, 1, 28, 2, 29, 14, 24, 3, 30, 22, 20, 15, 25, 17, 4, 8,
+    31, 27, 13, 23, 21, 19, 16, 7, 26, 12, 18, 6, 11, 5, 10, 9
+  };
+  return BitPositionLookup[((uint32_t)((v &amp; -v) * 0x077CB531U)) &gt;&gt; 27];
+}
+```
+
+The `lowestBitIndex()` function returns the index of the least-significant set bit in *v*, or zero if *v* has no set bits. The constant 0x077CB531U in the expression is the *B* (2, 5) sequence 0000 0111 0111 1100 1011 0101 0011 0001 (spaces added for clarity). The operation `(v &amp; -v)` zeros all bits except the least-significant bit set, resulting in a new value which is a power of 2. This power of 2 is multiplied (arithmetic modulo 232) by the de Bruijn sequence, thus producing a 32-bit product in which the bit sequence of the 5 MSBs is unique for each power of 2. The 5 MSBs are shifted into the LSB positions to produce a hash code in the range [0, 31], which is then used as an index into [hash table](https://en.wikipedia.org/wiki/Hash_table) BitPositionLookup. The selected hash table value is the bit index of the least significant set bit in *v*.
+
+The following example determines the index of the most significant bit set in a 32 bit unsigned integer:
+
+```
+uint32_t keepHighestBit(uint32_t n)
+{
+    n |= (n &gt;&gt;  1);
+    n |= (n &gt;&gt;  2);
+    n |= (n &gt;&gt;  4);
+    n |= (n &gt;&gt;  8);
+    n |= (n &gt;&gt; 16);
+    return n - (n &gt;&gt; 1);
+}
+
+uint8_t highestBitIndex(uint32_t v)
+{
+    static const uint8_t BitPositionLookup[32] = { // hash table
+         0,  1, 16,  2, 29, 17,  3, 22, 30, 20, 18, 11, 13,  4,  7, 23,
+        31, 15, 28, 21, 19, 10, 12,  6, 14, 27,  9,  5, 26,  8, 25, 24,
+    };
+    return BitPositionLookup[(keepHighestBit(v) * 0x06EB14F9U) &gt;&gt; 27];
+}
+```
+
+In the above example an alternative de Bruijn sequence (0x06EB14F9U) is used, with corresponding reordering of array values. The choice of this particular de Bruijn sequence is arbitrary, but the hash table values must be ordered to match the chosen de Bruijn sequence. The `keepHighestBit()` function zeros all bits except the most-significant set bit, resulting in a value which is a power of 2, which is then processed as in the previous example.
+</pre></article><article id="section-0012"><h3>Brute-force attacks on locks</h3><pre># Brute-force attacks on locks
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=10)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/De_Bruijn_sequence_10_4.svg/250px-De_Bruijn_sequence_10_4.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:De_Bruijn_sequence_10_4.svg)One possible *B* (10, 4) sequence. The 2530 substrings are read from top to bottom then left to right, and their digits are concatenated. To get the string to brute-force a combination lock, the last three digits in brackets (000) are appended. The 10003-digit string is hence &quot;0 0001 0002 0003 0004 0005 0006 0007 0008 0009 0011 ... 79 7988 7989 7998 7999 8 8889 8899 89 8999 9 000&quot; (spaces added for readability).   showB{10,3} with digits read from top to bottom
+then left to right;[[15]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-15) appending &quot;00&quot; yields
+a string to brute-force a 3-digit combination lock
+
+A de Bruijn sequence can be used to shorten a [brute-force attack](https://en.wikipedia.org/wiki/Brute-force_attack) on a [PIN](https://en.wikipedia.org/wiki/Personal_Identification_Number)-like code lock that does not have an &quot;enter&quot; key and accepts the last *n* digits entered. For example, a [digital door lock](https://en.wikipedia.org/wiki/Digital_door_lock) with a 4-digit code (each digit having 10 possibilities, from 0 to 9) would have *B* (10, 4) solutions, with length 10000. Therefore, only at most 10000 + 3 = 10003 (as the solutions are cyclic) presses are needed to open the lock, whereas trying all codes separately would require 4 × 10000 = 40000 presses.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Anoto_paper_principle.svg/250px-Anoto_paper_principle.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Anoto_paper_principle.svg)Simplified principle of the Anoto digital pen.
+The camera identifies a 6×6 matrix of dots, each displaced from the blue grid (not printed) in one of 4 directions.
+The combinations of relative displacements of a 6-bit de Bruijn sequence between the columns, and between the rows gives its absolute position on the digital paper.
+</pre></article><article id="section-0013"><h3>Multi de Bruijn sequences</h3><pre># Multi de Bruijn sequences
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=11)]
+
+Multi de Bruijn sequence: a cyclic or linear sequence that contains every k-mer over an alphabet of size q exactly m times.[[16]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-16) For example, over the binary alphabet {0, 1}, the cyclic sequence (00010111) and the linear sequence 000101110 each contain two instances of each 2-mer 00, 01, 10, 11. There are two sequences for multiplicity m=2, alphabet size q = 2, and word size k=1: (0011), and (0101), and 5 for k=2.
+</pre></article><article id="section-0014"><h3>de Bruijn torus</h3><pre># de Bruijn torus
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=12)] Main article: [De Bruijn torus](https://en.wikipedia.org/wiki/De_Bruijn_torus)
+
+A [de Bruijn torus](https://en.wikipedia.org/wiki/De_Bruijn_torus) is a toroidal array with the property that every *k*-ary *m*-by-*n* matrix occurs exactly once.
+
+Such a pattern can be used for two-dimensional positional encoding in a fashion analogous to that described above for rotary encoding. Position can be determined by examining the *m*-by-*n* matrix directly adjacent to the sensor, and calculating its position on the de Bruijn torus.
+</pre></article><article id="section-0015"><h3>de Bruijn decoding</h3><pre># de Bruijn decoding
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=13)]
+
+Computing the position of a particular unique tuple or matrix in a de Bruijn sequence or torus is known as the *de Bruijn decoding problem*. Efficient [⁠     O ( n log ⁡ n )    {\displaystyle \color {Blue}O(n\log n)}  ⁠](https://en.wikipedia.org/wiki/Analysis_of_algorithms) decoding algorithms exist for special, recursively constructed sequences[[17]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTETuliani2001-17) and extend to the two-dimensional case.[[18]](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_note-FOOTNOTEHurlbertIsaak1993-18) de Bruijn decoding is of interest, e.g., in cases where large sequences or tori are used for positional encoding.
+</pre></article><article id="section-0016"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=14)]
+- [Normal number](https://en.wikipedia.org/wiki/Normal_number)
+- [Linear-feedback shift register](https://en.wikipedia.org/wiki/Linear-feedback_shift_register)
+- [*n*-sequence](https://en.wikipedia.org/wiki/N-sequence)
+- [BEST theorem](https://en.wikipedia.org/wiki/BEST_theorem)
+- [Superpermutation](https://en.wikipedia.org/wiki/Superpermutation)
+</pre></article><article id="section-0017"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=15)]
+1. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1946_1-0) [de Bruijn (1946)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFde_Bruijn1946).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-0) [2](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-1) [3](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEde_Bruijn1975_2-2) [de Bruijn (1975)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFde_Bruijn1975).
+3. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-3) [Brown (1869)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBrown1869); [Stein (1963)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFStein1963); [Kak (2000)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKak2000); [Knuth (2006)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKnuth2006); [Hall (2008)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHall2008).
+4. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEPopper2002_4-0) [Popper (2002)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFPopper2002).
+5. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEKlein2013_5-0) [Klein (2013)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFKlein2013).
+6. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-6) According to [Berstel &amp; Perrin (2007)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBerstelPerrin2007), the sequence generated in this way was first described (with a different generation method) by [Martin (1934)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFMartin1934), and the connection between it and Lyndon words was observed by [Fredricksen &amp; Maiorana (1978)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFFredricksenMaiorana1978).
+7. [Jump up to: 1](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHiggins2012_7-0) [2](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHiggins2012_7-1) [Higgins (2012)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHiggins2012).
+8. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEGoreskyKlapper2012_8-0) [Goresky &amp; Klapper (2012)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFGoreskyKlapper2012).
+9. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTERalston1982136%E2%80%93139_9-0) [Ralston (1982)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFRalston1982), pp. 136–139.
+10. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-10) [&quot;De Bruijn sequences&quot;](https://github.com/sagemath/sage/blob/28da5476f102272f0b0f149ecc6bb2c2f9ece54b/src/sage/combinat/debruijn_sequence.pyx). *Sage*. Retrieved 2023-03-07.
+11. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEAguirreMattarMagis-Weinberg2011_11-0) [Aguirre, Mattar &amp; Magis-Weinberg (2011)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFAguirreMattarMagis-Weinberg2011).
+12. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-12) [&quot;de Bruijn cycle generator&quot;](https://web.archive.org/web/20160126133108/https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn_software). Archived from [the original](https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn_software) on 2016-01-26. Retrieved 2015-09-15.
+13. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEvan_LintWilson2001_13-0) [van Lint &amp; Wilson (2001)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFvan_LintWilson2001).
+14. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-14) [Anderson (1997–2009)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFAnderson1997%E2%80%932009); [Busch (2009)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFBusch2009)
+15. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-15) [&quot;de Bruijn (DeBruijn) sequence (K=10, n=3)&quot;](http://hakank.org/comb/debruijn.cgi?k=10&amp;n=3).
+16. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-16) Tesler, Glenn (2017). &quot;Multi de Bruijn sequences&quot;. *Journal of Combinatorics*. **8** (3): 439–474. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1708.03654](https://arxiv.org/abs/1708.03654). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.4310/JOC.2017.v8.n3.a3](https://doi.org/10.4310%2FJOC.2017.v8.n3.a3).
+17. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTETuliani2001_17-0) [Tuliani (2001)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFTuliani2001).
+18. [↑](https://en.wikipedia.org/wiki/De_Bruijn_sequence#cite_ref-FOOTNOTEHurlbertIsaak1993_18-0) [Hurlbert &amp; Isaak (1993)](https://en.wikipedia.org/wiki/De_Bruijn_sequence#CITEREFHurlbertIsaak1993).
+</pre></article><article id="section-0018"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=16)]
+- [van Aardenne-Ehrenfest, Tanja](https://en.wikipedia.org/wiki/Tatyana_Pavlovna_Ehrenfest); [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1951). [&quot;Circuits and trees in oriented linear graphs&quot;](http://alexandria.tue.nl/repository/freearticles/597493.pdf) (PDF). *[Simon Stevin](https://en.wikipedia.org/wiki/Simon_Stevin_(journal))*. **28**: 203–217. [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0047311](https://mathscinet.ams.org/mathscinet-getitem?mr=0047311).
+- Aguirre, G. K.; Mattar, M. G.; Magis-Weinberg, L. (2011). [&quot;de Bruijn cycles for neural decoding&quot;](https://web.archive.org/web/20160126134333/https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn). *NeuroImage*. **56** (3): 1293–1300. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.neuroimage.2011.02.005](https://doi.org/10.1016%2Fj.neuroimage.2011.02.005). [PMC](https://en.wikipedia.org/wiki/PMC_(identifier)) [3104402](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3104402). [PMID](https://en.wikipedia.org/wiki/PMID_(identifier)) [21315160](https://pubmed.ncbi.nlm.nih.gov/21315160). Archived from [the original](https://cfn.upenn.edu/aguirre/wiki/public:de_bruijn) on 2016-01-26. Retrieved 2015-06-04.
+- Anderson, Sean Eron (1997–2009). [&quot;Bit Twiddling Hacks&quot;](http://graphics.stanford.edu/~seander/bithacks.html). [Stanford University](https://en.wikipedia.org/wiki/Stanford_University). Retrieved 2009-02-12.
+- [Berstel, Jean](https://en.wikipedia.org/wiki/Jean_Berstel); [Perrin, Dominique](https://en.wikipedia.org/wiki/Dominique_Perrin) (2007). [&quot;The origins of combinatorics on words&quot;](http://www-igm.univ-mlv.fr/~berstel/Articles/2007Origins.pdf) (PDF). *[European Journal of Combinatorics](https://en.wikipedia.org/wiki/European_Journal_of_Combinatorics)*. **28** (3): 996–1022. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.ejc.2005.07.019](https://doi.org/10.1016%2Fj.ejc.2005.07.019). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [2300777](https://mathscinet.ams.org/mathscinet-getitem?mr=2300777).
+- [Brown, C. P.](https://en.wikipedia.org/wiki/C._P._Brown) (1869). [*Sanskrit Prosody and Numerical Symbols Explained*](https://archive.org/stream/sanskritprosody00browgoog#page/n44/mode/2up). p. 28.
+- [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1946). [&quot;A combinatorial problem&quot;](http://www.dwc.knaw.nl/DL/publications/PU00018235.pdf) (PDF). *Proc. Koninklijke Nederlandse Akademie V. Wetenschappen*. **49**: 758–764. [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0018142](https://mathscinet.ams.org/mathscinet-getitem?mr=0018142), *[Indagationes Mathematicae](https://en.wikipedia.org/wiki/Indagationes_Mathematicae)* **8**: 461–467`{{cite journal}}`: CS1 maint: postscript ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_postscript))
+- [de Bruijn, Nicolaas Govert](https://en.wikipedia.org/wiki/Nicolaas_Govert_de_Bruijn) (1975). [*Acknowledgement of Priority to C. Flye Sainte-Marie on the counting of circular arrangements of 2n zeros and ones that show each n-letter word exactly once*](http://alexandria.tue.nl/repository/books/252901.pdf) (PDF). T.H.-Report 75-WSK-06. Technological University Eindhoven.
+- Busch, Philip (2009). [&quot;Computing Trailing Zeros HOWTO&quot;](https://web.archive.org/web/20150129233016/http://7ooo.mooo.com/text/ComputingTrailingZerosHOWTO.html). Archived from [the original](http://7ooo.mooo.com/text/ComputingTrailingZerosHOWTO.html) on 2015-01-29. Retrieved 2015-01-29.
+- Flye Sainte-Marie, Camille (1894). &quot;Solution to question nr. 48&quot;. *L&#39;Intermédiaire des Mathématiciens*. **1**: 107–110.
+- [Goresky, Mark](https://en.wikipedia.org/wiki/Mark_Goresky); Klapper, Andrew (2012). &quot;8.2.5 Shift register generation of de Bruijn sequences&quot;. [*Algebraic Shift Register Sequences*](https://books.google.com/books?id=sd9AqHeeHh4C&amp;pg=PA174). [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). pp. 174–175. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-10701499-2](https://en.wikipedia.org/wiki/Special:BookSources/978-1-10701499-2).
+- Hall, Rachel W. (2008). [&quot;Math for poets and drummers&quot;](https://web.archive.org/web/20120212145748/http://www.sju.edu/~rhall/mathforpoets.pdf) (PDF). *Math Horizons*. **15** (3): 10–11. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/10724117.2008.11974752](https://doi.org/10.1080%2F10724117.2008.11974752). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [3637061](https://api.semanticscholar.org/CorpusID:3637061). Archived from [the original](http://www.sju.edu/~rhall/mathforpoets.pdf) (PDF) on 2012-02-12. Retrieved 2008-10-22.
+- Higgins, Peter (November 2012). [&quot;Burrows-Wheeler transforms and de Bruijn words&quot;](http://www.macs.hw.ac.uk/~markl/Higgins.pdf) (PDF). Retrieved 2017-02-11.
+- Hurlbert, Glenn; Isaak, Garth (1993). [&quot;On the de Bruijn torus problem&quot;](https://doi.org/10.1016%2F0097-3165%2893%2990087-O). *[Journal of Combinatorial Theory](https://en.wikipedia.org/wiki/Journal_of_Combinatorial_Theory)*. Series A. **64** (1): 50–62. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0097-3165(93)90087-O](https://doi.org/10.1016%2F0097-3165%2893%2990087-O). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1239511](https://mathscinet.ams.org/mathscinet-getitem?mr=1239511).
+- [Kak, Subhash](https://en.wikipedia.org/wiki/Subhash_Kak) (2000). [&quot;Yamātārājabhānasalagāṃ an interesting combinatoric sūtra&quot;](https://web.archive.org/web/20141029120230/http://202.41.82.144/rawdataupload/upload/insa/INSA_2/200059d2_123.pdf) (PDF). *Indian Journal of History of Science*. **35** (2): 123–127. Archived from [the original](http://202.41.82.144/rawdataupload/upload/insa/INSA_2/200059d2_123.pdf) (PDF) on 2014-10-29.
+- Klein, Andreas (2013). [*Stream Ciphers*](https://books.google.com/books?id=GYpEAAAAQBAJ&amp;pg=PA59). Springer. p. 59. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-44715079-4](https://en.wikipedia.org/wiki/Special:BookSources/978-1-44715079-4).
+- [Knuth, Donald Ervin](https://en.wikipedia.org/wiki/Donald_Ervin_Knuth) (2006). [*The Art of Computer Programming, Fascicle 4: Generating All Trees – History of Combinatorial Generation*](https://books.google.com/books?id=56LNfE2QGtYC&amp;pg=PA50). [Addison–Wesley](https://en.wikipedia.org/wiki/Addison%E2%80%93Wesley). p. 50. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-33570-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-33570-8).
+- Fredricksen, Harold; Maiorana, James (1978). [&quot;Necklaces of beads in *k* colors and *k*-ary de Bruijn sequences&quot;](https://doi.org/10.1016%2F0012-365X%2878%2990002-X). *[Discrete Mathematics](https://en.wikipedia.org/wiki/Discrete_Mathematics_(journal))*. **23** (3): 207–210. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/0012-365X(78)90002-X](https://doi.org/10.1016%2F0012-365X%2878%2990002-X). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0523071](https://mathscinet.ams.org/mathscinet-getitem?mr=0523071).
+- Martin, Monroe H. (1934). [&quot;A problem in arrangements&quot;](https://www.ams.org/journals/bull/1934-40-12/S0002-9904-1934-05988-3/S0002-9904-1934-05988-3.pdf) (PDF). *[Bulletin of the American Mathematical Society](https://en.wikipedia.org/wiki/Bulletin_of_the_American_Mathematical_Society)*. **40** (12): 859–864. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0002-9904-1934-05988-3](https://doi.org/10.1090%2FS0002-9904-1934-05988-3). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1562989](https://mathscinet.ams.org/mathscinet-getitem?mr=1562989).
+- Osipov, Vladimir (2016). &quot;Wavelet Analysis on Symbolic Sequences and Two-Fold de Bruijn Sequences&quot;. *[Journal of Statistical Physics](https://en.wikipedia.org/wiki/Journal_of_Statistical_Physics)*. **164** (1): 142–165. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1601.02097](https://arxiv.org/abs/1601.02097). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2016JSP...164..142O](https://ui.adsabs.harvard.edu/abs/2016JSP...164..142O). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/s10955-016-1537-5](https://doi.org/10.1007%2Fs10955-016-1537-5). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [1572-9613](https://search.worldcat.org/issn/1572-9613). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [16535836](https://api.semanticscholar.org/CorpusID:16535836).
+- [Popper, Karl](https://en.wikipedia.org/wiki/Karl_Popper) (2002) [1934]. [*The logic of scientific discovery*](https://books.google.com/books?id=0a5bLBbe_dMC&amp;pg=PA295). Routledge. p. 294. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-415-27843-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-415-27843-0).
+- Ralston, Anthony (1982). &quot;de Bruijn sequences—a model example of the interaction of discrete mathematics and computer science&quot;. *[Mathematics Magazine](https://en.wikipedia.org/wiki/Mathematics_Magazine)*. **55** (3): 131–143. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2690079](https://doi.org/10.2307%2F2690079). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2690079](https://www.jstor.org/stable/2690079). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0653429](https://mathscinet.ams.org/mathscinet-getitem?mr=0653429).
+- [Stein, Sherman K.](https://en.wikipedia.org/wiki/Sherman_K._Stein) (1963). &quot;Yamátárájabhánasalagám&quot;. *The Man-made Universe: An Introduction to the Spirit of Mathematics*. pp. 110–118. Reprinted in Wardhaugh, Benjamin, ed. (2012), *A Wealth of Numbers: An Anthology of 500 Years of Popular Mathematics Writing*, [Princeton University Press](https://en.wikipedia.org/wiki/Princeton_University_Press), pp. 139–144.
+- Tuliani, Jonathan (2001). &quot;de Bruijn sequences with efficient decoding algorithms&quot;. *[Discrete Mathematics](https://en.wikipedia.org/wiki/Discrete_Mathematics_(journal))*. **226** (1–3): 313–336. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/S0012-365X(00)00117-5](https://doi.org/10.1016%2FS0012-365X%2800%2900117-5). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1802599](https://mathscinet.ams.org/mathscinet-getitem?mr=1802599).
+- [van Lint, J. H.](https://en.wikipedia.org/wiki/J._H._van_Lint); [Wilson, Richard Michael](https://en.wikipedia.org/wiki/R._M._Wilson) (2001). [*A Course in Combinatorics*](https://books.google.com/books?id=5l5ps2JkyT0C&amp;pg=PA71). [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). p. 71. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-52100601-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-52100601-9).
+</pre></article><article id="section-0019"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;action=edit&amp;section=17)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;de Bruijn Sequence&quot;](https://mathworld.wolfram.com/deBruijnSequence.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- OEIS [sequence A166315 (Lexicographically smallest binary de Bruijn sequences)](https://oeis.org/A166315)
+- [De Bruijn sequence](http://chessprogramming.wikispaces.com/De+Bruijn+sequence) [Archived](https://web.archive.org/web/20110411012217/http://chessprogramming.wikispaces.com/De+Bruijn+sequence) 2011-04-11 at the [Wayback Machine](https://en.wikipedia.org/wiki/Wayback_Machine)
+- [CGI generator](http://www.hakank.org/comb/debruijn.cgi)
+- [Applet generator](http://www.hakank.org/comb/deBruijnApplet.html)
+- [Javascript generator and decoder](https://jgeisler0303.github.io/deBruijnDecode/). Implementation of J. Tuliani&#39;s algorithm.
+- [Door code lock](https://web.archive.org/web/20051202021442/http://www.stefangeens.com/000435.html)
+- [Minimal arrays containing all sub-array combinations of symbols: de Bruijn sequences and tori](https://web.archive.org/web/20140527202958/http://lcni.uoregon.edu/~dow/Geek_art/Minimal_combinatorics/Minimal_arrays_containing_all_combinations.html)
+- [http://debruijnsequence.org](http://debruijnsequence.org/) has many kinds of de Bruijn sequences.
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;oldid=1377614958](https://en.wikipedia.org/w/index.php?title=De_Bruijn_sequence&amp;oldid=1377614958)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Binary sequences](https://en.wikipedia.org/wiki/Category:Binary_sequences)
+- [Enumerative combinatorics](https://en.wikipedia.org/wiki/Category:Enumerative_combinatorics)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [CS1 maint: postscript](https://en.wikipedia.org/wiki/Category:CS1_maint:_postscript)
+- [Webarchive template wayback links](https://en.wikipedia.org/wiki/Category:Webarchive_template_wayback_links)
+- [Articles with example Python (programming language) code](https://en.wikipedia.org/wiki/Category:Articles_with_example_Python_(programming_language)_code)
+
+    [https://en\.wikipedia\.org/wiki/De\_Bruijn\_sequence?action=edit](https://en.wikipedia.org/wiki/De_Bruijn_sequence?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

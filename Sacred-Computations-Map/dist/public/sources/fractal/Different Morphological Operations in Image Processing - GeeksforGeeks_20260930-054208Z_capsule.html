@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Different Morphological Operations in Image Processing - GeeksforGeeks — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Different Morphological Operations in Image Processing - GeeksforGeeks</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://www.geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing/</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:42:08.399Z</div><div class="stat"><b>Records</b><br>31</div><div class="stat"><b>Sections</b><br>25</div></div><p>Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exams, and more.</p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 352 B · ~88 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 11675 B · ~2913 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 26063 B · ~6516 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 1020 B · ~255 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Different Morphological Operations in Image Processing.md</code></a> <small>markdown · 688 B · ~172 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Components.md</code></a> <small>markdown · 13 B · ~4 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-1.md</code></a> <small>markdown · 419 B · ~105 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-2.md</code></a> <small>markdown · 470 B · ~118 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Different Morphological Operations.md</code></a> <small>markdown · 37 B · ~10 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-1.md</code></a> <small>markdown · 526 B · ~132 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-2.md</code></a> <small>markdown · 410 B · ~103 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-3.md</code></a> <small>markdown · 411 B · ~103 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-4.md</code></a> <small>markdown · 362 B · ~91 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-5.md</code></a> <small>markdown · 494 B · ~124 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-6.md</code></a> <small>markdown · 326 B · ~82 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-7.md</code></a> <small>markdown · 356 B · ~89 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-8.md</code></a> <small>markdown · 316 B · ~79 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-9.md</code></a> <small>markdown · 278 B · ~70 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Implementing Morphological Operations in Python.md</code></a> <small>markdown · 50 B · ~13 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-Step 1- Import the Required Libraries.md</code></a> <small>markdown · 407 B · ~102 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-Step 2- Create a Sample Binary Image.md</code></a> <small>markdown · 619 B · ~154 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-Step 3- Create a Structuring Element.md</code></a> <small>markdown · 357 B · ~89 tok</small></li><li><a href="#section-0020"><code>artifacts/sections/0020-Step 4- Apply Morphological Operations.md</code></a> <small>markdown · 841 B · ~208 tok</small></li><li><a href="#section-0021"><code>artifacts/sections/0021-Step 5- Display the Results.md</code></a> <small>markdown · 1229 B · ~305 tok</small></li><li><a href="#section-0022"><code>artifacts/sections/0022-Applications.md</code></a> <small>markdown · 804 B · ~201 tok</small></li><li><a href="#section-0023"><code>artifacts/sections/0023-Advantages.md</code></a> <small>markdown · 582 B · ~146 tok</small></li><li><a href="#section-0024"><code>artifacts/sections/0024-Limitations.md</code></a> <small>markdown · 595 B · ~149 tok</small></li><li><a href="#section-0025"><code>artifacts/sections/0025-Explore.md</code></a> <small>markdown · 17 B · ~5 tok</small></li><li><a href="#art-0029"><code>artifacts/provenance/source-record.json</code></a> <small>json · 853 B · ~214 tok</small></li><li><a href="#art-0030"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0031"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Different Morphological Operations in Image Processing - GeeksforGeeks&quot;
+source: https://www.geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing/
+captured_at: 2026-09-30T05:42:08.399Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 31
+artifact_count: 31
+content_sha256: 582ebf276a4ca9cc349c0fb855ef9c5ec7e1ae133efea6ecdc985ec94f02a7c3
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:352,&quot;sha256&quot;:&quot;79acfb4960ff7be36059be6a89a18b891a82eba0a14bc02894eb0499e34d4159&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;geeksforgeeks&quot;,&quot;2026-09-30t05&quot;,&quot;399z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;computer-vision&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:88,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:11675,&quot;sha256&quot;:&quot;582ebf276a4ca9cc349c0fb855ef9c5ec7e1ae133efea6ecdc985ec94f02a7c3&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;objects&quot;,&quot;cv2&quot;,&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;org&quot;,&quot;kernel&quot;,&quot;structuring&quot;],&quot;summary&quot;:&quot;Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exam&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2913,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:26063,&quot;sha256&quot;:&quot;7fc8ec7dcdf5fdf5ff11a926ee1b3b258486d3bf22edd0206bbbc703d3eab4a4&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;geeksforgeeks&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;www&quot;,&quot;min&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:6516,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1020,&quot;sha256&quot;:&quot;4c7854b48cada7ab062dcef76e2a3bae509e5afa0e5bc3f96cc4b13566d0ec76&quot;,&quot;keywords&quot;:[&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;org&quot;,&quot;www&quot;,&quot;java&quot;,&quot;courses&quot;,&quot;dsa&quot;,&quot;introduction&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:255,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Different Morphological Operations in Image Processing.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:688,&quot;sha256&quot;:&quot;aaab64b3c936c3d5a9870d3ab5928a6843c249900886681839d5d3e9ff968e72&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;operations&quot;,&quot;morphological&quot;,&quot;objects&quot;,&quot;processing&quot;,&quot;different&quot;,&quot;within&quot;,&quot;2026&quot;],&quot;summary&quot;:&quot;Different Morphological Operations in Image Processing&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:172,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Components.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:13,&quot;sha256&quot;:&quot;1632c16603ecc395385e80369be7c425e6a4ed245d4ebb816fea7efcd92825e4&quot;,&quot;keywords&quot;:[&quot;components&quot;],&quot;summary&quot;:&quot;Components&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:4,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-1.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:419,&quot;sha256&quot;:&quot;26b4acf3b5b3b6714973337abf821ac4be8f980b328848fae21e9552365f7137&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;input&quot;,&quot;pixels&quot;,&quot;area&quot;,&quot;background&quot;,&quot;binary&quot;,&quot;foreground&quot;,&quot;objects&quot;],&quot;summary&quot;:&quot;1. Input Image&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:105,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-2.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:470,&quot;sha256&quot;:&quot;6bdc39337a019cd86db9d42243e19f439ff0e9d92efe42a1fa810553766bfce3&quot;,&quot;keywords&quot;:[&quot;element&quot;,&quot;structuring&quot;,&quot;kernel&quot;,&quot;across&quot;,&quot;acts&quot;,&quot;also&quot;,&quot;applied&quot;,&quot;based&quot;],&quot;summary&quot;:&quot;2. Structuring Element (Kernel)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:118,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Different Morphological Operations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:37,&quot;sha256&quot;:&quot;cd5b441ac1d60fe4628404082a9d9d96fb4f73ae24ea44dbb656405c796f1463&quot;,&quot;keywords&quot;:[&quot;different&quot;,&quot;morphological&quot;,&quot;operations&quot;],&quot;summary&quot;:&quot;Different Morphological Operations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:10,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-1.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:526,&quot;sha256&quot;:&quot;838ad13b1325c6f09e6ec8ae8dd8ff83ab1b71b75def64cc90d8b6fe398e6c88&quot;,&quot;keywords&quot;:[&quot;erosion&quot;,&quot;image&quot;,&quot;objects&quot;,&quot;boundaries&quot;,&quot;element&quot;,&quot;foreground&quot;,&quot;pixels&quot;,&quot;set&quot;],&quot;summary&quot;:&quot;1. Erosion&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:132,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-2.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:410,&quot;sha256&quot;:&quot;1258e5653e62f508591a41e690401a118047f5ce87f237a42f67a687cae9a2a1&quot;,&quot;keywords&quot;:[&quot;dilation&quot;,&quot;image&quot;,&quot;element&quot;,&quot;foreground&quot;,&quot;objects&quot;,&quot;pixel&quot;,&quot;structuring&quot;,&quot;adjacent&quot;],&quot;summary&quot;:&quot;2. Dilation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-3.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:411,&quot;sha256&quot;:&quot;6aa492c3aa044b6878b7a5c4e603504a1cea558ce764c8937ebf3704ba549b22&quot;,&quot;keywords&quot;:[&quot;objects&quot;,&quot;opening&quot;,&quot;dilation&quot;,&quot;erosion&quot;,&quot;image&quot;,&quot;noise&quot;,&quot;size&quot;,&quot;small&quot;],&quot;summary&quot;:&quot;3. Opening&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-4.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:362,&quot;sha256&quot;:&quot;9c053e9b4b489e87eb2dada4b62c346bb3986246a244154b381a18bdfe2ffcfe&quot;,&quot;keywords&quot;:[&quot;closing&quot;,&quot;applied&quot;,&quot;dilation&quot;,&quot;erosion&quot;,&quot;gaps&quot;,&quot;holes&quot;,&quot;objects&quot;,&quot;small&quot;],&quot;summary&quot;:&quot;4. Closing&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:91,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-5.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:494,&quot;sha256&quot;:&quot;9881474c95cc9efa74e98496924bf31044cb1d0f2c434413278a609db7b37ea1&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;background&quot;,&quot;foreground&quot;,&quot;hit-or-miss&quot;,&quot;structuring&quot;,&quot;transform&quot;,&quot;element&quot;,&quot;matches&quot;],&quot;summary&quot;:&quot;5. Hit-or-Miss Transform&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:124,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-6.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:326,&quot;sha256&quot;:&quot;e12959921454a22f3573c25397f54d0590c48e0e8677f563b8745fb20ad4b5e7&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;gradient&quot;,&quot;morphological&quot;,&quot;boundaries&quot;,&quot;objects&quot;,&quot;between&quot;,&quot;difference&quot;,&quot;dilated&quot;],&quot;summary&quot;:&quot;6. Morphological Gradient&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:82,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-7.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:356,&quot;sha256&quot;:&quot;0160825dff1373ac71a7686b6aea77b35188517ef2afe4397cf6be3ce51f10cb&quot;,&quot;keywords&quot;:[&quot;top-hat&quot;,&quot;image&quot;,&quot;transform&quot;,&quot;minus&quot;,&quot;original&quot;,&quot;result&quot;,&quot;background&quot;,&quot;black&quot;],&quot;summary&quot;:&quot;7. Top-Hat Transform&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:89,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-8.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:316,&quot;sha256&quot;:&quot;ecfe813799e2c63cf83d8fbd2ab02f2bc33d82a67aad884dff3165efac752b8d&quot;,&quot;keywords&quot;:[&quot;objects&quot;,&quot;skeletonization&quot;,&quot;their&quot;,&quot;form&quot;,&quot;image&quot;,&quot;skeletal&quot;,&quot;binary&quot;,&quot;connectivity&quot;],&quot;summary&quot;:&quot;8. Skeletonization&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:79,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-9.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:278,&quot;sha256&quot;:&quot;2ce336110a7619c8f4619668277d2eca9f39f34682d30bbb6ae8e7e09c7cf3ae&quot;,&quot;keywords&quot;:[&quot;pruning&quot;,&quot;branches&quot;,&quot;image&quot;,&quot;removes&quot;,&quot;skeleton&quot;,&quot;small&quot;,&quot;artifacts&quot;,&quot;clean&quot;],&quot;summary&quot;:&quot;9. Pruning&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:70,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Implementing Morphological Operations in Python.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:50,&quot;sha256&quot;:&quot;869067a0e6e8c4c7ccf0fbf782a87c386b4fbe39f4ae3d005721c7ca411559e1&quot;,&quot;keywords&quot;:[&quot;implementing&quot;,&quot;morphological&quot;,&quot;operations&quot;,&quot;python&quot;],&quot;summary&quot;:&quot;Implementing Morphological Operations in Python&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:13,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-Step 1- Import the Required Libraries.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:407,&quot;sha256&quot;:&quot;4050f3311d01758513690f7a7a4dde812648e2cf111f129f58e5f9384d18c55b&quot;,&quot;keywords&quot;:[&quot;import&quot;,&quot;libraries&quot;,&quot;cv2&quot;,&quot;image&quot;,&quot;matplotlib&quot;,&quot;numpy&quot;,&quot;pyplot&quot;,&quot;required&quot;],&quot;summary&quot;:&quot;Step 1: Import the Required Libraries&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:102,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-Step 2- Create a Sample Binary Image.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:619,&quot;sha256&quot;:&quot;f439ebeca199b6d6925273eedee6a7e4319da320aeff31b970738fa983dee6fa&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;200&quot;,&quot;binary&quot;,&quot;circle&quot;,&quot;create&quot;,&quot;cv2&quot;,&quot;rectangle&quot;,&quot;140&quot;],&quot;summary&quot;:&quot;Step 2: Create a Sample Binary Image&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:154,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-Step 3- Create a Structuring Element.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:357,&quot;sha256&quot;:&quot;b91184445e100a0b12dde65e6d2183be693feae9d0a374f4384769d052dd01ef&quot;,&quot;keywords&quot;:[&quot;kernel&quot;,&quot;create&quot;,&quot;element&quot;,&quot;step&quot;,&quot;structuring&quot;,&quot;transformations&quot;,&quot;altering&quot;,&quot;considered&quot;],&quot;summary&quot;:&quot;Step 3: Create a Structuring Element&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:89,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0023&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0020-Step 4- Apply Morphological Operations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:841,&quot;sha256&quot;:&quot;44b15dda0a825581923b21357dee2e1d62053cc56707d0a7684bea3657a81ea7&quot;,&quot;keywords&quot;:[&quot;cv2&quot;,&quot;image&quot;,&quot;kernel&quot;,&quot;morphologyex&quot;,&quot;morphological&quot;,&quot;object&quot;,&quot;operations&quot;,&quot;apply&quot;],&quot;summary&quot;:&quot;Step 4: Apply Morphological Operations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:208,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0024&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0021-Step 5- Display the Results.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1229,&quot;sha256&quot;:&quot;67efac11e3a405975dcf2b1ad0a1f66d4d12f6ea8a23b0a5c50608f95e1f55c5&quot;,&quot;keywords&quot;:[&quot;plt&quot;,&quot;images&quot;,&quot;axis&quot;,&quot;display&quot;,&quot;image&quot;,&quot;results&quot;,&quot;closing&quot;,&quot;dilation&quot;],&quot;summary&quot;:&quot;Step 5: Display the Results&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:305,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0025&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0022-Applications.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:804,&quot;sha256&quot;:&quot;a524c1967498e537efd759d2beceb971a584da69a93b1f4dcaf575f15aec2332&quot;,&quot;keywords&quot;:[&quot;improves&quot;,&quot;recognition&quot;,&quot;applications&quot;,&quot;enhances&quot;,&quot;extraction&quot;,&quot;fingerprint&quot;,&quot;noise&quot;,&quot;object&quot;],&quot;summary&quot;:&quot;Applications&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:201,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0026&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0023-Advantages.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:582,&quot;sha256&quot;:&quot;44ddb9e8a90525bcf4b6e2c4a4c78f476a56c4b61320182b4f39994b7df02a6e&quot;,&quot;keywords&quot;:[&quot;image&quot;,&quot;object&quot;,&quot;advantages&quot;,&quot;boundaries&quot;,&quot;shapes&quot;,&quot;accurate&quot;,&quot;applications&quot;,&quot;applied&quot;],&quot;summary&quot;:&quot;Advantages&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:146,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0027&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0024-Limitations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:595,&quot;sha256&quot;:&quot;074e42d891a0d23fc9cb0f1f11e9daf51f5c995755fa747057989d05146b285a&quot;,&quot;keywords&quot;:[&quot;ishikasinznno&quot;,&quot;different&quot;,&quot;geeksforgeeks&quot;,&quot;https&quot;,&quot;limitations&quot;,&quot;org&quot;,&quot;shape&quot;,&quot;user&quot;],&quot;summary&quot;:&quot;Limitations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0024&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:149,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0028&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0025-Explore.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:17,&quot;sha256&quot;:&quot;b85964e46ec4b9aea774aa4b5b6e23e05ee40f4f865fd980e83609870c24537c&quot;,&quot;keywords&quot;:[&quot;explore&quot;],&quot;summary&quot;:&quot;Explore&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:5,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0029&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:853,&quot;sha256&quot;:&quot;c32a4e955736ebc7d9545a4ab7abd70df075fc1e04f81333d4d58000acadd677&quot;,&quot;keywords&quot;:[&quot;geeksforgeeks&quot;,&quot;computer-vision&quot;,&quot;different-morphological-operations-in-image-processing&quot;,&quot;https&quot;,&quot;org&quot;,&quot;www&quot;,&quot;2024-06-30&quot;,&quot;2026-08-03&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0029&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:214,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0030&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;b4835283653680a5cf55c40125842fba37932401df6c54af73c442721c9c3894&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;136&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0030&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0031&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0031&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:42:08.399Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	88	352	79acfb4960ff7be36059be6a89a18b891a82eba0a14bc02894eb0499e34d4159	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	2913	11675	582ebf276a4ca9cc349c0fb855ef9c5ec7e1ae133efea6ecdc985ec94f02a7c3	Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exam	
+art:0003	index	artifacts/index/page-index.json	supporting	6516	26063	7fc8ec7dcdf5fdf5ff11a926ee1b3b258486d3bf22edd0206bbbc703d3eab4a4	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	255	1020	4c7854b48cada7ab062dcef76e2a3bae509e5afa0e5bc3f96cc4b13566d0ec76	Introduction	
+sec:0005	section	artifacts/sections/0002-Different Morphological Operations in Image Processing.md	primary	172	688	aaab64b3c936c3d5a9870d3ab5928a6843c249900886681839d5d3e9ff968e72	Different Morphological Operations in Image Processing	
+sec:0006	section	artifacts/sections/0003-Components.md	primary	4	13	1632c16603ecc395385e80369be7c425e6a4ed245d4ebb816fea7efcd92825e4	Components	
+sec:0007	section	artifacts/sections/0004-1.md	primary	105	419	26b4acf3b5b3b6714973337abf821ac4be8f980b328848fae21e9552365f7137	1. Input Image	
+sec:0008	section	artifacts/sections/0005-2.md	primary	118	470	6bdc39337a019cd86db9d42243e19f439ff0e9d92efe42a1fa810553766bfce3	2. Structuring Element (Kernel)	
+sec:0009	section	artifacts/sections/0006-Different Morphological Operations.md	primary	10	37	cd5b441ac1d60fe4628404082a9d9d96fb4f73ae24ea44dbb656405c796f1463	Different Morphological Operations	
+sec:0010	section	artifacts/sections/0007-1.md	primary	132	526	838ad13b1325c6f09e6ec8ae8dd8ff83ab1b71b75def64cc90d8b6fe398e6c88	1. Erosion	
+sec:0011	section	artifacts/sections/0008-2.md	primary	103	410	1258e5653e62f508591a41e690401a118047f5ce87f237a42f67a687cae9a2a1	2. Dilation	
+sec:0012	section	artifacts/sections/0009-3.md	supporting	103	411	6aa492c3aa044b6878b7a5c4e603504a1cea558ce764c8937ebf3704ba549b22	3. Opening	
+sec:0013	section	artifacts/sections/0010-4.md	supporting	91	362	9c053e9b4b489e87eb2dada4b62c346bb3986246a244154b381a18bdfe2ffcfe	4. Closing	
+sec:0014	section	artifacts/sections/0011-5.md	supporting	124	494	9881474c95cc9efa74e98496924bf31044cb1d0f2c434413278a609db7b37ea1	5. Hit-or-Miss Transform	
+sec:0015	section	artifacts/sections/0012-6.md	supporting	82	326	e12959921454a22f3573c25397f54d0590c48e0e8677f563b8745fb20ad4b5e7	6. Morphological Gradient	
+sec:0016	section	artifacts/sections/0013-7.md	supporting	89	356	0160825dff1373ac71a7686b6aea77b35188517ef2afe4397cf6be3ce51f10cb	7. Top-Hat Transform	
+sec:0017	section	artifacts/sections/0014-8.md	supporting	79	316	ecfe813799e2c63cf83d8fbd2ab02f2bc33d82a67aad884dff3165efac752b8d	8. Skeletonization	
+sec:0018	section	artifacts/sections/0015-9.md	supporting	70	278	2ce336110a7619c8f4619668277d2eca9f39f34682d30bbb6ae8e7e09c7cf3ae	9. Pruning	
+sec:0019	section	artifacts/sections/0016-Implementing Morphological Operations in Python.md	supporting	13	50	869067a0e6e8c4c7ccf0fbf782a87c386b4fbe39f4ae3d005721c7ca411559e1	Implementing Morphological Operations in Python	
+sec:0020	section	artifacts/sections/0017-Step 1- Import the Required Libraries.md	supporting	102	407	4050f3311d01758513690f7a7a4dde812648e2cf111f129f58e5f9384d18c55b	Step 1: Import the Required Libraries	
+sec:0021	section	artifacts/sections/0018-Step 2- Create a Sample Binary Image.md	supporting	154	619	f439ebeca199b6d6925273eedee6a7e4319da320aeff31b970738fa983dee6fa	Step 2: Create a Sample Binary Image	
+sec:0022	section	artifacts/sections/0019-Step 3- Create a Structuring Element.md	supporting	89	357	b91184445e100a0b12dde65e6d2183be693feae9d0a374f4384769d052dd01ef	Step 3: Create a Structuring Element	
+sec:0023	section	artifacts/sections/0020-Step 4- Apply Morphological Operations.md	supporting	208	841	44b15dda0a825581923b21357dee2e1d62053cc56707d0a7684bea3657a81ea7	Step 4: Apply Morphological Operations	
+sec:0024	section	artifacts/sections/0021-Step 5- Display the Results.md	supporting	305	1229	67efac11e3a405975dcf2b1ad0a1f66d4d12f6ea8a23b0a5c50608f95e1f55c5	Step 5: Display the Results	
+sec:0025	section	artifacts/sections/0022-Applications.md	supporting	201	804	a524c1967498e537efd759d2beceb971a584da69a93b1f4dcaf575f15aec2332	Applications	
+sec:0026	section	artifacts/sections/0023-Advantages.md	supporting	146	582	44ddb9e8a90525bcf4b6e2c4a4c78f476a56c4b61320182b4f39994b7df02a6e	Advantages	
+sec:0027	section	artifacts/sections/0024-Limitations.md	supporting	149	595	074e42d891a0d23fc9cb0f1f11e9daf51f5c995755fa747057989d05146b285a	Limitations	
+sec:0028	section	artifacts/sections/0025-Explore.md	supporting	5	17	b85964e46ec4b9aea774aa4b5b6e23e05ee40f4f865fd980e83609870c24537c	Explore	
+art:0029	provenance	artifacts/provenance/source-record.json	supporting	214	853	c32a4e955736ebc7d9545a4ab7abd70df075fc1e04f81333d4d58000acadd677	Capture source identity and metadata	
+art:0030	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	b4835283653680a5cf55c40125842fba37932401df6c54af73c442721c9c3894	Extraction engine and counts	
+art:0031	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)![search icon](https://media.geeksforgeeks.org/auth-dashboard-uploads/Property=Light---Default.svg)
+- CoursesSale**
+- Tutorials**
+- Interview Prep**
+**Switch to Dark ModeSign In
+- [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/)
+- [Practice Problems](https://www.geeksforgeeks.org/explore)
+- [C](https://www.geeksforgeeks.org/c/c-programming-language/)
+- [C++](https://www.geeksforgeeks.org/cpp/c-plus-plus/)
+- [Java](https://www.geeksforgeeks.org/java/java/)
+- [Python](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+- [JavaScript](https://www.geeksforgeeks.org/javascript/javascript-tutorial/)
+- [Data Science](https://www.geeksforgeeks.org/data-science/data-science-for-beginners/)
+- [Machine Learning](https://www.geeksforgeeks.org/machine-learning/machine-learning/)
+- [Courses](https://www.geeksforgeeks.org/courses)
+**Sign In
+
+# Different Morphological Operations in Image Processing
+
+Last Updated : 3 Aug, 2026
+-
+-
+-
+
+Morphological operations are fundamental image processing techniques that analyze and modify the shape, size, and structure of objects within an image. Unlike filtering methods that primarily focus on pixel intensity values, these operations use a structuring element (kernel) to examine the spatial relationship between neighboring pixels.
+
+- Remove small noise and unwanted artifacts from images.
+- Fill holes and connect broken regions within objects.
+- Separate overlapping or touching objects for better segmentation.
+- Extract object boundaries and highlight important structural features.
+
+## Components
+
+### 1. Input Image
+
+The input image is the image on which the morphological operation is performed. These operations are most commonly applied to binary images, where objects are represented by foreground pixels and the remaining area forms the background.
+
+In a binary image:
+
+- Foreground pixels represent the objects of interest (typically white).
+- Background pixels represent the surrounding area (typically black).
+
+### 2. Structuring Element (Kernel)
+
+A structuring element, also known as a kernel, is a small matrix that defines the neighborhood over which the morphological operation is applied. It acts as a template that slides across the image to determine how each pixel should be modified based on its surrounding pixels.
+
+The size and shape of the structuring element significantly influence the output. Common shapes include:
+
+- Square
+- Rectangle
+- Cross
+- Ellipse (or Circle)
+
+## Different Morphological Operations
+
+### 1. Erosion
+
+Erosion is a fundamental morphological operation that reduces the size of objects in a binary image. It works by removing pixels from the boundaries of objects.
+
+- ****Purpose:**** To remove small noise, detach connected objects, and erode boundaries.
+- ****How it Works:**** The structuring element slides over the image, and for each position, if all the pixels under the structuring element match the foreground, the pixel in the output image is set to the foreground. Otherwise, it is set to the background.
+
+### 2. Dilation
+
+Dilation is the opposite of erosion and is used to increase the size of objects in an image.
+
+- ****Purpose:****To join adjacent objects, fill small holes, and enhance features.
+- ****How it Works:**** The structuring element slides over the image, and for each position, if any pixel under the structuring element matches the foreground, the pixel in the output image is set to the foreground.
+
+### 3. Opening
+
+Opening is a compound operation that involves erosion followed by dilation.
+
+- ****Purpose:****To remove small objects or noise from the image while preserving the shape and size of larger objects.
+- ****How it Works:****First, the image undergoes erosion, which removes small objects and noise. Then, dilation is applied to restore the size of the remaining objects to their original dimensions.
+
+### 4. Closing
+
+Closing is another compound operation that consists of dilation followed by erosion.
+
+- ****Purpose:**** To fill small holes and gaps in objects while preserving their overall shape.
+- ****How it Works:**** First, dilation is applied to the image, filling small holes and gaps. Then, erosion is applied to restore the original size of the objects.
+
+### 5. Hit-or-Miss Transform
+
+The hit-or-miss transform is used to find specific patterns or shapes in a binary image.
+
+- ****Purpose:**** To detect specific configurations or shapes in the image.
+- ****How it Works:****It uses a pair of structuring elements: one for the foreground and one for the background. The operation looks for places where the foreground structuring element matches the foreground in the image, and the background structuring element matches the background in the image.
+
+### 6. Morphological Gradient
+
+The morphological gradient is the difference between the dilation and erosion of an image.
+
+- ****Purpose:****To highlight the boundaries or edges of objects in the image.
+- ****How it Works:****By subtracting the eroded image from the dilated image, the boundaries of the objects are emphasized.
+
+### 7. Top-Hat Transform
+
+The top-hat transform is used to extract small elements and details from an image.
+
+- ****Purpose:****To enhance bright objects on a dark background or vice versa.
+- ****How it Works:**** There are two types: white top-hat (original image minus the result of opening) and black top-hat (result of closing minus the original image).
+
+### 8. Skeletonization
+
+Skeletonization reduces objects in a binary image to their skeletal form.
+
+- ****Purpose:**** To simplify objects to their essential structure while preserving their connectivity.
+- ****How it Works:****It iteratively erodes the image until the objects are reduced to a minimal, skeletal form.
+
+### 9. Pruning
+
+Pruning removes small spurs or extraneous branches from the skeleton of an image.
+
+- ****Purpose:****To clean up the skeleton by removing unwanted artifacts.
+- ****How it Works:**** It identifies and removes small, irrelevant branches from the skeletonized image.
+
+## Implementing Morphological Operations in Python
+
+### Step 1: Import the Required Libraries
+
+Import the necessary libraries for image processing and visualization.
+
+- `cv2` provides functions for performing morphological operations.
+- `numpy` is used to create the sample binary image and the structuring element.
+- `matplotlib.pyplot` displays the output images.
+   ``
+
+```
+import cv2
+```
+
+```
+import numpy as np
+```
+
+```
+import matplotlib.pyplot as plt
+```
+
+### Step 2: Create a Sample Binary Image
+
+Instead of using an external image, create a simple binary image containing a rectangle and a circle.
+
+- `np.zeros()` creates a black image of size ****200 × 200****.
+- `cv2.rectangle()` draws a filled white rectangle.
+- `cv2.circle()` draws a filled white circle.
+- These simple shapes make it easy to observe the effect of each morphological operation.
+   ``
+
+```
+# Create a blank binary image
+```
+
+```
+image = np.zeros((200, 200), dtype=np.uint8)
+```
+
+```
+cv2.rectangle(image, (30, 30), (90, 90), 255, -1)
+```
+
+```
+​
+```
+
+```
+cv2.circle(image, (140, 140), 30, 255, -1)
+```
+
+### Step 3: Create a Structuring Element
+
+Define a 5 × 5 kernel that will be used for all morphological transformations.
+
+- The kernel determines the neighborhood considered during each operation.
+- A ****5 × 5**** square kernel provides noticeable transformations without excessively altering the objects.
+   ``
+
+```
+kernel = np.ones((5, 5), np.uint8)
+```
+
+### Step 4: Apply Morphological Operations
+
+Perform the commonly used morphological operations.
+
+- Erosion shrinks object boundaries.
+- Dilation expands object boundaries.
+- Opening removes small foreground noise.
+- Closing fills small holes inside objects.
+- Gradient highlights object edges.
+   ``
+
+```
+erosion = cv2.erode(image, kernel, iterations=1)
+```
+
+```
+​
+```
+
+```
+dilation = cv2.dilate(image, kernel, iterations=1)
+```
+
+```
+​
+```
+
+```
+opening = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+```
+
+```
+​
+```
+
+```
+closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+```
+
+```
+​
+```
+
+```
+gradient = cv2.morphologyEx(image, cv2.MORPH_GRADIENT, kernel)
+```
+
+```
+​
+```
+
+```
+tophat = cv2.morphologyEx(image, cv2.MORPH_TOPHAT, kernel)
+```
+
+```
+​
+```
+
+```
+blackhat = cv2.morphologyEx(image, cv2.MORPH_BLACKHAT, kernel)
+```
+
+### Step 5: Display the Results
+
+Display the original image and all transformed images for comparison.
+
+- The processed images are stored in a list.
+- `plt.subplot()` arranges them in a 2 × 4 grid.
+- `plt.imshow()` displays each image.
+- `plt.axis(&quot;off&quot;)` removes axis labels for better visualization.
+- `plt.tight_layout()` prevents overlapping.
+- `plt.show()` displays all results.
+   ``
+
+```
+titles = [
+```
+
+```
+&quot;Original&quot;,
+```
+
+```
+&quot;Erosion&quot;,
+```
+
+```
+&quot;Dilation&quot;,
+```
+
+```
+&quot;Opening&quot;,
+```
+
+```
+&quot;Closing&quot;,
+```
+
+```
+&quot;Gradient&quot;,
+```
+
+```
+&quot;Top-Hat&quot;,
+```
+
+```
+&quot;Black-Hat&quot;
+```
+
+```
+]
+```
+
+```
+​
+```
+
+```
+images = [
+```
+
+```
+image,
+```
+
+```
+erosion,
+```
+
+```
+dilation,
+```
+
+```
+opening,
+```
+
+```
+closing,
+```
+
+```
+gradient,
+```
+
+```
+tophat,
+```
+
+```
+blackhat
+```
+
+```
+]
+```
+
+```
+​
+```
+
+```
+plt.figure(figsize=(14, 8))
+```
+
+```
+​
+```
+
+```
+for i in range(len(images)):
+```
+
+```
+plt.subplot(2, 4, i + 1)
+```
+
+```
+plt.imshow(images[i], cmap=&quot;gray&quot;)
+```
+
+```
+plt.title(titles[i])
+```
+
+```
+plt.axis(&quot;off&quot;)
+```
+
+```
+​
+```
+
+```
+plt.tight_layout()
+```
+
+```
+plt.show()
+```
+
+****Output:****
+
+![Screenshot\-](https://media.geeksforgeeks.org/wp-content/uploads/20260710120227586168/Screenshot-.png)
+
+&gt; You can download the code from here.
+
+## Applications
+
+- ****Medical Image Analysis:**** Removes noise, enhances anatomical structures, and assists in segmenting organs or tumors from MRI, CT, and X-ray images.
+- ****Optical Character Recognition (OCR):**** Improves scanned documents by removing artifacts, filling gaps in characters, and enhancing text for accurate recognition.
+- ****Object Detection and Segmentation:**** Separates overlapping objects, refines object boundaries, and improves segmentation accuracy before feature extraction.
+- ****Industrial Quality Inspection:**** Detects surface defects such as cracks, scratches, holes, or missing components in manufactured products.
+- ****Fingerprint Recognition:**** Enhances fingerprint ridge patterns, removes noise, and improves minutiae extraction for biometric authentication.
+
+## Advantages
+
+- Uses straightforward mathematical operations, making it computationally efficient for image preprocessing.
+- Eliminates small unwanted objects and artifacts while preserving important image structures.
+- Produces cleaner object boundaries, leading to more accurate segmentation and object detection.
+- Highlights shapes, edges, and object boundaries for better feature extraction.
+- Supports various structuring element shapes and sizes to suit different applications.
+- Can be applied to both binary and grayscale images for a wide range of image processing tasks.
+
+## Limitations
+
+- The quality of the output depends heavily on the size and shape of the structuring element.
+- Large kernels or repeated operations can eliminate fine image features along with noise.
+- Primarily focuses on object shape and does not capture rich texture or color information.
+- Excessive erosion or dilation may alter the original geometry of objects.
+- Different images often require different kernel sizes and iteration counts for optimal results.
+Comment[I](https://www.geeksforgeeks.org/user/ishikasinznno/)[ishikasinznno](https://www.geeksforgeeks.org/user/ishikasinznno/)2
+
+### Explore
+
+![]()
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)![search icon](https://media.geeksforgeeks.org/auth-dashboard-uploads/Property=Light---Default.svg)
+- CoursesSale**
+- Tutorials**
+- Interview Prep**
+**Switch to Dark ModeSign In
+- [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/)
+- [Practice Problems](https://www.geeksforgeeks.org/explore)
+- [C](https://www.geeksforgeeks.org/c/c-programming-language/)
+- [C++](https://www.geeksforgeeks.org/cpp/c-plus-plus/)
+- [Java](https://www.geeksforgeeks.org/java/java/)
+- [Python](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+- [JavaScript](https://www.geeksforgeeks.org/javascript/javascript-tutorial/)
+- [Data Science](https://www.geeksforgeeks.org/data-science/data-science-for-beginners/)
+- [Machine Learning](https://www.geeksforgeeks.org/machine-learning/machine-learning/)
+- [Courses](https://www.geeksforgeeks.org/courses)
+**Sign In
+</pre></article><article id="section-0002"><h3>Different Morphological Operations in Image Processing</h3><pre># Different Morphological Operations in Image Processing
+
+Last Updated : 3 Aug, 2026
+-
+-
+-
+
+Morphological operations are fundamental image processing techniques that analyze and modify the shape, size, and structure of objects within an image. Unlike filtering methods that primarily focus on pixel intensity values, these operations use a structuring element (kernel) to examine the spatial relationship between neighboring pixels.
+
+- Remove small noise and unwanted artifacts from images.
+- Fill holes and connect broken regions within objects.
+- Separate overlapping or touching objects for better segmentation.
+- Extract object boundaries and highlight important structural features.
+</pre></article><article id="section-0003"><h3>Components</h3><pre># Components
+</pre></article><article id="section-0004"><h3>1. Input Image</h3><pre># 1. Input Image
+
+The input image is the image on which the morphological operation is performed. These operations are most commonly applied to binary images, where objects are represented by foreground pixels and the remaining area forms the background.
+
+In a binary image:
+
+- Foreground pixels represent the objects of interest (typically white).
+- Background pixels represent the surrounding area (typically black).
+</pre></article><article id="section-0005"><h3>2. Structuring Element (Kernel)</h3><pre># 2. Structuring Element (Kernel)
+
+A structuring element, also known as a kernel, is a small matrix that defines the neighborhood over which the morphological operation is applied. It acts as a template that slides across the image to determine how each pixel should be modified based on its surrounding pixels.
+
+The size and shape of the structuring element significantly influence the output. Common shapes include:
+
+- Square
+- Rectangle
+- Cross
+- Ellipse (or Circle)
+</pre></article><article id="section-0006"><h3>Different Morphological Operations</h3><pre># Different Morphological Operations
+</pre></article><article id="section-0007"><h3>1. Erosion</h3><pre># 1. Erosion
+
+Erosion is a fundamental morphological operation that reduces the size of objects in a binary image. It works by removing pixels from the boundaries of objects.
+
+- ****Purpose:**** To remove small noise, detach connected objects, and erode boundaries.
+- ****How it Works:**** The structuring element slides over the image, and for each position, if all the pixels under the structuring element match the foreground, the pixel in the output image is set to the foreground. Otherwise, it is set to the background.
+</pre></article><article id="section-0008"><h3>2. Dilation</h3><pre># 2. Dilation
+
+Dilation is the opposite of erosion and is used to increase the size of objects in an image.
+
+- ****Purpose:****To join adjacent objects, fill small holes, and enhance features.
+- ****How it Works:**** The structuring element slides over the image, and for each position, if any pixel under the structuring element matches the foreground, the pixel in the output image is set to the foreground.
+</pre></article><article id="section-0009"><h3>3. Opening</h3><pre># 3. Opening
+
+Opening is a compound operation that involves erosion followed by dilation.
+
+- ****Purpose:****To remove small objects or noise from the image while preserving the shape and size of larger objects.
+- ****How it Works:****First, the image undergoes erosion, which removes small objects and noise. Then, dilation is applied to restore the size of the remaining objects to their original dimensions.
+</pre></article><article id="section-0010"><h3>4. Closing</h3><pre># 4. Closing
+
+Closing is another compound operation that consists of dilation followed by erosion.
+
+- ****Purpose:**** To fill small holes and gaps in objects while preserving their overall shape.
+- ****How it Works:**** First, dilation is applied to the image, filling small holes and gaps. Then, erosion is applied to restore the original size of the objects.
+</pre></article><article id="section-0011"><h3>5. Hit-or-Miss Transform</h3><pre># 5. Hit-or-Miss Transform
+
+The hit-or-miss transform is used to find specific patterns or shapes in a binary image.
+
+- ****Purpose:**** To detect specific configurations or shapes in the image.
+- ****How it Works:****It uses a pair of structuring elements: one for the foreground and one for the background. The operation looks for places where the foreground structuring element matches the foreground in the image, and the background structuring element matches the background in the image.
+</pre></article><article id="section-0012"><h3>6. Morphological Gradient</h3><pre># 6. Morphological Gradient
+
+The morphological gradient is the difference between the dilation and erosion of an image.
+
+- ****Purpose:****To highlight the boundaries or edges of objects in the image.
+- ****How it Works:****By subtracting the eroded image from the dilated image, the boundaries of the objects are emphasized.
+</pre></article><article id="section-0013"><h3>7. Top-Hat Transform</h3><pre># 7. Top-Hat Transform
+
+The top-hat transform is used to extract small elements and details from an image.
+
+- ****Purpose:****To enhance bright objects on a dark background or vice versa.
+- ****How it Works:**** There are two types: white top-hat (original image minus the result of opening) and black top-hat (result of closing minus the original image).
+</pre></article><article id="section-0014"><h3>8. Skeletonization</h3><pre># 8. Skeletonization
+
+Skeletonization reduces objects in a binary image to their skeletal form.
+
+- ****Purpose:**** To simplify objects to their essential structure while preserving their connectivity.
+- ****How it Works:****It iteratively erodes the image until the objects are reduced to a minimal, skeletal form.
+</pre></article><article id="section-0015"><h3>9. Pruning</h3><pre># 9. Pruning
+
+Pruning removes small spurs or extraneous branches from the skeleton of an image.
+
+- ****Purpose:****To clean up the skeleton by removing unwanted artifacts.
+- ****How it Works:**** It identifies and removes small, irrelevant branches from the skeletonized image.
+</pre></article><article id="section-0016"><h3>Implementing Morphological Operations in Python</h3><pre># Implementing Morphological Operations in Python
+</pre></article><article id="section-0017"><h3>Step 1: Import the Required Libraries</h3><pre># Step 1: Import the Required Libraries
+
+Import the necessary libraries for image processing and visualization.
+
+- `cv2` provides functions for performing morphological operations.
+- `numpy` is used to create the sample binary image and the structuring element.
+- `matplotlib.pyplot` displays the output images.
+   ``
+
+```
+import cv2
+```
+
+```
+import numpy as np
+```
+
+```
+import matplotlib.pyplot as plt
+```
+</pre></article><article id="section-0018"><h3>Step 2: Create a Sample Binary Image</h3><pre># Step 2: Create a Sample Binary Image
+
+Instead of using an external image, create a simple binary image containing a rectangle and a circle.
+
+- `np.zeros()` creates a black image of size ****200 × 200****.
+- `cv2.rectangle()` draws a filled white rectangle.
+- `cv2.circle()` draws a filled white circle.
+- These simple shapes make it easy to observe the effect of each morphological operation.
+   ``
+
+```
+# Create a blank binary image
+```
+
+```
+image = np.zeros((200, 200), dtype=np.uint8)
+```
+
+```
+cv2.rectangle(image, (30, 30), (90, 90), 255, -1)
+```
+
+```
+​
+```
+
+```
+cv2.circle(image, (140, 140), 30, 255, -1)
+```
+</pre></article><article id="section-0019"><h3>Step 3: Create a Structuring Element</h3><pre># Step 3: Create a Structuring Element
+
+Define a 5 × 5 kernel that will be used for all morphological transformations.
+
+- The kernel determines the neighborhood considered during each operation.
+- A ****5 × 5**** square kernel provides noticeable transformations without excessively altering the objects.
+   ``
+
+```
+kernel = np.ones((5, 5), np.uint8)
+```
+</pre></article><article id="section-0020"><h3>Step 4: Apply Morphological Operations</h3><pre># Step 4: Apply Morphological Operations
+
+Perform the commonly used morphological operations.
+
+- Erosion shrinks object boundaries.
+- Dilation expands object boundaries.
+- Opening removes small foreground noise.
+- Closing fills small holes inside objects.
+- Gradient highlights object edges.
+   ``
+
+```
+erosion = cv2.erode(image, kernel, iterations=1)
+```
+
+```
+​
+```
+
+```
+dilation = cv2.dilate(image, kernel, iterations=1)
+```
+
+```
+​
+```
+
+```
+opening = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+```
+
+```
+​
+```
+
+```
+closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+```
+
+```
+​
+```
+
+```
+gradient = cv2.morphologyEx(image, cv2.MORPH_GRADIENT, kernel)
+```
+
+```
+​
+```
+
+```
+tophat = cv2.morphologyEx(image, cv2.MORPH_TOPHAT, kernel)
+```
+
+```
+​
+```
+
+```
+blackhat = cv2.morphologyEx(image, cv2.MORPH_BLACKHAT, kernel)
+```
+</pre></article><article id="section-0021"><h3>Step 5: Display the Results</h3><pre># Step 5: Display the Results
+
+Display the original image and all transformed images for comparison.
+
+- The processed images are stored in a list.
+- `plt.subplot()` arranges them in a 2 × 4 grid.
+- `plt.imshow()` displays each image.
+- `plt.axis(&quot;off&quot;)` removes axis labels for better visualization.
+- `plt.tight_layout()` prevents overlapping.
+- `plt.show()` displays all results.
+   ``
+
+```
+titles = [
+```
+
+```
+&quot;Original&quot;,
+```
+
+```
+&quot;Erosion&quot;,
+```
+
+```
+&quot;Dilation&quot;,
+```
+
+```
+&quot;Opening&quot;,
+```
+
+```
+&quot;Closing&quot;,
+```
+
+```
+&quot;Gradient&quot;,
+```
+
+```
+&quot;Top-Hat&quot;,
+```
+
+```
+&quot;Black-Hat&quot;
+```
+
+```
+]
+```
+
+```
+​
+```
+
+```
+images = [
+```
+
+```
+image,
+```
+
+```
+erosion,
+```
+
+```
+dilation,
+```
+
+```
+opening,
+```
+
+```
+closing,
+```
+
+```
+gradient,
+```
+
+```
+tophat,
+```
+
+```
+blackhat
+```
+
+```
+]
+```
+
+```
+​
+```
+
+```
+plt.figure(figsize=(14, 8))
+```
+
+```
+​
+```
+
+```
+for i in range(len(images)):
+```
+
+```
+plt.subplot(2, 4, i + 1)
+```
+
+```
+plt.imshow(images[i], cmap=&quot;gray&quot;)
+```
+
+```
+plt.title(titles[i])
+```
+
+```
+plt.axis(&quot;off&quot;)
+```
+
+```
+​
+```
+
+```
+plt.tight_layout()
+```
+
+```
+plt.show()
+```
+
+****Output:****
+
+![Screenshot\-](https://media.geeksforgeeks.org/wp-content/uploads/20260710120227586168/Screenshot-.png)
+
+&gt; You can download the code from here.
+</pre></article><article id="section-0022"><h3>Applications</h3><pre># Applications
+
+- ****Medical Image Analysis:**** Removes noise, enhances anatomical structures, and assists in segmenting organs or tumors from MRI, CT, and X-ray images.
+- ****Optical Character Recognition (OCR):**** Improves scanned documents by removing artifacts, filling gaps in characters, and enhancing text for accurate recognition.
+- ****Object Detection and Segmentation:**** Separates overlapping objects, refines object boundaries, and improves segmentation accuracy before feature extraction.
+- ****Industrial Quality Inspection:**** Detects surface defects such as cracks, scratches, holes, or missing components in manufactured products.
+- ****Fingerprint Recognition:**** Enhances fingerprint ridge patterns, removes noise, and improves minutiae extraction for biometric authentication.
+</pre></article><article id="section-0023"><h3>Advantages</h3><pre># Advantages
+
+- Uses straightforward mathematical operations, making it computationally efficient for image preprocessing.
+- Eliminates small unwanted objects and artifacts while preserving important image structures.
+- Produces cleaner object boundaries, leading to more accurate segmentation and object detection.
+- Highlights shapes, edges, and object boundaries for better feature extraction.
+- Supports various structuring element shapes and sizes to suit different applications.
+- Can be applied to both binary and grayscale images for a wide range of image processing tasks.
+</pre></article><article id="section-0024"><h3>Limitations</h3><pre># Limitations
+
+- The quality of the output depends heavily on the size and shape of the structuring element.
+- Large kernels or repeated operations can eliminate fine image features along with noise.
+- Primarily focuses on object shape and does not capture rich texture or color information.
+- Excessive erosion or dilation may alter the original geometry of objects.
+- Different images often require different kernel sizes and iteration counts for optimal results.
+Comment[I](https://www.geeksforgeeks.org/user/ishikasinznno/)[ishikasinznno](https://www.geeksforgeeks.org/user/ishikasinznno/)2
+</pre></article><article id="section-0025"><h3>Explore</h3><pre># Explore
+
+![]()
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

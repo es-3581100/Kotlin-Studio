@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Build Your Own AI Language Model with Python and NumPy - DEV Community — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Build Your Own AI Language Model with Python and NumPy - DEV Community</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T01:24:04.822Z</div><div class="stat"><b>Records</b><br>23</div><div class="stat"><b>Sections</b><br>17</div></div><p>Artificial Intelligence is everywhere these days, and language models are a big part of that. We all... Tagged with llm, tutorial, python, numpy.</p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 358 B · ~90 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 20176 B · ~5019 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 13347 B · ~3332 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 484 B · ~121 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-DEV Community.md</code></a> <small>markdown · 1629 B · ~408 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Build Your Own AI Language Model with Python and NumPy.md</code></a> <small>markdown · 592 B · ~146 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-[https---dev-.md</code></a> <small>markdown · 545 B · ~134 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-[https---dev-.md</code></a> <small>markdown · 496 B · ~123 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-[https---dev-.md</code></a> <small>markdown · 893 B · ~222 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-[https---dev-.md</code></a> <small>markdown · 921 B · ~230 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-[https---dev-.md</code></a> <small>markdown · 981 B · ~243 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-[https---dev-.md</code></a> <small>markdown · 1942 B · ~483 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-[https---dev-.md</code></a> <small>markdown · 1213 B · ~303 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-[https---dev-.md</code></a> <small>markdown · 1184 B · ~295 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-[https---dev-.md</code></a> <small>markdown · 4174 B · ~1043 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-[https---dev-.md</code></a> <small>markdown · 1402 B · ~344 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-[https---dev-.md</code></a> <small>markdown · 703 B · ~175 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Top comments (0).md</code></a> <small>markdown · 913 B · ~229 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-[https---dev-.md</code></a> <small>markdown · 1274 B · ~318 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-[https---dev-.md</code></a> <small>markdown · 767 B · ~192 tok</small></li><li><a href="#art-0021"><code>artifacts/provenance/source-record.json</code></a> <small>json · 708 B · ~177 tok</small></li><li><a href="#art-0022"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 319 B · ~80 tok</small></li><li><a href="#art-0023"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Build Your Own AI Language Model with Python and NumPy - DEV Community&quot;
+source: https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l
+captured_at: 2026-09-30T01:24:04.822Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 23
+artifact_count: 23
+content_sha256: 43cc99ffed96f9cf917cb1b30614819bf4e73d48c6f47c8f0fa9b6a9b33aef6e
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:358,&quot;sha256&quot;:&quot;163a0970653b0d8f45e16967ad9666c9fceb31e25a244a1f8aacfb51c65b4283&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;dev&quot;,&quot;2026-09-30t01&quot;,&quot;822z&quot;,&quot;agent&quot;,&quot;build&quot;,&quot;build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l&quot;,&quot;canonical&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:90,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:20176,&quot;sha256&quot;:&quot;43cc99ffed96f9cf917cb1b30614819bf4e73d48c6f47c8f0fa9b6a9b33aef6e&quot;,&quot;keywords&quot;:[&quot;05555556&quot;,&quot;https&quot;,&quot;dev&quot;,&quot;word&quot;,&quot;model&quot;,&quot;santhoshvijayabaskar&quot;,&quot;numpy&quot;,&quot;language&quot;],&quot;summary&quot;:&quot;Artificial Intelligence is everywhere these days, and language models are a big part of that. We all... Tagged with llm, tutorial, python, numpy.&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:5019,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:13347,&quot;sha256&quot;:&quot;cf1084101c163ad7fff9b5d150bd1cf1d9a3b163c0a9e8c5d5f7855a61bfb06f&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;rel&quot;,&quot;dev&quot;,&quot;santhoshvijayabaskar&quot;,&quot;level&quot;,&quot;noopener&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:3332,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:484,&quot;sha256&quot;:&quot;9a35557cd8ea23150ca91ff1f0f8cdeb159fd98c98876bb9e2fbaa1b1d668970&quot;,&quot;keywords&quot;:[&quot;dev&quot;,&quot;https&quot;,&quot;enter&quot;,&quot;introduction&quot;,&quot;signup_subforem&quot;,&quot;100&quot;,&quot;account&quot;,&quot;amazonaws&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:121,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-DEV Community.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1629,&quot;sha256&quot;:&quot;381d06b492e0cd26093c06aaffbcc7e65cd6fd420fa8a0bc3e19eecdb919da2f&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;dev&quot;,&quot;assets&quot;,&quot;auto&quot;,&quot;svg&quot;,&quot;cover&quot;,&quot;image&quot;,&quot;png&quot;],&quot;summary&quot;:&quot;DEV Community&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:408,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Build Your Own AI Language Model with Python and NumPy.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:592,&quot;sha256&quot;:&quot;f7132082b3fb96c5610ed3c3c01a9693c6bbc57ba8356ec0a8e68607ca796a09&quot;,&quot;keywords&quot;:[&quot;numpy&quot;,&quot;python&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;language&quot;,&quot;build&quot;,&quot;model&quot;,&quot;tutorial&quot;],&quot;summary&quot;:&quot;Build Your Own AI Language Model with Python and NumPy&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:146,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:545,&quot;sha256&quot;:&quot;41f7a0b98a8405bd2d35e34446d32e17452a62e8793b2491c7c0052183634c70&quot;,&quot;keywords&quot;:[&quot;building&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;santhoshvijayabaskar&quot;,&quot;what&quot;,&quot;model&quot;,&quot;1k3l&quot;,&quot;build&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#what\\-were\\-building](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-an&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:134,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:496,&quot;sha256&quot;:&quot;3dbc10aa661f80be553e5184e4d536acbf4bbf91a1c02c0031437eb93fea5ffa&quot;,&quot;keywords&quot;:[&quot;numpy&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;santhoshvijayabaskar&quot;,&quot;set&quot;,&quot;step&quot;,&quot;python&quot;,&quot;1k3l&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-1\\-set\\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-nu&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:123,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:893,&quot;sha256&quot;:&quot;fc6113f9d2a2983041e1664d105b8936500464053ad4ddb42c3a430aada54254&quot;,&quot;keywords&quot;:[&quot;model&quot;,&quot;basics&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;santhoshvijayabaskar&quot;,&quot;step&quot;,&quot;understanding&quot;,&quot;build&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-2\\-understanding\\-the\\-basics](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:222,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:921,&quot;sha256&quot;:&quot;93f573b85b632767259591ca128813179d30a160194451ef039412c69c784d30&quot;,&quot;keywords&quot;:[&quot;words&quot;,&quot;text&quot;,&quot;vocabulary&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;preparing&quot;,&quot;santhoshvijayabaskar&quot;,&quot;step&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-3\\-preparing\\-the\\-text](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:230,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:981,&quot;sha256&quot;:&quot;ee8c4600f9614e6003e4b42677211b5482c6c052065d4a4ad95ebbae5d677733&quot;,&quot;keywords&quot;:[&quot;words&quot;,&quot;word&quot;,&quot;numbers&quot;,&quot;map&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;idx&quot;,&quot;santhoshvijayabaskar&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-4\\-map\\-words\\-to\\-numbers](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-wi&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:243,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1942,&quot;sha256&quot;:&quot;85c67adfaf9c0e68c9e88443410406c72cbd58cc2ea2f4f07b0e4fb62da81f0d&quot;,&quot;keywords&quot;:[&quot;bigram&quot;,&quot;model&quot;,&quot;word&quot;,&quot;bigram_counts&quot;,&quot;building&quot;,&quot;probabilities&quot;,&quot;counts&quot;,&quot;dev&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-5\\-building\\-the\\-model](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:483,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1213,&quot;sha256&quot;:&quot;c4938778e7680318ef74be8fe8d1d755de5c30c2429c74495ab047bd678a5a8b&quot;,&quot;keywords&quot;:[&quot;word&quot;,&quot;next&quot;,&quot;model&quot;,&quot;current_word&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;predicting&quot;,&quot;santhoshvijayabaskar&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-6\\-predicting\\-the\\-next\\-word](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guid&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:303,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1184,&quot;sha256&quot;:&quot;eb8aa1ccb11b0700faeb226f85999028fed7de12cd82fd10a64ead723efc0d87&quot;,&quot;keywords&quot;:[&quot;sentence&quot;,&quot;generate&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;santhoshvijayabaskar&quot;,&quot;step&quot;,&quot;word&quot;,&quot;bigram_probabilities&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#step\\-7\\-generate\\-a\\-sentence](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:295,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4174,&quot;sha256&quot;:&quot;270e8823f887288eff68843fbd69e151a1b3434a10265834023efc39230a6c06&quot;,&quot;keywords&quot;:[&quot;05555556&quot;,&quot;05882353&quot;,&quot;11111111&quot;,&quot;output&quot;,&quot;https&quot;,&quot;santhoshvijayabaskar&quot;,&quot;artificial&quot;,&quot;dev&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#output](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#o&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1043,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1402,&quot;sha256&quot;:&quot;b9c3dea10087f9f500ce6056aaf368661e6b418572c282a026ad957c6e8b9adc&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;dev&quot;,&quot;santhoshvijayabaskar&quot;,&quot;wrapping&quot;,&quot;billboard&quot;,&quot;com&quot;,&quot;language&quot;,&quot;model&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#wrapping\\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:344,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:703,&quot;sha256&quot;:&quot;10f66e527f66de478583528cba35688a2e0ff7d3fb2f8d87d4cefd67d1d413a7&quot;,&quot;keywords&quot;:[&quot;build&quot;,&quot;dev&quot;,&quot;https&quot;,&quot;apps&quot;,&quot;build-apps-with-google-ai-studio&quot;,&quot;google&quot;,&quot;studio&quot;,&quot;santhoshvijayabaskar&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#build\\-apps\\-with\\-google\\-ai\\-studio](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-gui&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:175,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Top comments (0).md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:913,&quot;sha256&quot;:&quot;866f29e8e5d3220dca0994f4e46c2cea584eee33a9b9feff6dd32fda5ee9b2e5&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;dev&quot;,&quot;auto&quot;,&quot;billboard&quot;,&quot;image&quot;,&quot;264489&quot;,&quot;bot&quot;,&quot;com&quot;],&quot;summary&quot;:&quot;Top comments (0)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:229,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1274,&quot;sha256&quot;:&quot;cd9cccccff345bf04f19a20da55e9aa666302d34dbea480e9f2e2a7a53c1daf8&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;dev&quot;,&quot;overnight&quot;,&quot;santhoshvijayabaskar&quot;,&quot;works&quot;,&quot;264489&quot;,&quot;billboard&quot;,&quot;bot&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#it\\-works\\-overnight\\-for\\-you](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:318,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-[https---dev-.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:767,&quot;sha256&quot;:&quot;aab69c2198381ea50bf2c98ad842e02728fcf7a4615005b3dcab0e60a5752125&quot;,&quot;keywords&quot;:[&quot;dev&quot;,&quot;https&quot;,&quot;enter&quot;,&quot;santhoshvijayabaskar&quot;,&quot;new-user&quot;,&quot;state&quot;,&quot;1k3l&quot;,&quot;236879&quot;],&quot;summary&quot;:&quot;[https://dev\\.to/santhoshvijayabaskar/build\\-your\\-own\\-language\\-model\\-a\\-simple\\-guide\\-with\\-python\\-and\\-numpy\\-1k3l\\#\\-cta\\-httpsdevtoenterstatenewuser\\-](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guid&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:192,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0021&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:708,&quot;sha256&quot;:&quot;248b77aa667886312e9b9fe9fb030ca93002d2c598f13942ce26cac51498dbbe&quot;,&quot;keywords&quot;:[&quot;dev&quot;,&quot;build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l&quot;,&quot;community&quot;,&quot;https&quot;,&quot;language&quot;,&quot;numpy&quot;,&quot;python&quot;,&quot;santhoshvijayabaskar&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:177,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0022&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:319,&quot;sha256&quot;:&quot;42949dd84b240e1a2722247e2e66f7955c0fc0baee70b078823aeab094fb7363&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;agent&quot;,&quot;authority&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0023&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T01:24:04.822Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	90	358	163a0970653b0d8f45e16967ad9666c9fceb31e25a244a1f8aacfb51c65b4283	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	5019	20176	43cc99ffed96f9cf917cb1b30614819bf4e73d48c6f47c8f0fa9b6a9b33aef6e	Artificial Intelligence is everywhere these days, and language models are a big part of that. We all... Tagged with llm, tutorial, python, numpy.	
+art:0003	index	artifacts/index/page-index.json	supporting	3332	13347	cf1084101c163ad7fff9b5d150bd1cf1d9a3b163c0a9e8c5d5f7855a61bfb06f	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	121	484	9a35557cd8ea23150ca91ff1f0f8cdeb159fd98c98876bb9e2fbaa1b1d668970	Introduction	
+sec:0005	section	artifacts/sections/0002-DEV Community.md	primary	408	1629	381d06b492e0cd26093c06aaffbcc7e65cd6fd420fa8a0bc3e19eecdb919da2f	DEV Community	
+sec:0006	section	artifacts/sections/0003-Build Your Own AI Language Model with Python and NumPy.md	primary	146	592	f7132082b3fb96c5610ed3c3c01a9693c6bbc57ba8356ec0a8e68607ca796a09	Build Your Own AI Language Model with Python and NumPy	
+sec:0007	section	artifacts/sections/0004-[https---dev-.md	primary	134	545	41f7a0b98a8405bd2d35e34446d32e17452a62e8793b2491c7c0052183634c70	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#what\-were\-building](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-an	
+sec:0008	section	artifacts/sections/0005-[https---dev-.md	primary	123	496	3dbc10aa661f80be553e5184e4d536acbf4bbf91a1c02c0031437eb93fea5ffa	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-1\-set\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-nu	
+sec:0009	section	artifacts/sections/0006-[https---dev-.md	primary	222	893	fc6113f9d2a2983041e1664d105b8936500464053ad4ddb42c3a430aada54254	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-2\-understanding\-the\-basics](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide	
+sec:0010	section	artifacts/sections/0007-[https---dev-.md	primary	230	921	93f573b85b632767259591ca128813179d30a160194451ef039412c69c784d30	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-3\-preparing\-the\-text](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-	
+sec:0011	section	artifacts/sections/0008-[https---dev-.md	primary	243	981	ee8c4600f9614e6003e4b42677211b5482c6c052065d4a4ad95ebbae5d677733	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-4\-map\-words\-to\-numbers](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-wi	
+sec:0012	section	artifacts/sections/0009-[https---dev-.md	supporting	483	1942	85c67adfaf9c0e68c9e88443410406c72cbd58cc2ea2f4f07b0e4fb62da81f0d	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-5\-building\-the\-model](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-	
+sec:0013	section	artifacts/sections/0010-[https---dev-.md	supporting	303	1213	c4938778e7680318ef74be8fe8d1d755de5c30c2429c74495ab047bd678a5a8b	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-6\-predicting\-the\-next\-word](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guid	
+sec:0014	section	artifacts/sections/0011-[https---dev-.md	supporting	295	1184	eb8aa1ccb11b0700faeb226f85999028fed7de12cd82fd10a64ead723efc0d87	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-7\-generate\-a\-sentence](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with	
+sec:0015	section	artifacts/sections/0012-[https---dev-.md	supporting	1043	4174	270e8823f887288eff68843fbd69e151a1b3434a10265834023efc39230a6c06	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#output](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#o	
+sec:0016	section	artifacts/sections/0013-[https---dev-.md	supporting	344	1402	b9c3dea10087f9f500ce6056aaf368661e6b418572c282a026ad957c6e8b9adc	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#wrapping\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-	
+sec:0017	section	artifacts/sections/0014-[https---dev-.md	supporting	175	703	10f66e527f66de478583528cba35688a2e0ff7d3fb2f8d87d4cefd67d1d413a7	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#build\-apps\-with\-google\-ai\-studio](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-gui	
+sec:0018	section	artifacts/sections/0015-Top comments (0).md	supporting	229	913	866f29e8e5d3220dca0994f4e46c2cea584eee33a9b9feff6dd32fda5ee9b2e5	Top comments (0)	
+sec:0019	section	artifacts/sections/0016-[https---dev-.md	supporting	318	1274	cd9cccccff345bf04f19a20da55e9aa666302d34dbea480e9f2e2a7a53c1daf8	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#it\-works\-overnight\-for\-you](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with	
+sec:0020	section	artifacts/sections/0017-[https---dev-.md	supporting	192	767	aab69c2198381ea50bf2c98ad842e02728fcf7a4615005b3dcab0e60a5752125	[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#\-cta\-httpsdevtoenterstatenewuser\-](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guid	
+art:0021	provenance	artifacts/provenance/source-record.json	supporting	177	708	248b77aa667886312e9b9fe9fb030ca93002d2c598f13942ce26cac51498dbbe	Capture source identity and metadata	
+art:0022	provenance	artifacts/provenance/extraction-record.json	supporting	80	319	42949dd84b240e1a2722247e2e66f7955c0fc0baee70b078823aeab094fb7363	Extraction engine and counts	
+art:0023	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Skip to content](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#main-content)    Navigation menu     [![DEV Community](https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png)](https://dev.to/)       [Log in](https://dev.to/enter?signup_subforem=1)  [Create account](https://dev.to/enter?signup_subforem=1&amp;state=new-user)
+
+## DEV Community
+
+                           [![Cover image for Build Your Own AI Language Model with Python and NumPy](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ucek5bpa7t5ri17bhs4.png)](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ucek5bpa7t5ri17bhs4.png)      [![Santhosh Vijayabaskar](https://media2.dev.to/dynamic/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2164609%2Fa10c1563-b355-49b1-9246-fa533982239d.png)](https://dev.to/santhoshvijayabaskar)   [Santhosh Vijayabaskar](https://dev.to/santhoshvijayabaskar) [![Subscriber](https://assets.dev.to/assets/subscription-icon-805dfa7ac7dd660f07ed8d654877270825b07a92a03841aa99a1093bd00431b2.png)](https://dev.to/++)
+
+Posted on Oct 18, 2024  Edited on Oct 24, 2024
+
+     ![](https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg) 15  ![](https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg) 1  ![](https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg) 1  ![](https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg) 1  ![](https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg)
+
+# Build Your Own AI Language Model with Python and NumPy
+
+  [#llm](https://dev.to/t/llm) [#tutorial](https://dev.to/t/tutorial) [#python](https://dev.to/t/python) [#numpy](https://dev.to/t/numpy)
+
+Artificial Intelligence is everywhere these days, and language models are a big part of that. We all have always wondered how AI can predict the next word in a sentence or even write entire paragraphs. In this tutorial, we’ll build a super simple language model without relying on fancy frameworks like TensorFlow or PyTorch—just plain Python and NumPy.
+
+Sounds cool? Let’s get started!🚀
+
+### [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#what\-were\-building](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#what-were-building) What We’re Building:
+
+We&#39;ll be creating a **bigram model**. It predicts the next word in a sentence based on the current word. We’ll keep it straightforward and easy to follow so you’ll learn how things work without getting buried in too much detail.🧠💡
+
+---
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-1\-set\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-1-set-up) Step 1: Set Up
+
+Before we begin, let&#39;s make sure you’ve got Python and NumPy ready to go. If you don’t have NumPy installed, quickly install it with:
+
+```
+pip install numpy
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-2\-understanding\-the\-basics](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-2-understanding-the-basics) Step 2: Understanding the Basics
+
+A language model predicts the next word in a sentence. We’ll keep things simple and build a bigram model. This just means that our model will predict the next word using only the current word.
+
+We’ll start with a short text to train the model. Here’s a small sample we’ll use:
+
+```
+import numpy as np
+
+# Sample dataset: A small text corpus
+corpus = &quot;&quot;&quot;Artificial Intelligence is the new electricity.
+Machine learning is the future of AI.
+AI is transforming industries and shaping the future.&quot;&quot;&quot;
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-3\-preparing\-the\-text](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-3-preparing-the-text) Step 3: Preparing the Text
+
+First things first, we need to break this text into individual words and create a vocabulary (basically a list of all unique words). This gives us something to work with.
+
+```
+# Tokenize the corpus into words
+words = corpus.lower().split()
+
+# Create a vocabulary of unique words
+vocab = list(set(words))
+vocab_size = len(vocab)
+
+print(f&quot;Vocabulary: {vocab}&quot;)
+print(f&quot;Vocabulary size: {vocab_size}&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Here, we’re converting the text to lowercase and splitting it into words. After that, we create a list of unique words to serve as our vocabulary.
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-4\-map\-words\-to\-numbers](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-4-map-words-to-numbers) Step 4: Map Words to Numbers
+
+Computers work with numbers, not words. So, we’ll map each word to an index and create a reverse mapping too (this will help when we convert them back to words later).
+
+```
+word_to_idx = {word: idx for idx, word in enumerate(vocab)}
+idx_to_word = {idx: word for word, idx in word_to_idx.items()}
+
+# Convert the words in the corpus to indices
+corpus_indices = [word_to_idx[word] for word in words]
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Basically, we’re just turning words into numbers that our model can understand. Each word gets its own number, like “AI” might become 0, and “learning” might become 1, depending on the order.
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-5\-building\-the\-model](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-5-building-the-model) Step 5: Building the Model
+
+Now, let’s get to the heart of it: building the bigram model. We want to figure out the probability of one word following another. To do that, we’ll count how often each word pair (bigram) shows up in our dataset.
+
+```
+# Initialize bigram counts matrix
+bigram_counts = np.zeros((vocab_size, vocab_size))
+
+# Count occurrences of each bigram in the corpus
+for i in range(len(corpus_indices) - 1):
+    current_word = corpus_indices[i]
+    next_word = corpus_indices[i + 1]
+    bigram_counts[current_word, next_word] += 1
+
+# Apply Laplace smoothing by adding 1 to all bigram counts
+bigram_counts += 0.01
+
+# Normalize the counts to get probabilities
+bigram_probabilities = bigram_counts / bigram_counts.sum(axis=1, keepdims=True)
+
+print(&quot;Bigram probabilities matrix: &quot;, bigram_probabilities)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Here’s what’s happening:
+
+We’re counting how often each word follows another (that&#39;s the bigram).
+ Then, we turn those counts into probabilities by normalizing them.
+ In simple terms, this means that if &quot;AI&quot; is often followed by &quot;is,&quot; the probability for that pair will be higher.
+
+Note: When we use bigram_count += 0.01, we&#39;re applying Laplace smoothing with a small adjustment to avoid zero probabilities when certain word pairs don&#39;t appear in the corpus. This ensures that every word pair has a slightly positive probability, even if it’s rare, and helps prevent issues like division errors during the normalization process. By using a smaller value like 0.01, we strike a balance between avoiding zeros and not overly inflating probabilities for unseen word pairs.
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-6\-predicting\-the\-next\-word](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-6-predicting-the-next-word) Step 6: Predicting the Next Word
+
+Let’s now test our model by making it predict the next word based on any given word. We do this by sampling from the probability distribution of the next word.
+
+```
+def predict_next_word(current_word, bigram_probabilities):
+    word_idx = word_to_idx[current_word]
+    next_word_probs = bigram_probabilities[word_idx]
+    next_word_idx = np.random.choice(range(vocab_size), p=next_word_probs)
+    return idx_to_word[next_word_idx]
+
+# Test the model with a word
+current_word = &quot;ai&quot;
+next_word = predict_next_word(current_word, bigram_probabilities)
+print(f&quot;Given &#39;{current_word}&#39;, the model predicts &#39;{next_word}&#39;.&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+This function takes a word, looks up its probabilities, and randomly selects the next word based on those probabilities. If you pass in &quot;AI,&quot; the model might predict something like &quot;is&quot; as the next word.
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-7\-generate\-a\-sentence](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-7-generate-a-sentence) Step 7: Generate a Sentence
+
+Finally, let&#39;s generate a whole sentence! We’ll start with a word and keep predicting the next word a few times.
+
+```
+def generate_sentence(start_word, bigram_probabilities, length=5):
+    sentence = [start_word]
+    current_word = start_word
+
+    for _ in range(length):
+        next_word = predict_next_word(current_word, bigram_probabilities)
+        sentence.append(next_word)
+        current_word = next_word
+
+    return &#39; &#39;.join(sentence)
+
+# Generate a sentence starting with &quot;artificial&quot;
+generated_sentence = generate_sentence(&quot;artificial&quot;, bigram_probabilities, length=10)
+print(f&quot;Generated sentence: {generated_sentence}&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+This function takes an initial word and predicts the next one, then uses that word to predict the following one, and so on. Before you know it, you’ve got a full sentence!
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#output](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#output) Output
+
+```
+santhoshs-mbp:bigram-language-model santhosh1$ python3 main.py
+Vocabulary: [&#39;electricity.&#39;, &#39;artificial&#39;, &#39;future&#39;, &#39;industries&#39;, &#39;intelligence&#39;, &#39;ai.&#39;, &#39;future.&#39;, &#39;new&#39;, &#39;the&#39;, &#39;machine&#39;, &#39;is&#39;, &#39;learning&#39;, &#39;of&#39;, &#39;transforming&#39;, &#39;ai&#39;, &#39;shaping&#39;, &#39;and&#39;]
+Vocabulary size: 17
+Bigram probabilities matrix:  [[0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.11111111 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.11111111 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.11111111 0.05555556 0.05555556]
+ [0.05882353 0.05882353 0.05882353 0.05882353 0.05882353 0.05882353
+  0.05882353 0.05882353 0.05882353 0.05882353 0.05882353 0.05882353
+  0.05882353 0.05882353 0.05882353 0.05882353 0.05882353]
+ [0.11111111 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05       0.05       0.1        0.05       0.05       0.05
+  0.1        0.1        0.05       0.05       0.05       0.05
+  0.05       0.05       0.05       0.05       0.05      ]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.11111111
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05       0.05       0.05       0.05       0.05       0.05
+  0.05       0.05       0.15       0.05       0.05       0.05
+  0.05       0.1        0.05       0.05       0.05      ]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.11111111
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.11111111 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.11111111 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.11111111 0.05555556]]
+Given &#39;ai&#39;, the model predicts &#39;ai.&#39;.
+Generated sentence: artificial ai. of electricity. ai. artificial future learning artificial of ai.
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+🚀📂 Check out the complete code for the Bigram Language Model on [GitHub](https://github.com/SanthoshVijayabaskar/bigram-language-model).
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#wrapping\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#wrapping-up) Wrapping Up
+
+There you have it—a simple bigram language model built from scratch using just Python and NumPy! 🧑‍💻✨ No fancy libraries needed, and now you’ve got a basic idea of how AI can predict text. Feel free to experiment, tweak the code, or even extend it with more advanced models! 🚀
+
+Give it a go, and let me know how it turns out. Happy coding! 😄💻
+
+PS: Got questions or thoughts? 💡 Drop them in the comments! Let’s keep the conversation going! 🔄
+
+🌐 You can also learn more about my work and projects at [https://santhoshvijayabaskar.com](https://santhoshvijayabaskar.com/)
+
+        DEV Community  Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=238781)
+
+[![Google AI Education track image](https://media2.dev.to/dynamic/image/width=775%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu09y9fffqrb2one15j3g.png)](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#build\-apps\-with\-google\-ai\-studio](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#build-apps-with-google-ai-studio) [Build Apps with Google AI Studio 🧱](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+
+This track will guide you through Google AI Studio&#39;s new &quot;Build apps with Gemini&quot; feature, where you can turn a simple text prompt into a fully functional, deployed web application in minutes.
+
+[Read more →](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+
+     Read More
+
+## Top comments (0)
+
+    Subscribe
+
+For further actions, you may consider blocking this person and/or [reporting abuse](https://dev.to/report-abuse)
+
+         [![profile](https://media2.dev.to/dynamic/image/width=64,height=64,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F14918%2F14c853e8-af5a-4f41-88c2-a93f1678871c.jpg) SpaceXAI](https://dev.to/spacexai) Promoted   Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=264489)
+
+[![Grok Bot image](https://media2.dev.to/dynamic/image/width=775%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fi.imgur.com%2FnOFan8f.jpeg)](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+
+## [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#it\-works\-overnight\-for\-you](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#it-works-overnight-for-you) [It Works Overnight for You](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+
+Grok Bots work inside your apps on their own computer, and come back with finished work.
+
+[Sign Up](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+
+                       👋 Kindness is contagious  Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=236879)
+    x
+
+Dive into this thoughtful piece, beloved in the supportive DEV Community. **Coders of every background** are invited to share and elevate our collective know-how.
+
+A sincere &quot;thank you&quot; can brighten someone&#39;s day—leave your appreciation below!
+
+On DEV, **sharing knowledge smooths our journey** and tightens our community bonds. Enjoyed this? A quick thank you to the author is hugely appreciated.
+
+### [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#\-cta\-httpsdevtoenterstatenewuser\-](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#-cta-httpsdevtoenterstatenewuser-) [Okay](https://dev.to/enter?state=new-user&amp;bb=236879)
+
+             ![DEV Community](https://media2.dev.to/dynamic/image/width=190,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png)
+
+We&#39;re a place where coders share, stay up-to-date and grow their careers.
+
+   [Log in](https://dev.to/enter?signup_subforem=1) [Create account](https://dev.to/enter?signup_subforem=1&amp;state=new-user)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Skip to content](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#main-content)    Navigation menu     [![DEV Community](https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png)](https://dev.to/)       [Log in](https://dev.to/enter?signup_subforem=1)  [Create account](https://dev.to/enter?signup_subforem=1&amp;state=new-user)
+</pre></article><article id="section-0002"><h3>DEV Community</h3><pre># DEV Community
+
+[![Cover image for Build Your Own AI Language Model with Python and NumPy](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ucek5bpa7t5ri17bhs4.png)](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ucek5bpa7t5ri17bhs4.png)      [![Santhosh Vijayabaskar](https://media2.dev.to/dynamic/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2164609%2Fa10c1563-b355-49b1-9246-fa533982239d.png)](https://dev.to/santhoshvijayabaskar)   [Santhosh Vijayabaskar](https://dev.to/santhoshvijayabaskar) [![Subscriber](https://assets.dev.to/assets/subscription-icon-805dfa7ac7dd660f07ed8d654877270825b07a92a03841aa99a1093bd00431b2.png)](https://dev.to/++)
+
+Posted on Oct 18, 2024  Edited on Oct 24, 2024
+
+     ![](https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg) 15  ![](https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg) 1  ![](https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg) 1  ![](https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg) 1  ![](https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg)
+</pre></article><article id="section-0003"><h3>Build Your Own AI Language Model with Python and NumPy</h3><pre># Build Your Own AI Language Model with Python and NumPy
+
+[#llm](https://dev.to/t/llm) [#tutorial](https://dev.to/t/tutorial) [#python](https://dev.to/t/python) [#numpy](https://dev.to/t/numpy)
+
+Artificial Intelligence is everywhere these days, and language models are a big part of that. We all have always wondered how AI can predict the next word in a sentence or even write entire paragraphs. In this tutorial, we’ll build a super simple language model without relying on fancy frameworks like TensorFlow or PyTorch—just plain Python and NumPy.
+
+Sounds cool? Let’s get started!🚀
+</pre></article><article id="section-0004"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#what\-were\-building](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#what-were-building) What We’re Building:</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#what\-were\-building](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#what-were-building) What We’re Building:
+
+We&#39;ll be creating a **bigram model**. It predicts the next word in a sentence based on the current word. We’ll keep it straightforward and easy to follow so you’ll learn how things work without getting buried in too much detail.🧠💡
+
+---
+</pre></article><article id="section-0005"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-1\-set\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-1-set-up) Step 1: Set Up</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-1\-set\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-1-set-up) Step 1: Set Up
+
+Before we begin, let&#39;s make sure you’ve got Python and NumPy ready to go. If you don’t have NumPy installed, quickly install it with:
+
+```
+pip install numpy
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+</pre></article><article id="section-0006"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-2\-understanding\-the\-basics](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-2-understanding-the-basics) Step 2: Understanding the Basics</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-2\-understanding\-the\-basics](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-2-understanding-the-basics) Step 2: Understanding the Basics
+
+A language model predicts the next word in a sentence. We’ll keep things simple and build a bigram model. This just means that our model will predict the next word using only the current word.
+
+We’ll start with a short text to train the model. Here’s a small sample we’ll use:
+
+```
+import numpy as np
+
+# Sample dataset: A small text corpus
+corpus = &quot;&quot;&quot;Artificial Intelligence is the new electricity.
+Machine learning is the future of AI.
+AI is transforming industries and shaping the future.&quot;&quot;&quot;
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+</pre></article><article id="section-0007"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-3\-preparing\-the\-text](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-3-preparing-the-text) Step 3: Preparing the Text</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-3\-preparing\-the\-text](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-3-preparing-the-text) Step 3: Preparing the Text
+
+First things first, we need to break this text into individual words and create a vocabulary (basically a list of all unique words). This gives us something to work with.
+
+```
+# Tokenize the corpus into words
+words = corpus.lower().split()
+
+# Create a vocabulary of unique words
+vocab = list(set(words))
+vocab_size = len(vocab)
+
+print(f&quot;Vocabulary: {vocab}&quot;)
+print(f&quot;Vocabulary size: {vocab_size}&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Here, we’re converting the text to lowercase and splitting it into words. After that, we create a list of unique words to serve as our vocabulary.
+</pre></article><article id="section-0008"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-4\-map\-words\-to\-numbers](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-4-map-words-to-numbers) Step 4: Map Words to Numbers</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-4\-map\-words\-to\-numbers](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-4-map-words-to-numbers) Step 4: Map Words to Numbers
+
+Computers work with numbers, not words. So, we’ll map each word to an index and create a reverse mapping too (this will help when we convert them back to words later).
+
+```
+word_to_idx = {word: idx for idx, word in enumerate(vocab)}
+idx_to_word = {idx: word for word, idx in word_to_idx.items()}
+
+# Convert the words in the corpus to indices
+corpus_indices = [word_to_idx[word] for word in words]
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Basically, we’re just turning words into numbers that our model can understand. Each word gets its own number, like “AI” might become 0, and “learning” might become 1, depending on the order.
+</pre></article><article id="section-0009"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-5\-building\-the\-model](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-5-building-the-model) Step 5: Building the Model</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-5\-building\-the\-model](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-5-building-the-model) Step 5: Building the Model
+
+Now, let’s get to the heart of it: building the bigram model. We want to figure out the probability of one word following another. To do that, we’ll count how often each word pair (bigram) shows up in our dataset.
+
+```
+# Initialize bigram counts matrix
+bigram_counts = np.zeros((vocab_size, vocab_size))
+
+# Count occurrences of each bigram in the corpus
+for i in range(len(corpus_indices) - 1):
+    current_word = corpus_indices[i]
+    next_word = corpus_indices[i + 1]
+    bigram_counts[current_word, next_word] += 1
+
+# Apply Laplace smoothing by adding 1 to all bigram counts
+bigram_counts += 0.01
+
+# Normalize the counts to get probabilities
+bigram_probabilities = bigram_counts / bigram_counts.sum(axis=1, keepdims=True)
+
+print(&quot;Bigram probabilities matrix: &quot;, bigram_probabilities)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+Here’s what’s happening:
+
+We’re counting how often each word follows another (that&#39;s the bigram).
+ Then, we turn those counts into probabilities by normalizing them.
+ In simple terms, this means that if &quot;AI&quot; is often followed by &quot;is,&quot; the probability for that pair will be higher.
+
+Note: When we use bigram_count += 0.01, we&#39;re applying Laplace smoothing with a small adjustment to avoid zero probabilities when certain word pairs don&#39;t appear in the corpus. This ensures that every word pair has a slightly positive probability, even if it’s rare, and helps prevent issues like division errors during the normalization process. By using a smaller value like 0.01, we strike a balance between avoiding zeros and not overly inflating probabilities for unseen word pairs.
+</pre></article><article id="section-0010"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-6\-predicting\-the\-next\-word](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-6-predicting-the-next-word) Step 6: Predicting the Next Word</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-6\-predicting\-the\-next\-word](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-6-predicting-the-next-word) Step 6: Predicting the Next Word
+
+Let’s now test our model by making it predict the next word based on any given word. We do this by sampling from the probability distribution of the next word.
+
+```
+def predict_next_word(current_word, bigram_probabilities):
+    word_idx = word_to_idx[current_word]
+    next_word_probs = bigram_probabilities[word_idx]
+    next_word_idx = np.random.choice(range(vocab_size), p=next_word_probs)
+    return idx_to_word[next_word_idx]
+
+# Test the model with a word
+current_word = &quot;ai&quot;
+next_word = predict_next_word(current_word, bigram_probabilities)
+print(f&quot;Given &#39;{current_word}&#39;, the model predicts &#39;{next_word}&#39;.&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+This function takes a word, looks up its probabilities, and randomly selects the next word based on those probabilities. If you pass in &quot;AI,&quot; the model might predict something like &quot;is&quot; as the next word.
+</pre></article><article id="section-0011"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-7\-generate\-a\-sentence](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-7-generate-a-sentence) Step 7: Generate a Sentence</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#step\-7\-generate\-a\-sentence](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#step-7-generate-a-sentence) Step 7: Generate a Sentence
+
+Finally, let&#39;s generate a whole sentence! We’ll start with a word and keep predicting the next word a few times.
+
+```
+def generate_sentence(start_word, bigram_probabilities, length=5):
+    sentence = [start_word]
+    current_word = start_word
+
+    for _ in range(length):
+        next_word = predict_next_word(current_word, bigram_probabilities)
+        sentence.append(next_word)
+        current_word = next_word
+
+    return &#39; &#39;.join(sentence)
+
+# Generate a sentence starting with &quot;artificial&quot;
+generated_sentence = generate_sentence(&quot;artificial&quot;, bigram_probabilities, length=10)
+print(f&quot;Generated sentence: {generated_sentence}&quot;)
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+This function takes an initial word and predicts the next one, then uses that word to predict the following one, and so on. Before you know it, you’ve got a full sentence!
+</pre></article><article id="section-0012"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#output](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#output) Output</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#output](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#output) Output
+
+```
+santhoshs-mbp:bigram-language-model santhosh1$ python3 main.py
+Vocabulary: [&#39;electricity.&#39;, &#39;artificial&#39;, &#39;future&#39;, &#39;industries&#39;, &#39;intelligence&#39;, &#39;ai.&#39;, &#39;future.&#39;, &#39;new&#39;, &#39;the&#39;, &#39;machine&#39;, &#39;is&#39;, &#39;learning&#39;, &#39;of&#39;, &#39;transforming&#39;, &#39;ai&#39;, &#39;shaping&#39;, &#39;and&#39;]
+Vocabulary size: 17
+Bigram probabilities matrix:  [[0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.11111111 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.11111111 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.11111111 0.05555556 0.05555556]
+ [0.05882353 0.05882353 0.05882353 0.05882353 0.05882353 0.05882353
+  0.05882353 0.05882353 0.05882353 0.05882353 0.05882353 0.05882353
+  0.05882353 0.05882353 0.05882353 0.05882353 0.05882353]
+ [0.11111111 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05       0.05       0.1        0.05       0.05       0.05
+  0.1        0.1        0.05       0.05       0.05       0.05
+  0.05       0.05       0.05       0.05       0.05      ]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.11111111
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05       0.05       0.05       0.05       0.05       0.05
+  0.05       0.05       0.15       0.05       0.05       0.05
+  0.05       0.1        0.05       0.05       0.05      ]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.11111111
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.11111111 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.11111111 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.11111111 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556]
+ [0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.05555556 0.05555556 0.05555556
+  0.05555556 0.05555556 0.05555556 0.11111111 0.05555556]]
+Given &#39;ai&#39;, the model predicts &#39;ai.&#39;.
+Generated sentence: artificial ai. of electricity. ai. artificial future learning artificial of ai.
+```
+
+   Enter fullscreen mode   Exit fullscreen mode
+
+🚀📂 Check out the complete code for the Bigram Language Model on [GitHub](https://github.com/SanthoshVijayabaskar/bigram-language-model).
+</pre></article><article id="section-0013"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#wrapping\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#wrapping-up) Wrapping Up</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#wrapping\-up](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#wrapping-up) Wrapping Up
+
+There you have it—a simple bigram language model built from scratch using just Python and NumPy! 🧑‍💻✨ No fancy libraries needed, and now you’ve got a basic idea of how AI can predict text. Feel free to experiment, tweak the code, or even extend it with more advanced models! 🚀
+
+Give it a go, and let me know how it turns out. Happy coding! 😄💻
+
+PS: Got questions or thoughts? 💡 Drop them in the comments! Let’s keep the conversation going! 🔄
+
+🌐 You can also learn more about my work and projects at [https://santhoshvijayabaskar.com](https://santhoshvijayabaskar.com/)
+
+        DEV Community  Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=238781)
+
+[![Google AI Education track image](https://media2.dev.to/dynamic/image/width=775%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu09y9fffqrb2one15j3g.png)](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+</pre></article><article id="section-0014"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#build\-apps\-with\-google\-ai\-studio](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#build-apps-with-google-ai-studio) [Build Apps with Google AI Studio 🧱](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#build\-apps\-with\-google\-ai\-studio](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#build-apps-with-google-ai-studio) [Build Apps with Google AI Studio 🧱](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+
+This track will guide you through Google AI Studio&#39;s new &quot;Build apps with Gemini&quot; feature, where you can turn a simple text prompt into a fully functional, deployed web application in minutes.
+
+[Read more →](https://dev.to/deved/build-apps-with-google-ai-studio?bb=238781)
+
+     Read More
+</pre></article><article id="section-0015"><h3>Top comments (0)</h3><pre># Top comments (0)
+
+Subscribe
+
+For further actions, you may consider blocking this person and/or [reporting abuse](https://dev.to/report-abuse)
+
+         [![profile](https://media2.dev.to/dynamic/image/width=64,height=64,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F14918%2F14c853e8-af5a-4f41-88c2-a93f1678871c.jpg) SpaceXAI](https://dev.to/spacexai) Promoted   Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=264489)
+
+[![Grok Bot image](https://media2.dev.to/dynamic/image/width=775%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fi.imgur.com%2FnOFan8f.jpeg)](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+</pre></article><article id="section-0016"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#it\-works\-overnight\-for\-you](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#it-works-overnight-for-you) [It Works Overnight for You](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#it\-works\-overnight\-for\-you](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#it-works-overnight-for-you) [It Works Overnight for You](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+
+Grok Bots work inside your apps on their own computer, and come back with finished work.
+
+[Sign Up](https://x.ai/bot?utm_source=devto&amp;utm_medium=partner&amp;utm_campaign=mlh_devto_202609&amp;bb=264489)
+
+                       👋 Kindness is contagious  Dropdown menu
+- [What&#39;s a billboard?](https://dev.to/billboards)
+- [Manage preferences](https://dev.to/settings/customization#sponsors)
+- [Report billboard](https://dev.to/report-abuse?billboard=236879)
+    x
+
+Dive into this thoughtful piece, beloved in the supportive DEV Community. **Coders of every background** are invited to share and elevate our collective know-how.
+
+A sincere &quot;thank you&quot; can brighten someone&#39;s day—leave your appreciation below!
+
+On DEV, **sharing knowledge smooths our journey** and tightens our community bonds. Enjoyed this? A quick thank you to the author is hugely appreciated.
+</pre></article><article id="section-0017"><h3>[https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#\-cta\-httpsdevtoenterstatenewuser\-](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#-cta-httpsdevtoenterstatenewuser-) [Okay](https://dev.to/enter?state=new-user&amp;bb=236879)</h3><pre># [https://dev\.to/santhoshvijayabaskar/build\-your\-own\-language\-model\-a\-simple\-guide\-with\-python\-and\-numpy\-1k3l\#\-cta\-httpsdevtoenterstatenewuser\-](https://dev.to/santhoshvijayabaskar/build-your-own-language-model-a-simple-guide-with-python-and-numpy-1k3l#-cta-httpsdevtoenterstatenewuser-) [Okay](https://dev.to/enter?state=new-user&amp;bb=236879)
+
+![DEV Community](https://media2.dev.to/dynamic/image/width=190,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png)
+
+We&#39;re a place where coders share, stay up-to-date and grow their careers.
+
+   [Log in](https://dev.to/enter?signup_subforem=1) [Create account](https://dev.to/enter?signup_subforem=1&amp;state=new-user)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lucas pseudoprime - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Lucas pseudoprime - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Lucas_pseudoprime</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T02:32:21.246Z</div><div class="stat"><b>Records</b><br>18</div><div class="stat"><b>Sections</b><br>12</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 257 B · ~65 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 40587 B · ~10084 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 67316 B · ~16821 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 409 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Lucas pseudoprime.md</code></a> <small>markdown · 948 B · ~234 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Baillie-Wagstaff-Lucas pseudoprimes.md</code></a> <small>markdown · 2145 B · ~534 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Lucas probable primes and pseudoprimes.md</code></a> <small>markdown · 4378 B · ~1088 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Strong Lucas pseudoprimes.md</code></a> <small>markdown · 3016 B · ~745 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Implementing a Lucas probable prime test.md</code></a> <small>markdown · 5650 B · ~1404 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Checking additional congruence conditions.md</code></a> <small>markdown · 3745 B · ~928 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Comparison with the Miller–Rabin primality test.md</code></a> <small>markdown · 1502 B · ~374 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Fibonacci pseudoprimes.md</code></a> <small>markdown · 4261 B · ~1060 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Pell pseudoprimes.md</code></a> <small>markdown · 1179 B · ~293 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-References.md</code></a> <small>markdown · 10674 B · ~2655 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-External links.md</code></a> <small>markdown · 2674 B · ~669 tok</small></li><li><a href="#art-0016"><code>artifacts/provenance/source-record.json</code></a> <small>json · 389 B · ~98 tok</small></li><li><a href="#art-0017"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0018"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Lucas pseudoprime - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Lucas_pseudoprime
+captured_at: 2026-09-30T02:32:21.246Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 18
+artifact_count: 18
+content_sha256: 094ed64d5d3b22e976339b5f74d00e95bb6b80a9890bc855673576a387f0ddf2
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:257,&quot;sha256&quot;:&quot;1c1c15066fb1a8c72a810a088d3fbec54ba756fbd759fbe4690fadaf1737ee33&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t02&quot;,&quot;246z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;entry&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:65,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:40587,&quot;sha256&quot;:&quot;094ed64d5d3b22e976339b5f74d00e95bb6b80a9890bc855673576a387f0ddf2&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas_pseudoprime&quot;,&quot;displaystyle&quot;,&quot;lucas&quot;,&quot;pseudoprimes&quot;],&quot;summary&quot;:&quot;Lucas pseudoprime - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:10084,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:67316,&quot;sha256&quot;:&quot;537574af061d03d2ccec63fee9ab91f774c52f57628e46f3a7cf5177f74268a8&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:16821,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:409,&quot;sha256&quot;:&quot;3997337e9a7e26b87e1a7d33ad12b1be56be7825f73d1809842c140c444852d2&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Lucas pseudoprime.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:948,&quot;sha256&quot;:&quot;4c72f91c657e5f27821051c18eee9532ae318186044a5cce26a454a0c6ec8f91&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;wikipedia&quot;,&quot;lucas&quot;,&quot;composite&quot;,&quot;pass&quot;,&quot;pseudoprime&quot;],&quot;summary&quot;:&quot;Lucas pseudoprime&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:234,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Baillie-Wagstaff-Lucas pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2145,&quot;sha256&quot;:&quot;026838d5118a0594c78b7f88e1538b072647c563a97b94d22c689ca3793b537d&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas_pseudoprime&quot;,&quot;congruence&quot;,&quot;displaystyle&quot;,&quot;does&quot;],&quot;summary&quot;:&quot;Baillie-Wagstaff-Lucas pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:534,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Lucas probable primes and pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4378,&quot;sha256&quot;:&quot;13145b94ec8185f55f85efb8d5b3c7a99d3cdbbd80897c3af2378b60a2224b73&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas_pseudoprime&quot;,&quot;lucas&quot;,&quot;119&quot;,&quot;prime&quot;],&quot;summary&quot;:&quot;Lucas probable primes and pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1088,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Strong Lucas pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3016,&quot;sha256&quot;:&quot;e9e01d0fb8b8b0fc2fcbea0ace08e33458b33e4f8fe2882a5ff87e039dc97391&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;lucas&quot;,&quot;strong&quot;,&quot;pseudoprime&quot;,&quot;https&quot;,&quot;lucas_pseudoprime&quot;,&quot;org&quot;,&quot;pseudoprimes&quot;],&quot;summary&quot;:&quot;Strong Lucas pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:745,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Implementing a Lucas probable prime test.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5650,&quot;sha256&quot;:&quot;64b77ff6b55c83e54ae16296b726c1601b0984759f99f32dcfbbf3d9634d6a1d&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;sequence&quot;,&quot;wiki&quot;,&quot;lucas&quot;,&quot;left&quot;],&quot;summary&quot;:&quot;Implementing a Lucas probable prime test&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1404,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Checking additional congruence conditions.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3745,&quot;sha256&quot;:&quot;2c4a26d35d3383e44480b40702d8ba18b9928cbfb2913ddccff2bb2584bdd436&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;congruence&quot;,&quot;lucas_pseudoprime&quot;,&quot;prime&quot;],&quot;summary&quot;:&quot;Checking additional congruence conditions&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:928,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Comparison with the Miller–Rabin primality test.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1502,&quot;sha256&quot;:&quot;65ac34cabd7e8862f0e2613db66ef996a9ce0fdb8fd8b758ec24282f7cb81469&quot;,&quot;keywords&quot;:[&quot;test&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;primality&quot;,&quot;wiki&quot;,&quot;miller&quot;,&quot;prime&quot;],&quot;summary&quot;:&quot;Comparison with the Miller–Rabin primality test&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:374,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Fibonacci pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4261,&quot;sha256&quot;:&quot;54c29597dc86bbe7945533a1e204bd28ae07595e063676b4e46cad3294e3072e&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas_pseudoprime&quot;,&quot;fibonacci&quot;,&quot;pseudoprimes&quot;,&quot;pseudoprime&quot;],&quot;summary&quot;:&quot;Fibonacci pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1060,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Pell pseudoprimes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1179,&quot;sha256&quot;:&quot;300f398121b4c80a10b399e37e7ced0562da2f92ab33efce449188177bc23a9a&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;pell&quot;,&quot;pseudoprimes&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;1121&quot;,&quot;169&quot;],&quot;summary&quot;:&quot;Pell pseudoprimes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:293,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:10674,&quot;sha256&quot;:&quot;89f275a12d87e6688f2c378155879e3e356004fda9b9f452fa26de3bad8eea6a&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas_pseudoprime&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;citeseerx&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2655,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2674,&quot;sha256&quot;:&quot;c176837fefbdf7927715ac6b0289bdc486ead898268bb8248e9d9f23ce3f8489&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;mathworld&quot;,&quot;lucas&quot;,&quot;weisstein&quot;,&quot;pseudoprimes&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:669,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0016&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:389,&quot;sha256&quot;:&quot;316f724daa77f5890fd22e603d2a061086662d592757c44840fb535ab882d1f6&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;lucas_pseudoprime&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t02&quot;,&quot;246z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:98,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0017&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;e9be4853ec653825f7e84ba5d4ff7976a1c8164f38010b37d925e0c8214f2c6d&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;479&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0018&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T02:32:21.246Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	65	257	1c1c15066fb1a8c72a810a088d3fbec54ba756fbd759fbe4690fadaf1737ee33	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	10084	40587	094ed64d5d3b22e976339b5f74d00e95bb6b80a9890bc855673576a387f0ddf2	Lucas pseudoprime - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	16821	67316	537574af061d03d2ccec63fee9ab91f774c52f57628e46f3a7cf5177f74268a8	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	409	3997337e9a7e26b87e1a7d33ad12b1be56be7825f73d1809842c140c444852d2	Introduction	
+sec:0005	section	artifacts/sections/0002-Lucas pseudoprime.md	primary	234	948	4c72f91c657e5f27821051c18eee9532ae318186044a5cce26a454a0c6ec8f91	Lucas pseudoprime	
+sec:0006	section	artifacts/sections/0003-Baillie-Wagstaff-Lucas pseudoprimes.md	primary	534	2145	026838d5118a0594c78b7f88e1538b072647c563a97b94d22c689ca3793b537d	Baillie-Wagstaff-Lucas pseudoprimes	
+sec:0007	section	artifacts/sections/0004-Lucas probable primes and pseudoprimes.md	primary	1088	4378	13145b94ec8185f55f85efb8d5b3c7a99d3cdbbd80897c3af2378b60a2224b73	Lucas probable primes and pseudoprimes	
+sec:0008	section	artifacts/sections/0005-Strong Lucas pseudoprimes.md	primary	745	3016	e9e01d0fb8b8b0fc2fcbea0ace08e33458b33e4f8fe2882a5ff87e039dc97391	Strong Lucas pseudoprimes	
+sec:0009	section	artifacts/sections/0006-Implementing a Lucas probable prime test.md	primary	1404	5650	64b77ff6b55c83e54ae16296b726c1601b0984759f99f32dcfbbf3d9634d6a1d	Implementing a Lucas probable prime test	
+sec:0010	section	artifacts/sections/0007-Checking additional congruence conditions.md	primary	928	3745	2c4a26d35d3383e44480b40702d8ba18b9928cbfb2913ddccff2bb2584bdd436	Checking additional congruence conditions	
+sec:0011	section	artifacts/sections/0008-Comparison with the Miller–Rabin primality test.md	primary	374	1502	65ac34cabd7e8862f0e2613db66ef996a9ce0fdb8fd8b758ec24282f7cb81469	Comparison with the Miller–Rabin primality test	
+sec:0012	section	artifacts/sections/0009-Fibonacci pseudoprimes.md	supporting	1060	4261	54c29597dc86bbe7945533a1e204bd28ae07595e063676b4e46cad3294e3072e	Fibonacci pseudoprimes	
+sec:0013	section	artifacts/sections/0010-Pell pseudoprimes.md	supporting	293	1179	300f398121b4c80a10b399e37e7ced0562da2f92ab33efce449188177bc23a9a	Pell pseudoprimes	
+sec:0014	section	artifacts/sections/0011-References.md	supporting	2655	10674	89f275a12d87e6688f2c378155879e3e356004fda9b9f452fa26de3bad8eea6a	References	
+sec:0015	section	artifacts/sections/0012-External links.md	supporting	669	2674	c176837fefbdf7927715ac6b0289bdc486ead898268bb8248e9d9f23ce3f8489	External links	
+art:0016	provenance	artifacts/provenance/source-record.json	supporting	98	389	316f724daa77f5890fd22e603d2a061086662d592757c44840fb535ab882d1f6	Capture source identity and metadata	
+art:0017	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	e9be4853ec653825f7e84ba5d4ff7976a1c8164f38010b37d925e0c8214f2c6d	Extraction engine and counts	
+art:0018	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Lucas_pseudoprime#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Lucas pseudoprime
+
+- [Español](https://es.wikipedia.org/wiki/N%C3%BAmero_pseudoprimo_de_Lucas)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%93%AC%E7%B4%A0%E6%95%B0)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE_%D0%9B%D1%8E%D0%BA%D0%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q3343106#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Probabilistic test for the primality of an integer
+
+**Lucas pseudoprimes** and **Fibonacci pseudoprimes** are [composite](https://en.wikipedia.org/wiki/Composite_number) integers that pass certain tests which all [primes](https://en.wikipedia.org/wiki/Prime_number) and very few composite numbers pass: in this case, criteria relative to some [Lucas sequence](https://en.wikipedia.org/wiki/Lucas_sequence).
+
+## Baillie-Wagstaff-Lucas pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=1)]
+
+Baillie and Wagstaff define Lucas pseudoprimes as follows:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) Given integers *P* and *Q*, where *P* &gt; 0 and     D =  P  2   − 4 Q   {\displaystyle D=P^{2}-4Q}  , let *Uk*(*P*, *Q*) and *Vk*(*P*, *Q*) be the corresponding [Lucas sequences](https://en.wikipedia.org/wiki/Lucas_sequence).
+
+Let *n* be a positive integer and let      (    D n    )    {\displaystyle \left({\tfrac {D}{n}}\right)}   be the [Jacobi symbol](https://en.wikipedia.org/wiki/Jacobi_symbol). We define
+
+     δ ( n ) = n −  (    D n    )  .   {\displaystyle \delta (n)=n-\left({\tfrac {D}{n}}\right).}
+
+If *n* is a [prime](https://en.wikipedia.org/wiki/Prime_number) that does not divide *Q*, then the following congruence condition holds:
+
+      U  δ ( n )   ≡ 0   ( mod  n )  .   {\displaystyle U_{\delta (n)}\equiv 0{\pmod {n}}.}    1
+
+If this congruence does *not* hold, then *n* is *not* prime. If *n* is *composite*, then this congruence *usually* does not hold.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) These are the key facts that make Lucas sequences useful in [primality testing](https://en.wikipedia.org/wiki/Primality_test).
+
+The congruence (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) represents one of two congruences defining a [Frobenius pseudoprime](https://en.wikipedia.org/wiki/Frobenius_pseudoprime). Hence, every Frobenius pseudoprime is also a Baillie-Wagstaff-Lucas pseudoprime, but the converse does not always hold.
+
+Some good references are chapter 8 of the book by Bressoud and Wagon (with [Mathematica](https://en.wikipedia.org/wiki/Mathematica) code),[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2) pages 142–152 of the book by Crandall and Pomerance,[[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3) and pages 53–74 of the book by Ribenboim.[[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4)
+
+## Lucas probable primes and pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=2)]
+
+A **Lucas probable prime** for a given (*P, Q*) pair is *any* positive integer *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) above is true (see,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1398).
+
+A **Lucas pseudoprime** for a given (*P, Q*) pair is a positive *composite* integer *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) is true (see,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1391).
+
+A Lucas probable prime test is most useful if *D* is chosen such that the Jacobi symbol      (    D n    )    {\displaystyle \left({\tfrac {D}{n}}\right)}   is −1 (see pages 1401–1409 of,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1024 of,[[5]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-PSW-5) or pages 266–269 of [[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2) ). This is especially important when combining a Lucas test with a [strong pseudoprime](https://en.wikipedia.org/wiki/Strong_pseudoprime) test, such as the [Baillie–PSW primality test](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test). Typically implementations will use a parameter selection method that ensures this condition (e.g. the Selfridge method recommended in [[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) and described below).
+
+If      (    D n    )  = − 1 ,   {\displaystyle \left({\tfrac {D}{n}}\right)=-1,}   then equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) becomes
+
+      U  n + 1   ≡ 0   ( mod  n )  .   {\displaystyle U_{n+1}\equiv 0{\pmod {n}}.}    2
+
+If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is false, this constitutes a proof that *n* is composite.
+
+If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, then *n* is a Lucas probable prime. In this case, either *n* is prime or it is a Lucas pseudoprime. If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, then *n* is *likely* to be prime (this justifies the term **probable** prime), but this does not *prove* that *n* is prime. As is the case with any other probabilistic primality test, if we perform additional Lucas tests with different *D*, *P* and *Q*, then unless one of the tests proves that *n* is composite, we gain more confidence that *n* is prime.
+
+Examples: If *P* = 3, *Q* = −1, and *D* = 13, the sequence of *U&#39;*s is (sequence [A006190](https://oeis.org/A006190) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)): *U0* = 0, *U1* = 1, *U2* = 3, *U3* = 10, etc.
+
+First, let *n* = 19. The Jacobi symbol      (    13 19    )    {\displaystyle \left({\tfrac {13}{19}}\right)}   is −1, so δ(*n*) = 20, *U20* = 6616217487 = 19·348221973 and we have
+
+      U  20   = 6616217487 ≡ 0   ( mod  19 )  .   {\displaystyle U_{20}=6616217487\equiv 0{\pmod {19}}.}
+
+Therefore, 19 is a Lucas probable prime for this (*P, Q*) pair. In this case 19 is prime, so it is *not* a Lucas pseudoprime.
+
+For the next example, let *n* = 119. We have      (    13 119    )    {\displaystyle \left({\tfrac {13}{119}}\right)}   = −1, and we can compute
+
+      U  120   ≡ 0   ( mod  119 )  .   {\displaystyle U_{120}\equiv 0{\pmod {119}}.}
+
+However, 119 = 7·17 is not prime, so 119 is a Lucas *pseudoprime* for this (*P, Q*) pair. In fact, 119 is the smallest pseudoprime for *P* = 3, *Q* = −1.
+
+We will see [below](https://en.wikipedia.org/wiki/Lucas_pseudoprime#Implementing_a_Lucas_probable_prime_test) that, in order to check equation (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) for a given *n*, we do *not* need to compute all of the first *n* + 1 terms in the *U* sequence.
+
+Let *Q* = −1, the smallest Lucas pseudoprime to *P* = 1, 2, 3, ... are
+
+ 323, 35, 119, 9, 9, 143, 25, 33, 9, 15, 123, 35, 9, 9, 15, 129, 51, 9, 33, 15, 21, 9, 9, 49, 15, 39, 9, 35, 49, 15, 9, 9, 33, 51, 15, 9, 35, 85, 39, 9, 9, 21, 25, 51, 9, 143, 33, 119, 9, 9, 51, 33, 95, 9, 15, 301, 25, 9, 9, 15, 49, 155, 9, 399, 15, 33, 9, 9, 49, 15, 119, 9, ...
+
+## Strong Lucas pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=3)]
+
+Now, factor     δ ( n ) = n −  (    D n    )    {\displaystyle \delta (n)=n-\left({\tfrac {D}{n}}\right)}   into the form     d ⋅  2  s     {\displaystyle d\cdot 2^{s}}   where     d   {\displaystyle d}   is odd.
+
+A **strong Lucas pseudoprime** for a given (*P*, *Q*) pair is an odd composite number *n* with GCD(*n, D*) = 1, satisfying one of the conditions
+
+      U  d   ≡ 0   ( mod  n )    {\displaystyle U_{d}\equiv 0{\pmod {n}}}
+
+or
+
+      V  d ⋅  2  r     ≡ 0   ( mod  n )    {\displaystyle V_{d\cdot 2^{r}}\equiv 0{\pmod {n}}}
+
+for some 0 ≤ *r* &lt; *s*; see page 1396 of.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) A strong Lucas pseudoprime is also a Lucas pseudoprime (for the same (*P*, *Q*) pair), but the converse is not necessarily true. Therefore, the **strong** test is a more stringent primality test than equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**).
+
+There are infinitely many strong Lucas pseudoprimes, and therefore, infinitely many Lucas pseudoprimes. Theorem 7 in [[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) states: Let     P   {\displaystyle P}   and     Q   {\displaystyle Q}   be relatively prime positive integers for which      P  2   − 4 Q   {\displaystyle P^{2}-4Q}   is positive but not a square. Then there is a positive constant     c   {\displaystyle c}   (depending on     P   {\displaystyle P}   and     Q   {\displaystyle Q}  ) such that the number of strong Lucas pseudoprimes not exceeding     x   {\displaystyle x}   is greater than     c ⋅ log ⁡ x   {\displaystyle c\cdot \log x}  , for     x   {\displaystyle x}   sufficiently large.
+
+We can set *Q* = −1, then      U  n     {\displaystyle U_{n}}   and      V  n     {\displaystyle V_{n}}   are *P*-Fibonacci sequence and *P*-Lucas sequence, the pseudoprimes can be called **strong Lucas pseudoprime in base *P***, for example, the least strong Lucas pseudoprime with *P* = 1, 2, 3, ... are 4181, 169, 119, ...
+
+An **extra strong Lucas pseudoprime**[[6]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-ExtraStrong-6)[[7]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-FrobeniusPSP-7) is a strong Lucas pseudoprime for a set of parameters (*P*, *Q*) where *Q* = 1, satisfying one of the conditions
+
+      U  d   ≡ 0   and    V  d   ≡ ± 2   ( mod  n )    {\displaystyle U_{d}\equiv 0{\text{ and }}V_{d}\equiv \pm 2{\pmod {n}}}
+
+or
+
+      V  d ⋅  2  r     ≡ 0   ( mod  n )    {\displaystyle V_{d\cdot 2^{r}}\equiv 0{\pmod {n}}}
+
+for some     0 ≤ r &lt; s − 1   {\displaystyle 0\leq r&lt;s-1}  . An extra strong Lucas pseudoprime is also a strong Lucas pseudoprime for the same     ( P , Q )   {\displaystyle (P,Q)}   pair. No number can be a strong Lucas pseudoprime to more than 1⁄4 of all bases, or an extra strong Lucas pseudoprime to more than 1⁄8 of all bases.
+
+## Implementing a Lucas probable prime test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=4)]
+
+Before embarking on a probable prime test, one usually verifies that *n*, the number to be tested for primality, is odd, is not a perfect square, and is not divisible by any small prime less than some convenient limit. Perfect squares are easy to detect using [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for square roots.
+
+We choose a Lucas sequence where the Jacobi symbol      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  , so that δ(*n*) = *n* + 1.
+
+Given *n*, one technique for choosing *D* is to use trial and error to find the first *D* in the sequence 5, −7, 9, −11, ... such that      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  . Note that      (    k n    )   (     − k  n    )  = − 1   {\displaystyle \left({\tfrac {k}{n}}\right)\left({\tfrac {-k}{n}}\right)=-1}  . (If *D* and *n* have a prime factor in common, then      (    D n    )  = 0.   {\displaystyle \left({\tfrac {D}{n}}\right)=0.}  ). With this sequence of *D* values, the average number of *D* values that must be tried before we encounter one whose Jacobi symbol is −1 is about 1.79.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1416  Once we have *D*, we set     P = 1   {\displaystyle P=1}   and     Q = ( 1 − D )  /  4   {\displaystyle Q=(1-D)/4}  . It is a good idea to check that *n* has no prime factors in common with *P* or *Q*. This method (&quot;Method A&quot;) of choosing *D*, *P*, and *Q* was suggested by [John Selfridge](https://en.wikipedia.org/wiki/John_Selfridge).
+
+(This search will never succeed if *n* is square, and conversely if it does succeed, that is proof that *n* is not square. Thus, some time can be saved by delaying testing *n* for squareness until after the first few search steps have all failed.)
+
+Given *D*, *P*, and *Q*, there are recurrence relations that enable us to quickly compute      U  n + 1     {\displaystyle U_{n+1}}   and      V  n + 1     {\displaystyle V_{n+1}}   in     O (  log  2   ⁡ n )   {\displaystyle O(\log _{2}n)}   steps; see [Lucas sequence § Other relations](https://en.wikipedia.org/wiki/Lucas_sequence#Other_relations). To start off,
+
+      U  1   = 1   {\displaystyle U_{1}=1}        V  1   = P   {\displaystyle V_{1}=P}        Q  1   = Q   {\displaystyle Q^{1}=Q}
+
+First, we can double the subscript from     k   {\displaystyle k}   to     2 k   {\displaystyle 2k}   in one step using the recurrence relations
+
+      U  2 k   =  U  k   ⋅  V  k   ,   {\displaystyle U_{2k}=U_{k}\cdot V_{k},}        V  2 k   =  V  k   2   − 2  Q  k   =     V  k   2   + D  U  k   2    2   ,   {\displaystyle V_{2k}=V_{k}^{2}-2Q^{k}={\frac {V_{k}^{2}+DU_{k}^{2}}{2}},}        Q  2 k   = (  Q  k    )  2   .   {\displaystyle Q^{2k}=(Q^{k})^{2}.}
+
+Next, we can increase the subscript by 1 using the recurrences
+
+      U  2 k + 1   = ( P ⋅  U  2 k   +  V  2 k   )  /  2 ,   {\displaystyle U_{2k+1}=(P\cdot U_{2k}+V_{2k})/2,}        V  2 k + 1   = ( D ⋅  U  2 k   + P ⋅  V  2 k   )  /  2 ,   {\displaystyle V_{2k+1}=(D\cdot U_{2k}+P\cdot V_{2k})/2,}        Q  2 k + 1   = Q ⋅  Q  2 k   .   {\displaystyle Q^{2k+1}=Q\cdot Q^{2k}.}
+
+At each stage, we reduce all of the variables modulo *n*. When dividing by 2 [modulo](https://en.wikipedia.org/wiki/Modular_arithmetic) *n*, if the numerator is odd add *n* (which does not change the value modulo *n*) to make it even before dividing by 2.&#39;
+
+We use the bits of the binary expansion of *n* to determine *which* terms in the sequence to compute. For example, if *n*+1 = 44 (= 101100 in binary), then, taking the bits one at a time from left to right, we obtain the sequence of indices to compute: 12 = 1, 102 = 2, 1002 = 4, 1012 = 5, 10102 = 10, 10112 = 11, 101102 = 22, 1011002 = 44. Therefore, we compute *U*1, *U*2, *U*4, *U*5, *U*10, *U*11, *U*22, and *U*44. We also compute the same-numbered terms in the *V* sequence, along with *Q*1, *Q*2, *Q*4, *Q*5, *Q*10, *Q*11, *Q*22, and *Q*44.
+
+By the end of the calculation, we will have computed *Un+1*, *Vn+1*, and *Qn+1*, (mod *n*). We then check congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) using our expected value of *Un+1*.
+
+When the parameters *D*, *P*, and *Q* are chosen as described above, the first 10 Lucas pseudoprimes are:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1401  323, 377, 1159, 1829, 3827, 5459, 5777, 9071, 9179, and 10877 (sequence [A217120](https://oeis.org/A217120) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+The **strong** versions of the Lucas test can be implemented in a similar way. With the same parameters, the first 10 *strong* Lucas pseudoprimes are: 5459, 5777, 10877, 16109, 18971, 22499, 24569, 25199, 40309, and 58519 (sequence [A217255](https://oeis.org/A217255) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+*Extra strong* Lucas pseudoprimes use different parameters: fix     Q = 1   {\displaystyle Q=1}  . Then try *P* = 3, 4, 5, 6, ..., until a value of     D =  P  2   − 4 Q   {\displaystyle D=P^{2}-4Q}   is found so that the Jacobi symbol      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  . The first 10 *extra strong* Lucas pseudoprimes are 989, 3239, 5777, 10877, 27971, 29681, 30739, 31631, 39059, and 72389 (sequence [A217719](https://oeis.org/A217719) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+### Checking additional congruence conditions
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=5)]
+
+If we have checked that congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, there are additional congruence conditions we can check that have almost no additional computational cost. By providing an additional opportunity for *n* to be proved composite, these increase the reliability of the test.
+
+If *n* is an odd prime and      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  , then we have the following:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1392 Eq. 2
+
+      V  n + 1   ≡ 2 Q   ( mod  n )  .   {\displaystyle V_{n+1}\equiv 2Q{\pmod {n}}.}    3
+
+Although this congruence condition is not part of the Lucas probable prime test proper, it is almost free to check this condition because, as noted above, the easiest way to compute *U**n*+1 is to compute *V**n*+1 as well.
+
+If Selfridge&#39;s Method A (above) for choosing parameters is modified so that, if it selects *D* = 5, it uses the parameters *P* = *Q* = 5 rather than *P* = 1, *Q* = −1 (avoiding *Q* ≠ ±1; &quot;Method A*&quot;), then 913 = 11·83 is the *only* composite less than 108 for which congruence (**[3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_3)**) is true (see page 1409 and Table 6 of;[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1)). More extensive calculations show that, with this method of choosing *D*, *P*, and *Q*, there are only five odd, composite numbers less than 1015 for which congruence (**[3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_3)**) is true.[[8]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-bpsw2-8)
+
+If     Q ≠ ± 1   {\displaystyle Q\neq \pm 1}   (and GCD(*n*, *Q*) = 1), then an [Euler–Jacobi probable prime](https://en.wikipedia.org/wiki/Euler%E2%80%93Jacobi_probable_prime) test to the base Q can also be implemented at minor computational cost.
+
+The computation of      V  n + 1     {\displaystyle V_{n+1}}   depends on      V  ( n + 1 )  /  2     {\displaystyle V_{(n+1)/2}}   and      Q  ( n + 1 )  /  2     {\displaystyle Q^{(n+1)/2}}  . This is     Q   {\displaystyle Q}   times      Q  ( n − 1 )  /  2     {\displaystyle Q^{(n-1)/2}}  , and if *n* is prime, then by [Euler&#39;s criterion](https://en.wikipedia.org/wiki/Euler&#39;s_criterion),
+
+      Q  ( n − 1 )  /  2   ≡  (    Q n    )    ( mod  n )    {\displaystyle Q^{(n-1)/2}\equiv \left({\tfrac {Q}{n}}\right){\pmod {n}}}   .
+
+(Here,      (    Q n    )    {\displaystyle \left({\tfrac {Q}{n}}\right)}   is the [Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol); if *n* is prime, this is the same as the Jacobi symbol).
+
+Therefore, if *n* is prime, we must have,
+
+      Q  ( n + 1 )  /  2   ≡ Q ⋅  Q  ( n − 1 )  /  2   ≡ Q ⋅  (    Q n    )    ( mod  n )  .   {\displaystyle Q^{(n+1)/2}\equiv Q\cdot Q^{(n-1)/2}\equiv Q\cdot \left({\tfrac {Q}{n}}\right){\pmod {n}}.}    4
+
+The Jacobi symbol on the right side is easy to compute, so this congruence is easy to check. If this congruence does not hold, then *n* cannot be prime. Provided GCD(*n, Q*) = 1 then testing for congruence (**[4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_4)**) is equivalent to augmenting our Lucas test with a &quot;base Q&quot; [Solovay–Strassen primality test](https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test).
+
+There is one more congruence condition on      U  n     {\displaystyle U_{n}}   and      V  n     {\displaystyle V_{n}}   which must be true if *n* is prime and can be checked.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): §2,6
+
+## Comparison with the Miller–Rabin primality test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=6)]
+
+*k* applications of the [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test) declare a composite *n* to be probably prime with a probability at most (1/4)*k*.
+
+There is a similar probability estimate for the strong Lucas probable prime test.[[9]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-9)
+
+Aside from two trivial exceptions (see below), the fraction of (*P*,*Q*) pairs (modulo *n*) that declare a composite *n* to be probably prime is at most (4/15).
+
+Therefore, *k* applications of the strong Lucas test would declare a composite *n* to be probably prime with a probability at most (4/15)k.
+
+There are two trivial exceptions. One is *n* = 9. The other is when *n* = *p*(*p*+2) is the product of two [twin primes](https://en.wikipedia.org/wiki/Twin_prime). Such an *n* is easy to factor, because in this case, *n*+1 = (*p*+1)2 is a perfect square. One can quickly detect perfect squares using [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for square roots.
+
+By combining a Lucas pseudoprime test with a [Fermat primality test](https://en.wikipedia.org/wiki/Fermat_primality_test), say, to base 2, one can obtain very powerful probabilistic tests for primality, such as the [Baillie–PSW primality test](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test).
+
+## Fibonacci pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=7)]
+
+When *P* = 1 and *Q* = −1, the *Un*(*P*,*Q*) sequence represents the Fibonacci numbers.
+
+A **Fibonacci pseudoprime** is often[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2): 264,  [[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3): 142,  [[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4): 127  defined as a composite number *n* not divisible by 5 for which congruence (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) holds with *P* = 1 and *Q* = −1. By this definition, the Fibonacci pseudoprimes form a sequence:
+
+ 323, 377, 1891, 3827, 4181, 5777, 6601, 6721, 8149, 10877, ... (sequence [A081264](https://oeis.org/A081264) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).
+
+The references of Anderson and Jacobsen below use this definition.
+
+If *n* is congruent to 2 or 3 modulo 5, then Bressoud,[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2): 272–273  and Crandall and Pomerance[[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3): 143, 168  point out that it is rare for a Fibonacci pseudoprime to also be a [Fermat pseudoprime](https://en.wikipedia.org/wiki/Fermat_pseudoprime) base 2. However, when *n* is congruent to 1 or 4 modulo 5, the opposite is true, with over 12% of Fibonacci pseudoprimes under 1011 also being base-2 Fermat pseudoprimes.
+
+If *n* is prime and GCD(*n*, *Q*) = 1, then we also have[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1392
+
+      V  n   ( P , Q ) ≡ P   ( mod  n )  .   {\displaystyle V_{n}(P,Q)\equiv P{\pmod {n}}.}    5
+
+This leads to an alternative definition of Fibonacci pseudoprime:[[10]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-FibonacciPSP-10)[[11]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-11)
+
+ a **Fibonacci pseudoprime** is a composite number *n* for which congruence (**[5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_5)**) holds with *P* = 1 and *Q* = −1.
+
+This definition leads the Fibonacci pseudoprimes form a sequence:
+
+ 705, 2465, 2737, 3745, 4181, 5777, 6721, 10877, 13201, 15251, ... (sequence [A005845](https://oeis.org/A005845) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)),
+
+which are also referred to as *Bruckman-Lucas* pseudoprimes.[[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4): 129  Hoggatt and Bicknell studied properties of these pseudoprimes in 1974.[[12]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-12) Singmaster computed these pseudoprimes up to 100000.[[13]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-13) Jacobsen lists all 111443 of these pseudoprimes less than 1013.[[14]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-14)
+
+It has been shown that there are no even Fibonacci pseudoprimes as defined by equation (5).[[15]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bruckman-15)[[16]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-16) However, even Fibonacci pseudoprimes do exist (sequence [A141137](https://oeis.org/A141137) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)) under the first definition given by (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**).
+
+A **strong Fibonacci pseudoprime** is a composite number *n* for which congruence (**[5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_5)**) holds for *Q* = −1 and all *P*.[[17]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Muller-17) It follows[[17]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Muller-17): 460  that an odd composite integer *n* is a strong Fibonacci pseudoprime if and only if:
+
+1. *n* is a [Carmichael number](https://en.wikipedia.org/wiki/Carmichael_number)
+2. 2(*p* + 1) | (*n* − 1) or 2(*p* + 1) | (*n* − *p*) for every prime *p* dividing *n*.
+
+The smallest example of a strong Fibonacci pseudoprime is 443372888629441 = 17·31·41·43·89·97·167·331.
+
+## Pell pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=8)]
+
+A **Pell pseudoprime** may be defined as a composite number *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) above is true with *P* = 2 and *Q* = −1; the sequence *Un* then being the [Pell sequence](https://en.wikipedia.org/wiki/Pell_sequence). The first pseudoprimes are then 35, 169, 385, 779, 899, 961, 1121, 1189, 2419, ...
+
+This differs from the definition in [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences): [A099011](https://oeis.org/A099011) which may be written as:
+
+          U  n   ≡  (    2 n    )    ( mod  n )    {\displaystyle {\text{ }}U_{n}\equiv \left({\tfrac {2}{n}}\right){\pmod {n}}}
+
+with (*P*, *Q*) = (2, −1) again defining *Un* as the [Pell sequence](https://en.wikipedia.org/wiki/Pell_sequence). The first pseudoprimes are then 169, 385, 741, 961, 1121, 2001, 3827, 4879, 5719, 6215 ...
+
+A third definition uses equation (5) with (*P*, *Q*) = (2, −1), leading to the pseudoprimes 169, 385, 961, 1105, 1121, 3827, 4901, 6265, 6441, 6601, 7107, 7801, 8119, ...
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=9)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-2) [4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-3) [5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-4) [6](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-5) [7](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-6) [8](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-7) [9](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-8) [10](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-9) [11](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-10) [12](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-11) [13](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-12) [14](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-13) Robert Baillie; [Samuel S. Wagstaff, Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (October 1980). [&quot;Lucas Pseudoprimes&quot;](http://mpqs.free.fr/LucasPseudoprimes.pdf) (PDF). *Mathematics of Computation*. **35** (152): 1391–1417. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-1980-0583518-6](https://doi.org/10.1090%2FS0025-5718-1980-0583518-6). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2006406](https://www.jstor.org/stable/2006406). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0583518](https://mathscinet.ams.org/mathscinet-getitem?mr=0583518).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-2) [4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-3)  [David Bressoud](https://en.wikipedia.org/wiki/David_Bressoud); [Stan Wagon](https://en.wikipedia.org/wiki/Stan_Wagon) (2000). [*A Course in Computational Number Theory*](https://archive.org/details/courseincomputat0000bres). New York: Key College Publishing in cooperation with Springer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-930190-10-8](https://en.wikipedia.org/wiki/Special:BookSources/978-1-930190-10-8).
+3. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-2)  [Richard E. Crandall](https://en.wikipedia.org/wiki/Richard_Crandall); [Carl Pomerance](https://en.wikipedia.org/wiki/Carl_Pomerance) (2005). *Prime numbers: A computational perspective* (2nd ed.). [Springer-Verlag](https://en.wikipedia.org/wiki/Springer-Verlag). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-25282-7](https://en.wikipedia.org/wiki/Special:BookSources/0-387-25282-7).
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-2)  [Paulo Ribenboim](https://en.wikipedia.org/wiki/Paulo_Ribenboim) (1996). *The New Book of Prime Number Records*. [Springer-Verlag](https://en.wikipedia.org/wiki/Springer-Verlag). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94457-5](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94457-5).
+5. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-PSW_5-0) [Carl Pomerance](https://en.wikipedia.org/wiki/Carl_Pomerance); [John L. Selfridge](https://en.wikipedia.org/wiki/John_L._Selfridge); [Samuel S. Wagstaff, Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (July 1980). [&quot;The pseudoprimes to 25·109&quot;](https://math.dartmouth.edu/~carlp/PDF/paper25.pdf) (PDF). *Mathematics of Computation*. **35** (151): 1003–1026. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-1980-0572872-7](https://doi.org/10.1090%2FS0025-5718-1980-0572872-7). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2006210](https://www.jstor.org/stable/2006210).
+6. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-ExtraStrong_6-0) Mo, Zheiyu; Jones, James P. *A new primality test using Lucas sequences* (preprint). cited in Grantham, Jon (1998). [&quot;A Probable Prime Test With High Confidence&quot;](https://les-mathematiques.net/vanilla/uploads/editor/ix/sp1k717k3k9a.pdf) (PDF). *Journal of Number Theory*. **72** (1) NT982247: 32–47. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1903.06823](https://arxiv.org/abs/1903.06823). [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.56.8827](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.8827). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1006/jnth.1998.2247](https://doi.org/10.1006%2Fjnth.1998.2247). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119640473](https://api.semanticscholar.org/CorpusID:119640473). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+7. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-FrobeniusPSP_7-0) Grantham, Jon (2001). [&quot;Frobenius Pseudoprimes&quot;](http://www.pseudoprime.com/pseudo1.ps). *Mathematics of Computation*. **70** (234): 873–891. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1903.06820](https://arxiv.org/abs/1903.06820). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2001MaCom..70..873G](https://ui.adsabs.harvard.edu/abs/2001MaCom..70..873G). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-00-01197-2](https://doi.org/10.1090%2FS0025-5718-00-01197-2). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1680879](https://mathscinet.ams.org/mathscinet-getitem?mr=1680879).
+8. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-bpsw2_8-0) Baillie, Robert; Fiori, Andrew; [Wagstaff, Samuel S. Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (July 2021). &quot;Strengthening the Baillie-PSW Primality Test&quot;. *Mathematics of Computation*. **90** (330): 1931–1955. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[2006.14425](https://arxiv.org/abs/2006.14425). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/mcom/3616](https://doi.org/10.1090%2Fmcom%2F3616). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [220055722](https://api.semanticscholar.org/CorpusID:220055722).
+9. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-9) F. Arnault (April 1997). &quot;The Rabin-Monier Theorem for Lucas Pseudoprimes&quot;. *Mathematics of Computation*. **66** (218): 869–881. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.192.4789](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.192.4789). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/s0025-5718-97-00836-3](https://doi.org/10.1090%2Fs0025-5718-97-00836-3). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+10. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-FibonacciPSP_10-0) Adina Di Porto; Piero Filipponi (1989). [&quot;More on the Fibonacci Pseudoprimes&quot;](https://www.fq.math.ca/Issues/27-3.pdf) (PDF). *Fibonacci Quarterly*. **27** (3): 232–242. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1989.12429564](https://doi.org/10.1080%2F00150517.1989.12429564).
+11. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-11) Di Porto, Adina; Filipponi, Piero; Montolivo, Emilio (1990). &quot;On the generalized Fibonacci pseudoprimes&quot;. *Fibonacci Quarterly*. **28** (4): 347–354. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.388.4993](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.388.4993). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1990.12429473](https://doi.org/10.1080%2F00150517.1990.12429473). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+12. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-12) [V. E. Hoggatt, Jr.](https://en.wikipedia.org/wiki/Verner_Emil_Hoggatt_Jr.); Marjorie Bicknell (September 1974). &quot;Some Congruences of the Fibonacci Numbers Modulo a Prime p&quot;. *Mathematics Magazine*. **47** (4): 210–214. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2689212](https://doi.org/10.2307%2F2689212). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2689212](https://www.jstor.org/stable/2689212).
+13. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-13) David Singmaster (1983). &quot;Some Lucas Pseudoprimes&quot;. *Abstracts Amer. Math. Soc*. **4** (83T–10–146): 197.
+14. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-14) [&quot;Pseudoprime Statistics and Tables&quot;](http://ntheory.org/pseudoprimes.html). Retrieved 5 May 2019.
+15. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bruckman_15-0) P. S. Bruckman (1994). &quot;Lucas Pseudoprimes are odd&quot;. *Fibonacci Quarterly*. **32** (2): 155–157. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1994.12429240](https://doi.org/10.1080%2F00150517.1994.12429240).
+16. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-16) Di Porto, Adina (1993). &quot;Nonexistence of Even Fibonacci Pseudoprimes of the First Kind&quot;. *Fibonacci Quarterly*. **31**: 173–177. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.376.2601](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.376.2601). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+17. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Muller_17-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Muller_17-1) Müller, Winfried B.; Oswald, Alan (1993). &quot;Generalized Fibonacci Pseudoprimes and Probable Primes&quot;. In G.E. Bergum; et al. (eds.). *Applications of Fibonacci Numbers*. Vol. 5. Kluwer. pp. 459–464. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-94-011-2058-6_45](https://doi.org/10.1007%2F978-94-011-2058-6_45).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=10)]
+- Anderson, Peter G. [Fibonacci Pseudoprimes, their factors, and their entry points.](http://www.cs.rit.edu/usr/local/pub/pga/fpp_and_entry_pts)
+- Anderson, Peter G. [Fibonacci Pseudoprimes under 2,217,967,487 and their factors.](http://www.cs.rit.edu/usr/local/pub/pga/fibonacci_pp)
+- Jacobsen, Dana [Pseudoprime Statistics, Tables, and Data](http://ntheory.org/pseudoprimes.html) (data for Lucas, Strong Lucas, AES Lucas, ES Lucas pseudoprimes below 1014; Fibonacci and Pell pseudoprimes below 1012)
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fibonacci Pseudoprime&quot;](https://mathworld.wolfram.com/FibonacciPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/LucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Strong Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/StrongLucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Extra Strong Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/ExtraStrongLucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Classes_of_natural_numbers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Classes_of_natural_numbers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Classes_of_natural_numbers)
+Classes of [natural numbers](https://en.wikipedia.org/wiki/Natural_number)         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;oldid=1334569563](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;oldid=1334569563)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fibonacci numbers](https://en.wikipedia.org/wiki/Category:Fibonacci_numbers)
+- [Pseudoprimes](https://en.wikipedia.org/wiki/Category:Pseudoprimes)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [CS1 errors: deprecated parameters](https://en.wikipedia.org/wiki/Category:CS1_errors:_deprecated_parameters)
+
+    [https://en\.wikipedia\.org/wiki/Lucas\_pseudoprime?action=edit](https://en.wikipedia.org/wiki/Lucas_pseudoprime?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Lucas_pseudoprime#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Lucas pseudoprime</h3><pre># Lucas pseudoprime
+
+- [Español](https://es.wikipedia.org/wiki/N%C3%BAmero_pseudoprimo_de_Lucas)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%93%AC%E7%B4%A0%E6%95%B0)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE_%D0%9B%D1%8E%D0%BA%D0%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q3343106#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Probabilistic test for the primality of an integer
+
+**Lucas pseudoprimes** and **Fibonacci pseudoprimes** are [composite](https://en.wikipedia.org/wiki/Composite_number) integers that pass certain tests which all [primes](https://en.wikipedia.org/wiki/Prime_number) and very few composite numbers pass: in this case, criteria relative to some [Lucas sequence](https://en.wikipedia.org/wiki/Lucas_sequence).
+</pre></article><article id="section-0003"><h3>Baillie-Wagstaff-Lucas pseudoprimes</h3><pre># Baillie-Wagstaff-Lucas pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=1)]
+
+Baillie and Wagstaff define Lucas pseudoprimes as follows:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) Given integers *P* and *Q*, where *P* &gt; 0 and     D =  P  2   − 4 Q   {\displaystyle D=P^{2}-4Q}  , let *Uk*(*P*, *Q*) and *Vk*(*P*, *Q*) be the corresponding [Lucas sequences](https://en.wikipedia.org/wiki/Lucas_sequence).
+
+Let *n* be a positive integer and let      (    D n    )    {\displaystyle \left({\tfrac {D}{n}}\right)}   be the [Jacobi symbol](https://en.wikipedia.org/wiki/Jacobi_symbol). We define
+
+     δ ( n ) = n −  (    D n    )  .   {\displaystyle \delta (n)=n-\left({\tfrac {D}{n}}\right).}
+
+If *n* is a [prime](https://en.wikipedia.org/wiki/Prime_number) that does not divide *Q*, then the following congruence condition holds:
+
+      U  δ ( n )   ≡ 0   ( mod  n )  .   {\displaystyle U_{\delta (n)}\equiv 0{\pmod {n}}.}    1
+
+If this congruence does *not* hold, then *n* is *not* prime. If *n* is *composite*, then this congruence *usually* does not hold.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) These are the key facts that make Lucas sequences useful in [primality testing](https://en.wikipedia.org/wiki/Primality_test).
+
+The congruence (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) represents one of two congruences defining a [Frobenius pseudoprime](https://en.wikipedia.org/wiki/Frobenius_pseudoprime). Hence, every Frobenius pseudoprime is also a Baillie-Wagstaff-Lucas pseudoprime, but the converse does not always hold.
+
+Some good references are chapter 8 of the book by Bressoud and Wagon (with [Mathematica](https://en.wikipedia.org/wiki/Mathematica) code),[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2) pages 142–152 of the book by Crandall and Pomerance,[[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3) and pages 53–74 of the book by Ribenboim.[[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4)
+</pre></article><article id="section-0004"><h3>Lucas probable primes and pseudoprimes</h3><pre># Lucas probable primes and pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=2)]
+
+A **Lucas probable prime** for a given (*P, Q*) pair is *any* positive integer *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) above is true (see,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1398).
+
+A **Lucas pseudoprime** for a given (*P, Q*) pair is a positive *composite* integer *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) is true (see,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1391).
+
+A Lucas probable prime test is most useful if *D* is chosen such that the Jacobi symbol      (    D n    )    {\displaystyle \left({\tfrac {D}{n}}\right)}   is −1 (see pages 1401–1409 of,[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) page 1024 of,[[5]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-PSW-5) or pages 266–269 of [[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2) ). This is especially important when combining a Lucas test with a [strong pseudoprime](https://en.wikipedia.org/wiki/Strong_pseudoprime) test, such as the [Baillie–PSW primality test](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test). Typically implementations will use a parameter selection method that ensures this condition (e.g. the Selfridge method recommended in [[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) and described below).
+
+If      (    D n    )  = − 1 ,   {\displaystyle \left({\tfrac {D}{n}}\right)=-1,}   then equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) becomes
+
+      U  n + 1   ≡ 0   ( mod  n )  .   {\displaystyle U_{n+1}\equiv 0{\pmod {n}}.}    2
+
+If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is false, this constitutes a proof that *n* is composite.
+
+If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, then *n* is a Lucas probable prime. In this case, either *n* is prime or it is a Lucas pseudoprime. If congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, then *n* is *likely* to be prime (this justifies the term **probable** prime), but this does not *prove* that *n* is prime. As is the case with any other probabilistic primality test, if we perform additional Lucas tests with different *D*, *P* and *Q*, then unless one of the tests proves that *n* is composite, we gain more confidence that *n* is prime.
+
+Examples: If *P* = 3, *Q* = −1, and *D* = 13, the sequence of *U&#39;*s is (sequence [A006190](https://oeis.org/A006190) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)): *U0* = 0, *U1* = 1, *U2* = 3, *U3* = 10, etc.
+
+First, let *n* = 19. The Jacobi symbol      (    13 19    )    {\displaystyle \left({\tfrac {13}{19}}\right)}   is −1, so δ(*n*) = 20, *U20* = 6616217487 = 19·348221973 and we have
+
+      U  20   = 6616217487 ≡ 0   ( mod  19 )  .   {\displaystyle U_{20}=6616217487\equiv 0{\pmod {19}}.}
+
+Therefore, 19 is a Lucas probable prime for this (*P, Q*) pair. In this case 19 is prime, so it is *not* a Lucas pseudoprime.
+
+For the next example, let *n* = 119. We have      (    13 119    )    {\displaystyle \left({\tfrac {13}{119}}\right)}   = −1, and we can compute
+
+      U  120   ≡ 0   ( mod  119 )  .   {\displaystyle U_{120}\equiv 0{\pmod {119}}.}
+
+However, 119 = 7·17 is not prime, so 119 is a Lucas *pseudoprime* for this (*P, Q*) pair. In fact, 119 is the smallest pseudoprime for *P* = 3, *Q* = −1.
+
+We will see [below](https://en.wikipedia.org/wiki/Lucas_pseudoprime#Implementing_a_Lucas_probable_prime_test) that, in order to check equation (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) for a given *n*, we do *not* need to compute all of the first *n* + 1 terms in the *U* sequence.
+
+Let *Q* = −1, the smallest Lucas pseudoprime to *P* = 1, 2, 3, ... are
+
+ 323, 35, 119, 9, 9, 143, 25, 33, 9, 15, 123, 35, 9, 9, 15, 129, 51, 9, 33, 15, 21, 9, 9, 49, 15, 39, 9, 35, 49, 15, 9, 9, 33, 51, 15, 9, 35, 85, 39, 9, 9, 21, 25, 51, 9, 143, 33, 119, 9, 9, 51, 33, 95, 9, 15, 301, 25, 9, 9, 15, 49, 155, 9, 399, 15, 33, 9, 9, 49, 15, 119, 9, ...
+</pre></article><article id="section-0005"><h3>Strong Lucas pseudoprimes</h3><pre># Strong Lucas pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=3)]
+
+Now, factor     δ ( n ) = n −  (    D n    )    {\displaystyle \delta (n)=n-\left({\tfrac {D}{n}}\right)}   into the form     d ⋅  2  s     {\displaystyle d\cdot 2^{s}}   where     d   {\displaystyle d}   is odd.
+
+A **strong Lucas pseudoprime** for a given (*P*, *Q*) pair is an odd composite number *n* with GCD(*n, D*) = 1, satisfying one of the conditions
+
+      U  d   ≡ 0   ( mod  n )    {\displaystyle U_{d}\equiv 0{\pmod {n}}}
+
+or
+
+      V  d ⋅  2  r     ≡ 0   ( mod  n )    {\displaystyle V_{d\cdot 2^{r}}\equiv 0{\pmod {n}}}
+
+for some 0 ≤ *r* &lt; *s*; see page 1396 of.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) A strong Lucas pseudoprime is also a Lucas pseudoprime (for the same (*P*, *Q*) pair), but the converse is not necessarily true. Therefore, the **strong** test is a more stringent primality test than equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**).
+
+There are infinitely many strong Lucas pseudoprimes, and therefore, infinitely many Lucas pseudoprimes. Theorem 7 in [[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1) states: Let     P   {\displaystyle P}   and     Q   {\displaystyle Q}   be relatively prime positive integers for which      P  2   − 4 Q   {\displaystyle P^{2}-4Q}   is positive but not a square. Then there is a positive constant     c   {\displaystyle c}   (depending on     P   {\displaystyle P}   and     Q   {\displaystyle Q}  ) such that the number of strong Lucas pseudoprimes not exceeding     x   {\displaystyle x}   is greater than     c ⋅ log ⁡ x   {\displaystyle c\cdot \log x}  , for     x   {\displaystyle x}   sufficiently large.
+
+We can set *Q* = −1, then      U  n     {\displaystyle U_{n}}   and      V  n     {\displaystyle V_{n}}   are *P*-Fibonacci sequence and *P*-Lucas sequence, the pseudoprimes can be called **strong Lucas pseudoprime in base *P***, for example, the least strong Lucas pseudoprime with *P* = 1, 2, 3, ... are 4181, 169, 119, ...
+
+An **extra strong Lucas pseudoprime**[[6]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-ExtraStrong-6)[[7]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-FrobeniusPSP-7) is a strong Lucas pseudoprime for a set of parameters (*P*, *Q*) where *Q* = 1, satisfying one of the conditions
+
+      U  d   ≡ 0   and    V  d   ≡ ± 2   ( mod  n )    {\displaystyle U_{d}\equiv 0{\text{ and }}V_{d}\equiv \pm 2{\pmod {n}}}
+
+or
+
+      V  d ⋅  2  r     ≡ 0   ( mod  n )    {\displaystyle V_{d\cdot 2^{r}}\equiv 0{\pmod {n}}}
+
+for some     0 ≤ r &lt; s − 1   {\displaystyle 0\leq r&lt;s-1}  . An extra strong Lucas pseudoprime is also a strong Lucas pseudoprime for the same     ( P , Q )   {\displaystyle (P,Q)}   pair. No number can be a strong Lucas pseudoprime to more than 1⁄4 of all bases, or an extra strong Lucas pseudoprime to more than 1⁄8 of all bases.
+</pre></article><article id="section-0006"><h3>Implementing a Lucas probable prime test</h3><pre># Implementing a Lucas probable prime test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=4)]
+
+Before embarking on a probable prime test, one usually verifies that *n*, the number to be tested for primality, is odd, is not a perfect square, and is not divisible by any small prime less than some convenient limit. Perfect squares are easy to detect using [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for square roots.
+
+We choose a Lucas sequence where the Jacobi symbol      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  , so that δ(*n*) = *n* + 1.
+
+Given *n*, one technique for choosing *D* is to use trial and error to find the first *D* in the sequence 5, −7, 9, −11, ... such that      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  . Note that      (    k n    )   (     − k  n    )  = − 1   {\displaystyle \left({\tfrac {k}{n}}\right)\left({\tfrac {-k}{n}}\right)=-1}  . (If *D* and *n* have a prime factor in common, then      (    D n    )  = 0.   {\displaystyle \left({\tfrac {D}{n}}\right)=0.}  ). With this sequence of *D* values, the average number of *D* values that must be tried before we encounter one whose Jacobi symbol is −1 is about 1.79.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1416  Once we have *D*, we set     P = 1   {\displaystyle P=1}   and     Q = ( 1 − D )  /  4   {\displaystyle Q=(1-D)/4}  . It is a good idea to check that *n* has no prime factors in common with *P* or *Q*. This method (&quot;Method A&quot;) of choosing *D*, *P*, and *Q* was suggested by [John Selfridge](https://en.wikipedia.org/wiki/John_Selfridge).
+
+(This search will never succeed if *n* is square, and conversely if it does succeed, that is proof that *n* is not square. Thus, some time can be saved by delaying testing *n* for squareness until after the first few search steps have all failed.)
+
+Given *D*, *P*, and *Q*, there are recurrence relations that enable us to quickly compute      U  n + 1     {\displaystyle U_{n+1}}   and      V  n + 1     {\displaystyle V_{n+1}}   in     O (  log  2   ⁡ n )   {\displaystyle O(\log _{2}n)}   steps; see [Lucas sequence § Other relations](https://en.wikipedia.org/wiki/Lucas_sequence#Other_relations). To start off,
+
+      U  1   = 1   {\displaystyle U_{1}=1}        V  1   = P   {\displaystyle V_{1}=P}        Q  1   = Q   {\displaystyle Q^{1}=Q}
+
+First, we can double the subscript from     k   {\displaystyle k}   to     2 k   {\displaystyle 2k}   in one step using the recurrence relations
+
+      U  2 k   =  U  k   ⋅  V  k   ,   {\displaystyle U_{2k}=U_{k}\cdot V_{k},}        V  2 k   =  V  k   2   − 2  Q  k   =     V  k   2   + D  U  k   2    2   ,   {\displaystyle V_{2k}=V_{k}^{2}-2Q^{k}={\frac {V_{k}^{2}+DU_{k}^{2}}{2}},}        Q  2 k   = (  Q  k    )  2   .   {\displaystyle Q^{2k}=(Q^{k})^{2}.}
+
+Next, we can increase the subscript by 1 using the recurrences
+
+      U  2 k + 1   = ( P ⋅  U  2 k   +  V  2 k   )  /  2 ,   {\displaystyle U_{2k+1}=(P\cdot U_{2k}+V_{2k})/2,}        V  2 k + 1   = ( D ⋅  U  2 k   + P ⋅  V  2 k   )  /  2 ,   {\displaystyle V_{2k+1}=(D\cdot U_{2k}+P\cdot V_{2k})/2,}        Q  2 k + 1   = Q ⋅  Q  2 k   .   {\displaystyle Q^{2k+1}=Q\cdot Q^{2k}.}
+
+At each stage, we reduce all of the variables modulo *n*. When dividing by 2 [modulo](https://en.wikipedia.org/wiki/Modular_arithmetic) *n*, if the numerator is odd add *n* (which does not change the value modulo *n*) to make it even before dividing by 2.&#39;
+
+We use the bits of the binary expansion of *n* to determine *which* terms in the sequence to compute. For example, if *n*+1 = 44 (= 101100 in binary), then, taking the bits one at a time from left to right, we obtain the sequence of indices to compute: 12 = 1, 102 = 2, 1002 = 4, 1012 = 5, 10102 = 10, 10112 = 11, 101102 = 22, 1011002 = 44. Therefore, we compute *U*1, *U*2, *U*4, *U*5, *U*10, *U*11, *U*22, and *U*44. We also compute the same-numbered terms in the *V* sequence, along with *Q*1, *Q*2, *Q*4, *Q*5, *Q*10, *Q*11, *Q*22, and *Q*44.
+
+By the end of the calculation, we will have computed *Un+1*, *Vn+1*, and *Qn+1*, (mod *n*). We then check congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) using our expected value of *Un+1*.
+
+When the parameters *D*, *P*, and *Q* are chosen as described above, the first 10 Lucas pseudoprimes are:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1401  323, 377, 1159, 1829, 3827, 5459, 5777, 9071, 9179, and 10877 (sequence [A217120](https://oeis.org/A217120) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+The **strong** versions of the Lucas test can be implemented in a similar way. With the same parameters, the first 10 *strong* Lucas pseudoprimes are: 5459, 5777, 10877, 16109, 18971, 22499, 24569, 25199, 40309, and 58519 (sequence [A217255](https://oeis.org/A217255) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+
+*Extra strong* Lucas pseudoprimes use different parameters: fix     Q = 1   {\displaystyle Q=1}  . Then try *P* = 3, 4, 5, 6, ..., until a value of     D =  P  2   − 4 Q   {\displaystyle D=P^{2}-4Q}   is found so that the Jacobi symbol      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  . The first 10 *extra strong* Lucas pseudoprimes are 989, 3239, 5777, 10877, 27971, 29681, 30739, 31631, 39059, and 72389 (sequence [A217719](https://oeis.org/A217719) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences))
+</pre></article><article id="section-0007"><h3>Checking additional congruence conditions</h3><pre># Checking additional congruence conditions
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=5)]
+
+If we have checked that congruence (**[2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_2)**) is true, there are additional congruence conditions we can check that have almost no additional computational cost. By providing an additional opportunity for *n* to be proved composite, these increase the reliability of the test.
+
+If *n* is an odd prime and      (    D n    )  = − 1   {\displaystyle \left({\tfrac {D}{n}}\right)=-1}  , then we have the following:[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1392 Eq. 2
+
+      V  n + 1   ≡ 2 Q   ( mod  n )  .   {\displaystyle V_{n+1}\equiv 2Q{\pmod {n}}.}    3
+
+Although this congruence condition is not part of the Lucas probable prime test proper, it is almost free to check this condition because, as noted above, the easiest way to compute *U**n*+1 is to compute *V**n*+1 as well.
+
+If Selfridge&#39;s Method A (above) for choosing parameters is modified so that, if it selects *D* = 5, it uses the parameters *P* = *Q* = 5 rather than *P* = 1, *Q* = −1 (avoiding *Q* ≠ ±1; &quot;Method A*&quot;), then 913 = 11·83 is the *only* composite less than 108 for which congruence (**[3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_3)**) is true (see page 1409 and Table 6 of;[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1)). More extensive calculations show that, with this method of choosing *D*, *P*, and *Q*, there are only five odd, composite numbers less than 1015 for which congruence (**[3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_3)**) is true.[[8]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-bpsw2-8)
+
+If     Q ≠ ± 1   {\displaystyle Q\neq \pm 1}   (and GCD(*n*, *Q*) = 1), then an [Euler–Jacobi probable prime](https://en.wikipedia.org/wiki/Euler%E2%80%93Jacobi_probable_prime) test to the base Q can also be implemented at minor computational cost.
+
+The computation of      V  n + 1     {\displaystyle V_{n+1}}   depends on      V  ( n + 1 )  /  2     {\displaystyle V_{(n+1)/2}}   and      Q  ( n + 1 )  /  2     {\displaystyle Q^{(n+1)/2}}  . This is     Q   {\displaystyle Q}   times      Q  ( n − 1 )  /  2     {\displaystyle Q^{(n-1)/2}}  , and if *n* is prime, then by [Euler&#39;s criterion](https://en.wikipedia.org/wiki/Euler&#39;s_criterion),
+
+      Q  ( n − 1 )  /  2   ≡  (    Q n    )    ( mod  n )    {\displaystyle Q^{(n-1)/2}\equiv \left({\tfrac {Q}{n}}\right){\pmod {n}}}   .
+
+(Here,      (    Q n    )    {\displaystyle \left({\tfrac {Q}{n}}\right)}   is the [Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol); if *n* is prime, this is the same as the Jacobi symbol).
+
+Therefore, if *n* is prime, we must have,
+
+      Q  ( n + 1 )  /  2   ≡ Q ⋅  Q  ( n − 1 )  /  2   ≡ Q ⋅  (    Q n    )    ( mod  n )  .   {\displaystyle Q^{(n+1)/2}\equiv Q\cdot Q^{(n-1)/2}\equiv Q\cdot \left({\tfrac {Q}{n}}\right){\pmod {n}}.}    4
+
+The Jacobi symbol on the right side is easy to compute, so this congruence is easy to check. If this congruence does not hold, then *n* cannot be prime. Provided GCD(*n, Q*) = 1 then testing for congruence (**[4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_4)**) is equivalent to augmenting our Lucas test with a &quot;base Q&quot; [Solovay–Strassen primality test](https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test).
+
+There is one more congruence condition on      U  n     {\displaystyle U_{n}}   and      V  n     {\displaystyle V_{n}}   which must be true if *n* is prime and can be checked.[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): §2,6
+</pre></article><article id="section-0008"><h3>Comparison with the Miller–Rabin primality test</h3><pre># Comparison with the Miller–Rabin primality test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=6)]
+
+*k* applications of the [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test) declare a composite *n* to be probably prime with a probability at most (1/4)*k*.
+
+There is a similar probability estimate for the strong Lucas probable prime test.[[9]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-9)
+
+Aside from two trivial exceptions (see below), the fraction of (*P*,*Q*) pairs (modulo *n*) that declare a composite *n* to be probably prime is at most (4/15).
+
+Therefore, *k* applications of the strong Lucas test would declare a composite *n* to be probably prime with a probability at most (4/15)k.
+
+There are two trivial exceptions. One is *n* = 9. The other is when *n* = *p*(*p*+2) is the product of two [twin primes](https://en.wikipedia.org/wiki/Twin_prime). Such an *n* is easy to factor, because in this case, *n*+1 = (*p*+1)2 is a perfect square. One can quickly detect perfect squares using [Newton&#39;s method](https://en.wikipedia.org/wiki/Newton&#39;s_method) for square roots.
+
+By combining a Lucas pseudoprime test with a [Fermat primality test](https://en.wikipedia.org/wiki/Fermat_primality_test), say, to base 2, one can obtain very powerful probabilistic tests for primality, such as the [Baillie–PSW primality test](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test).
+</pre></article><article id="section-0009"><h3>Fibonacci pseudoprimes</h3><pre># Fibonacci pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=7)]
+
+When *P* = 1 and *Q* = −1, the *Un*(*P*,*Q*) sequence represents the Fibonacci numbers.
+
+A **Fibonacci pseudoprime** is often[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2): 264,  [[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3): 142,  [[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4): 127  defined as a composite number *n* not divisible by 5 for which congruence (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) holds with *P* = 1 and *Q* = −1. By this definition, the Fibonacci pseudoprimes form a sequence:
+
+ 323, 377, 1891, 3827, 4181, 5777, 6601, 6721, 8149, 10877, ... (sequence [A081264](https://oeis.org/A081264) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).
+
+The references of Anderson and Jacobsen below use this definition.
+
+If *n* is congruent to 2 or 3 modulo 5, then Bressoud,[[2]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bressoud-2): 272–273  and Crandall and Pomerance[[3]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-CrandallPomerance-3): 143, 168  point out that it is rare for a Fibonacci pseudoprime to also be a [Fermat pseudoprime](https://en.wikipedia.org/wiki/Fermat_pseudoprime) base 2. However, when *n* is congruent to 1 or 4 modulo 5, the opposite is true, with over 12% of Fibonacci pseudoprimes under 1011 also being base-2 Fermat pseudoprimes.
+
+If *n* is prime and GCD(*n*, *Q*) = 1, then we also have[[1]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-lpsp-1): 1392
+
+      V  n   ( P , Q ) ≡ P   ( mod  n )  .   {\displaystyle V_{n}(P,Q)\equiv P{\pmod {n}}.}    5
+
+This leads to an alternative definition of Fibonacci pseudoprime:[[10]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-FibonacciPSP-10)[[11]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-11)
+
+ a **Fibonacci pseudoprime** is a composite number *n* for which congruence (**[5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_5)**) holds with *P* = 1 and *Q* = −1.
+
+This definition leads the Fibonacci pseudoprimes form a sequence:
+
+ 705, 2465, 2737, 3745, 4181, 5777, 6721, 10877, 13201, 15251, ... (sequence [A005845](https://oeis.org/A005845) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)),
+
+which are also referred to as *Bruckman-Lucas* pseudoprimes.[[4]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Ribenboim-4): 129  Hoggatt and Bicknell studied properties of these pseudoprimes in 1974.[[12]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-12) Singmaster computed these pseudoprimes up to 100000.[[13]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-13) Jacobsen lists all 111443 of these pseudoprimes less than 1013.[[14]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-14)
+
+It has been shown that there are no even Fibonacci pseudoprimes as defined by equation (5).[[15]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Bruckman-15)[[16]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-16) However, even Fibonacci pseudoprimes do exist (sequence [A141137](https://oeis.org/A141137) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)) under the first definition given by (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**).
+
+A **strong Fibonacci pseudoprime** is a composite number *n* for which congruence (**[5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_5)**) holds for *Q* = −1 and all *P*.[[17]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Muller-17) It follows[[17]](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_note-Muller-17): 460  that an odd composite integer *n* is a strong Fibonacci pseudoprime if and only if:
+
+1. *n* is a [Carmichael number](https://en.wikipedia.org/wiki/Carmichael_number)
+2. 2(*p* + 1) | (*n* − 1) or 2(*p* + 1) | (*n* − *p*) for every prime *p* dividing *n*.
+
+The smallest example of a strong Fibonacci pseudoprime is 443372888629441 = 17·31·41·43·89·97·167·331.
+</pre></article><article id="section-0010"><h3>Pell pseudoprimes</h3><pre># Pell pseudoprimes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=8)]
+
+A **Pell pseudoprime** may be defined as a composite number *n* for which equation (**[1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#math_1)**) above is true with *P* = 2 and *Q* = −1; the sequence *Un* then being the [Pell sequence](https://en.wikipedia.org/wiki/Pell_sequence). The first pseudoprimes are then 35, 169, 385, 779, 899, 961, 1121, 1189, 2419, ...
+
+This differs from the definition in [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences): [A099011](https://oeis.org/A099011) which may be written as:
+
+          U  n   ≡  (    2 n    )    ( mod  n )    {\displaystyle {\text{ }}U_{n}\equiv \left({\tfrac {2}{n}}\right){\pmod {n}}}
+
+with (*P*, *Q*) = (2, −1) again defining *Un* as the [Pell sequence](https://en.wikipedia.org/wiki/Pell_sequence). The first pseudoprimes are then 169, 385, 741, 961, 1121, 2001, 3827, 4879, 5719, 6215 ...
+
+A third definition uses equation (5) with (*P*, *Q*) = (2, −1), leading to the pseudoprimes 169, 385, 961, 1105, 1121, 3827, 4901, 6265, 6441, 6601, 7107, 7801, 8119, ...
+</pre></article><article id="section-0011"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=9)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-2) [4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-3) [5](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-4) [6](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-5) [7](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-6) [8](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-7) [9](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-8) [10](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-9) [11](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-10) [12](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-11) [13](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-12) [14](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-lpsp_1-13) Robert Baillie; [Samuel S. Wagstaff, Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (October 1980). [&quot;Lucas Pseudoprimes&quot;](http://mpqs.free.fr/LucasPseudoprimes.pdf) (PDF). *Mathematics of Computation*. **35** (152): 1391–1417. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-1980-0583518-6](https://doi.org/10.1090%2FS0025-5718-1980-0583518-6). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2006406](https://www.jstor.org/stable/2006406). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [0583518](https://mathscinet.ams.org/mathscinet-getitem?mr=0583518).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-2) [4](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bressoud_2-3)  [David Bressoud](https://en.wikipedia.org/wiki/David_Bressoud); [Stan Wagon](https://en.wikipedia.org/wiki/Stan_Wagon) (2000). [*A Course in Computational Number Theory*](https://archive.org/details/courseincomputat0000bres). New York: Key College Publishing in cooperation with Springer. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-1-930190-10-8](https://en.wikipedia.org/wiki/Special:BookSources/978-1-930190-10-8).
+3. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-CrandallPomerance_3-2)  [Richard E. Crandall](https://en.wikipedia.org/wiki/Richard_Crandall); [Carl Pomerance](https://en.wikipedia.org/wiki/Carl_Pomerance) (2005). *Prime numbers: A computational perspective* (2nd ed.). [Springer-Verlag](https://en.wikipedia.org/wiki/Springer-Verlag). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-25282-7](https://en.wikipedia.org/wiki/Special:BookSources/0-387-25282-7).
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-1) [3](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Ribenboim_4-2)  [Paulo Ribenboim](https://en.wikipedia.org/wiki/Paulo_Ribenboim) (1996). *The New Book of Prime Number Records*. [Springer-Verlag](https://en.wikipedia.org/wiki/Springer-Verlag). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94457-5](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94457-5).
+5. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-PSW_5-0) [Carl Pomerance](https://en.wikipedia.org/wiki/Carl_Pomerance); [John L. Selfridge](https://en.wikipedia.org/wiki/John_L._Selfridge); [Samuel S. Wagstaff, Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (July 1980). [&quot;The pseudoprimes to 25·109&quot;](https://math.dartmouth.edu/~carlp/PDF/paper25.pdf) (PDF). *Mathematics of Computation*. **35** (151): 1003–1026. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-1980-0572872-7](https://doi.org/10.1090%2FS0025-5718-1980-0572872-7). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2006210](https://www.jstor.org/stable/2006210).
+6. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-ExtraStrong_6-0) Mo, Zheiyu; Jones, James P. *A new primality test using Lucas sequences* (preprint). cited in Grantham, Jon (1998). [&quot;A Probable Prime Test With High Confidence&quot;](https://les-mathematiques.net/vanilla/uploads/editor/ix/sp1k717k3k9a.pdf) (PDF). *Journal of Number Theory*. **72** (1) NT982247: 32–47. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1903.06823](https://arxiv.org/abs/1903.06823). [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.56.8827](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.8827). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1006/jnth.1998.2247](https://doi.org/10.1006%2Fjnth.1998.2247). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119640473](https://api.semanticscholar.org/CorpusID:119640473). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+7. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-FrobeniusPSP_7-0) Grantham, Jon (2001). [&quot;Frobenius Pseudoprimes&quot;](http://www.pseudoprime.com/pseudo1.ps). *Mathematics of Computation*. **70** (234): 873–891. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1903.06820](https://arxiv.org/abs/1903.06820). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2001MaCom..70..873G](https://ui.adsabs.harvard.edu/abs/2001MaCom..70..873G). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0025-5718-00-01197-2](https://doi.org/10.1090%2FS0025-5718-00-01197-2). [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1680879](https://mathscinet.ams.org/mathscinet-getitem?mr=1680879).
+8. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-bpsw2_8-0) Baillie, Robert; Fiori, Andrew; [Wagstaff, Samuel S. Jr.](https://en.wikipedia.org/wiki/Samuel_S._Wagstaff,_Jr.) (July 2021). &quot;Strengthening the Baillie-PSW Primality Test&quot;. *Mathematics of Computation*. **90** (330): 1931–1955. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[2006.14425](https://arxiv.org/abs/2006.14425). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/mcom/3616](https://doi.org/10.1090%2Fmcom%2F3616). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [220055722](https://api.semanticscholar.org/CorpusID:220055722).
+9. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-9) F. Arnault (April 1997). &quot;The Rabin-Monier Theorem for Lucas Pseudoprimes&quot;. *Mathematics of Computation*. **66** (218): 869–881. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.192.4789](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.192.4789). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/s0025-5718-97-00836-3](https://doi.org/10.1090%2Fs0025-5718-97-00836-3). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+10. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-FibonacciPSP_10-0) Adina Di Porto; Piero Filipponi (1989). [&quot;More on the Fibonacci Pseudoprimes&quot;](https://www.fq.math.ca/Issues/27-3.pdf) (PDF). *Fibonacci Quarterly*. **27** (3): 232–242. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1989.12429564](https://doi.org/10.1080%2F00150517.1989.12429564).
+11. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-11) Di Porto, Adina; Filipponi, Piero; Montolivo, Emilio (1990). &quot;On the generalized Fibonacci pseudoprimes&quot;. *Fibonacci Quarterly*. **28** (4): 347–354. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.388.4993](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.388.4993). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1990.12429473](https://doi.org/10.1080%2F00150517.1990.12429473). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+12. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-12) [V. E. Hoggatt, Jr.](https://en.wikipedia.org/wiki/Verner_Emil_Hoggatt_Jr.); Marjorie Bicknell (September 1974). &quot;Some Congruences of the Fibonacci Numbers Modulo a Prime p&quot;. *Mathematics Magazine*. **47** (4): 210–214. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2689212](https://doi.org/10.2307%2F2689212). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2689212](https://www.jstor.org/stable/2689212).
+13. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-13) David Singmaster (1983). &quot;Some Lucas Pseudoprimes&quot;. *Abstracts Amer. Math. Soc*. **4** (83T–10–146): 197.
+14. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-14) [&quot;Pseudoprime Statistics and Tables&quot;](http://ntheory.org/pseudoprimes.html). Retrieved 5 May 2019.
+15. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Bruckman_15-0) P. S. Bruckman (1994). &quot;Lucas Pseudoprimes are odd&quot;. *Fibonacci Quarterly*. **32** (2): 155–157. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00150517.1994.12429240](https://doi.org/10.1080%2F00150517.1994.12429240).
+16. [↑](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-16) Di Porto, Adina (1993). &quot;Nonexistence of Even Fibonacci Pseudoprimes of the First Kind&quot;. *Fibonacci Quarterly*. **31**: 173–177. [CiteSeerX](https://en.wikipedia.org/wiki/CiteSeerX_(identifier)) [10.1.1.376.2601](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.376.2601). `{{cite journal}}`: Cite uses deprecated parameter `|citeseerx=` ([help](https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params))
+17. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Muller_17-0) [2](https://en.wikipedia.org/wiki/Lucas_pseudoprime#cite_ref-Muller_17-1) Müller, Winfried B.; Oswald, Alan (1993). &quot;Generalized Fibonacci Pseudoprimes and Probable Primes&quot;. In G.E. Bergum; et al. (eds.). *Applications of Fibonacci Numbers*. Vol. 5. Kluwer. pp. 459–464. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-94-011-2058-6_45](https://doi.org/10.1007%2F978-94-011-2058-6_45).
+</pre></article><article id="section-0012"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;action=edit&amp;section=10)]
+- Anderson, Peter G. [Fibonacci Pseudoprimes, their factors, and their entry points.](http://www.cs.rit.edu/usr/local/pub/pga/fpp_and_entry_pts)
+- Anderson, Peter G. [Fibonacci Pseudoprimes under 2,217,967,487 and their factors.](http://www.cs.rit.edu/usr/local/pub/pga/fibonacci_pp)
+- Jacobsen, Dana [Pseudoprime Statistics, Tables, and Data](http://ntheory.org/pseudoprimes.html) (data for Lucas, Strong Lucas, AES Lucas, ES Lucas pseudoprimes below 1014; Fibonacci and Pell pseudoprimes below 1012)
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Fibonacci Pseudoprime&quot;](https://mathworld.wolfram.com/FibonacciPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/LucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Strong Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/StrongLucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Extra Strong Lucas Pseudoprime&quot;](https://mathworld.wolfram.com/ExtraStrongLucasPseudoprime.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Classes_of_natural_numbers)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Classes_of_natural_numbers)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Classes_of_natural_numbers)
+Classes of [natural numbers](https://en.wikipedia.org/wiki/Natural_number)         Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;oldid=1334569563](https://en.wikipedia.org/w/index.php?title=Lucas_pseudoprime&amp;oldid=1334569563)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fibonacci numbers](https://en.wikipedia.org/wiki/Category:Fibonacci_numbers)
+- [Pseudoprimes](https://en.wikipedia.org/wiki/Category:Pseudoprimes)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [CS1 errors: deprecated parameters](https://en.wikipedia.org/wiki/Category:CS1_errors:_deprecated_parameters)
+
+    [https://en\.wikipedia\.org/wiki/Lucas\_pseudoprime?action=edit](https://en.wikipedia.org/wiki/Lucas_pseudoprime?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Hausdorff dimension - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Hausdorff dimension - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Hausdorff_dimension</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T06:02:54.445Z</div><div class="stat"><b>Records</b><br>25</div><div class="stat"><b>Sections</b><br>19</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 261 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 46990 B · ~11674 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 64155 B · ~16018 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 411 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Hausdorff dimension.md</code></a> <small>markdown · 8084 B · ~1996 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Intuition.md</code></a> <small>markdown · 5015 B · ~1254 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Formal definition.md</code></a> <small>markdown · 1735 B · ~428 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Hausdorff dimension.md</code></a> <small>markdown · 815 B · ~202 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Hausdorff content.md</code></a> <small>markdown · 1125 B · ~277 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Examples.md</code></a> <small>markdown · 3847 B · ~961 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Properties of Hausdorff dimension.md</code></a> <small>markdown · 932 B · ~233 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Hausdorff dimension and inductive dimension.md</code></a> <small>markdown · 1368 B · ~339 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Hausdorff dimension and Minkowski dimension.md</code></a> <small>markdown · 589 B · ~148 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Hausdorff dimensions and Frostman measures.md</code></a> <small>markdown · 723 B · ~179 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Behaviour under unions and products.md</code></a> <small>markdown · 1378 B · ~340 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Self-similar sets.md</code></a> <small>markdown · 2401 B · ~598 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-The open set condition.md</code></a> <small>markdown · 2207 B · ~547 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-The Moran Equation.md</code></a> <small>markdown · 1014 B · ~253 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-See also.md</code></a> <small>markdown · 684 B · ~171 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-References.md</code></a> <small>markdown · 7029 B · ~1748 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-Further reading.md</code></a> <small>markdown · 4630 B · ~1153 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-External links.md</code></a> <small>markdown · 2977 B · ~745 tok</small></li><li><a href="#art-0023"><code>artifacts/provenance/source-record.json</code></a> <small>json · 395 B · ~99 tok</small></li><li><a href="#art-0024"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0025"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Hausdorff dimension - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Hausdorff_dimension
+captured_at: 2026-09-30T06:02:54.445Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 25
+artifact_count: 25
+content_sha256: 8ae3859ce86fb8794d38d873459e29a7e7f0b17ee61dca25531b2af292bca5a0
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:261,&quot;sha256&quot;:&quot;66af1f0dfd2fd659775353273f2351c39481e53adb8281fa4adfbd2604cc3175&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t06&quot;,&quot;445z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;dimension&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:46990,&quot;sha256&quot;:&quot;8ae3859ce86fb8794d38d873459e29a7e7f0b17ee61dca25531b2af292bca5a0&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;dimension&quot;,&quot;hausdorff&quot;,&quot;hausdorff_dimension&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Hausdorff dimension - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:11674,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:64155,&quot;sha256&quot;:&quot;118eda4e3117a3b8ac7673bbfd00c024af643690a58fc172a3fdb6afed0ba584&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;org&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:16018,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:411,&quot;sha256&quot;:&quot;7eac3f578b929b3179283d43c6bab2e171c04c8eb86af8d3b8996da8e1306389&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Hausdorff dimension.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8084,&quot;sha256&quot;:&quot;2d3a5ee948d21468f358c830d670c8dca75a41fe20efe207120175a8d6607cb4&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;dimension&quot;,&quot;hausdorff&quot;,&quot;each&quot;,&quot;iteration&quot;],&quot;summary&quot;:&quot;Hausdorff dimension&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1996,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Intuition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5015,&quot;sha256&quot;:&quot;e1bca4f09d9e03ce5bf4a00b5843c75b07e57b86051b113393e4ce9a44bcce15&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;dimension&quot;,&quot;one&quot;,&quot;shapes&quot;,&quot;hausdorff&quot;],&quot;summary&quot;:&quot;Intuition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1254,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Formal definition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1735,&quot;sha256&quot;:&quot;fc002a2f753ca9d7386e64394da97225fe2f68052e7b1ae3df245a37a7ec4d3f&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;displaystyle&quot;,&quot;wiki&quot;,&quot;measure&quot;,&quot;hausdorff&quot;,&quot;delta&quot;],&quot;summary&quot;:&quot;Formal definition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:428,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Hausdorff dimension.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:815,&quot;sha256&quot;:&quot;c248ac57bb0f2b71b821859e6a5a7413d0d2a4a67de20894aed33e4cf4cb2699&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;hausdorff&quot;,&quot;dim&quot;,&quot;dimension&quot;,&quot;edit&quot;,&quot;https&quot;,&quot;inf&quot;,&quot;operatorname&quot;],&quot;summary&quot;:&quot;Hausdorff dimension&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:202,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Hausdorff content.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1125,&quot;sha256&quot;:&quot;d5b43578e8dd0dd6d109ddd44966b5900a3128b4a175aca81c0ca16c4063c772&quot;,&quot;keywords&quot;:[&quot;hausdorff&quot;,&quot;displaystyle&quot;,&quot;content&quot;,&quot;inf&quot;,&quot;infty&quot;,&quot;https&quot;,&quot;measure&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Hausdorff content&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:277,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3847,&quot;sha256&quot;:&quot;8974dfe107552603f918054d2c0774a229aa9732d2ae3de035ebd8d12086ce4a&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;dimension&quot;,&quot;hausdorff&quot;,&quot;hausdorff_dimension&quot;,&quot;svg&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:961,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Properties of Hausdorff dimension.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:932,&quot;sha256&quot;:&quot;914a00e0059f3717929e311a44c311f63a77d2f61645fcedbef9eabc2885ad4f&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;help&quot;,&quot;section&quot;,&quot;svg&quot;,&quot;citations&quot;],&quot;summary&quot;:&quot;Properties of Hausdorff dimension&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:233,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Hausdorff dimension and inductive dimension.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1368,&quot;sha256&quot;:&quot;01e75e70ca24d3d994db48ab1a0e0581b9d20a688dccea0b1f15df16aeeb14d2&quot;,&quot;keywords&quot;:[&quot;dim&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;dimension&quot;,&quot;ind&quot;,&quot;haus&quot;],&quot;summary&quot;:&quot;Hausdorff dimension and inductive dimension&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:339,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Hausdorff dimension and Minkowski dimension.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:589,&quot;sha256&quot;:&quot;e580ffcd6ddd219b7c127038e4b92a6879201558ef84a61d4bd6e1cbcfeafe1c&quot;,&quot;keywords&quot;:[&quot;dimension&quot;,&quot;hausdorff&quot;,&quot;minkowski&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;edit&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Hausdorff dimension and Minkowski dimension&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:148,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Hausdorff dimensions and Frostman measures.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:723,&quot;sha256&quot;:&quot;e680b9bdf42470981c1692e3e276063f4832dd1f4551883ec3d9f7fc07027c8d&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;frostman&quot;,&quot;dimensions&quot;,&quot;edit&quot;,&quot;hausdorff&quot;],&quot;summary&quot;:&quot;Hausdorff dimensions and Frostman measures&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:179,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Behaviour under unions and products.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1378,&quot;sha256&quot;:&quot;b0a91ab6ef3a3b9fe2f158d32aaa338cd83c0c1843d6acc1dba1a3433aa3f24c&quot;,&quot;keywords&quot;:[&quot;dim&quot;,&quot;haus&quot;,&quot;dimension&quot;,&quot;operatorname&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;displaystyle&quot;],&quot;summary&quot;:&quot;Behaviour under unions and products&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:340,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Self-similar sets.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2401,&quot;sha256&quot;:&quot;b1d4ed4c5778b04a531cdb516777e16142fa7f49b79e925ea1462a9417455a11&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;hausdorff_dimension&quot;,&quot;help&quot;,&quot;section&quot;,&quot;self-similar&quot;],&quot;summary&quot;:&quot;Self-similar sets&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:598,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-The open set condition.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2207,&quot;sha256&quot;:&quot;cd90bae2b711ec6c668e31e96c699375a943ff4278e9e7b649a2c0396c4b0bb4&quot;,&quot;keywords&quot;:[&quot;set&quot;,&quot;condition&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;open&quot;,&quot;wiki&quot;,&quot;psi&quot;],&quot;summary&quot;:&quot;The open set condition&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:547,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-The Moran Equation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1014,&quot;sha256&quot;:&quot;ed7eeebc3fae9a87801a90769158e169031c1ba1262a4e8cf09c5e0f59ea1bf3&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;equation&quot;,&quot;wiki&quot;,&quot;moran&quot;,&quot;dimension&quot;],&quot;summary&quot;:&quot;The Moran Equation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:253,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:684,&quot;sha256&quot;:&quot;f58871eab694fdfea6e7147b5b006cb0989a09c609ed3cf61649ecc935a9dbfc&quot;,&quot;keywords&quot;:[&quot;dimension&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;fractals&quot;,&quot;also&quot;,&quot;edit&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:171,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7029,&quot;sha256&quot;:&quot;f62c8d6f0f4a7950d4f35e9076baa26999d2cb937fc2eaca4da79db18ab8fe01&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;hausdorff_dimension&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;arxiv&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1748,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-Further reading.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4630,&quot;sha256&quot;:&quot;ef7306b0ddd7c624747b7e384edcf8db70666d54c36df94a300c934a02164549&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;doi_&quot;,&quot;dimension&quot;],&quot;summary&quot;:&quot;Further reading&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1153,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2977,&quot;sha256&quot;:&quot;b0f3782e3e07f4956230caf057fb6046e21ba61b4ed75ceb34d51661f5165ad4&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;category&quot;,&quot;articles&quot;,&quot;fractals&quot;,&quot;dimension&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:745,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0023&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:395,&quot;sha256&quot;:&quot;c745c507f5af9ddd798817df1f76e34b68a0763c1ffb39dd3c069c20ee48ce47&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;hausdorff_dimension&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t06&quot;,&quot;445z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0023&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:99,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0024&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;275cbd835049d0dc4a2bd7746ea01d86e75fdca3068ad923be16efdd4e212952&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;425&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0024&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0025&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T06:02:54.445Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	261	66af1f0dfd2fd659775353273f2351c39481e53adb8281fa4adfbd2604cc3175	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	11674	46990	8ae3859ce86fb8794d38d873459e29a7e7f0b17ee61dca25531b2af292bca5a0	Hausdorff dimension - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	16018	64155	118eda4e3117a3b8ac7673bbfd00c024af643690a58fc172a3fdb6afed0ba584	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	411	7eac3f578b929b3179283d43c6bab2e171c04c8eb86af8d3b8996da8e1306389	Introduction	
+sec:0005	section	artifacts/sections/0002-Hausdorff dimension.md	primary	1996	8084	2d3a5ee948d21468f358c830d670c8dca75a41fe20efe207120175a8d6607cb4	Hausdorff dimension	
+sec:0006	section	artifacts/sections/0003-Intuition.md	primary	1254	5015	e1bca4f09d9e03ce5bf4a00b5843c75b07e57b86051b113393e4ce9a44bcce15	Intuition	
+sec:0007	section	artifacts/sections/0004-Formal definition.md	primary	428	1735	fc002a2f753ca9d7386e64394da97225fe2f68052e7b1ae3df245a37a7ec4d3f	Formal definition	
+sec:0008	section	artifacts/sections/0005-Hausdorff dimension.md	primary	202	815	c248ac57bb0f2b71b821859e6a5a7413d0d2a4a67de20894aed33e4cf4cb2699	Hausdorff dimension	
+sec:0009	section	artifacts/sections/0006-Hausdorff content.md	primary	277	1125	d5b43578e8dd0dd6d109ddd44966b5900a3128b4a175aca81c0ca16c4063c772	Hausdorff content	
+sec:0010	section	artifacts/sections/0007-Examples.md	primary	961	3847	8974dfe107552603f918054d2c0774a229aa9732d2ae3de035ebd8d12086ce4a	Examples	
+sec:0011	section	artifacts/sections/0008-Properties of Hausdorff dimension.md	primary	233	932	914a00e0059f3717929e311a44c311f63a77d2f61645fcedbef9eabc2885ad4f	Properties of Hausdorff dimension	
+sec:0012	section	artifacts/sections/0009-Hausdorff dimension and inductive dimension.md	supporting	339	1368	01e75e70ca24d3d994db48ab1a0e0581b9d20a688dccea0b1f15df16aeeb14d2	Hausdorff dimension and inductive dimension	
+sec:0013	section	artifacts/sections/0010-Hausdorff dimension and Minkowski dimension.md	supporting	148	589	e580ffcd6ddd219b7c127038e4b92a6879201558ef84a61d4bd6e1cbcfeafe1c	Hausdorff dimension and Minkowski dimension	
+sec:0014	section	artifacts/sections/0011-Hausdorff dimensions and Frostman measures.md	supporting	179	723	e680b9bdf42470981c1692e3e276063f4832dd1f4551883ec3d9f7fc07027c8d	Hausdorff dimensions and Frostman measures	
+sec:0015	section	artifacts/sections/0012-Behaviour under unions and products.md	supporting	340	1378	b0a91ab6ef3a3b9fe2f158d32aaa338cd83c0c1843d6acc1dba1a3433aa3f24c	Behaviour under unions and products	
+sec:0016	section	artifacts/sections/0013-Self-similar sets.md	supporting	598	2401	b1d4ed4c5778b04a531cdb516777e16142fa7f49b79e925ea1462a9417455a11	Self-similar sets	
+sec:0017	section	artifacts/sections/0014-The open set condition.md	supporting	547	2207	cd90bae2b711ec6c668e31e96c699375a943ff4278e9e7b649a2c0396c4b0bb4	The open set condition	
+sec:0018	section	artifacts/sections/0015-The Moran Equation.md	supporting	253	1014	ed7eeebc3fae9a87801a90769158e169031c1ba1262a4e8cf09c5e0f59ea1bf3	The Moran Equation	
+sec:0019	section	artifacts/sections/0016-See also.md	supporting	171	684	f58871eab694fdfea6e7147b5b006cb0989a09c609ed3cf61649ecc935a9dbfc	See also	
+sec:0020	section	artifacts/sections/0017-References.md	supporting	1748	7029	f62c8d6f0f4a7950d4f35e9076baa26999d2cb937fc2eaca4da79db18ab8fe01	References	
+sec:0021	section	artifacts/sections/0018-Further reading.md	supporting	1153	4630	ef7306b0ddd7c624747b7e384edcf8db70666d54c36df94a300c934a02164549	Further reading	
+sec:0022	section	artifacts/sections/0019-External links.md	supporting	745	2977	b0f3782e3e07f4956230caf057fb6046e21ba61b4ed75ceb34d51661f5165ad4	External links	
+art:0023	provenance	artifacts/provenance/source-record.json	supporting	99	395	c745c507f5af9ddd798817df1f76e34b68a0763c1ffb39dd3c069c20ee48ce47	Capture source identity and metadata	
+art:0024	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	275cbd835049d0dc4a2bd7746ea01d86e75fdca3068ad923be16efdd4e212952	Extraction engine and counts	
+art:0025	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Hausdorff_dimension#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Hausdorff dimension
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A8%D8%B9%D8%AF_%D9%87%D8%A7%D9%88%D8%B3%D8%AF%D9%88%D8%B1%D9%81)
+- [Български](https://bg.wikipedia.org/wiki/%D0%A5%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%BE%D0%B2%D0%B0_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D1%81%D1%82)
+- [Català](https://ca.wikipedia.org/wiki/Dimensi%C3%B3_de_Hausdorff-Bezik%C3%B3vitx)
+- [Čeština](https://cs.wikipedia.org/wiki/Hausdorffova_m%C3%ADra)
+- [Deutsch](https://de.wikipedia.org/wiki/Hausdorff-Dimension)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%94%CE%B9%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7_%CE%A7%CE%AC%CE%BF%CF%85%CF%83%CE%BD%CF%84%CE%BF%CF%81%CF%86)
+- [Español](https://es.wikipedia.org/wiki/Dimensi%C3%B3n_de_Hausdorff-Besicovitch)
+- [Suomi](https://fi.wikipedia.org/wiki/Hausdorffin_dimensio)
+- [Français](https://fr.wikipedia.org/wiki/Dimension_de_Hausdorff)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%9E%D7%93_%D7%94%D7%90%D7%95%D7%A1%D7%93%D7%95%D7%A8%D7%A3)
+- [Magyar](https://hu.wikipedia.org/wiki/Hausdorff-dimenzi%C3%B3)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Dimensi_Hausdorff)
+- [Italiano](https://it.wikipedia.org/wiki/Dimensione_di_Hausdorff)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%89%E3%83%AB%E3%83%95%E6%AC%A1%E5%85%83)
+- [한국어](https://ko.wikipedia.org/wiki/%ED%95%98%EC%9A%B0%EC%8A%A4%EB%8F%84%EB%A5%B4%ED%94%84_%EC%B0%A8%EC%9B%90)
+- [Nederlands](https://nl.wikipedia.org/wiki/Hausdorff-dimensie)
+- [Polski](https://pl.wikipedia.org/wiki/Wymiar_Hausdorffa)
+- [Português](https://pt.wikipedia.org/wiki/Dimens%C3%A3o_de_Hausdorff)
+- [Română](https://ro.wikipedia.org/wiki/Dimensiune_Hausdorff)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%A5%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Hausdorffova_miera)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Hausdorff-Bezikovi%C4%8Deva_razse%C5%BEnost)
+- [Svenska](https://sv.wikipedia.org/wiki/Hausdorffdimension)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D0%BC%D1%96%D1%80%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%93%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [اردو](https://ur.wikipedia.org/wiki/%DB%81%D8%A7%D8%B3%DA%88%D8%A7%D8%B1%D9%81_%D8%A8%D9%8F%D8%B9%D8%AF)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/S%E1%BB%91_chi%E1%BB%81u_Hausdorff)
+- [中文](https://zh.wikipedia.org/wiki/%E8%B1%AA%E6%96%AF%E5%A4%9A%E5%A4%AB%E7%BB%B4%E6%95%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q565186#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Invariant measure of fractal dimension [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/KochFlake.svg/330px-KochFlake.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:KochFlake.svg)Example of non-integer dimensions. The first four [iterations](https://en.wikipedia.org/wiki/Iteration) of the [Koch curve](https://en.wikipedia.org/wiki/Koch_snowflake), where after each iteration, all original line segments are replaced with four, each a self-similar copy that is 1/3 the length of the original. One formalism of the Hausdorff dimension uses the scale factor (S = 3) and the number of self-similar objects (N = 4) to calculate the dimension, D, after the first iteration to be D = (log N)/(log S) = (log 4)/(log 3) ≈ 1.26.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1)
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), the **Hausdorff dimension** is a measure of *roughness*, or more specifically, [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension), that was introduced in 1918 by [mathematician](https://en.wikipedia.org/wiki/Mathematician) [Felix Hausdorff](https://en.wikipedia.org/wiki/Felix_Hausdorff).[[2]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-2) For instance, the Hausdorff dimension of a single [point](https://en.wikipedia.org/wiki/Point_(geometry)) is zero, of a [line segment](https://en.wikipedia.org/wiki/Line_segment) is 1, of a [square](https://en.wikipedia.org/wiki/Square) is 2, and of a [cube](https://en.wikipedia.org/wiki/Cube) is 3. That is, for sets of points that define a smooth shape or a shape that has a small number of corners—the shapes of traditional geometry and science—the Hausdorff dimension is an [integer](https://en.wikipedia.org/wiki/Integer) agreeing with the usual sense of dimension, also known as the [topological dimension](https://en.wikipedia.org/wiki/Inductive_dimension). However, formulas have also been developed that allow calculation of the dimension of other less simple objects, where, solely on the basis of their properties of [scaling](https://en.wikipedia.org/wiki/Scaling_(geometry)) and [self-similarity](https://en.wikipedia.org/wiki/Self-similarity), one is led to the conclusion that particular objects—including [fractals](https://en.wikipedia.org/wiki/Fractal)—have non-integer Hausdorff dimensions. Because of the significant technical advances made by [Abram Samoilovitch Besicovitch](https://en.wikipedia.org/wiki/Abram_Samoilovitch_Besicovitch) allowing computation of dimensions for highly irregular or &quot;rough&quot; sets, this dimension is also commonly referred to as the *Hausdorff–Besicovitch dimension.*
+
+More specifically, the Hausdorff dimension is a dimensional number associated with a [metric space](https://en.wikipedia.org/wiki/Metric_space), i.e. a set where the distances between all members are defined. The dimension is drawn from the [extended real numbers](https://en.wikipedia.org/wiki/Extended_real_number_line),        R  ¯     {\displaystyle {\overline {\mathbb {R} }}}  , as opposed to the more intuitive notion of dimension, which is not associated to general metric spaces, and only takes values in the non-negative integers.
+
+In mathematical terms, the Hausdorff dimension generalizes the notion of the dimension of a real [vector space](https://en.wikipedia.org/wiki/Vector_space). That is, the Hausdorff dimension of an *n*-dimensional [inner product space](https://en.wikipedia.org/wiki/Inner_product_space) equals *n*. This underlies the earlier statement that the Hausdorff dimension of a point is zero, of a line is one, etc., and that [irregular sets](https://en.wikipedia.org/wiki/Fractal) can have noninteger Hausdorff dimensions. For instance, the [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake) shown at right is constructed from an equilateral triangle; in each iteration, its component line segments are divided into 3 segments of unit length, the newly created middle segment is used as the base of a new [equilateral](https://en.wikipedia.org/wiki/Equilateral) triangle that points outward, and this base segment is then deleted to leave a final object from the iteration of unit length of 4.[[3]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-3) That is, after the first iteration, each original line segment has been replaced with N=4, where each self-similar copy is 1/S = 1/3 as long as the original.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1) Stated another way, we have taken an object with Euclidean dimension, D, and reduced its linear scale by 1/3 in each direction, so that its length increases to N=SD.[[4]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-ClaytonSCTPLS96-4) This equation is easily solved for D, yielding the ratio of logarithms (or [natural logarithms](https://en.wikipedia.org/wiki/Natural_logarithm)) appearing in the figures, and giving—in the Koch and other fractal cases—non-integer dimensions for these objects.
+
+The Hausdorff dimension is a successor to the simpler, but usually equivalent, box-counting or [Minkowski–Bouligand dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension).
+
+## Intuition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=1)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+The intuitive concept of dimension of a geometric object *X* is the number of independent parameters one needs to pick out a unique point inside. However, any point specified by two parameters can be instead specified by one, because the [cardinality](https://en.wikipedia.org/wiki/Cardinality) of the [real plane](https://en.wikipedia.org/wiki/Real_plane) is equal to the cardinality of the [real line](https://en.wikipedia.org/wiki/Real_line) (this can be seen by an [argument](https://en.wikipedia.org/wiki/Cantor&#39;s_diagonal_argument) involving interweaving the digits of two numbers to yield a single number encoding the same information). The example of a [space-filling curve](https://en.wikipedia.org/wiki/Space-filling_curve) shows that one can even map the real line to the real plane [surjectively](https://en.wikipedia.org/wiki/Surjective_function) (taking one real number into a pair of real numbers in a way so that all pairs of numbers are covered) and *continuously*, so that a one-dimensional object completely fills up a higher-dimensional object.
+
+Every space-filling curve hits some points multiple times and does not have a continuous inverse. It is impossible to map two dimensions onto one in a way that is continuous and continuously invertible. The topological dimension, also called [Lebesgue covering dimension](https://en.wikipedia.org/wiki/Lebesgue_covering_dimension), explains why. This dimension is the greatest integer *n* such that in every covering of *X* by small open balls there is at least one point where *n* + 1 balls overlap. For example, when one covers a line with short open intervals, some points must be covered twice, giving dimension *n* = 1.
+
+But topological dimension is a very crude measure of the local size of a space (size near a point). A curve that is almost space-filling can still have topological dimension one, even if it fills up most of the area of a region. A [fractal](https://en.wikipedia.org/wiki/Fractal) has an integer topological dimension, but in terms of the amount of space it takes up, it behaves like a higher-dimensional space.
+
+The Hausdorff dimension measures the local size of a space taking into account the distance between points, the [metric](https://en.wikipedia.org/wiki/Metric_space). Consider the number *N*(*r*) of [balls](https://en.wikipedia.org/wiki/Ball_(mathematics)) of radius at most *r* required to cover *X* completely. When *r* is very small, *N*(*r*) grows polynomially with 1/*r*. For a sufficiently well-behaved *X*, the Hausdorff dimension is the unique number *d* such that N(*r*) grows as 1/*rd* as *r* approaches zero. More precisely, this defines the [box-counting dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension), which equals the Hausdorff dimension when the value *d* is a critical boundary between growth rates that are insufficient to cover the space, and growth rates that are overabundant.
+
+For shapes that are smooth, or shapes with a small number of corners, the shapes of traditional geometry and science, the Hausdorff dimension is an integer agreeing with the topological dimension. But [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot) observed that [fractals](https://en.wikipedia.org/wiki/Fractal), sets with noninteger Hausdorff dimensions, are found everywhere in nature. He observed that the proper idealization of most rough shapes one sees is not in terms of smooth idealized shapes, but in terms of fractal idealized shapes:
+
+&gt; Clouds are not spheres, mountains are not cones, coastlines are not circles, and bark is not smooth, nor does lightning travel in a straight line.[5]
+
+For fractals that occur in nature, the Hausdorff and [box-counting dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension) coincide. The [packing dimension](https://en.wikipedia.org/wiki/Packing_dimension) is yet another similar notion which gives the same value for many shapes, but there are well-documented exceptions where all these dimensions differ.[*[examples needed](https://en.wikipedia.org/wiki/Wikipedia:AUDIENCE)*]
+
+## Formal definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=2)] Main article: [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure)
+
+The formal definition of the Hausdorff dimension is arrived at by defining first the d-dimensional [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure), a fractional-dimension analogue of the [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure). First, an [outer measure](https://en.wikipedia.org/wiki/Outer_measure) is constructed: Let     X   {\displaystyle X}   be a [metric space](https://en.wikipedia.org/wiki/Metric_space). If     S ⊂ X   {\displaystyle S\subset X}   and     d ∈ [ 0 , ∞ )   {\displaystyle d\in [0,\infty )}  ,
+
+      H  δ   d   ( S ) = inf  {   ∑  i = 1   ∞   ( diam ⁡  U  i    )  d   :  ⋃  i = 1   ∞    U  i   ⊇ S , diam ⁡  U  i   &lt; δ  }  ,   {\displaystyle H_{\delta }^{d}(S)=\inf \left\{\sum _{i=1}^{\infty }(\operatorname {diam} U_{i})^{d}:\bigcup _{i=1}^{\infty }U_{i}\supseteq S,\operatorname {diam} U_{i}&lt;\delta \right\},}
+
+where the [infimum](https://en.wikipedia.org/wiki/Infimum) is taken over all countable covers     U   {\displaystyle U}   of     S   {\displaystyle S}  . The Hausdorff d-dimensional outer measure is then defined as        H    d   ( S ) =  lim  δ → 0    H  δ   d   ( S )   {\displaystyle {\mathcal {H}}^{d}(S)=\lim _{\delta \to 0}H_{\delta }^{d}(S)}  , and the restriction of the mapping to [measurable sets](https://en.wikipedia.org/wiki/Non-measurable_set) justifies it as a measure, called the     d   {\displaystyle d}  -dimensional Hausdorff Measure.[[6]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-6)
+
+### Hausdorff dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=3)]
+
+The **Hausdorff dimension**      dim  H   ⁡  ( X )    {\displaystyle \dim _{\operatorname {H} }{(X)}}   of     X   {\displaystyle X}   is defined by
+
+      dim  H   ⁡  ( X )  := inf { d ≥ 0 :    H    d   ( X ) = 0 } .   {\displaystyle \dim _{\operatorname {H} }{(X)}:=\inf\{d\geq 0:{\mathcal {H}}^{d}(X)=0\}.}
+
+This is the same as the [supremum](https://en.wikipedia.org/wiki/Supremum) of the set of     d ∈ [ 0 , ∞ )   {\displaystyle d\in [0,\infty )}   such that the     d   {\displaystyle d}  -dimensional Hausdorff measure of     X   {\displaystyle X}   is infinite (except that when this latter set of numbers     d   {\displaystyle d}   is empty the Hausdorff dimension is zero).
+
+### Hausdorff content
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=4)]
+
+The     d   {\displaystyle d}  -dimensional **unlimited Hausdorff content** of     S   {\displaystyle S}   is defined by
+
+      C  H   d   ( S ) :=  H  ∞   d   ( S ) = inf  {   ∑  k = 1   ∞   ( diam ⁡  U  k    )  d   :  ⋃  k = 1   ∞    U  k   ⊇ S  }    {\displaystyle C_{H}^{d}(S):=H_{\infty }^{d}(S)=\inf \left\{\sum _{k=1}^{\infty }(\operatorname {diam} U_{k})^{d}:\bigcup _{k=1}^{\infty }U_{k}\supseteq S\right\}}
+
+In other words,      C  H   d   ( S )   {\displaystyle C_{H}^{d}(S)}   has the construction of the Hausdorff measure where the covering sets are allowed to have arbitrarily large sizes. (Here we use the standard convention that [inf ∅ = ∞   {\displaystyle \inf \varnothing =\infty }](https://en.wikipedia.org/wiki/Infimum).)[[7]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-7) The Hausdorff measure and the Hausdorff content can both be used to determine the dimension of a set, but if the measure of the set is non-zero, their actual values may disagree.
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=5)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Sierpinski_deep.svg/330px-Sierpinski_deep.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Sierpinski_deep.svg)Dimension of a further [fractal](https://en.wikipedia.org/wiki/Fractal) example. The [Sierpinski triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle), an object with Hausdorff dimension of log(3)/log(2)≈1.58.[[4]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-ClaytonSCTPLS96-4)
+- [Countable sets](https://en.wikipedia.org/wiki/Countable_set) have Hausdorff dimension 0.[[8]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-schleicher-8)
+- The [Euclidean space](https://en.wikipedia.org/wiki/Euclidean_space)       R   n     {\displaystyle \mathbb {R} ^{n}}   has Hausdorff dimension     n   {\displaystyle n}  , and the circle      S  1     {\displaystyle S^{1}}   has Hausdorff dimension 1.[[8]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-schleicher-8)
+- [Fractals](https://en.wikipedia.org/wiki/Fractal) often are spaces whose Hausdorff dimension strictly exceeds the [topological dimension](https://en.wikipedia.org/wiki/Topological_dimension).[[5]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-mandelbrot-5) For example, the [Cantor set](https://en.wikipedia.org/wiki/Cantor_set), a [zero-dimensional topological space](https://en.wikipedia.org/wiki/Zero-dimensional_space), is a union of two copies of itself, each copy shrunk by a factor 1/3; hence, it can be shown that its Hausdorff dimension is ln(2)/ln(3) ≈ 0.63.[[9]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-9) The [Sierpinski triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle) is a union of three copies of itself, each copy shrunk by a factor of 1/2; this yields a Hausdorff dimension of ln(3)/ln(2) ≈ 1.58.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1) These Hausdorff dimensions are related to the &quot;critical exponent&quot; of the [Master theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)) for solving [recurrence relations](https://en.wikipedia.org/wiki/Recurrence_relation) in the [analysis of algorithms](https://en.wikipedia.org/wiki/Analysis_of_algorithms).
+- [Space-filling curves](https://en.wikipedia.org/wiki/Space-filling_curve) like the [Peano curve](https://en.wikipedia.org/wiki/Peano_curve) have the same Hausdorff dimension as the space they fill.
+- Trajectories of [Brownian motion](https://en.wikipedia.org/wiki/Brownian_motion) through space of dimension 2 and above have Hausdorff dimension equal to 2 [almost surely](https://en.wikipedia.org/wiki/Almost_surely).[[10]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-10)
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Great_Britain_Hausdorff.svg/330px-Great_Britain_Hausdorff.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Great_Britain_Hausdorff.svg)Estimating the Hausdorff dimension of the [coast of Great Britain](https://en.wikipedia.org/wiki/How_Long_Is_the_Coast_of_Britain%3F_Statistical_Self-Similarity_and_Fractional_Dimension)
+- [Lewis Fry Richardson](https://en.wikipedia.org/wiki/Lewis_Fry_Richardson) performed detailed experiments to measure the approximate Hausdorff dimension for various coastlines. His results have varied from 1.02 for the coastline of [South Africa](https://en.wikipedia.org/wiki/South_Africa) to 1.25 for the west coast of [Great Britain](https://en.wikipedia.org/wiki/Great_Britain).[[5]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-mandelbrot-5)
+
+## Properties of Hausdorff dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=6)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+### Hausdorff dimension and inductive dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=7)]
+
+Let *X* be an arbitrary [separable](https://en.wikipedia.org/wiki/Separable_space) metric space. There is a [topological](https://en.wikipedia.org/wiki/Topology) notion of [inductive dimension](https://en.wikipedia.org/wiki/Inductive_dimension) for *X* which is defined recursively. It is always an integer (or +∞) and is denoted dimind(*X*).
+
+**Theorem**. Suppose *X* is non-empty. Then
+
+      dim   H a u s    ⁡ ( X ) ≥  dim  ind   ⁡ ( X ) .   {\displaystyle \dim _{\mathrm {Haus} }(X)\geq \dim _{\operatorname {ind} }(X).}
+
+Moreover,
+
+      inf  Y    dim  Haus   ⁡ ( Y ) =  dim  ind   ⁡ ( X ) ,   {\displaystyle \inf _{Y}\dim _{\operatorname {Haus} }(Y)=\dim _{\operatorname {ind} }(X),}
+
+where *Y* ranges over metric spaces [homeomorphic](https://en.wikipedia.org/wiki/Homeomorphic) to *X*. In other words, *X* and *Y* have the same underlying set of points and the metric *d**Y* of *Y* is topologically equivalent to *d**X*.
+
+These results were originally established by [Edward Szpilrajn](https://en.wikipedia.org/wiki/Edward_Szpilrajn) (1907–1976), e.g., see Hurewicz and Wallman, Chapter VII.[*[full citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#What_information_to_include)*]
+
+### Hausdorff dimension and Minkowski dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=8)]
+
+The [Minkowski dimension](https://en.wikipedia.org/wiki/Minkowski_dimension) is similar to, and at least as large as, the Hausdorff dimension, and they are equal in many situations. However, the set of [rational](https://en.wikipedia.org/wiki/Rational_number) points in [0, 1] has Hausdorff dimension zero and Minkowski dimension one. There are also compact sets for which the Minkowski dimension is strictly larger than the Hausdorff dimension.
+
+### Hausdorff dimensions and Frostman measures
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=9)]
+
+If there is a [measure](https://en.wikipedia.org/wiki/Measure_(mathematics)) μ defined on [Borel](https://en.wikipedia.org/wiki/Borel_measure) subsets of a metric space *X* such that *μ*(*X*) &gt; 0 and *μ*(*B*(*x*, *r*)) ≤ *rs* holds for some constant *s* &gt; 0 and for every ball *B*(*x*, *r*) in *X*, then dimHaus(*X*) ≥ *s*. A partial converse is provided by [Frostman&#39;s lemma](https://en.wikipedia.org/wiki/Frostman&#39;s_lemma).[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*][[11]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-11)
+
+### Behaviour under unions and products
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=10)]
+
+If     X =  ⋃  i ∈ I    X  i     {\displaystyle X=\bigcup _{i\in I}X_{i}}   is a finite or countable union, then
+
+      dim  Haus   ⁡ ( X ) =  sup  i ∈ I    dim  Haus   ⁡ (  X  i   ) .   {\displaystyle \dim _{\operatorname {Haus} }(X)=\sup _{i\in I}\dim _{\operatorname {Haus} }(X_{i}).}
+
+This can be verified directly from the definition.
+
+If *X* and *Y* are non-empty metric spaces, then the Hausdorff dimension of their product satisfies[[12]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-12)
+
+      dim  Haus   ⁡ ( X × Y ) ≥  dim  Haus   ⁡ ( X ) +  dim  Haus   ⁡ ( Y ) .   {\displaystyle \dim _{\operatorname {Haus} }(X\times Y)\geq \dim _{\operatorname {Haus} }(X)+\dim _{\operatorname {Haus} }(Y).}
+
+This inequality can be strict. It is possible to find two sets of dimension 0 whose product has dimension 1.[[13]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-13) In the opposite direction, it is known that when *X* and *Y* are Borel subsets of **R***n*, the Hausdorff dimension of *X* × *Y* is bounded from above by the Hausdorff dimension of *X* plus the [upper packing dimension](https://en.wikipedia.org/wiki/Packing_dimension) of *Y*. These facts are discussed in Mattila (1995).
+
+## Self-similar sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=11)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+Many sets defined by a self-similarity condition have dimensions which can be determined explicitly. Roughly, a set *E* is self-similar if it is the fixed point of a set-valued transformation ψ, that is ψ(*E*) = *E*, although the exact definition is given below.
+
+&gt; Theorem. Suppose
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;           ψ
+&gt;
+&gt;             i
+&gt;
+&gt;
+&gt;         :
+&gt;
+&gt;
+&gt;             R
+&gt;
+&gt;
+&gt;             n
+&gt;
+&gt;
+&gt;         →
+&gt;
+&gt;
+&gt;             R
+&gt;
+&gt;
+&gt;             n
+&gt;
+&gt;
+&gt;         ,
+&gt;
+&gt;         i
+&gt;         =
+&gt;         1
+&gt;         ,
+&gt;         …
+&gt;         ,
+&gt;         m
+&gt;
+&gt;
+&gt;     {\displaystyle \psi _{i}:\mathbf {R} ^{n}\rightarrow \mathbf {R} ^{n},\quad i=1,\ldots ,m}
+&gt;
+&gt;
+&gt;
+&gt; are each a contraction mapping on Rn with contraction constant ri &lt; 1. Then there is a unique non-empty compact set A such that
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;         A
+&gt;         =
+&gt;
+&gt;           ⋃
+&gt;
+&gt;             i
+&gt;             =
+&gt;             1
+&gt;
+&gt;
+&gt;             m
+&gt;
+&gt;
+&gt;
+&gt;           ψ
+&gt;
+&gt;             i
+&gt;
+&gt;
+&gt;         (
+&gt;         A
+&gt;         )
+&gt;         .
+&gt;
+&gt;
+&gt;     {\displaystyle A=\bigcup _{i=1}^{m}\psi _{i}(A).}
+&gt;
+&gt;
+&gt;
+
+The theorem follows from [Stefan Banach](https://en.wikipedia.org/wiki/Stefan_Banach)&#39;s [contractive mapping fixed point theorem](https://en.wikipedia.org/wiki/Contractive_mapping_theorem) applied to the complete metric space of non-empty compact subsets of **R***n* with the [Hausdorff distance](https://en.wikipedia.org/wiki/Hausdorff_distance).[[14]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-14)
+
+### The open set condition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=12)] Main article: [Open set condition](https://en.wikipedia.org/wiki/Open_set_condition)
+
+To determine the dimension of the self-similar set *A* (in certain cases), we need a technical condition called the *open set condition* (OSC) on the sequence of contractions ψ*i*.
+
+There is an open set *V* with compact closure, such that
+
+      ⋃  i = 1   m    ψ  i   ( V ) ⊆ V ,   {\displaystyle \bigcup _{i=1}^{m}\psi _{i}(V)\subseteq V,}
+
+where the sets in union on the left are pairwise [disjoint](https://en.wikipedia.org/wiki/Disjoint_sets).
+
+The open set condition is a separation condition that ensures the images ψ*i*(*V*) do not overlap &quot;too much&quot;.
+
+**Theorem**. Suppose the open set condition holds and each ψ*i* is a similitude, that is a composition of an [isometry](https://en.wikipedia.org/wiki/Isometry) and a [dilation](https://en.wikipedia.org/wiki/Dilation_(metric_space)) around some point. Then the unique fixed point of ψ is a set whose Hausdorff dimension is *s* where *s* is the unique solution of[[15]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-15)
+
+      ∑  i = 1   m    r  i   s   = 1.   {\displaystyle \sum _{i=1}^{m}r_{i}^{s}=1.}
+
+The contraction coefficient of a similitude is the magnitude of the dilation.
+
+In general, a set *E* which is carried onto itself by a mapping
+
+     A ↦ ψ ( A ) =  ⋃  i = 1   m    ψ  i   ( A )   {\displaystyle A\mapsto \psi (A)=\bigcup _{i=1}^{m}\psi _{i}(A)}
+
+is self-similar if and only if the intersections satisfy the following condition:
+
+      H  s    (   ψ  i   ( E ) ∩  ψ  j   ( E )  )  = 0 ,   {\displaystyle H^{s}\left(\psi _{i}(E)\cap \psi _{j}(E)\right)=0,}
+
+where *s* is the Hausdorff dimension of *E* and *Hs* denotes s-dimensional [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure). This is clear in the case of the [Sierpinski gasket](https://en.wikipedia.org/wiki/Sierpinski_gasket) (the intersections are just points), but is also true more generally:
+
+**Theorem**. Under the same conditions as the previous theorem, the unique fixed point of ψ is self-similar.
+
+## The Moran Equation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=13)]
+
+For self-similar sets satisfying the [Open set condition](https://en.wikipedia.org/wiki/Open_set_condition), the Hausdorff dimension     d   {\displaystyle d}   can be determined using the Moran equation. If a fractal is composed of     m   {\displaystyle m}   self-similar copies with contraction ratios      r  1   ,  r  2   , … ,  r  m     {\displaystyle r_{1},r_{2},\dots ,r_{m}}  , the dimension     d   {\displaystyle d}   is the unique positive solution to the equation:
+
+∑  i = 1   m    r  i   d   = 1   {\displaystyle \sum _{i=1}^{m}r_{i}^{d}=1}
+
+This framework is particularly useful for calculating the dimensions of fractals generated by [substitution tilings](https://en.wikipedia.org/wiki/Substitution_tiling), such as those based on the [metallic mean](https://en.wikipedia.org/wiki/Metallic_mean) family.[[16]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-16)
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=14)]
+- [List of fractals by Hausdorff dimension](https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension) Examples of deterministic fractals, random and natural fractals.
+- [Assouad dimension](https://en.wikipedia.org/wiki/Assouad_dimension), another variation of fractal dimension that, like Hausdorff dimension, is defined using coverings by balls
+- [Fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension)
+- [Intrinsic dimension](https://en.wikipedia.org/wiki/Intrinsic_dimension)
+- [Packing dimension](https://en.wikipedia.org/wiki/Packing_dimension)
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=15)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-1) [3](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-2) MacGregor Campbell, 2013, &quot;5.6 Scaling and the Hausdorff Dimension,&quot; at *Annenberg Learner:MATHematics illuminated*, see [http://www\.learner\.org/courses/mathilluminated/units/5/textbook/06\.php](http://www.learner.org/courses/mathilluminated/units/5/textbook/06.php), accessed 5 March 2015.
+2. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-2) Gneiting, Tilmann; Ševčíková, Hana; Percival, Donald B. (2012). &quot;Estimators of Fractal Dimension: Assessing the Roughness of Time Series and Spatial Data&quot;. *Statistical Science*. **27** (2): 247–277. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1101.1444](https://arxiv.org/abs/1101.1444). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1214/11-STS370](https://doi.org/10.1214%2F11-STS370). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [88512325](https://api.semanticscholar.org/CorpusID:88512325).
+3. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-3) Larry Riddle, 2014, &quot;Classic Iterated Function Systems: Koch Snowflake&quot;, Agnes Scott College e-Academy (online), see [http://ecademy\.agnesscott\.edu/~lriddle/ifs/ksnow/ksnow\.htm](http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/ksnow.htm), accessed 5 March 2015.
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-ClaytonSCTPLS96_4-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-ClaytonSCTPLS96_4-1) Keith Clayton, 1996, &quot;Fractals and the Fractal Dimension,&quot; *Basic Concepts in Nonlinear Dynamics and Chaos* (workshop), Society for Chaos Theory in Psychology and the Life Sciences annual meeting, June 28, 1996, Berkeley, California, see [https://www\.vanderbilt\.edu/AnS/psychology/cogsci/chaos/workshop/Workshop\.html](https://www.vanderbilt.edu/AnS/psychology/cogsci/chaos/workshop/Workshop.html), accessed 5 March 2015.
+5. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-1) [3](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-2) [Mandelbrot, Benoît](https://en.wikipedia.org/wiki/Benoit_Mandelbrot) (1982). [*The Fractal Geometry of Nature*](https://archive.org/details/fractalgeometryo00beno). Lecture notes in mathematics 1358. W. H. Freeman. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-7167-1186-9](https://en.wikipedia.org/wiki/Special:BookSources/0-7167-1186-9).
+6. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-6) Briggs, Jimmy; Tyree, Tim (3 December 2016). [&quot;Hausdorff Measure&quot;](https://sites.math.washington.edu/~farbod/teaching/cornell/math6210pdf/math6210Hausdorff.pdf) (PDF). University of Washington. Retrieved 3 February 2022.
+7. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-7) Farkas, Abel; Fraser, Jonathan (30 July 2015). &quot;On the equality of Hausdorff measure and Hausdorff content&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1411.0867](https://arxiv.org/abs/1411.0867) [[math.MG](https://arxiv.org/archive/math.MG)].
+8. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-schleicher_8-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-schleicher_8-1) Schleicher, Dierk (June 2007). &quot;Hausdorff Dimension, Its Properties, and Its Surprises&quot;. *The American Mathematical Monthly*. **114** (6): 509–528. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math/0505099](https://arxiv.org/abs/math/0505099). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00029890.2007.11920440](https://doi.org/10.1080%2F00029890.2007.11920440). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0002-9890](https://search.worldcat.org/issn/0002-9890). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [9811750](https://api.semanticscholar.org/CorpusID:9811750).
+9. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-9) Falconer, Kenneth (2003). *Fractal Geometry: Mathematical Foundations and Applications* (2nd ed.). [John Wiley and Sons](https://en.wikipedia.org/wiki/John_Wiley_and_Sons).
+10. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-10) Morters, Peres (2010). *Brownian Motion*. [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press).
+11. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-11) This Wikipedia article also discusses further useful characterizations of the Hausdorff dimension.[*[clarification needed](https://en.wikipedia.org/wiki/Wikipedia:Please_clarify)*]
+12. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-12) Marstrand, J. M. (1954). &quot;The dimension of Cartesian product sets&quot;. *Proc. Cambridge Philos. Soc*. **50** (3): 198–202. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1954PCPS...50..198M](https://ui.adsabs.harvard.edu/abs/1954PCPS...50..198M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S0305004100029236](https://doi.org/10.1017%2FS0305004100029236). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122475292](https://api.semanticscholar.org/CorpusID:122475292).
+13. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-13) Falconer, Kenneth J. (2003). *Fractal geometry. Mathematical foundations and applications*. John Wiley &amp; Sons, Inc., Hoboken, New Jersey.
+14. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-14) Falconer, K. J. (1985). &quot;Theorem 8.3&quot;. *The Geometry of Fractal Sets*. Cambridge, UK: Cambridge University Press. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-521-25694-1](https://en.wikipedia.org/wiki/Special:BookSources/0-521-25694-1).
+15. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-15) Hutchinson, John E. (1981). [&quot;Fractals and self similarity&quot;](https://doi.org/10.1512%2Fiumj.1981.30.30055). *Indiana Univ. Math. J*. **30** (5): 713–747. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1512/iumj.1981.30.30055](https://doi.org/10.1512%2Fiumj.1981.30.30055).
+16. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-16) Moran, P. A. P. (1946). [&quot;Additive functions of intervals and Hausdorff measure&quot;](https://www.cambridge.org/core/journals/mathematical-proceedings-of-the-cambridge-philosophical-society/article/abs/additive-functions-of-intervals-and-hausdorff-measure/B4E9A28A8A8A1A9A9A9A9A9A9A9A9A9). *Mathematical Proceedings of the Cambridge Philosophical Society*. **42** (1): 15–23. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S030500410002272X](https://doi.org/10.1017%2FS030500410002272X).
+
+## Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=16)]
+- Dodson, M. Maurice; Kristensen, Simon (June 12, 2003). &quot;Hausdorff Dimension and Diophantine Approximation&quot;. *Fractal Geometry and Applications: A Jubilee of Benoît Mandelbrot*. Proceedings of Symposia in Pure Mathematics. Vol. 72. pp. 305–347. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math/0305399](https://arxiv.org/abs/math/0305399). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2003math......5399D](https://ui.adsabs.harvard.edu/abs/2003math......5399D). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/pspum/072.1/2112110](https://doi.org/10.1090%2Fpspum%2F072.1%2F2112110). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [9780821836378](https://en.wikipedia.org/wiki/Special:BookSources/9780821836378). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119613948](https://api.semanticscholar.org/CorpusID:119613948).
+- [Hurewicz, Witold](https://en.wikipedia.org/wiki/Witold_Hurewicz); [Wallman, Henry](https://en.wikipedia.org/wiki/Henry_Wallman) (1948). [*Dimension Theory*](https://archive.org/details/in.ernet.dli.2015.84609). Princeton University Press.
+- [E. Szpilrajn](https://en.wikipedia.org/wiki/Edward_Marczewski) (1937). [&quot;La dimension et la mesure&quot;](https://doi.org/10.4064%2Ffm-28-1-81-89). *Fundamenta Mathematicae*. **28**: 81–9. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.4064/fm-28-1-81-89](https://doi.org/10.4064%2Ffm-28-1-81-89).
+- Marstrand, J. M. (1954). &quot;The dimension of cartesian product sets&quot;. *Proc. Cambridge Philos. Soc*. **50** (3): 198–202. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1954PCPS...50..198M](https://ui.adsabs.harvard.edu/abs/1954PCPS...50..198M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S0305004100029236](https://doi.org/10.1017%2FS0305004100029236). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122475292](https://api.semanticscholar.org/CorpusID:122475292).
+- [Mattila, Pertti](https://en.wikipedia.org/wiki/Pertti_Mattila) (1995). *Geometry of sets and measures in Euclidean spaces*. [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-521-65595-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-521-65595-8).
+- [A. S. Besicovitch](https://en.wikipedia.org/wiki/A._S._Besicovitch) (1929). &quot;On Linear Sets of Points of Fractional Dimensions&quot;. *[Mathematische Annalen](https://en.wikipedia.org/wiki/Mathematische_Annalen)*. **101** (1): 161–193. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01454831](https://doi.org/10.1007%2FBF01454831). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [125368661](https://api.semanticscholar.org/CorpusID:125368661).
+- [A. S. Besicovitch](https://en.wikipedia.org/wiki/A._S._Besicovitch); [H. D. Ursell](https://en.wikipedia.org/wiki/H._D._Ursell) (1937). &quot;Sets of Fractional Dimensions&quot;. *Journal of the London Mathematical Society*. **12** (1): 18–25. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1112/jlms/s1-12.45.18](https://doi.org/10.1112%2Fjlms%2Fs1-12.45.18).
+Several selections from this volume are reprinted in Edgar, Gerald A. (1993). *Classics on fractals*. Boston: Addison-Wesley. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-201-58701-7](https://en.wikipedia.org/wiki/Special:BookSources/0-201-58701-7). See chapters 9,10,11
+- [F. Hausdorff](https://en.wikipedia.org/wiki/F._Hausdorff) (March 1919). [&quot;Dimension und äußeres Maß&quot;](https://dml.cz/bitstream/handle/10338.dmlcz/100363/CzechMathJ_09-1959-3_5.pdf) (PDF). *Mathematische Annalen*. **79** (1–2): 157–179. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01457179](https://doi.org/10.1007%2FBF01457179). [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[10338.dmlcz/100363](https://hdl.handle.net/10338.dmlcz%2F100363). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122001234](https://api.semanticscholar.org/CorpusID:122001234).
+- Hutchinson, John E. (1981). [&quot;Fractals and self similarity&quot;](https://doi.org/10.1512%2Fiumj.1981.30.30055). *Indiana Univ. Math. J*. **30** (5): 713–747. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1512/iumj.1981.30.30055](https://doi.org/10.1512%2Fiumj.1981.30.30055).
+- Falconer, Kenneth (2003). *Fractal Geometry: Mathematical Foundations and Applications* (2nd ed.). [John Wiley and Sons](https://en.wikipedia.org/wiki/John_Wiley_and_Sons).
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=17)]
+- [Hausdorff dimension](https://www.encyclopediaofmath.org/index.php/Hausdorff_dimension) at [Encyclopedia of Mathematics](https://www.encyclopediaofmath.org/)
+- [Hausdorff measure](https://www.encyclopediaofmath.org/index.php/Hausdorff_measure) at Encyclopedia of Mathematics
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Dimension_topics)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Dimension_topics)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Dimension_topics)
+[Dimension](https://en.wikipedia.org/wiki/Dimension) show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal)          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;oldid=1349122544](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;oldid=1349122544)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Metric geometry](https://en.wikipedia.org/wiki/Category:Metric_geometry)
+- [Dimension theory](https://en.wikipedia.org/wiki/Category:Dimension_theory)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles needing additional references from March 2015](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_March_2015)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [All articles needing examples](https://en.wikipedia.org/wiki/Category:All_articles_needing_examples)
+- [Articles needing examples from January 2022](https://en.wikipedia.org/wiki/Category:Articles_needing_examples_from_January_2022)
+- [All articles with incomplete citations](https://en.wikipedia.org/wiki/Category:All_articles_with_incomplete_citations)
+- [Articles with incomplete citations from March 2015](https://en.wikipedia.org/wiki/Category:Articles_with_incomplete_citations_from_March_2015)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from March 2015](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_March_2015)
+- [Wikipedia articles needing clarification from March 2015](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2015)
+
+    [https://en\.wikipedia\.org/wiki/Hausdorff\_dimension?action=edit](https://en.wikipedia.org/wiki/Hausdorff_dimension?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Hausdorff_dimension#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Hausdorff dimension</h3><pre># Hausdorff dimension
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A8%D8%B9%D8%AF_%D9%87%D8%A7%D9%88%D8%B3%D8%AF%D9%88%D8%B1%D9%81)
+- [Български](https://bg.wikipedia.org/wiki/%D0%A5%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%BE%D0%B2%D0%B0_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D1%81%D1%82)
+- [Català](https://ca.wikipedia.org/wiki/Dimensi%C3%B3_de_Hausdorff-Bezik%C3%B3vitx)
+- [Čeština](https://cs.wikipedia.org/wiki/Hausdorffova_m%C3%ADra)
+- [Deutsch](https://de.wikipedia.org/wiki/Hausdorff-Dimension)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%94%CE%B9%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7_%CE%A7%CE%AC%CE%BF%CF%85%CF%83%CE%BD%CF%84%CE%BF%CF%81%CF%86)
+- [Español](https://es.wikipedia.org/wiki/Dimensi%C3%B3n_de_Hausdorff-Besicovitch)
+- [Suomi](https://fi.wikipedia.org/wiki/Hausdorffin_dimensio)
+- [Français](https://fr.wikipedia.org/wiki/Dimension_de_Hausdorff)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%9E%D7%93_%D7%94%D7%90%D7%95%D7%A1%D7%93%D7%95%D7%A8%D7%A3)
+- [Magyar](https://hu.wikipedia.org/wiki/Hausdorff-dimenzi%C3%B3)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Dimensi_Hausdorff)
+- [Italiano](https://it.wikipedia.org/wiki/Dimensione_di_Hausdorff)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%89%E3%83%AB%E3%83%95%E6%AC%A1%E5%85%83)
+- [한국어](https://ko.wikipedia.org/wiki/%ED%95%98%EC%9A%B0%EC%8A%A4%EB%8F%84%EB%A5%B4%ED%94%84_%EC%B0%A8%EC%9B%90)
+- [Nederlands](https://nl.wikipedia.org/wiki/Hausdorff-dimensie)
+- [Polski](https://pl.wikipedia.org/wiki/Wymiar_Hausdorffa)
+- [Português](https://pt.wikipedia.org/wiki/Dimens%C3%A3o_de_Hausdorff)
+- [Română](https://ro.wikipedia.org/wiki/Dimensiune_Hausdorff)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%A5%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Hausdorffova_miera)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Hausdorff-Bezikovi%C4%8Deva_razse%C5%BEnost)
+- [Svenska](https://sv.wikipedia.org/wiki/Hausdorffdimension)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D0%BC%D1%96%D1%80%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%93%D0%B0%D1%83%D1%81%D0%B4%D0%BE%D1%80%D1%84%D0%B0)
+- [اردو](https://ur.wikipedia.org/wiki/%DB%81%D8%A7%D8%B3%DA%88%D8%A7%D8%B1%D9%81_%D8%A8%D9%8F%D8%B9%D8%AF)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/S%E1%BB%91_chi%E1%BB%81u_Hausdorff)
+- [中文](https://zh.wikipedia.org/wiki/%E8%B1%AA%E6%96%AF%E5%A4%9A%E5%A4%AB%E7%BB%B4%E6%95%B0)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q565186#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Invariant measure of fractal dimension [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/KochFlake.svg/330px-KochFlake.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:KochFlake.svg)Example of non-integer dimensions. The first four [iterations](https://en.wikipedia.org/wiki/Iteration) of the [Koch curve](https://en.wikipedia.org/wiki/Koch_snowflake), where after each iteration, all original line segments are replaced with four, each a self-similar copy that is 1/3 the length of the original. One formalism of the Hausdorff dimension uses the scale factor (S = 3) and the number of self-similar objects (N = 4) to calculate the dimension, D, after the first iteration to be D = (log N)/(log S) = (log 4)/(log 3) ≈ 1.26.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1)
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), the **Hausdorff dimension** is a measure of *roughness*, or more specifically, [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension), that was introduced in 1918 by [mathematician](https://en.wikipedia.org/wiki/Mathematician) [Felix Hausdorff](https://en.wikipedia.org/wiki/Felix_Hausdorff).[[2]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-2) For instance, the Hausdorff dimension of a single [point](https://en.wikipedia.org/wiki/Point_(geometry)) is zero, of a [line segment](https://en.wikipedia.org/wiki/Line_segment) is 1, of a [square](https://en.wikipedia.org/wiki/Square) is 2, and of a [cube](https://en.wikipedia.org/wiki/Cube) is 3. That is, for sets of points that define a smooth shape or a shape that has a small number of corners—the shapes of traditional geometry and science—the Hausdorff dimension is an [integer](https://en.wikipedia.org/wiki/Integer) agreeing with the usual sense of dimension, also known as the [topological dimension](https://en.wikipedia.org/wiki/Inductive_dimension). However, formulas have also been developed that allow calculation of the dimension of other less simple objects, where, solely on the basis of their properties of [scaling](https://en.wikipedia.org/wiki/Scaling_(geometry)) and [self-similarity](https://en.wikipedia.org/wiki/Self-similarity), one is led to the conclusion that particular objects—including [fractals](https://en.wikipedia.org/wiki/Fractal)—have non-integer Hausdorff dimensions. Because of the significant technical advances made by [Abram Samoilovitch Besicovitch](https://en.wikipedia.org/wiki/Abram_Samoilovitch_Besicovitch) allowing computation of dimensions for highly irregular or &quot;rough&quot; sets, this dimension is also commonly referred to as the *Hausdorff–Besicovitch dimension.*
+
+More specifically, the Hausdorff dimension is a dimensional number associated with a [metric space](https://en.wikipedia.org/wiki/Metric_space), i.e. a set where the distances between all members are defined. The dimension is drawn from the [extended real numbers](https://en.wikipedia.org/wiki/Extended_real_number_line),        R  ¯     {\displaystyle {\overline {\mathbb {R} }}}  , as opposed to the more intuitive notion of dimension, which is not associated to general metric spaces, and only takes values in the non-negative integers.
+
+In mathematical terms, the Hausdorff dimension generalizes the notion of the dimension of a real [vector space](https://en.wikipedia.org/wiki/Vector_space). That is, the Hausdorff dimension of an *n*-dimensional [inner product space](https://en.wikipedia.org/wiki/Inner_product_space) equals *n*. This underlies the earlier statement that the Hausdorff dimension of a point is zero, of a line is one, etc., and that [irregular sets](https://en.wikipedia.org/wiki/Fractal) can have noninteger Hausdorff dimensions. For instance, the [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake) shown at right is constructed from an equilateral triangle; in each iteration, its component line segments are divided into 3 segments of unit length, the newly created middle segment is used as the base of a new [equilateral](https://en.wikipedia.org/wiki/Equilateral) triangle that points outward, and this base segment is then deleted to leave a final object from the iteration of unit length of 4.[[3]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-3) That is, after the first iteration, each original line segment has been replaced with N=4, where each self-similar copy is 1/S = 1/3 as long as the original.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1) Stated another way, we have taken an object with Euclidean dimension, D, and reduced its linear scale by 1/3 in each direction, so that its length increases to N=SD.[[4]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-ClaytonSCTPLS96-4) This equation is easily solved for D, yielding the ratio of logarithms (or [natural logarithms](https://en.wikipedia.org/wiki/Natural_logarithm)) appearing in the figures, and giving—in the Koch and other fractal cases—non-integer dimensions for these objects.
+
+The Hausdorff dimension is a successor to the simpler, but usually equivalent, box-counting or [Minkowski–Bouligand dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension).
+</pre></article><article id="section-0003"><h3>Intuition</h3><pre># Intuition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=1)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+The intuitive concept of dimension of a geometric object *X* is the number of independent parameters one needs to pick out a unique point inside. However, any point specified by two parameters can be instead specified by one, because the [cardinality](https://en.wikipedia.org/wiki/Cardinality) of the [real plane](https://en.wikipedia.org/wiki/Real_plane) is equal to the cardinality of the [real line](https://en.wikipedia.org/wiki/Real_line) (this can be seen by an [argument](https://en.wikipedia.org/wiki/Cantor&#39;s_diagonal_argument) involving interweaving the digits of two numbers to yield a single number encoding the same information). The example of a [space-filling curve](https://en.wikipedia.org/wiki/Space-filling_curve) shows that one can even map the real line to the real plane [surjectively](https://en.wikipedia.org/wiki/Surjective_function) (taking one real number into a pair of real numbers in a way so that all pairs of numbers are covered) and *continuously*, so that a one-dimensional object completely fills up a higher-dimensional object.
+
+Every space-filling curve hits some points multiple times and does not have a continuous inverse. It is impossible to map two dimensions onto one in a way that is continuous and continuously invertible. The topological dimension, also called [Lebesgue covering dimension](https://en.wikipedia.org/wiki/Lebesgue_covering_dimension), explains why. This dimension is the greatest integer *n* such that in every covering of *X* by small open balls there is at least one point where *n* + 1 balls overlap. For example, when one covers a line with short open intervals, some points must be covered twice, giving dimension *n* = 1.
+
+But topological dimension is a very crude measure of the local size of a space (size near a point). A curve that is almost space-filling can still have topological dimension one, even if it fills up most of the area of a region. A [fractal](https://en.wikipedia.org/wiki/Fractal) has an integer topological dimension, but in terms of the amount of space it takes up, it behaves like a higher-dimensional space.
+
+The Hausdorff dimension measures the local size of a space taking into account the distance between points, the [metric](https://en.wikipedia.org/wiki/Metric_space). Consider the number *N*(*r*) of [balls](https://en.wikipedia.org/wiki/Ball_(mathematics)) of radius at most *r* required to cover *X* completely. When *r* is very small, *N*(*r*) grows polynomially with 1/*r*. For a sufficiently well-behaved *X*, the Hausdorff dimension is the unique number *d* such that N(*r*) grows as 1/*rd* as *r* approaches zero. More precisely, this defines the [box-counting dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension), which equals the Hausdorff dimension when the value *d* is a critical boundary between growth rates that are insufficient to cover the space, and growth rates that are overabundant.
+
+For shapes that are smooth, or shapes with a small number of corners, the shapes of traditional geometry and science, the Hausdorff dimension is an integer agreeing with the topological dimension. But [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot) observed that [fractals](https://en.wikipedia.org/wiki/Fractal), sets with noninteger Hausdorff dimensions, are found everywhere in nature. He observed that the proper idealization of most rough shapes one sees is not in terms of smooth idealized shapes, but in terms of fractal idealized shapes:
+
+&gt; Clouds are not spheres, mountains are not cones, coastlines are not circles, and bark is not smooth, nor does lightning travel in a straight line.[5]
+
+For fractals that occur in nature, the Hausdorff and [box-counting dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension) coincide. The [packing dimension](https://en.wikipedia.org/wiki/Packing_dimension) is yet another similar notion which gives the same value for many shapes, but there are well-documented exceptions where all these dimensions differ.[*[examples needed](https://en.wikipedia.org/wiki/Wikipedia:AUDIENCE)*]
+</pre></article><article id="section-0004"><h3>Formal definition</h3><pre># Formal definition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=2)] Main article: [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure)
+
+The formal definition of the Hausdorff dimension is arrived at by defining first the d-dimensional [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure), a fractional-dimension analogue of the [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure). First, an [outer measure](https://en.wikipedia.org/wiki/Outer_measure) is constructed: Let     X   {\displaystyle X}   be a [metric space](https://en.wikipedia.org/wiki/Metric_space). If     S ⊂ X   {\displaystyle S\subset X}   and     d ∈ [ 0 , ∞ )   {\displaystyle d\in [0,\infty )}  ,
+
+      H  δ   d   ( S ) = inf  {   ∑  i = 1   ∞   ( diam ⁡  U  i    )  d   :  ⋃  i = 1   ∞    U  i   ⊇ S , diam ⁡  U  i   &lt; δ  }  ,   {\displaystyle H_{\delta }^{d}(S)=\inf \left\{\sum _{i=1}^{\infty }(\operatorname {diam} U_{i})^{d}:\bigcup _{i=1}^{\infty }U_{i}\supseteq S,\operatorname {diam} U_{i}&lt;\delta \right\},}
+
+where the [infimum](https://en.wikipedia.org/wiki/Infimum) is taken over all countable covers     U   {\displaystyle U}   of     S   {\displaystyle S}  . The Hausdorff d-dimensional outer measure is then defined as        H    d   ( S ) =  lim  δ → 0    H  δ   d   ( S )   {\displaystyle {\mathcal {H}}^{d}(S)=\lim _{\delta \to 0}H_{\delta }^{d}(S)}  , and the restriction of the mapping to [measurable sets](https://en.wikipedia.org/wiki/Non-measurable_set) justifies it as a measure, called the     d   {\displaystyle d}  -dimensional Hausdorff Measure.[[6]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-6)
+</pre></article><article id="section-0005"><h3>Hausdorff dimension</h3><pre># Hausdorff dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=3)]
+
+The **Hausdorff dimension**      dim  H   ⁡  ( X )    {\displaystyle \dim _{\operatorname {H} }{(X)}}   of     X   {\displaystyle X}   is defined by
+
+      dim  H   ⁡  ( X )  := inf { d ≥ 0 :    H    d   ( X ) = 0 } .   {\displaystyle \dim _{\operatorname {H} }{(X)}:=\inf\{d\geq 0:{\mathcal {H}}^{d}(X)=0\}.}
+
+This is the same as the [supremum](https://en.wikipedia.org/wiki/Supremum) of the set of     d ∈ [ 0 , ∞ )   {\displaystyle d\in [0,\infty )}   such that the     d   {\displaystyle d}  -dimensional Hausdorff measure of     X   {\displaystyle X}   is infinite (except that when this latter set of numbers     d   {\displaystyle d}   is empty the Hausdorff dimension is zero).
+</pre></article><article id="section-0006"><h3>Hausdorff content</h3><pre># Hausdorff content
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=4)]
+
+The     d   {\displaystyle d}  -dimensional **unlimited Hausdorff content** of     S   {\displaystyle S}   is defined by
+
+      C  H   d   ( S ) :=  H  ∞   d   ( S ) = inf  {   ∑  k = 1   ∞   ( diam ⁡  U  k    )  d   :  ⋃  k = 1   ∞    U  k   ⊇ S  }    {\displaystyle C_{H}^{d}(S):=H_{\infty }^{d}(S)=\inf \left\{\sum _{k=1}^{\infty }(\operatorname {diam} U_{k})^{d}:\bigcup _{k=1}^{\infty }U_{k}\supseteq S\right\}}
+
+In other words,      C  H   d   ( S )   {\displaystyle C_{H}^{d}(S)}   has the construction of the Hausdorff measure where the covering sets are allowed to have arbitrarily large sizes. (Here we use the standard convention that [inf ∅ = ∞   {\displaystyle \inf \varnothing =\infty }](https://en.wikipedia.org/wiki/Infimum).)[[7]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-7) The Hausdorff measure and the Hausdorff content can both be used to determine the dimension of a set, but if the measure of the set is non-zero, their actual values may disagree.
+</pre></article><article id="section-0007"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=5)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Sierpinski_deep.svg/330px-Sierpinski_deep.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Sierpinski_deep.svg)Dimension of a further [fractal](https://en.wikipedia.org/wiki/Fractal) example. The [Sierpinski triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle), an object with Hausdorff dimension of log(3)/log(2)≈1.58.[[4]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-ClaytonSCTPLS96-4)
+- [Countable sets](https://en.wikipedia.org/wiki/Countable_set) have Hausdorff dimension 0.[[8]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-schleicher-8)
+- The [Euclidean space](https://en.wikipedia.org/wiki/Euclidean_space)       R   n     {\displaystyle \mathbb {R} ^{n}}   has Hausdorff dimension     n   {\displaystyle n}  , and the circle      S  1     {\displaystyle S^{1}}   has Hausdorff dimension 1.[[8]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-schleicher-8)
+- [Fractals](https://en.wikipedia.org/wiki/Fractal) often are spaces whose Hausdorff dimension strictly exceeds the [topological dimension](https://en.wikipedia.org/wiki/Topological_dimension).[[5]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-mandelbrot-5) For example, the [Cantor set](https://en.wikipedia.org/wiki/Cantor_set), a [zero-dimensional topological space](https://en.wikipedia.org/wiki/Zero-dimensional_space), is a union of two copies of itself, each copy shrunk by a factor 1/3; hence, it can be shown that its Hausdorff dimension is ln(2)/ln(3) ≈ 0.63.[[9]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-9) The [Sierpinski triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle) is a union of three copies of itself, each copy shrunk by a factor of 1/2; this yields a Hausdorff dimension of ln(3)/ln(2) ≈ 1.58.[[1]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-CampbellAnnenberg15-1) These Hausdorff dimensions are related to the &quot;critical exponent&quot; of the [Master theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)) for solving [recurrence relations](https://en.wikipedia.org/wiki/Recurrence_relation) in the [analysis of algorithms](https://en.wikipedia.org/wiki/Analysis_of_algorithms).
+- [Space-filling curves](https://en.wikipedia.org/wiki/Space-filling_curve) like the [Peano curve](https://en.wikipedia.org/wiki/Peano_curve) have the same Hausdorff dimension as the space they fill.
+- Trajectories of [Brownian motion](https://en.wikipedia.org/wiki/Brownian_motion) through space of dimension 2 and above have Hausdorff dimension equal to 2 [almost surely](https://en.wikipedia.org/wiki/Almost_surely).[[10]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-10)
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Great_Britain_Hausdorff.svg/330px-Great_Britain_Hausdorff.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Great_Britain_Hausdorff.svg)Estimating the Hausdorff dimension of the [coast of Great Britain](https://en.wikipedia.org/wiki/How_Long_Is_the_Coast_of_Britain%3F_Statistical_Self-Similarity_and_Fractional_Dimension)
+- [Lewis Fry Richardson](https://en.wikipedia.org/wiki/Lewis_Fry_Richardson) performed detailed experiments to measure the approximate Hausdorff dimension for various coastlines. His results have varied from 1.02 for the coastline of [South Africa](https://en.wikipedia.org/wiki/South_Africa) to 1.25 for the west coast of [Great Britain](https://en.wikipedia.org/wiki/Great_Britain).[[5]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-mandelbrot-5)
+</pre></article><article id="section-0008"><h3>Properties of Hausdorff dimension</h3><pre># Properties of Hausdorff dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=6)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+</pre></article><article id="section-0009"><h3>Hausdorff dimension and inductive dimension</h3><pre># Hausdorff dimension and inductive dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=7)]
+
+Let *X* be an arbitrary [separable](https://en.wikipedia.org/wiki/Separable_space) metric space. There is a [topological](https://en.wikipedia.org/wiki/Topology) notion of [inductive dimension](https://en.wikipedia.org/wiki/Inductive_dimension) for *X* which is defined recursively. It is always an integer (or +∞) and is denoted dimind(*X*).
+
+**Theorem**. Suppose *X* is non-empty. Then
+
+      dim   H a u s    ⁡ ( X ) ≥  dim  ind   ⁡ ( X ) .   {\displaystyle \dim _{\mathrm {Haus} }(X)\geq \dim _{\operatorname {ind} }(X).}
+
+Moreover,
+
+      inf  Y    dim  Haus   ⁡ ( Y ) =  dim  ind   ⁡ ( X ) ,   {\displaystyle \inf _{Y}\dim _{\operatorname {Haus} }(Y)=\dim _{\operatorname {ind} }(X),}
+
+where *Y* ranges over metric spaces [homeomorphic](https://en.wikipedia.org/wiki/Homeomorphic) to *X*. In other words, *X* and *Y* have the same underlying set of points and the metric *d**Y* of *Y* is topologically equivalent to *d**X*.
+
+These results were originally established by [Edward Szpilrajn](https://en.wikipedia.org/wiki/Edward_Szpilrajn) (1907–1976), e.g., see Hurewicz and Wallman, Chapter VII.[*[full citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#What_information_to_include)*]
+</pre></article><article id="section-0010"><h3>Hausdorff dimension and Minkowski dimension</h3><pre># Hausdorff dimension and Minkowski dimension
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=8)]
+
+The [Minkowski dimension](https://en.wikipedia.org/wiki/Minkowski_dimension) is similar to, and at least as large as, the Hausdorff dimension, and they are equal in many situations. However, the set of [rational](https://en.wikipedia.org/wiki/Rational_number) points in [0, 1] has Hausdorff dimension zero and Minkowski dimension one. There are also compact sets for which the Minkowski dimension is strictly larger than the Hausdorff dimension.
+</pre></article><article id="section-0011"><h3>Hausdorff dimensions and Frostman measures</h3><pre># Hausdorff dimensions and Frostman measures
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=9)]
+
+If there is a [measure](https://en.wikipedia.org/wiki/Measure_(mathematics)) μ defined on [Borel](https://en.wikipedia.org/wiki/Borel_measure) subsets of a metric space *X* such that *μ*(*X*) &gt; 0 and *μ*(*B*(*x*, *r*)) ≤ *rs* holds for some constant *s* &gt; 0 and for every ball *B*(*x*, *r*) in *X*, then dimHaus(*X*) ≥ *s*. A partial converse is provided by [Frostman&#39;s lemma](https://en.wikipedia.org/wiki/Frostman&#39;s_lemma).[*[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed)*][[11]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-11)
+</pre></article><article id="section-0012"><h3>Behaviour under unions and products</h3><pre># Behaviour under unions and products
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=10)]
+
+If     X =  ⋃  i ∈ I    X  i     {\displaystyle X=\bigcup _{i\in I}X_{i}}   is a finite or countable union, then
+
+      dim  Haus   ⁡ ( X ) =  sup  i ∈ I    dim  Haus   ⁡ (  X  i   ) .   {\displaystyle \dim _{\operatorname {Haus} }(X)=\sup _{i\in I}\dim _{\operatorname {Haus} }(X_{i}).}
+
+This can be verified directly from the definition.
+
+If *X* and *Y* are non-empty metric spaces, then the Hausdorff dimension of their product satisfies[[12]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-12)
+
+      dim  Haus   ⁡ ( X × Y ) ≥  dim  Haus   ⁡ ( X ) +  dim  Haus   ⁡ ( Y ) .   {\displaystyle \dim _{\operatorname {Haus} }(X\times Y)\geq \dim _{\operatorname {Haus} }(X)+\dim _{\operatorname {Haus} }(Y).}
+
+This inequality can be strict. It is possible to find two sets of dimension 0 whose product has dimension 1.[[13]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-13) In the opposite direction, it is known that when *X* and *Y* are Borel subsets of **R***n*, the Hausdorff dimension of *X* × *Y* is bounded from above by the Hausdorff dimension of *X* plus the [upper packing dimension](https://en.wikipedia.org/wiki/Packing_dimension) of *Y*. These facts are discussed in Mattila (1995).
+</pre></article><article id="section-0013"><h3>Self-similar sets</h3><pre># Self-similar sets
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=11)] [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Hausdorff_dimension) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(March 2015)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+Many sets defined by a self-similarity condition have dimensions which can be determined explicitly. Roughly, a set *E* is self-similar if it is the fixed point of a set-valued transformation ψ, that is ψ(*E*) = *E*, although the exact definition is given below.
+
+&gt; Theorem. Suppose
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;           ψ
+&gt;
+&gt;             i
+&gt;
+&gt;
+&gt;         :
+&gt;
+&gt;
+&gt;             R
+&gt;
+&gt;
+&gt;             n
+&gt;
+&gt;
+&gt;         →
+&gt;
+&gt;
+&gt;             R
+&gt;
+&gt;
+&gt;             n
+&gt;
+&gt;
+&gt;         ,
+&gt;
+&gt;         i
+&gt;         =
+&gt;         1
+&gt;         ,
+&gt;         …
+&gt;         ,
+&gt;         m
+&gt;
+&gt;
+&gt;     {\displaystyle \psi _{i}:\mathbf {R} ^{n}\rightarrow \mathbf {R} ^{n},\quad i=1,\ldots ,m}
+&gt;
+&gt;
+&gt;
+&gt; are each a contraction mapping on Rn with contraction constant ri &lt; 1. Then there is a unique non-empty compact set A such that
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;         A
+&gt;         =
+&gt;
+&gt;           ⋃
+&gt;
+&gt;             i
+&gt;             =
+&gt;             1
+&gt;
+&gt;
+&gt;             m
+&gt;
+&gt;
+&gt;
+&gt;           ψ
+&gt;
+&gt;             i
+&gt;
+&gt;
+&gt;         (
+&gt;         A
+&gt;         )
+&gt;         .
+&gt;
+&gt;
+&gt;     {\displaystyle A=\bigcup _{i=1}^{m}\psi _{i}(A).}
+&gt;
+&gt;
+&gt;
+
+The theorem follows from [Stefan Banach](https://en.wikipedia.org/wiki/Stefan_Banach)&#39;s [contractive mapping fixed point theorem](https://en.wikipedia.org/wiki/Contractive_mapping_theorem) applied to the complete metric space of non-empty compact subsets of **R***n* with the [Hausdorff distance](https://en.wikipedia.org/wiki/Hausdorff_distance).[[14]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-14)
+</pre></article><article id="section-0014"><h3>The open set condition</h3><pre># The open set condition
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=12)] Main article: [Open set condition](https://en.wikipedia.org/wiki/Open_set_condition)
+
+To determine the dimension of the self-similar set *A* (in certain cases), we need a technical condition called the *open set condition* (OSC) on the sequence of contractions ψ*i*.
+
+There is an open set *V* with compact closure, such that
+
+      ⋃  i = 1   m    ψ  i   ( V ) ⊆ V ,   {\displaystyle \bigcup _{i=1}^{m}\psi _{i}(V)\subseteq V,}
+
+where the sets in union on the left are pairwise [disjoint](https://en.wikipedia.org/wiki/Disjoint_sets).
+
+The open set condition is a separation condition that ensures the images ψ*i*(*V*) do not overlap &quot;too much&quot;.
+
+**Theorem**. Suppose the open set condition holds and each ψ*i* is a similitude, that is a composition of an [isometry](https://en.wikipedia.org/wiki/Isometry) and a [dilation](https://en.wikipedia.org/wiki/Dilation_(metric_space)) around some point. Then the unique fixed point of ψ is a set whose Hausdorff dimension is *s* where *s* is the unique solution of[[15]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-15)
+
+      ∑  i = 1   m    r  i   s   = 1.   {\displaystyle \sum _{i=1}^{m}r_{i}^{s}=1.}
+
+The contraction coefficient of a similitude is the magnitude of the dilation.
+
+In general, a set *E* which is carried onto itself by a mapping
+
+     A ↦ ψ ( A ) =  ⋃  i = 1   m    ψ  i   ( A )   {\displaystyle A\mapsto \psi (A)=\bigcup _{i=1}^{m}\psi _{i}(A)}
+
+is self-similar if and only if the intersections satisfy the following condition:
+
+      H  s    (   ψ  i   ( E ) ∩  ψ  j   ( E )  )  = 0 ,   {\displaystyle H^{s}\left(\psi _{i}(E)\cap \psi _{j}(E)\right)=0,}
+
+where *s* is the Hausdorff dimension of *E* and *Hs* denotes s-dimensional [Hausdorff measure](https://en.wikipedia.org/wiki/Hausdorff_measure). This is clear in the case of the [Sierpinski gasket](https://en.wikipedia.org/wiki/Sierpinski_gasket) (the intersections are just points), but is also true more generally:
+
+**Theorem**. Under the same conditions as the previous theorem, the unique fixed point of ψ is self-similar.
+</pre></article><article id="section-0015"><h3>The Moran Equation</h3><pre># The Moran Equation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=13)]
+
+For self-similar sets satisfying the [Open set condition](https://en.wikipedia.org/wiki/Open_set_condition), the Hausdorff dimension     d   {\displaystyle d}   can be determined using the Moran equation. If a fractal is composed of     m   {\displaystyle m}   self-similar copies with contraction ratios      r  1   ,  r  2   , … ,  r  m     {\displaystyle r_{1},r_{2},\dots ,r_{m}}  , the dimension     d   {\displaystyle d}   is the unique positive solution to the equation:
+
+∑  i = 1   m    r  i   d   = 1   {\displaystyle \sum _{i=1}^{m}r_{i}^{d}=1}
+
+This framework is particularly useful for calculating the dimensions of fractals generated by [substitution tilings](https://en.wikipedia.org/wiki/Substitution_tiling), such as those based on the [metallic mean](https://en.wikipedia.org/wiki/Metallic_mean) family.[[16]](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_note-16)
+</pre></article><article id="section-0016"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=14)]
+- [List of fractals by Hausdorff dimension](https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension) Examples of deterministic fractals, random and natural fractals.
+- [Assouad dimension](https://en.wikipedia.org/wiki/Assouad_dimension), another variation of fractal dimension that, like Hausdorff dimension, is defined using coverings by balls
+- [Fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension)
+- [Intrinsic dimension](https://en.wikipedia.org/wiki/Intrinsic_dimension)
+- [Packing dimension](https://en.wikipedia.org/wiki/Packing_dimension)
+</pre></article><article id="section-0017"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=15)]
+1. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-1) [3](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-CampbellAnnenberg15_1-2) MacGregor Campbell, 2013, &quot;5.6 Scaling and the Hausdorff Dimension,&quot; at *Annenberg Learner:MATHematics illuminated*, see [http://www\.learner\.org/courses/mathilluminated/units/5/textbook/06\.php](http://www.learner.org/courses/mathilluminated/units/5/textbook/06.php), accessed 5 March 2015.
+2. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-2) Gneiting, Tilmann; Ševčíková, Hana; Percival, Donald B. (2012). &quot;Estimators of Fractal Dimension: Assessing the Roughness of Time Series and Spatial Data&quot;. *Statistical Science*. **27** (2): 247–277. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1101.1444](https://arxiv.org/abs/1101.1444). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1214/11-STS370](https://doi.org/10.1214%2F11-STS370). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [88512325](https://api.semanticscholar.org/CorpusID:88512325).
+3. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-3) Larry Riddle, 2014, &quot;Classic Iterated Function Systems: Koch Snowflake&quot;, Agnes Scott College e-Academy (online), see [http://ecademy\.agnesscott\.edu/~lriddle/ifs/ksnow/ksnow\.htm](http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/ksnow.htm), accessed 5 March 2015.
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-ClaytonSCTPLS96_4-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-ClaytonSCTPLS96_4-1) Keith Clayton, 1996, &quot;Fractals and the Fractal Dimension,&quot; *Basic Concepts in Nonlinear Dynamics and Chaos* (workshop), Society for Chaos Theory in Psychology and the Life Sciences annual meeting, June 28, 1996, Berkeley, California, see [https://www\.vanderbilt\.edu/AnS/psychology/cogsci/chaos/workshop/Workshop\.html](https://www.vanderbilt.edu/AnS/psychology/cogsci/chaos/workshop/Workshop.html), accessed 5 March 2015.
+5. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-1) [3](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-mandelbrot_5-2) [Mandelbrot, Benoît](https://en.wikipedia.org/wiki/Benoit_Mandelbrot) (1982). [*The Fractal Geometry of Nature*](https://archive.org/details/fractalgeometryo00beno). Lecture notes in mathematics 1358. W. H. Freeman. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-7167-1186-9](https://en.wikipedia.org/wiki/Special:BookSources/0-7167-1186-9).
+6. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-6) Briggs, Jimmy; Tyree, Tim (3 December 2016). [&quot;Hausdorff Measure&quot;](https://sites.math.washington.edu/~farbod/teaching/cornell/math6210pdf/math6210Hausdorff.pdf) (PDF). University of Washington. Retrieved 3 February 2022.
+7. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-7) Farkas, Abel; Fraser, Jonathan (30 July 2015). &quot;On the equality of Hausdorff measure and Hausdorff content&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[1411.0867](https://arxiv.org/abs/1411.0867) [[math.MG](https://arxiv.org/archive/math.MG)].
+8. [Jump up to: 1](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-schleicher_8-0) [2](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-schleicher_8-1) Schleicher, Dierk (June 2007). &quot;Hausdorff Dimension, Its Properties, and Its Surprises&quot;. *The American Mathematical Monthly*. **114** (6): 509–528. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math/0505099](https://arxiv.org/abs/math/0505099). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1080/00029890.2007.11920440](https://doi.org/10.1080%2F00029890.2007.11920440). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0002-9890](https://search.worldcat.org/issn/0002-9890). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [9811750](https://api.semanticscholar.org/CorpusID:9811750).
+9. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-9) Falconer, Kenneth (2003). *Fractal Geometry: Mathematical Foundations and Applications* (2nd ed.). [John Wiley and Sons](https://en.wikipedia.org/wiki/John_Wiley_and_Sons).
+10. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-10) Morters, Peres (2010). *Brownian Motion*. [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press).
+11. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-11) This Wikipedia article also discusses further useful characterizations of the Hausdorff dimension.[*[clarification needed](https://en.wikipedia.org/wiki/Wikipedia:Please_clarify)*]
+12. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-12) Marstrand, J. M. (1954). &quot;The dimension of Cartesian product sets&quot;. *Proc. Cambridge Philos. Soc*. **50** (3): 198–202. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1954PCPS...50..198M](https://ui.adsabs.harvard.edu/abs/1954PCPS...50..198M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S0305004100029236](https://doi.org/10.1017%2FS0305004100029236). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122475292](https://api.semanticscholar.org/CorpusID:122475292).
+13. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-13) Falconer, Kenneth J. (2003). *Fractal geometry. Mathematical foundations and applications*. John Wiley &amp; Sons, Inc., Hoboken, New Jersey.
+14. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-14) Falconer, K. J. (1985). &quot;Theorem 8.3&quot;. *The Geometry of Fractal Sets*. Cambridge, UK: Cambridge University Press. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-521-25694-1](https://en.wikipedia.org/wiki/Special:BookSources/0-521-25694-1).
+15. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-15) Hutchinson, John E. (1981). [&quot;Fractals and self similarity&quot;](https://doi.org/10.1512%2Fiumj.1981.30.30055). *Indiana Univ. Math. J*. **30** (5): 713–747. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1512/iumj.1981.30.30055](https://doi.org/10.1512%2Fiumj.1981.30.30055).
+16. [↑](https://en.wikipedia.org/wiki/Hausdorff_dimension#cite_ref-16) Moran, P. A. P. (1946). [&quot;Additive functions of intervals and Hausdorff measure&quot;](https://www.cambridge.org/core/journals/mathematical-proceedings-of-the-cambridge-philosophical-society/article/abs/additive-functions-of-intervals-and-hausdorff-measure/B4E9A28A8A8A1A9A9A9A9A9A9A9A9A9). *Mathematical Proceedings of the Cambridge Philosophical Society*. **42** (1): 15–23. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S030500410002272X](https://doi.org/10.1017%2FS030500410002272X).
+</pre></article><article id="section-0018"><h3>Further reading</h3><pre># Further reading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=16)]
+- Dodson, M. Maurice; Kristensen, Simon (June 12, 2003). &quot;Hausdorff Dimension and Diophantine Approximation&quot;. *Fractal Geometry and Applications: A Jubilee of Benoît Mandelbrot*. Proceedings of Symposia in Pure Mathematics. Vol. 72. pp. 305–347. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[math/0305399](https://arxiv.org/abs/math/0305399). [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[2003math......5399D](https://ui.adsabs.harvard.edu/abs/2003math......5399D). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/pspum/072.1/2112110](https://doi.org/10.1090%2Fpspum%2F072.1%2F2112110). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [9780821836378](https://en.wikipedia.org/wiki/Special:BookSources/9780821836378). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [119613948](https://api.semanticscholar.org/CorpusID:119613948).
+- [Hurewicz, Witold](https://en.wikipedia.org/wiki/Witold_Hurewicz); [Wallman, Henry](https://en.wikipedia.org/wiki/Henry_Wallman) (1948). [*Dimension Theory*](https://archive.org/details/in.ernet.dli.2015.84609). Princeton University Press.
+- [E. Szpilrajn](https://en.wikipedia.org/wiki/Edward_Marczewski) (1937). [&quot;La dimension et la mesure&quot;](https://doi.org/10.4064%2Ffm-28-1-81-89). *Fundamenta Mathematicae*. **28**: 81–9. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.4064/fm-28-1-81-89](https://doi.org/10.4064%2Ffm-28-1-81-89).
+- Marstrand, J. M. (1954). &quot;The dimension of cartesian product sets&quot;. *Proc. Cambridge Philos. Soc*. **50** (3): 198–202. [Bibcode](https://en.wikipedia.org/wiki/Bibcode_(identifier)):[1954PCPS...50..198M](https://ui.adsabs.harvard.edu/abs/1954PCPS...50..198M). [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1017/S0305004100029236](https://doi.org/10.1017%2FS0305004100029236). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122475292](https://api.semanticscholar.org/CorpusID:122475292).
+- [Mattila, Pertti](https://en.wikipedia.org/wiki/Pertti_Mattila) (1995). *Geometry of sets and measures in Euclidean spaces*. [Cambridge University Press](https://en.wikipedia.org/wiki/Cambridge_University_Press). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-521-65595-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-521-65595-8).
+- [A. S. Besicovitch](https://en.wikipedia.org/wiki/A._S._Besicovitch) (1929). &quot;On Linear Sets of Points of Fractional Dimensions&quot;. *[Mathematische Annalen](https://en.wikipedia.org/wiki/Mathematische_Annalen)*. **101** (1): 161–193. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01454831](https://doi.org/10.1007%2FBF01454831). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [125368661](https://api.semanticscholar.org/CorpusID:125368661).
+- [A. S. Besicovitch](https://en.wikipedia.org/wiki/A._S._Besicovitch); [H. D. Ursell](https://en.wikipedia.org/wiki/H._D._Ursell) (1937). &quot;Sets of Fractional Dimensions&quot;. *Journal of the London Mathematical Society*. **12** (1): 18–25. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1112/jlms/s1-12.45.18](https://doi.org/10.1112%2Fjlms%2Fs1-12.45.18).
+Several selections from this volume are reprinted in Edgar, Gerald A. (1993). *Classics on fractals*. Boston: Addison-Wesley. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-201-58701-7](https://en.wikipedia.org/wiki/Special:BookSources/0-201-58701-7). See chapters 9,10,11
+- [F. Hausdorff](https://en.wikipedia.org/wiki/F._Hausdorff) (March 1919). [&quot;Dimension und äußeres Maß&quot;](https://dml.cz/bitstream/handle/10338.dmlcz/100363/CzechMathJ_09-1959-3_5.pdf) (PDF). *Mathematische Annalen*. **79** (1–2): 157–179. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01457179](https://doi.org/10.1007%2FBF01457179). [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)):[10338.dmlcz/100363](https://hdl.handle.net/10338.dmlcz%2F100363). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [122001234](https://api.semanticscholar.org/CorpusID:122001234).
+- Hutchinson, John E. (1981). [&quot;Fractals and self similarity&quot;](https://doi.org/10.1512%2Fiumj.1981.30.30055). *Indiana Univ. Math. J*. **30** (5): 713–747. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1512/iumj.1981.30.30055](https://doi.org/10.1512%2Fiumj.1981.30.30055).
+- Falconer, Kenneth (2003). *Fractal Geometry: Mathematical Foundations and Applications* (2nd ed.). [John Wiley and Sons](https://en.wikipedia.org/wiki/John_Wiley_and_Sons).
+</pre></article><article id="section-0019"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;action=edit&amp;section=17)]
+- [Hausdorff dimension](https://www.encyclopediaofmath.org/index.php/Hausdorff_dimension) at [Encyclopedia of Mathematics](https://www.encyclopediaofmath.org/)
+- [Hausdorff measure](https://www.encyclopediaofmath.org/index.php/Hausdorff_measure) at Encyclopedia of Mathematics
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Dimension_topics)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Dimension_topics)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Dimension_topics)
+[Dimension](https://en.wikipedia.org/wiki/Dimension) show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal)          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;oldid=1349122544](https://en.wikipedia.org/w/index.php?title=Hausdorff_dimension&amp;oldid=1349122544)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Metric geometry](https://en.wikipedia.org/wiki/Category:Metric_geometry)
+- [Dimension theory](https://en.wikipedia.org/wiki/Category:Dimension_theory)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+- [Articles needing additional references from March 2015](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_March_2015)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [All articles needing examples](https://en.wikipedia.org/wiki/Category:All_articles_needing_examples)
+- [Articles needing examples from January 2022](https://en.wikipedia.org/wiki/Category:Articles_needing_examples_from_January_2022)
+- [All articles with incomplete citations](https://en.wikipedia.org/wiki/Category:All_articles_with_incomplete_citations)
+- [Articles with incomplete citations from March 2015](https://en.wikipedia.org/wiki/Category:Articles_with_incomplete_citations_from_March_2015)
+- [All articles with unsourced statements](https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements)
+- [Articles with unsourced statements from March 2015](https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_March_2015)
+- [Wikipedia articles needing clarification from March 2015](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2015)
+
+    [https://en\.wikipedia\.org/wiki/Hausdorff\_dimension?action=edit](https://en.wikipedia.org/wiki/Hausdorff_dimension?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

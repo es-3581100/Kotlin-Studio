@@ -1,0 +1,977 @@
+[
+  {
+    "id": "e000",
+    "source": "sacred-computations",
+    "target": "golden-ratio",
+    "relation": "ratios",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e001",
+    "source": "sacred-computations",
+    "target": "fibonacci",
+    "relation": "sequences",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e002",
+    "source": "sacred-computations",
+    "target": "euclidean-algorithm",
+    "relation": "number theory",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e003",
+    "source": "sacred-computations",
+    "target": "matrix-recurrence",
+    "relation": "linear structure",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e004",
+    "source": "sacred-computations",
+    "target": "fourier-transform",
+    "relation": "transforms",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e005",
+    "source": "sacred-computations",
+    "target": "chaos",
+    "relation": "dynamics",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e006",
+    "source": "sacred-computations",
+    "target": "sympy-core",
+    "relation": "symbolic bridge",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e007",
+    "source": "sacred-computations",
+    "target": "codegen",
+    "relation": "modern code",
+    "kind": "structural",
+    "why": "Atlas navigation edge.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "metallic-means",
+    "target": "golden-ratio",
+    "relation": "n = 1 member",
+    "kind": "source-backed",
+    "why": "Golden ratio is the n=1 metallic mean.",
+    "sources": [
+      "golden:f8236bc2722e"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "metallic-means",
+    "target": "silver-ratio",
+    "relation": "n = 2 member",
+    "kind": "source-backed",
+    "why": "Silver ratio is the n=2 metallic mean.",
+    "sources": [
+      "golden:f8236bc2722e",
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "fibonacci",
+    "target": "golden-ratio",
+    "relation": "successive-term ratio limit",
+    "kind": "source-backed",
+    "why": "Fibonacci growth is controlled by the positive root of x²−x−1.",
+    "sources": [
+      "golden:9e3dc7f4af23",
+      "golden:9c25b5be3752",
+      "golden:92bb83975755",
+      "golden:807b57bf9112",
+      "golden:5e4666df16c1",
+      "golden:cbe0725d0ec1"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "lucas",
+    "target": "golden-ratio",
+    "relation": "same characteristic polynomial",
+    "kind": "derived",
+    "why": "Different initial conditions, same second-order characteristic polynomial.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "pell",
+    "target": "silver-ratio",
+    "relation": "growth / characteristic root",
+    "kind": "source-backed",
+    "why": "Pell numbers grow proportionally to powers of 1+√2.",
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "pell",
+    "target": "sqrt2",
+    "relation": "rational approximants",
+    "kind": "source-backed",
+    "why": "Pell ratios give close rational approximations to √2.",
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:0ee329914726"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "sqrt2",
+    "target": "continued-fractions",
+    "relation": "continued-fraction approximants",
+    "kind": "source-backed",
+    "why": "Pell approximation material exposes the recurrence/continued-fraction connection.",
+    "sources": [
+      "golden:9bd99b4ed571",
+      "golden:61b4a919d0ea",
+      "golden:6adc236148bf",
+      "golden:5054e3883643",
+      "golden:0ee329914726"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "tribonacci",
+    "target": "tribonacci-ratio",
+    "relation": "dominant growth root",
+    "kind": "source-backed",
+    "why": "The Tribonacci ratio is the real root of the recurrence characteristic polynomial.",
+    "sources": [
+      "golden:10369e82d97e",
+      "golden:88e2e73c2a78"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "tribonacci-ratio",
+    "target": "pisot-number",
+    "relation": "is a Pisot number",
+    "kind": "source-backed",
+    "why": "Rauzy source identifies the real Tribonacci eigenvalue as a Pisot number.",
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "tribonacci",
+    "target": "rauzy-fractal",
+    "relation": "substitution / word geometry",
+    "kind": "source-backed",
+    "why": "Rauzy construction interprets the infinite Tribonacci word geometrically.",
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "tribonacci-ratio",
+    "target": "rauzy-fractal",
+    "relation": "characteristic eigenvalue",
+    "kind": "source-backed",
+    "why": "Rauzy matrix has x³−x²−x−1 as characteristic polynomial.",
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "padovan",
+    "target": "plastic-ratio",
+    "relation": "dominant growth root",
+    "kind": "source-backed",
+    "why": "Padovan-style cubic recurrence is governed by x³−x−1.",
+    "sources": [
+      "golden:ef222972ce12",
+      "golden:45b1a203bab6",
+      "golden:e02aa594cfcb"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "narayana",
+    "target": "supergolden-ratio",
+    "relation": "recurrence characteristic root",
+    "kind": "source-backed",
+    "why": "Supergolden source includes a Narayana-sequence lane and x³−x²−1.",
+    "sources": [
+      "golden:83965d983aab"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "third-order-pell",
+    "target": "supersilver-ratio",
+    "relation": "recurrence characteristic root",
+    "kind": "source-backed",
+    "why": "Supersilver source includes third-order Pell sequences and x³−2x²−1.",
+    "sources": [
+      "golden:3e4fb49f5aac"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e008",
+    "source": "fibonacci",
+    "target": "fibonacci-word",
+    "relation": "same substitution family",
+    "kind": "source-backed",
+    "why": "Fibonacci word is built from the same named recurrence/substitution family.",
+    "sources": [
+      "golden:bbd43901d149",
+      "golden:e02c6640f036",
+      "golden:9e3dc7f4af23",
+      "golden:9c25b5be3752",
+      "golden:92bb83975755",
+      "golden:807b57bf9112"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "euclidean-algorithm",
+    "target": "continued-fractions",
+    "relation": "algorithmic decomposition",
+    "kind": "derived",
+    "why": "Euclidean quotient steps correspond to finite continued-fraction coefficients.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "diophantine",
+    "target": "pythagorean-triples",
+    "relation": "integer-solution family",
+    "kind": "source-backed",
+    "why": "Pythagorean triples solve a²+b²=c² over integers.",
+    "sources": [
+      "golden:c51a445557ff",
+      "golden:2779a3401828",
+      "golden:0efb0dfe8d71",
+      "golden:9e36c173ca6b"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "lucas",
+    "target": "lucas-lehmer",
+    "relation": "recurrence lineage",
+    "kind": "source-backed",
+    "why": "Lucas–Lehmer is a recurrence-based test named in the Lucas/Mersenne source lane.",
+    "sources": [
+      "golden:81fba236d525",
+      "golden:e5e966d797d4",
+      "golden:e5d9d4faa850",
+      "golden:8257ff4f5386",
+      "golden:b338bacbb9fa",
+      "golden:4153199edc24"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "lucas-lehmer",
+    "target": "pseudoprimes",
+    "relation": "primality-test neighborhood",
+    "kind": "curated",
+    "why": "Both sit in exact integer-arithmetic/primality testing, but they are not equivalent tests.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "matrix-recurrence",
+    "target": "cayley-hamilton",
+    "relation": "characteristic polynomial",
+    "kind": "source-backed",
+    "why": "Characteristic polynomials connect recurrence matrices to Cayley–Hamilton.",
+    "sources": [
+      "golden:2235afd0cfcc"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "matrix-recurrence",
+    "target": "jacobian",
+    "relation": "matrix linearization neighbor",
+    "kind": "curated",
+    "why": "Both use matrices to represent local/state evolution; relation is computational, not identity.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "tribonacci",
+    "target": "matrix-recurrence",
+    "relation": "3×3 state matrix",
+    "kind": "derived",
+    "why": "Order-3 recurrence becomes a first-order vector recurrence.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "pell",
+    "target": "matrix-recurrence",
+    "relation": "2×2 state matrix",
+    "kind": "derived",
+    "why": "Order-2 recurrence becomes a first-order vector recurrence.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "fibonacci",
+    "target": "matrix-recurrence",
+    "relation": "2×2 state matrix",
+    "kind": "derived",
+    "why": "Order-2 recurrence becomes a first-order vector recurrence.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "padovan",
+    "target": "matrix-recurrence",
+    "relation": "3×3 state matrix",
+    "kind": "derived",
+    "why": "Order-3 recurrence becomes a first-order vector recurrence.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "matrix-recurrence",
+    "target": "rauzy-fractal",
+    "relation": "Tribonacci matrix",
+    "kind": "source-backed",
+    "why": "Rauzy source directly exposes a Tribonacci map matrix and characteristic polynomial.",
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "snub-polytopes",
+    "target": "snub-tesseract",
+    "relation": "example",
+    "kind": "source-backed",
+    "why": "Supplied snub classification source.",
+    "sources": [
+      "golden:fd94c6807ea8",
+      "golden:972618618be6"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e023",
+    "source": "snub-polytopes",
+    "target": "snub-tetracontoctachoron",
+    "relation": "example",
+    "kind": "source-backed",
+    "why": "Supplied F₄-related snub source.",
+    "sources": [
+      "golden:f7407a547bea",
+      "golden:9b6ad836875f"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "chebyshev",
+    "target": "matrix-recurrence",
+    "relation": "three-term recurrence",
+    "kind": "derived",
+    "why": "Chebyshev polynomials admit a recurrence that can be encoded as state evolution.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "fourier-transform",
+    "target": "chebyshev",
+    "relation": "spectral/numerical neighborhood",
+    "kind": "curated",
+    "why": "Both are transform/approximation tools; relation is computational rather than a theorem.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "chaos",
+    "target": "lyapunov",
+    "relation": "diagnostic",
+    "kind": "source-backed",
+    "why": "Lyapunov exponents quantify expansion/contraction in dynamical systems.",
+    "sources": [
+      "golden:3351ed97b34e",
+      "fractal:132d11885530"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "chaos",
+    "target": "mandelbrot",
+    "relation": "iterated nonlinear system",
+    "kind": "source-backed",
+    "why": "Mandelbrot iteration is a canonical nonlinear discrete dynamical system.",
+    "sources": [
+      "golden:3351ed97b34e",
+      "fractal:134018d58189",
+      "fractal:09237c6182c5",
+      "fractal:289a5619b644"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "mandelbrot",
+    "target": "julia",
+    "relation": "shared iteration family",
+    "kind": "source-backed",
+    "why": "Same quadratic iteration; parameter-space versus fixed-parameter dynamical view.",
+    "sources": [
+      "fractal:134018d58189",
+      "fractal:09237c6182c5",
+      "fractal:289a5619b644",
+      "golden:ecb6324c05eb",
+      "fractal:2f57a514e1c5"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "newton-fractal",
+    "target": "jacobian",
+    "relation": "derivative-driven iteration",
+    "kind": "curated",
+    "why": "Newton iteration uses derivatives; Jacobians generalize derivative linearization to vector systems.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "rauzy-fractal",
+    "target": "hausdorff-dimension",
+    "relation": "fractal boundary dimension",
+    "kind": "source-backed",
+    "why": "Rauzy source explicitly discusses fractal boundary/Hausdorff dimension.",
+    "sources": [
+      "golden:ef573de2d02b",
+      "golden:fa63e441cee1",
+      "golden:eb09a2ca5296",
+      "fractal:5b4481f04bf2",
+      "fractal:aa88bbebfbef"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e036",
+    "source": "mandelbrot",
+    "target": "hausdorff-dimension",
+    "relation": "fractal geometry",
+    "kind": "curated",
+    "why": "Dimension is a measurement lane for fractal sets; no single dimension claim is encoded here.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e044",
+    "source": "golden-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e045",
+    "source": "silver-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e046",
+    "source": "plastic-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e047",
+    "source": "tribonacci-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e048",
+    "source": "supergolden-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e049",
+    "source": "supersilver-ratio",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e050",
+    "source": "sqrt2",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e051",
+    "source": "binomial",
+    "target": "sympy-solving",
+    "relation": "exact equation / root",
+    "kind": "implementation",
+    "why": "Symbolic equation becomes an exact SymPy solve/roots task.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e052",
+    "source": "fibonacci",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e053",
+    "source": "pell",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e054",
+    "source": "tribonacci",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e055",
+    "source": "padovan",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e056",
+    "source": "narayana",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e057",
+    "source": "third-order-pell",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e058",
+    "source": "matrix-recurrence",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e059",
+    "source": "cayley-hamilton",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e060",
+    "source": "jacobian",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e061",
+    "source": "rauzy-fractal",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e062",
+    "source": "chebyshev",
+    "target": "sympy-matrices",
+    "relation": "matrix/polynomial representation",
+    "kind": "implementation",
+    "why": "Represent the structure with exact matrices, polynomials or recurrence state.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e063",
+    "source": "euclidean-algorithm",
+    "target": "sympy-ntheory",
+    "relation": "executable exact arithmetic",
+    "kind": "implementation",
+    "why": "Maps source math to SymPy exact/integer routines.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e064",
+    "source": "diophantine",
+    "target": "sympy-ntheory",
+    "relation": "executable exact arithmetic",
+    "kind": "implementation",
+    "why": "Maps source math to SymPy exact/integer routines.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e065",
+    "source": "pythagorean-triples",
+    "target": "sympy-ntheory",
+    "relation": "executable exact arithmetic",
+    "kind": "implementation",
+    "why": "Maps source math to SymPy exact/integer routines.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e066",
+    "source": "pseudoprimes",
+    "target": "sympy-ntheory",
+    "relation": "executable exact arithmetic",
+    "kind": "implementation",
+    "why": "Maps source math to SymPy exact/integer routines.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e067",
+    "source": "lucas-lehmer",
+    "target": "sympy-ntheory",
+    "relation": "executable exact arithmetic",
+    "kind": "implementation",
+    "why": "Maps source math to SymPy exact/integer routines.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e068",
+    "source": "mandelbrot",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e069",
+    "source": "julia",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e070",
+    "source": "newton-fractal",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e071",
+    "source": "fourier-transform",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e072",
+    "source": "chebyshev",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e073",
+    "source": "lyapunov",
+    "target": "lambdify",
+    "relation": "symbolic → numerical callable",
+    "kind": "implementation",
+    "why": "Symbolic form can be converted into a numerical kernel for arrays/iteration.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-parsing",
+    "target": "sympy-core",
+    "relation": "creates expression",
+    "kind": "implementation",
+    "why": "Text/grammar input becomes a symbolic expression.",
+    "sources": [
+      "sympy:1bb964510eff"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-core",
+    "target": "sympy-solving",
+    "relation": "exact transformation",
+    "kind": "implementation",
+    "why": "Manipulate/solve exact symbolic forms.",
+    "sources": [
+      "sympy:72399676adce",
+      "sympy:3060d1eef8ad"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-core",
+    "target": "sympy-matrices",
+    "relation": "exact linear algebra",
+    "kind": "implementation",
+    "why": "Symbolic matrix structures.",
+    "sources": [
+      "sympy:fd06ab0bad69"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-core",
+    "target": "sympy-ntheory",
+    "relation": "exact integer algorithms",
+    "kind": "implementation",
+    "why": "Symbolic number theory APIs.",
+    "sources": [
+      "sympy:6e65aa46e084"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-core",
+    "target": "lambdify",
+    "relation": "compile expression",
+    "kind": "implementation",
+    "why": "Generate callable numerical functions.",
+    "sources": [
+      "sympy:af56dea4851a"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-solving",
+    "target": "codegen",
+    "relation": "solved expression → source",
+    "kind": "implementation",
+    "why": "Exact result can be printed/generated as source code.",
+    "sources": [
+      "sympy:fa2231bb04a7",
+      "sympy:39ee5a18289c"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "sympy-matrices",
+    "target": "python-numpy",
+    "relation": "numeric verification",
+    "kind": "implementation",
+    "why": "Evaluate matrices/eigenvalues numerically after exact derivation.",
+    "sources": [],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "lambdify",
+    "target": "python-numpy",
+    "relation": "NumPy backend",
+    "kind": "implementation",
+    "why": "Lambdify commonly targets NumPy for vectorized evaluation.",
+    "sources": [
+      "sympy:af56dea4851a"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "codegen",
+    "target": "c-target",
+    "relation": "C printer/codegen",
+    "kind": "implementation",
+    "why": "Emit C-compatible expressions/routines.",
+    "sources": [
+      "sympy:fa2231bb04a7",
+      "sympy:4074a42b467e"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "codegen",
+    "target": "javascript-target",
+    "relation": "JavaScript printer",
+    "kind": "implementation",
+    "why": "Emit JavaScript expressions.",
+    "sources": [
+      "sympy:39ee5a18289c"
+    ],
+    "directed": false
+  },
+  {
+    "id": "e074",
+    "source": "codegen",
+    "target": "rust-target",
+    "relation": "Rust printer",
+    "kind": "implementation",
+    "why": "Emit Rust expressions.",
+    "sources": [
+      "sympy:39ee5a18289c"
+    ],
+    "directed": false
+  }
+]

@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lucas–Lehmer primality test - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Lucas–Lehmer primality test - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T02:32:25.651Z</div><div class="stat"><b>Records</b><br>22</div><div class="stat"><b>Sections</b><br>16</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 287 B · ~72 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 42049 B · ~10355 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 45631 B · ~11385 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 427 B · ~107 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Lucas–Lehmer primality test.md</code></a> <small>markdown · 3219 B · ~789 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-The test.md</code></a> <small>markdown · 1828 B · ~450 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Alternative starting values.md</code></a> <small>markdown · 1991 B · ~497 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Sign of penultimate term.md</code></a> <small>markdown · 1408 B · ~346 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Time complexity.md</code></a> <small>markdown · 3086 B · ~760 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Comparison.md</code></a> <small>markdown · 870 B · ~217 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Examples.md</code></a> <small>markdown · 1103 B · ~261 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Proof of correctness.md</code></a> <small>markdown · 2311 B · ~564 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Sufficiency.md</code></a> <small>markdown · 4514 B · ~1103 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Necessity.md</code></a> <small>markdown · 5319 B · ~1302 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Applications.md</code></a> <small>markdown · 1190 B · ~297 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-See also.md</code></a> <small>markdown · 308 B · ~76 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Notes.md</code></a> <small>markdown · 1062 B · ~259 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-References.md</code></a> <small>markdown · 4940 B · ~1225 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-External links.md</code></a> <small>markdown · 8455 B · ~2104 tok</small></li><li><a href="#art-0020"><code>artifacts/provenance/source-record.json</code></a> <small>json · 437 B · ~109 tok</small></li><li><a href="#art-0021"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0022"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Lucas–Lehmer primality test - Wikipedia&quot;
+source: &quot;https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test&quot;
+captured_at: 2026-09-30T02:32:25.651Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 22
+artifact_count: 22
+content_sha256: 9b25f35b48bf1bfedf5c5fe51338b494ec179ffc3b42310aea8fba444a6620ba
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:287,&quot;sha256&quot;:&quot;10bcc506309f220e5bd9a95ddb39257e077197a9e39c1b3ee0013519dc12d10b&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;lucas&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t02&quot;,&quot;651z&quot;,&quot;93lehmer_primality_test&quot;,&quot;agent&quot;,&quot;canonical&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:72,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:42049,&quot;sha256&quot;:&quot;9b25f35b48bf1bfedf5c5fe51338b494ec179ffc3b42310aea8fba444a6620ba&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;displaystyle&quot;,&quot;lucas&quot;,&quot;omega&quot;,&quot;93lehmer_primality_test&quot;],&quot;summary&quot;:&quot;Lucas–Lehmer primality test - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:10355,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:45631,&quot;sha256&quot;:&quot;9bcd268a5d191887cfa9fb7da18ef889bffdc12a558b0c9f7e95359303995a61&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;org&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:11385,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:427,&quot;sha256&quot;:&quot;b8b5dcf17ca71693d4aa3d61898cd8497a0a6cc9fea5a27c3e84b0b041ce5528&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:107,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Lucas–Lehmer primality test.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3219,&quot;sha256&quot;:&quot;099997dc557f745f7113e19d477e060c16edca549533e03d4a890bf6550cd021&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;lucas&quot;,&quot;test&quot;,&quot;lehmer&quot;,&quot;primality&quot;],&quot;summary&quot;:&quot;Lucas–Lehmer primality test&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:789,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-The test.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1828,&quot;sha256&quot;:&quot;0bf309271dbc2a233db84ff8c9fe82b520e1ba9a1cbb8fb6565b86007e921859&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;test&quot;,&quot;wikipedia&quot;,&quot;mod&quot;,&quot;wiki&quot;,&quot;lucas&quot;,&quot;prime&quot;],&quot;summary&quot;:&quot;The test&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:450,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Alternative starting values.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1991,&quot;sha256&quot;:&quot;5706953de025ff207002fa70a1b31d42daeb2cb6c1449d38270dbea598724575&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;starting&quot;,&quot;wikipedia&quot;,&quot;lucas&quot;,&quot;wiki&quot;,&quot;values&quot;,&quot;93lehmer_primality_test&quot;],&quot;summary&quot;:&quot;Alternative starting values&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:497,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Sign of penultimate term.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1408,&quot;sha256&quot;:&quot;e394411148a1d1300c184a7d626feff859535bf9d42f40eafac9a51bbdd5d3f0&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;93lehmer_primality_test&quot;,&quot;lucas&quot;,&quot;mod&quot;,&quot;penultimate&quot;,&quot;sign&quot;],&quot;summary&quot;:&quot;Sign of penultimate term&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:346,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Time complexity.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3086,&quot;sha256&quot;:&quot;9e48b14dbfb72fd4bfcdedc562b40821386c046cdea885a5682ea08dc8ef7499&quot;,&quot;keywords&quot;:[&quot;mod&quot;,&quot;https&quot;,&quot;log&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;algorithm&quot;,&quot;wiki&quot;,&quot;bit&quot;],&quot;summary&quot;:&quot;Time complexity&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:760,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Comparison.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:870,&quot;sha256&quot;:&quot;c80fdcebaf6585f728ad04d5f1c8e3d6f9bc40fd070f53c16cc3435655b65e07&quot;,&quot;keywords&quot;:[&quot;test&quot;,&quot;primality&quot;,&quot;comparison&quot;,&quot;https&quot;,&quot;log&quot;,&quot;number&quot;,&quot;org&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Comparison&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:217,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Examples.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1103,&quot;sha256&quot;:&quot;d6a4c2371c84e37076406642fed5a05c54845d75916f8caed5750d013782a4f4&quot;,&quot;keywords&quot;:[&quot;2047&quot;,&quot;mod&quot;,&quot;prime&quot;,&quot;119&quot;,&quot;1877&quot;,&quot;194&quot;,&quot;240&quot;,&quot;282&quot;],&quot;summary&quot;:&quot;Examples&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:261,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Proof of correctness.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2311,&quot;sha256&quot;:&quot;3112d3ca0e9fe5f251e16f74f54fa8e946880e17f856f59748b4ccb6566a3cfd&quot;,&quot;keywords&quot;:[&quot;omega&quot;,&quot;displaystyle&quot;,&quot;bar&quot;,&quot;proof&quot;,&quot;sqrt&quot;,&quot;https&quot;,&quot;left&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Proof of correctness&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:564,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Sufficiency.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4514,&quot;sha256&quot;:&quot;10553d378e4beb8fc63f6c388d35d0199c504f47f79c845401bc8221a0a51cbc&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;omega&quot;,&quot;p-2&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;93lehmer_primality_test&quot;],&quot;summary&quot;:&quot;Sufficiency&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1103,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Necessity.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5319,&quot;sha256&quot;:&quot;1ccd56ade67d7d59527c65ad0c284c10931b81d4b51d3c022a2e031007aad597&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;frac&quot;,&quot;omega&quot;,&quot;equiv&quot;,&quot;sigma&quot;,&quot;mod&quot;,&quot;pmod&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;Necessity&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1302,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Applications.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1190,&quot;sha256&quot;:&quot;fc38ac9dce2ed22931639509b7c5c91181f040d98e1292a616198acb968e43ac&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;test&quot;,&quot;wikipedia&quot;,&quot;primes&quot;,&quot;wiki&quot;,&quot;large&quot;,&quot;lucas&quot;],&quot;summary&quot;:&quot;Applications&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:297,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:308,&quot;sha256&quot;:&quot;91eda8dc5ddb47bbfe6ed4a7cd198bab6c1309ddace24d9e6e1a07a8b973ad7c&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;lucas&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;also&quot;,&quot;edit&quot;,&quot;mersenne&quot;,&quot;see&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:76,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Notes.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1062,&quot;sha256&quot;:&quot;1fcb858e8d78ef7a3b5d10fa6287eeade424202e34fbabca7c47305b8f08f98b&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;mathbb&quot;,&quot;omega&quot;,&quot;93lehmer_primality_test&quot;,&quot;https&quot;,&quot;langle&quot;,&quot;lucas&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Notes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:259,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4940,&quot;sha256&quot;:&quot;11caef1a1a89db1dc7b9de12ec03ab76328d8bff28d8cdeb2e7bdb629f022e66&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas&quot;,&quot;93lehmer_primality_test&quot;,&quot;pdf&quot;,&quot;doi&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1225,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8455,&quot;sha256&quot;:&quot;9aaa1b573b4cb2eae327cc92848f6502cb9416bdf403d40d8ad5c2cefa7c2a75&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;lucas&quot;,&quot;sieve&quot;,&quot;lehmer&quot;,&quot;pollard&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2104,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0020&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:437,&quot;sha256&quot;:&quot;5d0b83834c9bf53d6abfc39e32a1fc5cc87e5ccf94ec4be2317c99a047b1bb83&quot;,&quot;keywords&quot;:[&quot;lucas&quot;,&quot;wikipedia&quot;,&quot;93lehmer_primality_test&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t02&quot;,&quot;651z&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:109,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0021&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;4eae309edee67f898727fd526a981eb429ef86b8e134a6ac0b83a8f020c51d6e&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;280&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0022&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T02:32:25.651Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	72	287	10bcc506309f220e5bd9a95ddb39257e077197a9e39c1b3ee0013519dc12d10b	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	10355	42049	9b25f35b48bf1bfedf5c5fe51338b494ec179ffc3b42310aea8fba444a6620ba	Lucas–Lehmer primality test - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	11385	45631	9bcd268a5d191887cfa9fb7da18ef889bffdc12a558b0c9f7e95359303995a61	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	107	427	b8b5dcf17ca71693d4aa3d61898cd8497a0a6cc9fea5a27c3e84b0b041ce5528	Introduction	
+sec:0005	section	artifacts/sections/0002-Lucas–Lehmer primality test.md	primary	789	3219	099997dc557f745f7113e19d477e060c16edca549533e03d4a890bf6550cd021	Lucas–Lehmer primality test	
+sec:0006	section	artifacts/sections/0003-The test.md	primary	450	1828	0bf309271dbc2a233db84ff8c9fe82b520e1ba9a1cbb8fb6565b86007e921859	The test	
+sec:0007	section	artifacts/sections/0004-Alternative starting values.md	primary	497	1991	5706953de025ff207002fa70a1b31d42daeb2cb6c1449d38270dbea598724575	Alternative starting values	
+sec:0008	section	artifacts/sections/0005-Sign of penultimate term.md	primary	346	1408	e394411148a1d1300c184a7d626feff859535bf9d42f40eafac9a51bbdd5d3f0	Sign of penultimate term	
+sec:0009	section	artifacts/sections/0006-Time complexity.md	primary	760	3086	9e48b14dbfb72fd4bfcdedc562b40821386c046cdea885a5682ea08dc8ef7499	Time complexity	
+sec:0010	section	artifacts/sections/0007-Comparison.md	primary	217	870	c80fdcebaf6585f728ad04d5f1c8e3d6f9bc40fd070f53c16cc3435655b65e07	Comparison	
+sec:0011	section	artifacts/sections/0008-Examples.md	primary	261	1103	d6a4c2371c84e37076406642fed5a05c54845d75916f8caed5750d013782a4f4	Examples	
+sec:0012	section	artifacts/sections/0009-Proof of correctness.md	supporting	564	2311	3112d3ca0e9fe5f251e16f74f54fa8e946880e17f856f59748b4ccb6566a3cfd	Proof of correctness	
+sec:0013	section	artifacts/sections/0010-Sufficiency.md	supporting	1103	4514	10553d378e4beb8fc63f6c388d35d0199c504f47f79c845401bc8221a0a51cbc	Sufficiency	
+sec:0014	section	artifacts/sections/0011-Necessity.md	supporting	1302	5319	1ccd56ade67d7d59527c65ad0c284c10931b81d4b51d3c022a2e031007aad597	Necessity	
+sec:0015	section	artifacts/sections/0012-Applications.md	supporting	297	1190	fc38ac9dce2ed22931639509b7c5c91181f040d98e1292a616198acb968e43ac	Applications	
+sec:0016	section	artifacts/sections/0013-See also.md	supporting	76	308	91eda8dc5ddb47bbfe6ed4a7cd198bab6c1309ddace24d9e6e1a07a8b973ad7c	See also	
+sec:0017	section	artifacts/sections/0014-Notes.md	supporting	259	1062	1fcb858e8d78ef7a3b5d10fa6287eeade424202e34fbabca7c47305b8f08f98b	Notes	
+sec:0018	section	artifacts/sections/0015-References.md	supporting	1225	4940	11caef1a1a89db1dc7b9de12ec03ab76328d8bff28d8cdeb2e7bdb629f022e66	References	
+sec:0019	section	artifacts/sections/0016-External links.md	supporting	2104	8455	9aaa1b573b4cb2eae327cc92848f6502cb9416bdf403d40d8ad5c2cefa7c2a75	External links	
+art:0020	provenance	artifacts/provenance/source-record.json	supporting	109	437	5d0b83834c9bf53d6abfc39e32a1fc5cc87e5ccf94ec4be2317c99a047b1bb83	Capture source identity and metadata	
+art:0021	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	4eae309edee67f898727fd526a981eb429ef86b8e134a6ac0b83a8f020c51d6e	Extraction engine and counts	
+art:0022	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Lucas–Lehmer primality test
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D9%84%D9%88%D9%83%D8%A7%D8%B3_%D9%84%D9%8A%D9%87%D9%85%D8%B1_%D9%84%D8%A3%D9%88%D9%84%D9%8A%D8%A9_%D8%B9%D8%AF%D8%AF_%D9%85%D8%A7)
+- [Català](https://ca.wikipedia.org/wiki/Prova_de_Lucas-Lehmer_per_a_nombres_de_Mersenne)
+- [Dansk](https://da.wikipedia.org/wiki/Lucas-Lehmer)
+- [Deutsch](https://de.wikipedia.org/wiki/Lucas-Lehmer-Test)
+- [Español](https://es.wikipedia.org/wiki/Test_de_Lucas-Lehmer)
+- [Suomi](https://fi.wikipedia.org/wiki/Lucasin_ja_Lehmerin_alkulukutesti_Mersennen_luvuille)
+- [Français](https://fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_de_Lucas-Lehmer_pour_les_nombres_de_Mersenne)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%91%D7%97%D7%9F_%D7%9C%D7%95%D7%A7%D7%90%D7%A1-%D7%9C%D7%94%D7%9E%D7%A8_%D7%9C%D7%9E%D7%A1%D7%A4%D7%A8%D7%99_%D7%9E%D7%A8%D7%A1%D7%9F)
+- [Italiano](https://it.wikipedia.org/wiki/Test_di_Lucas-Lehmer)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E2%80%93%E3%83%AC%E3%83%BC%E3%83%9E%E3%83%BC%E3%83%BB%E3%83%86%E3%82%B9%E3%83%88)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%A4%BC%EC%B9%B4-%EB%A0%88%EB%A8%B8_%EC%86%8C%EC%88%98%ED%8C%90%EB%B3%84%EB%B2%95)
+- [Nederlands](https://nl.wikipedia.org/wiki/Lucas-Lehmertest_voor_mersennegetallen)
+- [Polski](https://pl.wikipedia.org/wiki/Test_Lucasa-Lehmera)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9B%D1%8E%D0%BA%D0%B0_%E2%80%94_%D0%9B%D0%B5%D0%BC%D0%B5%D1%80%D0%B0)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9B%D1%8E%D0%BA%D0%B0_%E2%80%94_%D0%9B%D0%B5%D0%BC%D0%B5%D1%80%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E5%8D%A2%E5%8D%A1%E6%96%AF-%E8%8E%B1%E9%BB%98%E6%A3%80%E9%AA%8C%E6%B3%95)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1138992#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Test if a Mersenne number is prime This article is about the Lucas–Lehmer test that applies only to Mersenne numbers. For the Lucas–Lehmer test that applies to a natural number *n*, see [Lucas primality test](https://en.wikipedia.org/wiki/Lucas_primality_test). For the Lucas–Lehmer–Riesel test, see [Lucas–Lehmer–Riesel test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test). [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/LucasTheorieDesFonctions1878.png/250px-LucasTheorieDesFonctions1878.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LucasTheorieDesFonctions1878.png)
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), the **Lucas–Lehmer test** (**LLT**) is a [primality test](https://en.wikipedia.org/wiki/Primality_test) for [Mersenne numbers](https://en.wikipedia.org/wiki/Mersenne_prime). The test was originally developed by [Édouard Lucas](https://en.wikipedia.org/wiki/%C3%89douard_Lucas) in 1878[[1]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-1) and subsequently proved by [Derrick Henry Lehmer](https://en.wikipedia.org/wiki/Derrick_Henry_Lehmer) in 1930.
+
+## The test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=1)]
+
+The Lucas–Lehmer test works as follows. Let *M**p* = 2*p* − 1 be the Mersenne number to test with *p* an odd [prime](https://en.wikipedia.org/wiki/Prime_number). The primality of *p* can be efficiently checked with a simple algorithm like [trial division](https://en.wikipedia.org/wiki/Trial_division) since *p* is exponentially smaller than *M**p*. Define a sequence     {  s  i   }   {\displaystyle \{s_{i}\}}   for all *i* ≥ 0 by
+
+      s  i   =   {    4    if   i = 0 ;      s  i − 1   2   − 2    otherwise.          {\displaystyle s_{i}={\begin{cases}4&amp;{\text{if }}i=0;\\s_{i-1}^{2}-2&amp;{\text{otherwise.}}\end{cases}}}
+
+The first few terms of this sequence are 4, 14, 194, 37634, ... (sequence [A003010](https://oeis.org/A003010) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)). Then *M**p* is prime if and only if
+
+      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}
+
+The number *s**p* − 2 mod *M**p* is called the **Lucas–Lehmer residue** of *p*. (Some authors equivalently set *s*1 = 4 and test *s**p*−1 mod *M**p*). In [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), the test might be written as
+
+```
+// Determine if Mp = 2p − 1 is prime for p &gt; 2
+Lucas–Lehmer(p)
+    var s = 4
+    var M = 2p − 1
+    repeat p − 2 times:
+        s = ((s × s) − 2) mod M
+    if s == 0 return PRIME else return COMPOSITE
+```
+
+Performing the `mod M` at each iteration ensures that all intermediate results are at most *p* bits (otherwise the number of bits would double each iteration). The same strategy is used in [modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation).
+
+### Alternative starting values
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=2)]
+
+Starting values *s*0 other than 4 are possible, for instance 10, 52, and others (sequence [A018844](https://oeis.org/A018844) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) The Lucas–Lehmer residue calculated with these alternative starting values will still be zero if *M**p* is a Mersenne prime. However, the terms of the sequence will be different and a non-zero Lucas-Lehmer residue for non-prime *M**p* will have a different numerical value from the non-zero value calculated when *s*0 = 4.
+
+It is also possible to use the starting value (2 mod *M**p*)(3 mod *M**p*)−1, usually denoted by 2/3 for short.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) This starting value equals (2p + 1) /3, the [Wagstaff number](https://en.wikipedia.org/wiki/Wagstaff_number) with exponent *p*.
+
+Starting values like 4, 10, and 2/3 are universal, that is, they are valid for all (or nearly all) *p*. There are infinitely many additional universal starting values.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) However, some other starting values are only valid for a subset of all possible *p*, for example *s*0 = 3 can be used if *p* = 3 (mod 4).[[3]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-3) This starting value was often used where suitable in the era of hand computation, including by Lucas in proving *M**127* prime.[[4]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-4) The first few terms of the sequence are 3, 7, 47, ... (sequence [A001566](https://oeis.org/A001566) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).
+
+### Sign of penultimate term
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=3)]
+
+If *s**p*−2 = 0 mod *M**p* then the penultimate term is *s**p*−3 = ± 2(*p*+1)/2 mod *M**p*. The sign of this penultimate term is called the Lehmer symbol ϵ(*s*0, *p*).
+
+In 2000 S.Y. Gebre-Egziabher proved that for the starting value 2/3 and for *p* ≠ 5 the sign is:
+
+     ϵ (   2 3   ,   p ) = ( − 1  )    p − 1  2      {\displaystyle \epsilon ({2 \over 3},\ p)=(-1)^{p-1 \over 2}}
+
+That is, ϵ(2/3, *p*) = +1 if *p* = 1 (mod 4) and p ≠ 5.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2)
+
+The same author also proved [Woltman](https://en.wikipedia.org/wiki/George_Woltman)&#39;s conjecture[[5]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-5) that the Lehmer symbols for starting values 4 and 10 when *p* is not 2 or 5 are related by:
+
+     ϵ ( 10 ,   p ) = ϵ ( 4 ,   p )   ×   ( − 1  )    ( p + 1 ) ( p + 3 )  8      {\displaystyle \epsilon (10,\ p)=\epsilon (4,\ p)\ \times \ (-1)^{{(p+1)(p+3)} \over 8}}
+
+That is, ϵ(4, *p*) × ϵ(10, *p*) = 1 if *p* = 5 or 7 (mod 8) and p ≠ 2, 5.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2)
+
+OEIS sequence [A123271](https://oeis.org/A123271) shows ϵ(4, *p*) for each Mersenne prime *M**p*.
+
+## Time complexity
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=4)]
+
+In the algorithm as written above, there are two expensive operations during each iteration: the multiplication `s × s`, and the `mod M` operation. The `mod M` operation can be made particularly efficient on standard binary computers by observing that
+
+     k ≡ ( k   mod      2  n   ) + ⌊ k  /   2  n   ⌋   ( mod   2  n   − 1 )  .   {\displaystyle k\equiv (k\,{\bmod {\,}}2^{n})+\lfloor k/2^{n}\rfloor {\pmod {2^{n}-1}}.}
+
+This says that the least significant *n* bits of *k* plus the remaining bits of *k* are equivalent to *k* modulo 2*n*−1. This equivalence can be used repeatedly until at most *n* bits remain. In this way, the remainder after dividing *k* by the Mersenne number 2*n*−1 is computed without using division. For example,
+
+  916 mod 25−1=11100101002 mod 25−1  =((916 mod 25) + int(916 ÷ 25)) mod 25−1  =(101002 + 111002) mod 25−1  =1100002 mod 25−1  =(100002 + 12) mod 25−1  =100012 mod 25−1  =100012  =17.
+
+Moreover, since `s × s` will never exceed M2 &lt; 22p, this simple technique converges in at most 1 *p*-bit addition (and possibly a carry from the *p*th bit to the 1st bit), which can be done in linear time. This algorithm has a small exceptional case. It will produce 2*n*−1 for a multiple of the modulus rather than the correct value of 0. However, this case is easy to detect and correct.
+
+With the modulus out of the way, the asymptotic complexity of the algorithm only depends on the [multiplication algorithm](https://en.wikipedia.org/wiki/Multiplication_algorithm) used to square *s* at each step. The simple &quot;grade-school&quot; algorithm for multiplication requires [O](https://en.wikipedia.org/wiki/Big_O_notation)(*p*2) bit-level or word-level operations to square a *p*-bit number. Since this happens O(*p*) times, the total time complexity is O(*p*3). A more efficient multiplication algorithm is the [Schönhage–Strassen algorithm](https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm), which is based on the [Fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform). It only requires O(*p* log *p* log log *p*) time to square a *p*-bit number. This reduces the complexity to O(*p*2 log *p* log log *p*) or Õ(*p*2).[[6]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-6) An even more efficient multiplication algorithm, [Fürer&#39;s algorithm](https://en.wikipedia.org/wiki/F%C3%BCrer&#39;s_algorithm), only needs     p log ⁡ p    2  O (  log  ∗   ⁡ p )     {\displaystyle p\log p\ 2^{O(\log ^{*}p)}}   time to multiply two *p*-bit numbers, but is only faster than FFT for impractically large numbers.
+
+Among the most efficient practical implementations of Schönhage–Strassen are [George Woltman](https://en.wikipedia.org/wiki/George_Woltman)&#39;s [Prime95](https://en.wikipedia.org/wiki/Prime95) for x86 and the less-efficient translations to other architectures used in [GIMPS](https://en.wikipedia.org/wiki/GIMPS).
+
+### Comparison
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=5)]
+
+By comparison, the most efficient randomized primality test for general integers, the [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test), requires O(*k* *n*2 log *n* log log *n*) bit operations using FFT multiplication for an *n*-digit number, where *k* is the number of iterations and is related to the error rate. For constant *k*, this is in the same complexity class as the Lucas-Lehmer test, and is similarly fast in practice.
+
+The most efficient deterministic primality test for any *n*-digit number, the [AKS primality test](https://en.wikipedia.org/wiki/AKS_primality_test), requires Õ(n6) bit operations in its best known variant and is extremely slow even for relatively small values.
+
+## Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=6)]
+
+The Mersenne number M3 = 23−1 = 7 is prime. The Lucas–Lehmer test verifies this as follows. Initially *s* is set to 4 and then is updated 3−2 = 1 time:
+
+- s ← ((4 × 4) − 2) mod 7 = 0.
+
+Since the final value of *s* is 0, the conclusion is that M3 is prime.
+
+On the other hand, M11 = 2047 = 23 × 89 is not prime. Again, *s* is set to 4 but is now updated 11−2 = 9 times:
+
+- s ← ((4 × 4) − 2) mod 2047 = 14
+- s ← ((14 × 14) − 2) mod 2047 = 194
+- s ← ((194 × 194) − 2) mod 2047 = 788
+- s ← ((788 × 788) − 2) mod 2047 = 701
+- s ← ((701 × 701) − 2) mod 2047 = 119
+- s ← ((119 × 119) − 2) mod 2047 = 1877
+- s ← ((1877 × 1877) − 2) mod 2047 = 240
+- s ← ((240 × 240) − 2) mod 2047 = 282
+- s ← ((282 × 282) − 2) mod 2047 = 1736
+
+Since the final value of *s* is not 0, the conclusion is that M11 = 2047 is not prime. Although M11 = 2047 has nontrivial factors, the Lucas–Lehmer test gives no indication about what they might be.
+
+## Proof of correctness
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=7)]
+
+The proof of correctness for this test presented here is simpler than the original proof given by Lehmer. Recall the definition
+
+      s  i   =   {    4    if   i = 0 ;      s  i − 1   2   − 2    otherwise.          {\displaystyle s_{i}={\begin{cases}4&amp;{\text{if }}i=0;\\s_{i-1}^{2}-2&amp;{\text{otherwise.}}\end{cases}}}
+
+The goal is to show that *M**p* is prime [if and only if](https://en.wikipedia.org/wiki/Iff)      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}
+
+The sequence      ⟨   s  i    ⟩    {\displaystyle {\langle }s_{i}{\rangle }}   is a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation) with a [closed-form solution](https://en.wikipedia.org/wiki/Closed-form_solution). Let     ω = 2 +   3     {\displaystyle \omega =2+{\sqrt {3}}}   and        ω ¯    = 2 −   3     {\displaystyle {\bar {\omega }}=2-{\sqrt {3}}}  . It then follows by [induction](https://en.wikipedia.org/wiki/Mathematical_induction) that      s  i   =  ω   2  i     +     ω ¯      2  i       {\displaystyle s_{i}=\omega ^{2^{i}}+{\bar {\omega }}^{2^{i}}}   for all *i*:
+
+      s  0   =  ω   2  0     +     ω ¯      2  0     =  (  2 +   3    )  +  (  2 −   3    )  = 4   {\displaystyle s_{0}=\omega ^{2^{0}}+{\bar {\omega }}^{2^{0}}=\left(2+{\sqrt {3}}\right)+\left(2-{\sqrt {3}}\right)=4}
+
+and
+
+          s  n      =  s  n − 1   2   − 2       =   (   ω   2  n − 1     +     ω ¯      2  n − 1      )   2   − 2       =  ω   2  n     +     ω ¯      2  n     + 2 ( ω    ω ¯     )   2  n − 1     − 2       =  ω   2  n     +     ω ¯      2  n     .       {\displaystyle {\begin{aligned}s_{n}&amp;=s_{n-1}^{2}-2\\&amp;=\left(\omega ^{2^{n-1}}+{\bar {\omega }}^{2^{n-1}}\right)^{2}-2\\&amp;=\omega ^{2^{n}}+{\bar {\omega }}^{2^{n}}+2(\omega {\bar {\omega }})^{2^{n-1}}-2\\&amp;=\omega ^{2^{n}}+{\bar {\omega }}^{2^{n}}.\end{aligned}}}
+
+The last step uses     ω    ω ¯    =  (  2 +   3    )   (  2 −   3    )  = 1.   {\displaystyle \omega {\bar {\omega }}=\left(2+{\sqrt {3}}\right)\left(2-{\sqrt {3}}\right)=1.}   This closed form is used in both the proof of sufficiency and the proof of necessity.
+
+### Sufficiency
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=8)]
+
+The goal is to show that      s  p − 2   ≡ 0   ( mod   M  p   )    {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}}   implies that      M  p     {\displaystyle M_{p}}   is prime. What follows is a straightforward proof exploiting elementary [group theory](https://en.wikipedia.org/wiki/Group_theory) given by J. W. Bruce[[7]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-7) as related by Jason Wojciechowski.[[8]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-8)
+
+Suppose      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}   Then
+
+      ω   2  p − 2     +     ω ¯      2  p − 2     = k  M  p     {\displaystyle \omega ^{2^{p-2}}+{\bar {\omega }}^{2^{p-2}}=kM_{p}}
+
+for some integer *k*, so
+
+      ω   2  p − 2     = k  M  p   −     ω ¯      2  p − 2     .   {\displaystyle \omega ^{2^{p-2}}=kM_{p}-{\bar {\omega }}^{2^{p-2}}.}
+
+Multiplying by      ω   2  p − 2       {\displaystyle \omega ^{2^{p-2}}}   gives
+
+       (  ω   2  p − 2     )   2   = k  M  p    ω   2  p − 2     − ( ω    ω ¯     )   2  p − 2     .   {\displaystyle \left(\omega ^{2^{p-2}}\right)^{2}=kM_{p}\omega ^{2^{p-2}}-(\omega {\bar {\omega }})^{2^{p-2}}.}
+
+Thus,
+
+      ω   2  p − 1     = k  M  p    ω   2  p − 2     − 1.   ( 1 )   {\displaystyle \omega ^{2^{p-1}}=kM_{p}\omega ^{2^{p-2}}-1.\qquad \qquad (1)}
+
+For a contradiction, suppose *M**p* is composite, and let *q* be the smallest prime factor of *M**p*. Mersenne numbers are odd, so *q* &gt; 2. Let       Z   q     {\displaystyle \mathbb {Z} _{q}}   be the integers modulo *q*, and let     X =  {  a + b   3   ∣ a , b ∈   Z   q    }  .   {\displaystyle X=\left\{a+b{\sqrt {3}}\mid a,b\in \mathbb {Z} _{q}\right\}.}   Multiplication in     X   {\displaystyle X}   is defined as
+
+      (  a +   3   b  )   (  c +   3   d  )  = [ ( a c + 3 b d )   mod     q ] +   3   [ ( a d + b c )   mod     q ] .   {\displaystyle \left(a+{\sqrt {3}}b\right)\left(c+{\sqrt {3}}d\right)=[(ac+3bd)\,{\bmod {\,}}q]+{\sqrt {3}}[(ad+bc)\,{\bmod {\,}}q].}  [[note 1]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-9)
+
+Clearly, this multiplication is closed, i.e. the product of numbers from *X* is itself in *X*. The size of *X* is denoted by      |  X  |  .   {\displaystyle |X|.}
+
+Since *q* &gt; 2, it follows that     ω   {\displaystyle \omega }   and        ω ¯      {\displaystyle {\bar {\omega }}}   are in *X*.[[note 2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-10) The subset of elements in *X* with inverses forms a group, which is denoted by *X** and has size      |   X  ∗    |  .   {\displaystyle |X^{*}|.}   One element in *X* that does not have an inverse is 0, so      |   X  ∗    |  ≤  |  X  |  − 1 =  q  2   − 1.   {\displaystyle |X^{*}|\leq |X|-1=q^{2}-1.}
+
+Now      M  p   ≡ 0   ( mod  q )    {\displaystyle M_{p}\equiv 0{\pmod {q}}}   and     ω ∈ X   {\displaystyle \omega \in X}  , so
+
+     k  M  p    ω   2  p − 2     = 0   {\displaystyle kM_{p}\omega ^{2^{p-2}}=0}
+
+in *X*. Then by equation (1),
+
+      ω   2  p − 1     = − 1   {\displaystyle \omega ^{2^{p-1}}=-1}
+
+in *X*, and squaring both sides gives
+
+      ω   2  p     = 1.   {\displaystyle \omega ^{2^{p}}=1.}
+
+Thus     ω   {\displaystyle \omega }   lies in *X** and has inverse      ω   2  p   − 1   .   {\displaystyle \omega ^{2^{p}-1}.}   Furthermore, the [order](https://en.wikipedia.org/wiki/Order_(group_theory)) of     ω   {\displaystyle \omega }   divides      2  p   .   {\displaystyle 2^{p}.}   However      ω   2  p − 1     ≠ 1   {\displaystyle \omega ^{2^{p-1}}\neq 1}  , so the order does not divide      2  p − 1   .   {\displaystyle 2^{p-1}.}   Thus, the order is exactly      2  p   .   {\displaystyle 2^{p}.}
+
+The order of an element is at most the order (size) of the group, so
+
+      2  p   ≤  |   X  ∗    |  ≤  q  2   − 1 &lt;  q  2   .   {\displaystyle 2^{p}\leq |X^{*}|\leq q^{2}-1&lt;q^{2}.}
+
+But *q* is the smallest prime factor of the composite      M  p     {\displaystyle M_{p}}  , so
+
+      q  2   ≤  M  p   =  2  p   − 1.   {\displaystyle q^{2}\leq M_{p}=2^{p}-1.}
+
+This yields the contradiction      2  p   &lt;  2  p   − 1   {\displaystyle 2^{p}&lt;2^{p}-1}  . Therefore,      M  p     {\displaystyle M_{p}}   is prime.
+
+### Necessity
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=9)]
+
+In the other direction, the goal is to show that the primality of      M  p     {\displaystyle M_{p}}   implies      s  p − 2   ≡ 0   ( mod   M  p   )    {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}}  . The following simplified proof is by Öystein J. Rödseth.[[9]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Rodseth-11)
+
+Since      2  p   − 1 ≡ 7   ( mod  12 )    {\displaystyle 2^{p}-1\equiv 7{\pmod {12}}}   for odd     p &gt; 1   {\displaystyle p&gt;1}  , it follows from [properties of the Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol#Properties_of_the_Legendre_symbol) that     ( 3  |   M  p   ) = − 1.   {\displaystyle (3|M_{p})=-1.}   This means that 3 is a [quadratic nonresidue](https://en.wikipedia.org/wiki/Quadratic_nonresidue) modulo      M  p   .   {\displaystyle M_{p}.}   By [Euler&#39;s criterion](https://en.wikipedia.org/wiki/Euler&#39;s_criterion), this is equivalent to
+
+      3     M  p   − 1  2    ≡ − 1   ( mod   M  p   )  .   {\displaystyle 3^{\frac {M_{p}-1}{2}}\equiv -1{\pmod {M_{p}}}.}
+
+In contrast, 2 is a [quadratic residue](https://en.wikipedia.org/wiki/Quadratic_residue) modulo      M  p     {\displaystyle M_{p}}   since      2  p   ≡ 1   ( mod   M  p   )    {\displaystyle 2^{p}\equiv 1{\pmod {M_{p}}}}   and so     2 ≡  2  p + 1   =   (  2    p + 1  2    )   2     ( mod   M  p   )  .   {\displaystyle 2\equiv 2^{p+1}=\left(2^{\frac {p+1}{2}}\right)^{2}{\pmod {M_{p}}}.}   This time, Euler&#39;s criterion gives
+
+      2     M  p   − 1  2    ≡ 1   ( mod   M  p   )  .   {\displaystyle 2^{\frac {M_{p}-1}{2}}\equiv 1{\pmod {M_{p}}}.}
+
+Combining these two equivalence relations yields
+
+      24     M  p   − 1  2    ≡   (  2     M  p   − 1  2    )   3    (  3     M  p   − 1  2    )  ≡ ( 1  )  3   ( − 1 ) ≡ − 1   ( mod   M  p   )  .   {\displaystyle 24^{\frac {M_{p}-1}{2}}\equiv \left(2^{\frac {M_{p}-1}{2}}\right)^{3}\left(3^{\frac {M_{p}-1}{2}}\right)\equiv (1)^{3}(-1)\equiv -1{\pmod {M_{p}}}.}
+
+Let     σ = 2   3     {\displaystyle \sigma =2{\sqrt {3}}}  , and define *X* as before as the ring     X = { a + b   3   ∣ a , b ∈   Z    M  p     } .   {\displaystyle X=\{a+b{\sqrt {3}}\mid a,b\in \mathbb {Z} _{M_{p}}\}.}   Then in the ring *X*, it follows that
+
+         ( 6 + σ  )   M  p        =  6   M  p     +  (  2   M  p     )   (    3     M  p     )        = 6 + 2  (  3     M  p   − 1  2    )    3         = 6 + 2 ( − 1 )   3         = 6 − σ ,       {\displaystyle {\begin{aligned}(6+\sigma )^{M_{p}}&amp;=6^{M_{p}}+\left(2^{M_{p}}\right)\left({\sqrt {3}}^{M_{p}}\right)\\&amp;=6+2\left(3^{\frac {M_{p}-1}{2}}\right){\sqrt {3}}\\&amp;=6+2(-1){\sqrt {3}}\\&amp;=6-\sigma ,\end{aligned}}}
+
+where the first equality uses the [Binomial Theorem in a finite field](https://en.wikipedia.org/wiki/Proofs_of_Fermat&#39;s_little_theorem#Proofs_using_the_binomial_theorem), which is
+
+     ( x + y  )   M  p     ≡  x   M  p     +  y   M  p       ( mod   M  p   )    {\displaystyle (x+y)^{M_{p}}\equiv x^{M_{p}}+y^{M_{p}}{\pmod {M_{p}}}}  ,
+
+and the second equality uses [Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem), which is
+
+      a   M  p     ≡ a   ( mod   M  p   )    {\displaystyle a^{M_{p}}\equiv a{\pmod {M_{p}}}}
+
+for any integer *a*. The value of     σ   {\displaystyle \sigma }   was chosen so that     ω =    ( 6 + σ  )  2    24   .   {\displaystyle \omega ={\frac {(6+\sigma )^{2}}{24}}.}   Consequently, this can be used to compute      ω     M  p   + 1  2      {\displaystyle \omega ^{\frac {M_{p}+1}{2}}}   in the ring *X* as
+
+          ω     M  p   + 1  2       =    ( 6 + σ  )   M  p   + 1     24     M  p   + 1  2            =    ( 6 + σ ) ( 6 + σ  )   M  p       24 ⋅  24     M  p   − 1  2             =    ( 6 + σ ) ( 6 − σ )   − 24          = − 1.       {\displaystyle {\begin{aligned}\omega ^{\frac {M_{p}+1}{2}}&amp;={\frac {(6+\sigma )^{M_{p}+1}}{24^{\frac {M_{p}+1}{2}}}}\\&amp;={\frac {(6+\sigma )(6+\sigma )^{M_{p}}}{24\cdot 24^{\frac {M_{p}-1}{2}}}}\\&amp;={\frac {(6+\sigma )(6-\sigma )}{-24}}\\&amp;=-1.\end{aligned}}}
+
+All that remains is to multiply both sides of this equation by         ω ¯        M  p   + 1  4      {\displaystyle {\bar {\omega }}^{\frac {M_{p}+1}{4}}}   and use     ω    ω ¯    = 1   {\displaystyle \omega {\bar {\omega }}=1}  , which gives
+
+          ω     M  p   + 1  2        ω ¯        M  p   + 1  4       = −     ω ¯        M  p   + 1  4         ω     M  p   + 1  4    +     ω ¯        M  p   + 1  4       = 0      ω     2  p   − 1 + 1  4    +     ω ¯        2  p   − 1 + 1  4       = 0      ω   2  p − 2     +     ω ¯      2  p − 2        = 0      s  p − 2      = 0.       {\displaystyle {\begin{aligned}\omega ^{\frac {M_{p}+1}{2}}{\bar {\omega }}^{\frac {M_{p}+1}{4}}&amp;=-{\bar {\omega }}^{\frac {M_{p}+1}{4}}\\\omega ^{\frac {M_{p}+1}{4}}+{\bar {\omega }}^{\frac {M_{p}+1}{4}}&amp;=0\\\omega ^{\frac {2^{p}-1+1}{4}}+{\bar {\omega }}^{\frac {2^{p}-1+1}{4}}&amp;=0\\\omega ^{2^{p-2}}+{\bar {\omega }}^{2^{p-2}}&amp;=0\\s_{p-2}&amp;=0.\end{aligned}}}
+
+Since      s  p − 2     {\displaystyle s_{p-2}}   is 0 in *X*, it is also 0 modulo      M  p   .   {\displaystyle M_{p}.}
+
+## Applications
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=10)]
+
+The Lucas–Lehmer test was the main primality test used by the [Great Internet Mersenne Prime Search](https://en.wikipedia.org/wiki/Great_Internet_Mersenne_Prime_Search) (GIMPS) to locate large primes until 2021. This search has been successful in locating many of the largest primes known to date.[[10]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-12) In 2021, GIMPS switched to an easy-to-error-check variant of [Fermat&#39;s primality test](https://en.wikipedia.org/wiki/Fermat&#39;s_primality_test) for locating probable Mersenne primes, and only uses Lucas–Lehmer to verify these probable primes as actual primes.
+
+The test is considered valuable because it can provably test a large set of very large numbers for primality within an affordable amount of time. In contrast, the equivalently fast [Pépin&#39;s test](https://en.wikipedia.org/wiki/P%C3%A9pin&#39;s_test) for any [Fermat number](https://en.wikipedia.org/wiki/Fermat_number) can only be used on a much smaller set of very large numbers before reaching computational limits.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=11)]
+- [Mersenne&#39;s conjecture](https://en.wikipedia.org/wiki/Mersenne&#39;s_conjecture)
+- [Lucas–Lehmer–Riesel test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test)
+
+## Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=12)]
+1. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-9) Formally, let       Z   q   =  Z   /  q  Z    {\displaystyle \mathbb {Z} _{q}=\mathbb {Z} /q\mathbb {Z} }   and     X =   Z   q   [ T ]  /  ⟨  T  2   − 3 ⟩   {\displaystyle X=\mathbb {Z} _{q}[T]/\langle T^{2}-3\rangle }  .
+2. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-10) Formally,     ω + ⟨  T  2   − 3 ⟩   {\displaystyle \omega +\langle T^{2}-3\rangle }   and        ω ¯    + ⟨  T  2   − 3 ⟩   {\displaystyle {\bar {\omega }}+\langle T^{2}-3\rangle }   are in *X*. By abuse of language     ω   {\displaystyle \omega }   and        ω ¯      {\displaystyle {\bar {\omega }}}   are identified with their images in *X* under the natural ring homomorphism from      Z  [   3   ]   {\displaystyle \mathbb {Z} [{\sqrt {3}}]}   to *X* which sends       3     {\displaystyle {\sqrt {3}}}   to *T*.
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=13)]
+1. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-1) Jaroma, John H. (2004). [&quot;Note on the Lucas–Lehmer Test&quot;](https://www.irishmathsoc.org/bull54/M5402.pdf) (PDF). *Bulletin of the Irish Mathematical Society*. **54** (2). Irish Mathematical Society: 63. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.33232/BIMS.0054.63.72](https://doi.org/10.33232%2FBIMS.0054.63.72). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [16831811](https://api.semanticscholar.org/CorpusID:16831811).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-0) [2](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-1) [3](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-2) [4](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-3) [5](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-4) Jansen, B.J.H. (2012). [*Mersenne primes and class field theory*](https://openaccess.leidenuniv.nl/handle/1887/20310) (Doctoral thesis). Leiden University. pp. iii–iv. Retrieved 2018-12-17.
+3. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-3) Robinson, Raphael M. (1954). [&quot;Mersenne and Fermat numbers&quot;](https://doi.org/10.1090%2FS0002-9939-1954-0064787-4). *Proc. Amer. Math. Soc*. **5** (5): 842–846. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0002-9939-1954-0064787-4](https://doi.org/10.1090%2FS0002-9939-1954-0064787-4).
+4. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-4) Haworth, Guy (1990). [*Mersenne numbers*](https://core.ac.uk/download/pdf/12758.pdf?repositoryId=17) (PDF) (Technical report). p. 20. Retrieved 2018-12-17.
+5. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-5) [Lenstra, Jr., H. W.](https://en.wikipedia.org/wiki/Hendrik_Lenstra) (2001-05-13). Buhler, J.; Niederreiter, H.; Pohst, M.E. (eds.). [*Woltman&#39;s conjecture on the Lucas-Lehmer test*](http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/15190/pdf/DagSemRep-306.pdf) (PDF). Algorithms and Number Theory. p. 20. Retrieved 2024-10-16.
+6. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-6) Colquitt, W. N.; Welsh, L. Jr. (1991), &quot;A New Mersenne Prime&quot;, *Mathematics of Computation*, **56** (194): 867–870, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2008415](https://doi.org/10.2307%2F2008415), [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2008415](https://www.jstor.org/stable/2008415), The use of the FFT speeds up the asymptotic time for the Lucas–Lehmer test for M*p* from O(*p*3) to O(*p*2 log *p* log log *p*) bit operations.
+7. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-7) Bruce, J. W. (1993). &quot;A Really Trivial Proof of the Lucas–Lehmer Test&quot;. *The American Mathematical Monthly*. **100** (4): 370–371. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2324959](https://doi.org/10.2307%2F2324959). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2324959](https://www.jstor.org/stable/2324959).
+8. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-8) Jason Wojciechowski. [Mersenne Primes, An Introduction and Overview](https://web.archive.org/web/20110722232101/http://wonka.hampshire.edu/~jason/math/smithnum/project.ps). 2003.
+9. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Rodseth_11-0) Rödseth, Öystein J. (1994). [&quot;A note on primality tests for N=h·2^n−1&quot;](https://web.archive.org/web/20160306082833/http://folk.uib.no/nmaoy/papers/luc.pdf) (PDF). *BIT Numerical Mathematics*. **34** (3): 451–454. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01935653](https://doi.org/10.1007%2FBF01935653). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [120438959](https://api.semanticscholar.org/CorpusID:120438959). Archived from [the original](http://folk.uib.no/nmaoy/papers/luc.pdf) (PDF) on March 6, 2016.
+10. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-12) [The &quot;Top Ten&quot; Record Primes](http://primes.utm.edu/largest.html#biggest), [The Prime Pages](https://en.wikipedia.org/wiki/The_Prime_Pages)
+
+- [Crandall, Richard](https://en.wikipedia.org/wiki/Richard_Crandall); [Pomerance, Carl](https://en.wikipedia.org/wiki/Carl_Pomerance) (2001), &quot;Section 4.2.1: The Lucas–Lehmer test&quot;, *Prime Numbers: A Computational Perspective* (1st ed.), Berlin: Springer, pp. 167–170, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94777-9](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94777-9)
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=14)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Lucas–Lehmer test&quot;](https://mathworld.wolfram.com/Lucas-LehmerTest.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [GIMPS (The Great Internet Mersenne Prime Search)](http://www.mersenne.org/)
+- [A proof of Lucas–Lehmer–Reix test (for Fermat numbers)](https://arxiv.org/abs/0705.3664)
+- [Lucas–Lehmer test](https://web.archive.org/web/20160216234138/http://www.mersennewiki.org/index.php/Lucas-Lehmer_Test) at MersenneWiki
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Number-theoretic_algorithms)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Number-theoretic_algorithms)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Number-theoretic_algorithms)
+[Number-theoretic](https://en.wikipedia.org/wiki/Number_theory) [algorithms](https://en.wikipedia.org/wiki/Algorithm)[Primality tests](https://en.wikipedia.org/wiki/Primality_test)
+- [AKS](https://en.wikipedia.org/wiki/AKS_primality_test)
+- [APR](https://en.wikipedia.org/wiki/Adleman%E2%80%93Pomerance%E2%80%93Rumely_primality_test)
+- [Baillie–PSW](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test)
+- [Elliptic curve (ECPP)](https://en.wikipedia.org/wiki/Elliptic_curve_primality)
+- [Brillhart–Lehmer–Selfridge](https://en.wikipedia.org/wiki/Brillhart%E2%80%93Lehmer%E2%80%93Selfridge_primality_test)
+- [Pocklington (*n*−1)](https://en.wikipedia.org/wiki/Pocklington_n_%E2%88%92_1_primality_test)
+- [Morrison (*n*+1)](https://en.wikipedia.org/wiki/Morrison_n_+_1_primality_test)
+- [Cyclotomy](https://en.wikipedia.org/wiki/Cyclotomy_primality_test)
+- [Fermat](https://en.wikipedia.org/wiki/Fermat_primality_test)
+- [Lucas](https://en.wikipedia.org/wiki/Lucas_primality_test)
+- *[Lucas–Lehmer](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test)*
+- *[Lucas–Lehmer–Riesel](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test)*
+- *[Proth&#39;s theorem](https://en.wikipedia.org/wiki/Proth&#39;s_theorem)*
+- *[Pépin&#39;s](https://en.wikipedia.org/wiki/P%C3%A9pin&#39;s_test)*
+- [Quadratic Frobenius](https://en.wikipedia.org/wiki/Quadratic_Frobenius_test)
+- [Solovay–Strassen](https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test)
+- [Miller–Rabin](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
+ [Prime-generating](https://en.wikipedia.org/wiki/Generating_primes)
+- [Sieve of Atkin](https://en.wikipedia.org/wiki/Sieve_of_Atkin)
+- [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+- [Sieve of Pritchard](https://en.wikipedia.org/wiki/Sieve_of_Pritchard)
+- [Sieve of Sundaram](https://en.wikipedia.org/wiki/Sieve_of_Sundaram)
+- [Wheel factorization](https://en.wikipedia.org/wiki/Wheel_factorization)
+ [Integer factorization](https://en.wikipedia.org/wiki/Integer_factorization)
+- [Continued fraction (CFRAC)](https://en.wikipedia.org/wiki/Continued_fraction_factorization)
+- [Dixon&#39;s](https://en.wikipedia.org/wiki/Dixon&#39;s_factorization_method)
+- [Lenstra elliptic curve (ECM)](https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization)
+- [Euler&#39;s](https://en.wikipedia.org/wiki/Euler&#39;s_factorization_method)
+- [Pollard&#39;s rho](https://en.wikipedia.org/wiki/Pollard&#39;s_rho_algorithm)
+- [Pollard (*p*−1)](https://en.wikipedia.org/wiki/Pollard&#39;s_p_%E2%88%92_1_algorithm)
+- [Williams (*p*+1)](https://en.wikipedia.org/wiki/Williams&#39;s_p_+_1_algorithm)
+- [Quadratic sieve (QS)](https://en.wikipedia.org/wiki/Quadratic_sieve)
+- [General number field sieve (GNFS)](https://en.wikipedia.org/wiki/General_number_field_sieve)
+- *[Special number field sieve (SNFS)](https://en.wikipedia.org/wiki/Special_number_field_sieve)*
+- [Rational sieve](https://en.wikipedia.org/wiki/Rational_sieve)
+- [Fermat&#39;s](https://en.wikipedia.org/wiki/Fermat&#39;s_factorization_method)
+- [Shanks&#39;s square forms](https://en.wikipedia.org/wiki/Shanks&#39;s_square_forms_factorization)
+- [Trial division](https://en.wikipedia.org/wiki/Trial_division)
+- [Shor&#39;s](https://en.wikipedia.org/wiki/Shor&#39;s_algorithm)
+ [Multiplication](https://en.wikipedia.org/wiki/Multiplication_algorithm)
+- [Ancient Egyptian](https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication)
+- [Long](https://en.wikipedia.org/wiki/Long_multiplication)
+- [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+- [Toom–Cook](https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication)
+- [Schönhage–Strassen](https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm)
+- [Fürer&#39;s](https://en.wikipedia.org/wiki/F%C3%BCrer&#39;s_algorithm)
+ [Euclidean](https://en.wikipedia.org/wiki/Euclidean_division) [division](https://en.wikipedia.org/wiki/Division_algorithm)
+- [Binary](https://en.wikipedia.org/wiki/Binary_division)
+- [Chunking](https://en.wikipedia.org/wiki/Chunking_(division))
+- [Fourier](https://en.wikipedia.org/wiki/Fourier_division)
+- [Goldschmidt](https://en.wikipedia.org/wiki/Goldschmidt_division)
+- [Newton-Raphson](https://en.wikipedia.org/wiki/Newton%E2%80%93Raphson_division)
+- [Long](https://en.wikipedia.org/wiki/Long_division)
+- [Short](https://en.wikipedia.org/wiki/Short_division)
+- [SRT](https://en.wikipedia.org/wiki/SRT_division)
+ [Discrete logarithm](https://en.wikipedia.org/wiki/Discrete_logarithm)
+- [Baby-step giant-step](https://en.wikipedia.org/wiki/Baby-step_giant-step)
+- [Pollard rho](https://en.wikipedia.org/wiki/Pollard&#39;s_rho_algorithm_for_logarithms)
+- [Pollard kangaroo](https://en.wikipedia.org/wiki/Pollard&#39;s_kangaroo_algorithm)
+- [Pohlig–Hellman](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm)
+- [Index calculus](https://en.wikipedia.org/wiki/Index_calculus_algorithm)
+- [Function field sieve](https://en.wikipedia.org/wiki/Function_field_sieve)
+ [Greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+- [Binary](https://en.wikipedia.org/wiki/Binary_GCD_algorithm)
+- [Euclidean](https://en.wikipedia.org/wiki/Euclidean_algorithm)
+- [Extended Euclidean](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
+- [Lehmer&#39;s](https://en.wikipedia.org/wiki/Lehmer&#39;s_GCD_algorithm)
+ [Modular square root](https://en.wikipedia.org/wiki/Quadratic_residue)
+- [Cipolla](https://en.wikipedia.org/wiki/Cipolla&#39;s_algorithm)
+- [Pocklington&#39;s](https://en.wikipedia.org/wiki/Pocklington&#39;s_algorithm)
+- [Tonelli–Shanks](https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm)
+- [Berlekamp](https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Rabin_algorithm)
+ Other algorithms
+- [Chakravala](https://en.wikipedia.org/wiki/Chakravala_method)
+- [Cornacchia](https://en.wikipedia.org/wiki/Cornacchia&#39;s_algorithm)
+- [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring)
+- [Integer square root](https://en.wikipedia.org/wiki/Integer_square_root)
+- [Integer relation](https://en.wikipedia.org/wiki/Integer_relation_algorithm) ([LLL](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm); [KZ](https://en.wikipedia.org/wiki/Korkine%E2%80%93Zolotarev_lattice_basis_reduction_algorithm))
+- [Modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation)
+- [Montgomery reduction](https://en.wikipedia.org/wiki/Montgomery_reduction)
+- [Schoof](https://en.wikipedia.org/wiki/Schoof&#39;s_algorithm)
+- [Trachtenberg system](https://en.wikipedia.org/wiki/Trachtenberg_system)
+
+- *Italics* indicate that algorithm is for numbers of special forms
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Lucas–Lehmer_primality_test&amp;oldid=1368897305](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;oldid=1368897305)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Primality tests](https://en.wikipedia.org/wiki/Category:Primality_tests)
+- [Mersenne primes](https://en.wikipedia.org/wiki/Category:Mersenne_primes)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+
+    [https://en\.wikipedia\.org/wiki/Lucas%E2%80%93Lehmer\_primality\_test?action=edit](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Lucas–Lehmer primality test</h3><pre># Lucas–Lehmer primality test
+
+- [العربية](https://ar.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D9%84%D9%88%D9%83%D8%A7%D8%B3_%D9%84%D9%8A%D9%87%D9%85%D8%B1_%D9%84%D8%A3%D9%88%D9%84%D9%8A%D8%A9_%D8%B9%D8%AF%D8%AF_%D9%85%D8%A7)
+- [Català](https://ca.wikipedia.org/wiki/Prova_de_Lucas-Lehmer_per_a_nombres_de_Mersenne)
+- [Dansk](https://da.wikipedia.org/wiki/Lucas-Lehmer)
+- [Deutsch](https://de.wikipedia.org/wiki/Lucas-Lehmer-Test)
+- [Español](https://es.wikipedia.org/wiki/Test_de_Lucas-Lehmer)
+- [Suomi](https://fi.wikipedia.org/wiki/Lucasin_ja_Lehmerin_alkulukutesti_Mersennen_luvuille)
+- [Français](https://fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_de_Lucas-Lehmer_pour_les_nombres_de_Mersenne)
+- [עברית](https://he.wikipedia.org/wiki/%D7%9E%D7%91%D7%97%D7%9F_%D7%9C%D7%95%D7%A7%D7%90%D7%A1-%D7%9C%D7%94%D7%9E%D7%A8_%D7%9C%D7%9E%D7%A1%D7%A4%D7%A8%D7%99_%D7%9E%D7%A8%D7%A1%D7%9F)
+- [Italiano](https://it.wikipedia.org/wiki/Test_di_Lucas-Lehmer)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E2%80%93%E3%83%AC%E3%83%BC%E3%83%9E%E3%83%BC%E3%83%BB%E3%83%86%E3%82%B9%E3%83%88)
+- [한국어](https://ko.wikipedia.org/wiki/%EB%A4%BC%EC%B9%B4-%EB%A0%88%EB%A8%B8_%EC%86%8C%EC%88%98%ED%8C%90%EB%B3%84%EB%B2%95)
+- [Nederlands](https://nl.wikipedia.org/wiki/Lucas-Lehmertest_voor_mersennegetallen)
+- [Polski](https://pl.wikipedia.org/wiki/Test_Lucasa-Lehmera)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9B%D1%8E%D0%BA%D0%B0_%E2%80%94_%D0%9B%D0%B5%D0%BC%D0%B5%D1%80%D0%B0)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9B%D1%8E%D0%BA%D0%B0_%E2%80%94_%D0%9B%D0%B5%D0%BC%D0%B5%D1%80%D0%B0)
+- [中文](https://zh.wikipedia.org/wiki/%E5%8D%A2%E5%8D%A1%E6%96%AF-%E8%8E%B1%E9%BB%98%E6%A3%80%E9%AA%8C%E6%B3%95)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q1138992#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Test if a Mersenne number is prime This article is about the Lucas–Lehmer test that applies only to Mersenne numbers. For the Lucas–Lehmer test that applies to a natural number *n*, see [Lucas primality test](https://en.wikipedia.org/wiki/Lucas_primality_test). For the Lucas–Lehmer–Riesel test, see [Lucas–Lehmer–Riesel test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test). [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/LucasTheorieDesFonctions1878.png/250px-LucasTheorieDesFonctions1878.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LucasTheorieDesFonctions1878.png)
+
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics), the **Lucas–Lehmer test** (**LLT**) is a [primality test](https://en.wikipedia.org/wiki/Primality_test) for [Mersenne numbers](https://en.wikipedia.org/wiki/Mersenne_prime). The test was originally developed by [Édouard Lucas](https://en.wikipedia.org/wiki/%C3%89douard_Lucas) in 1878[[1]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-1) and subsequently proved by [Derrick Henry Lehmer](https://en.wikipedia.org/wiki/Derrick_Henry_Lehmer) in 1930.
+</pre></article><article id="section-0003"><h3>The test</h3><pre># The test
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=1)]
+
+The Lucas–Lehmer test works as follows. Let *M**p* = 2*p* − 1 be the Mersenne number to test with *p* an odd [prime](https://en.wikipedia.org/wiki/Prime_number). The primality of *p* can be efficiently checked with a simple algorithm like [trial division](https://en.wikipedia.org/wiki/Trial_division) since *p* is exponentially smaller than *M**p*. Define a sequence     {  s  i   }   {\displaystyle \{s_{i}\}}   for all *i* ≥ 0 by
+
+      s  i   =   {    4    if   i = 0 ;      s  i − 1   2   − 2    otherwise.          {\displaystyle s_{i}={\begin{cases}4&amp;{\text{if }}i=0;\\s_{i-1}^{2}-2&amp;{\text{otherwise.}}\end{cases}}}
+
+The first few terms of this sequence are 4, 14, 194, 37634, ... (sequence [A003010](https://oeis.org/A003010) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)). Then *M**p* is prime if and only if
+
+      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}
+
+The number *s**p* − 2 mod *M**p* is called the **Lucas–Lehmer residue** of *p*. (Some authors equivalently set *s*1 = 4 and test *s**p*−1 mod *M**p*). In [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), the test might be written as
+
+```
+// Determine if Mp = 2p − 1 is prime for p &gt; 2
+Lucas–Lehmer(p)
+    var s = 4
+    var M = 2p − 1
+    repeat p − 2 times:
+        s = ((s × s) − 2) mod M
+    if s == 0 return PRIME else return COMPOSITE
+```
+
+Performing the `mod M` at each iteration ensures that all intermediate results are at most *p* bits (otherwise the number of bits would double each iteration). The same strategy is used in [modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation).
+</pre></article><article id="section-0004"><h3>Alternative starting values</h3><pre># Alternative starting values
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=2)]
+
+Starting values *s*0 other than 4 are possible, for instance 10, 52, and others (sequence [A018844](https://oeis.org/A018844) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) The Lucas–Lehmer residue calculated with these alternative starting values will still be zero if *M**p* is a Mersenne prime. However, the terms of the sequence will be different and a non-zero Lucas-Lehmer residue for non-prime *M**p* will have a different numerical value from the non-zero value calculated when *s*0 = 4.
+
+It is also possible to use the starting value (2 mod *M**p*)(3 mod *M**p*)−1, usually denoted by 2/3 for short.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) This starting value equals (2p + 1) /3, the [Wagstaff number](https://en.wikipedia.org/wiki/Wagstaff_number) with exponent *p*.
+
+Starting values like 4, 10, and 2/3 are universal, that is, they are valid for all (or nearly all) *p*. There are infinitely many additional universal starting values.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2) However, some other starting values are only valid for a subset of all possible *p*, for example *s*0 = 3 can be used if *p* = 3 (mod 4).[[3]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-3) This starting value was often used where suitable in the era of hand computation, including by Lucas in proving *M**127* prime.[[4]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-4) The first few terms of the sequence are 3, 7, 47, ... (sequence [A001566](https://oeis.org/A001566) in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences)).
+</pre></article><article id="section-0005"><h3>Sign of penultimate term</h3><pre># Sign of penultimate term
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=3)]
+
+If *s**p*−2 = 0 mod *M**p* then the penultimate term is *s**p*−3 = ± 2(*p*+1)/2 mod *M**p*. The sign of this penultimate term is called the Lehmer symbol ϵ(*s*0, *p*).
+
+In 2000 S.Y. Gebre-Egziabher proved that for the starting value 2/3 and for *p* ≠ 5 the sign is:
+
+     ϵ (   2 3   ,   p ) = ( − 1  )    p − 1  2      {\displaystyle \epsilon ({2 \over 3},\ p)=(-1)^{p-1 \over 2}}
+
+That is, ϵ(2/3, *p*) = +1 if *p* = 1 (mod 4) and p ≠ 5.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2)
+
+The same author also proved [Woltman](https://en.wikipedia.org/wiki/George_Woltman)&#39;s conjecture[[5]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-5) that the Lehmer symbols for starting values 4 and 10 when *p* is not 2 or 5 are related by:
+
+     ϵ ( 10 ,   p ) = ϵ ( 4 ,   p )   ×   ( − 1  )    ( p + 1 ) ( p + 3 )  8      {\displaystyle \epsilon (10,\ p)=\epsilon (4,\ p)\ \times \ (-1)^{{(p+1)(p+3)} \over 8}}
+
+That is, ϵ(4, *p*) × ϵ(10, *p*) = 1 if *p* = 5 or 7 (mod 8) and p ≠ 2, 5.[[2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Jansen-2)
+
+OEIS sequence [A123271](https://oeis.org/A123271) shows ϵ(4, *p*) for each Mersenne prime *M**p*.
+</pre></article><article id="section-0006"><h3>Time complexity</h3><pre># Time complexity
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=4)]
+
+In the algorithm as written above, there are two expensive operations during each iteration: the multiplication `s × s`, and the `mod M` operation. The `mod M` operation can be made particularly efficient on standard binary computers by observing that
+
+     k ≡ ( k   mod      2  n   ) + ⌊ k  /   2  n   ⌋   ( mod   2  n   − 1 )  .   {\displaystyle k\equiv (k\,{\bmod {\,}}2^{n})+\lfloor k/2^{n}\rfloor {\pmod {2^{n}-1}}.}
+
+This says that the least significant *n* bits of *k* plus the remaining bits of *k* are equivalent to *k* modulo 2*n*−1. This equivalence can be used repeatedly until at most *n* bits remain. In this way, the remainder after dividing *k* by the Mersenne number 2*n*−1 is computed without using division. For example,
+
+  916 mod 25−1=11100101002 mod 25−1  =((916 mod 25) + int(916 ÷ 25)) mod 25−1  =(101002 + 111002) mod 25−1  =1100002 mod 25−1  =(100002 + 12) mod 25−1  =100012 mod 25−1  =100012  =17.
+
+Moreover, since `s × s` will never exceed M2 &lt; 22p, this simple technique converges in at most 1 *p*-bit addition (and possibly a carry from the *p*th bit to the 1st bit), which can be done in linear time. This algorithm has a small exceptional case. It will produce 2*n*−1 for a multiple of the modulus rather than the correct value of 0. However, this case is easy to detect and correct.
+
+With the modulus out of the way, the asymptotic complexity of the algorithm only depends on the [multiplication algorithm](https://en.wikipedia.org/wiki/Multiplication_algorithm) used to square *s* at each step. The simple &quot;grade-school&quot; algorithm for multiplication requires [O](https://en.wikipedia.org/wiki/Big_O_notation)(*p*2) bit-level or word-level operations to square a *p*-bit number. Since this happens O(*p*) times, the total time complexity is O(*p*3). A more efficient multiplication algorithm is the [Schönhage–Strassen algorithm](https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm), which is based on the [Fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform). It only requires O(*p* log *p* log log *p*) time to square a *p*-bit number. This reduces the complexity to O(*p*2 log *p* log log *p*) or Õ(*p*2).[[6]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-6) An even more efficient multiplication algorithm, [Fürer&#39;s algorithm](https://en.wikipedia.org/wiki/F%C3%BCrer&#39;s_algorithm), only needs     p log ⁡ p    2  O (  log  ∗   ⁡ p )     {\displaystyle p\log p\ 2^{O(\log ^{*}p)}}   time to multiply two *p*-bit numbers, but is only faster than FFT for impractically large numbers.
+
+Among the most efficient practical implementations of Schönhage–Strassen are [George Woltman](https://en.wikipedia.org/wiki/George_Woltman)&#39;s [Prime95](https://en.wikipedia.org/wiki/Prime95) for x86 and the less-efficient translations to other architectures used in [GIMPS](https://en.wikipedia.org/wiki/GIMPS).
+</pre></article><article id="section-0007"><h3>Comparison</h3><pre># Comparison
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=5)]
+
+By comparison, the most efficient randomized primality test for general integers, the [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test), requires O(*k* *n*2 log *n* log log *n*) bit operations using FFT multiplication for an *n*-digit number, where *k* is the number of iterations and is related to the error rate. For constant *k*, this is in the same complexity class as the Lucas-Lehmer test, and is similarly fast in practice.
+
+The most efficient deterministic primality test for any *n*-digit number, the [AKS primality test](https://en.wikipedia.org/wiki/AKS_primality_test), requires Õ(n6) bit operations in its best known variant and is extremely slow even for relatively small values.
+</pre></article><article id="section-0008"><h3>Examples</h3><pre># Examples
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=6)]
+
+The Mersenne number M3 = 23−1 = 7 is prime. The Lucas–Lehmer test verifies this as follows. Initially *s* is set to 4 and then is updated 3−2 = 1 time:
+
+- s ← ((4 × 4) − 2) mod 7 = 0.
+
+Since the final value of *s* is 0, the conclusion is that M3 is prime.
+
+On the other hand, M11 = 2047 = 23 × 89 is not prime. Again, *s* is set to 4 but is now updated 11−2 = 9 times:
+
+- s ← ((4 × 4) − 2) mod 2047 = 14
+- s ← ((14 × 14) − 2) mod 2047 = 194
+- s ← ((194 × 194) − 2) mod 2047 = 788
+- s ← ((788 × 788) − 2) mod 2047 = 701
+- s ← ((701 × 701) − 2) mod 2047 = 119
+- s ← ((119 × 119) − 2) mod 2047 = 1877
+- s ← ((1877 × 1877) − 2) mod 2047 = 240
+- s ← ((240 × 240) − 2) mod 2047 = 282
+- s ← ((282 × 282) − 2) mod 2047 = 1736
+
+Since the final value of *s* is not 0, the conclusion is that M11 = 2047 is not prime. Although M11 = 2047 has nontrivial factors, the Lucas–Lehmer test gives no indication about what they might be.
+</pre></article><article id="section-0009"><h3>Proof of correctness</h3><pre># Proof of correctness
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=7)]
+
+The proof of correctness for this test presented here is simpler than the original proof given by Lehmer. Recall the definition
+
+      s  i   =   {    4    if   i = 0 ;      s  i − 1   2   − 2    otherwise.          {\displaystyle s_{i}={\begin{cases}4&amp;{\text{if }}i=0;\\s_{i-1}^{2}-2&amp;{\text{otherwise.}}\end{cases}}}
+
+The goal is to show that *M**p* is prime [if and only if](https://en.wikipedia.org/wiki/Iff)      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}
+
+The sequence      ⟨   s  i    ⟩    {\displaystyle {\langle }s_{i}{\rangle }}   is a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation) with a [closed-form solution](https://en.wikipedia.org/wiki/Closed-form_solution). Let     ω = 2 +   3     {\displaystyle \omega =2+{\sqrt {3}}}   and        ω ¯    = 2 −   3     {\displaystyle {\bar {\omega }}=2-{\sqrt {3}}}  . It then follows by [induction](https://en.wikipedia.org/wiki/Mathematical_induction) that      s  i   =  ω   2  i     +     ω ¯      2  i       {\displaystyle s_{i}=\omega ^{2^{i}}+{\bar {\omega }}^{2^{i}}}   for all *i*:
+
+      s  0   =  ω   2  0     +     ω ¯      2  0     =  (  2 +   3    )  +  (  2 −   3    )  = 4   {\displaystyle s_{0}=\omega ^{2^{0}}+{\bar {\omega }}^{2^{0}}=\left(2+{\sqrt {3}}\right)+\left(2-{\sqrt {3}}\right)=4}
+
+and
+
+          s  n      =  s  n − 1   2   − 2       =   (   ω   2  n − 1     +     ω ¯      2  n − 1      )   2   − 2       =  ω   2  n     +     ω ¯      2  n     + 2 ( ω    ω ¯     )   2  n − 1     − 2       =  ω   2  n     +     ω ¯      2  n     .       {\displaystyle {\begin{aligned}s_{n}&amp;=s_{n-1}^{2}-2\\&amp;=\left(\omega ^{2^{n-1}}+{\bar {\omega }}^{2^{n-1}}\right)^{2}-2\\&amp;=\omega ^{2^{n}}+{\bar {\omega }}^{2^{n}}+2(\omega {\bar {\omega }})^{2^{n-1}}-2\\&amp;=\omega ^{2^{n}}+{\bar {\omega }}^{2^{n}}.\end{aligned}}}
+
+The last step uses     ω    ω ¯    =  (  2 +   3    )   (  2 −   3    )  = 1.   {\displaystyle \omega {\bar {\omega }}=\left(2+{\sqrt {3}}\right)\left(2-{\sqrt {3}}\right)=1.}   This closed form is used in both the proof of sufficiency and the proof of necessity.
+</pre></article><article id="section-0010"><h3>Sufficiency</h3><pre># Sufficiency
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=8)]
+
+The goal is to show that      s  p − 2   ≡ 0   ( mod   M  p   )    {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}}   implies that      M  p     {\displaystyle M_{p}}   is prime. What follows is a straightforward proof exploiting elementary [group theory](https://en.wikipedia.org/wiki/Group_theory) given by J. W. Bruce[[7]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-7) as related by Jason Wojciechowski.[[8]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-8)
+
+Suppose      s  p − 2   ≡ 0   ( mod   M  p   )  .   {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}.}   Then
+
+      ω   2  p − 2     +     ω ¯      2  p − 2     = k  M  p     {\displaystyle \omega ^{2^{p-2}}+{\bar {\omega }}^{2^{p-2}}=kM_{p}}
+
+for some integer *k*, so
+
+      ω   2  p − 2     = k  M  p   −     ω ¯      2  p − 2     .   {\displaystyle \omega ^{2^{p-2}}=kM_{p}-{\bar {\omega }}^{2^{p-2}}.}
+
+Multiplying by      ω   2  p − 2       {\displaystyle \omega ^{2^{p-2}}}   gives
+
+       (  ω   2  p − 2     )   2   = k  M  p    ω   2  p − 2     − ( ω    ω ¯     )   2  p − 2     .   {\displaystyle \left(\omega ^{2^{p-2}}\right)^{2}=kM_{p}\omega ^{2^{p-2}}-(\omega {\bar {\omega }})^{2^{p-2}}.}
+
+Thus,
+
+      ω   2  p − 1     = k  M  p    ω   2  p − 2     − 1.   ( 1 )   {\displaystyle \omega ^{2^{p-1}}=kM_{p}\omega ^{2^{p-2}}-1.\qquad \qquad (1)}
+
+For a contradiction, suppose *M**p* is composite, and let *q* be the smallest prime factor of *M**p*. Mersenne numbers are odd, so *q* &gt; 2. Let       Z   q     {\displaystyle \mathbb {Z} _{q}}   be the integers modulo *q*, and let     X =  {  a + b   3   ∣ a , b ∈   Z   q    }  .   {\displaystyle X=\left\{a+b{\sqrt {3}}\mid a,b\in \mathbb {Z} _{q}\right\}.}   Multiplication in     X   {\displaystyle X}   is defined as
+
+      (  a +   3   b  )   (  c +   3   d  )  = [ ( a c + 3 b d )   mod     q ] +   3   [ ( a d + b c )   mod     q ] .   {\displaystyle \left(a+{\sqrt {3}}b\right)\left(c+{\sqrt {3}}d\right)=[(ac+3bd)\,{\bmod {\,}}q]+{\sqrt {3}}[(ad+bc)\,{\bmod {\,}}q].}  [[note 1]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-9)
+
+Clearly, this multiplication is closed, i.e. the product of numbers from *X* is itself in *X*. The size of *X* is denoted by      |  X  |  .   {\displaystyle |X|.}
+
+Since *q* &gt; 2, it follows that     ω   {\displaystyle \omega }   and        ω ¯      {\displaystyle {\bar {\omega }}}   are in *X*.[[note 2]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-10) The subset of elements in *X* with inverses forms a group, which is denoted by *X** and has size      |   X  ∗    |  .   {\displaystyle |X^{*}|.}   One element in *X* that does not have an inverse is 0, so      |   X  ∗    |  ≤  |  X  |  − 1 =  q  2   − 1.   {\displaystyle |X^{*}|\leq |X|-1=q^{2}-1.}
+
+Now      M  p   ≡ 0   ( mod  q )    {\displaystyle M_{p}\equiv 0{\pmod {q}}}   and     ω ∈ X   {\displaystyle \omega \in X}  , so
+
+     k  M  p    ω   2  p − 2     = 0   {\displaystyle kM_{p}\omega ^{2^{p-2}}=0}
+
+in *X*. Then by equation (1),
+
+      ω   2  p − 1     = − 1   {\displaystyle \omega ^{2^{p-1}}=-1}
+
+in *X*, and squaring both sides gives
+
+      ω   2  p     = 1.   {\displaystyle \omega ^{2^{p}}=1.}
+
+Thus     ω   {\displaystyle \omega }   lies in *X** and has inverse      ω   2  p   − 1   .   {\displaystyle \omega ^{2^{p}-1}.}   Furthermore, the [order](https://en.wikipedia.org/wiki/Order_(group_theory)) of     ω   {\displaystyle \omega }   divides      2  p   .   {\displaystyle 2^{p}.}   However      ω   2  p − 1     ≠ 1   {\displaystyle \omega ^{2^{p-1}}\neq 1}  , so the order does not divide      2  p − 1   .   {\displaystyle 2^{p-1}.}   Thus, the order is exactly      2  p   .   {\displaystyle 2^{p}.}
+
+The order of an element is at most the order (size) of the group, so
+
+      2  p   ≤  |   X  ∗    |  ≤  q  2   − 1 &lt;  q  2   .   {\displaystyle 2^{p}\leq |X^{*}|\leq q^{2}-1&lt;q^{2}.}
+
+But *q* is the smallest prime factor of the composite      M  p     {\displaystyle M_{p}}  , so
+
+      q  2   ≤  M  p   =  2  p   − 1.   {\displaystyle q^{2}\leq M_{p}=2^{p}-1.}
+
+This yields the contradiction      2  p   &lt;  2  p   − 1   {\displaystyle 2^{p}&lt;2^{p}-1}  . Therefore,      M  p     {\displaystyle M_{p}}   is prime.
+</pre></article><article id="section-0011"><h3>Necessity</h3><pre># Necessity
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=9)]
+
+In the other direction, the goal is to show that the primality of      M  p     {\displaystyle M_{p}}   implies      s  p − 2   ≡ 0   ( mod   M  p   )    {\displaystyle s_{p-2}\equiv 0{\pmod {M_{p}}}}  . The following simplified proof is by Öystein J. Rödseth.[[9]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-Rodseth-11)
+
+Since      2  p   − 1 ≡ 7   ( mod  12 )    {\displaystyle 2^{p}-1\equiv 7{\pmod {12}}}   for odd     p &gt; 1   {\displaystyle p&gt;1}  , it follows from [properties of the Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol#Properties_of_the_Legendre_symbol) that     ( 3  |   M  p   ) = − 1.   {\displaystyle (3|M_{p})=-1.}   This means that 3 is a [quadratic nonresidue](https://en.wikipedia.org/wiki/Quadratic_nonresidue) modulo      M  p   .   {\displaystyle M_{p}.}   By [Euler&#39;s criterion](https://en.wikipedia.org/wiki/Euler&#39;s_criterion), this is equivalent to
+
+      3     M  p   − 1  2    ≡ − 1   ( mod   M  p   )  .   {\displaystyle 3^{\frac {M_{p}-1}{2}}\equiv -1{\pmod {M_{p}}}.}
+
+In contrast, 2 is a [quadratic residue](https://en.wikipedia.org/wiki/Quadratic_residue) modulo      M  p     {\displaystyle M_{p}}   since      2  p   ≡ 1   ( mod   M  p   )    {\displaystyle 2^{p}\equiv 1{\pmod {M_{p}}}}   and so     2 ≡  2  p + 1   =   (  2    p + 1  2    )   2     ( mod   M  p   )  .   {\displaystyle 2\equiv 2^{p+1}=\left(2^{\frac {p+1}{2}}\right)^{2}{\pmod {M_{p}}}.}   This time, Euler&#39;s criterion gives
+
+      2     M  p   − 1  2    ≡ 1   ( mod   M  p   )  .   {\displaystyle 2^{\frac {M_{p}-1}{2}}\equiv 1{\pmod {M_{p}}}.}
+
+Combining these two equivalence relations yields
+
+      24     M  p   − 1  2    ≡   (  2     M  p   − 1  2    )   3    (  3     M  p   − 1  2    )  ≡ ( 1  )  3   ( − 1 ) ≡ − 1   ( mod   M  p   )  .   {\displaystyle 24^{\frac {M_{p}-1}{2}}\equiv \left(2^{\frac {M_{p}-1}{2}}\right)^{3}\left(3^{\frac {M_{p}-1}{2}}\right)\equiv (1)^{3}(-1)\equiv -1{\pmod {M_{p}}}.}
+
+Let     σ = 2   3     {\displaystyle \sigma =2{\sqrt {3}}}  , and define *X* as before as the ring     X = { a + b   3   ∣ a , b ∈   Z    M  p     } .   {\displaystyle X=\{a+b{\sqrt {3}}\mid a,b\in \mathbb {Z} _{M_{p}}\}.}   Then in the ring *X*, it follows that
+
+         ( 6 + σ  )   M  p        =  6   M  p     +  (  2   M  p     )   (    3     M  p     )        = 6 + 2  (  3     M  p   − 1  2    )    3         = 6 + 2 ( − 1 )   3         = 6 − σ ,       {\displaystyle {\begin{aligned}(6+\sigma )^{M_{p}}&amp;=6^{M_{p}}+\left(2^{M_{p}}\right)\left({\sqrt {3}}^{M_{p}}\right)\\&amp;=6+2\left(3^{\frac {M_{p}-1}{2}}\right){\sqrt {3}}\\&amp;=6+2(-1){\sqrt {3}}\\&amp;=6-\sigma ,\end{aligned}}}
+
+where the first equality uses the [Binomial Theorem in a finite field](https://en.wikipedia.org/wiki/Proofs_of_Fermat&#39;s_little_theorem#Proofs_using_the_binomial_theorem), which is
+
+     ( x + y  )   M  p     ≡  x   M  p     +  y   M  p       ( mod   M  p   )    {\displaystyle (x+y)^{M_{p}}\equiv x^{M_{p}}+y^{M_{p}}{\pmod {M_{p}}}}  ,
+
+and the second equality uses [Fermat&#39;s little theorem](https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem), which is
+
+      a   M  p     ≡ a   ( mod   M  p   )    {\displaystyle a^{M_{p}}\equiv a{\pmod {M_{p}}}}
+
+for any integer *a*. The value of     σ   {\displaystyle \sigma }   was chosen so that     ω =    ( 6 + σ  )  2    24   .   {\displaystyle \omega ={\frac {(6+\sigma )^{2}}{24}}.}   Consequently, this can be used to compute      ω     M  p   + 1  2      {\displaystyle \omega ^{\frac {M_{p}+1}{2}}}   in the ring *X* as
+
+          ω     M  p   + 1  2       =    ( 6 + σ  )   M  p   + 1     24     M  p   + 1  2            =    ( 6 + σ ) ( 6 + σ  )   M  p       24 ⋅  24     M  p   − 1  2             =    ( 6 + σ ) ( 6 − σ )   − 24          = − 1.       {\displaystyle {\begin{aligned}\omega ^{\frac {M_{p}+1}{2}}&amp;={\frac {(6+\sigma )^{M_{p}+1}}{24^{\frac {M_{p}+1}{2}}}}\\&amp;={\frac {(6+\sigma )(6+\sigma )^{M_{p}}}{24\cdot 24^{\frac {M_{p}-1}{2}}}}\\&amp;={\frac {(6+\sigma )(6-\sigma )}{-24}}\\&amp;=-1.\end{aligned}}}
+
+All that remains is to multiply both sides of this equation by         ω ¯        M  p   + 1  4      {\displaystyle {\bar {\omega }}^{\frac {M_{p}+1}{4}}}   and use     ω    ω ¯    = 1   {\displaystyle \omega {\bar {\omega }}=1}  , which gives
+
+          ω     M  p   + 1  2        ω ¯        M  p   + 1  4       = −     ω ¯        M  p   + 1  4         ω     M  p   + 1  4    +     ω ¯        M  p   + 1  4       = 0      ω     2  p   − 1 + 1  4    +     ω ¯        2  p   − 1 + 1  4       = 0      ω   2  p − 2     +     ω ¯      2  p − 2        = 0      s  p − 2      = 0.       {\displaystyle {\begin{aligned}\omega ^{\frac {M_{p}+1}{2}}{\bar {\omega }}^{\frac {M_{p}+1}{4}}&amp;=-{\bar {\omega }}^{\frac {M_{p}+1}{4}}\\\omega ^{\frac {M_{p}+1}{4}}+{\bar {\omega }}^{\frac {M_{p}+1}{4}}&amp;=0\\\omega ^{\frac {2^{p}-1+1}{4}}+{\bar {\omega }}^{\frac {2^{p}-1+1}{4}}&amp;=0\\\omega ^{2^{p-2}}+{\bar {\omega }}^{2^{p-2}}&amp;=0\\s_{p-2}&amp;=0.\end{aligned}}}
+
+Since      s  p − 2     {\displaystyle s_{p-2}}   is 0 in *X*, it is also 0 modulo      M  p   .   {\displaystyle M_{p}.}
+</pre></article><article id="section-0012"><h3>Applications</h3><pre># Applications
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=10)]
+
+The Lucas–Lehmer test was the main primality test used by the [Great Internet Mersenne Prime Search](https://en.wikipedia.org/wiki/Great_Internet_Mersenne_Prime_Search) (GIMPS) to locate large primes until 2021. This search has been successful in locating many of the largest primes known to date.[[10]](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_note-12) In 2021, GIMPS switched to an easy-to-error-check variant of [Fermat&#39;s primality test](https://en.wikipedia.org/wiki/Fermat&#39;s_primality_test) for locating probable Mersenne primes, and only uses Lucas–Lehmer to verify these probable primes as actual primes.
+
+The test is considered valuable because it can provably test a large set of very large numbers for primality within an affordable amount of time. In contrast, the equivalently fast [Pépin&#39;s test](https://en.wikipedia.org/wiki/P%C3%A9pin&#39;s_test) for any [Fermat number](https://en.wikipedia.org/wiki/Fermat_number) can only be used on a much smaller set of very large numbers before reaching computational limits.
+</pre></article><article id="section-0013"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=11)]
+- [Mersenne&#39;s conjecture](https://en.wikipedia.org/wiki/Mersenne&#39;s_conjecture)
+- [Lucas–Lehmer–Riesel test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test)
+</pre></article><article id="section-0014"><h3>Notes</h3><pre># Notes
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=12)]
+1. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-9) Formally, let       Z   q   =  Z   /  q  Z    {\displaystyle \mathbb {Z} _{q}=\mathbb {Z} /q\mathbb {Z} }   and     X =   Z   q   [ T ]  /  ⟨  T  2   − 3 ⟩   {\displaystyle X=\mathbb {Z} _{q}[T]/\langle T^{2}-3\rangle }  .
+2. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-10) Formally,     ω + ⟨  T  2   − 3 ⟩   {\displaystyle \omega +\langle T^{2}-3\rangle }   and        ω ¯    + ⟨  T  2   − 3 ⟩   {\displaystyle {\bar {\omega }}+\langle T^{2}-3\rangle }   are in *X*. By abuse of language     ω   {\displaystyle \omega }   and        ω ¯      {\displaystyle {\bar {\omega }}}   are identified with their images in *X* under the natural ring homomorphism from      Z  [   3   ]   {\displaystyle \mathbb {Z} [{\sqrt {3}}]}   to *X* which sends       3     {\displaystyle {\sqrt {3}}}   to *T*.
+</pre></article><article id="section-0015"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=13)]
+1. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-1) Jaroma, John H. (2004). [&quot;Note on the Lucas–Lehmer Test&quot;](https://www.irishmathsoc.org/bull54/M5402.pdf) (PDF). *Bulletin of the Irish Mathematical Society*. **54** (2). Irish Mathematical Society: 63. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.33232/BIMS.0054.63.72](https://doi.org/10.33232%2FBIMS.0054.63.72). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [16831811](https://api.semanticscholar.org/CorpusID:16831811).
+2. [Jump up to: 1](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-0) [2](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-1) [3](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-2) [4](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-3) [5](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Jansen_2-4) Jansen, B.J.H. (2012). [*Mersenne primes and class field theory*](https://openaccess.leidenuniv.nl/handle/1887/20310) (Doctoral thesis). Leiden University. pp. iii–iv. Retrieved 2018-12-17.
+3. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-3) Robinson, Raphael M. (1954). [&quot;Mersenne and Fermat numbers&quot;](https://doi.org/10.1090%2FS0002-9939-1954-0064787-4). *Proc. Amer. Math. Soc*. **5** (5): 842–846. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1090/S0002-9939-1954-0064787-4](https://doi.org/10.1090%2FS0002-9939-1954-0064787-4).
+4. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-4) Haworth, Guy (1990). [*Mersenne numbers*](https://core.ac.uk/download/pdf/12758.pdf?repositoryId=17) (PDF) (Technical report). p. 20. Retrieved 2018-12-17.
+5. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-5) [Lenstra, Jr., H. W.](https://en.wikipedia.org/wiki/Hendrik_Lenstra) (2001-05-13). Buhler, J.; Niederreiter, H.; Pohst, M.E. (eds.). [*Woltman&#39;s conjecture on the Lucas-Lehmer test*](http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/15190/pdf/DagSemRep-306.pdf) (PDF). Algorithms and Number Theory. p. 20. Retrieved 2024-10-16.
+6. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-6) Colquitt, W. N.; Welsh, L. Jr. (1991), &quot;A New Mersenne Prime&quot;, *Mathematics of Computation*, **56** (194): 867–870, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2008415](https://doi.org/10.2307%2F2008415), [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2008415](https://www.jstor.org/stable/2008415), The use of the FFT speeds up the asymptotic time for the Lucas–Lehmer test for M*p* from O(*p*3) to O(*p*2 log *p* log log *p*) bit operations.
+7. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-7) Bruce, J. W. (1993). &quot;A Really Trivial Proof of the Lucas–Lehmer Test&quot;. *The American Mathematical Monthly*. **100** (4): 370–371. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2324959](https://doi.org/10.2307%2F2324959). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2324959](https://www.jstor.org/stable/2324959).
+8. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-8) Jason Wojciechowski. [Mersenne Primes, An Introduction and Overview](https://web.archive.org/web/20110722232101/http://wonka.hampshire.edu/~jason/math/smithnum/project.ps). 2003.
+9. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-Rodseth_11-0) Rödseth, Öystein J. (1994). [&quot;A note on primality tests for N=h·2^n−1&quot;](https://web.archive.org/web/20160306082833/http://folk.uib.no/nmaoy/papers/luc.pdf) (PDF). *BIT Numerical Mathematics*. **34** (3): 451–454. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/BF01935653](https://doi.org/10.1007%2FBF01935653). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [120438959](https://api.semanticscholar.org/CorpusID:120438959). Archived from [the original](http://folk.uib.no/nmaoy/papers/luc.pdf) (PDF) on March 6, 2016.
+10. [↑](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test#cite_ref-12) [The &quot;Top Ten&quot; Record Primes](http://primes.utm.edu/largest.html#biggest), [The Prime Pages](https://en.wikipedia.org/wiki/The_Prime_Pages)
+
+- [Crandall, Richard](https://en.wikipedia.org/wiki/Richard_Crandall); [Pomerance, Carl](https://en.wikipedia.org/wiki/Carl_Pomerance) (2001), &quot;Section 4.2.1: The Lucas–Lehmer test&quot;, *Prime Numbers: A Computational Perspective* (1st ed.), Berlin: Springer, pp. 167–170, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-94777-9](https://en.wikipedia.org/wiki/Special:BookSources/0-387-94777-9)
+</pre></article><article id="section-0016"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;action=edit&amp;section=14)]
+- [Weisstein, Eric W.](https://en.wikipedia.org/wiki/Eric_W._Weisstein) [&quot;Lucas–Lehmer test&quot;](https://mathworld.wolfram.com/Lucas-LehmerTest.html). *[MathWorld](https://en.wikipedia.org/wiki/MathWorld)*.
+- [GIMPS (The Great Internet Mersenne Prime Search)](http://www.mersenne.org/)
+- [A proof of Lucas–Lehmer–Reix test (for Fermat numbers)](https://arxiv.org/abs/0705.3664)
+- [Lucas–Lehmer test](https://web.archive.org/web/20160216234138/http://www.mersennewiki.org/index.php/Lucas-Lehmer_Test) at MersenneWiki
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Number-theoretic_algorithms)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Number-theoretic_algorithms)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Number-theoretic_algorithms)
+[Number-theoretic](https://en.wikipedia.org/wiki/Number_theory) [algorithms](https://en.wikipedia.org/wiki/Algorithm)[Primality tests](https://en.wikipedia.org/wiki/Primality_test)
+- [AKS](https://en.wikipedia.org/wiki/AKS_primality_test)
+- [APR](https://en.wikipedia.org/wiki/Adleman%E2%80%93Pomerance%E2%80%93Rumely_primality_test)
+- [Baillie–PSW](https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test)
+- [Elliptic curve (ECPP)](https://en.wikipedia.org/wiki/Elliptic_curve_primality)
+- [Brillhart–Lehmer–Selfridge](https://en.wikipedia.org/wiki/Brillhart%E2%80%93Lehmer%E2%80%93Selfridge_primality_test)
+- [Pocklington (*n*−1)](https://en.wikipedia.org/wiki/Pocklington_n_%E2%88%92_1_primality_test)
+- [Morrison (*n*+1)](https://en.wikipedia.org/wiki/Morrison_n_+_1_primality_test)
+- [Cyclotomy](https://en.wikipedia.org/wiki/Cyclotomy_primality_test)
+- [Fermat](https://en.wikipedia.org/wiki/Fermat_primality_test)
+- [Lucas](https://en.wikipedia.org/wiki/Lucas_primality_test)
+- *[Lucas–Lehmer](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test)*
+- *[Lucas–Lehmer–Riesel](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test)*
+- *[Proth&#39;s theorem](https://en.wikipedia.org/wiki/Proth&#39;s_theorem)*
+- *[Pépin&#39;s](https://en.wikipedia.org/wiki/P%C3%A9pin&#39;s_test)*
+- [Quadratic Frobenius](https://en.wikipedia.org/wiki/Quadratic_Frobenius_test)
+- [Solovay–Strassen](https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test)
+- [Miller–Rabin](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
+ [Prime-generating](https://en.wikipedia.org/wiki/Generating_primes)
+- [Sieve of Atkin](https://en.wikipedia.org/wiki/Sieve_of_Atkin)
+- [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+- [Sieve of Pritchard](https://en.wikipedia.org/wiki/Sieve_of_Pritchard)
+- [Sieve of Sundaram](https://en.wikipedia.org/wiki/Sieve_of_Sundaram)
+- [Wheel factorization](https://en.wikipedia.org/wiki/Wheel_factorization)
+ [Integer factorization](https://en.wikipedia.org/wiki/Integer_factorization)
+- [Continued fraction (CFRAC)](https://en.wikipedia.org/wiki/Continued_fraction_factorization)
+- [Dixon&#39;s](https://en.wikipedia.org/wiki/Dixon&#39;s_factorization_method)
+- [Lenstra elliptic curve (ECM)](https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization)
+- [Euler&#39;s](https://en.wikipedia.org/wiki/Euler&#39;s_factorization_method)
+- [Pollard&#39;s rho](https://en.wikipedia.org/wiki/Pollard&#39;s_rho_algorithm)
+- [Pollard (*p*−1)](https://en.wikipedia.org/wiki/Pollard&#39;s_p_%E2%88%92_1_algorithm)
+- [Williams (*p*+1)](https://en.wikipedia.org/wiki/Williams&#39;s_p_+_1_algorithm)
+- [Quadratic sieve (QS)](https://en.wikipedia.org/wiki/Quadratic_sieve)
+- [General number field sieve (GNFS)](https://en.wikipedia.org/wiki/General_number_field_sieve)
+- *[Special number field sieve (SNFS)](https://en.wikipedia.org/wiki/Special_number_field_sieve)*
+- [Rational sieve](https://en.wikipedia.org/wiki/Rational_sieve)
+- [Fermat&#39;s](https://en.wikipedia.org/wiki/Fermat&#39;s_factorization_method)
+- [Shanks&#39;s square forms](https://en.wikipedia.org/wiki/Shanks&#39;s_square_forms_factorization)
+- [Trial division](https://en.wikipedia.org/wiki/Trial_division)
+- [Shor&#39;s](https://en.wikipedia.org/wiki/Shor&#39;s_algorithm)
+ [Multiplication](https://en.wikipedia.org/wiki/Multiplication_algorithm)
+- [Ancient Egyptian](https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication)
+- [Long](https://en.wikipedia.org/wiki/Long_multiplication)
+- [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+- [Toom–Cook](https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication)
+- [Schönhage–Strassen](https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm)
+- [Fürer&#39;s](https://en.wikipedia.org/wiki/F%C3%BCrer&#39;s_algorithm)
+ [Euclidean](https://en.wikipedia.org/wiki/Euclidean_division) [division](https://en.wikipedia.org/wiki/Division_algorithm)
+- [Binary](https://en.wikipedia.org/wiki/Binary_division)
+- [Chunking](https://en.wikipedia.org/wiki/Chunking_(division))
+- [Fourier](https://en.wikipedia.org/wiki/Fourier_division)
+- [Goldschmidt](https://en.wikipedia.org/wiki/Goldschmidt_division)
+- [Newton-Raphson](https://en.wikipedia.org/wiki/Newton%E2%80%93Raphson_division)
+- [Long](https://en.wikipedia.org/wiki/Long_division)
+- [Short](https://en.wikipedia.org/wiki/Short_division)
+- [SRT](https://en.wikipedia.org/wiki/SRT_division)
+ [Discrete logarithm](https://en.wikipedia.org/wiki/Discrete_logarithm)
+- [Baby-step giant-step](https://en.wikipedia.org/wiki/Baby-step_giant-step)
+- [Pollard rho](https://en.wikipedia.org/wiki/Pollard&#39;s_rho_algorithm_for_logarithms)
+- [Pollard kangaroo](https://en.wikipedia.org/wiki/Pollard&#39;s_kangaroo_algorithm)
+- [Pohlig–Hellman](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm)
+- [Index calculus](https://en.wikipedia.org/wiki/Index_calculus_algorithm)
+- [Function field sieve](https://en.wikipedia.org/wiki/Function_field_sieve)
+ [Greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+- [Binary](https://en.wikipedia.org/wiki/Binary_GCD_algorithm)
+- [Euclidean](https://en.wikipedia.org/wiki/Euclidean_algorithm)
+- [Extended Euclidean](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
+- [Lehmer&#39;s](https://en.wikipedia.org/wiki/Lehmer&#39;s_GCD_algorithm)
+ [Modular square root](https://en.wikipedia.org/wiki/Quadratic_residue)
+- [Cipolla](https://en.wikipedia.org/wiki/Cipolla&#39;s_algorithm)
+- [Pocklington&#39;s](https://en.wikipedia.org/wiki/Pocklington&#39;s_algorithm)
+- [Tonelli–Shanks](https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm)
+- [Berlekamp](https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Rabin_algorithm)
+ Other algorithms
+- [Chakravala](https://en.wikipedia.org/wiki/Chakravala_method)
+- [Cornacchia](https://en.wikipedia.org/wiki/Cornacchia&#39;s_algorithm)
+- [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring)
+- [Integer square root](https://en.wikipedia.org/wiki/Integer_square_root)
+- [Integer relation](https://en.wikipedia.org/wiki/Integer_relation_algorithm) ([LLL](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm); [KZ](https://en.wikipedia.org/wiki/Korkine%E2%80%93Zolotarev_lattice_basis_reduction_algorithm))
+- [Modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation)
+- [Montgomery reduction](https://en.wikipedia.org/wiki/Montgomery_reduction)
+- [Schoof](https://en.wikipedia.org/wiki/Schoof&#39;s_algorithm)
+- [Trachtenberg system](https://en.wikipedia.org/wiki/Trachtenberg_system)
+
+- *Italics* indicate that algorithm is for numbers of special forms
+           Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Lucas–Lehmer_primality_test&amp;oldid=1368897305](https://en.wikipedia.org/w/index.php?title=Lucas%E2%80%93Lehmer_primality_test&amp;oldid=1368897305)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Primality tests](https://en.wikipedia.org/wiki/Category:Primality_tests)
+- [Mersenne primes](https://en.wikipedia.org/wiki/Category:Mersenne_primes)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description is different from Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata)
+
+    [https://en\.wikipedia\.org/wiki/Lucas%E2%80%93Lehmer\_primality\_test?action=edit](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>
