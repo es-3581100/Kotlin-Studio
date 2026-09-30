@@ -1,0 +1,8 @@
+.gradle/
+build/
+out/
+.idea/
+*.iml
+captures/
+presets/last.json
+build-evidence/*.jar
