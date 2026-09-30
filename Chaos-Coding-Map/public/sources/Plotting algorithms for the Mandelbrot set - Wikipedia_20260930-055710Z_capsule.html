@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Plotting algorithms for the Mandelbrot set - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Plotting algorithms for the Mandelbrot set - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:57:10.255Z</div><div class="stat"><b>Records</b><br>28</div><div class="stat"><b>Sections</b><br>22</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 307 B · ~77 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 71678 B · ~17837 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 131321 B · ~32829 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 434 B · ~109 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Plotting algorithms for the Mandelbrot set.md</code></a> <small>markdown · 2278 B · ~569 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Escape time algorithm.md</code></a> <small>markdown · 421 B · ~106 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Unoptimized naïve escape time algorithm.md</code></a> <small>markdown · 5400 B · ~1347 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Optimized escape time algorithms.md</code></a> <small>markdown · 1856 B · ~461 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Coloring algorithms.md</code></a> <small>markdown · 341 B · ~86 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-Histogram coloring.md</code></a> <small>markdown · 6004 B · ~1501 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Continuous (smooth) coloring.md</code></a> <small>markdown · 4645 B · ~1155 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Exponentially mapped and cyclic iterations.md</code></a> <small>markdown · 1758 B · ~440 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Passing iterations into a color directly.md</code></a> <small>markdown · 1842 B · ~461 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-HSV coloring.md</code></a> <small>markdown · 965 B · ~242 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-LCH coloring.md</code></a> <small>markdown · 1270 B · ~316 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Advanced plotting algorithms.md</code></a> <small>markdown · 326 B · ~82 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Distance estimates.md</code></a> <small>markdown · 10785 B · ~2670 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Cardioid - bulb checking.md</code></a> <small>markdown · 1581 B · ~392 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Periodicity checking.md</code></a> <small>markdown · 1385 B · ~345 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-Border tracing - edge checking.md</code></a> <small>markdown · 1882 B · ~471 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-Rectangle checking.md</code></a> <small>markdown · 2494 B · ~624 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-Symmetry utilization.md</code></a> <small>markdown · 684 B · ~171 tok</small></li><li><a href="#section-0020"><code>artifacts/sections/0020-Multithreading.md</code></a> <small>markdown · 2250 B · ~563 tok</small></li><li><a href="#section-0021"><code>artifacts/sections/0021-Perturbation theory and series approximation.md</code></a> <small>markdown · 10564 B · ~2618 tok</small></li><li><a href="#section-0022"><code>artifacts/sections/0022-References.md</code></a> <small>markdown · 12471 B · ~3107 tok</small></li><li><a href="#art-0026"><code>artifacts/provenance/source-record.json</code></a> <small>json · 464 B · ~116 tok</small></li><li><a href="#art-0027"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0028"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Plotting algorithms for the Mandelbrot set - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set
+captured_at: 2026-09-30T05:57:10.255Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 28
+artifact_count: 28
+content_sha256: f2d7bf07406d22257c09899a4d9a244329cfb8d6dec2f25dc9d80b76837f319c
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:307,&quot;sha256&quot;:&quot;b84b2bc9d1494c53c0b8237a414f2f7c3f7208f727641257ba6aa0a48c47f453&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t05&quot;,&quot;255z&quot;,&quot;agent&quot;,&quot;algorithms&quot;,&quot;canonical&quot;,&quot;capture&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:77,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:71678,&quot;sha256&quot;:&quot;f2d7bf07406d22257c09899a4d9a244329cfb8d6dec2f25dc9d80b76837f319c&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;displaystyle&quot;,&quot;plotting_algorithms_for_the_mandelbrot_set&quot;,&quot;png&quot;,&quot;mandelbrot&quot;],&quot;summary&quot;:&quot;Plotting algorithms for the Mandelbrot set - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:17837,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:131321,&quot;sha256&quot;:&quot;465003fc3a059f6ff611cb243afe2c8c489c9845c74e807586d53c2d1a9fe364&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;org&quot;,&quot;https&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:32829,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:434,&quot;sha256&quot;:&quot;01752111aa95358567313886074f42dd356ff2c4452bef182e04ed967928c398&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:109,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Plotting algorithms for the Mandelbrot set.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2278,&quot;sha256&quot;:&quot;b9bf2e1e416dd11d21ed59515db5309cdd3e78e8832449190093cb4e33552569&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;png&quot;,&quot;thumb&quot;,&quot;algorithms&quot;,&quot;wikimedia&quot;],&quot;summary&quot;:&quot;Plotting algorithms for the Mandelbrot set&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:569,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Escape time algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:421,&quot;sha256&quot;:&quot;8ced9a2bd44d9bab58a76320c98b1e7082e6c52aa698153ba23492bd4d7753c9&quot;,&quot;keywords&quot;:[&quot;algorithm&quot;,&quot;escape&quot;,&quot;time&quot;,&quot;calculation&quot;,&quot;edit&quot;,&quot;action&quot;,&quot;area&quot;,&quot;based&quot;],&quot;summary&quot;:&quot;Escape time algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:106,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Unoptimized naïve escape time algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5400,&quot;sha256&quot;:&quot;e51daccf959f52ebbdfaac7e797f32af347a1f1c1b610ce14fda84eb72a50145&quot;,&quot;keywords&quot;:[&quot;escape&quot;,&quot;displaystyle&quot;,&quot;number&quot;,&quot;color&quot;,&quot;https&quot;,&quot;org&quot;,&quot;pixel&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Unoptimized naïve escape time algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1347,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Optimized escape time algorithms.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1856,&quot;sha256&quot;:&quot;3f57afe99011a0b895d799e327139c9c1e28e507419ad096a461502d0de49d51&quot;,&quot;keywords&quot;:[&quot;iteration&quot;,&quot;displaystyle&quot;,&quot;above&quot;,&quot;optimized&quot;,&quot;while&quot;,&quot;code&quot;,&quot;multiplications&quot;,&quot;2xy&quot;],&quot;summary&quot;:&quot;Optimized escape time algorithms&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:461,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Coloring algorithms.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:341,&quot;sha256&quot;:&quot;7bc39bf24c6991d8494a44516e0ece7b4388e300c4e0ff6ecc6e6ecd60558630&quot;,&quot;keywords&quot;:[&quot;algorithms&quot;,&quot;coloring&quot;,&quot;edit&quot;,&quot;set&quot;,&quot;action&quot;,&quot;addition&quot;,&quot;aesthetically&quot;,&quot;been&quot;],&quot;summary&quot;:&quot;Coloring algorithms&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:86,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-Histogram coloring.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6004,&quot;sha256&quot;:&quot;3a9874c3e535252fa8fce4f55ffd7d9abad3f5a67ea1eaf9bb62ad212a5ce91b&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;org&quot;,&quot;https&quot;,&quot;png&quot;,&quot;wiki&quot;,&quot;thumb&quot;,&quot;iteration&quot;,&quot;array&quot;],&quot;summary&quot;:&quot;Histogram coloring&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1501,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Continuous (smooth) coloring.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4645,&quot;sha256&quot;:&quot;b278fe75d5afe8fac41d0eab866845c0f82ccc953080520995b70e4a8da752aa&quot;,&quot;keywords&quot;:[&quot;log&quot;,&quot;iteration&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;number&quot;,&quot;color&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Continuous (smooth) coloring&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1155,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Exponentially mapped and cyclic iterations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1758,&quot;sha256&quot;:&quot;cf3d6f8f920214266838d0d5615d1a0a37132fa40673ff6880dcd9d7e18fbbd4&quot;,&quot;keywords&quot;:[&quot;palette&quot;,&quot;our&quot;,&quot;range&quot;,&quot;colors&quot;,&quot;count&quot;,&quot;fractal&quot;,&quot;iteration&quot;,&quot;mathbf&quot;],&quot;summary&quot;:&quot;Exponentially mapped and cyclic iterations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:440,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Passing iterations into a color directly.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1842,&quot;sha256&quot;:&quot;a03f4b2876ff3ba89b1d6a513585e38d52631aef97aa3d91fbf438628b2bef07&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;255&quot;,&quot;edit&quot;,&quot;png&quot;,&quot;color&quot;,&quot;srgb&quot;],&quot;summary&quot;:&quot;Passing iterations into a color directly&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:461,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-HSV coloring.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:965,&quot;sha256&quot;:&quot;3d2d9aaf6980b7566914034ddc86a03e77b18d9aa63a330c29babee80f8a4da1&quot;,&quot;keywords&quot;:[&quot;360&quot;,&quot;hsv&quot;,&quot;max&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;100&quot;,&quot;coloring&quot;,&quot;https&quot;],&quot;summary&quot;:&quot;HSV coloring&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:242,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-LCH coloring.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1270,&quot;sha256&quot;:&quot;8fa9fd032d8f9e10325bd4250d6582d21baf60687f7a60c116b58734a6d04dfb&quot;,&quot;keywords&quot;:[&quot;360&quot;,&quot;lch&quot;,&quot;chroma&quot;,&quot;coloring&quot;,&quot;luma&quot;,&quot;array&quot;,&quot;colors&quot;,&quot;count&quot;],&quot;summary&quot;:&quot;LCH coloring&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:316,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Advanced plotting algorithms.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:326,&quot;sha256&quot;:&quot;4d32f5a3e5944c699fa38f687d1fb7b4694d4c8eb5898616744c1028e7f05d6c&quot;,&quot;keywords&quot;:[&quot;algorithms&quot;,&quot;advanced&quot;,&quot;plotting&quot;,&quot;edit&quot;,&quot;action&quot;,&quot;addition&quot;,&quot;already&quot;,&quot;discussed&quot;],&quot;summary&quot;:&quot;Advanced plotting algorithms&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:82,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Distance estimates.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:10785,&quot;sha256&quot;:&quot;152c8139af9e277c0dde910225f2f55c79cf25d79afe6120b61e97317b4b44e3&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;partial&quot;,&quot;wiki&quot;,&quot;frac&quot;,&quot;distance&quot;],&quot;summary&quot;:&quot;Distance estimates&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2670,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Cardioid - bulb checking.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1581,&quot;sha256&quot;:&quot;c080ebb4d04edf9020c85c2d49991fd756910428652661f9900be105a156d3f6&quot;,&quot;keywords&quot;:[&quot;frac&quot;,&quot;bulb&quot;,&quot;cardioid&quot;,&quot;displaystyle&quot;,&quot;left&quot;,&quot;right&quot;,&quot;within&quot;,&quot;leq&quot;],&quot;summary&quot;:&quot;Cardioid / bulb checking&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:392,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Periodicity checking.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1385,&quot;sha256&quot;:&quot;9a73a4c04c41690af0d758adb17787e28ee9388b7d9ef3e3cc434e5d7cf3a05b&quot;,&quot;keywords&quot;:[&quot;iteration&quot;,&quot;checking&quot;,&quot;period&quot;,&quot;periodicity&quot;,&quot;set&quot;,&quot;points&quot;,&quot;while&quot;,&quot;xold&quot;],&quot;summary&quot;:&quot;Periodicity checking&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:345,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-Border tracing - edge checking.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1882,&quot;sha256&quot;:&quot;46c21517a6a653f7c88480d54ca8391b3cf5638d067c4770f4f3fd6575a8260c&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;set&quot;,&quot;border&quot;,&quot;file&quot;,&quot;tracing&quot;],&quot;summary&quot;:&quot;Border tracing / edge checking&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:471,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-Rectangle checking.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2494,&quot;sha256&quot;:&quot;d5a65fbcbbae997c2679227fefc785ad1d0e60f8027fbb97396d0906735878b2&quot;,&quot;keywords&quot;:[&quot;boxes&quot;,&quot;rectangle&quot;,&quot;checking&quot;,&quot;border&quot;,&quot;pixels&quot;,&quot;https&quot;,&quot;method&quot;,&quot;org&quot;],&quot;summary&quot;:&quot;Rectangle checking&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:624,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-Symmetry utilization.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:684,&quot;sha256&quot;:&quot;a421500551c4e95b324d4bea5543107eb16262aee9ae07038d17d30d8e833975&quot;,&quot;keywords&quot;:[&quot;symmetry&quot;,&quot;quadrant&quot;,&quot;edit&quot;,&quot;julia&quot;,&quot;mandelbrot&quot;,&quot;sets&quot;,&quot;symmetric&quot;,&quot;utilization&quot;],&quot;summary&quot;:&quot;Symmetry utilization&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:171,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0023&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0020-Multithreading.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2250,&quot;sha256&quot;:&quot;48cfdf8179766ea6a77d9ffbd661767f70e13b022ac8b4580232d7aea9b6e37d&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;symmetry&quot;,&quot;mandelbrot&quot;,&quot;file&quot;,&quot;webm&quot;],&quot;summary&quot;:&quot;Multithreading&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:563,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0024&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0021-Perturbation theory and series approximation.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:10564,&quot;sha256&quot;:&quot;2066f4c45850471746098e30d22058dab122d8fe4d3222a01f97e6f6b74a438a&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;epsilon&quot;,&quot;delta&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;png&quot;,&quot;point&quot;],&quot;summary&quot;:&quot;Perturbation theory and series approximation&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0021&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:2618,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0025&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0022-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:12471,&quot;sha256&quot;:&quot;c18b0876d7ec6fcb092a6aba0a3fa6bc976d97e983ad4ed40ddcbceb2dbdefc5&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;web&quot;,&quot;http&quot;,&quot;plotting_algorithms_for_the_mandelbrot_set&quot;,&quot;pdf&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0022&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:3107,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0026&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:464,&quot;sha256&quot;:&quot;955b5d0ec22996325ed0a23c0fbfc9ccf0ea54403d24a275f794689164c52fce&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;plotting_algorithms_for_the_mandelbrot_set&quot;,&quot;wiki&quot;,&quot;2026-09-30t05&quot;,&quot;255z&quot;,&quot;algorithms&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0026&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:116,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0027&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;87345c8aa9981b9f804a79557b2e52278858106a0b9cb09e8fd68276fa4fbce2&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;908&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0027&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0028&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0028&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:57:10.255Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	77	307	b84b2bc9d1494c53c0b8237a414f2f7c3f7208f727641257ba6aa0a48c47f453	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	17837	71678	f2d7bf07406d22257c09899a4d9a244329cfb8d6dec2f25dc9d80b76837f319c	Plotting algorithms for the Mandelbrot set - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	32829	131321	465003fc3a059f6ff611cb243afe2c8c489c9845c74e807586d53c2d1a9fe364	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	109	434	01752111aa95358567313886074f42dd356ff2c4452bef182e04ed967928c398	Introduction	
+sec:0005	section	artifacts/sections/0002-Plotting algorithms for the Mandelbrot set.md	primary	569	2278	b9bf2e1e416dd11d21ed59515db5309cdd3e78e8832449190093cb4e33552569	Plotting algorithms for the Mandelbrot set	
+sec:0006	section	artifacts/sections/0003-Escape time algorithm.md	primary	106	421	8ced9a2bd44d9bab58a76320c98b1e7082e6c52aa698153ba23492bd4d7753c9	Escape time algorithm	
+sec:0007	section	artifacts/sections/0004-Unoptimized naïve escape time algorithm.md	primary	1347	5400	e51daccf959f52ebbdfaac7e797f32af347a1f1c1b610ce14fda84eb72a50145	Unoptimized naïve escape time algorithm	
+sec:0008	section	artifacts/sections/0005-Optimized escape time algorithms.md	primary	461	1856	3f57afe99011a0b895d799e327139c9c1e28e507419ad096a461502d0de49d51	Optimized escape time algorithms	
+sec:0009	section	artifacts/sections/0006-Coloring algorithms.md	primary	86	341	7bc39bf24c6991d8494a44516e0ece7b4388e300c4e0ff6ecc6e6ecd60558630	Coloring algorithms	
+sec:0010	section	artifacts/sections/0007-Histogram coloring.md	primary	1501	6004	3a9874c3e535252fa8fce4f55ffd7d9abad3f5a67ea1eaf9bb62ad212a5ce91b	Histogram coloring	
+sec:0011	section	artifacts/sections/0008-Continuous (smooth) coloring.md	primary	1155	4645	b278fe75d5afe8fac41d0eab866845c0f82ccc953080520995b70e4a8da752aa	Continuous (smooth) coloring	
+sec:0012	section	artifacts/sections/0009-Exponentially mapped and cyclic iterations.md	supporting	440	1758	cf3d6f8f920214266838d0d5615d1a0a37132fa40673ff6880dcd9d7e18fbbd4	Exponentially mapped and cyclic iterations	
+sec:0013	section	artifacts/sections/0010-Passing iterations into a color directly.md	supporting	461	1842	a03f4b2876ff3ba89b1d6a513585e38d52631aef97aa3d91fbf438628b2bef07	Passing iterations into a color directly	
+sec:0014	section	artifacts/sections/0011-HSV coloring.md	supporting	242	965	3d2d9aaf6980b7566914034ddc86a03e77b18d9aa63a330c29babee80f8a4da1	HSV coloring	
+sec:0015	section	artifacts/sections/0012-LCH coloring.md	supporting	316	1270	8fa9fd032d8f9e10325bd4250d6582d21baf60687f7a60c116b58734a6d04dfb	LCH coloring	
+sec:0016	section	artifacts/sections/0013-Advanced plotting algorithms.md	supporting	82	326	4d32f5a3e5944c699fa38f687d1fb7b4694d4c8eb5898616744c1028e7f05d6c	Advanced plotting algorithms	
+sec:0017	section	artifacts/sections/0014-Distance estimates.md	supporting	2670	10785	152c8139af9e277c0dde910225f2f55c79cf25d79afe6120b61e97317b4b44e3	Distance estimates	
+sec:0018	section	artifacts/sections/0015-Cardioid - bulb checking.md	supporting	392	1581	c080ebb4d04edf9020c85c2d49991fd756910428652661f9900be105a156d3f6	Cardioid / bulb checking	
+sec:0019	section	artifacts/sections/0016-Periodicity checking.md	supporting	345	1385	9a73a4c04c41690af0d758adb17787e28ee9388b7d9ef3e3cc434e5d7cf3a05b	Periodicity checking	
+sec:0020	section	artifacts/sections/0017-Border tracing - edge checking.md	supporting	471	1882	46c21517a6a653f7c88480d54ca8391b3cf5638d067c4770f4f3fd6575a8260c	Border tracing / edge checking	
+sec:0021	section	artifacts/sections/0018-Rectangle checking.md	supporting	624	2494	d5a65fbcbbae997c2679227fefc785ad1d0e60f8027fbb97396d0906735878b2	Rectangle checking	
+sec:0022	section	artifacts/sections/0019-Symmetry utilization.md	supporting	171	684	a421500551c4e95b324d4bea5543107eb16262aee9ae07038d17d30d8e833975	Symmetry utilization	
+sec:0023	section	artifacts/sections/0020-Multithreading.md	supporting	563	2250	48cfdf8179766ea6a77d9ffbd661767f70e13b022ac8b4580232d7aea9b6e37d	Multithreading	
+sec:0024	section	artifacts/sections/0021-Perturbation theory and series approximation.md	supporting	2618	10564	2066f4c45850471746098e30d22058dab122d8fe4d3222a01f97e6f6b74a438a	Perturbation theory and series approximation	
+sec:0025	section	artifacts/sections/0022-References.md	supporting	3107	12471	c18b0876d7ec6fcb092a6aba0a3fa6bc976d97e983ad4ed40ddcbceb2dbdefc5	References	
+art:0026	provenance	artifacts/provenance/source-record.json	supporting	116	464	955b5d0ec22996325ed0a23c0fbfc9ccf0ea54403d24a275f794689164c52fce	Capture source identity and metadata	
+art:0027	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	87345c8aa9981b9f804a79557b2e52278858106a0b9cb09e8fd68276fa4fbce2	Extraction engine and counts	
+art:0028	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Plotting algorithms for the Mandelbrot set
+
+ [Add links](https://www.wikidata.org/wiki/Special:EntityPage/Q85793700#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Algorithms and methods of plotting the Mandelbrot set on a computing device ![](https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)This reads like a textbook&#39;s style of writing **may not reflect the [encyclopedic tone](https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone) used on Wikipedia**. See Wikipedia&#39;s [guide to writing better articles](https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone) for suggestions. *(July 2021)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png/250px-Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png)Still image [a movie of increasing magnification](https://upload.wikimedia.org/wikipedia/commons/0/07/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogv) on 0.001643721971153 − 0.822467633298876*i* [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Mandelbrot_sequence_new_still.png/250px-Mandelbrot_sequence_new_still.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_sequence_new_still.png)Still image of [an animation of increasing magnification](https://upload.wikimedia.org/wikipedia/commons/5/51/Mandelbrot_sequence_new.webm)
+
+There are many programs and [algorithms](https://en.wikipedia.org/wiki/Algorithm) used to plot the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) and other [fractals](https://en.wikipedia.org/wiki/Fractal), some of which are described in [fractal-generating software](https://en.wikipedia.org/wiki/Fractal-generating_software). These programs use a variety of algorithms to determine the color of individual [pixels](https://en.wikipedia.org/wiki/Pixel) efficiently.
+
+## Escape time algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=1)]
+
+The simplest algorithm for generating a representation of the Mandelbrot set is known as the &quot;escape time&quot; algorithm. A repeating calculation is performed for each *x*, *y* point in the plot area and based on the behavior of that calculation, a color is chosen for that pixel.
+
+### Unoptimized naïve escape time algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=2)]
+
+In both the unoptimized and optimized escape time algorithms, the *x* and *y* locations of each point are used as starting values in a repeating, or iterating calculation (described in detail below). The result of each iteration is used as the starting values for the next. The values are checked during each iteration to see whether they have reached a critical &quot;escape&quot; condition, or &quot;bailout&quot;. If that condition is reached, the calculation is stopped, the pixel is drawn, and the next *x*, *y* point is examined. For some starting values, escape occurs quickly, after only a small number of iterations. For starting values very close to but not in the set, it may take hundreds or thousands of iterations to escape. For values within the Mandelbrot set, escape will never occur. The programmer or user must choose how many iterations–or how much &quot;depth&quot;–they wish to examine. The higher the maximal number of iterations, the more detail and subtlety emerge in the final image, but the longer time it will take to calculate the fractal image.
+
+Escape conditions can be simple or complex. Because no [complex number](https://en.wikipedia.org/wiki/Complex_number) with a real or imaginary part greater than 2 can be part of the set, a common bailout is to escape when either coefficient exceeds 2. A more computationally complex method that detects escapes sooner, is to compute distance from the origin using the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem), i.e., to determine the [absolute value](https://en.wikipedia.org/wiki/Absolute_value), or *modulus*, of the complex number. If this value exceeds 2, or equivalently, when the sum of the squares of the real and imaginary parts exceed 4, the point has reached escape. More computationally intensive rendering variations include the [Buddhabrot](https://en.wikipedia.org/wiki/Buddhabrot) method, which finds escaping points and plots their iterated coordinates.
+
+The color of each point represents how quickly the values reached the escape point. Often black is used to show values that fail to escape before the iteration limit, and gradually brighter colors are used for points that escape. This gives a visual representation of how many cycles were required before reaching the escape condition.
+
+To render such an image, the region of the complex plane we are considering is subdivided into a certain number of [pixels](https://en.wikipedia.org/wiki/Pixel). To color any such pixel, let     c   {\displaystyle c}   be the midpoint of that pixel. We now iterate the critical point 0 under      P  c     {\displaystyle P_{c}}  , checking at each step whether the orbit point has modulus larger than 2. When this is the case, we know that     c   {\displaystyle c}   does not belong to the Mandelbrot set, and we color our pixel according to the number of iterations used to find out. Otherwise, we keep iterating up to a fixed number of steps, after which we decide that our parameter is &quot;probably&quot; in the Mandelbrot set, or at least very close to it, and color the pixel black.
+
+In [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), this algorithm would look as follows. The algorithm does not use complex numbers and manually simulates complex-number operations using two real numbers, for those who do not have a [complex data type](https://en.wikipedia.org/wiki/Complex_data_type). The program may be simplified if the programming language includes complex-data-type operations.
+
+```
+for each pixel (Px, Py) on the screen do
+    x0 := scaled x coordinate of pixel (scaled to lie in the Mandelbrot X scale (-2.00, 0.47))
+    y0 := scaled y coordinate of pixel (scaled to lie in the Mandelbrot Y scale (-1.12, 1.12))
+    x := 0.0
+    y := 0.0
+    iteration := 0
+    max_iteration := 1000
+    while (x*x + y*y ≤ 2*2 AND iteration &lt; max_iteration) do
+        xtemp := x*x - y*y + x0
+        y := 2*x*y + y0
+        x := xtemp
+        iteration := iteration + 1
+
+    color := palette[iteration]
+    plot(Px, Py, color)
+```
+
+Here, relating the pseudocode to     c   {\displaystyle c}  ,     z   {\displaystyle z}   and      P  c     {\displaystyle P_{c}}  :
+
+- z = x + i y     {\displaystyle z=x+iy\ }
+- z  2   =  x  2   + 2 i x y   {\displaystyle z^{2}=x^{2}+2ixy}   -      y  2       {\displaystyle y^{2}\ }
+- c =  x  0   + i  y  0       {\displaystyle c=x_{0}+iy_{0}\ }
+
+and so, as can be seen in the pseudocode in the computation of *x* and *y*:
+
+- x =   R e   ⁡ (  z  2   + c ) =  x  2   −  y  2   +  x  0     {\displaystyle x=\mathop {\mathrm {Re} } (z^{2}+c)=x^{2}-y^{2}+x_{0}}   and     y =   I m   ⁡ (  z  2   + c ) = 2 x y +  y  0   .     {\displaystyle y=\mathop {\mathrm {Im} } (z^{2}+c)=2xy+y_{0}.\ }
+
+To get colorful images of the set, the assignment of a color to each value of the number of executed iterations can be made using one of a variety of functions (linear, exponential, etc.). One practical way, without slowing down calculations, is to use the number of executed iterations as an entry to a [palette](https://en.wikipedia.org/wiki/Palette_(computing)) initialized at startup. If the color table has, for instance, 500 entries, then the color selection is *n* mod 500, where *n* is the number of iterations.
+
+### Optimized escape time algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=3)]
+
+The code in the previous section uses an unoptimized inner while loop for clarity. In the unoptimized version, one must perform five multiplications per iteration. To reduce the number of multiplications the following code for the inner while loop may be used instead:
+
+```
+x2:= 0
+y2:= 0
+w:= 0
+
+while (x2 + y2 ≤ 4 and iteration &lt; max_iteration) do
+    x:= x2 - y2 + x0
+    y:= w - x2 - y2 + y0
+    x2:= x * x
+    y2:= y * y
+    w:= (x + y) * (x + y)
+    iteration:= iteration + 1
+```
+
+The above code works via some algebraic simplification of the complex multiplication:
+
+( i y + x  )  2      = −  y  2   + 2 i y x +  x  2         =  x  2   −  y  2   + 2 i y x       {\displaystyle {\begin{aligned}(iy+x)^{2}&amp;=-y^{2}+2iyx+x^{2}\\&amp;=x^{2}-y^{2}+2iyx\end{aligned}}}
+
+Using the above identity, the number of multiplications can be reduced to three instead of five.
+
+The above inner while loop can be further optimized by expanding *w* to
+
+w =  x  2   + 2 x y +  y  2     {\displaystyle w=x^{2}+2xy+y^{2}}
+
+Substituting *w* into     y = w −  x  2   −  y  2   +  y  0     {\displaystyle y=w-x^{2}-y^{2}+y_{0}}   yields     y = 2 x y +  y  0     {\displaystyle y=2xy+y_{0}}   and hence calculating *w* is no longer needed.
+
+The further optimized pseudocode for the above is:
+
+```
+x:= 0
+y:= 0
+x2:= 0
+y2:= 0
+
+while (x2 + y2 ≤ 4 and iteration &lt; max_iteration) do
+    x2:= x * x
+    y2:= y * y
+    y:= 2 * x * y + y0
+    x:= x2 - y2 + x0
+    iteration:= iteration + 1
+```
+
+Note that in the above pseudocode,     2 x y   {\displaystyle 2xy}   seems to increase the number of multiplications by 1, but since 2 is the multiplier the code can be optimized via     ( x + x ) y   {\displaystyle (x+x)y}  .
+
+## Coloring algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=4)]
+
+In addition to plotting the set, a variety of algorithms have been developed to
+
+- efficiently color the set in an aesthetically pleasing way
+- show structures of the data (scientific visualisation)
+
+### Histogram coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=5)]  [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Relevant discussion may be found on the [talk page](https://en.wikipedia.org/wiki/Talk:Plotting_algorithms_for_the_Mandelbrot_set#%22Histogram_coloring%22_section). Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Plotting_algorithms_for_the_Mandelbrot_set) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(June 2019)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+A more complex coloring method involves using a [histogram](https://en.wikipedia.org/wiki/Histogram) which pairs each pixel with said pixel&#39;s maximum iteration count before escape/bailout. This method will equally distribute colors to the same overall area, and, importantly, is independent of the maximum number of iterations chosen.[[1]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-1)
+
+This algorithm has four passes. The first pass involves calculating the iteration counts associated with each pixel (but without any pixels being plotted). These are stored in an array `IterationCounts[x][y]`, where `x` and `y` are the x and y coordinates of said pixel on the screen respectively.
+
+   [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mandelbrot-no-histogram-coloring-10000-iterations.png/250px-Mandelbrot-no-histogram-coloring-10000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-10000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Mandelbrot-no-histogram-coloring-1000-iterations.png/250px-Mandelbrot-no-histogram-coloring-1000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-1000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mandelbrot-no-histogram-coloring-100-iterations.png/250px-Mandelbrot-no-histogram-coloring-100-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-100-iterations.png)  [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Mandelbrot-histogram-10000-iterations.png/250px-Mandelbrot-histogram-10000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-10000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Mandelbrot-histogram-1000-iterations.png/250px-Mandelbrot-histogram-1000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-1000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Mandelbrot-histogram-100-iterations.png/250px-Mandelbrot-histogram-100-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-100-iterations.png)  The top row is a series of plots using the escape time algorithm for 10000, 1000 and 100 maximum iterations per pixel respectively. The bottom row uses the same maximum iteration values but utilizes the histogram coloring method. Notice how little the coloring changes per different maximum iteration counts for the histogram coloring method plots.
+
+The first step of the second pass is to create an array `NumIterationsPerPixel[n]`, where the array size `n` is the maximum iteration count. Next, one must iterate over the array of pixel-iteration count pairs `IterationCounts[x][y]`, and retrieve each pixel&#39;s saved iteration count, *i*, via e.g. `i = IterationCounts[x][y]`. After each pixel&#39;s iteration count *i* is retrieved, it is necessary to index the `NumIterationsPerPixel` array at *i* and increment the indexed value (which is initially zero) -- e.g. `NumIterationsPerPixel[i] = NumIterationsPerPixel[i] + 1`.
+
+```
+for (x = 0; x &lt; width; x++) do
+    for (y = 0; y &lt; height; y++) do
+        i:= IterationCounts[x][y]
+        NumIterationsPerPixel[i]++
+```
+
+The third pass iterates through the NumIterationsPerPixel array and adds up all the stored values, saving them in *total*. The array index represents the number of pixels that reached that iteration count before bailout.
+
+```
+total: = 0
+for (i = 0; i &lt; max_iterations; i++) do
+    total += NumIterationsPerPixel[i]
+```
+
+After this, the fourth pass begins and all the values in the IterationCounts array are indexed, and, for each iteration count *i*, associated with each pixel, the count is added to a global sum of all the iteration counts from 1 to *i* in the NumIterationsPerPixel array . This value is then normalized by dividing the sum by the *total* value computed earlier.
+
+```
+hue[][]:= 0.0
+for (x = 0; x &lt; width; x++) do
+    for (y = 0; y &lt; height; y++) do
+        iteration:= IterationCounts[x][y]
+        for (i = 0; i &lt;= iteration; i++) do
+            hue[x][y] += NumIterationsPerPixel[i] / total /* Must be floating-point division. */
+
+...
+
+color = palette[hue[m, n]]
+
+...
+```
+
+Finally, the computed value is used, e.g. as an index to a color palette.
+
+This method may be combined with the smooth coloring method below for more aesthetically pleasing images.
+
+### Continuous (smooth) coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=6)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Escape_Time_Algorithm_bands.png/250px-Escape_Time_Algorithm_bands.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Escape_Time_Algorithm_bands.png)This image was rendered with the escape time algorithm. There are very obvious &quot;bands&quot; of color[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Normalized_Iteration_Count_Algorithm_1.png/250px-Normalized_Iteration_Count_Algorithm_1.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Normalized_Iteration_Count_Algorithm_1.png)This image was rendered with the normalized iteration count algorithm. The bands of color have been replaced by a smooth gradient. Also, the colors take on the same pattern that would be observed if the escape time algorithm were used.
+
+The escape time algorithm is popular for its simplicity. However, it creates bands of color, which, as a type of [aliasing](https://en.wikipedia.org/wiki/Aliasing), can detract from an image&#39;s aesthetic value. This can be improved using an algorithm known as &quot;normalized iteration count&quot;,[[2]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-3) which provides a smooth transition of colors between iterations. The algorithm associates a real number     ν   {\displaystyle \nu }   with each value of *z* by using the connection of the iteration number with the [potential function](https://en.wikipedia.org/wiki/Julia_set#The_potential_function_and_the_real_iteration_number). This function is given by
+
+     ϕ ( z ) =  lim  n → ∞   ( log ⁡  |   z  n    |   /   P  n   ) ,   {\displaystyle \phi (z)=\lim _{n\to \infty }(\log |z_{n}|/P^{n}),}
+
+where *z**n* is the value after *n* iterations and *P* is the power for which *z* is raised to in the Mandelbrot set equation (*z**n*+1 = *z**n**P* + *c*, *P* is generally 2).
+
+If we choose a large bailout radius *N* (e.g., 10100), we have that
+
+     log ⁡  |   z  n    |   /   P  n   = log ⁡ ( N )  /   P  ν ( z )     {\displaystyle \log |z_{n}|/P^{n}=\log(N)/P^{\nu (z)}}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , and this is
+
+     ν ( z ) = n −  log  P   ⁡ ( log ⁡  |   z  n    |   /  log ⁡ ( N ) ) ,   {\displaystyle \nu (z)=n-\log _{P}(\log |z_{n}|/\log(N)),}
+
+and as *n* is the first iteration number such that |*z**n*| &gt; *N*, the number we subtract from *n* is in the interval [0, 1).
+
+For the coloring we must have a cyclic scale of colors (constructed mathematically, for instance) and containing *H* colors numbered from 0 to *H* − 1 (*H* = 500, for instance). We multiply the real number     ν ( z )   {\displaystyle \nu (z)}   by a fixed real number determining the density of the colors in the picture, take the integral part of this number modulo *H*, and use it to look up the corresponding color in the color table.
+
+For example, modifying the above pseudocode and also using the concept of [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) would yield
+
+```
+for each pixel (Px, Py) on the screen do
+    x0:= scaled x coordinate of pixel (scaled to lie in the Mandelbrot X scale (-2.5, 1))
+    y0:= scaled y coordinate of pixel (scaled to lie in the Mandelbrot Y scale (-1, 1))
+    x:= 0.0
+    y:= 0.0
+    iteration:= 0
+    max_iteration:= 1000
+    // Here N = 2^8 is chosen as a reasonable bailout radius.
+
+    while x*x + y*y ≤ (1 &lt;&lt; 16) and iteration &lt; max_iteration do
+        xtemp:= x*x - y*y + x0
+        y:= 2*x*y + y0
+        x:= xtemp
+        iteration:= iteration + 1
+
+    // Used to avoid floating point issues with points inside the set.
+    if iteration &lt; max_iteration then
+        // sqrt of inner term removed using log simplification rules.
+        log_zn:= log(x*x + y*y) / 2
+        nu:= log(log_zn / log(2)) / log(2)
+        // Rearranging the potential function.
+        // Dividing log_zn by log(2) instead of log(N = 1&lt;&lt;8)
+        // because we want the entire palette to range from the
+        // center to radius 2, NOT our bailout radius.
+        iteration:= iteration + 1 - nu
+
+    color1:= palette[floor(iteration)]
+    color2:= palette[floor(iteration) + 1]
+    // iteration % 1 = fractional part of iteration.
+    color:= linear_interpolate(color1, color2, iteration % 1)
+    plot(Px, Py, color)
+```
+
+### Exponentially mapped and cyclic iterations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=7)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/CyclicColoringLch.png/250px-CyclicColoringLch.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:CyclicColoringLch.png)Exponential Cyclic Coloring in LCH color space with shading
+
+Typically when we render a fractal, the range of where colors from a given palette appear along the fractal is static. If we desire to offset the location from the border of the fractal, or adjust their palette to cycle in a specific way, there are a few simple changes we can make when taking the final iteration count before passing it along to choose an item from our palette.
+
+When we have obtained the iteration count, we can make the range of colors non-linear. Raising a value normalized to the range [0,1] to a power *n*, maps a linear range to an exponential range, which in our case can nudge the appearance of colors along the outside of the fractal, and allow us to bring out other colors, or push in the entire palette closer to the border.
+
+v = ( (  i   /  m a  x  i    )   S     N   )  1.5    mod   N      {\displaystyle v=((\mathbf {i} /max_{i})^{\mathbf {S} }\mathbf {N} )^{1.5}{\bmod {\mathbf {N} }}}
+
+where **i** is our iteration count after bailout, **max_i** is our iteration limit, **S** is the exponent we are raising iters to, and **N** is the number of items in our palette. This scales the iter count non-linearly and scales the palette to cycle approximately proportionally to the zoom.
+
+We can then plug v into whatever algorithm we desire for generating a color.
+
+### Passing iterations into a color directly
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=8)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/LCH_COLORING.png/330px-LCH_COLORING.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LCH_COLORING.png)Example of exponentially mapped cyclic LCH coloring without shading
+
+One thing we may want to consider is avoiding having to deal with a palette or color blending at all. There are actually a handful of methods we can leverage to generate smooth, consistent coloring by constructing the color on the spot.
+
+#### v refers to a normalized exponentially mapped cyclic iter count
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=9)]
+
+#### f(v) refers to the [sRGB transfer function](https://en.wikipedia.org/wiki/SRGB#Transfer_function_(%22gamma%22))
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=10)]
+
+A naive method for generating a color in this way is by directly scaling **v** to 255 and passing it into RGB as such
+
+```
+rgb = [v * 255, v * 255, v * 255]
+```
+
+One flaw with this is that RGB is non-linear due to gamma; consider linear sRGB instead. Going from RGB to sRGB uses an inverse companding function on the channels. This makes the gamma linear, and allows us to properly sum the colors for sampling.
+
+```
+srgb = [v * 255, v * 255, v * 255]
+```
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/HSV_Gradient_Example.png/330px-HSV_Gradient_Example.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:HSV_Gradient_Example.png)HSV Gradient
+
+### HSV coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=11)]
+
+HSV Coloring can be accomplished by mapping iter count from [0,max_iter) to [0,360), taking it to the power of 1.5, and then modulo 360.     h = ( ( i  /  m a  x  i   ) 360  )  1.5    mod  3   60   {\displaystyle h=((i/max_{i})360)^{1.5}{\bmod {3}}60}   We can then simply take the exponentially mapped iter count into the value and return
+
+```
+hsv = [powf((i / max) * 360, 1.5) % 360, 100, (i / max) * 100]
+```
+
+This method applies to HSL as well, except we pass a saturation of 50% instead.
+
+```
+hsl = [powf((i / max) * 360, 1.5) % 360, 50, (i / max) * 100]
+```
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/LCH_Gradient_Example.png/330px-LCH_Gradient_Example.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LCH_Gradient_Example.png)LCH Gradient
+
+### LCH coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=12)]
+
+One of the most perceptually uniform coloring methods involves passing in the processed iter count into LCH. If we utilize the exponentially mapped and cyclic method above, we can take the result of that into the Luma and Chroma channels. We can also exponentially map the iter count and scale it to 360, and pass this modulo 360 into the hue.
+
+x   ∈    Q +       s  i     =   ( i  /  m a  x  i    )   x        v   =   1.0 − c o  s  2   ( π  s  i   )     L   =   75 − ( 75 v )     C   =   28 + ( 75 − 75 v )     H   =   ( 360  s  i    )  1.5    mod  3   60       {\textstyle {\begin{array}{lcl}x&amp;\in &amp;\mathbb {Q+} \\s_{i}&amp;=&amp;(i/max_{i})^{\mathbf {x} }\\v&amp;=&amp;1.0-cos^{2}(\pi s_{i})\\L&amp;=&amp;75-(75v)\\C&amp;=&amp;28+(75-75v)\\H&amp;=&amp;(360s_{i})^{1.5}{\bmod {3}}60\end{array}}}
+
+One issue we wish to avoid here is out-of-gamut colors. This can be achieved with a little trick based on the change in in-gamut colors relative to luma and chroma. As we increase luma, we need to decrease chroma to stay within gamut.
+
+```
+s = iters/max_i;
+v = 1.0 - powf(cos(pi * s), 2.0);
+LCH = [75 - (75 * v), 28 + (75 - (75 * v)), powf(360 * s, 1.5) % 360];
+```
+
+## Advanced plotting algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=13)]
+
+In addition to the simple and slow escape time algorithms already discussed, there are many other more advanced algorithms that can be used to speed up the plotting process.
+
+### Distance estimates
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=14)]
+
+One can compute the [distance](https://en.wikipedia.org/wiki/Distance) from point *c* (in [exterior](https://en.wikipedia.org/wiki/Exterior_(topology)) or [interior](https://en.wikipedia.org/wiki/Interior_(topology))) to nearest point on the [boundary](https://en.wikipedia.org/wiki/Boundary_(topology)) of the Mandelbrot set.[[4]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Albert_Lobo-4)[[5]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-5)
+
+#### Exterior distance estimation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=15)]
+
+The proof of the [connectedness](https://en.wikipedia.org/wiki/Mandelbrot_set#Basic_properties) of the Mandelbrot set in fact gives a formula for the [uniformizing map](https://en.wikipedia.org/wiki/External_ray#Uniformization) of the [complement](https://en.wikipedia.org/wiki/Complement_(set_theory)) of     M   {\displaystyle M}   (and the [derivative](https://en.wikipedia.org/wiki/Derivative) of this map). By the [Koebe quarter theorem](https://en.wikipedia.org/wiki/Koebe_quarter_theorem), one can then estimate the distance between the midpoint of our [pixel](https://en.wikipedia.org/wiki/Pixel) and the Mandelbrot set up to a factor of 4.
+
+In other words, provided that the maximal number of iterations is sufficiently high, one obtains a picture of the Mandelbrot set with the following properties:
+
+1. Every pixel that contains a point of the Mandelbrot set is colored black.
+2. Every pixel that is colored black is close to the Mandelbrot set.
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Demm_2000_Mandelbrot_set.jpg/250px-Demm_2000_Mandelbrot_set.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Demm_2000_Mandelbrot_set.jpg)Exterior distance estimate may be used to color whole complement of Mandelbrot set
+
+The upper bound *b* for the distance estimate of a pixel *c* (a complex number) from the Mandelbrot set is given by[[6]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Cheritat-6)[[7]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Syntopia-7)[[8]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-8)
+
+     b =  lim  n → ∞      2 ⋅  |    P  c   n   ( c )  |  ⋅ ln ⁡  |    P  c   n   ( c )    |     |    ∂  ∂  c      P  c   n   ( c )  |     ,   {\displaystyle b=\lim _{n\to \infty }{\frac {2\cdot |{P_{c}^{n}(c)|\cdot \ln |{P_{c}^{n}(c)}}|}{|{\frac {\partial }{\partial {c}}}P_{c}^{n}(c)|}},}
+
+where
+
+- P  c   ( z )    {\displaystyle P_{c}(z)\,}   stands for [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+- P  c   n   ( c )   {\displaystyle P_{c}^{n}(c)}   stands for *n* iterations of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}   or      z  2   + c → z   {\displaystyle z^{2}+c\to z}  , starting with     z = c   {\displaystyle z=c}  :      P  c   0   ( c ) = c   {\displaystyle P_{c}^{0}(c)=c}  ,      P  c   n + 1   ( c ) =  P  c   n   ( c  )  2   + c   {\displaystyle P_{c}^{n+1}(c)=P_{c}^{n}(c)^{2}+c}  ;
+- ∂  ∂  c      P  c   n   ( c )   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{n}(c)}   is the derivative of      P  c   n   ( c )   {\displaystyle P_{c}^{n}(c)}   with respect to c. This derivative can be found by starting with       ∂  ∂  c      P  c   0   ( c ) = 1   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{0}(c)=1}   and then       ∂  ∂  c      P  c   n + 1   ( c ) = 2 ⋅    P  c   n   ( c ) ⋅   ∂  ∂  c      P  c   n   ( c ) + 1   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{n+1}(c)=2\cdot {}P_{c}^{n}(c)\cdot {\frac {\partial }{\partial {c}}}P_{c}^{n}(c)+1}  . This can easily be verified by using the chain rule for the derivative.
+
+The idea behind this formula is simple: When the [equipotential](https://en.wikipedia.org/wiki/Equipotential) lines for the potential function     ϕ ( z )   {\displaystyle \phi (z)}   lie close, the number      |   ϕ ′  ( z )  |    {\displaystyle |\phi &#39;(z)|}   is large, and conversely, therefore the equipotential lines for the function     ϕ ( z )  /   |   ϕ ′  ( z )  |    {\displaystyle \phi (z)/|\phi &#39;(z)|}   should lie approximately regularly.
+
+From a mathematician&#39;s point of view, this formula only works in limit where *n* goes to infinity, but very reasonable estimates can be found with just a few additional iterations after the main loop exits.
+
+Once *b* is found, by the Koebe 1/4-theorem, we know that there is no point of the Mandelbrot set with distance from *c* smaller than *b/4*.
+
+The distance estimation can be used for drawing of the boundary of the Mandelbrot set, see the article [Julia set](https://en.wikipedia.org/wiki/Julia_set). In this approach, pixels that are sufficiently close to M are drawn using a different color. This creates drawings where the thin &quot;filaments&quot; of the Mandelbrot set can be easily seen. This technique is used to good effect in the B&amp;W images of Mandelbrot sets in the books &quot;The Beauty of Fractals[[9]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-9)&quot; and &quot;The Science of Fractal Images&quot;.[[10]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-10)
+
+Here is a sample B&amp;W image rendered using Distance Estimates:
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Mandel_zoom_06_double_hook_B%26W_DE.jpg/250px-Mandel_zoom_06_double_hook_B%26W_DE.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandel_zoom_06_double_hook_B&amp;W_DE.jpg)This is a B&amp;W image of a portion of the Mandelbrot set rendered using Distance Estimates (DE)
+
+Distance Estimation can also be used to render [3D images of Mandelbrot and Julia sets](https://en.wikipedia.org/wiki/Mandelbrot_Set#3D_images_of_Mandelbrot_and_Julia_sets)
+
+#### Interior distance estimation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=16)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Mandelbrot_Interior_600.png/250px-Mandelbrot_Interior_600.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Interior_600.png)Pixels colored according to the estimated interior distance
+
+It is also possible to estimate the distance of a limitly periodic (i.e., [hyperbolic](https://en.wikipedia.org/wiki/Mandelbrot_set#Hyperbolic_components)) point to the boundary of the Mandelbrot set. The upper bound *b* for the distance estimate is given by[[4]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Albert_Lobo-4)
+
+     b =    1 −   |    ∂  ∂  z      P  c   p   (  z  0   )  |   2     |    ∂  ∂  c       ∂  ∂  z      P  c   p   (  z  0   ) +   ∂  ∂  z       ∂  ∂  z      P  c   p   (  z  0   )      ∂  ∂  c      P  c   p   (  z  0   )   1 −   ∂  ∂  z      P  c   p   (  z  0   )     |    ,   {\displaystyle b={\frac {1-\left|{{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}\right|^{2}}{\left|{{\frac {\partial }{\partial {c}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})+{\frac {\partial }{\partial {z}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0}){\frac {{\frac {\partial }{\partial {c}}}P_{c}^{p}(z_{0})}{1-{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}}}\right|}},}
+
+where
+
+- p   {\displaystyle p}   is the period,
+- c   {\displaystyle c}   is the point to be estimated,
+- P  c   ( z )   {\displaystyle P_{c}(z)}   is the [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)      P  c   ( z ) =  z  2   + c   {\displaystyle P_{c}(z)=z^{2}+c}
+- P  c   p   (  z  0   )   {\displaystyle P_{c}^{p}(z_{0})}   is the     p   {\displaystyle p}  -fold iteration of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}  , starting with      P  c   0   ( z ) =  z  0     {\displaystyle P_{c}^{0}(z)=z_{0}}
+- z  0     {\displaystyle z_{0}}   is any of the     p   {\displaystyle p}   points that make the [attractor](https://en.wikipedia.org/wiki/Attractor) of the iterations of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}   starting with      P  c   0   ( z ) = c   {\displaystyle P_{c}^{0}(z)=c}  ;      z  0     {\displaystyle z_{0}}   satisfies      z  0   =  P  c   p   (  z  0   )   {\displaystyle z_{0}=P_{c}^{p}(z_{0})}  ,
+- ∂  ∂  c       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {c}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}  ,       ∂  ∂  z       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {z}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}  ,       ∂  ∂  c      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{p}(z_{0})}   and       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}   are various derivatives of      P  c   p   ( z )   {\displaystyle P_{c}^{p}(z)}  , evaluated at      z  0     {\displaystyle z_{0}}  .
+
+Analogous to the exterior case, once *b* is found, we know that all points within the distance of *b*/4 from *c* are inside the Mandelbrot set.
+
+There are two practical problems with the interior distance estimate: first, we need to find      z  0     {\displaystyle z_{0}}   precisely, and second, we need to find     p   {\displaystyle p}   precisely. The problem with      z  0     {\displaystyle z_{0}}   is that the convergence to      z  0     {\displaystyle z_{0}}   by iterating      P  c   ( z )   {\displaystyle P_{c}(z)}   requires, theoretically, an infinite number of operations. The problem with any given     p   {\displaystyle p}   is that, sometimes, due to rounding errors, a period is falsely identified to be an integer multiple of the real period (e.g., a period of 86 is detected, while the real period is only 43=86/2). In such case, the distance is overestimated, i.e., the reported radius could contain points outside the Mandelbrot set.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/MandelbrotOrbitInfimum.png/250px-MandelbrotOrbitInfimum.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:MandelbrotOrbitInfimum.png)3D view: smallest absolute value of the orbit of the interior points of the Mandelbrot set
+
+### Cardioid / bulb checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=17)]
+
+One way to improve calculations is to find out beforehand whether the given point lies within the cardioid or in the period-2 bulb. Before passing the complex value through the escape time algorithm, first check that:
+
+     p =     (  x −   1 4    )   2   +  y  2       {\displaystyle p={\sqrt {\left(x-{\frac {1}{4}}\right)^{2}+y^{2}}}}  ,     x ≤ p − 2  p  2   +   1 4     {\displaystyle x\leq p-2p^{2}+{\frac {1}{4}}}  ,     ( x + 1  )  2   +  y  2   ≤   1 16     {\displaystyle (x+1)^{2}+y^{2}\leq {\frac {1}{16}}}  ,
+
+where *x* represents the real value of the point and *y* the imaginary value. The first two equations determine that the point is within the cardioid, the last the period-2 bulb.
+
+The cardioid test can equivalently be performed without the square root:
+
+     q =   (  x −   1 4    )   2   +  y  2   ,   {\displaystyle q=\left(x-{\frac {1}{4}}\right)^{2}+y^{2},}       q  (  q +  (  x −   1 4    )   )  ≤   1 4    y  2   .   {\displaystyle q\left(q+\left(x-{\frac {1}{4}}\right)\right)\leq {\frac {1}{4}}y^{2}.}
+
+3rd- and higher-order buds do not have equivalent tests, because they are not perfectly circular.[[11]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-11) However, it is possible to find whether the points are within circles inscribed within these higher-order bulbs, preventing many, though not all, of the points in the bulb from being iterated.
+
+### Periodicity checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=18)]
+
+To prevent having to do huge numbers of iterations for points inside the set, one can perform periodicity checking, which checks whether a point reached in iterating a pixel has been reached before. If so, the pixel cannot diverge and must be in the set. Periodicity checking is a trade-off, as the need to remember points costs data management instructions and memory, but saves computational instructions. However, checking against only one previous iteration can detect many periods with little performance overhead. For example, within the while loop of the pseudocode above, make the following modifications:
+
+```
+xold := 0
+yold := 0
+period := 0
+while (x*x + y*y ≤ 2*2 and iteration &lt; max_iteration) do
+    xtemp := x*x - y*y + x0
+    y := 2*x*y + y0
+    x := xtemp
+    iteration := iteration + 1
+
+    if x ≈ xold and y ≈ yold then
+        iteration := max_iteration  /* Set to max for the color plotting */
+        break        /* We are inside the Mandelbrot set, leave the while loop */
+
+    period:= period + 1
+    if period &gt; 20 then
+        period := 0
+        xold := x
+        yold := y
+```
+
+The above code stores away a new x and y value on every 20th iteration, thus it can detect periods that are up to 20 points long.
+
+### Border tracing / edge checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=19)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mandelbrot_DEM_Sobel.png/250px-Mandelbrot_DEM_Sobel.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_DEM_Sobel.png)Edge detection using [Sobel filter](https://en.wikipedia.org/wiki/Sobel_filter) of hyperbolic components of Mandelbrot set
+
+Because the Mandelbrot set is [full](https://en.wikipedia.org/wiki/Full_set_(topology)),[[12]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Proof_of_connectedness-12) any point enclosed by a closed shape whose borders lie entirely within the Mandelbrot set must itself be in the Mandelbrot set. Border tracing works by following the [lemniscates](https://en.wikipedia.org/wiki/Polynomial_lemniscate) of the various iteration levels (colored bands) all around the set, and then filling the entire band at once. This also provides a speed increase because large numbers of points can be now skipped.[[13]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-13)
+
+ [https://en\.wikipedia\.org/wiki/File:Boundary\_following\_movie\.webm](https://en.wikipedia.org/wiki/File:Boundary_following_movie.webm)Duration: 7 seconds.[https://en\.wikipedia\.org/wiki/File:Boundary\_following\_movie\.webm](https://en.wikipedia.org/wiki/File:Boundary_following_movie.webm)Animation of border tracing
+
+In the animation shown, points outside the set are colored with a 1000-iteration escape time algorithm. Tracing the set border and filling it, rather than iterating the interior points, reduces the total number of iterations by 93.16%. With a higher iteration limit the benefit would be even greater.
+
+### Rectangle checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=20)]
+
+Rectangle checking is an older and simpler method for plotting the Mandelbrot set. The basic idea of rectangle checking is that if every pixel in a rectangle&#39;s border shares the same amount of iterations, then the rectangle can be safely filled using that number of iterations. There are several variations of the rectangle checking method, however, all of them are slower than the border tracing method because they end up calculating more pixels. One variant just calculates the corner pixels of each rectangle, however, this causes damaged pictures more often than calculating the entire border, thus it only works reasonably well if only small boxes of around 6x6 pixels are used, and no recursing in from bigger boxes. ([Fractint](https://en.wikipedia.org/wiki/Fractint) method.)
+
+The most simple rectangle checking method lies in checking the borders of equally sized rectangles, resembling a grid pattern. (Mariani&#39;s algorithm.)[[14]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-14)
+
+A faster and slightly more advanced variant is to first calculate a bigger box, say 25x25 pixels. If the entire box border has the same color, then just fill the box with the same color. If not, then split the box into four boxes of 13x13 pixels, reusing the already calculated pixels as outer border, and sharing the inner &quot;cross&quot; pixels between the inner boxes. Again, fill in those boxes that has only one border color. And split those boxes that don&#39;t, now into four 7x7 pixel boxes. And then those that &quot;fail&quot; into 4x4 boxes. (Mariani-Silver algorithm.)
+
+Even faster is to split the boxes in half instead of into four boxes. Then it might be optimal to use boxes with a 1.4:1 [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio), so they can be split like [how A3 papers are folded](https://en.wikipedia.org/wiki/ISO_216) into A4 and A5 papers. (The DIN approach.)
+
+As with border tracing, rectangle checking only works on areas with one discrete color. But even if the outer area uses smooth/continuous coloring then rectangle checking will still speed up the costly inner area of the Mandelbrot set. Unless the inner area also uses some smooth coloring method, for instance [interior distance estimation](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#Interior_distance_estimation).
+
+### Symmetry utilization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=21)]
+
+The horizontal symmetry of the Mandelbrot set allows for portions of the rendering process to be skipped upon the presence of the real axis in the final image. However, regardless of the portion that gets mirrored, the same number of points will be rendered.
+
+Julia sets have symmetry around the origin. This means that quadrant 1 and quadrant 3 are symmetric, and quadrants 2 and quadrant 4 are symmetric. Supporting symmetry for both Mandelbrot and Julia sets requires handling symmetry differently for the two different types of graphs.
+
+### Multithreading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=22)]
+
+Escape-time rendering of Mandelbrot and Julia sets lends itself extremely well to parallel processing. On multi-core machines the area to be plotted can be divided into a series of rectangular areas which can then be provided as a set of tasks to be rendered by a pool of rendering threads. This is an [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel)[[15]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-15) computing problem. (Note that one gets the best speed-up by first excluding symmetric areas of the plot, and then dividing the remaining unique regions into rectangular areas.)[[16]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-16)
+
+Here is a short video showing the Mandelbrot set being rendered using multithreading and symmetry, but without boundary following:
+
+ [https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_symmetry.webm)Duration: 11 seconds.[https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_symmetry.webm)This is a short video showing rendering of a Mandelbrot set using multi-threading and symmetry, but with boundary following turned off.
+
+Finally, here is a video showing the same Mandelbrot set image being rendered using multithreading, symmetry, **and** boundary following:
+
+ [https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_bounary\_following\_&amp;\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_bounary_following_&amp;_symmetry.webm)Duration: 3 seconds.[https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_bounary\_following\_&amp;\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_bounary_following_&amp;_symmetry.webm)This is a short video showing rendering of a Mandelbrot set using boundary following, multi-threading, and symmetry
+
+### Perturbation theory and series approximation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=23)]
+
+Very highly magnified images require more than the standard 64–128 or so bits of precision that most hardware [floating-point units](https://en.wikipedia.org/wiki/Floating-point_unit) provide, requiring renderers to use slow &quot;BigNum&quot; or &quot;[arbitrary-precision](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)&quot; math libraries to calculate. However, this can be sped up by the exploitation of [perturbation theory](https://en.wikipedia.org/wiki/Perturbation_theory). Given
+
+      z  n + 1   =  z  n   2   + c   {\displaystyle z_{n+1}=z_{n}^{2}+c}
+
+as the iteration, and a small epsilon and delta, it is the case that
+
+     (  z  n   + ϵ  )  2   + ( c + δ ) =  z  n   2   + 2  z  n   ϵ +  ϵ  2   + c + δ ,   {\displaystyle (z_{n}+\epsilon )^{2}+(c+\delta )=z_{n}^{2}+2z_{n}\epsilon +\epsilon ^{2}+c+\delta ,}
+
+or
+
+     =  z  n + 1   + 2  z  n   ϵ +  ϵ  2   + δ ,   {\displaystyle =z_{n+1}+2z_{n}\epsilon +\epsilon ^{2}+\delta ,}
+
+so if one defines
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +  ϵ  n   2   + δ ,   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+\epsilon _{n}^{2}+\delta ,}
+
+one can calculate a single point (e.g. the center of an image) using high-precision arithmetic (*z*), giving a *reference orbit*, and then compute many points around it in terms of various initial offsets delta plus the above iteration for epsilon, where epsilon-zero is set to 0. For most iterations, epsilon does not need more than 16 significant figures, and consequently hardware floating-point may be used to get a mostly accurate image.[[17]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-17) There will often be some areas where the orbits of points diverge enough from the reference orbit that extra precision is needed on those points, or else additional local high-precision-calculated reference orbits are needed. By measuring the orbit distance between the reference point and the point calculated with low precision, it can be detected that it is not possible to calculate the point correctly, and the calculation can be stopped. These incorrect points can later be re-calculated e.g. from another closer reference point.
+
+Further, it is possible to approximate the starting values for the low-precision points with a truncated [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which often enables a significant amount of iterations to be skipped.[[18]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-18) Renderers implementing these techniques are publicly available and offer speedups for highly magnified images by around two orders of magnitude. [[19]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-19) [[20]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-20)
+
+An alternate explanation of the above:
+
+For the central point in the disc     c   {\displaystyle c}   and its iterations      z  n     {\displaystyle z_{n}}  , and an arbitrary point in the disc     c + δ   {\displaystyle c+\delta }   and its iterations      z  n  ′    {\displaystyle z&#39;_{n}}  , it is possible to define the following iterative relationship:
+
+      z  n  ′  =  z  n   +  ϵ  n     {\displaystyle z&#39;_{n}=z_{n}+\epsilon _{n}}
+
+With      ϵ  1   = δ   {\displaystyle \epsilon _{1}=\delta }  . Successive iterations of      ϵ  n     {\displaystyle \epsilon _{n}}   can be found using the following:
+
+      z  n + 1  ′  =    z  n  ′    2   + ( c + δ )   {\displaystyle z&#39;_{n+1}={z&#39;_{n}}^{2}+(c+\delta )}        z  n + 1  ′  = (  z  n   +  ϵ  n    )  2   + c + δ   {\displaystyle z&#39;_{n+1}=(z_{n}+\epsilon _{n})^{2}+c+\delta }        z  n + 1  ′  =    z  n     2   + c + 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle z&#39;_{n+1}={z_{n}}^{2}+c+2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }        z  n + 1  ′  =  z  n + 1   + 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle z&#39;_{n+1}=z_{n+1}+2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }
+
+Now from the original definition:
+
+      z  n + 1  ′  =  z  n + 1   +  ϵ  n + 1     {\displaystyle z&#39;_{n+1}=z_{n+1}+\epsilon _{n+1}}  ,
+
+It follows that:
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }
+
+As the iterative relationship relates an arbitrary point to the central point by a very small change     δ   {\displaystyle \delta }  , then most of the iterations of      ϵ  n     {\displaystyle \epsilon _{n}}   are also small and can be calculated using floating point hardware.
+
+However, for every arbitrary point in the disc it is possible to calculate a value for a given      ϵ  n     {\displaystyle \epsilon _{n}}   without having to iterate through the sequence from      ϵ  0     {\displaystyle \epsilon _{0}}  , by expressing      ϵ  n     {\displaystyle \epsilon _{n}}   as a [power series](https://en.wikipedia.org/wiki/Power_series) of     δ   {\displaystyle \delta }  .
+
+      ϵ  n   =  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + …   {\displaystyle \epsilon _{n}=A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc }
+
+With      A  1   = 1 ,  B  1   = 0 ,  C  1   = 0 , …   {\displaystyle A_{1}=1,B_{1}=0,C_{1}=0,\dotsc }  .
+
+Now given the iteration equation of     ϵ   {\displaystyle \epsilon }  , it is possible to calculate the coefficients of the power series for each      ϵ  n     {\displaystyle \epsilon _{n}}  :
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }        ϵ  n + 1   = 2  z  n   (  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + … ) + (  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + …  )  2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}(A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc )+(A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc )^{2}+\delta }        ϵ  n + 1   = ( 2  z  n    A  n   + 1 ) δ + ( 2  z  n    B  n   +    A  n     2   )  δ  2   + ( 2  z  n    C  n   + 2  A  n    B  n   )  δ  3   + …   {\displaystyle \epsilon _{n+1}=(2z_{n}A_{n}+1)\delta +(2z_{n}B_{n}+{A_{n}}^{2})\delta ^{2}+(2z_{n}C_{n}+2A_{n}B_{n})\delta ^{3}+\dotsc }
+
+Therefore, it follows that:
+
+      A  n + 1   = 2  z  n    A  n   + 1   {\displaystyle A_{n+1}=2z_{n}A_{n}+1}        B  n + 1   = 2  z  n    B  n   +    A  n     2     {\displaystyle B_{n+1}=2z_{n}B_{n}+{A_{n}}^{2}}        C  n + 1   = 2  z  n    C  n   + 2  A  n    B  n     {\displaystyle C_{n+1}=2z_{n}C_{n}+2A_{n}B_{n}}       ⋮   {\displaystyle \vdots }
+
+The coefficients in the power series can be calculated as iterative series using only values from the central point&#39;s iterations     z   {\displaystyle z}  , and do not change for any arbitrary point in the disc. If     δ   {\displaystyle \delta }   is very small,      ϵ  n     {\displaystyle \epsilon _{n}}   should be calculable to sufficient accuracy using only a few terms of the power series. As the Mandelbrot Escape Contours are &#39;continuous&#39; over the complex plane, if a point&#39;s escape time has been calculated, then the escape time of that point&#39;s neighbours should be similar. Interpolation of the neighbouring points should provide a good estimation of where to start in the      ϵ  n     {\displaystyle \epsilon _{n}}   series.
+
+Further, separate interpolation of both real axis points and imaginary axis points should provide both an upper and lower bound for the point being calculated. If both results are the same (i.e. both escape or do not escape) then the difference     Δ n   {\displaystyle \Delta n}   can be used to recuse until both an upper and lower bound can be established. If floating point hardware can be used to iterate the     ϵ   {\displaystyle \epsilon }   series, then there exists a relation between how many iterations can be achieved in the time it takes to use BigNum software to compute a given      ϵ  n     {\displaystyle \epsilon _{n}}  . If the difference between the bounds is greater than the number of iterations, it is possible to perform binary search using BigNum software, successively halving the gap until it becomes more time efficient to find the escape value using floating point hardware.
+
+- [![Perturbation theory at zoom level 2\.4e\-57](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Mandelbrot_Set_Image_107.png/250px-Mandelbrot_Set_Image_107.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_107.png)Perturbation theory at zoom level 2.4e-57
+- [![Perturbation theory at zoom level 1\.53e\-62](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Mandelbrot_Set_Image_110.png/250px-Mandelbrot_Set_Image_110.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_110.png)Perturbation theory at zoom level 1.53e-62
+- [![Perturbation theory at zoom level 2\.84e\-82](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Mandelbrot_Set_Image_111.png/250px-Mandelbrot_Set_Image_111.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_111.png)Perturbation theory at zoom level 2.84e-82
+- [![Perturbation theory at zoom level 7\.17e\-36](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Mandelbrot_Set_Image_109.png/250px-Mandelbrot_Set_Image_109.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_109.png)Perturbation theory at zoom level 7.17e-36
+- [![Perturbation theory at zoom level 4\.31e\-51](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Mandelbrot_Set_Image_106.png/250px-Mandelbrot_Set_Image_106.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_106.png)Perturbation theory at zoom level 4.31e-51
+- [![Perturbation theory at zoom level 1\.01e\-55](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Mandelbrot_Set_Image_108.png/250px-Mandelbrot_Set_Image_108.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_108.png)Perturbation theory at zoom level 1.01e-55
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=24)]
+1. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-1) [&quot;Newbie: How to map colors in the Mandelbrot set?&quot;](http://www.fractalforums.com/programming/newbie-how-to-map-colors-in-the-mandelbrot-set/msg3465/#msg3465). *www.fractalforums.com*. May 2007. [Archived](https://web.archive.org/web/20220909215450/http://www.fractalforums.com/programming/newbie-how-to-map-colors-in-the-mandelbrot-set/msg3465/#msg3465) from the original on 9 September 2022. Retrieved 11 February 2020.
+2. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-2) García, Francisco; Ángel Fernández; Javier Barrallo; Luis Martín. [&quot;Coloring Dynamical Systems in the Complex Plane&quot;](http://math.unipa.it/~grim/Jbarrallo.PDF) (PDF). [Archived](https://web.archive.org/web/20191130214645/http://math.unipa.it/%7Egrim/Jbarrallo.PDF) (PDF) from the original on 30 November 2019. Retrieved 21 January 2008.
+3. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-3) Linas Vepstas. [&quot;Renormalizing the Mandelbrot Escape&quot;](http://linas.org/art-gallery/escape/escape.html). [Archived](https://web.archive.org/web/20200214073730/http://linas.org/art-gallery/escape/escape.html) from the original on 14 February 2020. Retrieved 11 February 2020.
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Albert_Lobo_4-0) [2](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Albert_Lobo_4-1) Albert Lobo. [&quot;Interior and exterior distance bounds for the Mandelbrot set&quot;](http://www.albertlobo.com/fractals/interior-exterior-distance-bounds-mandelbrot-set). [Archived](https://web.archive.org/web/20220909215805/http://www.albertlobo.com/fractals/interior-exterior-distance-bounds-mandelbrot-set) from the original on 9 September 2022. Retrieved 29 April 2021.
+5. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-5) Wilson, Dr. Lindsay Robert (2012). [&quot;Distance estimation method for drawing Mandelbrot and Julia sets&quot;](http://www.imajeenyus.com/mathematics/20121112_distance_estimates/distance_estimation_method_for_fractals.pdf) (PDF). [Archived](https://web.archive.org/web/20210503103652/http://www.imajeenyus.com/mathematics/20121112_distance_estimates/distance_estimation_method_for_fractals.pdf) (PDF) from the original on 3 May 2021. Retrieved 3 May 2021.
+6. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Cheritat_6-0) [Chéritat, Arnaud](https://en.wikipedia.org/wiki/Arnaud_Ch%C3%A9ritat) (2016). [&quot;Boundary detection methods via distance estimators&quot;](https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set#Boundary_detection_methods_via_distance_estimators). [Archived](https://web.archive.org/web/20221218100822/https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set) from the original on 18 December 2022. Retrieved 2 January 2023.
+7. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Syntopia_7-0) Christensen, Mikael Hvidtfeldt (2011). [&quot;Distance Estimated 3D Fractals (V): The Mandelbulb &amp; Different DE Approximations&quot;](http://blog.hvidtfeldts.net/index.php/2011/09/distance-estimated-3d-fractals-v-the-mandelbulb-different-de-approximations). [Archived](https://web.archive.org/web/20210513033347/http://blog.hvidtfeldts.net/index.php/2011/09/distance-estimated-3d-fractals-v-the-mandelbulb-different-de-approximations/) from the original on 13 May 2021. Retrieved 10 May 2021.
+8. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-8) Dang, Yumei; [Louis Kauffman](https://en.wikipedia.org/wiki/Louis_Kauffman); [Daniel Sandin](https://en.wikipedia.org/wiki/Daniel_J._Sandin) (2002). &quot;Chapter 3.3: The Distance Estimation Formula&quot;. [*Hypercomplex Iterations: Distance Estimation and Higher Dimensional Fractals*](https://www.evl.uic.edu/hypercomplex/html/book/book.pdf) (PDF). World Scientific. pp. 17–18. [Archived](https://web.archive.org/web/20210323153331/https://www.evl.uic.edu/hypercomplex/html/book/book.pdf) (PDF) from the original on 23 March 2021. Retrieved 29 April 2021.
+9. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-9) Peitgen, Heinz-Otto; Richter Peter (1986). [*The Beauty of Fractals*](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals). Heidelberg: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-15851-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-15851-0).
+10. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-10) Peitgen, Heinz-Otto; Saupe Dietmar (1988). [*The Science of Fractal Images*](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals). New York: Springer-Verlag. p. 202. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-96608-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-96608-0).
+11. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-11) [&quot;Mandelbrot Bud Maths&quot;](http://linas.org/art-gallery/bud/bud.html). [Archived](https://web.archive.org/web/20200214073800/http://linas.org/art-gallery/bud/bud.html) from the original on 14 February 2020. Retrieved 11 February 2020.
+12. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Proof_of_connectedness_12-0) [Douady, Adrien](https://en.wikipedia.org/wiki/Adrien_Douady); [Hubbard, John](https://en.wikipedia.org/wiki/John_H._Hubbard) (2009). [&quot;Exploring the Mandelbrot set. Exploring the Mandelbrot set. The Orsay Notes&quot;](https://www.researchgate.net/publication/228540477). Retrieved 9 April 2023.
+13. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-13) [&quot;Boundary Tracing Method&quot;](https://web.archive.org/web/20150220012221/http://www.reocities.com/CapeCanaveral/5003/mandel.htm). Archived from [the original](http://www.reocities.com/CapeCanaveral/5003/mandel.htm) on 20 February 2015.
+14. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-14) Dewdney, A. K. (1989). &quot;Computer Recreations, February 1989; A tour of the Mandelbrot set aboard the Mandelbus&quot;. *Scientific American*. p. 111. [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [24987149](https://www.jstor.org/stable/24987149). (subscription required)
+15. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-15) [&quot;Embarrassingly Parallel Problems&quot;](https://web.archive.org/web/20200127230256/http://courses.cecs.anu.edu.au/courses/COMP4300/lectures/embParallel.4u.pdf) (PDF). Archived from [the original](http://courses.cecs.anu.edu.au/courses/COMP4300/lectures/embParallel.4u.pdf) (PDF) on 27 January 2020.
+16. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-16) [&quot;Parallel Program Models&quot;](https://web.archive.org/web/20200126040920/http://cseweb.ucsd.edu/groups/csag/html/teaching/cse160s05/lectures/Lecture14.pdf) (PDF). Archived from [the original](http://cseweb.ucsd.edu/groups/csag/html/teaching/cse160s05/lectures/Lecture14.pdf) (PDF) on 26 January 2020.
+17. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-17) [&quot;Superfractalthing - Arbitrary Precision Mandelbrot Set Rendering in Java&quot;](http://www.fractalforums.com/announcements-and-news/superfractalthing-arbitrary-precision-mandelbrot-set-rendering-in-java/). [Archived](https://web.archive.org/web/20200630043303/http://www.fractalforums.com/announcements-and-news/superfractalthing-arbitrary-precision-mandelbrot-set-rendering-in-java/) from the original on 30 June 2020. Retrieved 11 February 2020.
+18. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-18) K. I. Martin. [&quot;Superfractalthing Maths&quot;](https://web.archive.org/web/20140628114658/http://www.superfractalthing.co.nf/sft_maths.pdf) (PDF). Archived from [the original](http://www.superfractalthing.co.nf/sft_maths.pdf) (PDF) on 28 June 2014. Retrieved 11 February 2020.
+19. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-19) [&quot;Mandelbrot set implementation with Perturbation Theory&quot;](https://rosettacode.org/wiki/Mandelbrot_set#Perturbation_Theory). *Rosetta Code*. Retrieved 6 July 2026.
+20. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-20) [&quot;Kalles Fraktaler 2&quot;](http://www.chillheimer.de/kallesfraktaler/). [Archived](https://web.archive.org/web/20200224054206/http://www.chillheimer.de/kallesfraktaler/) from the original on 24 February 2020. Retrieved 11 February 2020.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal) show
+- [v](https://en.wikipedia.org/wiki/Template:Mathematics_and_art)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Mathematics_and_art)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Mathematics_and_art)
+[Mathematics and art](https://en.wikipedia.org/wiki/Mathematics_and_art) show
+- [v](https://en.wikipedia.org/wiki/Template:Visualization)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Visualization)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Visualization)
+[Visualization](https://en.wikipedia.org/wiki/Visualization_(graphics)) of technical information show
+- [v](https://en.wikipedia.org/wiki/Template:Computer_science)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Computer_science)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Computer_science)
+[Computer science](https://en.wikipedia.org/wiki/Computer_science) show
+- [v](https://en.wikipedia.org/wiki/Template:Computer_graphics)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Computer_graphics)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Computer_graphics)
+[Computer graphics](https://en.wikipedia.org/wiki/Computer_graphics_(computer_science))               Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;oldid=1362843143](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;oldid=1362843143)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Complex dynamics](https://en.wikipedia.org/wiki/Category:Complex_dynamics)
+- [Graphics software](https://en.wikipedia.org/wiki/Category:Graphics_software)
+- [Computer graphics](https://en.wikipedia.org/wiki/Category:Computer_graphics)
+- [Algorithms](https://en.wikipedia.org/wiki/Category:Algorithms)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description with empty Wikidata description](https://en.wikipedia.org/wiki/Category:Short_description_with_empty_Wikidata_description)
+- [Wikipedia articles with style issues from July 2021](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_style_issues_from_July_2021)
+- [All articles with style issues](https://en.wikipedia.org/wiki/Category:All_articles_with_style_issues)
+- [Use dmy dates from February 2020](https://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_February_2020)
+- [Articles needing additional references from June 2019](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2019)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [Pages containing links to subscription-only content](https://en.wikipedia.org/wiki/Category:Pages_containing_links_to_subscription-only_content)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+- [Articles containing video clips](https://en.wikipedia.org/wiki/Category:Articles_containing_video_clips)
+
+    [https://en\.wikipedia\.org/wiki/Plotting\_algorithms\_for\_the\_Mandelbrot\_set?action=edit](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Plotting algorithms for the Mandelbrot set</h3><pre># Plotting algorithms for the Mandelbrot set
+
+[Add links](https://www.wikidata.org/wiki/Special:EntityPage/Q85793700#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Algorithms and methods of plotting the Mandelbrot set on a computing device ![](https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)This reads like a textbook&#39;s style of writing **may not reflect the [encyclopedic tone](https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone) used on Wikipedia**. See Wikipedia&#39;s [guide to writing better articles](https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone) for suggestions. *(July 2021)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png/250px-Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png)Still image [a movie of increasing magnification](https://upload.wikimedia.org/wikipedia/commons/0/07/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogv) on 0.001643721971153 − 0.822467633298876*i* [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Mandelbrot_sequence_new_still.png/250px-Mandelbrot_sequence_new_still.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_sequence_new_still.png)Still image of [an animation of increasing magnification](https://upload.wikimedia.org/wikipedia/commons/5/51/Mandelbrot_sequence_new.webm)
+
+There are many programs and [algorithms](https://en.wikipedia.org/wiki/Algorithm) used to plot the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) and other [fractals](https://en.wikipedia.org/wiki/Fractal), some of which are described in [fractal-generating software](https://en.wikipedia.org/wiki/Fractal-generating_software). These programs use a variety of algorithms to determine the color of individual [pixels](https://en.wikipedia.org/wiki/Pixel) efficiently.
+</pre></article><article id="section-0003"><h3>Escape time algorithm</h3><pre># Escape time algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=1)]
+
+The simplest algorithm for generating a representation of the Mandelbrot set is known as the &quot;escape time&quot; algorithm. A repeating calculation is performed for each *x*, *y* point in the plot area and based on the behavior of that calculation, a color is chosen for that pixel.
+</pre></article><article id="section-0004"><h3>Unoptimized naïve escape time algorithm</h3><pre># Unoptimized naïve escape time algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=2)]
+
+In both the unoptimized and optimized escape time algorithms, the *x* and *y* locations of each point are used as starting values in a repeating, or iterating calculation (described in detail below). The result of each iteration is used as the starting values for the next. The values are checked during each iteration to see whether they have reached a critical &quot;escape&quot; condition, or &quot;bailout&quot;. If that condition is reached, the calculation is stopped, the pixel is drawn, and the next *x*, *y* point is examined. For some starting values, escape occurs quickly, after only a small number of iterations. For starting values very close to but not in the set, it may take hundreds or thousands of iterations to escape. For values within the Mandelbrot set, escape will never occur. The programmer or user must choose how many iterations–or how much &quot;depth&quot;–they wish to examine. The higher the maximal number of iterations, the more detail and subtlety emerge in the final image, but the longer time it will take to calculate the fractal image.
+
+Escape conditions can be simple or complex. Because no [complex number](https://en.wikipedia.org/wiki/Complex_number) with a real or imaginary part greater than 2 can be part of the set, a common bailout is to escape when either coefficient exceeds 2. A more computationally complex method that detects escapes sooner, is to compute distance from the origin using the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem), i.e., to determine the [absolute value](https://en.wikipedia.org/wiki/Absolute_value), or *modulus*, of the complex number. If this value exceeds 2, or equivalently, when the sum of the squares of the real and imaginary parts exceed 4, the point has reached escape. More computationally intensive rendering variations include the [Buddhabrot](https://en.wikipedia.org/wiki/Buddhabrot) method, which finds escaping points and plots their iterated coordinates.
+
+The color of each point represents how quickly the values reached the escape point. Often black is used to show values that fail to escape before the iteration limit, and gradually brighter colors are used for points that escape. This gives a visual representation of how many cycles were required before reaching the escape condition.
+
+To render such an image, the region of the complex plane we are considering is subdivided into a certain number of [pixels](https://en.wikipedia.org/wiki/Pixel). To color any such pixel, let     c   {\displaystyle c}   be the midpoint of that pixel. We now iterate the critical point 0 under      P  c     {\displaystyle P_{c}}  , checking at each step whether the orbit point has modulus larger than 2. When this is the case, we know that     c   {\displaystyle c}   does not belong to the Mandelbrot set, and we color our pixel according to the number of iterations used to find out. Otherwise, we keep iterating up to a fixed number of steps, after which we decide that our parameter is &quot;probably&quot; in the Mandelbrot set, or at least very close to it, and color the pixel black.
+
+In [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), this algorithm would look as follows. The algorithm does not use complex numbers and manually simulates complex-number operations using two real numbers, for those who do not have a [complex data type](https://en.wikipedia.org/wiki/Complex_data_type). The program may be simplified if the programming language includes complex-data-type operations.
+
+```
+for each pixel (Px, Py) on the screen do
+    x0 := scaled x coordinate of pixel (scaled to lie in the Mandelbrot X scale (-2.00, 0.47))
+    y0 := scaled y coordinate of pixel (scaled to lie in the Mandelbrot Y scale (-1.12, 1.12))
+    x := 0.0
+    y := 0.0
+    iteration := 0
+    max_iteration := 1000
+    while (x*x + y*y ≤ 2*2 AND iteration &lt; max_iteration) do
+        xtemp := x*x - y*y + x0
+        y := 2*x*y + y0
+        x := xtemp
+        iteration := iteration + 1
+
+    color := palette[iteration]
+    plot(Px, Py, color)
+```
+
+Here, relating the pseudocode to     c   {\displaystyle c}  ,     z   {\displaystyle z}   and      P  c     {\displaystyle P_{c}}  :
+
+- z = x + i y     {\displaystyle z=x+iy\ }
+- z  2   =  x  2   + 2 i x y   {\displaystyle z^{2}=x^{2}+2ixy}   -      y  2       {\displaystyle y^{2}\ }
+- c =  x  0   + i  y  0       {\displaystyle c=x_{0}+iy_{0}\ }
+
+and so, as can be seen in the pseudocode in the computation of *x* and *y*:
+
+- x =   R e   ⁡ (  z  2   + c ) =  x  2   −  y  2   +  x  0     {\displaystyle x=\mathop {\mathrm {Re} } (z^{2}+c)=x^{2}-y^{2}+x_{0}}   and     y =   I m   ⁡ (  z  2   + c ) = 2 x y +  y  0   .     {\displaystyle y=\mathop {\mathrm {Im} } (z^{2}+c)=2xy+y_{0}.\ }
+
+To get colorful images of the set, the assignment of a color to each value of the number of executed iterations can be made using one of a variety of functions (linear, exponential, etc.). One practical way, without slowing down calculations, is to use the number of executed iterations as an entry to a [palette](https://en.wikipedia.org/wiki/Palette_(computing)) initialized at startup. If the color table has, for instance, 500 entries, then the color selection is *n* mod 500, where *n* is the number of iterations.
+</pre></article><article id="section-0005"><h3>Optimized escape time algorithms</h3><pre># Optimized escape time algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=3)]
+
+The code in the previous section uses an unoptimized inner while loop for clarity. In the unoptimized version, one must perform five multiplications per iteration. To reduce the number of multiplications the following code for the inner while loop may be used instead:
+
+```
+x2:= 0
+y2:= 0
+w:= 0
+
+while (x2 + y2 ≤ 4 and iteration &lt; max_iteration) do
+    x:= x2 - y2 + x0
+    y:= w - x2 - y2 + y0
+    x2:= x * x
+    y2:= y * y
+    w:= (x + y) * (x + y)
+    iteration:= iteration + 1
+```
+
+The above code works via some algebraic simplification of the complex multiplication:
+
+( i y + x  )  2      = −  y  2   + 2 i y x +  x  2         =  x  2   −  y  2   + 2 i y x       {\displaystyle {\begin{aligned}(iy+x)^{2}&amp;=-y^{2}+2iyx+x^{2}\\&amp;=x^{2}-y^{2}+2iyx\end{aligned}}}
+
+Using the above identity, the number of multiplications can be reduced to three instead of five.
+
+The above inner while loop can be further optimized by expanding *w* to
+
+w =  x  2   + 2 x y +  y  2     {\displaystyle w=x^{2}+2xy+y^{2}}
+
+Substituting *w* into     y = w −  x  2   −  y  2   +  y  0     {\displaystyle y=w-x^{2}-y^{2}+y_{0}}   yields     y = 2 x y +  y  0     {\displaystyle y=2xy+y_{0}}   and hence calculating *w* is no longer needed.
+
+The further optimized pseudocode for the above is:
+
+```
+x:= 0
+y:= 0
+x2:= 0
+y2:= 0
+
+while (x2 + y2 ≤ 4 and iteration &lt; max_iteration) do
+    x2:= x * x
+    y2:= y * y
+    y:= 2 * x * y + y0
+    x:= x2 - y2 + x0
+    iteration:= iteration + 1
+```
+
+Note that in the above pseudocode,     2 x y   {\displaystyle 2xy}   seems to increase the number of multiplications by 1, but since 2 is the multiplier the code can be optimized via     ( x + x ) y   {\displaystyle (x+x)y}  .
+</pre></article><article id="section-0006"><h3>Coloring algorithms</h3><pre># Coloring algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=4)]
+
+In addition to plotting the set, a variety of algorithms have been developed to
+
+- efficiently color the set in an aesthetically pleasing way
+- show structures of the data (scientific visualisation)
+</pre></article><article id="section-0007"><h3>Histogram coloring</h3><pre># Histogram coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=5)]  [![icon](https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Question_book-new.svg)This section **needs [more citations](https://en.wikipedia.org/wiki/Wikipedia:Verifiability)**. Relevant discussion may be found on the [talk page](https://en.wikipedia.org/wiki/Talk:Plotting_algorithms_for_the_Mandelbrot_set#%22Histogram_coloring%22_section). Please help [improve this section](https://en.wikipedia.org/wiki/Special:EditPage/Plotting_algorithms_for_the_Mandelbrot_set) by [adding citations to reliable sources](https://en.wikipedia.org/wiki/Help:Referencing_for_beginners). Unsourced material may be challenged and [removed](https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence). *(June 2019)**([Learn how and when to remove this message](https://en.wikipedia.org/wiki/Help:Maintenance_template_removal))*
+
+A more complex coloring method involves using a [histogram](https://en.wikipedia.org/wiki/Histogram) which pairs each pixel with said pixel&#39;s maximum iteration count before escape/bailout. This method will equally distribute colors to the same overall area, and, importantly, is independent of the maximum number of iterations chosen.[[1]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-1)
+
+This algorithm has four passes. The first pass involves calculating the iteration counts associated with each pixel (but without any pixels being plotted). These are stored in an array `IterationCounts[x][y]`, where `x` and `y` are the x and y coordinates of said pixel on the screen respectively.
+
+   [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mandelbrot-no-histogram-coloring-10000-iterations.png/250px-Mandelbrot-no-histogram-coloring-10000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-10000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Mandelbrot-no-histogram-coloring-1000-iterations.png/250px-Mandelbrot-no-histogram-coloring-1000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-1000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mandelbrot-no-histogram-coloring-100-iterations.png/250px-Mandelbrot-no-histogram-coloring-100-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-no-histogram-coloring-100-iterations.png)  [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Mandelbrot-histogram-10000-iterations.png/250px-Mandelbrot-histogram-10000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-10000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Mandelbrot-histogram-1000-iterations.png/250px-Mandelbrot-histogram-1000-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-1000-iterations.png) [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Mandelbrot-histogram-100-iterations.png/250px-Mandelbrot-histogram-100-iterations.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot-histogram-100-iterations.png)  The top row is a series of plots using the escape time algorithm for 10000, 1000 and 100 maximum iterations per pixel respectively. The bottom row uses the same maximum iteration values but utilizes the histogram coloring method. Notice how little the coloring changes per different maximum iteration counts for the histogram coloring method plots.
+
+The first step of the second pass is to create an array `NumIterationsPerPixel[n]`, where the array size `n` is the maximum iteration count. Next, one must iterate over the array of pixel-iteration count pairs `IterationCounts[x][y]`, and retrieve each pixel&#39;s saved iteration count, *i*, via e.g. `i = IterationCounts[x][y]`. After each pixel&#39;s iteration count *i* is retrieved, it is necessary to index the `NumIterationsPerPixel` array at *i* and increment the indexed value (which is initially zero) -- e.g. `NumIterationsPerPixel[i] = NumIterationsPerPixel[i] + 1`.
+
+```
+for (x = 0; x &lt; width; x++) do
+    for (y = 0; y &lt; height; y++) do
+        i:= IterationCounts[x][y]
+        NumIterationsPerPixel[i]++
+```
+
+The third pass iterates through the NumIterationsPerPixel array and adds up all the stored values, saving them in *total*. The array index represents the number of pixels that reached that iteration count before bailout.
+
+```
+total: = 0
+for (i = 0; i &lt; max_iterations; i++) do
+    total += NumIterationsPerPixel[i]
+```
+
+After this, the fourth pass begins and all the values in the IterationCounts array are indexed, and, for each iteration count *i*, associated with each pixel, the count is added to a global sum of all the iteration counts from 1 to *i* in the NumIterationsPerPixel array . This value is then normalized by dividing the sum by the *total* value computed earlier.
+
+```
+hue[][]:= 0.0
+for (x = 0; x &lt; width; x++) do
+    for (y = 0; y &lt; height; y++) do
+        iteration:= IterationCounts[x][y]
+        for (i = 0; i &lt;= iteration; i++) do
+            hue[x][y] += NumIterationsPerPixel[i] / total /* Must be floating-point division. */
+
+...
+
+color = palette[hue[m, n]]
+
+...
+```
+
+Finally, the computed value is used, e.g. as an index to a color palette.
+
+This method may be combined with the smooth coloring method below for more aesthetically pleasing images.
+</pre></article><article id="section-0008"><h3>Continuous (smooth) coloring</h3><pre># Continuous (smooth) coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=6)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Escape_Time_Algorithm_bands.png/250px-Escape_Time_Algorithm_bands.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Escape_Time_Algorithm_bands.png)This image was rendered with the escape time algorithm. There are very obvious &quot;bands&quot; of color[![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Normalized_Iteration_Count_Algorithm_1.png/250px-Normalized_Iteration_Count_Algorithm_1.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Normalized_Iteration_Count_Algorithm_1.png)This image was rendered with the normalized iteration count algorithm. The bands of color have been replaced by a smooth gradient. Also, the colors take on the same pattern that would be observed if the escape time algorithm were used.
+
+The escape time algorithm is popular for its simplicity. However, it creates bands of color, which, as a type of [aliasing](https://en.wikipedia.org/wiki/Aliasing), can detract from an image&#39;s aesthetic value. This can be improved using an algorithm known as &quot;normalized iteration count&quot;,[[2]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-3) which provides a smooth transition of colors between iterations. The algorithm associates a real number     ν   {\displaystyle \nu }   with each value of *z* by using the connection of the iteration number with the [potential function](https://en.wikipedia.org/wiki/Julia_set#The_potential_function_and_the_real_iteration_number). This function is given by
+
+     ϕ ( z ) =  lim  n → ∞   ( log ⁡  |   z  n    |   /   P  n   ) ,   {\displaystyle \phi (z)=\lim _{n\to \infty }(\log |z_{n}|/P^{n}),}
+
+where *z**n* is the value after *n* iterations and *P* is the power for which *z* is raised to in the Mandelbrot set equation (*z**n*+1 = *z**n**P* + *c*, *P* is generally 2).
+
+If we choose a large bailout radius *N* (e.g., 10100), we have that
+
+     log ⁡  |   z  n    |   /   P  n   = log ⁡ ( N )  /   P  ν ( z )     {\displaystyle \log |z_{n}|/P^{n}=\log(N)/P^{\nu (z)}}
+
+for some real number     ν ( z )   {\displaystyle \nu (z)}  , and this is
+
+     ν ( z ) = n −  log  P   ⁡ ( log ⁡  |   z  n    |   /  log ⁡ ( N ) ) ,   {\displaystyle \nu (z)=n-\log _{P}(\log |z_{n}|/\log(N)),}
+
+and as *n* is the first iteration number such that |*z**n*| &gt; *N*, the number we subtract from *n* is in the interval [0, 1).
+
+For the coloring we must have a cyclic scale of colors (constructed mathematically, for instance) and containing *H* colors numbered from 0 to *H* − 1 (*H* = 500, for instance). We multiply the real number     ν ( z )   {\displaystyle \nu (z)}   by a fixed real number determining the density of the colors in the picture, take the integral part of this number modulo *H*, and use it to look up the corresponding color in the color table.
+
+For example, modifying the above pseudocode and also using the concept of [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) would yield
+
+```
+for each pixel (Px, Py) on the screen do
+    x0:= scaled x coordinate of pixel (scaled to lie in the Mandelbrot X scale (-2.5, 1))
+    y0:= scaled y coordinate of pixel (scaled to lie in the Mandelbrot Y scale (-1, 1))
+    x:= 0.0
+    y:= 0.0
+    iteration:= 0
+    max_iteration:= 1000
+    // Here N = 2^8 is chosen as a reasonable bailout radius.
+
+    while x*x + y*y ≤ (1 &lt;&lt; 16) and iteration &lt; max_iteration do
+        xtemp:= x*x - y*y + x0
+        y:= 2*x*y + y0
+        x:= xtemp
+        iteration:= iteration + 1
+
+    // Used to avoid floating point issues with points inside the set.
+    if iteration &lt; max_iteration then
+        // sqrt of inner term removed using log simplification rules.
+        log_zn:= log(x*x + y*y) / 2
+        nu:= log(log_zn / log(2)) / log(2)
+        // Rearranging the potential function.
+        // Dividing log_zn by log(2) instead of log(N = 1&lt;&lt;8)
+        // because we want the entire palette to range from the
+        // center to radius 2, NOT our bailout radius.
+        iteration:= iteration + 1 - nu
+
+    color1:= palette[floor(iteration)]
+    color2:= palette[floor(iteration) + 1]
+    // iteration % 1 = fractional part of iteration.
+    color:= linear_interpolate(color1, color2, iteration % 1)
+    plot(Px, Py, color)
+```
+</pre></article><article id="section-0009"><h3>Exponentially mapped and cyclic iterations</h3><pre># Exponentially mapped and cyclic iterations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=7)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/CyclicColoringLch.png/250px-CyclicColoringLch.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:CyclicColoringLch.png)Exponential Cyclic Coloring in LCH color space with shading
+
+Typically when we render a fractal, the range of where colors from a given palette appear along the fractal is static. If we desire to offset the location from the border of the fractal, or adjust their palette to cycle in a specific way, there are a few simple changes we can make when taking the final iteration count before passing it along to choose an item from our palette.
+
+When we have obtained the iteration count, we can make the range of colors non-linear. Raising a value normalized to the range [0,1] to a power *n*, maps a linear range to an exponential range, which in our case can nudge the appearance of colors along the outside of the fractal, and allow us to bring out other colors, or push in the entire palette closer to the border.
+
+v = ( (  i   /  m a  x  i    )   S     N   )  1.5    mod   N      {\displaystyle v=((\mathbf {i} /max_{i})^{\mathbf {S} }\mathbf {N} )^{1.5}{\bmod {\mathbf {N} }}}
+
+where **i** is our iteration count after bailout, **max_i** is our iteration limit, **S** is the exponent we are raising iters to, and **N** is the number of items in our palette. This scales the iter count non-linearly and scales the palette to cycle approximately proportionally to the zoom.
+
+We can then plug v into whatever algorithm we desire for generating a color.
+</pre></article><article id="section-0010"><h3>Passing iterations into a color directly</h3><pre># Passing iterations into a color directly
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=8)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/LCH_COLORING.png/330px-LCH_COLORING.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LCH_COLORING.png)Example of exponentially mapped cyclic LCH coloring without shading
+
+One thing we may want to consider is avoiding having to deal with a palette or color blending at all. There are actually a handful of methods we can leverage to generate smooth, consistent coloring by constructing the color on the spot.
+
+#### v refers to a normalized exponentially mapped cyclic iter count
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=9)]
+
+#### f(v) refers to the [sRGB transfer function](https://en.wikipedia.org/wiki/SRGB#Transfer_function_(%22gamma%22))
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=10)]
+
+A naive method for generating a color in this way is by directly scaling **v** to 255 and passing it into RGB as such
+
+```
+rgb = [v * 255, v * 255, v * 255]
+```
+
+One flaw with this is that RGB is non-linear due to gamma; consider linear sRGB instead. Going from RGB to sRGB uses an inverse companding function on the channels. This makes the gamma linear, and allows us to properly sum the colors for sampling.
+
+```
+srgb = [v * 255, v * 255, v * 255]
+```
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/HSV_Gradient_Example.png/330px-HSV_Gradient_Example.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:HSV_Gradient_Example.png)HSV Gradient
+</pre></article><article id="section-0011"><h3>HSV coloring</h3><pre># HSV coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=11)]
+
+HSV Coloring can be accomplished by mapping iter count from [0,max_iter) to [0,360), taking it to the power of 1.5, and then modulo 360.     h = ( ( i  /  m a  x  i   ) 360  )  1.5    mod  3   60   {\displaystyle h=((i/max_{i})360)^{1.5}{\bmod {3}}60}   We can then simply take the exponentially mapped iter count into the value and return
+
+```
+hsv = [powf((i / max) * 360, 1.5) % 360, 100, (i / max) * 100]
+```
+
+This method applies to HSL as well, except we pass a saturation of 50% instead.
+
+```
+hsl = [powf((i / max) * 360, 1.5) % 360, 50, (i / max) * 100]
+```
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/LCH_Gradient_Example.png/330px-LCH_Gradient_Example.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:LCH_Gradient_Example.png)LCH Gradient
+</pre></article><article id="section-0012"><h3>LCH coloring</h3><pre># LCH coloring
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=12)]
+
+One of the most perceptually uniform coloring methods involves passing in the processed iter count into LCH. If we utilize the exponentially mapped and cyclic method above, we can take the result of that into the Luma and Chroma channels. We can also exponentially map the iter count and scale it to 360, and pass this modulo 360 into the hue.
+
+x   ∈    Q +       s  i     =   ( i  /  m a  x  i    )   x        v   =   1.0 − c o  s  2   ( π  s  i   )     L   =   75 − ( 75 v )     C   =   28 + ( 75 − 75 v )     H   =   ( 360  s  i    )  1.5    mod  3   60       {\textstyle {\begin{array}{lcl}x&amp;\in &amp;\mathbb {Q+} \\s_{i}&amp;=&amp;(i/max_{i})^{\mathbf {x} }\\v&amp;=&amp;1.0-cos^{2}(\pi s_{i})\\L&amp;=&amp;75-(75v)\\C&amp;=&amp;28+(75-75v)\\H&amp;=&amp;(360s_{i})^{1.5}{\bmod {3}}60\end{array}}}
+
+One issue we wish to avoid here is out-of-gamut colors. This can be achieved with a little trick based on the change in in-gamut colors relative to luma and chroma. As we increase luma, we need to decrease chroma to stay within gamut.
+
+```
+s = iters/max_i;
+v = 1.0 - powf(cos(pi * s), 2.0);
+LCH = [75 - (75 * v), 28 + (75 - (75 * v)), powf(360 * s, 1.5) % 360];
+```
+</pre></article><article id="section-0013"><h3>Advanced plotting algorithms</h3><pre># Advanced plotting algorithms
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=13)]
+
+In addition to the simple and slow escape time algorithms already discussed, there are many other more advanced algorithms that can be used to speed up the plotting process.
+</pre></article><article id="section-0014"><h3>Distance estimates</h3><pre># Distance estimates
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=14)]
+
+One can compute the [distance](https://en.wikipedia.org/wiki/Distance) from point *c* (in [exterior](https://en.wikipedia.org/wiki/Exterior_(topology)) or [interior](https://en.wikipedia.org/wiki/Interior_(topology))) to nearest point on the [boundary](https://en.wikipedia.org/wiki/Boundary_(topology)) of the Mandelbrot set.[[4]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Albert_Lobo-4)[[5]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-5)
+
+#### Exterior distance estimation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=15)]
+
+The proof of the [connectedness](https://en.wikipedia.org/wiki/Mandelbrot_set#Basic_properties) of the Mandelbrot set in fact gives a formula for the [uniformizing map](https://en.wikipedia.org/wiki/External_ray#Uniformization) of the [complement](https://en.wikipedia.org/wiki/Complement_(set_theory)) of     M   {\displaystyle M}   (and the [derivative](https://en.wikipedia.org/wiki/Derivative) of this map). By the [Koebe quarter theorem](https://en.wikipedia.org/wiki/Koebe_quarter_theorem), one can then estimate the distance between the midpoint of our [pixel](https://en.wikipedia.org/wiki/Pixel) and the Mandelbrot set up to a factor of 4.
+
+In other words, provided that the maximal number of iterations is sufficiently high, one obtains a picture of the Mandelbrot set with the following properties:
+
+1. Every pixel that contains a point of the Mandelbrot set is colored black.
+2. Every pixel that is colored black is close to the Mandelbrot set.
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Demm_2000_Mandelbrot_set.jpg/250px-Demm_2000_Mandelbrot_set.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Demm_2000_Mandelbrot_set.jpg)Exterior distance estimate may be used to color whole complement of Mandelbrot set
+
+The upper bound *b* for the distance estimate of a pixel *c* (a complex number) from the Mandelbrot set is given by[[6]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Cheritat-6)[[7]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Syntopia-7)[[8]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-8)
+
+     b =  lim  n → ∞      2 ⋅  |    P  c   n   ( c )  |  ⋅ ln ⁡  |    P  c   n   ( c )    |     |    ∂  ∂  c      P  c   n   ( c )  |     ,   {\displaystyle b=\lim _{n\to \infty }{\frac {2\cdot |{P_{c}^{n}(c)|\cdot \ln |{P_{c}^{n}(c)}}|}{|{\frac {\partial }{\partial {c}}}P_{c}^{n}(c)|}},}
+
+where
+
+- P  c   ( z )    {\displaystyle P_{c}(z)\,}   stands for [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+- P  c   n   ( c )   {\displaystyle P_{c}^{n}(c)}   stands for *n* iterations of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}   or      z  2   + c → z   {\displaystyle z^{2}+c\to z}  , starting with     z = c   {\displaystyle z=c}  :      P  c   0   ( c ) = c   {\displaystyle P_{c}^{0}(c)=c}  ,      P  c   n + 1   ( c ) =  P  c   n   ( c  )  2   + c   {\displaystyle P_{c}^{n+1}(c)=P_{c}^{n}(c)^{2}+c}  ;
+- ∂  ∂  c      P  c   n   ( c )   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{n}(c)}   is the derivative of      P  c   n   ( c )   {\displaystyle P_{c}^{n}(c)}   with respect to c. This derivative can be found by starting with       ∂  ∂  c      P  c   0   ( c ) = 1   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{0}(c)=1}   and then       ∂  ∂  c      P  c   n + 1   ( c ) = 2 ⋅    P  c   n   ( c ) ⋅   ∂  ∂  c      P  c   n   ( c ) + 1   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{n+1}(c)=2\cdot {}P_{c}^{n}(c)\cdot {\frac {\partial }{\partial {c}}}P_{c}^{n}(c)+1}  . This can easily be verified by using the chain rule for the derivative.
+
+The idea behind this formula is simple: When the [equipotential](https://en.wikipedia.org/wiki/Equipotential) lines for the potential function     ϕ ( z )   {\displaystyle \phi (z)}   lie close, the number      |   ϕ ′  ( z )  |    {\displaystyle |\phi &#39;(z)|}   is large, and conversely, therefore the equipotential lines for the function     ϕ ( z )  /   |   ϕ ′  ( z )  |    {\displaystyle \phi (z)/|\phi &#39;(z)|}   should lie approximately regularly.
+
+From a mathematician&#39;s point of view, this formula only works in limit where *n* goes to infinity, but very reasonable estimates can be found with just a few additional iterations after the main loop exits.
+
+Once *b* is found, by the Koebe 1/4-theorem, we know that there is no point of the Mandelbrot set with distance from *c* smaller than *b/4*.
+
+The distance estimation can be used for drawing of the boundary of the Mandelbrot set, see the article [Julia set](https://en.wikipedia.org/wiki/Julia_set). In this approach, pixels that are sufficiently close to M are drawn using a different color. This creates drawings where the thin &quot;filaments&quot; of the Mandelbrot set can be easily seen. This technique is used to good effect in the B&amp;W images of Mandelbrot sets in the books &quot;The Beauty of Fractals[[9]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-9)&quot; and &quot;The Science of Fractal Images&quot;.[[10]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-10)
+
+Here is a sample B&amp;W image rendered using Distance Estimates:
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Mandel_zoom_06_double_hook_B%26W_DE.jpg/250px-Mandel_zoom_06_double_hook_B%26W_DE.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandel_zoom_06_double_hook_B&amp;W_DE.jpg)This is a B&amp;W image of a portion of the Mandelbrot set rendered using Distance Estimates (DE)
+
+Distance Estimation can also be used to render [3D images of Mandelbrot and Julia sets](https://en.wikipedia.org/wiki/Mandelbrot_Set#3D_images_of_Mandelbrot_and_Julia_sets)
+
+#### Interior distance estimation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=16)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Mandelbrot_Interior_600.png/250px-Mandelbrot_Interior_600.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Interior_600.png)Pixels colored according to the estimated interior distance
+
+It is also possible to estimate the distance of a limitly periodic (i.e., [hyperbolic](https://en.wikipedia.org/wiki/Mandelbrot_set#Hyperbolic_components)) point to the boundary of the Mandelbrot set. The upper bound *b* for the distance estimate is given by[[4]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Albert_Lobo-4)
+
+     b =    1 −   |    ∂  ∂  z      P  c   p   (  z  0   )  |   2     |    ∂  ∂  c       ∂  ∂  z      P  c   p   (  z  0   ) +   ∂  ∂  z       ∂  ∂  z      P  c   p   (  z  0   )      ∂  ∂  c      P  c   p   (  z  0   )   1 −   ∂  ∂  z      P  c   p   (  z  0   )     |    ,   {\displaystyle b={\frac {1-\left|{{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}\right|^{2}}{\left|{{\frac {\partial }{\partial {c}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})+{\frac {\partial }{\partial {z}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0}){\frac {{\frac {\partial }{\partial {c}}}P_{c}^{p}(z_{0})}{1-{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}}}\right|}},}
+
+where
+
+- p   {\displaystyle p}   is the period,
+- c   {\displaystyle c}   is the point to be estimated,
+- P  c   ( z )   {\displaystyle P_{c}(z)}   is the [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)      P  c   ( z ) =  z  2   + c   {\displaystyle P_{c}(z)=z^{2}+c}
+- P  c   p   (  z  0   )   {\displaystyle P_{c}^{p}(z_{0})}   is the     p   {\displaystyle p}  -fold iteration of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}  , starting with      P  c   0   ( z ) =  z  0     {\displaystyle P_{c}^{0}(z)=z_{0}}
+- z  0     {\displaystyle z_{0}}   is any of the     p   {\displaystyle p}   points that make the [attractor](https://en.wikipedia.org/wiki/Attractor) of the iterations of      P  c   ( z ) → z   {\displaystyle P_{c}(z)\to z}   starting with      P  c   0   ( z ) = c   {\displaystyle P_{c}^{0}(z)=c}  ;      z  0     {\displaystyle z_{0}}   satisfies      z  0   =  P  c   p   (  z  0   )   {\displaystyle z_{0}=P_{c}^{p}(z_{0})}  ,
+- ∂  ∂  c       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {c}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}  ,       ∂  ∂  z       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {z}}}{\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}  ,       ∂  ∂  c      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {c}}}P_{c}^{p}(z_{0})}   and       ∂  ∂  z      P  c   p   (  z  0   )   {\displaystyle {\frac {\partial }{\partial {z}}}P_{c}^{p}(z_{0})}   are various derivatives of      P  c   p   ( z )   {\displaystyle P_{c}^{p}(z)}  , evaluated at      z  0     {\displaystyle z_{0}}  .
+
+Analogous to the exterior case, once *b* is found, we know that all points within the distance of *b*/4 from *c* are inside the Mandelbrot set.
+
+There are two practical problems with the interior distance estimate: first, we need to find      z  0     {\displaystyle z_{0}}   precisely, and second, we need to find     p   {\displaystyle p}   precisely. The problem with      z  0     {\displaystyle z_{0}}   is that the convergence to      z  0     {\displaystyle z_{0}}   by iterating      P  c   ( z )   {\displaystyle P_{c}(z)}   requires, theoretically, an infinite number of operations. The problem with any given     p   {\displaystyle p}   is that, sometimes, due to rounding errors, a period is falsely identified to be an integer multiple of the real period (e.g., a period of 86 is detected, while the real period is only 43=86/2). In such case, the distance is overestimated, i.e., the reported radius could contain points outside the Mandelbrot set.
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/MandelbrotOrbitInfimum.png/250px-MandelbrotOrbitInfimum.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:MandelbrotOrbitInfimum.png)3D view: smallest absolute value of the orbit of the interior points of the Mandelbrot set
+</pre></article><article id="section-0015"><h3>Cardioid / bulb checking</h3><pre># Cardioid / bulb checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=17)]
+
+One way to improve calculations is to find out beforehand whether the given point lies within the cardioid or in the period-2 bulb. Before passing the complex value through the escape time algorithm, first check that:
+
+     p =     (  x −   1 4    )   2   +  y  2       {\displaystyle p={\sqrt {\left(x-{\frac {1}{4}}\right)^{2}+y^{2}}}}  ,     x ≤ p − 2  p  2   +   1 4     {\displaystyle x\leq p-2p^{2}+{\frac {1}{4}}}  ,     ( x + 1  )  2   +  y  2   ≤   1 16     {\displaystyle (x+1)^{2}+y^{2}\leq {\frac {1}{16}}}  ,
+
+where *x* represents the real value of the point and *y* the imaginary value. The first two equations determine that the point is within the cardioid, the last the period-2 bulb.
+
+The cardioid test can equivalently be performed without the square root:
+
+     q =   (  x −   1 4    )   2   +  y  2   ,   {\displaystyle q=\left(x-{\frac {1}{4}}\right)^{2}+y^{2},}       q  (  q +  (  x −   1 4    )   )  ≤   1 4    y  2   .   {\displaystyle q\left(q+\left(x-{\frac {1}{4}}\right)\right)\leq {\frac {1}{4}}y^{2}.}
+
+3rd- and higher-order buds do not have equivalent tests, because they are not perfectly circular.[[11]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-11) However, it is possible to find whether the points are within circles inscribed within these higher-order bulbs, preventing many, though not all, of the points in the bulb from being iterated.
+</pre></article><article id="section-0016"><h3>Periodicity checking</h3><pre># Periodicity checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=18)]
+
+To prevent having to do huge numbers of iterations for points inside the set, one can perform periodicity checking, which checks whether a point reached in iterating a pixel has been reached before. If so, the pixel cannot diverge and must be in the set. Periodicity checking is a trade-off, as the need to remember points costs data management instructions and memory, but saves computational instructions. However, checking against only one previous iteration can detect many periods with little performance overhead. For example, within the while loop of the pseudocode above, make the following modifications:
+
+```
+xold := 0
+yold := 0
+period := 0
+while (x*x + y*y ≤ 2*2 and iteration &lt; max_iteration) do
+    xtemp := x*x - y*y + x0
+    y := 2*x*y + y0
+    x := xtemp
+    iteration := iteration + 1
+
+    if x ≈ xold and y ≈ yold then
+        iteration := max_iteration  /* Set to max for the color plotting */
+        break        /* We are inside the Mandelbrot set, leave the while loop */
+
+    period:= period + 1
+    if period &gt; 20 then
+        period := 0
+        xold := x
+        yold := y
+```
+
+The above code stores away a new x and y value on every 20th iteration, thus it can detect periods that are up to 20 points long.
+</pre></article><article id="section-0017"><h3>Border tracing / edge checking</h3><pre># Border tracing / edge checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=19)] [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mandelbrot_DEM_Sobel.png/250px-Mandelbrot_DEM_Sobel.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_DEM_Sobel.png)Edge detection using [Sobel filter](https://en.wikipedia.org/wiki/Sobel_filter) of hyperbolic components of Mandelbrot set
+
+Because the Mandelbrot set is [full](https://en.wikipedia.org/wiki/Full_set_(topology)),[[12]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-Proof_of_connectedness-12) any point enclosed by a closed shape whose borders lie entirely within the Mandelbrot set must itself be in the Mandelbrot set. Border tracing works by following the [lemniscates](https://en.wikipedia.org/wiki/Polynomial_lemniscate) of the various iteration levels (colored bands) all around the set, and then filling the entire band at once. This also provides a speed increase because large numbers of points can be now skipped.[[13]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-13)
+
+ [https://en\.wikipedia\.org/wiki/File:Boundary\_following\_movie\.webm](https://en.wikipedia.org/wiki/File:Boundary_following_movie.webm)Duration: 7 seconds.[https://en\.wikipedia\.org/wiki/File:Boundary\_following\_movie\.webm](https://en.wikipedia.org/wiki/File:Boundary_following_movie.webm)Animation of border tracing
+
+In the animation shown, points outside the set are colored with a 1000-iteration escape time algorithm. Tracing the set border and filling it, rather than iterating the interior points, reduces the total number of iterations by 93.16%. With a higher iteration limit the benefit would be even greater.
+</pre></article><article id="section-0018"><h3>Rectangle checking</h3><pre># Rectangle checking
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=20)]
+
+Rectangle checking is an older and simpler method for plotting the Mandelbrot set. The basic idea of rectangle checking is that if every pixel in a rectangle&#39;s border shares the same amount of iterations, then the rectangle can be safely filled using that number of iterations. There are several variations of the rectangle checking method, however, all of them are slower than the border tracing method because they end up calculating more pixels. One variant just calculates the corner pixels of each rectangle, however, this causes damaged pictures more often than calculating the entire border, thus it only works reasonably well if only small boxes of around 6x6 pixels are used, and no recursing in from bigger boxes. ([Fractint](https://en.wikipedia.org/wiki/Fractint) method.)
+
+The most simple rectangle checking method lies in checking the borders of equally sized rectangles, resembling a grid pattern. (Mariani&#39;s algorithm.)[[14]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-14)
+
+A faster and slightly more advanced variant is to first calculate a bigger box, say 25x25 pixels. If the entire box border has the same color, then just fill the box with the same color. If not, then split the box into four boxes of 13x13 pixels, reusing the already calculated pixels as outer border, and sharing the inner &quot;cross&quot; pixels between the inner boxes. Again, fill in those boxes that has only one border color. And split those boxes that don&#39;t, now into four 7x7 pixel boxes. And then those that &quot;fail&quot; into 4x4 boxes. (Mariani-Silver algorithm.)
+
+Even faster is to split the boxes in half instead of into four boxes. Then it might be optimal to use boxes with a 1.4:1 [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio), so they can be split like [how A3 papers are folded](https://en.wikipedia.org/wiki/ISO_216) into A4 and A5 papers. (The DIN approach.)
+
+As with border tracing, rectangle checking only works on areas with one discrete color. But even if the outer area uses smooth/continuous coloring then rectangle checking will still speed up the costly inner area of the Mandelbrot set. Unless the inner area also uses some smooth coloring method, for instance [interior distance estimation](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#Interior_distance_estimation).
+</pre></article><article id="section-0019"><h3>Symmetry utilization</h3><pre># Symmetry utilization
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=21)]
+
+The horizontal symmetry of the Mandelbrot set allows for portions of the rendering process to be skipped upon the presence of the real axis in the final image. However, regardless of the portion that gets mirrored, the same number of points will be rendered.
+
+Julia sets have symmetry around the origin. This means that quadrant 1 and quadrant 3 are symmetric, and quadrants 2 and quadrant 4 are symmetric. Supporting symmetry for both Mandelbrot and Julia sets requires handling symmetry differently for the two different types of graphs.
+</pre></article><article id="section-0020"><h3>Multithreading</h3><pre># Multithreading
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=22)]
+
+Escape-time rendering of Mandelbrot and Julia sets lends itself extremely well to parallel processing. On multi-core machines the area to be plotted can be divided into a series of rectangular areas which can then be provided as a set of tasks to be rendered by a pool of rendering threads. This is an [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel)[[15]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-15) computing problem. (Note that one gets the best speed-up by first excluding symmetric areas of the plot, and then dividing the remaining unique regions into rectangular areas.)[[16]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-16)
+
+Here is a short video showing the Mandelbrot set being rendered using multithreading and symmetry, but without boundary following:
+
+ [https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_symmetry.webm)Duration: 11 seconds.[https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_symmetry.webm)This is a short video showing rendering of a Mandelbrot set using multi-threading and symmetry, but with boundary following turned off.
+
+Finally, here is a video showing the same Mandelbrot set image being rendered using multithreading, symmetry, **and** boundary following:
+
+ [https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_bounary\_following\_&amp;\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_bounary_following_&amp;_symmetry.webm)Duration: 3 seconds.[https://en\.wikipedia\.org/wiki/File:Multi\-threaded\_mandelbrot\_render\_w\_bounary\_following\_&amp;\_symmetry\.webm](https://en.wikipedia.org/wiki/File:Multi-threaded_mandelbrot_render_w_bounary_following_&amp;_symmetry.webm)This is a short video showing rendering of a Mandelbrot set using boundary following, multi-threading, and symmetry
+</pre></article><article id="section-0021"><h3>Perturbation theory and series approximation</h3><pre># Perturbation theory and series approximation
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=23)]
+
+Very highly magnified images require more than the standard 64–128 or so bits of precision that most hardware [floating-point units](https://en.wikipedia.org/wiki/Floating-point_unit) provide, requiring renderers to use slow &quot;BigNum&quot; or &quot;[arbitrary-precision](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)&quot; math libraries to calculate. However, this can be sped up by the exploitation of [perturbation theory](https://en.wikipedia.org/wiki/Perturbation_theory). Given
+
+      z  n + 1   =  z  n   2   + c   {\displaystyle z_{n+1}=z_{n}^{2}+c}
+
+as the iteration, and a small epsilon and delta, it is the case that
+
+     (  z  n   + ϵ  )  2   + ( c + δ ) =  z  n   2   + 2  z  n   ϵ +  ϵ  2   + c + δ ,   {\displaystyle (z_{n}+\epsilon )^{2}+(c+\delta )=z_{n}^{2}+2z_{n}\epsilon +\epsilon ^{2}+c+\delta ,}
+
+or
+
+     =  z  n + 1   + 2  z  n   ϵ +  ϵ  2   + δ ,   {\displaystyle =z_{n+1}+2z_{n}\epsilon +\epsilon ^{2}+\delta ,}
+
+so if one defines
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +  ϵ  n   2   + δ ,   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+\epsilon _{n}^{2}+\delta ,}
+
+one can calculate a single point (e.g. the center of an image) using high-precision arithmetic (*z*), giving a *reference orbit*, and then compute many points around it in terms of various initial offsets delta plus the above iteration for epsilon, where epsilon-zero is set to 0. For most iterations, epsilon does not need more than 16 significant figures, and consequently hardware floating-point may be used to get a mostly accurate image.[[17]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-17) There will often be some areas where the orbits of points diverge enough from the reference orbit that extra precision is needed on those points, or else additional local high-precision-calculated reference orbits are needed. By measuring the orbit distance between the reference point and the point calculated with low precision, it can be detected that it is not possible to calculate the point correctly, and the calculation can be stopped. These incorrect points can later be re-calculated e.g. from another closer reference point.
+
+Further, it is possible to approximate the starting values for the low-precision points with a truncated [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which often enables a significant amount of iterations to be skipped.[[18]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-18) Renderers implementing these techniques are publicly available and offer speedups for highly magnified images by around two orders of magnitude. [[19]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-19) [[20]](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_note-20)
+
+An alternate explanation of the above:
+
+For the central point in the disc     c   {\displaystyle c}   and its iterations      z  n     {\displaystyle z_{n}}  , and an arbitrary point in the disc     c + δ   {\displaystyle c+\delta }   and its iterations      z  n  ′    {\displaystyle z&#39;_{n}}  , it is possible to define the following iterative relationship:
+
+      z  n  ′  =  z  n   +  ϵ  n     {\displaystyle z&#39;_{n}=z_{n}+\epsilon _{n}}
+
+With      ϵ  1   = δ   {\displaystyle \epsilon _{1}=\delta }  . Successive iterations of      ϵ  n     {\displaystyle \epsilon _{n}}   can be found using the following:
+
+      z  n + 1  ′  =    z  n  ′    2   + ( c + δ )   {\displaystyle z&#39;_{n+1}={z&#39;_{n}}^{2}+(c+\delta )}        z  n + 1  ′  = (  z  n   +  ϵ  n    )  2   + c + δ   {\displaystyle z&#39;_{n+1}=(z_{n}+\epsilon _{n})^{2}+c+\delta }        z  n + 1  ′  =    z  n     2   + c + 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle z&#39;_{n+1}={z_{n}}^{2}+c+2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }        z  n + 1  ′  =  z  n + 1   + 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle z&#39;_{n+1}=z_{n+1}+2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }
+
+Now from the original definition:
+
+      z  n + 1  ′  =  z  n + 1   +  ϵ  n + 1     {\displaystyle z&#39;_{n+1}=z_{n+1}+\epsilon _{n+1}}  ,
+
+It follows that:
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }
+
+As the iterative relationship relates an arbitrary point to the central point by a very small change     δ   {\displaystyle \delta }  , then most of the iterations of      ϵ  n     {\displaystyle \epsilon _{n}}   are also small and can be calculated using floating point hardware.
+
+However, for every arbitrary point in the disc it is possible to calculate a value for a given      ϵ  n     {\displaystyle \epsilon _{n}}   without having to iterate through the sequence from      ϵ  0     {\displaystyle \epsilon _{0}}  , by expressing      ϵ  n     {\displaystyle \epsilon _{n}}   as a [power series](https://en.wikipedia.org/wiki/Power_series) of     δ   {\displaystyle \delta }  .
+
+      ϵ  n   =  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + …   {\displaystyle \epsilon _{n}=A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc }
+
+With      A  1   = 1 ,  B  1   = 0 ,  C  1   = 0 , …   {\displaystyle A_{1}=1,B_{1}=0,C_{1}=0,\dotsc }  .
+
+Now given the iteration equation of     ϵ   {\displaystyle \epsilon }  , it is possible to calculate the coefficients of the power series for each      ϵ  n     {\displaystyle \epsilon _{n}}  :
+
+      ϵ  n + 1   = 2  z  n    ϵ  n   +    ϵ  n     2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}\epsilon _{n}+{\epsilon _{n}}^{2}+\delta }        ϵ  n + 1   = 2  z  n   (  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + … ) + (  A  n   δ +  B  n    δ  2   +  C  n    δ  3   + …  )  2   + δ   {\displaystyle \epsilon _{n+1}=2z_{n}(A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc )+(A_{n}\delta +B_{n}\delta ^{2}+C_{n}\delta ^{3}+\dotsc )^{2}+\delta }        ϵ  n + 1   = ( 2  z  n    A  n   + 1 ) δ + ( 2  z  n    B  n   +    A  n     2   )  δ  2   + ( 2  z  n    C  n   + 2  A  n    B  n   )  δ  3   + …   {\displaystyle \epsilon _{n+1}=(2z_{n}A_{n}+1)\delta +(2z_{n}B_{n}+{A_{n}}^{2})\delta ^{2}+(2z_{n}C_{n}+2A_{n}B_{n})\delta ^{3}+\dotsc }
+
+Therefore, it follows that:
+
+      A  n + 1   = 2  z  n    A  n   + 1   {\displaystyle A_{n+1}=2z_{n}A_{n}+1}        B  n + 1   = 2  z  n    B  n   +    A  n     2     {\displaystyle B_{n+1}=2z_{n}B_{n}+{A_{n}}^{2}}        C  n + 1   = 2  z  n    C  n   + 2  A  n    B  n     {\displaystyle C_{n+1}=2z_{n}C_{n}+2A_{n}B_{n}}       ⋮   {\displaystyle \vdots }
+
+The coefficients in the power series can be calculated as iterative series using only values from the central point&#39;s iterations     z   {\displaystyle z}  , and do not change for any arbitrary point in the disc. If     δ   {\displaystyle \delta }   is very small,      ϵ  n     {\displaystyle \epsilon _{n}}   should be calculable to sufficient accuracy using only a few terms of the power series. As the Mandelbrot Escape Contours are &#39;continuous&#39; over the complex plane, if a point&#39;s escape time has been calculated, then the escape time of that point&#39;s neighbours should be similar. Interpolation of the neighbouring points should provide a good estimation of where to start in the      ϵ  n     {\displaystyle \epsilon _{n}}   series.
+
+Further, separate interpolation of both real axis points and imaginary axis points should provide both an upper and lower bound for the point being calculated. If both results are the same (i.e. both escape or do not escape) then the difference     Δ n   {\displaystyle \Delta n}   can be used to recuse until both an upper and lower bound can be established. If floating point hardware can be used to iterate the     ϵ   {\displaystyle \epsilon }   series, then there exists a relation between how many iterations can be achieved in the time it takes to use BigNum software to compute a given      ϵ  n     {\displaystyle \epsilon _{n}}  . If the difference between the bounds is greater than the number of iterations, it is possible to perform binary search using BigNum software, successively halving the gap until it becomes more time efficient to find the escape value using floating point hardware.
+
+- [![Perturbation theory at zoom level 2\.4e\-57](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Mandelbrot_Set_Image_107.png/250px-Mandelbrot_Set_Image_107.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_107.png)Perturbation theory at zoom level 2.4e-57
+- [![Perturbation theory at zoom level 1\.53e\-62](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Mandelbrot_Set_Image_110.png/250px-Mandelbrot_Set_Image_110.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_110.png)Perturbation theory at zoom level 1.53e-62
+- [![Perturbation theory at zoom level 2\.84e\-82](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Mandelbrot_Set_Image_111.png/250px-Mandelbrot_Set_Image_111.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_111.png)Perturbation theory at zoom level 2.84e-82
+- [![Perturbation theory at zoom level 7\.17e\-36](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Mandelbrot_Set_Image_109.png/250px-Mandelbrot_Set_Image_109.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_109.png)Perturbation theory at zoom level 7.17e-36
+- [![Perturbation theory at zoom level 4\.31e\-51](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Mandelbrot_Set_Image_106.png/250px-Mandelbrot_Set_Image_106.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_106.png)Perturbation theory at zoom level 4.31e-51
+- [![Perturbation theory at zoom level 1\.01e\-55](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Mandelbrot_Set_Image_108.png/250px-Mandelbrot_Set_Image_108.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Mandelbrot_Set_Image_108.png)Perturbation theory at zoom level 1.01e-55
+</pre></article><article id="section-0022"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;action=edit&amp;section=24)]
+1. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-1) [&quot;Newbie: How to map colors in the Mandelbrot set?&quot;](http://www.fractalforums.com/programming/newbie-how-to-map-colors-in-the-mandelbrot-set/msg3465/#msg3465). *www.fractalforums.com*. May 2007. [Archived](https://web.archive.org/web/20220909215450/http://www.fractalforums.com/programming/newbie-how-to-map-colors-in-the-mandelbrot-set/msg3465/#msg3465) from the original on 9 September 2022. Retrieved 11 February 2020.
+2. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-2) García, Francisco; Ángel Fernández; Javier Barrallo; Luis Martín. [&quot;Coloring Dynamical Systems in the Complex Plane&quot;](http://math.unipa.it/~grim/Jbarrallo.PDF) (PDF). [Archived](https://web.archive.org/web/20191130214645/http://math.unipa.it/%7Egrim/Jbarrallo.PDF) (PDF) from the original on 30 November 2019. Retrieved 21 January 2008.
+3. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-3) Linas Vepstas. [&quot;Renormalizing the Mandelbrot Escape&quot;](http://linas.org/art-gallery/escape/escape.html). [Archived](https://web.archive.org/web/20200214073730/http://linas.org/art-gallery/escape/escape.html) from the original on 14 February 2020. Retrieved 11 February 2020.
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Albert_Lobo_4-0) [2](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Albert_Lobo_4-1) Albert Lobo. [&quot;Interior and exterior distance bounds for the Mandelbrot set&quot;](http://www.albertlobo.com/fractals/interior-exterior-distance-bounds-mandelbrot-set). [Archived](https://web.archive.org/web/20220909215805/http://www.albertlobo.com/fractals/interior-exterior-distance-bounds-mandelbrot-set) from the original on 9 September 2022. Retrieved 29 April 2021.
+5. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-5) Wilson, Dr. Lindsay Robert (2012). [&quot;Distance estimation method for drawing Mandelbrot and Julia sets&quot;](http://www.imajeenyus.com/mathematics/20121112_distance_estimates/distance_estimation_method_for_fractals.pdf) (PDF). [Archived](https://web.archive.org/web/20210503103652/http://www.imajeenyus.com/mathematics/20121112_distance_estimates/distance_estimation_method_for_fractals.pdf) (PDF) from the original on 3 May 2021. Retrieved 3 May 2021.
+6. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Cheritat_6-0) [Chéritat, Arnaud](https://en.wikipedia.org/wiki/Arnaud_Ch%C3%A9ritat) (2016). [&quot;Boundary detection methods via distance estimators&quot;](https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set#Boundary_detection_methods_via_distance_estimators). [Archived](https://web.archive.org/web/20221218100822/https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set) from the original on 18 December 2022. Retrieved 2 January 2023.
+7. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Syntopia_7-0) Christensen, Mikael Hvidtfeldt (2011). [&quot;Distance Estimated 3D Fractals (V): The Mandelbulb &amp; Different DE Approximations&quot;](http://blog.hvidtfeldts.net/index.php/2011/09/distance-estimated-3d-fractals-v-the-mandelbulb-different-de-approximations). [Archived](https://web.archive.org/web/20210513033347/http://blog.hvidtfeldts.net/index.php/2011/09/distance-estimated-3d-fractals-v-the-mandelbulb-different-de-approximations/) from the original on 13 May 2021. Retrieved 10 May 2021.
+8. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-8) Dang, Yumei; [Louis Kauffman](https://en.wikipedia.org/wiki/Louis_Kauffman); [Daniel Sandin](https://en.wikipedia.org/wiki/Daniel_J._Sandin) (2002). &quot;Chapter 3.3: The Distance Estimation Formula&quot;. [*Hypercomplex Iterations: Distance Estimation and Higher Dimensional Fractals*](https://www.evl.uic.edu/hypercomplex/html/book/book.pdf) (PDF). World Scientific. pp. 17–18. [Archived](https://web.archive.org/web/20210323153331/https://www.evl.uic.edu/hypercomplex/html/book/book.pdf) (PDF) from the original on 23 March 2021. Retrieved 29 April 2021.
+9. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-9) Peitgen, Heinz-Otto; Richter Peter (1986). [*The Beauty of Fractals*](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals). Heidelberg: Springer-Verlag. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-15851-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-15851-0).
+10. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-10) Peitgen, Heinz-Otto; Saupe Dietmar (1988). [*The Science of Fractal Images*](https://en.wikipedia.org/wiki/The_Beauty_of_Fractals). New York: Springer-Verlag. p. 202. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-387-96608-0](https://en.wikipedia.org/wiki/Special:BookSources/0-387-96608-0).
+11. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-11) [&quot;Mandelbrot Bud Maths&quot;](http://linas.org/art-gallery/bud/bud.html). [Archived](https://web.archive.org/web/20200214073800/http://linas.org/art-gallery/bud/bud.html) from the original on 14 February 2020. Retrieved 11 February 2020.
+12. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-Proof_of_connectedness_12-0) [Douady, Adrien](https://en.wikipedia.org/wiki/Adrien_Douady); [Hubbard, John](https://en.wikipedia.org/wiki/John_H._Hubbard) (2009). [&quot;Exploring the Mandelbrot set. Exploring the Mandelbrot set. The Orsay Notes&quot;](https://www.researchgate.net/publication/228540477). Retrieved 9 April 2023.
+13. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-13) [&quot;Boundary Tracing Method&quot;](https://web.archive.org/web/20150220012221/http://www.reocities.com/CapeCanaveral/5003/mandel.htm). Archived from [the original](http://www.reocities.com/CapeCanaveral/5003/mandel.htm) on 20 February 2015.
+14. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-14) Dewdney, A. K. (1989). &quot;Computer Recreations, February 1989; A tour of the Mandelbrot set aboard the Mandelbus&quot;. *Scientific American*. p. 111. [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [24987149](https://www.jstor.org/stable/24987149). (subscription required)
+15. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-15) [&quot;Embarrassingly Parallel Problems&quot;](https://web.archive.org/web/20200127230256/http://courses.cecs.anu.edu.au/courses/COMP4300/lectures/embParallel.4u.pdf) (PDF). Archived from [the original](http://courses.cecs.anu.edu.au/courses/COMP4300/lectures/embParallel.4u.pdf) (PDF) on 27 January 2020.
+16. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-16) [&quot;Parallel Program Models&quot;](https://web.archive.org/web/20200126040920/http://cseweb.ucsd.edu/groups/csag/html/teaching/cse160s05/lectures/Lecture14.pdf) (PDF). Archived from [the original](http://cseweb.ucsd.edu/groups/csag/html/teaching/cse160s05/lectures/Lecture14.pdf) (PDF) on 26 January 2020.
+17. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-17) [&quot;Superfractalthing - Arbitrary Precision Mandelbrot Set Rendering in Java&quot;](http://www.fractalforums.com/announcements-and-news/superfractalthing-arbitrary-precision-mandelbrot-set-rendering-in-java/). [Archived](https://web.archive.org/web/20200630043303/http://www.fractalforums.com/announcements-and-news/superfractalthing-arbitrary-precision-mandelbrot-set-rendering-in-java/) from the original on 30 June 2020. Retrieved 11 February 2020.
+18. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-18) K. I. Martin. [&quot;Superfractalthing Maths&quot;](https://web.archive.org/web/20140628114658/http://www.superfractalthing.co.nf/sft_maths.pdf) (PDF). Archived from [the original](http://www.superfractalthing.co.nf/sft_maths.pdf) (PDF) on 28 June 2014. Retrieved 11 February 2020.
+19. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-19) [&quot;Mandelbrot set implementation with Perturbation Theory&quot;](https://rosettacode.org/wiki/Mandelbrot_set#Perturbation_Theory). *Rosetta Code*. Retrieved 6 July 2026.
+20. [↑](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#cite_ref-20) [&quot;Kalles Fraktaler 2&quot;](http://www.chillheimer.de/kallesfraktaler/). [Archived](https://web.archive.org/web/20200224054206/http://www.chillheimer.de/kallesfraktaler/) from the original on 24 February 2020. Retrieved 11 February 2020.
+ show
+- [v](https://en.wikipedia.org/wiki/Template:Fractals)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Fractals)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Fractals)
+[Fractals](https://en.wikipedia.org/wiki/Fractal) show
+- [v](https://en.wikipedia.org/wiki/Template:Mathematics_and_art)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Mathematics_and_art)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Mathematics_and_art)
+[Mathematics and art](https://en.wikipedia.org/wiki/Mathematics_and_art) show
+- [v](https://en.wikipedia.org/wiki/Template:Visualization)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Visualization)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Visualization)
+[Visualization](https://en.wikipedia.org/wiki/Visualization_(graphics)) of technical information show
+- [v](https://en.wikipedia.org/wiki/Template:Computer_science)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Computer_science)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Computer_science)
+[Computer science](https://en.wikipedia.org/wiki/Computer_science) show
+- [v](https://en.wikipedia.org/wiki/Template:Computer_graphics)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Computer_graphics)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Computer_graphics)
+[Computer graphics](https://en.wikipedia.org/wiki/Computer_graphics_(computer_science))               Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;oldid=1362843143](https://en.wikipedia.org/w/index.php?title=Plotting_algorithms_for_the_Mandelbrot_set&amp;oldid=1362843143)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Fractals](https://en.wikipedia.org/wiki/Category:Fractals)
+- [Complex dynamics](https://en.wikipedia.org/wiki/Category:Complex_dynamics)
+- [Graphics software](https://en.wikipedia.org/wiki/Category:Graphics_software)
+- [Computer graphics](https://en.wikipedia.org/wiki/Category:Computer_graphics)
+- [Algorithms](https://en.wikipedia.org/wiki/Category:Algorithms)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description with empty Wikidata description](https://en.wikipedia.org/wiki/Category:Short_description_with_empty_Wikidata_description)
+- [Wikipedia articles with style issues from July 2021](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_style_issues_from_July_2021)
+- [All articles with style issues](https://en.wikipedia.org/wiki/Category:All_articles_with_style_issues)
+- [Use dmy dates from February 2020](https://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_February_2020)
+- [Articles needing additional references from June 2019](https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2019)
+- [All articles needing additional references](https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references)
+- [Pages containing links to subscription-only content](https://en.wikipedia.org/wiki/Category:Pages_containing_links_to_subscription-only_content)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+- [Articles containing video clips](https://en.wikipedia.org/wiki/Category:Articles_containing_video_clips)
+
+    [https://en\.wikipedia\.org/wiki/Plotting\_algorithms\_for\_the\_Mandelbrot\_set?action=edit](https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

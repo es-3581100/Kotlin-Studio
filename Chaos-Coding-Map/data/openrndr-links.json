@@ -1,0 +1,505 @@
+[
+  {
+    "id": "e125",
+    "source": "or-root",
+    "target": "or-start",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e126",
+    "source": "or-root",
+    "target": "or-runtime",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e127",
+    "source": "or-root",
+    "target": "or-drawing",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e128",
+    "source": "or-root",
+    "target": "or-geometry",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e129",
+    "source": "or-root",
+    "target": "or-math",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e130",
+    "source": "or-root",
+    "target": "or-color",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e131",
+    "source": "or-root",
+    "target": "or-animation",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e132",
+    "source": "or-root",
+    "target": "or-shaders",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e133",
+    "source": "or-root",
+    "target": "or-camera3d",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e134",
+    "source": "or-root",
+    "target": "or-imagecv",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e135",
+    "source": "or-root",
+    "target": "or-signals",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e136",
+    "source": "or-root",
+    "target": "or-textsvg",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e137",
+    "source": "or-root",
+    "target": "or-interaction",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e138",
+    "source": "or-root",
+    "target": "or-procedural",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e139",
+    "source": "or-root",
+    "target": "or-fabrication",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e140",
+    "source": "or-root",
+    "target": "or-web",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e141",
+    "source": "or-root",
+    "target": "or-learning",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e142",
+    "source": "or-root",
+    "target": "or-extensions",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e143",
+    "source": "or-root",
+    "target": "or-devtools",
+    "relation": "semantic domain",
+    "kind": "source-backed",
+    "confidence": 1.0,
+    "evidenceCount": 1,
+    "directional": true,
+    "origin": "openrndr semantic tree",
+    "why": "The supplied OPENRNDR semantic knowledge tree lists this as a top-level concept domain.",
+    "sources": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e144",
+    "source": "n02",
+    "target": "or-root",
+    "relation": "creative-coding framework option",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Creative coding can be implemented with OPENRNDR; this is an implementation bridge, not a mathematical relation.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e145",
+    "source": "hub-fractal-rendering",
+    "target": "or-drawing",
+    "relation": "rendered through",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "OPENRNDR drawing is a plausible 2D rendering surface for fractal output.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e146",
+    "source": "hub-fractal-rendering",
+    "target": "or-shaders",
+    "relation": "accelerated through",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "GPU shaders are a plausible acceleration surface for iterative pixel/ray workloads.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e148",
+    "source": "hub-visualization",
+    "target": "or-drawing",
+    "relation": "implemented through",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "OPENRNDR drawing is a plausible visualization surface.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e149",
+    "source": "hub-visualization",
+    "target": "or-animation",
+    "relation": "animated through",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Animation/time can vary parameters and reveal temporal structure.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e150",
+    "source": "or-shaders",
+    "target": "or-animation",
+    "relation": "parameterized over time",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Shader parameters can be animated; this is an implementation workflow bridge.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e151",
+    "source": "or-animation",
+    "target": "or-color",
+    "relation": "palette/time coupling",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Color palettes can be animated or driven by time/iteration values.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e152",
+    "source": "n21",
+    "target": "or-camera3d",
+    "relation": "3D rendering surface",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Mandelbulb rendering commonly needs 3D camera/mesh or raymarching infrastructure.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e153",
+    "source": "n21",
+    "target": "or-shaders",
+    "relation": "GPU rendering surface",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Mandelbulb raymarching/distance-estimation is a plausible shader workload.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e154",
+    "source": "n18",
+    "target": "or-camera3d",
+    "relation": "3D rendering surface",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Mandelbox is a 3D fractal form and maps naturally to camera/3D infrastructure.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e155",
+    "source": "n22",
+    "target": "or-geometry",
+    "relation": "geometry implementation surface",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Menger sponge is recursive geometry and maps naturally to shape/geometry tooling.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  },
+  {
+    "id": "e158",
+    "source": "hub-orbit-iteration",
+    "target": "or-shaders",
+    "relation": "parallelizable implementation surface",
+    "kind": "curated implementation bridge",
+    "confidence": 0.72,
+    "evidenceCount": 0,
+    "directional": false,
+    "origin": "builder-curated",
+    "why": "Per-pixel orbit iteration is a plausible shader implementation surface.",
+    "sources": [],
+    "experimental": false,
+    "meta": false
+  }
+]

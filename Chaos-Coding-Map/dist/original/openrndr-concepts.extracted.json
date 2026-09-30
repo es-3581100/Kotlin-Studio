@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "start",
+    "icon": "→",
+    "title": "Getting Started",
+    "description": "Setup, first program, templates and the canonical learning path.",
+    "keywords": [
+      "setup",
+      "firstprogram",
+      "basics",
+      "program",
+      "application",
+      "template"
+    ],
+    "resources": [
+      [
+        "Guide · Requirements",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C10_Requirements.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C10_Requirements.kt"
+      ],
+      [
+        "Guide · First program",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt"
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-examples",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ]
+    ]
+  },
+  {
+    "id": "runtime",
+    "icon": "◉",
+    "title": "Application & Runtime",
+    "description": "Program lifecycle, events, windows, platform services and application infrastructure.",
+    "keywords": [
+      "application",
+      "event",
+      "window",
+      "platform",
+      "program",
+      "runtime"
+    ],
+    "resources": [
+      [
+        "openrndr-application",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-application",
+        "openrndr",
+        "openrndr-application"
+      ],
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "openrndr-platform",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-platform",
+        "openrndr",
+        "openrndr-platform"
+      ],
+      [
+        "openrndr-utils",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-utils",
+        "openrndr",
+        "openrndr-utils"
+      ],
+      [
+        "Guide · Program basics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/20_Program_basics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/20_Program_basics"
+      ]
+    ]
+  },
+  {
+    "id": "drawing",
+    "icon": "✦",
+    "title": "Drawing & Rendering",
+    "description": "Drawer, render targets, filters, compositing, effects and image presentation.",
+    "keywords": [
+      "draw",
+      "drawer",
+      "render",
+      "filter",
+      "compositor",
+      "fx",
+      "imagefit",
+      "colorbuffer"
+    ],
+    "resources": [
+      [
+        "openrndr-draw",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-draw",
+        "openrndr",
+        "openrndr-draw"
+      ],
+      [
+        "openrndr-filter",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-filter",
+        "openrndr",
+        "openrndr-filter"
+      ],
+      [
+        "orx-fx",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fx",
+        "orx",
+        "orx-fx"
+      ],
+      [
+        "orx-compositor",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-compositor",
+        "orx",
+        "orx-compositor"
+      ],
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-no-clear",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-no-clear",
+        "orx",
+        "orx-no-clear"
+      ],
+      [
+        "Guide · Drawing",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/30_Drawing",
+        "openrndr-guide",
+        "src/main/kotlin/docs/30_Drawing"
+      ],
+      [
+        "Examples · Drawing",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/30_Drawing",
+        "openrndr-examples",
+        "src/main/kotlin/examples/30_Drawing"
+      ]
+    ]
+  },
+  {
+    "id": "geometry",
+    "icon": "△",
+    "title": "Shapes & Geometry",
+    "description": "Contours, paths, tessellation, triangulation, compositions and constructive geometry.",
+    "keywords": [
+      "shape",
+      "contour",
+      "segment",
+      "path",
+      "geometry",
+      "triang",
+      "tessell",
+      "composition",
+      "marching"
+    ],
+    "resources": [
+      [
+        "openrndr-shape",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-shape",
+        "openrndr",
+        "openrndr-shape"
+      ],
+      [
+        "openrndr-kartifex",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-kartifex",
+        "openrndr",
+        "openrndr-kartifex"
+      ],
+      [
+        "openrndr-ktessellation",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-ktessellation",
+        "openrndr",
+        "openrndr-ktessellation"
+      ],
+      [
+        "orx-shapes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shapes",
+        "orx",
+        "orx-shapes"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ],
+      [
+        "orx-triangulation",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-triangulation",
+        "orx",
+        "orx-triangulation"
+      ],
+      [
+        "orx-marching-squares",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-marching-squares",
+        "orx",
+        "orx-marching-squares"
+      ]
+    ]
+  },
+  {
+    "id": "math",
+    "icon": "∑",
+    "title": "Math & Spatial Structures",
+    "description": "Vectors, matrices, spatial indexes, fields, optimization and simulation helpers.",
+    "keywords": [
+      "math",
+      "vector",
+      "matrix",
+      "kdtree",
+      "quadtree",
+      "hashgrid",
+      "bvh",
+      "gradient",
+      "force"
+    ],
+    "resources": [
+      [
+        "openrndr-math",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-math",
+        "openrndr",
+        "openrndr-math"
+      ],
+      [
+        "orx-math",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-math",
+        "orx",
+        "orx-math"
+      ],
+      [
+        "orx-kdtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-kdtree",
+        "orx",
+        "orx-kdtree"
+      ],
+      [
+        "orx-quadtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-quadtree",
+        "orx",
+        "orx-quadtree"
+      ],
+      [
+        "orx-hash-grid",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-hash-grid",
+        "orx",
+        "orx-hash-grid"
+      ],
+      [
+        "orx-bvh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-bvh",
+        "orx",
+        "orx-bvh"
+      ],
+      [
+        "orx-gradient-descent",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-gradient-descent",
+        "orx",
+        "orx-gradient-descent"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ]
+    ]
+  },
+  {
+    "id": "color",
+    "icon": "◐",
+    "title": "Color & Palettes",
+    "description": "Core color types, transformations, palettes and color-oriented extensions.",
+    "keywords": [
+      "color",
+      "palette",
+      "rgb",
+      "hsl",
+      "hsv",
+      "lab"
+    ],
+    "resources": [
+      [
+        "openrndr-color",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-color",
+        "openrndr",
+        "openrndr-color"
+      ],
+      [
+        "orx-color",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-color",
+        "orx",
+        "orx-color"
+      ],
+      [
+        "orx-palette",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-palette",
+        "orx",
+        "orx-palette"
+      ]
+    ]
+  },
+  {
+    "id": "animation",
+    "icon": "≈",
+    "title": "Animation & Time",
+    "description": "Animatables, easing, envelopes, curves, clocks and temporal effects.",
+    "keywords": [
+      "animat",
+      "easing",
+      "envelope",
+      "fcurve",
+      "time",
+      "timer",
+      "temporal",
+      "keyframe"
+    ],
+    "resources": [
+      [
+        "openrndr-animatable",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-animatable",
+        "openrndr",
+        "openrndr-animatable"
+      ],
+      [
+        "orx-easing",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-easing",
+        "orx",
+        "orx-easing"
+      ],
+      [
+        "orx-envelopes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-envelopes",
+        "orx",
+        "orx-envelopes"
+      ],
+      [
+        "orx-fcurve",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fcurve",
+        "orx",
+        "orx-fcurve"
+      ],
+      [
+        "orx-time-operators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-time-operators",
+        "orx",
+        "orx-time-operators"
+      ],
+      [
+        "orx-timer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-timer",
+        "orx",
+        "orx-timer"
+      ],
+      [
+        "orx-temporal-blur",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-temporal-blur",
+        "orx",
+        "orx-temporal-blur"
+      ],
+      [
+        "Guide · Animation",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/50_Animation",
+        "openrndr-guide",
+        "src/main/kotlin/docs/50_Animation"
+      ],
+      [
+        "Examples · Animation",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/50_Animation",
+        "openrndr-examples",
+        "src/main/kotlin/examples/50_Animation"
+      ]
+    ]
+  },
+  {
+    "id": "shaders",
+    "icon": "◇",
+    "title": "Shaders & GPU",
+    "description": "Shade styles, shader composition, shader phrases and the ORSL shader-language project.",
+    "keywords": [
+      "shader",
+      "shade",
+      "glsl",
+      "gpu",
+      "uniform",
+      "vertex",
+      "fragment",
+      "orsl"
+    ],
+    "resources": [
+      [
+        "openrndr-gl-common",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-gl-common",
+        "openrndr",
+        "openrndr-gl-common"
+      ],
+      [
+        "orx-shade-styles",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shade-styles",
+        "orx",
+        "orx-shade-styles"
+      ],
+      [
+        "orx-shader-phrases",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shader-phrases",
+        "orx",
+        "orx-shader-phrases"
+      ],
+      [
+        "orsl",
+        "repo",
+        "https://github.com/openrndr/orsl",
+        "orsl",
+        ""
+      ],
+      [
+        "Guide · Advanced topics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/90_Advanced_Topics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/90_Advanced_Topics"
+      ]
+    ]
+  },
+  {
+    "id": "camera3d",
+    "icon": "⬡",
+    "title": "Camera, Mesh & 3D",
+    "description": "Cameras, depth cameras, meshes, loaders, generators and mesh deformation/noise.",
+    "keywords": [
+      "camera",
+      "mesh",
+      "obj",
+      "depth",
+      "3d",
+      "projection",
+      "perspective"
+    ],
+    "resources": [
+      [
+        "orx-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-camera",
+        "orx",
+        "orx-camera"
+      ],
+      [
+        "orx-depth-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-depth-camera",
+        "orx",
+        "orx-depth-camera"
+      ],
+      [
+        "orx-mesh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh",
+        "orx",
+        "orx-mesh"
+      ],
+      [
+        "orx-mesh-generators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-generators",
+        "orx",
+        "orx-mesh-generators"
+      ],
+      [
+        "orx-mesh-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-noise",
+        "orx",
+        "orx-mesh-noise"
+      ],
+      [
+        "orx-obj-loader",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-obj-loader",
+        "orx",
+        "orx-obj-loader"
+      ],
+      [
+        "software-cameras",
+        "workshop",
+        "https://github.com/openrndr/software-cameras",
+        "software-cameras",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "imagecv",
+    "icon": "▣",
+    "title": "Images & Computer Vision",
+    "description": "Image fitting, integral images, distance fields and computer-vision integrations.",
+    "keywords": [
+      "image",
+      "integral",
+      "jumpflood",
+      "distance",
+      "boof",
+      "vision",
+      "pixel"
+    ],
+    "resources": [
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-integral-image",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-integral-image",
+        "orx",
+        "orx-integral-image"
+      ],
+      [
+        "orx-jumpflood",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-jumpflood",
+        "orx",
+        "orx-jumpflood"
+      ],
+      [
+        "openrndr-x-boofcv",
+        "integration",
+        "https://github.com/openrndr/openrndr-x-boofcv",
+        "openrndr-x-boofcv",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "signals",
+    "icon": "∿",
+    "title": "Audio & Signals",
+    "description": "FFT and workshop material for sound-reactive or signal-driven creative coding.",
+    "keywords": [
+      "fft",
+      "audio",
+      "sound",
+      "frequency",
+      "signal",
+      "spectrum"
+    ],
+    "resources": [
+      [
+        "orx-fft",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fft",
+        "orx",
+        "orx-fft"
+      ],
+      [
+        "workshop-greyspace",
+        "workshop",
+        "https://github.com/openrndr/workshop-greyspace",
+        "workshop-greyspace",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "textsvg",
+    "icon": "T",
+    "title": "Text, SVG & Typography",
+    "description": "Text layout, text along contours, SVG and vector composition workflows.",
+    "keywords": [
+      "text",
+      "writer",
+      "font",
+      "svg",
+      "typography",
+      "contour"
+    ],
+    "resources": [
+      [
+        "orx-text-writer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-writer",
+        "orx",
+        "orx-text-writer"
+      ],
+      [
+        "orx-text-on-contour",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-on-contour",
+        "orx",
+        "orx-text-on-contour"
+      ],
+      [
+        "orx-svg",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-svg",
+        "orx",
+        "orx-svg"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ]
+    ]
+  },
+  {
+    "id": "interaction",
+    "icon": "⌁",
+    "title": "Interaction, Parameters & Live Control",
+    "description": "Input/events, parameters, property watching and interactive extension patterns.",
+    "keywords": [
+      "mouse",
+      "keyboard",
+      "interaction",
+      "parameter",
+      "property",
+      "watcher",
+      "event"
+    ],
+    "resources": [
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "orx-parameters",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-parameters",
+        "orx",
+        "orx-parameters"
+      ],
+      [
+        "orx-property-watchers",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-property-watchers",
+        "orx",
+        "orx-property-watchers"
+      ],
+      [
+        "Guide · Interaction",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/40_Interaction",
+        "openrndr-guide",
+        "src/main/kotlin/docs/40_Interaction"
+      ],
+      [
+        "Examples · Interaction",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/40_Interaction",
+        "openrndr-examples",
+        "src/main/kotlin/examples/40_Interaction"
+      ]
+    ]
+  },
+  {
+    "id": "procedural",
+    "icon": "⌘",
+    "title": "Procedural & Generative Systems",
+    "description": "Noise, turtle systems, force fields and building blocks for generative graphics.",
+    "keywords": [
+      "noise",
+      "turtle",
+      "generative",
+      "random",
+      "force",
+      "field",
+      "procedural"
+    ],
+    "resources": [
+      [
+        "orx-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-noise",
+        "orx",
+        "orx-noise"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ],
+      [
+        "workshop-generative-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-posters",
+        "workshop-generative-posters",
+        ""
+      ],
+      [
+        "workshop-generative-identities",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-identities",
+        "workshop-generative-identities",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "fabrication",
+    "icon": "⌇",
+    "title": "Plotters & Fabrication",
+    "description": "G-code, turtle/path generation and data-driven poster / physical-output workflows.",
+    "keywords": [
+      "g-code",
+      "gcode",
+      "plotter",
+      "turtle",
+      "poster",
+      "print"
+    ],
+    "resources": [
+      [
+        "orx-g-code",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-g-code",
+        "orx",
+        "orx-g-code"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "workshop-data-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-data-posters",
+        "workshop-data-posters",
+        ""
+      ],
+      [
+        "workshop-torino",
+        "workshop",
+        "https://github.com/openrndr/workshop-torino",
+        "workshop-torino",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "web",
+    "icon": "JS",
+    "title": "Web & Kotlin/JS",
+    "description": "OPENRNDR on JavaScript/web targets, web demos, templates and the project website.",
+    "keywords": [
+      "javascript",
+      "kotlinjs",
+      "web",
+      "browser",
+      "js"
+    ],
+    "resources": [
+      [
+        "openrndr-js",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-js",
+        "openrndr",
+        "openrndr-js"
+      ],
+      [
+        "openrndr-web-demo",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-web-demo",
+        "openrndr",
+        "openrndr-web-demo"
+      ],
+      [
+        "openrndr-js-template",
+        "template",
+        "https://github.com/openrndr/openrndr-js-template",
+        "openrndr-js-template",
+        ""
+      ],
+      [
+        "openrndr-website",
+        "website",
+        "https://github.com/openrndr/openrndr-website",
+        "openrndr-website",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "learning",
+    "icon": "?",
+    "title": "Guide, Examples & Use Cases",
+    "description": "The learning corpus: guide, canonical examples, ORX chapter, advanced topics and use cases.",
+    "keywords": [
+      "docs",
+      "guide",
+      "example",
+      "tutorial",
+      "usecase",
+      "advanced"
+    ],
+    "resources": [
+      [
+        "Guide source",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide",
+        "openrndr-guide",
+        "src/main/kotlin/docs"
+      ],
+      [
+        "Examples source",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ],
+      [
+        "Guide · ORX",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/80_ORX",
+        "openrndr-guide",
+        "src/main/kotlin/docs/80_ORX"
+      ],
+      [
+        "Examples · ORX",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/80_ORX",
+        "openrndr-examples",
+        "src/main/kotlin/examples/80_ORX"
+      ],
+      [
+        "Guide · Use cases",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/95_Use_cases",
+        "openrndr-guide",
+        "src/main/kotlin/docs/95_Use_cases"
+      ],
+      [
+        "Examples · Use cases",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/95_Use_cases",
+        "openrndr-examples",
+        "src/main/kotlin/examples/95_Use_cases"
+      ],
+      [
+        "Guide · Best practices",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/98_Best_practices",
+        "openrndr-guide",
+        "src/main/kotlin/docs/98_Best_practices"
+      ]
+    ]
+  },
+  {
+    "id": "extensions",
+    "icon": "+",
+    "title": "Extensions & ORX",
+    "description": "How OPENRNDR extensions fit together, including the large ORX module collection.",
+    "keywords": [
+      "extension",
+      "orx",
+      "module"
+    ],
+    "resources": [
+      [
+        "Guide · Extensions",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/45_Extensions",
+        "openrndr-guide",
+        "src/main/kotlin/docs/45_Extensions"
+      ],
+      [
+        "Examples · Extensions",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/45_Extensions",
+        "openrndr-examples",
+        "src/main/kotlin/examples/45_Extensions"
+      ],
+      [
+        "ORX repository",
+        "orx",
+        "https://github.com/openrndr/orx",
+        "orx",
+        ""
+      ],
+      [
+        "ORX demos",
+        "examples",
+        "https://github.com/openrndr/orx/tree/master/openrndr-demos",
+        "orx",
+        "openrndr-demos"
+      ],
+      [
+        "ORX module catalog",
+        "catalog",
+        "https://github.com/openrndr/orx/tree/master/orx-module-catalog",
+        "orx",
+        "orx-module-catalog"
+      ]
+    ]
+  },
+  {
+    "id": "devtools",
+    "icon": "⚙",
+    "title": "Developer Tooling",
+    "description": "IDE support, templates, build helpers, module catalogs and CI graphics setup.",
+    "keywords": [
+      "gradle",
+      "intellij",
+      "build",
+      "modulecatalog",
+      "setup",
+      "tool"
+    ],
+    "resources": [
+      [
+        "openrndr-intellij",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij",
+        "openrndr-intellij",
+        ""
+      ],
+      [
+        "openrndr-intellij-settings",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij-settings",
+        "openrndr-intellij-settings",
+        ""
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-dev-template",
+        "template",
+        "https://github.com/openrndr/openrndr-dev-template",
+        "openrndr-dev-template",
+        ""
+      ],
+      [
+        "setup-opengl",
+        "tooling",
+        "https://github.com/openrndr/setup-opengl",
+        "setup-opengl",
+        ""
+      ],
+      [
+        "core module catalog",
+        "catalog",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-module-catalog",
+        "openrndr",
+        "openrndr-module-catalog"
+      ]
+    ]
+  }
+]

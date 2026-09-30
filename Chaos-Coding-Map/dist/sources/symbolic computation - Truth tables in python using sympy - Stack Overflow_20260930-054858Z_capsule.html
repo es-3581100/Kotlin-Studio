@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>symbolic computation - Truth tables in python using sympy - Stack Overflow — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · symbolic computation - Truth tables in python using sympy - Stack Overflow</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T05:48:58.810Z</div><div class="stat"><b>Records</b><br>11</div><div class="stat"><b>Sections</b><br>5</div></div><p>I&#39;m trying to create a program, that uses sympy to take a set of variables and evaluate a symbolic logic expression over the domain of those variables. The problem is that I cannot get python to ev...</p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 334 B · ~84 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 16689 B · ~4167 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 23101 B · ~5770 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 683 B · ~171 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-[Truth tables in python using sympy](https---stackoverflow.md</code></a> <small>markdown · 4110 B · ~1028 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-1 Answer 1.md</code></a> <small>markdown · 3299 B · ~825 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Comments.md</code></a> <small>markdown · 1246 B · ~311 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Related.md</code></a> <small>markdown · 7347 B · ~1834 tok</small></li><li><a href="#art-0009"><code>artifacts/provenance/source-record.json</code></a> <small>json · 712 B · ~178 tok</small></li><li><a href="#art-0010"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 319 B · ~80 tok</small></li><li><a href="#art-0011"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;symbolic computation - Truth tables in python using sympy - Stack Overflow&quot;
+source: https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy
+captured_at: 2026-09-30T05:48:58.810Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 11
+artifact_count: 11
+content_sha256: 3b385eff751527142d06b56f8768f4c3988f46e305975d258b22e1456b5e8bfd
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:334,&quot;sha256&quot;:&quot;ea0bdc4965f493521114e3b298cbdea67141eeecc738bca34745c4ad0232bd04&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;12462747&quot;,&quot;2026-09-30t05&quot;,&quot;810z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;com&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:84,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:16689,&quot;sha256&quot;:&quot;3b385eff751527142d06b56f8768f4c3988f46e305975d258b22e1456b5e8bfd&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;com&quot;,&quot;false&quot;,&quot;questions&quot;,&quot;true&quot;,&quot;stackoverflow&quot;,&quot;stackexchange&quot;,&quot;python&quot;],&quot;summary&quot;:&quot;I&#39;m trying to create a program, that uses sympy to take a set of variables and evaluate a symbolic logic expression over the domain of those variables. The problem is that I cannot get python to ev...&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:4167,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:23101,&quot;sha256&quot;:&quot;7b2dc570ea2bdfcf9b98c5b7f53cd98fa093144d1ab3e1af66e7e370c161241b&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;https&quot;,&quot;href&quot;,&quot;rel&quot;,&quot;com&quot;,&quot;stackoverflow&quot;,&quot;questions&quot;,&quot;stackexchange&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:5770,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:683,&quot;sha256&quot;:&quot;14bacb3162999eb37089e7a17640bcaa904db0da706dd6d89343bcf5c291becd&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;stackoverflow&quot;,&quot;com&quot;,&quot;12462747&quot;,&quot;collectives&quot;,&quot;content&quot;,&quot;questions&quot;,&quot;stack&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:171,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-[Truth tables in python using sympy](https---stackoverflow.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4110,&quot;sha256&quot;:&quot;6d6c9430cc40a100a0a93e56c4f6d40214fd9653082bd8287d82c5e4699c9b23&quot;,&quot;keywords&quot;:[&quot;false&quot;,&quot;true&quot;,&quot;com&quot;,&quot;https&quot;,&quot;stackoverflow&quot;,&quot;vars&quot;,&quot;12462747&quot;,&quot;questions&quot;],&quot;summary&quot;:&quot;[Truth tables in python using sympy](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy)&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1028,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-1 Answer 1.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3299,&quot;sha256&quot;:&quot;84610a8965adba8a8b46b72077f4868f9aa0a89f39eedf4127baf72949c72b78&quot;,&quot;keywords&quot;:[&quot;false&quot;,&quot;true&quot;,&quot;answer&quot;,&quot;expr&quot;,&quot;https&quot;,&quot;com&quot;,&quot;stackoverflow&quot;,&quot;values&quot;],&quot;summary&quot;:&quot;1 Answer 1&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:825,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Comments.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1246,&quot;sha256&quot;:&quot;fcb5eefaa8b3ceee0a9e4969e2f9b61b9ffe3a48aabc9c8a56908ca91b75bca0&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;questions&quot;,&quot;stackoverflow&quot;,&quot;com&quot;,&quot;meta&quot;,&quot;blog&quot;,&quot;2026&quot;,&quot;ask&quot;],&quot;summary&quot;:&quot;Comments&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:311,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Related.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:7347,&quot;sha256&quot;:&quot;0bd52ce41560cc1051ab2e1af28ac1324aa24fecb1b6b745456c759a134248a2&quot;,&quot;keywords&quot;:[&quot;questions&quot;,&quot;com&quot;,&quot;https&quot;,&quot;stackexchange&quot;,&quot;stackoverflow&quot;,&quot;python&quot;,&quot;truth&quot;,&quot;what&quot;],&quot;summary&quot;:&quot;Related&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1834,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0009&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:712,&quot;sha256&quot;:&quot;71aefdea1482a91329f0aba77a1ab141ac129137c50824bb2498fe5492649d68&quot;,&quot;keywords&quot;:[&quot;12462747&quot;,&quot;com&quot;,&quot;https&quot;,&quot;overflow&quot;,&quot;python&quot;,&quot;questions&quot;,&quot;stack&quot;,&quot;stackoverflow&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:178,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0010&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:319,&quot;sha256&quot;:&quot;f3f2990d6509ee42d5f6fbae92bb833298c1cc738d1848ade566553db971f50e&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;124&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0011&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T05:48:58.810Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	84	334	ea0bdc4965f493521114e3b298cbdea67141eeecc738bca34745c4ad0232bd04	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	4167	16689	3b385eff751527142d06b56f8768f4c3988f46e305975d258b22e1456b5e8bfd	I&#39;m trying to create a program, that uses sympy to take a set of variables and evaluate a symbolic logic expression over the domain of those variables. The problem is that I cannot get python to ev...	
+art:0003	index	artifacts/index/page-index.json	supporting	5770	23101	7b2dc570ea2bdfcf9b98c5b7f53cd98fa093144d1ab3e1af66e7e370c161241b	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	171	683	14bacb3162999eb37089e7a17640bcaa904db0da706dd6d89343bcf5c291becd	Introduction	
+sec:0005	section	artifacts/sections/0002-[Truth tables in python using sympy](https---stackoverflow.md	primary	1028	4110	6d6c9430cc40a100a0a93e56c4f6d40214fd9653082bd8287d82c5e4699c9b23	[Truth tables in python using sympy](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy)	
+sec:0006	section	artifacts/sections/0003-1 Answer 1.md	primary	825	3299	84610a8965adba8a8b46b72077f4868f9aa0a89f39eedf4127baf72949c72b78	1 Answer 1	
+sec:0007	section	artifacts/sections/0004-Comments.md	primary	311	1246	fcb5eefaa8b3ceee0a9e4969e2f9b61b9ffe3a48aabc9c8a56908ca91b75bca0	Comments	
+sec:0008	section	artifacts/sections/0005-Related.md	primary	1834	7347	0bd52ce41560cc1051ab2e1af28ac1324aa24fecb1b6b745456c759a134248a2	Related	
+art:0009	provenance	artifacts/provenance/source-record.json	supporting	178	712	71aefdea1482a91329f0aba77a1ab141ac129137c50824bb2498fe5492649d68	Capture source identity and metadata	
+art:0010	provenance	artifacts/provenance/extraction-record.json	supporting	80	319	f3f2990d6509ee42d5f6fbae92bb833298c1cc738d1848ade566553db971f50e	Extraction engine and counts	
+art:0011	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Skip to main content](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#content)  [https://stackoverflow\.com/questions/12462747/truth\-tables\-in\-python\-using\-sympy\#](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)    [https://stackoverflow\.com/](https://stackoverflow.com/)Stack Overflow
+1. [About](https://stackoverflow.co/)
+2. Products
+3. [Stack Internal](https://stackoverflow.co/internal/)
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+ [Learn more about Collectives](https://stackoverflow.com/collectives)
+
+# [Truth tables in python using sympy](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy)
+
+   [Ask Question](https://stackoverflow.com/questions/ask)      Asked 14 years ago   Modified [14 years ago](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy?lastactivity)   Viewed 6k times               This question shows research effort; it is useful and clear   6    This question does not show any research effort; it is unclear or not useful     Save this question. [https://stackoverflow\.com/posts/12462747/timeline](https://stackoverflow.com/posts/12462747/timeline)Show activity on this post.
+
+I&#39;m trying to create a program, that uses sympy to take a set of variables and evaluate a symbolic logic expression over the domain of those variables. The problem is that I cannot get python to evaluate the expression after it spits out the truth table.
+
+Here&#39;s the code:
+
+```
+from sympy import *
+from sympy.abc import p, q, r
+
+def get_vars():
+    vars = []
+        print &quot;Please enter the number of variables to use in the equation&quot;
+        numVars = int(raw_input())
+    print &quot;please enter each of the variables on a newline&quot;
+        for i in xrange(numVars):
+        vars.append(raw_input())
+    return vars
+
+def get_expr():
+    print &quot;Please enter the expression to use&quot;
+    return str(raw_input())
+
+def convert_to_expr(inputStr):
+    return eval(inputStr)
+
+def main():
+    vars = get_vars()
+    expr = get_expr()
+
+    print(&quot;recieved input: &quot; + str(vars) + &quot; expr &quot; + str(expr))
+
+    print &quot;Truth table for &quot; + str(len(vars)) + &quot;variable(s)&quot;
+    for i in enumerate(truth_table(vars, expr)):
+        print i
+
+def fixed_table(numvars):
+    &quot;&quot;&quot;
+    Generate true/false permutations for the given number of variables.
+    So if numvars=2
+    Returns (not necessarily in this order):
+        True, True
+        True, False
+        False, False
+        False, True
+    &quot;&quot;&quot;
+    if numvars is 1:
+        yield [True]
+        yield [False]
+    else:
+        for i in fixed_table(numvars-1):
+            yield i + [True]
+            yield i + [False]
+
+def truth_table(vars, expr):
+    &quot;&quot;&quot;
+    Takes an array of variables, vars, and displays a truth table
+    for each possible value combination of vars.
+    &quot;&quot;&quot;
+    for cond in fixed_table(len(vars)):
+        values=dict(zip(vars,cond))
+        yield cond + [eval(expr)]
+
+if __name__ == &quot;__main__&quot;:
+    main()
+```
+
+If I do the following, here&#39;s the output:
+
+```
+Please enter the number of variables to use in the equation
+3
+please enter each of the variables on a newline
+p
+q
+r
+Please enter the expression to use
+p&amp;q&amp;r
+recieved input: [&#39;p&#39;, &#39;q&#39;, &#39;r&#39;] expr p&amp;q&amp;r
+Truth table for 3variable(s)
+(0, [True, True, True, And(p, q, r)])
+(1, [True, True, False, And(p, q, r)])
+(2, [True, False, True, And(p, q, r)])
+(3, [True, False, False, And(p, q, r)])
+(4, [False, True, True, And(p, q, r)])
+(5, [False, True, False, And(p, q, r)])
+(6, [False, False, True, And(p, q, r)])
+(7, [False, False, False, And(p, q, r)])
+```
+
+If some software exists to perform this task, I&#39;d really like to know about it :-)
+
+Thanks in advance.
+
+- [python](https://stackoverflow.com/questions/tagged/python)
+- [symbolic-computation](https://stackoverflow.com/questions/tagged/symbolic-computation)
+          [Share](https://stackoverflow.com/q/12462747)Short permalink to this question   [Improve this question](https://stackoverflow.com/posts/12462747/edit)    Follow  Follow this question to receive notifications          asked Sep 17, 2012 at 15:45    [![alvonellos&#39;s user avatar](https://www.gravatar.com/avatar/c027422f5adf79c2896b679d231453e5?s=64&amp;d=identicon&amp;r=PG)](https://stackoverflow.com/users/1644214/alvonellos)   [alvonellos](https://stackoverflow.com/users/1644214/alvonellos)  1,0621 gold badge9 silver badges29 bronze badges
+
+   [Add a comment](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)  |  [https://stackoverflow\.com/questions/12462747/truth\-tables\-in\-python\-using\-sympy\#](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)          [](null)
+
+## 1 Answer 1
+
+      Sorted by:  [Reset to default](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy?answertab=scoredesc#tab-top)     Highest score (default)   Trending (recent votes count more)   Date modified (newest first)   Date created (oldest first)        [](null)       This answer is useful   9    This answer is not useful     Save this answer.     Loading when this answer was accepted… [https://stackoverflow\.com/posts/12463178/timeline](https://stackoverflow.com/posts/12463178/timeline)Show activity on this post.
+
+You&#39;re really close! Once you&#39;ve got `And(p, q, r)` and your truth tables, you can use the `subs` method to push your `values` dict into the expression: i.e.
+
+```
+yield cond + [eval(expr).subs(values)]
+```
+
+gives
+
+```
+p&amp;q&amp;r
+recieved input: [&#39;p&#39;, &#39;q&#39;, &#39;r&#39;] expr p&amp;q&amp;r
+Truth table for 3variable(s)
+(0, [True, True, True, True])
+(1, [True, True, False, False])
+(2, [True, False, True, False])
+(3, [True, False, False, False])
+(4, [False, True, True, False])
+(5, [False, True, False, False])
+(6, [False, False, True, False])
+(7, [False, False, False, False])
+```
+
+But I think there&#39;s a simpler way to do this. The `sympify` function already works to generate expressions from strings:
+
+```
+In [7]: expr = sympify(&quot;x &amp; y | z&quot;)
+
+In [8]: expr
+Out[8]: Or(z, And(x, y))
+```
+
+and we can get the variables too:
+
+```
+In [9]: expr.free_symbols
+Out[9]: set([x, z, y])
+```
+
+plus `itertools.product` can generate the values (and `cartes` is an alias for it in `sympy`):
+
+```
+In [12]: cartes([False, True], repeat=3)
+Out[12]: &lt;itertools.product at 0xa24889c&gt;
+
+In [13]: list(cartes([False, True], repeat=3))
+Out[13]:
+[(False, False, False),
+ (False, False, True),
+ (False, True, False),
+ (False, True, True),
+ (True, False, False),
+ (True, False, True),
+ (True, True, False),
+ (True, True, True)]
+```
+
+Combining these, which is basically just using `sympify` to get the expression and avoid `eval`, using the built-in Cartesian product, and adding `.subs()` to use your `values` dictionary, we get:
+
+```
+def explore():
+    expr_string = raw_input(&quot;Enter an expression: &quot;)
+    expr = sympify(expr_string)
+    variables = sorted(expr.free_symbols)
+    for truth_values in cartes([False, True], repeat=len(variables)):
+        values = dict(zip(variables, truth_values))
+        print sorted(values.items()), expr.subs(values)
+```
+
+which gives
+
+```
+In [22]: explore()
+Enter an expression: a &amp; (b | c)
+[(a, False), (b, False), (c, False)] False
+[(a, False), (b, False), (c, True)] False
+[(a, False), (b, True), (c, False)] False
+[(a, False), (b, True), (c, True)] False
+[(a, True), (b, False), (c, False)] False
+[(a, True), (b, False), (c, True)] True
+[(a, True), (b, True), (c, False)] True
+[(a, True), (b, True), (c, True)] True
+```
+
+This is shorter than yours, but it uses exactly your approach.
+
+         [Share](https://stackoverflow.com/a/12463178)Short permalink to this answer   [Improve this answer](https://stackoverflow.com/posts/12463178/edit)    Follow  Follow this answer to receive notifications          answered Sep 17, 2012 at 16:10    [![DSM&#39;s user avatar](https://i.sstatic.net/wbe4o.png?s=64)](https://stackoverflow.com/users/487339/dsm)   [DSM](https://stackoverflow.com/users/487339/dsm)  356k67 gold badges606 silver badges505 bronze badges
+
+## Comments
+
+Add a comment
+
+             [](null)
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+ [Ask question](https://stackoverflow.com/questions/ask)
+
+Explore related questions
+
+- [python](https://stackoverflow.com/questions/tagged/python)
+- [symbolic-computation](https://stackoverflow.com/questions/tagged/symbolic-computation)
+
+See similar questions with these tags.
+
+- The Overflow Blog
+- [Professional skepticism is a dev’s best skill](https://stackoverflow.blog/2026/09/25/professional-skepticism-is-a-dev-s-best-skill/)
+- [Your phone is AI’s newest hardware](https://stackoverflow.blog/2026/09/29/your-phone-is-ai-s-newest-hardware/)
+- Featured on Meta
+- [Free (votes) for all (that want them)](https://meta.stackexchange.com/questions/419716/free-votes-for-all-that-want-them)
+- [Developer Story is now available](https://meta.stackoverflow.com/questions/440422/developer-story-is-now-available)
+- [The [tooling] tag is in the process of being burninated](https://meta.stackoverflow.com/questions/440150/the-tooling-tag-is-in-the-process-of-being-burninated)
+- [Policy: Generative AI (e.g., ChatGPT) is banned](https://meta.stackoverflow.com/questions/421831/policy-generative-ai-e-g-chatgpt-is-banned)
+
+### Related
+
+   [4](https://stackoverflow.com/questions/21393472/making-truthtables-in-python) [Making truthtables in python](https://stackoverflow.com/questions/21393472/making-truthtables-in-python)   [2](https://stackoverflow.com/questions/28963505/sympy-using-logical-operators-on-relationals) [Sympy: Using logical operators on relationals](https://stackoverflow.com/questions/28963505/sympy-using-logical-operators-on-relationals)   [10](https://stackoverflow.com/questions/29548744/creating-a-truth-table-for-any-expression-in-python) [Creating a truth table for any expression in Python](https://stackoverflow.com/questions/29548744/creating-a-truth-table-for-any-expression-in-python)   [1](https://stackoverflow.com/questions/29663415/generate-truth-tables-with-some-variables-already-set-in-python) [Generate Truth Tables with some variables already set in python](https://stackoverflow.com/questions/29663415/generate-truth-tables-with-some-variables-already-set-in-python)   [0](https://stackoverflow.com/questions/38969307/python-get-the-value-which-satisfies-or-truth-table-out-of-two-values) [Python - Get the value which Satisfies OR Truth Table out of two values](https://stackoverflow.com/questions/38969307/python-get-the-value-which-satisfies-or-truth-table-out-of-two-values)   [2](https://stackoverflow.com/questions/42024034/evaluate-sympy-boolean-expression-in-python) [Evaluate Sympy boolean expression in python](https://stackoverflow.com/questions/42024034/evaluate-sympy-boolean-expression-in-python)   [0](https://stackoverflow.com/questions/48573494/variable-truth-table-to-cnf-dnf) [variable truth table to CNF / DNF](https://stackoverflow.com/questions/48573494/variable-truth-table-to-cnf-dnf)   [3](https://stackoverflow.com/questions/57877822/how-can-i-calculate-truth-tables-to-show-the-results-for-statements-such-as-p-a) [How can I calculate truth tables to show the results for statements such as &#39;p and q&#39;?](https://stackoverflow.com/questions/57877822/how-can-i-calculate-truth-tables-to-show-the-results-for-statements-such-as-p-a)   [1](https://stackoverflow.com/questions/61508549/python-truth-table-generator-library) [Python truth table generator library](https://stackoverflow.com/questions/61508549/python-truth-table-generator-library)   [1](https://stackoverflow.com/questions/66024903/truth-tables-in-python) [Truth tables in python?](https://stackoverflow.com/questions/66024903/truth-tables-in-python)
+
+#### [Hot Network Questions](https://stackexchange.com/questions?tab=hot)
+
+- [Stocks investment and Right Livelihood for lay persons](https://buddhism.stackexchange.com/questions/56078/stocks-investment-and-right-livelihood-for-lay-persons)
+- [I fell out with my PhD advisor and want to omit his reference when applying for faculty positions after postdoc](https://academia.stackexchange.com/questions/227755/i-fell-out-with-my-phd-advisor-and-want-to-omit-his-reference-when-applying-for)
+- [Text width on paper is different from \textwidth](https://tex.stackexchange.com/questions/766803/text-width-on-paper-is-different-from-textwidth)
+- [Why is the translation/use of malak vs. angelos inconsistent regarding created vs. uncreated messengers?](https://hermeneutics.stackexchange.com/questions/118522/why-is-the-translation-use-of-malak-vs-angelos-inconsistent-regarding-created-v)
+- [What is the meaning of the Hail Holy Queen prayer?](https://christianity.stackexchange.com/questions/114750/what-is-the-meaning-of-the-hail-holy-queen-prayer)
+- [What was Cyclops trying to say to the Professor before being interrupted in X-Men: The Animated Series?](https://scifi.stackexchange.com/questions/306080/what-was-cyclops-trying-to-say-to-the-professor-before-being-interrupted-in-x-me)
+- [On AI Disclosure Statement Standards in TCS](https://cstheory.stackexchange.com/questions/57278/on-ai-disclosure-statement-standards-in-tcs)
+- [Calculation of cross product square in formula](https://physics.stackexchange.com/questions/876471/calculation-of-cross-product-square-in-formula)
+- [What is even the point of the common-effect model in meta-analysis?](https://stats.stackexchange.com/questions/677279/what-is-even-the-point-of-the-common-effect-model-in-meta-analysis)
+- [How to handle a Player who always tries to barter/scheme/coerce every NPC?](https://rpg.stackexchange.com/questions/220022/how-to-handle-a-player-who-always-tries-to-barter-scheme-coerce-every-npc)
+- [Who was Yuri Zhivago chasing in his final moments?](https://movies.stackexchange.com/questions/132416/who-was-yuri-zhivago-chasing-in-his-final-moments)
+- [Alternative methods to solve a geometry problem involving triangles and medians](https://math.stackexchange.com/questions/5150621/alternative-methods-to-solve-a-geometry-problem-involving-triangles-and-medians)
+- [Macro which prints input only if all internal invocations of a second macro are non-blank?](https://tex.stackexchange.com/questions/766773/macro-which-prints-input-only-if-all-internal-invocations-of-a-second-macro-are)
+- [Can I use an external plug in transformer to provide the 24VAC circuit to an oil furnace control board?](https://diy.stackexchange.com/questions/332209/can-i-use-an-external-plug-in-transformer-to-provide-the-24vac-circuit-to-an-oil)
+- [What bunker materials are needed to protect against a microscopic neutron star explosion?](https://worldbuilding.stackexchange.com/questions/274670/what-bunker-materials-are-needed-to-protect-against-a-microscopic-neutron-star-e)
+- [Current transformer hvac](https://electronics.stackexchange.com/questions/772278/current-transformer-hvac)
+- [With apt, how can I search a specific repository for packages?](https://unix.stackexchange.com/questions/807493/with-apt-how-can-i-search-a-specific-repository-for-packages)
+- [What is the meaning of &quot;рыцарь на часах&quot;?](https://russian.stackexchange.com/questions/30716/what-is-the-meaning-of-%d1%80%d1%8b%d1%86%d0%b0%d1%80%d1%8c-%d0%bd%d0%b0-%d1%87%d0%b0%d1%81%d0%b0%d1%85)
+- [Would a planet with a rocky shell and a subsurface ocean explode if it were moved closer to its Sun due to the internal water &#39;boiling&#39; off?](https://worldbuilding.stackexchange.com/questions/274662/would-a-planet-with-a-rocky-shell-and-a-subsurface-ocean-explode-if-it-were-move)
+- [Putting two and three together makes ... ten?](https://puzzling.stackexchange.com/questions/139825/putting-two-and-three-together-makes-ten)
+- [Descartes&#39; Third Meditation: How can ideas of extension be contained &quot;eminently&quot; but not &quot;formally&quot; in a thinking substance?](https://philosophy.stackexchange.com/questions/142248/descartes-third-meditation-how-can-ideas-of-extension-be-contained-eminently)
+- [How to &quot;level up&quot; in Hero Kids](https://rpg.stackexchange.com/questions/220008/how-to-level-up-in-hero-kids)
+- [Why is the incision in the throat made vertically?](https://medicalsciences.stackexchange.com/questions/35074/why-is-the-incision-in-the-throat-made-vertically)
+- [What&#39;s the correct way to give automated user External Credentials access?](https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access)
+ [more hot questions](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)      [Question feed](https://stackoverflow.com/feeds/question/12462747)      lang-py
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Skip to main content](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#content)  [https://stackoverflow\.com/questions/12462747/truth\-tables\-in\-python\-using\-sympy\#](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)    [https://stackoverflow\.com/](https://stackoverflow.com/)Stack Overflow
+1. [About](https://stackoverflow.co/)
+2. Products
+3. [Stack Internal](https://stackoverflow.co/internal/)
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+ [Learn more about Collectives](https://stackoverflow.com/collectives)
+</pre></article><article id="section-0002"><h3>[Truth tables in python using sympy](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy)</h3><pre># [Truth tables in python using sympy](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy)
+
+[Ask Question](https://stackoverflow.com/questions/ask)      Asked 14 years ago   Modified [14 years ago](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy?lastactivity)   Viewed 6k times               This question shows research effort; it is useful and clear   6    This question does not show any research effort; it is unclear or not useful     Save this question. [https://stackoverflow\.com/posts/12462747/timeline](https://stackoverflow.com/posts/12462747/timeline)Show activity on this post.
+
+I&#39;m trying to create a program, that uses sympy to take a set of variables and evaluate a symbolic logic expression over the domain of those variables. The problem is that I cannot get python to evaluate the expression after it spits out the truth table.
+
+Here&#39;s the code:
+
+```
+from sympy import *
+from sympy.abc import p, q, r
+
+def get_vars():
+    vars = []
+        print &quot;Please enter the number of variables to use in the equation&quot;
+        numVars = int(raw_input())
+    print &quot;please enter each of the variables on a newline&quot;
+        for i in xrange(numVars):
+        vars.append(raw_input())
+    return vars
+
+def get_expr():
+    print &quot;Please enter the expression to use&quot;
+    return str(raw_input())
+
+def convert_to_expr(inputStr):
+    return eval(inputStr)
+
+def main():
+    vars = get_vars()
+    expr = get_expr()
+
+    print(&quot;recieved input: &quot; + str(vars) + &quot; expr &quot; + str(expr))
+
+    print &quot;Truth table for &quot; + str(len(vars)) + &quot;variable(s)&quot;
+    for i in enumerate(truth_table(vars, expr)):
+        print i
+
+def fixed_table(numvars):
+    &quot;&quot;&quot;
+    Generate true/false permutations for the given number of variables.
+    So if numvars=2
+    Returns (not necessarily in this order):
+        True, True
+        True, False
+        False, False
+        False, True
+    &quot;&quot;&quot;
+    if numvars is 1:
+        yield [True]
+        yield [False]
+    else:
+        for i in fixed_table(numvars-1):
+            yield i + [True]
+            yield i + [False]
+
+def truth_table(vars, expr):
+    &quot;&quot;&quot;
+    Takes an array of variables, vars, and displays a truth table
+    for each possible value combination of vars.
+    &quot;&quot;&quot;
+    for cond in fixed_table(len(vars)):
+        values=dict(zip(vars,cond))
+        yield cond + [eval(expr)]
+
+if __name__ == &quot;__main__&quot;:
+    main()
+```
+
+If I do the following, here&#39;s the output:
+
+```
+Please enter the number of variables to use in the equation
+3
+please enter each of the variables on a newline
+p
+q
+r
+Please enter the expression to use
+p&amp;q&amp;r
+recieved input: [&#39;p&#39;, &#39;q&#39;, &#39;r&#39;] expr p&amp;q&amp;r
+Truth table for 3variable(s)
+(0, [True, True, True, And(p, q, r)])
+(1, [True, True, False, And(p, q, r)])
+(2, [True, False, True, And(p, q, r)])
+(3, [True, False, False, And(p, q, r)])
+(4, [False, True, True, And(p, q, r)])
+(5, [False, True, False, And(p, q, r)])
+(6, [False, False, True, And(p, q, r)])
+(7, [False, False, False, And(p, q, r)])
+```
+
+If some software exists to perform this task, I&#39;d really like to know about it :-)
+
+Thanks in advance.
+
+- [python](https://stackoverflow.com/questions/tagged/python)
+- [symbolic-computation](https://stackoverflow.com/questions/tagged/symbolic-computation)
+          [Share](https://stackoverflow.com/q/12462747)Short permalink to this question   [Improve this question](https://stackoverflow.com/posts/12462747/edit)    Follow  Follow this question to receive notifications          asked Sep 17, 2012 at 15:45    [![alvonellos&#39;s user avatar](https://www.gravatar.com/avatar/c027422f5adf79c2896b679d231453e5?s=64&amp;d=identicon&amp;r=PG)](https://stackoverflow.com/users/1644214/alvonellos)   [alvonellos](https://stackoverflow.com/users/1644214/alvonellos)  1,0621 gold badge9 silver badges29 bronze badges
+
+   [Add a comment](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)  |  [https://stackoverflow\.com/questions/12462747/truth\-tables\-in\-python\-using\-sympy\#](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)          [](null)
+</pre></article><article id="section-0003"><h3>1 Answer 1</h3><pre># 1 Answer 1
+
+Sorted by:  [Reset to default](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy?answertab=scoredesc#tab-top)     Highest score (default)   Trending (recent votes count more)   Date modified (newest first)   Date created (oldest first)        [](null)       This answer is useful   9    This answer is not useful     Save this answer.     Loading when this answer was accepted… [https://stackoverflow\.com/posts/12463178/timeline](https://stackoverflow.com/posts/12463178/timeline)Show activity on this post.
+
+You&#39;re really close! Once you&#39;ve got `And(p, q, r)` and your truth tables, you can use the `subs` method to push your `values` dict into the expression: i.e.
+
+```
+yield cond + [eval(expr).subs(values)]
+```
+
+gives
+
+```
+p&amp;q&amp;r
+recieved input: [&#39;p&#39;, &#39;q&#39;, &#39;r&#39;] expr p&amp;q&amp;r
+Truth table for 3variable(s)
+(0, [True, True, True, True])
+(1, [True, True, False, False])
+(2, [True, False, True, False])
+(3, [True, False, False, False])
+(4, [False, True, True, False])
+(5, [False, True, False, False])
+(6, [False, False, True, False])
+(7, [False, False, False, False])
+```
+
+But I think there&#39;s a simpler way to do this. The `sympify` function already works to generate expressions from strings:
+
+```
+In [7]: expr = sympify(&quot;x &amp; y | z&quot;)
+
+In [8]: expr
+Out[8]: Or(z, And(x, y))
+```
+
+and we can get the variables too:
+
+```
+In [9]: expr.free_symbols
+Out[9]: set([x, z, y])
+```
+
+plus `itertools.product` can generate the values (and `cartes` is an alias for it in `sympy`):
+
+```
+In [12]: cartes([False, True], repeat=3)
+Out[12]: &lt;itertools.product at 0xa24889c&gt;
+
+In [13]: list(cartes([False, True], repeat=3))
+Out[13]:
+[(False, False, False),
+ (False, False, True),
+ (False, True, False),
+ (False, True, True),
+ (True, False, False),
+ (True, False, True),
+ (True, True, False),
+ (True, True, True)]
+```
+
+Combining these, which is basically just using `sympify` to get the expression and avoid `eval`, using the built-in Cartesian product, and adding `.subs()` to use your `values` dictionary, we get:
+
+```
+def explore():
+    expr_string = raw_input(&quot;Enter an expression: &quot;)
+    expr = sympify(expr_string)
+    variables = sorted(expr.free_symbols)
+    for truth_values in cartes([False, True], repeat=len(variables)):
+        values = dict(zip(variables, truth_values))
+        print sorted(values.items()), expr.subs(values)
+```
+
+which gives
+
+```
+In [22]: explore()
+Enter an expression: a &amp; (b | c)
+[(a, False), (b, False), (c, False)] False
+[(a, False), (b, False), (c, True)] False
+[(a, False), (b, True), (c, False)] False
+[(a, False), (b, True), (c, True)] False
+[(a, True), (b, False), (c, False)] False
+[(a, True), (b, False), (c, True)] True
+[(a, True), (b, True), (c, False)] True
+[(a, True), (b, True), (c, True)] True
+```
+
+This is shorter than yours, but it uses exactly your approach.
+
+         [Share](https://stackoverflow.com/a/12463178)Short permalink to this answer   [Improve this answer](https://stackoverflow.com/posts/12463178/edit)    Follow  Follow this answer to receive notifications          answered Sep 17, 2012 at 16:10    [![DSM&#39;s user avatar](https://i.sstatic.net/wbe4o.png?s=64)](https://stackoverflow.com/users/487339/dsm)   [DSM](https://stackoverflow.com/users/487339/dsm)  356k67 gold badges606 silver badges505 bronze badges
+</pre></article><article id="section-0004"><h3>Comments</h3><pre># Comments
+
+Add a comment
+
+             [](null)
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+ [Ask question](https://stackoverflow.com/questions/ask)
+
+Explore related questions
+
+- [python](https://stackoverflow.com/questions/tagged/python)
+- [symbolic-computation](https://stackoverflow.com/questions/tagged/symbolic-computation)
+
+See similar questions with these tags.
+
+- The Overflow Blog
+- [Professional skepticism is a dev’s best skill](https://stackoverflow.blog/2026/09/25/professional-skepticism-is-a-dev-s-best-skill/)
+- [Your phone is AI’s newest hardware](https://stackoverflow.blog/2026/09/29/your-phone-is-ai-s-newest-hardware/)
+- Featured on Meta
+- [Free (votes) for all (that want them)](https://meta.stackexchange.com/questions/419716/free-votes-for-all-that-want-them)
+- [Developer Story is now available](https://meta.stackoverflow.com/questions/440422/developer-story-is-now-available)
+- [The [tooling] tag is in the process of being burninated](https://meta.stackoverflow.com/questions/440150/the-tooling-tag-is-in-the-process-of-being-burninated)
+- [Policy: Generative AI (e.g., ChatGPT) is banned](https://meta.stackoverflow.com/questions/421831/policy-generative-ai-e-g-chatgpt-is-banned)
+</pre></article><article id="section-0005"><h3>Related</h3><pre># Related
+
+[4](https://stackoverflow.com/questions/21393472/making-truthtables-in-python) [Making truthtables in python](https://stackoverflow.com/questions/21393472/making-truthtables-in-python)   [2](https://stackoverflow.com/questions/28963505/sympy-using-logical-operators-on-relationals) [Sympy: Using logical operators on relationals](https://stackoverflow.com/questions/28963505/sympy-using-logical-operators-on-relationals)   [10](https://stackoverflow.com/questions/29548744/creating-a-truth-table-for-any-expression-in-python) [Creating a truth table for any expression in Python](https://stackoverflow.com/questions/29548744/creating-a-truth-table-for-any-expression-in-python)   [1](https://stackoverflow.com/questions/29663415/generate-truth-tables-with-some-variables-already-set-in-python) [Generate Truth Tables with some variables already set in python](https://stackoverflow.com/questions/29663415/generate-truth-tables-with-some-variables-already-set-in-python)   [0](https://stackoverflow.com/questions/38969307/python-get-the-value-which-satisfies-or-truth-table-out-of-two-values) [Python - Get the value which Satisfies OR Truth Table out of two values](https://stackoverflow.com/questions/38969307/python-get-the-value-which-satisfies-or-truth-table-out-of-two-values)   [2](https://stackoverflow.com/questions/42024034/evaluate-sympy-boolean-expression-in-python) [Evaluate Sympy boolean expression in python](https://stackoverflow.com/questions/42024034/evaluate-sympy-boolean-expression-in-python)   [0](https://stackoverflow.com/questions/48573494/variable-truth-table-to-cnf-dnf) [variable truth table to CNF / DNF](https://stackoverflow.com/questions/48573494/variable-truth-table-to-cnf-dnf)   [3](https://stackoverflow.com/questions/57877822/how-can-i-calculate-truth-tables-to-show-the-results-for-statements-such-as-p-a) [How can I calculate truth tables to show the results for statements such as &#39;p and q&#39;?](https://stackoverflow.com/questions/57877822/how-can-i-calculate-truth-tables-to-show-the-results-for-statements-such-as-p-a)   [1](https://stackoverflow.com/questions/61508549/python-truth-table-generator-library) [Python truth table generator library](https://stackoverflow.com/questions/61508549/python-truth-table-generator-library)   [1](https://stackoverflow.com/questions/66024903/truth-tables-in-python) [Truth tables in python?](https://stackoverflow.com/questions/66024903/truth-tables-in-python)
+
+#### [Hot Network Questions](https://stackexchange.com/questions?tab=hot)
+
+- [Stocks investment and Right Livelihood for lay persons](https://buddhism.stackexchange.com/questions/56078/stocks-investment-and-right-livelihood-for-lay-persons)
+- [I fell out with my PhD advisor and want to omit his reference when applying for faculty positions after postdoc](https://academia.stackexchange.com/questions/227755/i-fell-out-with-my-phd-advisor-and-want-to-omit-his-reference-when-applying-for)
+- [Text width on paper is different from \textwidth](https://tex.stackexchange.com/questions/766803/text-width-on-paper-is-different-from-textwidth)
+- [Why is the translation/use of malak vs. angelos inconsistent regarding created vs. uncreated messengers?](https://hermeneutics.stackexchange.com/questions/118522/why-is-the-translation-use-of-malak-vs-angelos-inconsistent-regarding-created-v)
+- [What is the meaning of the Hail Holy Queen prayer?](https://christianity.stackexchange.com/questions/114750/what-is-the-meaning-of-the-hail-holy-queen-prayer)
+- [What was Cyclops trying to say to the Professor before being interrupted in X-Men: The Animated Series?](https://scifi.stackexchange.com/questions/306080/what-was-cyclops-trying-to-say-to-the-professor-before-being-interrupted-in-x-me)
+- [On AI Disclosure Statement Standards in TCS](https://cstheory.stackexchange.com/questions/57278/on-ai-disclosure-statement-standards-in-tcs)
+- [Calculation of cross product square in formula](https://physics.stackexchange.com/questions/876471/calculation-of-cross-product-square-in-formula)
+- [What is even the point of the common-effect model in meta-analysis?](https://stats.stackexchange.com/questions/677279/what-is-even-the-point-of-the-common-effect-model-in-meta-analysis)
+- [How to handle a Player who always tries to barter/scheme/coerce every NPC?](https://rpg.stackexchange.com/questions/220022/how-to-handle-a-player-who-always-tries-to-barter-scheme-coerce-every-npc)
+- [Who was Yuri Zhivago chasing in his final moments?](https://movies.stackexchange.com/questions/132416/who-was-yuri-zhivago-chasing-in-his-final-moments)
+- [Alternative methods to solve a geometry problem involving triangles and medians](https://math.stackexchange.com/questions/5150621/alternative-methods-to-solve-a-geometry-problem-involving-triangles-and-medians)
+- [Macro which prints input only if all internal invocations of a second macro are non-blank?](https://tex.stackexchange.com/questions/766773/macro-which-prints-input-only-if-all-internal-invocations-of-a-second-macro-are)
+- [Can I use an external plug in transformer to provide the 24VAC circuit to an oil furnace control board?](https://diy.stackexchange.com/questions/332209/can-i-use-an-external-plug-in-transformer-to-provide-the-24vac-circuit-to-an-oil)
+- [What bunker materials are needed to protect against a microscopic neutron star explosion?](https://worldbuilding.stackexchange.com/questions/274670/what-bunker-materials-are-needed-to-protect-against-a-microscopic-neutron-star-e)
+- [Current transformer hvac](https://electronics.stackexchange.com/questions/772278/current-transformer-hvac)
+- [With apt, how can I search a specific repository for packages?](https://unix.stackexchange.com/questions/807493/with-apt-how-can-i-search-a-specific-repository-for-packages)
+- [What is the meaning of &quot;рыцарь на часах&quot;?](https://russian.stackexchange.com/questions/30716/what-is-the-meaning-of-%d1%80%d1%8b%d1%86%d0%b0%d1%80%d1%8c-%d0%bd%d0%b0-%d1%87%d0%b0%d1%81%d0%b0%d1%85)
+- [Would a planet with a rocky shell and a subsurface ocean explode if it were moved closer to its Sun due to the internal water &#39;boiling&#39; off?](https://worldbuilding.stackexchange.com/questions/274662/would-a-planet-with-a-rocky-shell-and-a-subsurface-ocean-explode-if-it-were-move)
+- [Putting two and three together makes ... ten?](https://puzzling.stackexchange.com/questions/139825/putting-two-and-three-together-makes-ten)
+- [Descartes&#39; Third Meditation: How can ideas of extension be contained &quot;eminently&quot; but not &quot;formally&quot; in a thinking substance?](https://philosophy.stackexchange.com/questions/142248/descartes-third-meditation-how-can-ideas-of-extension-be-contained-eminently)
+- [How to &quot;level up&quot; in Hero Kids](https://rpg.stackexchange.com/questions/220008/how-to-level-up-in-hero-kids)
+- [Why is the incision in the throat made vertically?](https://medicalsciences.stackexchange.com/questions/35074/why-is-the-incision-in-the-throat-made-vertically)
+- [What&#39;s the correct way to give automated user External Credentials access?](https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access)
+ [more hot questions](https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy#)      [Question feed](https://stackoverflow.com/feeds/question/12462747)      lang-py
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

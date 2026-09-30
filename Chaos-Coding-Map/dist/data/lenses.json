@@ -1,0 +1,129 @@
+[
+  {
+    "id": "all",
+    "title": "ALL",
+    "clusters": [],
+    "tags": [],
+    "description": "Canonical graph without lens filtering."
+  },
+  {
+    "id": "fractals",
+    "title": "FRACTALS",
+    "clusters": [
+      "complex dynamics",
+      "dimension + geometry"
+    ],
+    "tags": [
+      "fractal"
+    ],
+    "description": "Fractal families, geometry and diagnostics."
+  },
+  {
+    "id": "chaos",
+    "title": "CHAOS",
+    "clusters": [
+      "complex dynamics",
+      "bridge concepts"
+    ],
+    "tags": [
+      "chaos",
+      "dynamical systems",
+      "iteration"
+    ],
+    "description": "Chaos and iterative dynamics."
+  },
+  {
+    "id": "mathematics",
+    "title": "MATHEMATICS",
+    "clusters": [
+      "complex dynamics",
+      "dimension + geometry",
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "math"
+    ],
+    "description": "Mathematical and algorithmic relations."
+  },
+  {
+    "id": "computation",
+    "title": "COMPUTATION",
+    "clusters": [
+      "machine models",
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "computation",
+      "algorithm"
+    ],
+    "description": "Machine models and algorithms."
+  },
+  {
+    "id": "creative",
+    "title": "CREATIVE CODING",
+    "clusters": [
+      "rendering + creative tools",
+      "openrndr",
+      "bridge concepts"
+    ],
+    "tags": [
+      "creative coding",
+      "rendering",
+      "visualization"
+    ],
+    "description": "Implementation and creative-coding surfaces."
+  },
+  {
+    "id": "openrndr",
+    "title": "OPENRNDR",
+    "clusters": [
+      "openrndr",
+      "bridge concepts",
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "openrndr"
+    ],
+    "description": "OPENRNDR semantic domains plus curated fractal bridges."
+  },
+  {
+    "id": "gpu",
+    "title": "GPU / SHADERS",
+    "clusters": [
+      "openrndr",
+      "bridge concepts"
+    ],
+    "tags": [
+      "gpu",
+      "shader",
+      "rendering"
+    ],
+    "description": "GPU, shader and rendering pathways."
+  },
+  {
+    "id": "dimension",
+    "title": "DIMENSION",
+    "clusters": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension",
+      "geometry"
+    ],
+    "description": "Fractal geometry and dimension."
+  },
+  {
+    "id": "source",
+    "title": "SOURCE GRAPH",
+    "clusters": [],
+    "tags": [],
+    "description": "Emphasize imported source-backed and seed relations."
+  },
+  {
+    "id": "q",
+    "title": "Q-LEARNING",
+    "clusters": [],
+    "tags": [],
+    "description": "Experimental learned navigation utility."
+  }
+]

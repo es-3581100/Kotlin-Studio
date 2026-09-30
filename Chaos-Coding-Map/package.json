@@ -1,0 +1,13 @@
+{
+  "name":"fractal-chaos-coding-map",
+  "version":"0.1.0",
+  "private":true,
+  "type":"module",
+  "scripts":{
+    "data":"python3 scripts/build_data.py",
+    "build":"npm run data && node scripts/build.mjs",
+    "test":"node --test tests/*.test.js",
+    "serve":"./serve.sh"
+  },
+  "engines":{"node":">=20"}
+}

@@ -1,0 +1,34 @@
+{
+  "complex dynamics": {
+    "color": "#36d1dc",
+    "description": "Iterated complex maps, parameter spaces, orbit structure, diagnostics."
+  },
+  "dimension + geometry": {
+    "color": "#ffb347",
+    "description": "Dimension, self-similarity, geometric and 3D fractal forms."
+  },
+  "rendering + creative tools": {
+    "color": "#ff6b9f",
+    "description": "Rendering algorithms, software, image processing, creative coding."
+  },
+  "machine models": {
+    "color": "#9d7cff",
+    "description": "Turing/RAM/real/quantum/hypercomputation models and implementation substrates."
+  },
+  "algorithms + discrete math": {
+    "color": "#7de38d",
+    "description": "Numerical, symbolic, geometric, and combinatorial algorithm neighbors."
+  },
+  "cross-domain": {
+    "color": "#9aa7b7",
+    "description": "Unclassified or connective reference node."
+  },
+  "openrndr": {
+    "color": "#56e6d4",
+    "description": "OPENRNDR semantic domains and source paths imported from the supplied knowledge tree."
+  },
+  "bridge concepts": {
+    "color": "#f8d36a",
+    "description": "Explicit connective concepts used to bridge math, rendering and implementation. Provenance is labeled per edge."
+  }
+}

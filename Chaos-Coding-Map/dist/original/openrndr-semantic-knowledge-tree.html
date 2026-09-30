@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>OPENRNDR — Hyperlinked Knowledge + Repository Tree</title>
+<style>
+:root{
+  --bg:#0b0d10; --panel:#11151a; --panel2:#171c22; --ink:#f4f6f8; --muted:#9ba6b2;
+  --line:#29313a; --accent:#ff4f81; --accent2:#72e7d1; --warn:#ffc857; --good:#8ce99a;
+  --shadow:0 10px 30px rgba(0,0,0,.2);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent2)}
+button,input,select{font:inherit}
+.shell{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:100vh}
+aside{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:#0d1014;padding:18px}
+main{min-width:0;padding:28px 30px 70px}
+.brand{display:flex;gap:11px;align-items:center;margin-bottom:18px}
+.logo{width:34px;height:34px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:900}
+.brand h1{font-size:15px;margin:0}.brand small{display:block;color:var(--muted);font-size:11px}
+.search{width:100%;padding:10px 12px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;outline:none}
+.search:focus{border-color:var(--accent2)}
+.side-title{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:20px 0 7px}
+.side-links a,.side-links button{display:flex;width:100%;gap:8px;align-items:center;padding:6px 8px;border:0;background:transparent;color:var(--muted);text-align:left;cursor:pointer;border-radius:6px}
+.side-links a:hover,.side-links button:hover{background:var(--panel2);color:var(--ink)}
+.count{margin-left:auto;color:var(--accent2)}
+.hero{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:24px}
+.kicker{color:var(--accent2);font-size:12px;text-transform:uppercase;letter-spacing:.13em}
+h2{font-size:clamp(27px,5vw,56px);line-height:1;margin:8px 0 12px;letter-spacing:-.04em}
+.hero p{max-width:780px;color:var(--muted);font-family:system-ui,sans-serif;font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.btn{border:1px solid var(--line);background:var(--panel2);color:var(--ink);padding:9px 12px;border-radius:8px;cursor:pointer}
+.btn:hover{border-color:var(--accent2)}.btn.primary{background:var(--ink);color:#111;border-color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(115px,1fr));gap:10px;margin:20px 0}
+.stat{border:1px solid var(--line);background:var(--panel);padding:13px;border-radius:10px}
+.stat b{font-size:23px;display:block}.stat span{color:var(--muted);font-size:11px;text-transform:uppercase}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}
+.toolbar select,.toolbar input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:9px;border-radius:8px}
+.toolbar .spacer{flex:1}
+.notice{border-left:3px solid var(--accent2);background:var(--panel);padding:12px 14px;color:var(--muted);margin:14px 0;border-radius:0 8px 8px 0}
+.notice.warn{border-color:var(--warn)}
+#indexStatus{white-space:pre-wrap}
+.repo-list{display:grid;gap:12px}
+.repo{border:1px solid var(--line);background:var(--panel);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.repo-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:start;padding:15px}
+.twisty{width:28px;height:28px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:7px;cursor:pointer}
+.repo h3{font-size:16px;margin:0 0 4px;word-break:break-word}
+.repo-desc{color:var(--muted);font-family:system-ui,sans-serif;font-size:13px}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:2px 7px;color:var(--muted);font-size:10px}
+.badge.active{border-color:#315a3a;color:var(--good)} .badge.archived{border-color:#665427;color:var(--warn)}
+.repo-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.repo-links a{border:1px solid var(--line);padding:5px 7px;border-radius:6px;color:var(--muted);font-size:11px}
+.repo-body{display:none;border-top:1px solid var(--line);padding:12px 15px 16px;background:#0e1216}
+.repo.open .repo-body{display:block}
+.tree-tools{display:flex;gap:8px;align-items:center;margin-bottom:8px;color:var(--muted);font-size:11px}
+.tree{font-size:12px}
+.tree ul{list-style:none;margin:0;padding-left:18px;border-left:1px dotted #2c3742}
+.tree>ul{padding-left:2px;border-left:0}
+.tree li{margin:1px 0}
+.node{display:flex;gap:6px;align-items:center;min-width:0;padding:2px 4px;border-radius:4px}
+.node:hover{background:var(--panel2)}
+.node .icon{width:16px;color:var(--muted);flex:none}
+.node a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.path-hit{color:var(--accent2)}
+.empty{color:var(--muted);padding:12px}
+.progress{height:5px;background:var(--panel2);border-radius:999px;overflow:hidden;margin-top:8px;display:none}
+.progress>i{display:block;height:100%;width:0;background:var(--accent2);transition:width .2s}
+#az{display:flex;gap:3px;flex-wrap:wrap}.az{border:1px solid var(--line);padding:3px 6px;border-radius:5px;color:var(--muted)}
+#pathResults{display:none;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin:10px 0 18px;max-height:340px;overflow:auto}
+.path-result{display:grid;grid-template-columns:180px minmax(0,1fr);gap:12px;padding:7px 10px;border-bottom:1px solid var(--line);font-size:12px}
+.path-result:last-child{border-bottom:0}.path-result .rrepo{color:var(--accent2)}
+footer{margin-top:30px;color:var(--muted);font-size:11px;border-top:1px solid var(--line);padding-top:15px}
+code{color:var(--accent2)}
+@media(max-width:820px){
+  .shell{grid-template-columns:1fr} aside{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+  main{padding:22px 14px 60px}.stats{grid-template-columns:repeat(2,1fr)}.hero{display:block}
+  .path-result{grid-template-columns:1fr}.repo-head{grid-template-columns:auto 1fr}.repo-links{grid-column:2;justify-content:flex-start}
+}
+
+/* semantic knowledge layer */
+.knowledge-head{display:flex;gap:14px;justify-content:space-between;align-items:end;margin:34px 0 14px}
+.knowledge-head h4{font-size:24px;margin:0;letter-spacing:-.025em}
+.knowledge-head p{max-width:720px;color:var(--muted);font-family:system-ui,sans-serif;margin:5px 0 0}
+.knowledge-search{max-width:520px;width:100%;padding:10px 12px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px}
+.concept-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.concept{border:1px solid var(--line);background:var(--panel);border-radius:12px;overflow:hidden}
+.concept summary{list-style:none;cursor:pointer;padding:15px}
+.concept summary::-webkit-details-marker{display:none}
+.concept summary:hover{background:var(--panel2)}
+.concept-title{display:flex;align-items:start;gap:10px}
+.concept-icon{font-size:18px;line-height:1.3;width:24px;color:var(--accent2)}
+.concept-title h5{font-size:15px;margin:0}
+.concept-title p{font-family:system-ui,sans-serif;color:var(--muted);font-size:12px;margin:4px 0 0}
+.concept-count{margin-left:auto;color:var(--accent2);font-size:11px;white-space:nowrap}
+.concept-body{border-top:1px solid var(--line);padding:10px 14px 14px}
+.resource-group{margin:8px 0 12px}
+.resource-group-title{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+.resource-list{display:flex;gap:5px;flex-wrap:wrap}
+.resource{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:#0e1216;border-radius:7px;padding:5px 7px;font-size:11px}
+.resource:hover{border-color:var(--accent2)}
+.resource small{color:var(--muted)}
+.locate{border:0;background:transparent;color:var(--accent2);cursor:pointer;padding:0 1px;font-size:10px}
+.discovered{border-top:1px dotted var(--line);margin-top:10px;padding-top:9px}
+.discovered a{display:block;color:var(--muted);font-size:10px;padding:2px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.discovered a:hover{color:var(--accent2)}
+.semantic-meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
+.cross-index{margin-top:18px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.cross-head{display:flex;gap:8px;align-items:center;padding:12px;border-bottom:1px solid var(--line)}
+.cross-head b{font-size:12px}.cross-head input{margin-left:auto;max-width:420px}
+.cross-row{display:grid;grid-template-columns:minmax(190px,.7fr) minmax(0,1.3fr);gap:12px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:11px}
+.cross-row:last-child{border-bottom:0}
+.cross-resource{color:var(--accent2);font-weight:700}
+.cross-concepts{display:flex;gap:5px;flex-wrap:wrap}
+.cross-concepts a{border:1px solid var(--line);border-radius:999px;padding:1px 6px;color:var(--muted)}
+.cross-concepts a:hover{color:var(--ink);border-color:var(--accent2)}
+#conceptNav button .count{font-size:10px}
+@media(max-width:700px){
+ .knowledge-head{display:block}.knowledge-search{margin-top:10px}
+ .cross-row{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<div class="shell">
+<aside>
+  <div class="brand"><div class="logo">O</div><div><h1>OPENRNDR TREE</h1><small>live-linked navigator</small></div></div>
+  <input id="sideSearch" class="search" placeholder="filter repositories…" autocomplete="off">
+  <div class="side-title">Index</div>
+  <div class="side-links">
+    <a href="#top">↟ Overview</a>
+    <a href="#knowledge">◎ Knowledge tree <span id="conceptCount" class="count"></span></a>
+    <a href="#repositories">⌘ Repository tree <span id="sideRepoCount" class="count"></span></a>
+    <a href="#full-index">⌕ Full path index <span id="pathCount" class="count">0</span></a>
+  </div>
+  <div class="side-title">Concepts</div>
+  <div id="conceptNav" class="side-links"></div>
+  <div class="side-title">Repository categories</div>
+  <div id="categoryNav" class="side-links"></div>
+  <div class="side-title">A–Z</div>
+  <div id="az"></div>
+  <div class="side-title">Source</div>
+  <div class="side-links">
+    <a href="https://github.com/openrndr" target="_blank" rel="noopener">↗ github.com/openrndr</a>
+    <a href="https://openrndr.org" target="_blank" rel="noopener">↗ openrndr.org</a>
+    <a href="https://guide.openrndr.org" target="_blank" rel="noopener">↗ guide.openrndr.org</a>
+  </div>
+</aside>
+<main id="top">
+  <section class="hero">
+    <div>
+      <div class="kicker">OPENRNDR organization navigator</div>
+      <h2>Semantic<br>knowledge tree.</h2>
+      <p>A standalone semantic map of OPENRNDR: concepts connect to core modules, ORX modules, guide chapters, examples, workshops, repositories and—when loaded—exact source paths. The underlying GitHub repository tree remains searchable and live-refreshable.</p>
+      <div class="actions">
+        <button class="btn primary" id="refreshBtn">Refresh repositories</button>
+        <button class="btn" id="buildBtn">Build full file index</button>
+        <button class="btn" id="expandBtn">Expand loaded trees</button>
+        <button class="btn" id="exportBtn">Export index JSON</button>
+      </div>
+      <div class="progress" id="progress"><i></i></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><b id="repoCount">33</b><span>repositories</span></div>
+    <div class="stat"><b id="activeCount">—</b><span>active / non-archived</span></div>
+    <div class="stat"><b id="indexedCount">0</b><span>trees indexed</span></div>
+    <div class="stat"><b id="fileCount">0</b><span>paths indexed</span></div>
+  </section>
+
+  <div class="notice" id="indexStatus">Bundled snapshot: 33 repositories. No GitHub API calls have been made yet.</div>
+  <div class="notice warn">GitHub’s unauthenticated public API is rate-limited. “Build full file index” is designed to stay near one request per repository after refreshing metadata. Very large Git trees can be marked <b>truncated</b> by GitHub; the navigator reports that instead of pretending the index is complete.</div>
+
+
+  <section id="knowledge">
+    <div class="knowledge-head">
+      <div>
+        <div class="kicker">Semantic cross-index</div>
+        <h4>Learn by concept, not by repository.</h4>
+        <p>Each branch joins the relevant OPENRNDR core modules, ORX modules, guide chapters, examples, workshops and companion repositories. After you build the live file index, these branches also surface matching source/example paths automatically.</p>
+      </div>
+      <input id="knowledgeSearch" class="knowledge-search" placeholder="search concepts, modules, guide, examples…">
+    </div>
+    <div id="conceptGrid" class="concept-grid"></div>
+
+    <div class="cross-index">
+      <div class="cross-head">
+        <b>Resource ↔ concept cross-index</b>
+        <input id="crossSearch" class="search" placeholder="find a module/resource…">
+      </div>
+      <div id="crossRows"></div>
+    </div>
+  </section>
+
+  <section id="full-index">
+    <div class="toolbar">
+      <input id="pathSearch" class="search" style="max-width:560px" placeholder="search loaded repo + file paths…">
+      <select id="categoryFilter"><option value="">all categories</option></select>
+      <select id="statusFilter">
+        <option value="">all statuses</option>
+        <option value="active">active</option>
+        <option value="archived">archived</option>
+        <option value="template">templates</option>
+      </select>
+      <span class="spacer"></span>
+      <span id="visibleCount" style="color:var(--muted)"></span>
+    </div>
+    <div id="pathResults"></div>
+  </section>
+
+  <section id="repositories">
+    <div id="repoList" class="repo-list"></div>
+  </section>
+
+  <footer>
+    Generated as an independent navigator for public OPENRNDR repositories. Data refreshed in-browser comes directly from GitHub’s public API. This file does not embed a GitHub credential.
+  </footer>
+</main>
+</div>
+<script>
+const ORG = "openrndr";
+
+const SEMANTIC_CONCEPTS = [
+  {
+    id:"start", icon:"→", title:"Getting Started",
+    description:"Setup, first program, templates and the canonical learning path.",
+    keywords:["setup","firstprogram","basics","program","application","template"],
+    resources:[
+      ["Guide · Requirements","guide","https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C10_Requirements.kt","openrndr-guide","src/main/kotlin/docs/C10_Requirements.kt"],
+      ["Guide · First program","guide","https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt","openrndr-guide","src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt"],
+      ["openrndr-template","template","https://github.com/openrndr/openrndr-template","openrndr-template",""],
+      ["openrndr-examples","examples","https://github.com/openrndr/openrndr-examples","openrndr-examples","src/main/kotlin/examples"]
+    ]
+  },
+  {
+    id:"runtime", icon:"◉", title:"Application & Runtime",
+    description:"Program lifecycle, events, windows, platform services and application infrastructure.",
+    keywords:["application","event","window","platform","program","runtime"],
+    resources:[
+      ["openrndr-application","core","https://github.com/openrndr/openrndr/tree/master/openrndr-application","openrndr","openrndr-application"],
+      ["openrndr-event","core","https://github.com/openrndr/openrndr/tree/master/openrndr-event","openrndr","openrndr-event"],
+      ["openrndr-platform","core","https://github.com/openrndr/openrndr/tree/master/openrndr-platform","openrndr","openrndr-platform"],
+      ["openrndr-utils","core","https://github.com/openrndr/openrndr/tree/master/openrndr-utils","openrndr","openrndr-utils"],
+      ["Guide · Program basics","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/20_Program_basics","openrndr-guide","src/main/kotlin/docs/20_Program_basics"]
+    ]
+  },
+  {
+    id:"drawing", icon:"✦", title:"Drawing & Rendering",
+    description:"Drawer, render targets, filters, compositing, effects and image presentation.",
+    keywords:["draw","drawer","render","filter","compositor","fx","imagefit","colorbuffer"],
+    resources:[
+      ["openrndr-draw","core","https://github.com/openrndr/openrndr/tree/master/openrndr-draw","openrndr","openrndr-draw"],
+      ["openrndr-filter","core","https://github.com/openrndr/openrndr/tree/master/openrndr-filter","openrndr","openrndr-filter"],
+      ["orx-fx","orx","https://github.com/openrndr/orx/tree/master/orx-fx","orx","orx-fx"],
+      ["orx-compositor","orx","https://github.com/openrndr/orx/tree/master/orx-compositor","orx","orx-compositor"],
+      ["orx-image-fit","orx","https://github.com/openrndr/orx/tree/master/orx-image-fit","orx","orx-image-fit"],
+      ["orx-no-clear","orx","https://github.com/openrndr/orx/tree/master/orx-no-clear","orx","orx-no-clear"],
+      ["Guide · Drawing","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/30_Drawing","openrndr-guide","src/main/kotlin/docs/30_Drawing"],
+      ["Examples · Drawing","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/30_Drawing","openrndr-examples","src/main/kotlin/examples/30_Drawing"]
+    ]
+  },
+  {
+    id:"geometry", icon:"△", title:"Shapes & Geometry",
+    description:"Contours, paths, tessellation, triangulation, compositions and constructive geometry.",
+    keywords:["shape","contour","segment","path","geometry","triang","tessell","composition","marching"],
+    resources:[
+      ["openrndr-shape","core","https://github.com/openrndr/openrndr/tree/master/openrndr-shape","openrndr","openrndr-shape"],
+      ["openrndr-kartifex","core","https://github.com/openrndr/openrndr/tree/master/openrndr-kartifex","openrndr","openrndr-kartifex"],
+      ["openrndr-ktessellation","core","https://github.com/openrndr/openrndr/tree/master/openrndr-ktessellation","openrndr","openrndr-ktessellation"],
+      ["orx-shapes","orx","https://github.com/openrndr/orx/tree/master/orx-shapes","orx","orx-shapes"],
+      ["orx-composition","orx","https://github.com/openrndr/orx/tree/master/orx-composition","orx","orx-composition"],
+      ["orx-triangulation","orx","https://github.com/openrndr/orx/tree/master/orx-triangulation","orx","orx-triangulation"],
+      ["orx-marching-squares","orx","https://github.com/openrndr/orx/tree/master/orx-marching-squares","orx","orx-marching-squares"]
+    ]
+  },
+  {
+    id:"math", icon:"∑", title:"Math & Spatial Structures",
+    description:"Vectors, matrices, spatial indexes, fields, optimization and simulation helpers.",
+    keywords:["math","vector","matrix","kdtree","quadtree","hashgrid","bvh","gradient","force"],
+    resources:[
+      ["openrndr-math","core","https://github.com/openrndr/openrndr/tree/master/openrndr-math","openrndr","openrndr-math"],
+      ["orx-math","orx","https://github.com/openrndr/orx/tree/master/orx-math","orx","orx-math"],
+      ["orx-kdtree","orx","https://github.com/openrndr/orx/tree/master/orx-kdtree","orx","orx-kdtree"],
+      ["orx-quadtree","orx","https://github.com/openrndr/orx/tree/master/orx-quadtree","orx","orx-quadtree"],
+      ["orx-hash-grid","orx","https://github.com/openrndr/orx/tree/master/orx-hash-grid","orx","orx-hash-grid"],
+      ["orx-bvh","orx","https://github.com/openrndr/orx/tree/master/orx-bvh","orx","orx-bvh"],
+      ["orx-gradient-descent","orx","https://github.com/openrndr/orx/tree/master/orx-gradient-descent","orx","orx-gradient-descent"],
+      ["orx-force-2d","orx","https://github.com/openrndr/orx/tree/master/orx-force-2d","orx","orx-force-2d"]
+    ]
+  },
+  {
+    id:"color", icon:"◐", title:"Color & Palettes",
+    description:"Core color types, transformations, palettes and color-oriented extensions.",
+    keywords:["color","palette","rgb","hsl","hsv","lab"],
+    resources:[
+      ["openrndr-color","core","https://github.com/openrndr/openrndr/tree/master/openrndr-color","openrndr","openrndr-color"],
+      ["orx-color","orx","https://github.com/openrndr/orx/tree/master/orx-color","orx","orx-color"],
+      ["orx-palette","orx","https://github.com/openrndr/orx/tree/master/orx-palette","orx","orx-palette"]
+    ]
+  },
+  {
+    id:"animation", icon:"≈", title:"Animation & Time",
+    description:"Animatables, easing, envelopes, curves, clocks and temporal effects.",
+    keywords:["animat","easing","envelope","fcurve","time","timer","temporal","keyframe"],
+    resources:[
+      ["openrndr-animatable","core","https://github.com/openrndr/openrndr/tree/master/openrndr-animatable","openrndr","openrndr-animatable"],
+      ["orx-easing","orx","https://github.com/openrndr/orx/tree/master/orx-easing","orx","orx-easing"],
+      ["orx-envelopes","orx","https://github.com/openrndr/orx/tree/master/orx-envelopes","orx","orx-envelopes"],
+      ["orx-fcurve","orx","https://github.com/openrndr/orx/tree/master/orx-fcurve","orx","orx-fcurve"],
+      ["orx-time-operators","orx","https://github.com/openrndr/orx/tree/master/orx-time-operators","orx","orx-time-operators"],
+      ["orx-timer","orx","https://github.com/openrndr/orx/tree/master/orx-timer","orx","orx-timer"],
+      ["orx-temporal-blur","orx","https://github.com/openrndr/orx/tree/master/orx-temporal-blur","orx","orx-temporal-blur"],
+      ["Guide · Animation","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/50_Animation","openrndr-guide","src/main/kotlin/docs/50_Animation"],
+      ["Examples · Animation","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/50_Animation","openrndr-examples","src/main/kotlin/examples/50_Animation"]
+    ]
+  },
+  {
+    id:"shaders", icon:"◇", title:"Shaders & GPU",
+    description:"Shade styles, shader composition, shader phrases and the ORSL shader-language project.",
+    keywords:["shader","shade","glsl","gpu","uniform","vertex","fragment","orsl"],
+    resources:[
+      ["openrndr-gl-common","core","https://github.com/openrndr/openrndr/tree/master/openrndr-gl-common","openrndr","openrndr-gl-common"],
+      ["orx-shade-styles","orx","https://github.com/openrndr/orx/tree/master/orx-shade-styles","orx","orx-shade-styles"],
+      ["orx-shader-phrases","orx","https://github.com/openrndr/orx/tree/master/orx-shader-phrases","orx","orx-shader-phrases"],
+      ["orsl","repo","https://github.com/openrndr/orsl","orsl",""],
+      ["Guide · Advanced topics","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/90_Advanced_Topics","openrndr-guide","src/main/kotlin/docs/90_Advanced_Topics"]
+    ]
+  },
+  {
+    id:"camera3d", icon:"⬡", title:"Camera, Mesh & 3D",
+    description:"Cameras, depth cameras, meshes, loaders, generators and mesh deformation/noise.",
+    keywords:["camera","mesh","obj","depth","3d","projection","perspective"],
+    resources:[
+      ["orx-camera","orx","https://github.com/openrndr/orx/tree/master/orx-camera","orx","orx-camera"],
+      ["orx-depth-camera","orx","https://github.com/openrndr/orx/tree/master/orx-depth-camera","orx","orx-depth-camera"],
+      ["orx-mesh","orx","https://github.com/openrndr/orx/tree/master/orx-mesh","orx","orx-mesh"],
+      ["orx-mesh-generators","orx","https://github.com/openrndr/orx/tree/master/orx-mesh-generators","orx","orx-mesh-generators"],
+      ["orx-mesh-noise","orx","https://github.com/openrndr/orx/tree/master/orx-mesh-noise","orx","orx-mesh-noise"],
+      ["orx-obj-loader","orx","https://github.com/openrndr/orx/tree/master/orx-obj-loader","orx","orx-obj-loader"],
+      ["software-cameras","workshop","https://github.com/openrndr/software-cameras","software-cameras",""]
+    ]
+  },
+  {
+    id:"imagecv", icon:"▣", title:"Images & Computer Vision",
+    description:"Image fitting, integral images, distance fields and computer-vision integrations.",
+    keywords:["image","integral","jumpflood","distance","boof","vision","pixel"],
+    resources:[
+      ["orx-image-fit","orx","https://github.com/openrndr/orx/tree/master/orx-image-fit","orx","orx-image-fit"],
+      ["orx-integral-image","orx","https://github.com/openrndr/orx/tree/master/orx-integral-image","orx","orx-integral-image"],
+      ["orx-jumpflood","orx","https://github.com/openrndr/orx/tree/master/orx-jumpflood","orx","orx-jumpflood"],
+      ["openrndr-x-boofcv","integration","https://github.com/openrndr/openrndr-x-boofcv","openrndr-x-boofcv",""]
+    ]
+  },
+  {
+    id:"signals", icon:"∿", title:"Audio & Signals",
+    description:"FFT and workshop material for sound-reactive or signal-driven creative coding.",
+    keywords:["fft","audio","sound","frequency","signal","spectrum"],
+    resources:[
+      ["orx-fft","orx","https://github.com/openrndr/orx/tree/master/orx-fft","orx","orx-fft"],
+      ["workshop-greyspace","workshop","https://github.com/openrndr/workshop-greyspace","workshop-greyspace",""]
+    ]
+  },
+  {
+    id:"textsvg", icon:"T", title:"Text, SVG & Typography",
+    description:"Text layout, text along contours, SVG and vector composition workflows.",
+    keywords:["text","writer","font","svg","typography","contour"],
+    resources:[
+      ["orx-text-writer","orx","https://github.com/openrndr/orx/tree/master/orx-text-writer","orx","orx-text-writer"],
+      ["orx-text-on-contour","orx","https://github.com/openrndr/orx/tree/master/orx-text-on-contour","orx","orx-text-on-contour"],
+      ["orx-svg","orx","https://github.com/openrndr/orx/tree/master/orx-svg","orx","orx-svg"],
+      ["orx-composition","orx","https://github.com/openrndr/orx/tree/master/orx-composition","orx","orx-composition"]
+    ]
+  },
+  {
+    id:"interaction", icon:"⌁", title:"Interaction, Parameters & Live Control",
+    description:"Input/events, parameters, property watching and interactive extension patterns.",
+    keywords:["mouse","keyboard","interaction","parameter","property","watcher","event"],
+    resources:[
+      ["openrndr-event","core","https://github.com/openrndr/openrndr/tree/master/openrndr-event","openrndr","openrndr-event"],
+      ["orx-parameters","orx","https://github.com/openrndr/orx/tree/master/orx-parameters","orx","orx-parameters"],
+      ["orx-property-watchers","orx","https://github.com/openrndr/orx/tree/master/orx-property-watchers","orx","orx-property-watchers"],
+      ["Guide · Interaction","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/40_Interaction","openrndr-guide","src/main/kotlin/docs/40_Interaction"],
+      ["Examples · Interaction","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/40_Interaction","openrndr-examples","src/main/kotlin/examples/40_Interaction"]
+    ]
+  },
+  {
+    id:"procedural", icon:"⌘", title:"Procedural & Generative Systems",
+    description:"Noise, turtle systems, force fields and building blocks for generative graphics.",
+    keywords:["noise","turtle","generative","random","force","field","procedural"],
+    resources:[
+      ["orx-noise","orx","https://github.com/openrndr/orx/tree/master/orx-noise","orx","orx-noise"],
+      ["orx-turtle","orx","https://github.com/openrndr/orx/tree/master/orx-turtle","orx","orx-turtle"],
+      ["orx-force-2d","orx","https://github.com/openrndr/orx/tree/master/orx-force-2d","orx","orx-force-2d"],
+      ["workshop-generative-posters","workshop","https://github.com/openrndr/workshop-generative-posters","workshop-generative-posters",""],
+      ["workshop-generative-identities","workshop","https://github.com/openrndr/workshop-generative-identities","workshop-generative-identities",""]
+    ]
+  },
+  {
+    id:"fabrication", icon:"⌇", title:"Plotters & Fabrication",
+    description:"G-code, turtle/path generation and data-driven poster / physical-output workflows.",
+    keywords:["g-code","gcode","plotter","turtle","poster","print"],
+    resources:[
+      ["orx-g-code","orx","https://github.com/openrndr/orx/tree/master/orx-g-code","orx","orx-g-code"],
+      ["orx-turtle","orx","https://github.com/openrndr/orx/tree/master/orx-turtle","orx","orx-turtle"],
+      ["workshop-data-posters","workshop","https://github.com/openrndr/workshop-data-posters","workshop-data-posters",""],
+      ["workshop-torino","workshop","https://github.com/openrndr/workshop-torino","workshop-torino",""]
+    ]
+  },
+  {
+    id:"web", icon:"JS", title:"Web & Kotlin/JS",
+    description:"OPENRNDR on JavaScript/web targets, web demos, templates and the project website.",
+    keywords:["javascript","kotlinjs","web","browser","js"],
+    resources:[
+      ["openrndr-js","core","https://github.com/openrndr/openrndr/tree/master/openrndr-js","openrndr","openrndr-js"],
+      ["openrndr-web-demo","core","https://github.com/openrndr/openrndr/tree/master/openrndr-web-demo","openrndr","openrndr-web-demo"],
+      ["openrndr-js-template","template","https://github.com/openrndr/openrndr-js-template","openrndr-js-template",""],
+      ["openrndr-website","website","https://github.com/openrndr/openrndr-website","openrndr-website",""]
+    ]
+  },
+  {
+    id:"learning", icon:"?", title:"Guide, Examples & Use Cases",
+    description:"The learning corpus: guide, canonical examples, ORX chapter, advanced topics and use cases.",
+    keywords:["docs","guide","example","tutorial","usecase","advanced"],
+    resources:[
+      ["Guide source","guide","https://github.com/openrndr/openrndr-guide","openrndr-guide","src/main/kotlin/docs"],
+      ["Examples source","examples","https://github.com/openrndr/openrndr-examples","openrndr-examples","src/main/kotlin/examples"],
+      ["Guide · ORX","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/80_ORX","openrndr-guide","src/main/kotlin/docs/80_ORX"],
+      ["Examples · ORX","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/80_ORX","openrndr-examples","src/main/kotlin/examples/80_ORX"],
+      ["Guide · Use cases","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/95_Use_cases","openrndr-guide","src/main/kotlin/docs/95_Use_cases"],
+      ["Examples · Use cases","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/95_Use_cases","openrndr-examples","src/main/kotlin/examples/95_Use_cases"],
+      ["Guide · Best practices","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/98_Best_practices","openrndr-guide","src/main/kotlin/docs/98_Best_practices"]
+    ]
+  },
+  {
+    id:"extensions", icon:"+", title:"Extensions & ORX",
+    description:"How OPENRNDR extensions fit together, including the large ORX module collection.",
+    keywords:["extension","orx","module"],
+    resources:[
+      ["Guide · Extensions","guide","https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/45_Extensions","openrndr-guide","src/main/kotlin/docs/45_Extensions"],
+      ["Examples · Extensions","examples","https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/45_Extensions","openrndr-examples","src/main/kotlin/examples/45_Extensions"],
+      ["ORX repository","orx","https://github.com/openrndr/orx","orx",""],
+      ["ORX demos","examples","https://github.com/openrndr/orx/tree/master/openrndr-demos","orx","openrndr-demos"],
+      ["ORX module catalog","catalog","https://github.com/openrndr/orx/tree/master/orx-module-catalog","orx","orx-module-catalog"]
+    ]
+  },
+  {
+    id:"devtools", icon:"⚙", title:"Developer Tooling",
+    description:"IDE support, templates, build helpers, module catalogs and CI graphics setup.",
+    keywords:["gradle","intellij","build","modulecatalog","setup","tool"],
+    resources:[
+      ["openrndr-intellij","tooling","https://github.com/openrndr/openrndr-intellij","openrndr-intellij",""],
+      ["openrndr-intellij-settings","tooling","https://github.com/openrndr/openrndr-intellij-settings","openrndr-intellij-settings",""],
+      ["openrndr-template","template","https://github.com/openrndr/openrndr-template","openrndr-template",""],
+      ["openrndr-dev-template","template","https://github.com/openrndr/openrndr-dev-template","openrndr-dev-template",""],
+      ["setup-opengl","tooling","https://github.com/openrndr/setup-opengl","setup-opengl",""],
+      ["core module catalog","catalog","https://github.com/openrndr/openrndr/tree/master/openrndr-module-catalog","openrndr","openrndr-module-catalog"]
+    ]
+  }
+].map(c=>({...c,resources:c.resources.map(r=>({name:r[0],kind:r[1],url:r[2],repo:r[3],path:r[4]}))}));
+
+function conceptHits(concept, limit=12){
+  if(!pathIndex.length) return [];
+  const kws=concept.keywords.map(k=>k.toLowerCase());
+  return pathIndex.map(x=>{
+    const p=(x.repo+"/"+x.path).toLowerCase();
+    let score=0;
+    for(const k of kws) if(p.includes(k)) score += k.length + (p.endsWith(k)?3:0);
+    return {x,score};
+  }).filter(v=>v.score>0).sort((a,b)=>b.score-a.score || a.x.path.length-b.x.path.length).slice(0,limit).map(v=>v.x);
+}
+
+function resourceHTML(r){
+  const locate = r.repo ? `<button class="locate" data-locate-repo="${esc(r.repo)}" data-locate-path="${esc(r.path||"")}" title="Locate in loaded file index">⌕</button>` : "";
+  return `<span class="resource"><small>${esc(r.kind)}</small><a href="${r.url}" target="_blank" rel="noopener">${esc(r.name)} ↗</a>${locate}</span>`;
+}
+
+function renderKnowledge(){
+  const q=($("#knowledgeSearch")?.value||"").trim().toLowerCase();
+  const concepts=SEMANTIC_CONCEPTS.filter(c=>{
+    const hay=[c.title,c.description,c.keywords.join(" "),...c.resources.flatMap(r=>[r.name,r.kind,r.repo,r.path])].join(" ").toLowerCase();
+    return !q || hay.includes(q);
+  });
+  $("#conceptCount").textContent=SEMANTIC_CONCEPTS.length;
+  $("#conceptGrid").innerHTML=concepts.map(c=>{
+    const groups={};
+    for(const r of c.resources) (groups[r.kind]??=[]).push(r);
+    const groupHTML=Object.entries(groups).map(([kind,rs])=>`<div class="resource-group"><div class="resource-group-title">${esc(kind)}</div><div class="resource-list">${rs.map(resourceHTML).join("")}</div></div>`).join("");
+    const hits=conceptHits(c);
+    const live = pathIndex.length ? `<div class="discovered"><div class="resource-group-title">auto-discovered in loaded file trees · ${hits.length} shown</div>${hits.map(h=>`<a href="${h.url}" target="_blank" rel="noopener">${esc(h.repo)} / ${esc(h.path)}</a>`).join("") || '<div class="empty">No keyword matches in loaded trees.</div>'}</div>` : `<div class="discovered"><div class="empty">Build the full file index to auto-discover source and example paths for this concept.</div></div>`;
+    return `<details class="concept" id="concept-${c.id}" ${q?'open':''}>
+      <summary><div class="concept-title"><span class="concept-icon">${c.icon}</span><div><h5>${esc(c.title)}</h5><p>${esc(c.description)}</p><div class="semantic-meta">${c.keywords.slice(0,6).map(k=>`<span class="badge">${esc(k)}</span>`).join("")}</div></div><span class="concept-count">${c.resources.length} seeded</span></div></summary>
+      <div class="concept-body">${groupHTML}${live}</div>
+    </details>`;
+  }).join("") || '<div class="empty">No semantic branches match.</div>';
+  $("#conceptGrid").querySelectorAll("[data-locate-repo]").forEach(b=>b.onclick=()=>locateResource(b.dataset.locateRepo,b.dataset.locatePath));
+  renderConceptNav();
+}
+
+function renderConceptNav(){
+  const nav=$("#conceptNav"); if(!nav) return;
+  nav.innerHTML=SEMANTIC_CONCEPTS.map(c=>`<button data-concept="${c.id}">${esc(c.title)} <span class="count">${c.resources.length}</span></button>`).join("");
+  nav.querySelectorAll("button").forEach(b=>b.onclick=()=>{
+    const el=document.getElementById("concept-"+b.dataset.concept);
+    if(el){el.open=true; el.scrollIntoView({behavior:"smooth",block:"start"});}
+  });
+}
+
+function locateResource(repo,path){
+  if(!pathIndex.length){
+    setStatus(`The live file index is not built yet. Build it first, then “locate” can jump from a semantic resource into exact indexed paths.`);
+    location.hash="full-index";
+    return;
+  }
+  $("#pathSearch").value = path ? `${repo}/${path}` : repo;
+  renderPathSearch();
+  location.hash="full-index";
+}
+
+function buildResourceCrossIndex(){
+  const m=new Map();
+  for(const c of SEMANTIC_CONCEPTS){
+    for(const r of c.resources){
+      const key=r.repo+"|"+r.path+"|"+r.name;
+      if(!m.has(key)) m.set(key,{...r,concepts:[]});
+      m.get(key).concepts.push(c);
+    }
+  }
+  return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name));
+}
+const RESOURCE_CROSS_INDEX = buildResourceCrossIndex();
+
+function renderCrossIndex(){
+  const q=($("#crossSearch")?.value||"").trim().toLowerCase();
+  const rows=RESOURCE_CROSS_INDEX.filter(r=>{
+    const hay=[r.name,r.kind,r.repo,r.path,...r.concepts.map(c=>c.title)].join(" ").toLowerCase();
+    return !q || hay.includes(q);
+  });
+  $("#crossRows").innerHTML=rows.map(r=>`<div class="cross-row">
+    <div><a class="cross-resource" href="${r.url}" target="_blank" rel="noopener">${esc(r.name)} ↗</a><div style="color:var(--muted)">${esc(r.repo)}${r.path?" / "+esc(r.path):""}</div></div>
+    <div class="cross-concepts">${r.concepts.map(c=>`<a href="#concept-${c.id}" data-open-concept="${c.id}">${esc(c.title)}</a>`).join("")}</div>
+  </div>`).join("") || '<div class="empty">No cross-index matches.</div>';
+  $("#crossRows").querySelectorAll("[data-open-concept]").forEach(a=>a.onclick=()=>{
+    const el=document.getElementById("concept-"+a.dataset.openConcept); if(el) el.open=true;
+  });
+}
+
+let repos = [{"name": "orx", "description": "A growing library of assorted data structures, algorithms and utilities for OPENRNDR", "language": "Kotlin", "category": "Extensions", "archived": false, "template": false}, {"name": "openrndr-guide", "description": "Source files for the OPENRNDR guide", "language": "Kotlin", "category": "Documentation", "archived": false, "template": false}, {"name": "openrndr-template", "description": "Feature-rich Gradle/Kts template for OPENRNDR programs", "language": "Kotlin", "category": "Templates", "archived": false, "template": true}, {"name": "openrndr-examples", "description": "Example programs for the OPENRNDR creative coding framework", "language": "Kotlin", "category": "Examples", "archived": false, "template": false}, {"name": "openrndr-intellij", "description": "OPENRNDR plugin for IntelliJ", "language": "Kotlin", "category": "Tooling", "archived": false, "template": false}, {"name": "openrndr", "description": "OPENRNDR Kotlin/JVM library for creative coding, real-time and interactive graphics", "language": "Kotlin", "category": "Core", "archived": false, "template": false}, {"name": "setup-opengl", "description": "Sets up an SWR-based OpenGL environment for GitHub Actions workflows", "language": "JavaScript", "category": "Tooling", "archived": false, "template": false}, {"name": "openrndr-js-template", "description": "OPENRNDR + Kotlin/JS template", "language": "Kotlin", "category": "Templates", "archived": false, "template": true}, {"name": "orsl", "description": "Shader language in Kotlin DSL", "language": "Kotlin", "category": "Core / Graphics", "archived": false, "template": false}, {"name": "angle", "description": "Conformant OpenGL ES implementation for Windows, Mac, Linux, iOS and Android", "language": "C++", "category": "Dependencies / Forks", "archived": false, "template": false}, {"name": "awesome-openrndr", "description": "Community-maintained list of OPENRNDR-based and related projects", "language": "JavaScript", "category": "Community", "archived": false, "template": false}, {"name": "orml", "description": "OPENRNDR Machine Learning", "language": "Kotlin", "category": "Extensions", "archived": false, "template": false}, {"name": "dokgen", "description": "Generate documentation from annotated Kotlin source code", "language": "Kotlin", "category": "Archive", "archived": true, "template": false}, {"name": "workshop-data-posters", "description": "OPENRNDR workshop: data-driven posters", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-osc-workshop", "description": "OPENRNDR OSC workshop material", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "software-cameras", "description": "Software cameras workshop / lecture code", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-intellij-settings", "description": "IntelliJ IDEA settings tuned for OPENRNDR development", "language": "", "category": "Tooling", "archived": false, "template": false}, {"name": "design-from-data-1", "description": "Design-from-data workshop/project material", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-website", "description": "OPENRNDR website", "language": "Vue", "category": "Website", "archived": false, "template": false}, {"name": "openrndr-dev-template", "description": "Development monorepo with OPENRNDR-related submodules", "language": "", "category": "Templates", "archived": false, "template": false}, {"name": "workshop-torino", "description": "CODE+PRINT / PRINT+CODE workshop", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-panel", "description": "Panel user-interface toolkit for OPENRNDR", "language": "Kotlin", "category": "Archive", "archived": true, "template": false}, {"name": "workshop-greyspace", "description": "OPENRNDR workshop files covering audio, video, MIDI and OSC", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-gradle-template", "description": "Abandoned Gradle-based OPENRNDR project template", "language": "Kotlin", "category": "Archive", "archived": true, "template": false}, {"name": "openrndr-tutorials", "description": "Abandoned tutorial repository accompanying the OPENRNDR guide", "language": "Kotlin", "category": "Archive", "archived": true, "template": false}, {"name": "workshop-tumo", "description": "Workshop repository for TUMO", "language": "HTML", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-workshop-live-posters", "description": "Repository with live posters", "language": "HTML", "category": "Workshops", "archived": false, "template": false}, {"name": "workshop-generative-posters", "description": "Generative and Data-Driven Posters workshop code", "language": "HTML", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-demos-span-2018", "description": "OPENRNDR demos from 2018", "language": "Kotlin", "category": "Examples / Historical", "archived": false, "template": false}, {"name": "openrndr-api", "description": "Historical OPENRNDR API material", "language": "HTML", "category": "Archive", "archived": true, "template": false}, {"name": "workshop-generative-identities", "description": "Generative identities workshop material", "language": "Kotlin", "category": "Workshops", "archived": false, "template": false}, {"name": "openrndr-x-boofcv", "description": "BoofCV examples ported to OPENRNDR + Kotlin", "language": "Kotlin", "category": "Integrations", "archived": false, "template": false}, {"name": "openrndr-panel-examples", "description": "Examples for openrndr-panel", "language": "Kotlin", "category": "Examples / Historical", "archived": false, "template": false}];
+let repoTrees = new Map();
+let pathIndex = [];
+let expandedLoaded = false;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+
+function classify(r) {
+  if (r.archived) return "Archive";
+  const n = r.name.toLowerCase();
+  if (n === "openrndr") return "Core";
+  if (n === "orx" || n === "orml") return "Extensions";
+  if (n === "orsl") return "Core / Graphics";
+  if (n.includes("guide")) return "Documentation";
+  if (n.includes("template")) return "Templates";
+  if (n.includes("example") || n.includes("demo")) return "Examples";
+  if (n.includes("workshop") || n === "software-cameras" || n === "design-from-data-1") return "Workshops";
+  if (n.includes("intellij") || n === "setup-opengl") return "Tooling";
+  if (n.includes("website")) return "Website";
+  if (n.includes("awesome")) return "Community";
+  if (n.includes("boofcv")) return "Integrations";
+  if (n === "angle" || r.fork) return "Dependencies / Forks";
+  return r.category || "Other";
+}
+
+function normalizeRepo(r) {
+  return {
+    name:r.name,
+    description:r.description || "",
+    language:r.language || "",
+    category:classify(r),
+    archived:!!r.archived,
+    template:!!(r.is_template ?? r.template),
+    fork:!!r.fork,
+    default_branch:r.default_branch || r.defaultBranch || "",
+    stars:r.stargazers_count ?? r.stars ?? null,
+    updated:r.updated_at || r.updated || "",
+    html_url:r.html_url || `https://github.com/${ORG}/${r.name}`
+  };
+}
+repos = repos.map(normalizeRepo);
+
+function renderNav() {
+  const cats = [...new Set(repos.map(r=>r.category))].sort();
+  $("#categoryNav").innerHTML = cats.map(c=>{
+    const count = repos.filter(r=>r.category===c).length;
+    return `<button data-cat="${esc(c)}">${esc(c)} <span class="count">${count}</span></button>`;
+  }).join("");
+  $("#categoryFilter").innerHTML = `<option value="">all categories</option>` + cats.map(c=>`<option>${esc(c)}</option>`).join("");
+  $("#categoryNav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
+    $("#categoryFilter").value=b.dataset.cat; applyFilters(); location.hash="repositories";
+  });
+  const letters=[...new Set(repos.map(r=>r.name[0].toUpperCase()))].sort();
+  $("#az").innerHTML=letters.map(l=>`<button class="az btn" data-letter="${l}">${l}</button>`).join("");
+  $("#az").querySelectorAll("button").forEach(b=>b.onclick=()=>{
+    $("#sideSearch").value=""; $("#categoryFilter").value=""; $("#statusFilter").value="";
+    renderRepos(repos.filter(r=>r.name[0].toUpperCase()===b.dataset.letter));
+    location.hash="repositories";
+  });
+}
+
+function badgeHTML(r) {
+  const bits=[];
+  bits.push(`<span class="badge ${r.archived?'archived':'active'}">${r.archived?'archived':'active'}</span>`);
+  if(r.template) bits.push(`<span class="badge">template</span>`);
+  if(r.fork) bits.push(`<span class="badge">fork</span>`);
+  if(r.language) bits.push(`<span class="badge">${esc(r.language)}</span>`);
+  bits.push(`<span class="badge">${esc(r.category)}</span>`);
+  if(r.stars !== null) bits.push(`<span class="badge">★ ${Number(r.stars).toLocaleString()}</span>`);
+  return bits.join("");
+}
+
+function renderRepos(list=repos) {
+  $("#visibleCount").textContent=`${list.length} shown`;
+  $("#repoList").innerHTML=list.map(r=>{
+    const branch=r.default_branch || "HEAD";
+    const treeLoaded=repoTrees.has(r.name);
+    const rootTree=`https://github.com/${ORG}/${encodeURIComponent(r.name)}/tree/${encodeURIComponent(branch)}`;
+    return `<article class="repo ${treeLoaded && expandedLoaded?'open':''}" id="repo-${slug(r.name)}" data-name="${esc(r.name)}">
+      <div class="repo-head">
+        <button class="twisty" aria-label="Toggle ${esc(r.name)}" data-toggle="${esc(r.name)}">${treeLoaded && expandedLoaded?'−':'+'}</button>
+        <div>
+          <h3><a href="${r.html_url}" target="_blank" rel="noopener">${esc(r.name)} ↗</a></h3>
+          <div class="repo-desc">${esc(r.description || "No repository description.")}</div>
+          <div class="badges">${badgeHTML(r)}</div>
+        </div>
+        <div class="repo-links">
+          <a href="${r.html_url}" target="_blank" rel="noopener">repo</a>
+          <a href="${r.html_url}/issues" target="_blank" rel="noopener">issues</a>
+          <a href="${r.html_url}/pulls" target="_blank" rel="noopener">pulls</a>
+          <a href="${r.html_url}/commits/${encodeURIComponent(branch)}" target="_blank" rel="noopener">commits</a>
+          ${r.default_branch?`<a href="${rootTree}" target="_blank" rel="noopener">root tree</a>`:""}
+        </div>
+      </div>
+      <div class="repo-body">
+        <div class="tree-tools"><span data-tree-status="${esc(r.name)}">${treeLoaded?treeSummary(r.name):"tree not loaded"}</span></div>
+        <div class="tree" data-tree="${esc(r.name)}">${treeLoaded?renderTreeFor(r):'<div class="empty">Open this repository to load its recursive Git tree.</div>'}</div>
+      </div>
+    </article>`;
+  }).join("");
+  $("#repoList").querySelectorAll("[data-toggle]").forEach(btn=>btn.onclick=()=>toggleRepo(btn.dataset.toggle));
+}
+
+function treeSummary(name) {
+  const t=repoTrees.get(name);
+  if(!t) return "tree not loaded";
+  return `${t.entries.length.toLocaleString()} paths${t.truncated?' · ⚠ GitHub marked recursive tree truncated':''}`;
+}
+
+async function toggleRepo(name) {
+  const el=document.getElementById(`repo-${slug(name)}`);
+  if(!el) return;
+  const opening=!el.classList.contains("open");
+  el.classList.toggle("open", opening);
+  const btn=el.querySelector("[data-toggle]");
+  btn.textContent=opening?'−':'+';
+  if(opening && !repoTrees.has(name)) {
+    const r=repos.find(x=>x.name===name);
+    const holder=el.querySelector(`[data-tree="${CSS.escape(name)}"]`);
+    const status=el.querySelector(`[data-tree-status="${CSS.escape(name)}"]`);
+    holder.innerHTML='<div class="empty">Loading recursive Git tree…</div>';
+    try{
+      await loadRepoTree(r);
+      status.textContent=treeSummary(name);
+      holder.innerHTML=renderTreeFor(r);
+      rebuildPathIndex();
+      updateStats();
+    }catch(e){
+      status.textContent="tree load failed";
+      holder.innerHTML=`<div class="empty">${esc(e.message)}</div>`;
+    }
+  }
+}
+
+async function gh(url) {
+  const res=await fetch(url,{headers:{Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"}});
+  if(!res.ok) {
+    const remaining=res.headers.get("x-ratelimit-remaining");
+    throw new Error(`GitHub API ${res.status}${remaining!==null?` · remaining=${remaining}`:""}`);
+  }
+  return res.json();
+}
+
+async function refreshRepos() {
+  setStatus("Refreshing repository metadata from GitHub…");
+  try{
+    const live=await gh(`https://api.github.com/orgs/${ORG}/repos?type=public&per_page=100&sort=full_name&direction=asc`);
+    repos=live.map(normalizeRepo).sort((a,b)=>a.name.localeCompare(b.name));
+    renderNav(); applyFilters(); updateStats();
+    setStatus(`Live metadata loaded: ${repos.length} public repositories. File trees are still loaded only on demand.`);
+  }catch(e){ setStatus(`Refresh failed: ${e.message}. Using bundled repository snapshot.`,true); }
+}
+
+async function loadRepoTree(r) {
+  if(repoTrees.has(r.name)) return repoTrees.get(r.name);
+  if(!r.default_branch) {
+    const meta=normalizeRepo(await gh(`https://api.github.com/repos/${ORG}/${encodeURIComponent(r.name)}`));
+    Object.assign(r,meta);
+  }
+  const branch=r.default_branch;
+  const data=await gh(`https://api.github.com/repos/${ORG}/${encodeURIComponent(r.name)}/git/trees/${encodeURIComponent(branch)}?recursive=1`);
+  const entries=(data.tree||[]).filter(x=>x.path && (x.type==="blob" || x.type==="tree")).map(x=>({path:x.path,type:x.type,sha:x.sha,size:x.size??null}));
+  repoTrees.set(r.name,{entries,truncated:!!data.truncated,sha:data.sha,branch});
+  return repoTrees.get(r.name);
+}
+
+function toHierarchy(entries) {
+  const root={dirs:new Map(),files:[]};
+  for(const e of entries) {
+    const parts=e.path.split("/");
+    if(e.type==="tree"){
+      let cur=root;
+      for(const p of parts){ if(!cur.dirs.has(p)) cur.dirs.set(p,{dirs:new Map(),files:[]}); cur=cur.dirs.get(p); }
+    }else{
+      const file=parts.pop(); let cur=root;
+      for(const p of parts){ if(!cur.dirs.has(p)) cur.dirs.set(p,{dirs:new Map(),files:[]}); cur=cur.dirs.get(p); }
+      cur.files.push({name:file,path:e.path,size:e.size});
+    }
+  }
+  return root;
+}
+
+function renderTreeFor(r) {
+  const t=repoTrees.get(r.name); if(!t) return "";
+  const root=toHierarchy(t.entries);
+  const branch=t.branch || r.default_branch || "HEAD";
+  const recur=(node,prefix="")=>{
+    const dirs=[...node.dirs.entries()].sort((a,b)=>a[0].localeCompare(b[0]));
+    const files=node.files.slice().sort((a,b)=>a.name.localeCompare(b.name));
+    let out="<ul>";
+    for(const [name,child] of dirs){
+      const path=prefix?`${prefix}/${name}`:name;
+      const href=`https://github.com/${ORG}/${encodeURIComponent(r.name)}/tree/${encodeURIComponent(branch)}/${path.split("/").map(encodeURIComponent).join("/")}`;
+      out+=`<li><div class="node"><span class="icon">▸</span><a href="${href}" target="_blank" rel="noopener">${esc(name)}/</a></div>${recur(child,path)}</li>`;
+    }
+    for(const f of files){
+      const href=`https://github.com/${ORG}/${encodeURIComponent(r.name)}/blob/${encodeURIComponent(branch)}/${f.path.split("/").map(encodeURIComponent).join("/")}`;
+      out+=`<li><div class="node"><span class="icon">·</span><a href="${href}" target="_blank" rel="noopener">${esc(f.name)}</a></div></li>`;
+    }
+    return out+"</ul>";
+  };
+  return (t.truncated?'<div class="notice warn">GitHub returned a truncated recursive tree for this repository. Links shown are valid, but the path index is not claimed complete.</div>':"")+recur(root);
+}
+
+function rebuildPathIndex() {
+  pathIndex=[];
+  for(const r of repos){
+    const t=repoTrees.get(r.name); if(!t) continue;
+    for(const e of t.entries){
+      const kind=e.type==="tree"?"tree":"blob";
+      const url=`https://github.com/${ORG}/${encodeURIComponent(r.name)}/${kind}/${encodeURIComponent(t.branch)}/${e.path.split("/").map(encodeURIComponent).join("/")}`;
+      pathIndex.push({repo:r.name,path:e.path,type:e.type,url});
+    }
+  }
+  $("#pathCount").textContent=pathIndex.length.toLocaleString();
+  $("#fileCount").textContent=pathIndex.length.toLocaleString();
+  renderPathSearch();
+  renderKnowledge();
+  renderCrossIndex();
+}
+
+function renderPathSearch() {
+  const q=$("#pathSearch").value.trim().toLowerCase();
+  const box=$("#pathResults");
+  if(!q){box.style.display="none";box.innerHTML="";return;}
+  const hits=pathIndex.filter(x=>(x.repo+"/"+x.path).toLowerCase().includes(q)).slice(0,500);
+  box.style.display="block";
+  box.innerHTML=hits.length?hits.map(x=>`<a class="path-result" href="${x.url}" target="_blank" rel="noopener"><span class="rrepo">${esc(x.repo)}</span><span>${esc(x.path)}</span></a>`).join(""):`<div class="empty">No matches in loaded trees.</div>`;
+}
+
+async function buildFullIndex() {
+  $("#buildBtn").disabled=true; $("#refreshBtn").disabled=true;
+  $("#progress").style.display="block";
+  try{
+    if(!repos.every(r=>r.default_branch)) await refreshRepos();
+    const pending=repos.filter(r=>!repoTrees.has(r.name));
+    let done=0, errors=[];
+    const queue=pending.slice();
+    async function worker(){
+      while(queue.length){
+        const r=queue.shift();
+        setStatus(`Indexing ${r.name}… (${done}/${pending.length})`);
+        try{await loadRepoTree(r);}catch(e){errors.push(`${r.name}: ${e.message}`);}
+        done++;
+        $("#progress i").style.width=`${pending.length?Math.round(done/pending.length*100):100}%`;
+        updateStats();
+      }
+    }
+    await Promise.all(Array.from({length:Math.min(3,pending.length||1)},worker));
+    rebuildPathIndex();
+    applyFilters();
+    const truncated=[...repoTrees.entries()].filter(([,v])=>v.truncated).map(([k])=>k);
+    let msg=`Indexed ${repoTrees.size}/${repos.length} repository trees and ${pathIndex.length.toLocaleString()} Git paths.`;
+    if(errors.length) msg+=`\nFailures: ${errors.join(" | ")}`;
+    if(truncated.length) msg+=`\nGitHub marked these recursive trees truncated: ${truncated.join(", ")}.`;
+    setStatus(msg,errors.length||truncated.length);
+  } finally {
+    $("#buildBtn").disabled=false; $("#refreshBtn").disabled=false;
+    setTimeout(()=>$("#progress").style.display="none",700);
+  }
+}
+
+function updateStats() {
+  $("#repoCount").textContent=repos.length;
+  $("#sideRepoCount").textContent=repos.length;
+  $("#activeCount").textContent=repos.filter(r=>!r.archived).length;
+  $("#indexedCount").textContent=repoTrees.size;
+  $("#fileCount").textContent=pathIndex.length.toLocaleString();
+}
+
+function setStatus(msg,warn=false){
+  const el=$("#indexStatus"); el.textContent=msg; el.classList.toggle("warn",!!warn);
+}
+
+function applyFilters(){
+  const q=$("#sideSearch").value.trim().toLowerCase();
+  const cat=$("#categoryFilter").value;
+  const st=$("#statusFilter").value;
+  const list=repos.filter(r=>{
+    const text=(r.name+" "+r.description+" "+r.category+" "+r.language).toLowerCase();
+    const okQ=!q || text.includes(q);
+    const okC=!cat || r.category===cat;
+    const okS=!st || (st==="active"&&!r.archived) || (st==="archived"&&r.archived) || (st==="template"&&r.template);
+    return okQ&&okC&&okS;
+  });
+  renderRepos(list);
+}
+
+function exportIndex(){
+  const payload={
+    generated_at:new Date().toISOString(),
+    organization:ORG,
+    repositories:repos,
+    trees:Object.fromEntries([...repoTrees.entries()]),
+    note:"Only trees loaded in the browser are included. Check each tree's truncated flag."
+  };
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="openrndr-hyperlinked-index.json";a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+$("#refreshBtn").onclick=refreshRepos;
+$("#buildBtn").onclick=buildFullIndex;
+$("#exportBtn").onclick=exportIndex;
+$("#expandBtn").onclick=()=>{
+  expandedLoaded=!expandedLoaded;
+  document.querySelectorAll(".repo").forEach(el=>{
+    const name=el.dataset.name;
+    if(repoTrees.has(name)){el.classList.toggle("open",expandedLoaded); const b=el.querySelector("[data-toggle]"); if(b)b.textContent=expandedLoaded?"−":"+";}
+  });
+  $("#expandBtn").textContent=expandedLoaded?"Collapse loaded trees":"Expand loaded trees";
+};
+$("#sideSearch").addEventListener("input",applyFilters);
+$("#categoryFilter").addEventListener("change",applyFilters);
+$("#statusFilter").addEventListener("change",applyFilters);
+$("#pathSearch").addEventListener("input",renderPathSearch);
+$("#knowledgeSearch").addEventListener("input",renderKnowledge);
+$("#crossSearch").addEventListener("input",renderCrossIndex);
+
+renderNav(); renderRepos(); updateStats(); renderKnowledge(); renderCrossIndex();
+</script>
+</body>
+</html>

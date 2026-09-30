@@ -1,0 +1,1216 @@
+[
+  {
+    "nodeId": "n00",
+    "remote": "https://en.wikipedia.org/wiki/Blum%E2%80%93Shub%E2%80%93Smale_machine",
+    "capsules": [
+      "sources/Blum–Shub–Smale machine - Wikipedia_20260930-060331Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n01",
+    "remote": "https://en.wikipedia.org/wiki/Buddhabrot",
+    "capsules": [
+      "sources/Buddhabrot - Wikipedia_20260930-055753Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n02",
+    "remote": "https://en.wikipedia.org/wiki/Creative_coding#List_of_creative_coding_software",
+    "capsules": [
+      "sources/Creative coding - Wikipedia_20260930-060045Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n03",
+    "remote": "https://www.geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing/",
+    "capsules": [
+      "sources/Different Morphological Operations in Image Processing - GeeksforGeeks_20260930-054208Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n04",
+    "remote": "https://pdf.sciencedirectassets.com/272569/1-s2.0-S0885064X00X00131/1-s2.0-S0885064X98904885/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDkxb2A%2BQo4c8WDkWVVAkj0l5%2BnN8tLmVyMe97nUY1%2F4wIgQwVfBTk%2BTryUtJCpJgTvZecji4dzaiBbT994%2FDQWEmYqswUIXxAFGgwwNTkwMDM1NDY4NjUiDFLCPU7oPcsCFApSASqQBUmEOgN8NRQCFEcsnuzIdGiYZIXDCLIvHXCalFGJS7GVIp9rCEb7gjZcFV4QySmArZtq0UWAVdh3Fxiqjcfu1XIwL1aYz%2BgzAQqxXaun3DWxwHVAeNh9dmOJumM4Q1JoT4dqTXivivZARcMKQZNRrHF3pE7H8Z0l0%2BOG832Ro2j1f8snJd1pwRUAJJhj3ZjLguP37avD3hmbExf%2BDe4CslIdap6eaqfEMbePn4adbcDU%2FVlBbwSqfWeGStA7PefhJfCmAYptJKDEMQ3IS0IxpbDmQmnbTI2Labr%2BbAUrqZgTR1FF4bDNMa5Rr1XPpAhC7R5Wj7owd0ZZC48XBX5VzU94sltOghTaiqZqRjm3GKDqrW8P6nDy8ug8f3FtyzCemoCsTu%2Bu4YUtszS2yjJWRXcECkONPlQaF9VWsNX76zOhVKphzO2ppzJ8e2SoCNByCWPG9eeXB8%2FI6vFninxhuwpYqQ6vQ4%2B5aHIXXWHhNOFfldEW0thnOTbQWgssvd5fSQ6EwWAbv6dJVSMbsJJHv6LYr29PoRPReXUwzaDPyUvnnGRm9THyb9qIkxLyYgmaxIigZgXtYoev4RB%2F5Pnm5C%2BvRc%2FvTHDUyH%2BrOTPxRSb%2B1tg5KVZKEy9aUUs8Phnf%2Bwrba3gwJdDWjF7YG7TcaWDSC5%2FQOXTesDdeE215KLKP0WjHNl6qAxhnvIrUX3nGP6eAzFf44c9R7GW4SWswySdHyzZqFU5Xne6bs0c64L396YB9u6qgUpZEiQZDonCveEyuVD1AvJ1wv9P%2BE007mlVF50k7WT8ilObLlXibvMAq2Rik86rr%2FWTgItIwA%2BAnORTmXuUo0NSX2JPIOgnjRxrEhDEqssREFkO50rxVCl7XMNS68tUGOrEBvR%2B9AYOkIbNDSv870w194hgELD8ps0Wc6znRm81yXnO1m6Lv02Bav7WjUycFYtsdN5y4ZDl3wjQG7a5xc032c6KuAmz3tlQFGALGR7LOikt3nMM3Y9b8XqEGLXp0hv4pyLA1VmcVVrSmdiDmQAmJ0FfvPRs0SZ7PCpUAinwR0YTqhUu9CJWe02WKVvjDHh0PIHZWExJ71S8wFC1tOzZWavtVIG9jxFV13imrcdAccRws&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260930T060942Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY7TESTVV6%2F20260930%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c60162c1d330187081df4cd893f6f395b924060dfb33b8ba4c89a4f08270bfa0&hash=079bcae8f283fe3a8d6e0e8432baf92f6df7c047c9a0ed7ecfc640e21cf68e04&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0885064X98904885&tid=spdf-aa2f828f-7197-47a9-b43c-15fdc81da1a3&sid=ff57c74353c9214d41498574cc8c5dcaaa79gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f160156545e57055304&rr=a4310f6d6a7730ba&cc=us",
+    "capsules": [
+      "sources/pdf.sciencedirectassets.com_20260930-060951Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n05",
+    "remote": "https://en.wikipedia.org/wiki/Fractal-generating_software",
+    "capsules": [
+      "sources/Fractal-generating software - Wikipedia_20260930-060059Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n06",
+    "remote": "https://en.wikipedia.org/wiki/Fractint",
+    "capsules": [
+      "sources/Fractint - Wikipedia_20260930-060143Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n07",
+    "remote": "https://en.wikipedia.org/wiki/Gaussian_elimination",
+    "capsules": [
+      "sources/Gaussian elimination - Wikipedia_20260930-060822Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n08",
+    "remote": "https://people.mpi-inf.mpg.de/~mehlhorn/ftp/SoCG09.pdf",
+    "capsules": [
+      "sources/people.mpi-inf.mpg.de_20260930-060922Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n09",
+    "remote": "https://en.wikipedia.org/wiki/Gilbreath_shuffle#Gilbreath_permutations",
+    "capsules": [
+      "sources/Gilbreath shuffle - Wikipedia_20260930-060137Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n10",
+    "remote": "https://en.wikipedia.org/wiki/Hausdorff_dimension",
+    "capsules": [
+      "sources/Hausdorff dimension - Wikipedia_20260930-060254Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n11",
+    "remote": "https://en.wikipedia.org/wiki/Hypercomputation",
+    "capsules": [
+      "sources/Hypercomputation - Wikipedia_20260930-060508Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n12",
+    "remote": "https://en.wikipedia.org/wiki/Julia_set",
+    "capsules": [
+      "sources/Julia set - Wikipedia_20260930-060157Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n13",
+    "remote": "https://en.wikipedia.org/wiki/Library_of_Efficient_Data_types_and_Algorithms",
+    "capsules": [
+      "sources/Library of Efficient Data types and Algorithms - Wikipedia_20260930-060801Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n14",
+    "remote": "https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension",
+    "capsules": [
+      "sources/List of fractals by Hausdorff dimension - Wikipedia_20260930-055942Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n15",
+    "remote": "https://en.wikipedia.org/wiki/List_of_interactive_geometry_software",
+    "capsules": [
+      "sources/List of interactive geometry software - Wikipedia_20260930-060106Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n16",
+    "remote": "https://en.wikipedia.org/wiki/List_of_mathematical_art_software",
+    "capsules": [
+      "sources/List of mathematical art software - Wikipedia_20260930-060008Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n17",
+    "remote": "https://en.wikipedia.org/wiki/Lyapunov_exponent",
+    "capsules": [
+      "sources/Lyapunov exponent - Wikipedia_20260930-055634Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n18",
+    "remote": "https://en.wikipedia.org/wiki/Mandelbox",
+    "capsules": [
+      "sources/Mandelbox - Wikipedia_20260930-055957Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n19",
+    "remote": "https://www.geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python/",
+    "capsules": [
+      "sources/Mandelbrot Fractal Set visualization in Python - GeeksforGeeks_20260930-055744Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n20",
+    "remote": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+    "capsules": [
+      "sources/Mandelbrot set - Wikipedia_20260930-054917Z_capsule.html",
+      "sources/Mandelbrot set - Wikipedia_20260930-055548Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n21",
+    "remote": "https://en.wikipedia.org/wiki/Mandelbulb",
+    "capsules": [
+      "sources/Mandelbulb - Wikipedia_20260930-055912Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n22",
+    "remote": "https://en.wikipedia.org/wiki/Menger_sponge",
+    "capsules": [
+      "sources/Menger sponge - Wikipedia_20260930-055855Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n23",
+    "remote": "https://en.wikipedia.org/wiki/Misiurewicz_point",
+    "capsules": [
+      "sources/Misiurewicz point - Wikipedia_20260930-061053Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n24",
+    "remote": "https://en.wikipedia.org/wiki/Multibrot_set",
+    "capsules": [
+      "sources/Multibrot set - Wikipedia_20260930-055554Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n25",
+    "remote": "https://en.wikipedia.org/wiki/Newton_fractal",
+    "capsules": [
+      "sources/Newton fractal - Wikipedia_20260930-055850Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n26",
+    "remote": "https://en.wikipedia.org/wiki/Newton's_method",
+    "capsules": [
+      "sources/Newton's method - Wikipedia_20260930-060238Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n27",
+    "remote": "https://en.wikipedia.org/wiki/Orbit_portrait",
+    "capsules": [
+      "sources/Orbit portrait - Wikipedia_20260930-055845Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n28",
+    "remote": "https://en.wikipedia.org/wiki/Orbit_trap",
+    "capsules": [
+      "sources/Orbit trap - Wikipedia_20260930-055840Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n29",
+    "remote": "https://en.wikipedia.org/wiki/Perles_configuration",
+    "capsules": [
+      "sources/Perles configuration - Wikipedia_20260930-060858Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n30",
+    "remote": "https://en.wikipedia.org/wiki/Pickover_stalk",
+    "capsules": [
+      "sources/Pickover stalk - Wikipedia_20260930-055828Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n31",
+    "remote": "https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set",
+    "capsules": [
+      "sources/Plotting algorithms for the Mandelbrot set - Wikipedia_20260930-055710Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n32",
+    "remote": "https://en.wikipedia.org/wiki/Quantum_finite_automaton",
+    "capsules": [
+      "sources/Quantum finite automaton - Wikipedia_20260930-061023Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n33",
+    "remote": "https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree",
+    "capsules": [
+      "sources/Stern–Brocot tree - Wikipedia_20260930-060245Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n34",
+    "remote": "https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy",
+    "capsules": [
+      "sources/symbolic computation - Truth tables in python using sympy - Stack Overflow_20260930-054858Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n35",
+    "remote": "https://en.wikipedia.org/wiki/Transdichotomous_model",
+    "capsules": [
+      "sources/Transdichotomous model - Wikipedia_20260930-060851Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n36",
+    "remote": "https://en.wikipedia.org/wiki/Tricorn_(mathematics)",
+    "capsules": [
+      "sources/Tricorn (mathematics) - Wikipedia_20260930-060151Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n37",
+    "remote": "https://en.wikipedia.org/wiki/Turing_machine",
+    "capsules": [
+      "sources/Turing machine - Wikipedia_20260930-060816Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n38",
+    "remote": "https://en.wikipedia.org/wiki/Weierstrass%E2%80%93Mandelbrot_function",
+    "capsules": [
+      "sources/Weierstrass–Mandelbrot function - Wikipedia_20260930-055823Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "n39",
+    "remote": "https://en.wikipedia.org/wiki/Word_RAM",
+    "capsules": [
+      "sources/Word RAM - Wikipedia_20260930-060828Z_capsule.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "or-root",
+    "remote": "https://openrndr.org/",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": []
+  },
+  {
+    "nodeId": "or-start",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "Guide · Requirements",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C10_Requirements.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C10_Requirements.kt"
+      ],
+      [
+        "Guide · First program",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt"
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-examples",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-runtime",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-application",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-application",
+        "openrndr",
+        "openrndr-application"
+      ],
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "openrndr-platform",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-platform",
+        "openrndr",
+        "openrndr-platform"
+      ],
+      [
+        "openrndr-utils",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-utils",
+        "openrndr",
+        "openrndr-utils"
+      ],
+      [
+        "Guide · Program basics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/20_Program_basics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/20_Program_basics"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-drawing",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-draw",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-draw",
+        "openrndr",
+        "openrndr-draw"
+      ],
+      [
+        "openrndr-filter",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-filter",
+        "openrndr",
+        "openrndr-filter"
+      ],
+      [
+        "orx-fx",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fx",
+        "orx",
+        "orx-fx"
+      ],
+      [
+        "orx-compositor",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-compositor",
+        "orx",
+        "orx-compositor"
+      ],
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-no-clear",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-no-clear",
+        "orx",
+        "orx-no-clear"
+      ],
+      [
+        "Guide · Drawing",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/30_Drawing",
+        "openrndr-guide",
+        "src/main/kotlin/docs/30_Drawing"
+      ],
+      [
+        "Examples · Drawing",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/30_Drawing",
+        "openrndr-examples",
+        "src/main/kotlin/examples/30_Drawing"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-geometry",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-shape",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-shape",
+        "openrndr",
+        "openrndr-shape"
+      ],
+      [
+        "openrndr-kartifex",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-kartifex",
+        "openrndr",
+        "openrndr-kartifex"
+      ],
+      [
+        "openrndr-ktessellation",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-ktessellation",
+        "openrndr",
+        "openrndr-ktessellation"
+      ],
+      [
+        "orx-shapes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shapes",
+        "orx",
+        "orx-shapes"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ],
+      [
+        "orx-triangulation",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-triangulation",
+        "orx",
+        "orx-triangulation"
+      ],
+      [
+        "orx-marching-squares",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-marching-squares",
+        "orx",
+        "orx-marching-squares"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-math",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-math",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-math",
+        "openrndr",
+        "openrndr-math"
+      ],
+      [
+        "orx-math",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-math",
+        "orx",
+        "orx-math"
+      ],
+      [
+        "orx-kdtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-kdtree",
+        "orx",
+        "orx-kdtree"
+      ],
+      [
+        "orx-quadtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-quadtree",
+        "orx",
+        "orx-quadtree"
+      ],
+      [
+        "orx-hash-grid",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-hash-grid",
+        "orx",
+        "orx-hash-grid"
+      ],
+      [
+        "orx-bvh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-bvh",
+        "orx",
+        "orx-bvh"
+      ],
+      [
+        "orx-gradient-descent",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-gradient-descent",
+        "orx",
+        "orx-gradient-descent"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-color",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-color",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-color",
+        "openrndr",
+        "openrndr-color"
+      ],
+      [
+        "orx-color",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-color",
+        "orx",
+        "orx-color"
+      ],
+      [
+        "orx-palette",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-palette",
+        "orx",
+        "orx-palette"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-animation",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-animatable",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-animatable",
+        "openrndr",
+        "openrndr-animatable"
+      ],
+      [
+        "orx-easing",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-easing",
+        "orx",
+        "orx-easing"
+      ],
+      [
+        "orx-envelopes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-envelopes",
+        "orx",
+        "orx-envelopes"
+      ],
+      [
+        "orx-fcurve",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fcurve",
+        "orx",
+        "orx-fcurve"
+      ],
+      [
+        "orx-time-operators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-time-operators",
+        "orx",
+        "orx-time-operators"
+      ],
+      [
+        "orx-timer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-timer",
+        "orx",
+        "orx-timer"
+      ],
+      [
+        "orx-temporal-blur",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-temporal-blur",
+        "orx",
+        "orx-temporal-blur"
+      ],
+      [
+        "Guide · Animation",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/50_Animation",
+        "openrndr-guide",
+        "src/main/kotlin/docs/50_Animation"
+      ],
+      [
+        "Examples · Animation",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/50_Animation",
+        "openrndr-examples",
+        "src/main/kotlin/examples/50_Animation"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-shaders",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-gl-common",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-gl-common",
+        "openrndr",
+        "openrndr-gl-common"
+      ],
+      [
+        "orx-shade-styles",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shade-styles",
+        "orx",
+        "orx-shade-styles"
+      ],
+      [
+        "orx-shader-phrases",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shader-phrases",
+        "orx",
+        "orx-shader-phrases"
+      ],
+      [
+        "orsl",
+        "repo",
+        "https://github.com/openrndr/orsl",
+        "orsl",
+        ""
+      ],
+      [
+        "Guide · Advanced topics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/90_Advanced_Topics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/90_Advanced_Topics"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-camera3d",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-camera",
+        "orx",
+        "orx-camera"
+      ],
+      [
+        "orx-depth-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-depth-camera",
+        "orx",
+        "orx-depth-camera"
+      ],
+      [
+        "orx-mesh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh",
+        "orx",
+        "orx-mesh"
+      ],
+      [
+        "orx-mesh-generators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-generators",
+        "orx",
+        "orx-mesh-generators"
+      ],
+      [
+        "orx-mesh-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-noise",
+        "orx",
+        "orx-mesh-noise"
+      ],
+      [
+        "orx-obj-loader",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-obj-loader",
+        "orx",
+        "orx-obj-loader"
+      ],
+      [
+        "software-cameras",
+        "workshop",
+        "https://github.com/openrndr/software-cameras",
+        "software-cameras",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-imagecv",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-integral-image",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-integral-image",
+        "orx",
+        "orx-integral-image"
+      ],
+      [
+        "orx-jumpflood",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-jumpflood",
+        "orx",
+        "orx-jumpflood"
+      ],
+      [
+        "openrndr-x-boofcv",
+        "integration",
+        "https://github.com/openrndr/openrndr-x-boofcv",
+        "openrndr-x-boofcv",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-signals",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-fft",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fft",
+        "orx",
+        "orx-fft"
+      ],
+      [
+        "workshop-greyspace",
+        "workshop",
+        "https://github.com/openrndr/workshop-greyspace",
+        "workshop-greyspace",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-textsvg",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-text-writer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-writer",
+        "orx",
+        "orx-text-writer"
+      ],
+      [
+        "orx-text-on-contour",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-on-contour",
+        "orx",
+        "orx-text-on-contour"
+      ],
+      [
+        "orx-svg",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-svg",
+        "orx",
+        "orx-svg"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-interaction",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "orx-parameters",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-parameters",
+        "orx",
+        "orx-parameters"
+      ],
+      [
+        "orx-property-watchers",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-property-watchers",
+        "orx",
+        "orx-property-watchers"
+      ],
+      [
+        "Guide · Interaction",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/40_Interaction",
+        "openrndr-guide",
+        "src/main/kotlin/docs/40_Interaction"
+      ],
+      [
+        "Examples · Interaction",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/40_Interaction",
+        "openrndr-examples",
+        "src/main/kotlin/examples/40_Interaction"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-procedural",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-noise",
+        "orx",
+        "orx-noise"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ],
+      [
+        "workshop-generative-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-posters",
+        "workshop-generative-posters",
+        ""
+      ],
+      [
+        "workshop-generative-identities",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-identities",
+        "workshop-generative-identities",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-fabrication",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "orx-g-code",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-g-code",
+        "orx",
+        "orx-g-code"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "workshop-data-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-data-posters",
+        "workshop-data-posters",
+        ""
+      ],
+      [
+        "workshop-torino",
+        "workshop",
+        "https://github.com/openrndr/workshop-torino",
+        "workshop-torino",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-web",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-js",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-js",
+        "openrndr",
+        "openrndr-js"
+      ],
+      [
+        "openrndr-web-demo",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-web-demo",
+        "openrndr",
+        "openrndr-web-demo"
+      ],
+      [
+        "openrndr-js-template",
+        "template",
+        "https://github.com/openrndr/openrndr-js-template",
+        "openrndr-js-template",
+        ""
+      ],
+      [
+        "openrndr-website",
+        "website",
+        "https://github.com/openrndr/openrndr-website",
+        "openrndr-website",
+        ""
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-learning",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "Guide source",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide",
+        "openrndr-guide",
+        "src/main/kotlin/docs"
+      ],
+      [
+        "Examples source",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ],
+      [
+        "Guide · ORX",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/80_ORX",
+        "openrndr-guide",
+        "src/main/kotlin/docs/80_ORX"
+      ],
+      [
+        "Examples · ORX",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/80_ORX",
+        "openrndr-examples",
+        "src/main/kotlin/examples/80_ORX"
+      ],
+      [
+        "Guide · Use cases",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/95_Use_cases",
+        "openrndr-guide",
+        "src/main/kotlin/docs/95_Use_cases"
+      ],
+      [
+        "Examples · Use cases",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/95_Use_cases",
+        "openrndr-examples",
+        "src/main/kotlin/examples/95_Use_cases"
+      ],
+      [
+        "Guide · Best practices",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/98_Best_practices",
+        "openrndr-guide",
+        "src/main/kotlin/docs/98_Best_practices"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-extensions",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "Guide · Extensions",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/45_Extensions",
+        "openrndr-guide",
+        "src/main/kotlin/docs/45_Extensions"
+      ],
+      [
+        "Examples · Extensions",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/45_Extensions",
+        "openrndr-examples",
+        "src/main/kotlin/examples/45_Extensions"
+      ],
+      [
+        "ORX repository",
+        "orx",
+        "https://github.com/openrndr/orx",
+        "orx",
+        ""
+      ],
+      [
+        "ORX demos",
+        "examples",
+        "https://github.com/openrndr/orx/tree/master/openrndr-demos",
+        "orx",
+        "openrndr-demos"
+      ],
+      [
+        "ORX module catalog",
+        "catalog",
+        "https://github.com/openrndr/orx/tree/master/orx-module-catalog",
+        "orx",
+        "orx-module-catalog"
+      ]
+    ]
+  },
+  {
+    "nodeId": "or-devtools",
+    "remote": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "resources": [
+      [
+        "openrndr-intellij",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij",
+        "openrndr-intellij",
+        ""
+      ],
+      [
+        "openrndr-intellij-settings",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij-settings",
+        "openrndr-intellij-settings",
+        ""
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-dev-template",
+        "template",
+        "https://github.com/openrndr/openrndr-dev-template",
+        "openrndr-dev-template",
+        ""
+      ],
+      [
+        "setup-opengl",
+        "tooling",
+        "https://github.com/openrndr/setup-opengl",
+        "setup-opengl",
+        ""
+      ],
+      [
+        "core module catalog",
+        "catalog",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-module-catalog",
+        "openrndr",
+        "openrndr-module-catalog"
+      ]
+    ]
+  }
+]

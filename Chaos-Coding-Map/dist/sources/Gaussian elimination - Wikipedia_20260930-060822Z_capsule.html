@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; media-src 'none'; connect-src 'none'; script-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Gaussian elimination - Wikipedia — Agent Capsule</title><style>
+:root{color-scheme:dark;--cyan:#00E5FF;--blue:#3A6BFF;--violet:#9D4DFF;--ink:#0D1117;--bg:#0D1117;--panel:#111722;--panel2:#171E2B;--line:#2C3850;--text:#FFFFFF;--muted:#A8B4CA;--accent:#00E5FF;--gradient:linear-gradient(105deg,#00E5FF,#3A6BFF 52%,#9D4DFF)}*{box-sizing:border-box}body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% -8%,rgba(0,229,255,.12),transparent 31%),radial-gradient(circle at 94% 0%,rgba(157,77,255,.13),transparent 28%);color:var(--text);font:14px/1.5 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(17,23,34,.86),rgba(13,17,23,.40))}h1{margin:.1em 0;font-size:30px;letter-spacing:-.035em}.brand{font-weight:800}.brand b{font-weight:800;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.tag{margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}.line{height:2px;margin-top:16px;border-radius:999px;background:var(--gradient)}a{color:var(--accent)}section,article,details{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:11px;padding:14px;margin:14px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)}summary{cursor:pointer;font-weight:700}pre{white-space:pre-wrap;word-break:break-word;overflow:auto;background:#080B11;padding:12px;border:1px solid #202C40;border-radius:7px}code{font-family:ui-monospace,monospace}small,.muted{color:var(--muted)}ul{padding-left:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.stat{background:#080B11;border:1px solid #202C40;padding:10px;border-radius:7px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px}
+</style></head><body>
+<header><h1 class="brand">Ingest<b>Wowww</b> · Gaussian elimination - Wikipedia</h1><div class="tag">Scrape today. Fuel tomorrow.</div><div class="muted">Agent Capsule · https://en.wikipedia.org/wiki/Gaussian_elimination</div><div class="line"></div></header><main>
+<section><h2>Capture</h2><div class="grid"><div class="stat"><b>Captured</b><br>2026-09-30T06:08:21.949Z</div><div class="stat"><b>Records</b><br>26</div><div class="stat"><b>Sections</b><br>20</div></div><p></p></section>
+<details open><summary>Virtual tree</summary><ul><li><a href="#art-0001"><code>artifacts/README.md</code></a> <small>markdown · 263 B · ~66 tok</small></li><li><a href="#art-0002"><code>artifacts/content/document.md</code></a> <small>markdown · 65359 B · ~16222 tok</small></li><li><a href="#art-0003"><code>artifacts/index/page-index.json</code></a> <small>json · 71474 B · ~17821 tok</small></li><li><a href="#section-0001"><code>artifacts/sections/0001-Introduction.md</code></a> <small>markdown · 412 B · ~103 tok</small></li><li><a href="#section-0002"><code>artifacts/sections/0002-Gaussian elimination.md</code></a> <small>markdown · 8861 B · ~2166 tok</small></li><li><a href="#section-0003"><code>artifacts/sections/0003-Definitions and example of algorithm.md</code></a> <small>markdown · 2086 B · ~522 tok</small></li><li><a href="#section-0004"><code>artifacts/sections/0004-Row operations.md</code></a> <small>markdown · 636 B · ~159 tok</small></li><li><a href="#section-0005"><code>artifacts/sections/0005-Echelon form.md</code></a> <small>markdown · 1998 B · ~499 tok</small></li><li><a href="#section-0006"><code>artifacts/sections/0006-Example of the algorithm.md</code></a> <small>markdown · 6358 B · ~1565 tok</small></li><li><a href="#section-0007"><code>artifacts/sections/0007-History.md</code></a> <small>markdown · 3496 B · ~872 tok</small></li><li><a href="#section-0008"><code>artifacts/sections/0008-Applications.md</code></a> <small>markdown · 283 B · ~71 tok</small></li><li><a href="#section-0009"><code>artifacts/sections/0009-Computing determinants.md</code></a> <small>markdown · 1758 B · ~438 tok</small></li><li><a href="#section-0010"><code>artifacts/sections/0010-Finding the inverse of a matrix.md</code></a> <small>markdown · 2655 B · ~657 tok</small></li><li><a href="#section-0011"><code>artifacts/sections/0011-Computing ranks and bases.md</code></a> <small>markdown · 1432 B · ~347 tok</small></li><li><a href="#section-0012"><code>artifacts/sections/0012-Computational efficiency.md</code></a> <small>markdown · 2590 B · ~647 tok</small></li><li><a href="#section-0013"><code>artifacts/sections/0013-Bareiss algorithm.md</code></a> <small>markdown · 3309 B · ~826 tok</small></li><li><a href="#section-0014"><code>artifacts/sections/0014-Numeric instability.md</code></a> <small>markdown · 1120 B · ~280 tok</small></li><li><a href="#section-0015"><code>artifacts/sections/0015-Generalizations.md</code></a> <small>markdown · 1251 B · ~313 tok</small></li><li><a href="#section-0016"><code>artifacts/sections/0016-Pseudocode.md</code></a> <small>markdown · 2066 B · ~516 tok</small></li><li><a href="#section-0017"><code>artifacts/sections/0017-See also.md</code></a> <small>markdown · 546 B · ~136 tok</small></li><li><a href="#section-0018"><code>artifacts/sections/0018-References.md</code></a> <small>markdown · 5653 B · ~1403 tok</small></li><li><a href="#section-0019"><code>artifacts/sections/0019-Works cited.md</code></a> <small>markdown · 4441 B · ~1109 tok</small></li><li><a href="#section-0020"><code>artifacts/sections/0020-External links.md</code></a> <small>markdown · 14378 B · ~3592 tok</small></li><li><a href="#art-0024"><code>artifacts/provenance/source-record.json</code></a> <small>json · 398 B · ~100 tok</small></li><li><a href="#art-0025"><code>artifacts/provenance/extraction-record.json</code></a> <small>json · 320 B · ~80 tok</small></li><li><a href="#art-0026"><code>artifacts/warnings.json</code></a> <small>json · 2 B · ~1 tok</small></li></ul></details>
+<details><summary>Manifest YAML</summary><pre>schema: ingestwowww.agent-capsule.v1
+title: &quot;Gaussian elimination - Wikipedia&quot;
+source: https://en.wikipedia.org/wiki/Gaussian_elimination
+captured_at: 2026-09-30T06:08:21.949Z
+canonical_records: records.ndjson
+generated_projection: projection.tsv
+generated_view: capsule.html
+record_count: 26
+artifact_count: 26
+content_sha256: 0070bfabb7d062bbbbe5446238e93d1531c458894e5eada6d51fbbaaaf6b8361
+features:
+  media_inventory: false
+  sql_catalog: false
+  token_debug_preview: false
+</pre></details>
+<details><summary>Canonical NDJSON records</summary><pre>{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0001&quot;,&quot;type&quot;:&quot;readme&quot;,&quot;path&quot;:&quot;artifacts/README.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:263,&quot;sha256&quot;:&quot;dfaff966fb63f817d12bdabfbae2abeb7e73928e734364e1009d810ba1e763ce&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;wikipedia&quot;,&quot;2026-09-30t06&quot;,&quot;949z&quot;,&quot;agent&quot;,&quot;canonical&quot;,&quot;capture&quot;,&quot;elimination&quot;],&quot;summary&quot;:&quot;Capsule entry point&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:66,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0002&quot;,&quot;type&quot;:&quot;document&quot;,&quot;path&quot;:&quot;artifacts/content/document.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:65359,&quot;sha256&quot;:&quot;0070bfabb7d062bbbbe5446238e93d1531c458894e5eada6d51fbbaaaf6b8361&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;matrix&quot;,&quot;row&quot;,&quot;gaussian_elimination&quot;,&quot;elimination&quot;],&quot;summary&quot;:&quot;Gaussian elimination - Wikipedia&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:16222,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0003&quot;,&quot;type&quot;:&quot;index&quot;,&quot;path&quot;:&quot;artifacts/index/page-index.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:71474,&quot;sha256&quot;:&quot;b5b2e3a98f057e849a82fa5f6c1e85dbc23b14b6dd16b1f52e404ebbf261360d&quot;,&quot;keywords&quot;:[&quot;text&quot;,&quot;href&quot;,&quot;https&quot;,&quot;org&quot;,&quot;rel&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;wikilink&quot;],&quot;summary&quot;:&quot;Headings, links, TOC, and discovered indexes&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0003&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:17821,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0004&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0001-Introduction.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:412,&quot;sha256&quot;:&quot;9b48a498b8a5ade0c378af2ea3daba536e4fa89adc727ee7fad788d68a9ddcf0&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;copyright&quot;,&quot;images&quot;,&quot;introduction&quot;,&quot;mobile&quot;],&quot;summary&quot;:&quot;Introduction&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0001&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:103,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0005&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0002-Gaussian elimination.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:8861,&quot;sha256&quot;:&quot;525629a8daff7f7cf39f1819c51570e860f8eb9c88e89c8a2fc53208d0c19d3b&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;wiki&quot;,&quot;row&quot;,&quot;matrix&quot;,&quot;operations&quot;,&quot;bmatrix&quot;],&quot;summary&quot;:&quot;Gaussian elimination&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0002&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:2166,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0006&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0003-Definitions and example of algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2086,&quot;sha256&quot;:&quot;480fde27be95174db31828455c35cb00525ce2114a851ab64b895a823eb4eb16&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;row&quot;,&quot;wikipedia&quot;,&quot;https&quot;,&quot;matrix&quot;,&quot;wiki&quot;,&quot;elementary&quot;,&quot;algorithm&quot;],&quot;summary&quot;:&quot;Definitions and example of algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0003&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:522,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0007&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0004-Row operations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:636,&quot;sha256&quot;:&quot;43419cc65c5c7e2eee8b125b9690eac765ec93a3a50f9a6dec52dc0f6f13b536&quot;,&quot;keywords&quot;:[&quot;row&quot;,&quot;operations&quot;,&quot;edit&quot;,&quot;equations&quot;,&quot;https&quot;,&quot;linear&quot;,&quot;matrix&quot;,&quot;one&quot;],&quot;summary&quot;:&quot;Row operations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0004&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:159,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0008&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0005-Echelon form.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1998,&quot;sha256&quot;:&quot;b1ef9c98913c592158addba6ea4d0ff8423a42336b4a447313adfc2600fc9468&quot;,&quot;keywords&quot;:[&quot;row&quot;,&quot;leading&quot;,&quot;echelon&quot;,&quot;form&quot;,&quot;entry&quot;,&quot;column&quot;,&quot;entries&quot;,&quot;matrix&quot;],&quot;summary&quot;:&quot;Echelon form&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0005&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:499,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0009&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0006-Example of the algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:6358,&quot;sha256&quot;:&quot;69c01edb55cb6cf85cc0b72392597c76494fbffe07111e3fbcdb475caca3021e&quot;,&quot;keywords&quot;:[&quot;displaystyle&quot;,&quot;begin&quot;,&quot;end&quot;,&quot;alignedat&quot;,&quot;array&quot;,&quot;aligned&quot;,&quot;row&quot;,&quot;tfrac&quot;],&quot;summary&quot;:&quot;Example of the algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0006&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:1565,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0010&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0007-History.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3496,&quot;sha256&quot;:&quot;2af799a9e12eea7e59d5ef7b846baa272ebfceab4ff1c4311e9e3d8e88ca6b35&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;gaussian_elimination&quot;,&quot;elimination&quot;,&quot;equations&quot;,&quot;gauss&quot;],&quot;summary&quot;:&quot;History&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0007&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:872,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0011&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0008-Applications.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:283,&quot;sha256&quot;:&quot;23653bd066db091a7e2962d6d2e55053f8d9adf14abad839dc2c6315170e5dd7&quot;,&quot;keywords&quot;:[&quot;applications&quot;,&quot;edit&quot;,&quot;action&quot;,&quot;algorithm&quot;,&quot;application&quot;,&quot;below&quot;,&quot;equations&quot;,&quot;first&quot;],&quot;summary&quot;:&quot;Applications&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0008&quot;,&quot;context_priority&quot;:&quot;primary&quot;,&quot;estimated_tokens&quot;:71,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0012&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0009-Computing determinants.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1758,&quot;sha256&quot;:&quot;a707337280d7db8776cf55b0ccb127883e5f82f03c9f397a8ae628afe715ae79&quot;,&quot;keywords&quot;:[&quot;determinant&quot;,&quot;operations&quot;,&quot;https&quot;,&quot;matrix&quot;,&quot;number&quot;,&quot;org&quot;,&quot;row&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Computing determinants&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0009&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:438,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0013&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0010-Finding the inverse of a matrix.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2655,&quot;sha256&quot;:&quot;0d6a3339f50cc4659836681ff386730b3bb946e5831e4a5a9361371da3578d5d&quot;,&quot;keywords&quot;:[&quot;matrix&quot;,&quot;frac&quot;,&quot;inverse&quot;,&quot;https&quot;,&quot;left&quot;,&quot;org&quot;,&quot;right&quot;,&quot;wikipedia&quot;],&quot;summary&quot;:&quot;Finding the inverse of a matrix&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0010&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:657,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0014&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0011-Computing ranks and bases.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1432,&quot;sha256&quot;:&quot;f0db565d25bf4b4622c3af47955b386805beba60b27822355afe1582a3f9e768&quot;,&quot;keywords&quot;:[&quot;columns&quot;,&quot;echelon&quot;,&quot;https&quot;,&quot;matrix&quot;,&quot;org&quot;,&quot;row&quot;,&quot;wikipedia&quot;,&quot;bases&quot;],&quot;summary&quot;:&quot;Computing ranks and bases&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0011&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:347,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0015&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0012-Computational efficiency.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2590,&quot;sha256&quot;:&quot;3048dc38c4e3f92ea34d64112e650909d2de796ec7b2297cd9a1450f9630c220&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;complexity&quot;,&quot;arithmetic&quot;,&quot;time&quot;,&quot;equations&quot;],&quot;summary&quot;:&quot;Computational efficiency&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0012&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:647,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0016&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0013-Bareiss algorithm.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:3309,&quot;sha256&quot;:&quot;d1379b847bc844afac6d6351cf131044437a50f5b63271815b09728ec0ec3e06&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;displaystyle&quot;,&quot;entries&quot;,&quot;algorithm&quot;,&quot;bareiss&quot;],&quot;summary&quot;:&quot;Bareiss algorithm&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0013&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:826,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0017&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0014-Numeric instability.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1120,&quot;sha256&quot;:&quot;da1725cfce8400f95f61ed2f0a3b183d3f7872fa767389c0566348676ae57f50&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;gaussian_elimination&quot;,&quot;instability&quot;,&quot;matrices&quot;,&quot;one&quot;],&quot;summary&quot;:&quot;Numeric instability&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0014&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:280,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0018&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0015-Generalizations.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:1251,&quot;sha256&quot;:&quot;eaf028964300e6ad20d3244f9d6d1b03420856e091f39e1e9d337e9ef9da6ae5&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;elimination&quot;,&quot;gaussian&quot;,&quot;buchberger&quot;,&quot;choice&quot;],&quot;summary&quot;:&quot;Generalizations&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0015&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:313,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0019&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0016-Pseudocode.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:2066,&quot;sha256&quot;:&quot;44cc07166b1854284bd491cdaf0beb0685878400d90514d07e9fd754c0e81477&quot;,&quot;keywords&quot;:[&quot;pivot&quot;,&quot;column&quot;,&quot;https&quot;,&quot;matrix&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;row&quot;,&quot;wiki&quot;],&quot;summary&quot;:&quot;Pseudocode&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0016&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:516,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0020&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0017-See also.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:546,&quot;sha256&quot;:&quot;057689193c76997c2bc515d2dc9887bfe18fb396794cabdd7c1e34bde1dfa89d&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;also&quot;,&quot;edit&quot;,&quot;fourier&quot;,&quot;gram&quot;],&quot;summary&quot;:&quot;See also&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0017&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:136,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0021&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0018-References.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:5653,&quot;sha256&quot;:&quot;9cf174060605b2e659885b1a029a903a0f5983cfeced453795508c283813275e&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;gaussian_elimination&quot;,&quot;identifier&quot;,&quot;doi&quot;,&quot;1007&quot;],&quot;summary&quot;:&quot;References&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0018&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1403,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0022&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0019-Works cited.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:4441,&quot;sha256&quot;:&quot;44536b5d2d8fd1a0889589dabb4ae72cd8cb00dbc430c693d8507da289ed6917&quot;,&quot;keywords&quot;:[&quot;https&quot;,&quot;org&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;identifier&quot;,&quot;booksources&quot;,&quot;isbn&quot;,&quot;isbn_&quot;],&quot;summary&quot;:&quot;Works cited&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0019&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1109,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;sec:0023&quot;,&quot;type&quot;:&quot;section&quot;,&quot;path&quot;:&quot;artifacts/sections/0020-External links.md&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;markdown&quot;,&quot;bytes&quot;:14378,&quot;sha256&quot;:&quot;ad8e9eed77b46b869d8921dc3ceb19f0d481ddbe6209eba7a3ca446ef2713ddc&quot;,&quot;keywords&quot;:[&quot;org&quot;,&quot;https&quot;,&quot;wikipedia&quot;,&quot;wiki&quot;,&quot;matrix&quot;,&quot;linear&quot;,&quot;algebra&quot;,&quot;space&quot;],&quot;summary&quot;:&quot;External links&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;section-0020&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:3592,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0024&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/source-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:398,&quot;sha256&quot;:&quot;66825d9bf8d4f7e38e6ad3debe281d449bd1a4f5954593b20d183f9c141b285b&quot;,&quot;keywords&quot;:[&quot;wikipedia&quot;,&quot;gaussian_elimination&quot;,&quot;https&quot;,&quot;org&quot;,&quot;wiki&quot;,&quot;2026-09-30t06&quot;,&quot;949z&quot;,&quot;author&quot;],&quot;summary&quot;:&quot;Capture source identity and metadata&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0024&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:100,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0025&quot;,&quot;type&quot;:&quot;provenance&quot;,&quot;path&quot;:&quot;artifacts/provenance/extraction-record.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:320,&quot;sha256&quot;:&quot;b57b6e2b3a730358186996bfe1d62ef1c1f599ec31ebf698c154252aee96c5b3&quot;,&quot;keywords&quot;:[&quot;capsule&quot;,&quot;engine&quot;,&quot;generated&quot;,&quot;html&quot;,&quot;ingestwowww&quot;,&quot;461&quot;,&quot;agent&quot;,&quot;authority&quot;],&quot;summary&quot;:&quot;Extraction engine and counts&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0025&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:80,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+{&quot;schema&quot;:&quot;ingestwowww.agent-record.v1&quot;,&quot;id&quot;:&quot;art:0026&quot;,&quot;type&quot;:&quot;warnings&quot;,&quot;path&quot;:&quot;artifacts/warnings.json&quot;,&quot;parent&quot;:&quot;capture&quot;,&quot;kind&quot;:&quot;json&quot;,&quot;bytes&quot;:2,&quot;sha256&quot;:&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,&quot;keywords&quot;:[&quot;capture&quot;,&quot;warnings&quot;],&quot;summary&quot;:&quot;Capture warnings&quot;,&quot;refs&quot;:[],&quot;source_anchor&quot;:&quot;art-0026&quot;,&quot;context_priority&quot;:&quot;supporting&quot;,&quot;estimated_tokens&quot;:1,&quot;captured_at&quot;:&quot;2026-09-30T06:08:21.949Z&quot;}
+</pre></details>
+<details><summary>Compact agent projection</summary><pre>id	type	path	priority	tokens	bytes	sha256	summary	refs
+art:0001	readme	artifacts/README.md	primary	66	263	dfaff966fb63f817d12bdabfbae2abeb7e73928e734364e1009d810ba1e763ce	Capsule entry point	
+art:0002	document	artifacts/content/document.md	primary	16222	65359	0070bfabb7d062bbbbe5446238e93d1531c458894e5eada6d51fbbaaaf6b8361	Gaussian elimination - Wikipedia	
+art:0003	index	artifacts/index/page-index.json	supporting	17821	71474	b5b2e3a98f057e849a82fa5f6c1e85dbc23b14b6dd16b1f52e404ebbf261360d	Headings, links, TOC, and discovered indexes	
+sec:0004	section	artifacts/sections/0001-Introduction.md	primary	103	412	9b48a498b8a5ade0c378af2ea3daba536e4fa89adc727ee7fad788d68a9ddcf0	Introduction	
+sec:0005	section	artifacts/sections/0002-Gaussian elimination.md	primary	2166	8861	525629a8daff7f7cf39f1819c51570e860f8eb9c88e89c8a2fc53208d0c19d3b	Gaussian elimination	
+sec:0006	section	artifacts/sections/0003-Definitions and example of algorithm.md	primary	522	2086	480fde27be95174db31828455c35cb00525ce2114a851ab64b895a823eb4eb16	Definitions and example of algorithm	
+sec:0007	section	artifacts/sections/0004-Row operations.md	primary	159	636	43419cc65c5c7e2eee8b125b9690eac765ec93a3a50f9a6dec52dc0f6f13b536	Row operations	
+sec:0008	section	artifacts/sections/0005-Echelon form.md	primary	499	1998	b1ef9c98913c592158addba6ea4d0ff8423a42336b4a447313adfc2600fc9468	Echelon form	
+sec:0009	section	artifacts/sections/0006-Example of the algorithm.md	primary	1565	6358	69c01edb55cb6cf85cc0b72392597c76494fbffe07111e3fbcdb475caca3021e	Example of the algorithm	
+sec:0010	section	artifacts/sections/0007-History.md	primary	872	3496	2af799a9e12eea7e59d5ef7b846baa272ebfceab4ff1c4311e9e3d8e88ca6b35	History	
+sec:0011	section	artifacts/sections/0008-Applications.md	primary	71	283	23653bd066db091a7e2962d6d2e55053f8d9adf14abad839dc2c6315170e5dd7	Applications	
+sec:0012	section	artifacts/sections/0009-Computing determinants.md	supporting	438	1758	a707337280d7db8776cf55b0ccb127883e5f82f03c9f397a8ae628afe715ae79	Computing determinants	
+sec:0013	section	artifacts/sections/0010-Finding the inverse of a matrix.md	supporting	657	2655	0d6a3339f50cc4659836681ff386730b3bb946e5831e4a5a9361371da3578d5d	Finding the inverse of a matrix	
+sec:0014	section	artifacts/sections/0011-Computing ranks and bases.md	supporting	347	1432	f0db565d25bf4b4622c3af47955b386805beba60b27822355afe1582a3f9e768	Computing ranks and bases	
+sec:0015	section	artifacts/sections/0012-Computational efficiency.md	supporting	647	2590	3048dc38c4e3f92ea34d64112e650909d2de796ec7b2297cd9a1450f9630c220	Computational efficiency	
+sec:0016	section	artifacts/sections/0013-Bareiss algorithm.md	supporting	826	3309	d1379b847bc844afac6d6351cf131044437a50f5b63271815b09728ec0ec3e06	Bareiss algorithm	
+sec:0017	section	artifacts/sections/0014-Numeric instability.md	supporting	280	1120	da1725cfce8400f95f61ed2f0a3b183d3f7872fa767389c0566348676ae57f50	Numeric instability	
+sec:0018	section	artifacts/sections/0015-Generalizations.md	supporting	313	1251	eaf028964300e6ad20d3244f9d6d1b03420856e091f39e1e9d337e9ef9da6ae5	Generalizations	
+sec:0019	section	artifacts/sections/0016-Pseudocode.md	supporting	516	2066	44cc07166b1854284bd491cdaf0beb0685878400d90514d07e9fd754c0e81477	Pseudocode	
+sec:0020	section	artifacts/sections/0017-See also.md	supporting	136	546	057689193c76997c2bc515d2dc9887bfe18fb396794cabdd7c1e34bde1dfa89d	See also	
+sec:0021	section	artifacts/sections/0018-References.md	supporting	1403	5653	9cf174060605b2e659885b1a029a903a0f5983cfeced453795508c283813275e	References	
+sec:0022	section	artifacts/sections/0019-Works cited.md	supporting	1109	4441	44536b5d2d8fd1a0889589dabb4ae72cd8cb00dbc430c693d8507da289ed6917	Works cited	
+sec:0023	section	artifacts/sections/0020-External links.md	supporting	3592	14378	ad8e9eed77b46b869d8921dc3ceb19f0d481ddbe6209eba7a3ca446ef2713ddc	External links	
+art:0024	provenance	artifacts/provenance/source-record.json	supporting	100	398	66825d9bf8d4f7e38e6ad3debe281d449bd1a4f5954593b20d183f9c141b285b	Capture source identity and metadata	
+art:0025	provenance	artifacts/provenance/extraction-record.json	supporting	80	320	b57b6e2b3a730358186996bfe1d62ef1c1f599ec31ebf698c154252aee96c5b3	Extraction engine and counts	
+art:0026	warnings	artifacts/warnings.json	supporting	1	2	4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945	Capture warnings	
+</pre></details>
+<section id="art-0002"><h2>Normalized document</h2><pre>[Jump to content](https://en.wikipedia.org/wiki/Gaussian_elimination#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+
+# Gaussian elimination
+
+- [Alemannisch](https://als.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren)
+- [العربية](https://ar.wikipedia.org/wiki/%D8%AD%D8%B0%D9%81_%D8%BA%D8%A7%D9%88%D8%B3%D9%8A)
+- [Azərbaycanca](https://az.wikipedia.org/wiki/Qauss_%C3%BCsulu)
+- [Башҡортса](https://ba.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81_%D1%8B%D1%81%D1%83%D0%BB%D1%8B)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%B0%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D0%B0)
+- [Català](https://ca.wikipedia.org/wiki/M%C3%A8tode_de_reducci%C3%B3_de_Gauss)
+- [Čeština](https://cs.wikipedia.org/wiki/Gaussova_elimina%C4%8Dn%C3%AD_metoda)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81_%D0%BC%D0%B5%D1%81%D0%BB%D0%B5%D1%87%C4%95)
+- [Dansk](https://da.wikipedia.org/wiki/Gauss-elimination)
+- [Deutsch](https://de.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%93%CE%BA%CE%B1%CE%BF%CF%85%CF%83%CE%B9%CE%B1%CE%BD%CE%AE_%CE%B1%CF%80%CE%B1%CE%BB%CE%BF%CE%B9%CF%86%CE%AE)
+- [Esperanto](https://eo.wikipedia.org/wiki/Ga%C5%ADsa_eliminado)
+- [Español](https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_Gauss-Jordan)
+- [Euskara](https://eu.wikipedia.org/wiki/Gauss-Jordan_algoritmo)
+- [فارسی](https://fa.wikipedia.org/wiki/%D8%AD%D8%B0%D9%81_%DA%AF%D8%A7%D9%88%D8%B3%DB%8C)
+- [Suomi](https://fi.wikipedia.org/wiki/Gaussin_algoritmi)
+- [Galego](https://gl.wikipedia.org/wiki/Eliminaci%C3%B3n_de_Gauss)
+- [עברית](https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%A8%D7%95%D7%92_%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%95%D7%AA)
+- [हिन्दी](https://hi.wikipedia.org/wiki/%E0%A4%97%E0%A4%BE%E0%A4%89%E0%A4%B8_%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%AA%E0%A4%A8)
+- [Magyar](https://hu.wikipedia.org/wiki/Gauss-elimin%C3%A1ci%C3%B3)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D4%B3%D5%A1%D5%B8%D6%82%D5%BD%D5%AB_%D5%B4%D5%A5%D5%A9%D5%B8%D5%A4)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Eliminasi_Gauss)
+- [Íslenska](https://is.wikipedia.org/wiki/Gauss-ey%C3%B0ing)
+- [Italiano](https://it.wikipedia.org/wiki/Metodo_di_eliminazione_di_Gauss)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%81%AE%E6%B6%88%E5%8E%BB%E6%B3%95)
+- [한국어](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9A%B0%EC%8A%A4_%EC%86%8C%EA%B1%B0%EB%B2%95)
+- [Lombard](https://lmo.wikipedia.org/wiki/Metod_de_eliminazion_de_Gauss)
+- [Latviešu](https://lv.wikipedia.org/wiki/Gausa_izsl%C4%93g%C5%A1anas_metode)
+- [Minangkabau](https://min.wikipedia.org/wiki/Eliminasi_gauss)
+- [Nederlands](https://nl.wikipedia.org/wiki/Gauss-eliminatie)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Gauss-eliminasjon)
+- [Polski](https://pl.wikipedia.org/wiki/Metoda_eliminacji_Gaussa)
+- [Português](https://pt.wikipedia.org/wiki/Elimina%C3%A7%C3%A3o_de_Gauss)
+- [Română](https://ro.wikipedia.org/wiki/Eliminare_gaussian%C4%83)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Саха тыла](https://sah.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%B3%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Gaussova_eliminacijska_metoda)
+- [සිංහල](https://si.wikipedia.org/wiki/%E0%B6%9C%E0%B7%80%E0%B7%94%E0%B7%83%E0%B7%93%E0%B6%BA_%E0%B6%B6%E0%B7%90%E0%B7%84%E0%B7%90%E0%B6%BB%E0%B7%93%E0%B6%B8)
+- [Simple English](https://simple.wikipedia.org/wiki/Gaussian_elimination)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Gaussova_elimina%C4%8Dn%C3%A1_met%C3%B3da)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Gaussova_eliminacijska_metoda)
+- [Shqip](https://sq.wikipedia.org/wiki/Eleminimi_gausian)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/Gausova_eliminacija)
+- [Svenska](https://sv.wikipedia.org/wiki/Gausselimination)
+- [Türkçe](https://tr.wikipedia.org/wiki/Gauss_eliminasyonu)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Vepsän kel’](https://vep.wikipedia.org/wiki/Gaussan_metod)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/Ph%C3%A9p_kh%E1%BB%AD_Gauss)
+- [吴语](https://wuu.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95)
+- [粵語](https://zh-yue.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95)
+- [中文](https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q2658#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Algorithm for solving systems of linear equations [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Gaussian_elimination_animated.gif/250px-Gaussian_elimination_animated.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_animated.gif)Animation of Gaussian elimination. Red row eliminates the following rows, green rows change their order.
+
+In mathematics, **Gaussian elimination**, also known as **row reduction**, is an [algorithm](https://en.wikipedia.org/wiki/Algorithm) for solving [systems of linear equations](https://en.wikipedia.org/wiki/Systems_of_linear_equations). It consists of a sequence of row-wise operations performed on the corresponding [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of coefficients. This method can also be used to compute the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of a matrix, the [determinant](https://en.wikipedia.org/wiki/Determinant) of a [square matrix](https://en.wikipedia.org/wiki/Square_matrix), and the inverse of an [invertible matrix](https://en.wikipedia.org/wiki/Invertible_matrix). The method is named after [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) (1777–1855).
+
+To perform row reduction on a matrix, one uses a sequence of [elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations) to modify the matrix until the lower left-hand corner of the matrix is filled with zeros, as much as possible. There are three types of elementary row operations:
+
+- swapping two rows,
+- multiplying a row by a nonzero number, and
+- adding a multiple of one row to another row.
+
+Using these operations, a matrix can always be transformed into *[reduced row echelon form](https://en.wikipedia.org/wiki/Reduced_row_echelon_form)*: each nonzero row is above every zero row, each nonzero row has leftmost nonzero entry equal to 1, the columns containing these leading 1s have all other entries 0, and the leading 1 in each nonzero row is to the right of the leading 1 in the previous row. This final form is unique; in other words, it is independent of the sequence of row operations used. For example, in the following sequence of row operations (where two elementary operations on different rows are done at the first and third steps), the third and fourth matrices are the ones in row echelon form, and the final matrix is the unique reduced row echelon form.       [    1   3   1   9     1   1   − 1   1     3   11   5   35    ]   →   [    1   3   1   9     0   − 2   − 2   − 8     0   2   2   8    ]   →   [    1   3   1   9     0   − 2   − 2   − 8     0   0   0   0    ]   →   [    1   0   − 2   − 3     0   1   1   4     0   0   0   0    ]     {\displaystyle {\begin{bmatrix}1&amp;3&amp;1&amp;9\\1&amp;1&amp;-1&amp;1\\3&amp;11&amp;5&amp;35\end{bmatrix}}\to {\begin{bmatrix}1&amp;3&amp;1&amp;9\\0&amp;-2&amp;-2&amp;-8\\0&amp;2&amp;2&amp;8\end{bmatrix}}\to {\begin{bmatrix}1&amp;3&amp;1&amp;9\\0&amp;-2&amp;-2&amp;-8\\0&amp;0&amp;0&amp;0\end{bmatrix}}\to {\begin{bmatrix}1&amp;0&amp;-2&amp;-3\\0&amp;1&amp;1&amp;4\\0&amp;0&amp;0&amp;0\end{bmatrix}}}
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif/330px-Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif)Animated row-normal-plane view of Gaussian elimination for the example system above, whose solution set is a line
+
+Using row operations to convert a matrix into reduced row echelon form is sometimes called **Gauss–Jordan elimination**. In this case, the term *Gaussian elimination* refers to the process until it has reached its [upper triangular](https://en.wikipedia.org/wiki/Upper_triangular), (unreduced) [row echelon form](https://en.wikipedia.org/wiki/Row_echelon_form). For computational reasons, when solving systems of linear equations, it is sometimes preferable to stop row operations before the matrix is completely reduced.
+
+## Definitions and example of algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=1)]
+
+The process of row reduction makes use of [elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations), and can be divided into two parts. The first part (sometimes called forward elimination) reduces a given system to row echelon form, from which one can tell whether there are no solutions, a unique solution, or infinitely many solutions. The second part (sometimes called [back substitution](https://en.wikipedia.org/wiki/Triangular_matrix#Forward_and_back_substitution)) continues to use row operations until the solution is found; in other words, it puts the matrix into reduced row echelon form.
+
+Another point of view, which turns out to be very useful to analyze the algorithm, is that row reduction produces a [matrix decomposition](https://en.wikipedia.org/wiki/Matrix_decomposition) of the original matrix. The elementary row operations may be viewed as the multiplication on the left of the original matrix by [elementary matrices](https://en.wikipedia.org/wiki/Elementary_matrix).
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Gaussian_elimination_as_multiplication_by_elementary_matrices.png/330px-Gaussian_elimination_as_multiplication_by_elementary_matrices.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_as_multiplication_by_elementary_matrices.png)Row reduction of an invertible matrix expressed as left multiplication by elementary matrices
+
+Alternatively, a sequence of elementary operations that reduces a single row may be viewed as multiplication by a [Frobenius matrix](https://en.wikipedia.org/wiki/Frobenius_matrix). Then the first part of the algorithm computes an [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition), while the second part writes the original matrix as the product of a uniquely determined invertible matrix and a uniquely determined reduced row echelon matrix.
+
+### Row operations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=2)]
+
+There are three types of elementary row operations which may be performed on the rows of a matrix:
+
+1. Interchanging two rows.
+2. Multiplying a row by a non-zero [scalar](https://en.wikipedia.org/wiki/Scalar_(mathematics)).
+3. Adding a scalar multiple of one row to another.
+
+If the matrix is associated to a system of linear equations, then these operations do not change the solution set. Therefore, if one&#39;s goal is to solve a system of linear equations, then using these row operations could make the problem easier.
+
+### Echelon form
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=3)] Main article: [Row echelon form](https://en.wikipedia.org/wiki/Row_echelon_form)
+
+For each row in a matrix, if the row does not consist of only zeros, then the leftmost nonzero entry is called the *[leading entry](https://en.wikipedia.org/wiki/Leading_entry)* (or *pivot*) of that row. If two leading entries are in the same column, then a row operation of [type 3](https://en.wikipedia.org/wiki/Gaussian_elimination#Row_operations) can be used to make one of those entries zero. Then by using the row swapping operation, one can always order the rows so that for every non-zero row, the leading entry is to the right of the leading entry of the row above. If this is the case, the matrix is said to be in *row echelon form*. In this form, the lower left part of the matrix contains only zeros, and all of the zero rows are below the non-zero rows. The word &quot;echelon&quot; is used here because one can roughly think of the rows being ranked by their size, with the largest being at the top and the smallest being at the bottom.
+
+For example, the following matrix is in row echelon form, and its leading entries are shown in red:       [    0      2      1   − 1     0   0      3      1     0   0   0   0    ]   .   {\displaystyle {\begin{bmatrix}0&amp;\color {red}{\mathbf {2} }&amp;1&amp;-1\\0&amp;0&amp;\color {red}{\mathbf {3} }&amp;1\\0&amp;0&amp;0&amp;0\end{bmatrix}}.}
+
+It is in echelon form because the zero row is at the bottom and the leading entry of the second row (in the third column) is to the right of the leading entry of the first row (in the second column).
+
+A matrix is said to be in reduced row echelon form if furthermore all of the leading entries are equal to 1 (which can be achieved by using the elementary row operation of type 2), and in every column containing a leading entry, all of the other entries in that column are zero (which can be achieved by using elementary row operations of type 3).
+
+### Example of the algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=4)]
+
+Suppose the goal is to find and describe the set of solutions to the following system of linear equations:         2 x      +     y      −     z      =     8     (  L  1   )     − 3 x      −     y      +     2 z      =     − 11     (  L  2   )     − 2 x      +     y      +     2 z      =     − 3     (  L  3   )       {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\qquad (L_{1})\\-3x&amp;{}-{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-11&amp;\qquad (L_{2})\\-2x&amp;{}+{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-3&amp;\qquad (L_{3})\end{alignedat}}}
+
+The table below is the row reduction process applied simultaneously to the system of equations and its associated [augmented matrix](https://en.wikipedia.org/wiki/Augmented_matrix). In practice, one does not usually deal with the systems in terms of equations, but instead makes use of the augmented matrix, which is more suitable for computer manipulations. The row reduction procedure may be summarized as follows: eliminate x from all equations below *L*1, and then eliminate y from all equations below *L*2. This will put the system into [triangular form](https://en.wikipedia.org/wiki/Triangular_form). Then, using back-substitution, each unknown can be solved for.
+
+   System of equationsRow operationsAugmented matrix          2 x      +     y      −     z      =     8      − 3 x      −     y      +     2 z      =     − 11      − 2 x      +     y      +     2 z      =     − 3        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\-3x&amp;{}-{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-11&amp;\\-2x&amp;{}+{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-3&amp;\end{alignedat}}}         [     2   1   − 1   8     − 3   − 1   2   − 11     − 2   1   2   − 3     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\-3&amp;-1&amp;2&amp;-11\\-2&amp;1&amp;2&amp;-3\end{array}}\right]}            2 x      +     y      −     z      =     8           1 2    y      +        1 2    z      =     1        2 y      +     z      =     5        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;{}+{}&amp;{\tfrac {1}{2}}z&amp;{}={}&amp;1&amp;\\&amp;&amp;2y&amp;{}+{}&amp;z&amp;{}={}&amp;5&amp;\end{alignedat}}}            L  2   +    3 2     L  1      →  L  2        L  3   +  L  1      →  L  3         {\displaystyle {\begin{aligned}L_{2}+{\tfrac {3}{2}}L_{1}&amp;\to L_{2}\\L_{3}+L_{1}&amp;\to L_{3}\end{aligned}}}        [     2   1   − 1   8     0     1 2       1 2     1     0   2   1   5     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\0&amp;{\frac {1}{2}}&amp;{\frac {1}{2}}&amp;1\\0&amp;2&amp;1&amp;5\end{array}}\right]}            2 x      +     y      −     z      =     8           1 2    y      +        1 2    z      =     1          − z      =     1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;{}+{}&amp;{\tfrac {1}{2}}z&amp;{}={}&amp;1&amp;\\&amp;&amp;&amp;&amp;-z&amp;{}={}&amp;1&amp;\end{alignedat}}}        L  3   + − 4  L  2   →  L  3     {\displaystyle L_{3}+-4L_{2}\to L_{3}}        [     2   1   − 1   8     0     1 2       1 2     1     0   0   − 1   1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\0&amp;{\frac {1}{2}}&amp;{\frac {1}{2}}&amp;1\\0&amp;0&amp;-1&amp;1\end{array}}\right]}    The matrix is now in row echelon form (also called triangular form)          2 x      +     y        =   7           1 2    y        =      3 2               −     z      =   1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;&amp;&amp;{}={}7&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;&amp;&amp;{}={}{\tfrac {3}{2}}&amp;\\&amp;&amp;&amp;{}-{}&amp;z&amp;{}={}1&amp;\end{alignedat}}}            L  1   −  L  3      →  L  1        L  2   +    1 2     L  3      →  L  2         {\displaystyle {\begin{aligned}L_{1}-L_{3}&amp;\to L_{1}\\L_{2}+{\tfrac {1}{2}}L_{3}&amp;\to L_{2}\end{aligned}}}        [     2   1   0   7     0     1 2     0     3 2       0   0   − 1   1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;0&amp;7\\0&amp;{\frac {1}{2}}&amp;0&amp;{\frac {3}{2}}\\0&amp;0&amp;-1&amp;1\end{array}}\right]}            2 x      +     y          =     7        y          =     3            z      =     − 1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;\quad &amp;&amp;{}={}&amp;7&amp;\\&amp;&amp;y&amp;\quad &amp;&amp;{}={}&amp;3&amp;\\&amp;&amp;&amp;\quad &amp;z&amp;{}={}&amp;-1&amp;\end{alignedat}}}           2  L  2      →  L  2       −  L  3      →  L  3         {\displaystyle {\begin{aligned}2L_{2}&amp;\to L_{2}\\-L_{3}&amp;\to L_{3}\end{aligned}}}        [     2   1   0   7     0   1   0   3     0   0   1   − 1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;0&amp;7\\0&amp;1&amp;0&amp;3\\0&amp;0&amp;1&amp;-1\end{array}}\right]}            x              =     2          y          =     3              z      =     − 1        {\displaystyle {\begin{alignedat}{4}x&amp;\quad &amp;&amp;\quad &amp;&amp;{}={}&amp;2&amp;\\&amp;\quad &amp;y&amp;\quad &amp;&amp;{}={}&amp;3&amp;\\&amp;\quad &amp;&amp;\quad &amp;z&amp;{}={}&amp;-1&amp;\end{alignedat}}}            L  1   −  L  2      →  L  1          1 2     L  1      →  L  1         {\displaystyle {\begin{aligned}L_{1}-L_{2}&amp;\to L_{1}\\{\tfrac {1}{2}}L_{1}&amp;\to L_{1}\end{aligned}}}        [     1   0   0   2     0   1   0   3     0   0   1   − 1     ]    {\displaystyle \left[{\begin{array}{rrr|r}1&amp;0&amp;0&amp;2\\0&amp;1&amp;0&amp;3\\0&amp;0&amp;1&amp;-1\end{array}}\right]}    The matrix is now in reduced row echelon form
+
+The second column describes which row operations have just been performed. For the first step, x is eliminated from *L*2 by adding ⁠3/2⁠*L*1 to *L*2. Next, x is eliminated from *L*3 by adding *L*1 to *L*3. These row operations are labelled in the table as          L  2   +    3 2     L  1      →  L  2   ,      L  3   +  L  1      →  L  3   .       {\displaystyle {\begin{aligned}L_{2}+{\tfrac {3}{2}}L_{1}&amp;\to L_{2},\\L_{3}+L_{1}&amp;\to L_{3}.\end{aligned}}}
+
+Once y is also eliminated from the third row, the result is a system of linear equations in triangular form, and so the first part of the algorithm is complete. From a computational point of view, it is faster to solve the variables in reverse order, a process known as back-substitution. One sees the solution is *z* = −1, *y* = 3, and *x* = 2. In particular, there is a unique solution to the original system of equations in this case.
+
+Instead of stopping once the matrix is in row echelon form, one could continue until the matrix is in *reduced* row echelon form, as it is done in the table. The process of row reducing until the matrix is reduced is sometimes referred to as Gauss–Jordan elimination, to distinguish it from stopping after reaching echelon form.
+
+## History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=5)]
+
+The method of Gaussian elimination appears – albeit without proof – in the Chinese mathematical text [Chapter Eight: *Rectangular Arrays*](https://en.wikipedia.org/wiki/Rod_calculus#System_of_linear_equations) of *[The Nine Chapters on the Mathematical Art](https://en.wikipedia.org/wiki/The_Nine_Chapters_on_the_Mathematical_Art)*. Its use is illustrated in eighteen problems, with two to five equations. The first reference to the book by this title is dated to 179 AD, but parts of it were written as early as approximately 150 BC.[[1]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-princeton-3) It was commented on by [Liu Hui](https://en.wikipedia.org/wiki/Liu_Hui) in the 3rd century.
+
+According to Grcar[[4]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-harvnb|Grcar|2011a|pp=169%E2%80%93172-4) solution of linear equations by elimination was invented independently in several cultures in Eurasia starting from antiquity and in Europe definite examples of procedure were published already by late Renaissance (in 1550&#39;s). It is quite possible that already then the procedure was considered by mathematicians elementary and in no need to explanation for professionals, so we may never learn its detailed history except that by then it was practiced in at least several places in Europe.
+
+The method in Europe stems from the notes of [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton).[[4]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-harvnb|Grcar|2011a|pp=169%E2%80%93172-4)[[5]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-5) In 1669–1670, Newton wrote that all the algebra books known to him lacked a lesson for solving simultaneous equations, which Newton then supplied. Cambridge University eventually published the notes as *Arithmetica Universalis* in 1707 long after Newton had left academic life. The notes were widely imitated, which made (what is now called) Gaussian elimination a standard lesson in algebra textbooks by the end of the 18th century. [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) in 1810 devised a notation for symmetric elimination that was adopted in the 19th century by professional [hand computers](https://en.wikipedia.org/wiki/Human_computer) to solve the normal equations of least-squares problems.[[6]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-6) The algorithm that is taught in high school was named for Gauss only in the 1950s as a result of confusion over the history of the subject.[[7]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-7)
+
+Some authors use the term *Gaussian elimination* to refer only to the procedure until the matrix is in echelon form, and use the term Gauss–Jordan elimination to refer to the procedure which ends in reduced echelon form. The name is used because it is a variation of Gaussian elimination as described by [Wilhelm Jordan](https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)) in 1888. However, the method also appears in an article by Clasen published in the same year. Jordan and Clasen probably discovered Gauss–Jordan elimination independently.[[8]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-8)
+
+## Applications
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=6)]
+
+Historically, the first application of the row reduction method is for solving systems of linear equations. Below are some other important applications of the algorithm.
+
+### Computing determinants
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=7)]
+
+To explain how Gaussian elimination allows the computation of the determinant of a square matrix, we have to recall how the elementary row operations change the determinant:
+
+- Swapping two rows multiplies the determinant by −1
+- Multiplying a row by a nonzero scalar multiplies the determinant by the same scalar
+- Adding to one row a scalar multiple of another does not change the determinant.
+
+If Gaussian elimination applied to a square matrix A produces a row echelon matrix B, let d be the product of the scalars by which the determinant has been multiplied, using the above rules. Then the determinant of A is the quotient by d of the product of the elements of the diagonal of B:     det ( A ) =    ∏ diag ⁡ ( B )  d   .   {\displaystyle \det(A)={\frac {\prod \operatorname {diag} (B)}{d}}.}
+
+Computationally, for an *n* × *n* matrix, this method needs only [O(*n*3)](https://en.wikipedia.org/wiki/O_notation) arithmetic operations, while using [Leibniz formula for determinants](https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants) requires     ( n  n ! )   {\displaystyle (n\,n!)}   operations (number of summands in the formula times the number of multiplications in each summand), and recursive [Laplace expansion](https://en.wikipedia.org/wiki/Laplace_expansion) requires O(*n* 2*n*) operations if the sub-determinants are memorized for being computed only once (number of operations in a linear combination times the number of sub-determinants to compute, which are determined by their columns). Even on the fastest computers, these two methods are impractical or almost impracticable for *n* above 20.
+
+### Finding the inverse of a matrix
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=8)] See also: [Invertible matrix](https://en.wikipedia.org/wiki/Invertible_matrix)
+
+A variant of Gaussian elimination called **Gauss–Jordan elimination** can be used for finding the inverse of a matrix, if it exists. If *A* is an *n* × *n* square matrix, then one can use row reduction to compute its [inverse matrix](https://en.wikipedia.org/wiki/Invertible_matrix), if it exists. First, the *n* × *n* [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) is augmented to the right of *A*, forming an *n* × 2*n* [block matrix](https://en.wikipedia.org/wiki/Block_matrix) [*A* | *I*]. Now through application of elementary row operations, find the reduced echelon form of this *n* × 2*n* matrix. The matrix *A* is invertible if and only if it can be reduced to the identity matrix *I*; in this case the right block of the final matrix is *A*−1. If the algorithm is unable to reduce the left block to *I*, then *A* is not invertible.
+
+For example, consider the following matrix:     A =   [    2   − 1   0     − 1   2   − 1     0   − 1   2    ]   .   {\displaystyle A={\begin{bmatrix}2&amp;-1&amp;0\\-1&amp;2&amp;-1\\0&amp;-1&amp;2\end{bmatrix}}.}
+
+To find the inverse of this matrix, one takes the following matrix augmented by the identity and row-reduces it as a 3 × 6 matrix:     [ A  |  I ] =  [     2   − 1   0   1   0   0     − 1   2   − 1   0   1   0     0   − 1   2   0   0   1     ]  .   {\displaystyle [A|I]=\left[{\begin{array}{ccc|ccc}2&amp;-1&amp;0&amp;1&amp;0&amp;0\\-1&amp;2&amp;-1&amp;0&amp;1&amp;0\\0&amp;-1&amp;2&amp;0&amp;0&amp;1\end{array}}\right].}
+
+By performing row operations, one can check that the reduced row echelon form of this augmented matrix is      [     1   0   0     3 4       1 2       1 4       0   1   0     1 2     1     1 2       0   0   1     1 4       1 2       3 4       ]  =: [ I  |  B ] .   {\displaystyle \left[{\begin{array}{rrr|rrr}1&amp;0&amp;0&amp;{\frac {3}{4}}&amp;{\frac {1}{2}}&amp;{\frac {1}{4}}\\0&amp;1&amp;0&amp;{\frac {1}{2}}&amp;1&amp;{\frac {1}{2}}\\0&amp;0&amp;1&amp;{\frac {1}{4}}&amp;{\frac {1}{2}}&amp;{\frac {3}{4}}\end{array}}\right]=:[I|B].}
+
+One can think of each row operation as the left product by an [elementary matrix](https://en.wikipedia.org/wiki/Elementary_matrix). On the right, we see on the right that the product of these elementary matrices is *B* (since *B* = *BI*). Meanwhile, on the left, we see that the effect of left multiplying the product of these matrices into *A* yields the identity matrix. In other words, *BA* = *I*. Therefore *B* = *A*−1, the inverse desired. This procedure for finding the inverse works for square matrices of any size.
+
+### Computing ranks and bases
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=9)]
+
+The Gaussian elimination algorithm can be applied to any *m* × *n* matrix A. In this way, for example, some 6 × 9 matrices can be transformed to a matrix that has a row echelon form like     T =   [    a   ∗   ∗   ∗   ∗   ∗   ∗   ∗   ∗     0   0   b   ∗   ∗   ∗   ∗   ∗   ∗     0   0   0   c   ∗   ∗   ∗   ∗   ∗     0   0   0   0   0   0   d   ∗   ∗     0   0   0   0   0   0   0   0   e     0   0   0   0   0   0   0   0   0    ]   ,   {\displaystyle T={\begin{bmatrix}a&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;b&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;0&amp;c&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;d&amp;*&amp;*\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;e\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}},}   where the stars are arbitrary entries, and *a*, *b*, *c*, *d*, *e* are nonzero entries. This echelon matrix T contains a wealth of information about A: the [rank](https://en.wikipedia.org/wiki/Rank_of_a_matrix) of A is 5, since there are 5 nonzero rows in T; the [vector space](https://en.wikipedia.org/wiki/Vector_space) spanned by the columns of A has a basis consisting of its columns 1, 3, 4, 7 and 9 (the columns with *a*, *b*, *c*, *d*, *e* in T), and the stars show how the other columns of A can be written as linear combinations of the basis columns.
+
+All of this applies also to the reduced row echelon form, which is a particular row echelon format.
+
+## Computational efficiency
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=10)]
+
+The number of [arithmetic operations](https://en.wikipedia.org/wiki/Arithmetic#Arithmetic_operations) required to perform row reduction is one way of measuring the algorithm&#39;s computational efficiency. For example, to solve a system of *n* equations for *n* unknowns by performing row operations on the matrix until it is in echelon form, and then solving for each unknown in reverse order, requires *n*(*n* + 1)/2 divisions, (2*n*3 + 3*n*2 − 5*n*)/6 multiplications, and (2*n*3 + 3*n*2 − 5*n*)/6 subtractions,[[9]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-9) for a total of approximately 2*n*3/3 operations. Thus it has an *arithmetic complexity* ([time complexity](https://en.wikipedia.org/wiki/Time_complexity), where each arithmetic operation takes one unit of time, independently of the size of the inputs) of O(*n*3).
+
+This complexity is a good measure of the time needed for the whole computation when the time for each arithmetic operation is approximately constant. This is the case when the coefficients are represented by [floating-point numbers](https://en.wikipedia.org/wiki/Floating-point_number) or when they belong to a [finite field](https://en.wikipedia.org/wiki/Finite_field). If the coefficients are [integers](https://en.wikipedia.org/wiki/Integer) or [rational numbers](https://en.wikipedia.org/wiki/Rational_number) exactly represented, the intermediate entries can grow exponentially large, so the [bit complexity](https://en.wikipedia.org/wiki/Bit_complexity) is exponential.[[10]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-10) However, the [Bareiss algorithm](https://en.wikipedia.org/wiki/Bareiss_algorithm) is a variant of Gaussian elimination that avoids this exponential growth of the intermediate entries; with the same arithmetic complexity of O(*n*3), it has a bit complexity of O(*n*5), and has therefore a [strongly-polynomial time](https://en.wikipedia.org/wiki/Strongly-polynomial_time) complexity.
+
+Gaussian elimination and its variants can be used on computers for systems with thousands of equations and unknowns. However, the cost becomes prohibitive for systems with millions of equations. These large systems are generally solved using [iterative methods](https://en.wikipedia.org/wiki/Iterative_method). Specific methods exist for systems whose coefficients follow a regular pattern (see [System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)).
+
+### Bareiss algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=11)] Main article: [Bareiss algorithm](https://en.wikipedia.org/wiki/Bareiss_algorithm)
+
+The first [strongly-polynomial time](https://en.wikipedia.org/wiki/Strongly-polynomial_time) algorithm for Gaussian elimination was published by [Jack Edmonds](https://en.wikipedia.org/wiki/Jack_Edmonds) in 1967.[[11]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-:0-11): 37  Independently, and almost simultaneously, Erwin Bareiss discovered another algorithm, based on the following remark, which applies to a division-free variant of Gaussian elimination.
+
+In standard Gaussian elimination, one subtracts from each row      R  i     {\displaystyle R_{i}}   below the pivot row      R  k     {\displaystyle R_{k}}   a multiple of      R  k     {\displaystyle R_{k}}   by      r  i , k    /   r  k , k   ,   {\displaystyle r_{i,k}/r_{k,k},}   where      r  i , k     {\displaystyle r_{i,k}}   and      r  k , k     {\displaystyle r_{k,k}}   are the entries in the pivot column of      R  i     {\displaystyle R_{i}}   and      R  k   ,   {\displaystyle R_{k},}   respectively.
+
+Bareiss variant consists, instead, of replacing      R  i     {\displaystyle R_{i}}   with         r  k , k    R  i   −  r  i , k    R  k     r  k − 1 , k − 1     .   {\textstyle {\frac {r_{k,k}R_{i}-r_{i,k}R_{k}}{r_{k-1,k-1}}}.}   This produces a row echelon form that has the same zero entries as with the standard Gaussian elimination.
+
+Bareiss&#39; main remark is that each matrix entry generated by this variant is the determinant of a submatrix of the original matrix.
+
+In particular, if one starts with integer entries, the divisions occurring in the algorithm are exact divisions resulting in integers. Therefore, all intermediate entries and final entries are integers. Moreover, [Hadamard&#39;s inequality](https://en.wikipedia.org/wiki/Hadamard&#39;s_inequality) provides an upper bound on the absolute values of the intermediate and final entries, and thus a bit complexity of        O ~    (  n  5   ) ,   {\displaystyle {\tilde {O}}(n^{5}),}   using [soft O notation](https://en.wikipedia.org/wiki/Soft_O_notation).
+
+Moreover, as an upper bound on the size of final entries is known, a complexity        O ~    (  n  4   )   {\displaystyle {\tilde {O}}(n^{4})}   can be obtained with [modular computation](https://en.wikipedia.org/wiki/Modular_arithmetic) followed either by [Chinese remaindering](https://en.wikipedia.org/wiki/Chinese_remainder_theorem) or [Hensel lifting](https://en.wikipedia.org/wiki/Hensel_lifting).
+
+As a corollary, the following problems can be solved in strongly polynomial time with the same bit complexity:[[11]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-:0-11): 40
+
+- Testing whether *m* given rational vectors are [linearly independent](https://en.wikipedia.org/wiki/Linearly_independent)
+- Computing the [determinant](https://en.wikipedia.org/wiki/Determinant) of a rational matrix
+- Computing a solution of a rational equation system *Ax* = *b*
+- Computing the [inverse matrix](https://en.wikipedia.org/wiki/Inverse_matrix) of a nonsingular rational matrix
+- Computing the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of a rational matrix
+
+### Numeric instability
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=12)]
+
+One possible problem is [numerical instability](https://en.wikipedia.org/wiki/Numerical_stability), caused by the possibility of dividing by very small numbers. If, for example, the leading coefficient of one of the rows is very close to zero, then to row-reduce the matrix, one would need to divide by that number. This means that any error which existed for the number that was close to zero would be amplified. Gaussian elimination is numerically stable for [diagonally dominant](https://en.wikipedia.org/wiki/Diagonally_dominant) or [positive-definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) matrices. For general matrices, Gaussian elimination is usually considered to be stable, when using [partial pivoting](https://en.wikipedia.org/wiki/Partial_pivoting), even though there are examples of stable matrices for which it is unstable.[[12]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-12)[[13]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-13)
+
+## Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=13)]
+
+Gaussian elimination can be performed over any [field](https://en.wikipedia.org/wiki/Field_(mathematics)), not just the real numbers.
+
+[Buchberger&#39;s algorithm](https://en.wikipedia.org/wiki/Buchberger&#39;s_algorithm) is a generalization of Gaussian elimination to [systems of polynomial equations](https://en.wikipedia.org/wiki/Systems_of_polynomial_equations). This generalization depends heavily on the notion of a [monomial order](https://en.wikipedia.org/wiki/Monomial_order). The choice of an ordering on the variables is already implicit in Gaussian elimination, manifesting as the choice to work from left to right when selecting pivot positions.
+
+Computing the rank of a tensor of order greater than 2 is [NP-hard](https://en.wikipedia.org/wiki/NP-hard).[[14]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-14) Therefore, if [P ≠ NP](https://en.wikipedia.org/wiki/P=NP), there cannot be a polynomial time analog of Gaussian elimination for higher-order [tensors](https://en.wikipedia.org/wiki/Tensor) (matrices are [array](https://en.wikipedia.org/wiki/Array_data_structure) representations of order-2 tensors).
+
+## Pseudocode
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=14)]
+
+As explained above, Gaussian elimination transforms a given *m* × *n* matrix A into a matrix in [row-echelon form](https://en.wikipedia.org/wiki/Row-echelon_form).
+
+In the following [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), `A[i, j]` denotes the entry of the matrix A in row i and column j with the indices starting from 1. The transformation is performed *in place*, meaning that the original matrix is lost for being eventually replaced by its row-echelon form.
+
+```
+h := 1 /* Initialization of the pivot row */
+k := 1 /* Initialization of the pivot column */
+
+while h ≤ m and k ≤ n:
+    /* Find the k-th pivot: */
+    i_max := argmax (i = h ... m, abs(A[i, k]))
+    if A[i_max, k] = 0:
+        /* No pivot in this column, pass to next column */
+        k := k + 1
+    else:
+        swap rows(h, i_max)
+        /* Do for all rows below pivot: */
+        for i = h + 1 ... m:
+            f := A[i, k] / A[h, k]
+            /* Fill with zeros the lower part of pivot column: */
+            A[i, k] := 0
+            /* Do for all remaining elements in current row: */
+            for j = k + 1 ... n:
+                A[i, j] := A[i, j] - A[h, j] * f
+        /* Increase pivot row and column */
+        h := h + 1
+        k := k + 1
+```
+
+This algorithm differs slightly from the one discussed earlier, by choosing a pivot with largest [absolute value](https://en.wikipedia.org/wiki/Absolute_value). Such a *partial pivoting* may be required if, at the pivot place, the entry of the matrix is zero. In any case, choosing the largest possible absolute value of the pivot improves the [numerical stability](https://en.wikipedia.org/wiki/Numerical_stability) of the algorithm, when floating point is used for representing numbers.[[15]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-15)
+
+Upon completion of this procedure the matrix will be in row echelon form and the corresponding system may be solved by back substitution.
+
+## See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=15)]
+- [Fangcheng (mathematics)](https://en.wikipedia.org/wiki/Fangcheng_(mathematics))
+- [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process) - another process for bringing a matrix into some canonical form.
+- [Fourier–Motzkin elimination](https://en.wikipedia.org/wiki/Fourier%E2%80%93Motzkin_elimination) - an algorithm for eliminating variables of a system of linear inequalities, rather than equations.
+
+## References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=16)]
+1. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-1) [&quot;DOCUMENTA MATHEMATICA, Vol. Extra Volume: Optimization Stories (2012), 9-14&quot;](https://www.emis.de/journals/DMJDMV/vol-ismp/10_yuan-ya-xiang.html). *www.emis.de*. Retrieved 2022-12-02.
+2. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-2) [Calinger 1999](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFCalinger1999), pp. 234–236
+3. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-princeton_3-0) Timothy Gowers; June Barrow-Green; Imre Leader (8 September 2008). [*The Princeton Companion to Mathematics*](https://archive.org/details/princetoncompanio00gowe). Princeton University Press. p. 607. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-691-11880-2](https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-11880-2).
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-harvnb|Grcar|2011a|pp=169%E2%80%93172_4-0) [2](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-harvnb|Grcar|2011a|pp=169%E2%80%93172_4-1) [Grcar 2011a](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011a), pp. 169–172
+5. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-5) [Grcar 2011b](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011b), pp. 783–785
+6. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-6) [Lauritzen](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFLauritzen), p. 3
+7. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-7) [Grcar 2011b](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011b), p. 789
+8. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-8) Althoen, Steven C.; McLaughlin, Renate (1987), &quot;Gauss–Jordan reduction: a brief history&quot;, *[The American Mathematical Monthly](https://en.wikipedia.org/wiki/American_Mathematical_Monthly)*, **94** (2), Mathematical Association of America: 130–142, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2322413](https://doi.org/10.2307%2F2322413), [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0002-9890](https://search.worldcat.org/issn/0002-9890), [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2322413](https://www.jstor.org/stable/2322413)
+9. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-9) [Farebrother 1988](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFFarebrother1988), p. 12
+10. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-10) Fang, Xin Gui; Havas, George (1997). [&quot;On the worst-case complexity of integer Gaussian elimination&quot;](https://scholar.archive.org/work/2htta67odrfilhxegzjqfratyy). *Proceedings of the 1997 international symposium on Symbolic and algebraic computation*. ISSAC &#39;97. Kihei, Maui, Hawaii, United States: ACM. pp. 28–31. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/258726.258740](https://doi.org/10.1145%2F258726.258740). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-89791-875-4](https://en.wikipedia.org/wiki/Special:BookSources/0-89791-875-4).
+11. [Jump up to: 1](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-:0_11-0) [2](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-:0_11-1) [Grötschel, Martin](https://en.wikipedia.org/wiki/Martin_Gr%C3%B6tschel); [Lovász, László](https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Lov%C3%A1sz); [Schrijver, Alexander](https://en.wikipedia.org/wiki/Alexander_Schrijver) (1993), [*Geometric algorithms and combinatorial optimization*](https://books.google.com/books?id=hWvmCAAAQBAJ&amp;pg=PA281), Algorithms and Combinatorics, vol. 2 (2nd ed.), Springer-Verlag, Berlin, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-3-642-78240-4](https://doi.org/10.1007%2F978-3-642-78240-4), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-642-78242-8](https://en.wikipedia.org/wiki/Special:BookSources/978-3-642-78242-8), [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1261419](https://mathscinet.ams.org/mathscinet-getitem?mr=1261419)
+12. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-12) [Golub &amp; Van Loan 1996](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGolubVan_Loan1996), §3.4.6
+13. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-13) [John Urschel:&quot;Numerical Stability in Gaussian Elimination&quot;, June/July 2025, Notice of AMS, pp.605-613.](https://www.ams.org/journals/notices/202506/noti3191/noti3191.html)
+14. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-14) Hillar, Christopher; [Lim, Lek-Heng](https://en.wikipedia.org/wiki/Lek-Heng_Lim) (2009-11-07). &quot;Most tensor problems are NP-hard&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[0911.1393](https://arxiv.org/abs/0911.1393) [[cs.CC](https://arxiv.org/archive/cs.CC)].
+15. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-15) Kurgalin, Sergei; Borzunov, Sergei (2021). [*Algebra and Geometry with Python*](https://doi.org/10.1007/978-3-030-61541-3). Cham. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-3-030-61541-3](https://doi.org/10.1007%2F978-3-030-61541-3). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-030-61540-6](https://en.wikipedia.org/wiki/Special:BookSources/978-3-030-61540-6).`{{cite book}}`: CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+
+### Works cited
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=17)]
+- Atkinson, Kendall A. (1989), *An Introduction to Numerical Analysis* (2nd ed.), New York: [John Wiley &amp; Sons](https://en.wikipedia.org/wiki/John_Wiley_&amp;_Sons), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0471624899](https://en.wikipedia.org/wiki/Special:BookSources/978-0471624899).
+- Bolch, Gunter; Greiner, Stefan; de Meer, Hermann; Trivedi, Kishor S. (2006), *Queueing Networks and Markov Chains: Modeling and Performance Evaluation with Computer Science Applications* (2nd ed.), [Wiley-Interscience](https://en.wikipedia.org/wiki/Wiley-Interscience), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-471-79156-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-471-79156-0).
+- Calinger, Ronald (1999), *A Contextual History of Mathematics*, [Prentice Hall](https://en.wikipedia.org/wiki/Prentice_Hall), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-02-318285-3](https://en.wikipedia.org/wiki/Special:BookSources/978-0-02-318285-3).
+- Farebrother, R.W. (1988), *Linear Least Squares Computations*, STATISTICS: Textbooks and Monographs, Marcel Dekker, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-8247-7661-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-8247-7661-9).
+- Lauritzen, Niels, *Undergraduate Convexity: From Fourier and Motzkin to Kuhn and Tucker*.
+- [Golub, Gene H.](https://en.wikipedia.org/wiki/Gene_H._Golub); [Van Loan, Charles F.](https://en.wikipedia.org/wiki/Charles_F._Van_Loan) (1996), *Matrix Computations* (3rd ed.), Johns Hopkins, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-8018-5414-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-8018-5414-9).
+- Grcar, Joseph F. (2011a), &quot;How ordinary elimination became Gaussian elimination&quot;, *Historia Mathematica*, **38** (2): 163–218, [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[0907.2397](https://arxiv.org/abs/0907.2397), [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.hm.2010.06.003](https://doi.org/10.1016%2Fj.hm.2010.06.003), [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [14259511](https://api.semanticscholar.org/CorpusID:14259511)
+- Grcar, Joseph F. (2011b), [&quot;Mathematicians of Gaussian elimination&quot;](https://www.ams.org/notices/201106/rtx110600782p.pdf) (PDF), *Notices of the American Mathematical Society*, **58** (6): 782–792
+- [Higham, Nicholas](https://en.wikipedia.org/wiki/Nicholas_Higham) (2002), *Accuracy and Stability of Numerical Algorithms* (2nd ed.), [SIAM](https://en.wikipedia.org/wiki/Society_for_Industrial_and_Applied_Mathematics), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-89871-521-7](https://en.wikipedia.org/wiki/Special:BookSources/978-0-89871-521-7).
+- [Katz, Victor J.](https://en.wikipedia.org/wiki/Victor_J._Katz) (2004), *A History of Mathematics, Brief Version*, [Addison-Wesley](https://en.wikipedia.org/wiki/Addison-Wesley), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-16193-2](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-16193-2).
+- Kaw, Autar; Kalu, Egwu (2010). [&quot;Numerical Methods with Applications: Chapter 04.06 Gaussian Elimination&quot;](http://mathforcollege.com/nm/mws/gen/04sle/mws_gen_sle_txt_gaussian.pdf) (PDF) (1st ed.). University of South Florida. [Archived](https://web.archive.org/web/20120907224427/http://mathforcollege.com/nm/mws/gen/04sle/mws_gen_sle_txt_gaussian.pdf) (PDF) from the original on 2012-09-07.
+- Lipson, Marc; Lipschutz, Seymour (2001), *Schaum&#39;s outline of theory and problems of linear algebra*, New York: [McGraw-Hill](https://en.wikipedia.org/wiki/McGraw-Hill), pp. 69–80, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-07-136200-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-07-136200-9)
+- Press, WH; Teukolsky, SA; Vetterling, WT; Flannery, BP (2007), [&quot;Section 2.2&quot;](https://web.archive.org/web/20120319193237/http://apps.nrbook.com/empanel/index.html?pg=46), *Numerical Recipes: The Art of Scientific Computing* (3rd ed.), New York: Cambridge University Press, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-521-88068-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-521-88068-8), archived from [the original](http://apps.nrbook.com/empanel/index.html?pg=46) on 2012-03-19, retrieved 2011-08-08
+
+## External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=18)]   [![Wikibooks logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg) The Wikibook *[Linear Algebra](https://en.wikibooks.org/wiki/Linear%20Algebra)* has a page on the topic of: ***[Gaussian elimination](https://en.wikibooks.org/wiki/Linear%20Algebra/Gauss&#39;%20Method)***
+- [Interactive didactic tool](http://pnp.mathematik.uni-stuttgart.de/igt/eiserm/lehre/Gael/)
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Linear_algebra)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Linear_algebra)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Linear_algebra)
+[Linear algebra](https://en.wikipedia.org/wiki/Linear_algebra)
+- [Outline](https://en.wikipedia.org/wiki/Outline_of_linear_algebra)
+- [Glossary](https://en.wikipedia.org/wiki/Glossary_of_linear_algebra)
+- [Template:Matrix classes](https://en.wikipedia.org/wiki/Template:Matrix_classes)
+ [Linear equations](https://en.wikipedia.org/wiki/Linear_equation)
+- [Linear equation](https://en.wikipedia.org/wiki/Linear_equation)
+- [System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)
+- [Determinant](https://en.wikipedia.org/wiki/Determinant)
+- [Minor](https://en.wikipedia.org/wiki/Minor_(linear_algebra))
+- [Cauchy–Binet formula](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Binet_formula)
+- [Cramer&#39;s rule](https://en.wikipedia.org/wiki/Cramer&#39;s_rule)
+- [Gaussian elimination](https://en.wikipedia.org/wiki/Gaussian_elimination)
+- [Gauss–Jordan elimination](https://en.wikipedia.org/wiki/Gauss%E2%80%93Jordan_elimination)
+- [Overcompleteness](https://en.wikipedia.org/wiki/Overcompleteness)
+- [Strassen algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm)
+ [![Three dimensional Euclidean space](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Linear_subspaces_with_shading.svg/120px-Linear_subspaces_with_shading.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Linear_subspaces_with_shading.svg)[Matrices](https://en.wikipedia.org/wiki/Matrix_(mathematics))
+- [Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics))
+- [Matrix addition](https://en.wikipedia.org/wiki/Matrix_addition)
+- [Matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication)
+- [Basis transformation matrix](https://en.wikipedia.org/wiki/Basis_transformation_matrix)
+- [Characteristic polynomial](https://en.wikipedia.org/wiki/Characteristic_polynomial)
+- [Spectrum](https://en.wikipedia.org/wiki/Spectrum_of_a_matrix)
+- [Trace](https://en.wikipedia.org/wiki/Trace_(linear_algebra))
+- [Eigenvalue, eigenvector and eigenspace](https://en.wikipedia.org/wiki/Eigenvalue,_eigenvector_and_eigenspace)
+- [Cayley–Hamilton theorem](https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem)
+- [Jordan normal form](https://en.wikipedia.org/wiki/Jordan_normal_form)
+- [Weyr canonical form](https://en.wikipedia.org/wiki/Weyr_canonical_form)
+- [Rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra))
+- [Inverse](https://en.wikipedia.org/wiki/Matrix_inversion), [Pseudoinverse](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_pseudoinverse)
+- [Adjugate](https://en.wikipedia.org/wiki/Adjugate_matrix), [Transpose](https://en.wikipedia.org/wiki/Transpose)
+- [Dot product](https://en.wikipedia.org/wiki/Dot_product)
+- [Symmetric matrix](https://en.wikipedia.org/wiki/Symmetric_matrix), [Skew-symmetric matrix](https://en.wikipedia.org/wiki/Skew-symmetric_matrix)
+- [Orthogonal matrix](https://en.wikipedia.org/wiki/Orthogonal_matrix), [Unitary matrix](https://en.wikipedia.org/wiki/Unitary_matrix)
+- [Hermitian matrix](https://en.wikipedia.org/wiki/Hermitian_matrix), [Antihermitian matrix](https://en.wikipedia.org/wiki/Antihermitian_matrix)
+- [Positive-(semi)definite](https://en.wikipedia.org/wiki/Positive-definite_matrix)
+- [Pfaffian](https://en.wikipedia.org/wiki/Pfaffian)
+- [Projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra))
+- [Spectral theorem](https://en.wikipedia.org/wiki/Spectral_theorem)
+- [Perron–Frobenius theorem](https://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem)
+- [Diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix), [Triangular matrix](https://en.wikipedia.org/wiki/Triangular_matrix), [Tridiagonal matrix](https://en.wikipedia.org/wiki/Tridiagonal_matrix)
+- [Block matrix](https://en.wikipedia.org/wiki/Block_matrix)
+- [Sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix)
+- [Hessenberg matrix](https://en.wikipedia.org/wiki/Hessenberg_matrix), [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix)
+- [Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)
+- [Stochastic matrix](https://en.wikipedia.org/wiki/Stochastic_matrix), [Toeplitz matrix](https://en.wikipedia.org/wiki/Toeplitz_matrix), [Circulant matrix](https://en.wikipedia.org/wiki/Circulant_matrix), [Hankel matrix](https://en.wikipedia.org/wiki/Hankel_matrix)
+- [(0,1)-matrix](https://en.wikipedia.org/wiki/(0,1)-matrix)
+- [List of matrices](https://en.wikipedia.org/wiki/List_of_matrices)
+ [Matrix decompositions](https://en.wikipedia.org/wiki/Matrix_decomposition)
+- [Cholesky decomposition](https://en.wikipedia.org/wiki/Cholesky_decomposition)
+- [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition)
+- [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition)
+- [Polar decomposition](https://en.wikipedia.org/wiki/Polar_decomposition)
+- [Spectral theorem](https://en.wikipedia.org/wiki/Spectral_theorem)
+- [Singular value decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+- [Higher-order singular value decomposition](https://en.wikipedia.org/wiki/Higher-order_singular_value_decomposition)
+- [Schur decomposition](https://en.wikipedia.org/wiki/Schur_decomposition)
+- [Schur complement](https://en.wikipedia.org/wiki/Schur_complement)
+- [Haynsworth inertia additivity formula](https://en.wikipedia.org/wiki/Haynsworth_inertia_additivity_formula)
+- [Reducing subspace](https://en.wikipedia.org/wiki/Reducing_subspace)
+ [Relations and computations](https://en.wikipedia.org/wiki/Matrix_equivalence)
+- [Matrix equivalence](https://en.wikipedia.org/wiki/Matrix_equivalence)
+- [Matrix congruence](https://en.wikipedia.org/wiki/Matrix_congruence)
+- [Matrix similarity](https://en.wikipedia.org/wiki/Matrix_similarity)
+- [Matrix consimilarity](https://en.wikipedia.org/wiki/Matrix_consimilarity)
+- [Row equivalence](https://en.wikipedia.org/wiki/Row_equivalence)
+- [Elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations)
+- [Householder transformation](https://en.wikipedia.org/wiki/Householder_transformation)
+- [Least squares](https://en.wikipedia.org/wiki/Least_squares)
+- [Linear least squares](https://en.wikipedia.org/wiki/Linear_least_squares)
+- [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process)
+- [Woodbury matrix identity](https://en.wikipedia.org/wiki/Woodbury_matrix_identity)
+ [Vector spaces](https://en.wikipedia.org/wiki/Vector_space)
+- [Vector space](https://en.wikipedia.org/wiki/Vector_space)
+- [Linear combination](https://en.wikipedia.org/wiki/Linear_combination)
+- [Linear span](https://en.wikipedia.org/wiki/Linear_span)
+- [Linear independence](https://en.wikipedia.org/wiki/Linear_independence)
+- [Basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)), [Hamel basis](https://en.wikipedia.org/wiki/Hamel_basis)
+- [Change of basis](https://en.wikipedia.org/wiki/Change_of_basis)
+- [Dimension theorem for vector spaces](https://en.wikipedia.org/wiki/Dimension_theorem_for_vector_spaces)
+- [Hamel dimension](https://en.wikipedia.org/wiki/Hamel_dimension)
+- [Examples of vector spaces](https://en.wikipedia.org/wiki/Examples_of_vector_spaces)
+- [Linear map](https://en.wikipedia.org/wiki/Linear_map)
+- [Shear mapping](https://en.wikipedia.org/wiki/Shear_mapping)
+- [Squeeze mapping](https://en.wikipedia.org/wiki/Squeeze_mapping)
+- [Linear subspace](https://en.wikipedia.org/wiki/Linear_subspace)
+- [Row and column spaces](https://en.wikipedia.org/wiki/Row_and_column_spaces), [Null space](https://en.wikipedia.org/wiki/Null_space)
+- [Rank–nullity theorem](https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem)
+- [Nullity theorem](https://en.wikipedia.org/wiki/Nullity_theorem)
+- [Cyclic subspace](https://en.wikipedia.org/wiki/Cyclic_subspace)
+- [Dual space](https://en.wikipedia.org/wiki/Dual_space), [Linear functional](https://en.wikipedia.org/wiki/Linear_functional)
+- [Category of vector spaces](https://en.wikipedia.org/wiki/Category_of_vector_spaces)
+ [Structures](https://en.wikipedia.org/wiki/Vector_space)
+- [Topological vector space](https://en.wikipedia.org/wiki/Topological_vector_space)
+- [Normed vector space](https://en.wikipedia.org/wiki/Normed_vector_space)
+- [Inner product space](https://en.wikipedia.org/wiki/Inner_product_space)
+- [Euclidean space](https://en.wikipedia.org/wiki/Euclidean_space)
+- [Orthogonality](https://en.wikipedia.org/wiki/Orthogonality)
+- [Orthogonal complement](https://en.wikipedia.org/wiki/Orthogonal_complement)
+- [Orthogonal projection](https://en.wikipedia.org/wiki/Orthogonal_projection)
+- [Orthogonal group](https://en.wikipedia.org/wiki/Orthogonal_group)
+- [Pseudo-Euclidean space](https://en.wikipedia.org/wiki/Pseudo-Euclidean_space)
+- [Null vector](https://en.wikipedia.org/wiki/Null_vector)
+- [Indefinite orthogonal group](https://en.wikipedia.org/wiki/Indefinite_orthogonal_group)
+- [Orientation](https://en.wikipedia.org/wiki/Orientation_(geometry))
+- [Improper rotation](https://en.wikipedia.org/wiki/Improper_rotation)
+- [Symplectic structure](https://en.wikipedia.org/wiki/Symplectic_structure)
+ [Multilinear algebra](https://en.wikipedia.org/wiki/Multilinear_algebra)
+- [Multilinear algebra](https://en.wikipedia.org/wiki/Multilinear_algebra)
+- [Tensor](https://en.wikipedia.org/wiki/Tensor)
+- [Tensors (classical)](https://en.wikipedia.org/wiki/Classical_treatment_of_tensors)
+- [Component-free treatment of tensors](https://en.wikipedia.org/wiki/Component-free_treatment_of_tensors)
+- [Outer product](https://en.wikipedia.org/wiki/Outer_product)
+- [Tensor algebra](https://en.wikipedia.org/wiki/Tensor_algebra)
+- [Exterior algebra](https://en.wikipedia.org/wiki/Exterior_algebra)
+- [Symmetric algebra](https://en.wikipedia.org/wiki/Symmetric_algebra)
+- [Clifford algebra](https://en.wikipedia.org/wiki/Clifford_algebra)
+- [Geometric algebra](https://en.wikipedia.org/wiki/Geometric_algebra)
+- [Bivector](https://en.wikipedia.org/wiki/Bivector)
+- [Multivector](https://en.wikipedia.org/wiki/Multivector)
+- [Gamas&#39;s theorem](https://en.wikipedia.org/wiki/Gamas&#39;s_theorem)
+ [Affine and projective](https://en.wikipedia.org/wiki/Affine_space)
+- [Affine space](https://en.wikipedia.org/wiki/Affine_space)
+- [Affine transformation](https://en.wikipedia.org/wiki/Affine_transformation), [Affine group](https://en.wikipedia.org/wiki/Affine_group), [Affine geometry](https://en.wikipedia.org/wiki/Affine_geometry)
+- [Affine coordinate system](https://en.wikipedia.org/wiki/Affine_coordinate_system), [Flat (geometry)](https://en.wikipedia.org/wiki/Flat_(geometry))
+- [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system)
+- [Euclidean group](https://en.wikipedia.org/wiki/Euclidean_group)
+- [Poincaré group](https://en.wikipedia.org/wiki/Poincar%C3%A9_group)
+- [Galilean group](https://en.wikipedia.org/wiki/Galilean_group)
+- [Projective space](https://en.wikipedia.org/wiki/Projective_space)
+- [Projective transformation](https://en.wikipedia.org/wiki/Projective_transformation)
+- [Projective geometry](https://en.wikipedia.org/wiki/Projective_geometry)
+- [Projective linear group](https://en.wikipedia.org/wiki/Projective_linear_group)
+- [Quadric](https://en.wikipedia.org/wiki/Quadric)
+ [Numerical linear algebra](https://en.wikipedia.org/wiki/Numerical_linear_algebra)
+- [Numerical linear algebra](https://en.wikipedia.org/wiki/Numerical_linear_algebra)
+- [Floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
+- [Numerical stability](https://en.wikipedia.org/wiki/Numerical_stability)
+- [Basic Linear Algebra Subprograms](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)
+- [Sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix)
+- [Comparison of linear algebra libraries](https://en.wikipedia.org/wiki/Comparison_of_linear_algebra_libraries)
+
+- ![](https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail) [Category](https://en.wikipedia.org/wiki/Category:Linear_algebra)
+  [Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control) [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q2658#identifiers)
+- [GND](https://d-nb.info/gnd/4156110-7)
+          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;oldid=1365416799](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;oldid=1365416799)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Numerical linear algebra](https://en.wikipedia.org/wiki/Category:Numerical_linear_algebra)
+- [Exchange algorithms](https://en.wikipedia.org/wiki/Category:Exchange_algorithms)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [CS1 maint: location missing publisher](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+
+    [https://en\.wikipedia\.org/wiki/Gaussian\_elimination?action=edit](https://en.wikipedia.org/wiki/Gaussian_elimination?action=edit)
+</pre></section>
+<section><h2>Sections</h2><article id="section-0001"><h3>Introduction</h3><pre># Introduction
+
+[Jump to content](https://en.wikipedia.org/wiki/Gaussian_elimination#bodyContent)     [![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](https://en.wikipedia.org/wiki/Main_Page)    [Search](https://en.wikipedia.org/wiki/Special:Search)
+</pre></article><article id="section-0002"><h3>Gaussian elimination</h3><pre># Gaussian elimination
+
+- [Alemannisch](https://als.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren)
+- [العربية](https://ar.wikipedia.org/wiki/%D8%AD%D8%B0%D9%81_%D8%BA%D8%A7%D9%88%D8%B3%D9%8A)
+- [Azərbaycanca](https://az.wikipedia.org/wiki/Qauss_%C3%BCsulu)
+- [Башҡортса](https://ba.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81_%D1%8B%D1%81%D1%83%D0%BB%D1%8B)
+- [Беларуская](https://be.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%B0%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D0%B0)
+- [Català](https://ca.wikipedia.org/wiki/M%C3%A8tode_de_reducci%C3%B3_de_Gauss)
+- [Čeština](https://cs.wikipedia.org/wiki/Gaussova_elimina%C4%8Dn%C3%AD_metoda)
+- [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%93%D0%B0%D1%83%D1%81%D1%81_%D0%BC%D0%B5%D1%81%D0%BB%D0%B5%D1%87%C4%95)
+- [Dansk](https://da.wikipedia.org/wiki/Gauss-elimination)
+- [Deutsch](https://de.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren)
+- [Ελληνικά](https://el.wikipedia.org/wiki/%CE%93%CE%BA%CE%B1%CE%BF%CF%85%CF%83%CE%B9%CE%B1%CE%BD%CE%AE_%CE%B1%CF%80%CE%B1%CE%BB%CE%BF%CE%B9%CF%86%CE%AE)
+- [Esperanto](https://eo.wikipedia.org/wiki/Ga%C5%ADsa_eliminado)
+- [Español](https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_Gauss-Jordan)
+- [Euskara](https://eu.wikipedia.org/wiki/Gauss-Jordan_algoritmo)
+- [فارسی](https://fa.wikipedia.org/wiki/%D8%AD%D8%B0%D9%81_%DA%AF%D8%A7%D9%88%D8%B3%DB%8C)
+- [Suomi](https://fi.wikipedia.org/wiki/Gaussin_algoritmi)
+- [Galego](https://gl.wikipedia.org/wiki/Eliminaci%C3%B3n_de_Gauss)
+- [עברית](https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%A8%D7%95%D7%92_%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%95%D7%AA)
+- [हिन्दी](https://hi.wikipedia.org/wiki/%E0%A4%97%E0%A4%BE%E0%A4%89%E0%A4%B8_%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%AA%E0%A4%A8)
+- [Magyar](https://hu.wikipedia.org/wiki/Gauss-elimin%C3%A1ci%C3%B3)
+- [Հայերեն](https://hy.wikipedia.org/wiki/%D4%B3%D5%A1%D5%B8%D6%82%D5%BD%D5%AB_%D5%B4%D5%A5%D5%A9%D5%B8%D5%A4)
+- [Bahasa Indonesia](https://id.wikipedia.org/wiki/Eliminasi_Gauss)
+- [Íslenska](https://is.wikipedia.org/wiki/Gauss-ey%C3%B0ing)
+- [Italiano](https://it.wikipedia.org/wiki/Metodo_di_eliminazione_di_Gauss)
+- [日本語](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%81%AE%E6%B6%88%E5%8E%BB%E6%B3%95)
+- [한국어](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9A%B0%EC%8A%A4_%EC%86%8C%EA%B1%B0%EB%B2%95)
+- [Lombard](https://lmo.wikipedia.org/wiki/Metod_de_eliminazion_de_Gauss)
+- [Latviešu](https://lv.wikipedia.org/wiki/Gausa_izsl%C4%93g%C5%A1anas_metode)
+- [Minangkabau](https://min.wikipedia.org/wiki/Eliminasi_gauss)
+- [Nederlands](https://nl.wikipedia.org/wiki/Gauss-eliminatie)
+- [Norsk bokmål](https://no.wikipedia.org/wiki/Gauss-eliminasjon)
+- [Polski](https://pl.wikipedia.org/wiki/Metoda_eliminacji_Gaussa)
+- [Português](https://pt.wikipedia.org/wiki/Elimina%C3%A7%C3%A3o_de_Gauss)
+- [Română](https://ro.wikipedia.org/wiki/Eliminare_gaussian%C4%83)
+- [Русский](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Саха тыла](https://sah.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%B3%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Gaussova_eliminacijska_metoda)
+- [සිංහල](https://si.wikipedia.org/wiki/%E0%B6%9C%E0%B7%80%E0%B7%94%E0%B7%83%E0%B7%93%E0%B6%BA_%E0%B6%B6%E0%B7%90%E0%B7%84%E0%B7%90%E0%B6%BB%E0%B7%93%E0%B6%B8)
+- [Simple English](https://simple.wikipedia.org/wiki/Gaussian_elimination)
+- [Slovenčina](https://sk.wikipedia.org/wiki/Gaussova_elimina%C4%8Dn%C3%A1_met%C3%B3da)
+- [Slovenščina](https://sl.wikipedia.org/wiki/Gaussova_eliminacijska_metoda)
+- [Shqip](https://sq.wikipedia.org/wiki/Eleminimi_gausian)
+- [Српски / srpski](https://sr.wikipedia.org/wiki/Gausova_eliminacija)
+- [Svenska](https://sv.wikipedia.org/wiki/Gausselimination)
+- [Türkçe](https://tr.wikipedia.org/wiki/Gauss_eliminasyonu)
+- [Українська](https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+- [Vepsän kel’](https://vep.wikipedia.org/wiki/Gaussan_metod)
+- [Tiếng Việt](https://vi.wikipedia.org/wiki/Ph%C3%A9p_kh%E1%BB%AD_Gauss)
+- [吴语](https://wuu.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95)
+- [粵語](https://zh-yue.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95)
+- [中文](https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95)
+ [Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q2658#sitelinks-wikipedia)                          From Wikipedia, the free encyclopedia   Algorithm for solving systems of linear equations [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Gaussian_elimination_animated.gif/250px-Gaussian_elimination_animated.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_animated.gif)Animation of Gaussian elimination. Red row eliminates the following rows, green rows change their order.
+
+In mathematics, **Gaussian elimination**, also known as **row reduction**, is an [algorithm](https://en.wikipedia.org/wiki/Algorithm) for solving [systems of linear equations](https://en.wikipedia.org/wiki/Systems_of_linear_equations). It consists of a sequence of row-wise operations performed on the corresponding [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of coefficients. This method can also be used to compute the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of a matrix, the [determinant](https://en.wikipedia.org/wiki/Determinant) of a [square matrix](https://en.wikipedia.org/wiki/Square_matrix), and the inverse of an [invertible matrix](https://en.wikipedia.org/wiki/Invertible_matrix). The method is named after [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) (1777–1855).
+
+To perform row reduction on a matrix, one uses a sequence of [elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations) to modify the matrix until the lower left-hand corner of the matrix is filled with zeros, as much as possible. There are three types of elementary row operations:
+
+- swapping two rows,
+- multiplying a row by a nonzero number, and
+- adding a multiple of one row to another row.
+
+Using these operations, a matrix can always be transformed into *[reduced row echelon form](https://en.wikipedia.org/wiki/Reduced_row_echelon_form)*: each nonzero row is above every zero row, each nonzero row has leftmost nonzero entry equal to 1, the columns containing these leading 1s have all other entries 0, and the leading 1 in each nonzero row is to the right of the leading 1 in the previous row. This final form is unique; in other words, it is independent of the sequence of row operations used. For example, in the following sequence of row operations (where two elementary operations on different rows are done at the first and third steps), the third and fourth matrices are the ones in row echelon form, and the final matrix is the unique reduced row echelon form.       [    1   3   1   9     1   1   − 1   1     3   11   5   35    ]   →   [    1   3   1   9     0   − 2   − 2   − 8     0   2   2   8    ]   →   [    1   3   1   9     0   − 2   − 2   − 8     0   0   0   0    ]   →   [    1   0   − 2   − 3     0   1   1   4     0   0   0   0    ]     {\displaystyle {\begin{bmatrix}1&amp;3&amp;1&amp;9\\1&amp;1&amp;-1&amp;1\\3&amp;11&amp;5&amp;35\end{bmatrix}}\to {\begin{bmatrix}1&amp;3&amp;1&amp;9\\0&amp;-2&amp;-2&amp;-8\\0&amp;2&amp;2&amp;8\end{bmatrix}}\to {\begin{bmatrix}1&amp;3&amp;1&amp;9\\0&amp;-2&amp;-2&amp;-8\\0&amp;0&amp;0&amp;0\end{bmatrix}}\to {\begin{bmatrix}1&amp;0&amp;-2&amp;-3\\0&amp;1&amp;1&amp;4\\0&amp;0&amp;0&amp;0\end{bmatrix}}}
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif/330px-Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_of_a_linear_system_with_infinitely_many_solutions_-_row_normal_planes_animation.gif)Animated row-normal-plane view of Gaussian elimination for the example system above, whose solution set is a line
+
+Using row operations to convert a matrix into reduced row echelon form is sometimes called **Gauss–Jordan elimination**. In this case, the term *Gaussian elimination* refers to the process until it has reached its [upper triangular](https://en.wikipedia.org/wiki/Upper_triangular), (unreduced) [row echelon form](https://en.wikipedia.org/wiki/Row_echelon_form). For computational reasons, when solving systems of linear equations, it is sometimes preferable to stop row operations before the matrix is completely reduced.
+</pre></article><article id="section-0003"><h3>Definitions and example of algorithm</h3><pre># Definitions and example of algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=1)]
+
+The process of row reduction makes use of [elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations), and can be divided into two parts. The first part (sometimes called forward elimination) reduces a given system to row echelon form, from which one can tell whether there are no solutions, a unique solution, or infinitely many solutions. The second part (sometimes called [back substitution](https://en.wikipedia.org/wiki/Triangular_matrix#Forward_and_back_substitution)) continues to use row operations until the solution is found; in other words, it puts the matrix into reduced row echelon form.
+
+Another point of view, which turns out to be very useful to analyze the algorithm, is that row reduction produces a [matrix decomposition](https://en.wikipedia.org/wiki/Matrix_decomposition) of the original matrix. The elementary row operations may be viewed as the multiplication on the left of the original matrix by [elementary matrices](https://en.wikipedia.org/wiki/Elementary_matrix).
+
+ [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Gaussian_elimination_as_multiplication_by_elementary_matrices.png/330px-Gaussian_elimination_as_multiplication_by_elementary_matrices.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Gaussian_elimination_as_multiplication_by_elementary_matrices.png)Row reduction of an invertible matrix expressed as left multiplication by elementary matrices
+
+Alternatively, a sequence of elementary operations that reduces a single row may be viewed as multiplication by a [Frobenius matrix](https://en.wikipedia.org/wiki/Frobenius_matrix). Then the first part of the algorithm computes an [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition), while the second part writes the original matrix as the product of a uniquely determined invertible matrix and a uniquely determined reduced row echelon matrix.
+</pre></article><article id="section-0004"><h3>Row operations</h3><pre># Row operations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=2)]
+
+There are three types of elementary row operations which may be performed on the rows of a matrix:
+
+1. Interchanging two rows.
+2. Multiplying a row by a non-zero [scalar](https://en.wikipedia.org/wiki/Scalar_(mathematics)).
+3. Adding a scalar multiple of one row to another.
+
+If the matrix is associated to a system of linear equations, then these operations do not change the solution set. Therefore, if one&#39;s goal is to solve a system of linear equations, then using these row operations could make the problem easier.
+</pre></article><article id="section-0005"><h3>Echelon form</h3><pre># Echelon form
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=3)] Main article: [Row echelon form](https://en.wikipedia.org/wiki/Row_echelon_form)
+
+For each row in a matrix, if the row does not consist of only zeros, then the leftmost nonzero entry is called the *[leading entry](https://en.wikipedia.org/wiki/Leading_entry)* (or *pivot*) of that row. If two leading entries are in the same column, then a row operation of [type 3](https://en.wikipedia.org/wiki/Gaussian_elimination#Row_operations) can be used to make one of those entries zero. Then by using the row swapping operation, one can always order the rows so that for every non-zero row, the leading entry is to the right of the leading entry of the row above. If this is the case, the matrix is said to be in *row echelon form*. In this form, the lower left part of the matrix contains only zeros, and all of the zero rows are below the non-zero rows. The word &quot;echelon&quot; is used here because one can roughly think of the rows being ranked by their size, with the largest being at the top and the smallest being at the bottom.
+
+For example, the following matrix is in row echelon form, and its leading entries are shown in red:       [    0      2      1   − 1     0   0      3      1     0   0   0   0    ]   .   {\displaystyle {\begin{bmatrix}0&amp;\color {red}{\mathbf {2} }&amp;1&amp;-1\\0&amp;0&amp;\color {red}{\mathbf {3} }&amp;1\\0&amp;0&amp;0&amp;0\end{bmatrix}}.}
+
+It is in echelon form because the zero row is at the bottom and the leading entry of the second row (in the third column) is to the right of the leading entry of the first row (in the second column).
+
+A matrix is said to be in reduced row echelon form if furthermore all of the leading entries are equal to 1 (which can be achieved by using the elementary row operation of type 2), and in every column containing a leading entry, all of the other entries in that column are zero (which can be achieved by using elementary row operations of type 3).
+</pre></article><article id="section-0006"><h3>Example of the algorithm</h3><pre># Example of the algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=4)]
+
+Suppose the goal is to find and describe the set of solutions to the following system of linear equations:         2 x      +     y      −     z      =     8     (  L  1   )     − 3 x      −     y      +     2 z      =     − 11     (  L  2   )     − 2 x      +     y      +     2 z      =     − 3     (  L  3   )       {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\qquad (L_{1})\\-3x&amp;{}-{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-11&amp;\qquad (L_{2})\\-2x&amp;{}+{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-3&amp;\qquad (L_{3})\end{alignedat}}}
+
+The table below is the row reduction process applied simultaneously to the system of equations and its associated [augmented matrix](https://en.wikipedia.org/wiki/Augmented_matrix). In practice, one does not usually deal with the systems in terms of equations, but instead makes use of the augmented matrix, which is more suitable for computer manipulations. The row reduction procedure may be summarized as follows: eliminate x from all equations below *L*1, and then eliminate y from all equations below *L*2. This will put the system into [triangular form](https://en.wikipedia.org/wiki/Triangular_form). Then, using back-substitution, each unknown can be solved for.
+
+   System of equationsRow operationsAugmented matrix          2 x      +     y      −     z      =     8      − 3 x      −     y      +     2 z      =     − 11      − 2 x      +     y      +     2 z      =     − 3        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\-3x&amp;{}-{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-11&amp;\\-2x&amp;{}+{}&amp;y&amp;{}+{}&amp;2z&amp;{}={}&amp;-3&amp;\end{alignedat}}}         [     2   1   − 1   8     − 3   − 1   2   − 11     − 2   1   2   − 3     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\-3&amp;-1&amp;2&amp;-11\\-2&amp;1&amp;2&amp;-3\end{array}}\right]}            2 x      +     y      −     z      =     8           1 2    y      +        1 2    z      =     1        2 y      +     z      =     5        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;{}+{}&amp;{\tfrac {1}{2}}z&amp;{}={}&amp;1&amp;\\&amp;&amp;2y&amp;{}+{}&amp;z&amp;{}={}&amp;5&amp;\end{alignedat}}}            L  2   +    3 2     L  1      →  L  2        L  3   +  L  1      →  L  3         {\displaystyle {\begin{aligned}L_{2}+{\tfrac {3}{2}}L_{1}&amp;\to L_{2}\\L_{3}+L_{1}&amp;\to L_{3}\end{aligned}}}        [     2   1   − 1   8     0     1 2       1 2     1     0   2   1   5     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\0&amp;{\frac {1}{2}}&amp;{\frac {1}{2}}&amp;1\\0&amp;2&amp;1&amp;5\end{array}}\right]}            2 x      +     y      −     z      =     8           1 2    y      +        1 2    z      =     1          − z      =     1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;{}-{}&amp;z&amp;{}={}&amp;8&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;{}+{}&amp;{\tfrac {1}{2}}z&amp;{}={}&amp;1&amp;\\&amp;&amp;&amp;&amp;-z&amp;{}={}&amp;1&amp;\end{alignedat}}}        L  3   + − 4  L  2   →  L  3     {\displaystyle L_{3}+-4L_{2}\to L_{3}}        [     2   1   − 1   8     0     1 2       1 2     1     0   0   − 1   1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;-1&amp;8\\0&amp;{\frac {1}{2}}&amp;{\frac {1}{2}}&amp;1\\0&amp;0&amp;-1&amp;1\end{array}}\right]}    The matrix is now in row echelon form (also called triangular form)          2 x      +     y        =   7           1 2    y        =      3 2               −     z      =   1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;&amp;&amp;{}={}7&amp;\\&amp;&amp;{\tfrac {1}{2}}y&amp;&amp;&amp;{}={}{\tfrac {3}{2}}&amp;\\&amp;&amp;&amp;{}-{}&amp;z&amp;{}={}1&amp;\end{alignedat}}}            L  1   −  L  3      →  L  1        L  2   +    1 2     L  3      →  L  2         {\displaystyle {\begin{aligned}L_{1}-L_{3}&amp;\to L_{1}\\L_{2}+{\tfrac {1}{2}}L_{3}&amp;\to L_{2}\end{aligned}}}        [     2   1   0   7     0     1 2     0     3 2       0   0   − 1   1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;0&amp;7\\0&amp;{\frac {1}{2}}&amp;0&amp;{\frac {3}{2}}\\0&amp;0&amp;-1&amp;1\end{array}}\right]}            2 x      +     y          =     7        y          =     3            z      =     − 1        {\displaystyle {\begin{alignedat}{4}2x&amp;{}+{}&amp;y&amp;\quad &amp;&amp;{}={}&amp;7&amp;\\&amp;&amp;y&amp;\quad &amp;&amp;{}={}&amp;3&amp;\\&amp;&amp;&amp;\quad &amp;z&amp;{}={}&amp;-1&amp;\end{alignedat}}}           2  L  2      →  L  2       −  L  3      →  L  3         {\displaystyle {\begin{aligned}2L_{2}&amp;\to L_{2}\\-L_{3}&amp;\to L_{3}\end{aligned}}}        [     2   1   0   7     0   1   0   3     0   0   1   − 1     ]    {\displaystyle \left[{\begin{array}{rrr|r}2&amp;1&amp;0&amp;7\\0&amp;1&amp;0&amp;3\\0&amp;0&amp;1&amp;-1\end{array}}\right]}            x              =     2          y          =     3              z      =     − 1        {\displaystyle {\begin{alignedat}{4}x&amp;\quad &amp;&amp;\quad &amp;&amp;{}={}&amp;2&amp;\\&amp;\quad &amp;y&amp;\quad &amp;&amp;{}={}&amp;3&amp;\\&amp;\quad &amp;&amp;\quad &amp;z&amp;{}={}&amp;-1&amp;\end{alignedat}}}            L  1   −  L  2      →  L  1          1 2     L  1      →  L  1         {\displaystyle {\begin{aligned}L_{1}-L_{2}&amp;\to L_{1}\\{\tfrac {1}{2}}L_{1}&amp;\to L_{1}\end{aligned}}}        [     1   0   0   2     0   1   0   3     0   0   1   − 1     ]    {\displaystyle \left[{\begin{array}{rrr|r}1&amp;0&amp;0&amp;2\\0&amp;1&amp;0&amp;3\\0&amp;0&amp;1&amp;-1\end{array}}\right]}    The matrix is now in reduced row echelon form
+
+The second column describes which row operations have just been performed. For the first step, x is eliminated from *L*2 by adding ⁠3/2⁠*L*1 to *L*2. Next, x is eliminated from *L*3 by adding *L*1 to *L*3. These row operations are labelled in the table as          L  2   +    3 2     L  1      →  L  2   ,      L  3   +  L  1      →  L  3   .       {\displaystyle {\begin{aligned}L_{2}+{\tfrac {3}{2}}L_{1}&amp;\to L_{2},\\L_{3}+L_{1}&amp;\to L_{3}.\end{aligned}}}
+
+Once y is also eliminated from the third row, the result is a system of linear equations in triangular form, and so the first part of the algorithm is complete. From a computational point of view, it is faster to solve the variables in reverse order, a process known as back-substitution. One sees the solution is *z* = −1, *y* = 3, and *x* = 2. In particular, there is a unique solution to the original system of equations in this case.
+
+Instead of stopping once the matrix is in row echelon form, one could continue until the matrix is in *reduced* row echelon form, as it is done in the table. The process of row reducing until the matrix is reduced is sometimes referred to as Gauss–Jordan elimination, to distinguish it from stopping after reaching echelon form.
+</pre></article><article id="section-0007"><h3>History</h3><pre># History
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=5)]
+
+The method of Gaussian elimination appears – albeit without proof – in the Chinese mathematical text [Chapter Eight: *Rectangular Arrays*](https://en.wikipedia.org/wiki/Rod_calculus#System_of_linear_equations) of *[The Nine Chapters on the Mathematical Art](https://en.wikipedia.org/wiki/The_Nine_Chapters_on_the_Mathematical_Art)*. Its use is illustrated in eighteen problems, with two to five equations. The first reference to the book by this title is dated to 179 AD, but parts of it were written as early as approximately 150 BC.[[1]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-1)[[2]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-2)[[3]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-princeton-3) It was commented on by [Liu Hui](https://en.wikipedia.org/wiki/Liu_Hui) in the 3rd century.
+
+According to Grcar[[4]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-harvnb|Grcar|2011a|pp=169%E2%80%93172-4) solution of linear equations by elimination was invented independently in several cultures in Eurasia starting from antiquity and in Europe definite examples of procedure were published already by late Renaissance (in 1550&#39;s). It is quite possible that already then the procedure was considered by mathematicians elementary and in no need to explanation for professionals, so we may never learn its detailed history except that by then it was practiced in at least several places in Europe.
+
+The method in Europe stems from the notes of [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton).[[4]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-harvnb|Grcar|2011a|pp=169%E2%80%93172-4)[[5]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-5) In 1669–1670, Newton wrote that all the algebra books known to him lacked a lesson for solving simultaneous equations, which Newton then supplied. Cambridge University eventually published the notes as *Arithmetica Universalis* in 1707 long after Newton had left academic life. The notes were widely imitated, which made (what is now called) Gaussian elimination a standard lesson in algebra textbooks by the end of the 18th century. [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) in 1810 devised a notation for symmetric elimination that was adopted in the 19th century by professional [hand computers](https://en.wikipedia.org/wiki/Human_computer) to solve the normal equations of least-squares problems.[[6]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-6) The algorithm that is taught in high school was named for Gauss only in the 1950s as a result of confusion over the history of the subject.[[7]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-7)
+
+Some authors use the term *Gaussian elimination* to refer only to the procedure until the matrix is in echelon form, and use the term Gauss–Jordan elimination to refer to the procedure which ends in reduced echelon form. The name is used because it is a variation of Gaussian elimination as described by [Wilhelm Jordan](https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)) in 1888. However, the method also appears in an article by Clasen published in the same year. Jordan and Clasen probably discovered Gauss–Jordan elimination independently.[[8]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-8)
+</pre></article><article id="section-0008"><h3>Applications</h3><pre># Applications
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=6)]
+
+Historically, the first application of the row reduction method is for solving systems of linear equations. Below are some other important applications of the algorithm.
+</pre></article><article id="section-0009"><h3>Computing determinants</h3><pre># Computing determinants
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=7)]
+
+To explain how Gaussian elimination allows the computation of the determinant of a square matrix, we have to recall how the elementary row operations change the determinant:
+
+- Swapping two rows multiplies the determinant by −1
+- Multiplying a row by a nonzero scalar multiplies the determinant by the same scalar
+- Adding to one row a scalar multiple of another does not change the determinant.
+
+If Gaussian elimination applied to a square matrix A produces a row echelon matrix B, let d be the product of the scalars by which the determinant has been multiplied, using the above rules. Then the determinant of A is the quotient by d of the product of the elements of the diagonal of B:     det ( A ) =    ∏ diag ⁡ ( B )  d   .   {\displaystyle \det(A)={\frac {\prod \operatorname {diag} (B)}{d}}.}
+
+Computationally, for an *n* × *n* matrix, this method needs only [O(*n*3)](https://en.wikipedia.org/wiki/O_notation) arithmetic operations, while using [Leibniz formula for determinants](https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants) requires     ( n  n ! )   {\displaystyle (n\,n!)}   operations (number of summands in the formula times the number of multiplications in each summand), and recursive [Laplace expansion](https://en.wikipedia.org/wiki/Laplace_expansion) requires O(*n* 2*n*) operations if the sub-determinants are memorized for being computed only once (number of operations in a linear combination times the number of sub-determinants to compute, which are determined by their columns). Even on the fastest computers, these two methods are impractical or almost impracticable for *n* above 20.
+</pre></article><article id="section-0010"><h3>Finding the inverse of a matrix</h3><pre># Finding the inverse of a matrix
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=8)] See also: [Invertible matrix](https://en.wikipedia.org/wiki/Invertible_matrix)
+
+A variant of Gaussian elimination called **Gauss–Jordan elimination** can be used for finding the inverse of a matrix, if it exists. If *A* is an *n* × *n* square matrix, then one can use row reduction to compute its [inverse matrix](https://en.wikipedia.org/wiki/Invertible_matrix), if it exists. First, the *n* × *n* [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) is augmented to the right of *A*, forming an *n* × 2*n* [block matrix](https://en.wikipedia.org/wiki/Block_matrix) [*A* | *I*]. Now through application of elementary row operations, find the reduced echelon form of this *n* × 2*n* matrix. The matrix *A* is invertible if and only if it can be reduced to the identity matrix *I*; in this case the right block of the final matrix is *A*−1. If the algorithm is unable to reduce the left block to *I*, then *A* is not invertible.
+
+For example, consider the following matrix:     A =   [    2   − 1   0     − 1   2   − 1     0   − 1   2    ]   .   {\displaystyle A={\begin{bmatrix}2&amp;-1&amp;0\\-1&amp;2&amp;-1\\0&amp;-1&amp;2\end{bmatrix}}.}
+
+To find the inverse of this matrix, one takes the following matrix augmented by the identity and row-reduces it as a 3 × 6 matrix:     [ A  |  I ] =  [     2   − 1   0   1   0   0     − 1   2   − 1   0   1   0     0   − 1   2   0   0   1     ]  .   {\displaystyle [A|I]=\left[{\begin{array}{ccc|ccc}2&amp;-1&amp;0&amp;1&amp;0&amp;0\\-1&amp;2&amp;-1&amp;0&amp;1&amp;0\\0&amp;-1&amp;2&amp;0&amp;0&amp;1\end{array}}\right].}
+
+By performing row operations, one can check that the reduced row echelon form of this augmented matrix is      [     1   0   0     3 4       1 2       1 4       0   1   0     1 2     1     1 2       0   0   1     1 4       1 2       3 4       ]  =: [ I  |  B ] .   {\displaystyle \left[{\begin{array}{rrr|rrr}1&amp;0&amp;0&amp;{\frac {3}{4}}&amp;{\frac {1}{2}}&amp;{\frac {1}{4}}\\0&amp;1&amp;0&amp;{\frac {1}{2}}&amp;1&amp;{\frac {1}{2}}\\0&amp;0&amp;1&amp;{\frac {1}{4}}&amp;{\frac {1}{2}}&amp;{\frac {3}{4}}\end{array}}\right]=:[I|B].}
+
+One can think of each row operation as the left product by an [elementary matrix](https://en.wikipedia.org/wiki/Elementary_matrix). On the right, we see on the right that the product of these elementary matrices is *B* (since *B* = *BI*). Meanwhile, on the left, we see that the effect of left multiplying the product of these matrices into *A* yields the identity matrix. In other words, *BA* = *I*. Therefore *B* = *A*−1, the inverse desired. This procedure for finding the inverse works for square matrices of any size.
+</pre></article><article id="section-0011"><h3>Computing ranks and bases</h3><pre># Computing ranks and bases
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=9)]
+
+The Gaussian elimination algorithm can be applied to any *m* × *n* matrix A. In this way, for example, some 6 × 9 matrices can be transformed to a matrix that has a row echelon form like     T =   [    a   ∗   ∗   ∗   ∗   ∗   ∗   ∗   ∗     0   0   b   ∗   ∗   ∗   ∗   ∗   ∗     0   0   0   c   ∗   ∗   ∗   ∗   ∗     0   0   0   0   0   0   d   ∗   ∗     0   0   0   0   0   0   0   0   e     0   0   0   0   0   0   0   0   0    ]   ,   {\displaystyle T={\begin{bmatrix}a&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;b&amp;*&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;0&amp;c&amp;*&amp;*&amp;*&amp;*&amp;*\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;d&amp;*&amp;*\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;e\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\end{bmatrix}},}   where the stars are arbitrary entries, and *a*, *b*, *c*, *d*, *e* are nonzero entries. This echelon matrix T contains a wealth of information about A: the [rank](https://en.wikipedia.org/wiki/Rank_of_a_matrix) of A is 5, since there are 5 nonzero rows in T; the [vector space](https://en.wikipedia.org/wiki/Vector_space) spanned by the columns of A has a basis consisting of its columns 1, 3, 4, 7 and 9 (the columns with *a*, *b*, *c*, *d*, *e* in T), and the stars show how the other columns of A can be written as linear combinations of the basis columns.
+
+All of this applies also to the reduced row echelon form, which is a particular row echelon format.
+</pre></article><article id="section-0012"><h3>Computational efficiency</h3><pre># Computational efficiency
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=10)]
+
+The number of [arithmetic operations](https://en.wikipedia.org/wiki/Arithmetic#Arithmetic_operations) required to perform row reduction is one way of measuring the algorithm&#39;s computational efficiency. For example, to solve a system of *n* equations for *n* unknowns by performing row operations on the matrix until it is in echelon form, and then solving for each unknown in reverse order, requires *n*(*n* + 1)/2 divisions, (2*n*3 + 3*n*2 − 5*n*)/6 multiplications, and (2*n*3 + 3*n*2 − 5*n*)/6 subtractions,[[9]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-9) for a total of approximately 2*n*3/3 operations. Thus it has an *arithmetic complexity* ([time complexity](https://en.wikipedia.org/wiki/Time_complexity), where each arithmetic operation takes one unit of time, independently of the size of the inputs) of O(*n*3).
+
+This complexity is a good measure of the time needed for the whole computation when the time for each arithmetic operation is approximately constant. This is the case when the coefficients are represented by [floating-point numbers](https://en.wikipedia.org/wiki/Floating-point_number) or when they belong to a [finite field](https://en.wikipedia.org/wiki/Finite_field). If the coefficients are [integers](https://en.wikipedia.org/wiki/Integer) or [rational numbers](https://en.wikipedia.org/wiki/Rational_number) exactly represented, the intermediate entries can grow exponentially large, so the [bit complexity](https://en.wikipedia.org/wiki/Bit_complexity) is exponential.[[10]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-10) However, the [Bareiss algorithm](https://en.wikipedia.org/wiki/Bareiss_algorithm) is a variant of Gaussian elimination that avoids this exponential growth of the intermediate entries; with the same arithmetic complexity of O(*n*3), it has a bit complexity of O(*n*5), and has therefore a [strongly-polynomial time](https://en.wikipedia.org/wiki/Strongly-polynomial_time) complexity.
+
+Gaussian elimination and its variants can be used on computers for systems with thousands of equations and unknowns. However, the cost becomes prohibitive for systems with millions of equations. These large systems are generally solved using [iterative methods](https://en.wikipedia.org/wiki/Iterative_method). Specific methods exist for systems whose coefficients follow a regular pattern (see [System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)).
+</pre></article><article id="section-0013"><h3>Bareiss algorithm</h3><pre># Bareiss algorithm
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=11)] Main article: [Bareiss algorithm](https://en.wikipedia.org/wiki/Bareiss_algorithm)
+
+The first [strongly-polynomial time](https://en.wikipedia.org/wiki/Strongly-polynomial_time) algorithm for Gaussian elimination was published by [Jack Edmonds](https://en.wikipedia.org/wiki/Jack_Edmonds) in 1967.[[11]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-:0-11): 37  Independently, and almost simultaneously, Erwin Bareiss discovered another algorithm, based on the following remark, which applies to a division-free variant of Gaussian elimination.
+
+In standard Gaussian elimination, one subtracts from each row      R  i     {\displaystyle R_{i}}   below the pivot row      R  k     {\displaystyle R_{k}}   a multiple of      R  k     {\displaystyle R_{k}}   by      r  i , k    /   r  k , k   ,   {\displaystyle r_{i,k}/r_{k,k},}   where      r  i , k     {\displaystyle r_{i,k}}   and      r  k , k     {\displaystyle r_{k,k}}   are the entries in the pivot column of      R  i     {\displaystyle R_{i}}   and      R  k   ,   {\displaystyle R_{k},}   respectively.
+
+Bareiss variant consists, instead, of replacing      R  i     {\displaystyle R_{i}}   with         r  k , k    R  i   −  r  i , k    R  k     r  k − 1 , k − 1     .   {\textstyle {\frac {r_{k,k}R_{i}-r_{i,k}R_{k}}{r_{k-1,k-1}}}.}   This produces a row echelon form that has the same zero entries as with the standard Gaussian elimination.
+
+Bareiss&#39; main remark is that each matrix entry generated by this variant is the determinant of a submatrix of the original matrix.
+
+In particular, if one starts with integer entries, the divisions occurring in the algorithm are exact divisions resulting in integers. Therefore, all intermediate entries and final entries are integers. Moreover, [Hadamard&#39;s inequality](https://en.wikipedia.org/wiki/Hadamard&#39;s_inequality) provides an upper bound on the absolute values of the intermediate and final entries, and thus a bit complexity of        O ~    (  n  5   ) ,   {\displaystyle {\tilde {O}}(n^{5}),}   using [soft O notation](https://en.wikipedia.org/wiki/Soft_O_notation).
+
+Moreover, as an upper bound on the size of final entries is known, a complexity        O ~    (  n  4   )   {\displaystyle {\tilde {O}}(n^{4})}   can be obtained with [modular computation](https://en.wikipedia.org/wiki/Modular_arithmetic) followed either by [Chinese remaindering](https://en.wikipedia.org/wiki/Chinese_remainder_theorem) or [Hensel lifting](https://en.wikipedia.org/wiki/Hensel_lifting).
+
+As a corollary, the following problems can be solved in strongly polynomial time with the same bit complexity:[[11]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-:0-11): 40
+
+- Testing whether *m* given rational vectors are [linearly independent](https://en.wikipedia.org/wiki/Linearly_independent)
+- Computing the [determinant](https://en.wikipedia.org/wiki/Determinant) of a rational matrix
+- Computing a solution of a rational equation system *Ax* = *b*
+- Computing the [inverse matrix](https://en.wikipedia.org/wiki/Inverse_matrix) of a nonsingular rational matrix
+- Computing the [rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of a rational matrix
+</pre></article><article id="section-0014"><h3>Numeric instability</h3><pre># Numeric instability
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=12)]
+
+One possible problem is [numerical instability](https://en.wikipedia.org/wiki/Numerical_stability), caused by the possibility of dividing by very small numbers. If, for example, the leading coefficient of one of the rows is very close to zero, then to row-reduce the matrix, one would need to divide by that number. This means that any error which existed for the number that was close to zero would be amplified. Gaussian elimination is numerically stable for [diagonally dominant](https://en.wikipedia.org/wiki/Diagonally_dominant) or [positive-definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) matrices. For general matrices, Gaussian elimination is usually considered to be stable, when using [partial pivoting](https://en.wikipedia.org/wiki/Partial_pivoting), even though there are examples of stable matrices for which it is unstable.[[12]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-12)[[13]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-13)
+</pre></article><article id="section-0015"><h3>Generalizations</h3><pre># Generalizations
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=13)]
+
+Gaussian elimination can be performed over any [field](https://en.wikipedia.org/wiki/Field_(mathematics)), not just the real numbers.
+
+[Buchberger&#39;s algorithm](https://en.wikipedia.org/wiki/Buchberger&#39;s_algorithm) is a generalization of Gaussian elimination to [systems of polynomial equations](https://en.wikipedia.org/wiki/Systems_of_polynomial_equations). This generalization depends heavily on the notion of a [monomial order](https://en.wikipedia.org/wiki/Monomial_order). The choice of an ordering on the variables is already implicit in Gaussian elimination, manifesting as the choice to work from left to right when selecting pivot positions.
+
+Computing the rank of a tensor of order greater than 2 is [NP-hard](https://en.wikipedia.org/wiki/NP-hard).[[14]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-14) Therefore, if [P ≠ NP](https://en.wikipedia.org/wiki/P=NP), there cannot be a polynomial time analog of Gaussian elimination for higher-order [tensors](https://en.wikipedia.org/wiki/Tensor) (matrices are [array](https://en.wikipedia.org/wiki/Array_data_structure) representations of order-2 tensors).
+</pre></article><article id="section-0016"><h3>Pseudocode</h3><pre># Pseudocode
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=14)]
+
+As explained above, Gaussian elimination transforms a given *m* × *n* matrix A into a matrix in [row-echelon form](https://en.wikipedia.org/wiki/Row-echelon_form).
+
+In the following [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), `A[i, j]` denotes the entry of the matrix A in row i and column j with the indices starting from 1. The transformation is performed *in place*, meaning that the original matrix is lost for being eventually replaced by its row-echelon form.
+
+```
+h := 1 /* Initialization of the pivot row */
+k := 1 /* Initialization of the pivot column */
+
+while h ≤ m and k ≤ n:
+    /* Find the k-th pivot: */
+    i_max := argmax (i = h ... m, abs(A[i, k]))
+    if A[i_max, k] = 0:
+        /* No pivot in this column, pass to next column */
+        k := k + 1
+    else:
+        swap rows(h, i_max)
+        /* Do for all rows below pivot: */
+        for i = h + 1 ... m:
+            f := A[i, k] / A[h, k]
+            /* Fill with zeros the lower part of pivot column: */
+            A[i, k] := 0
+            /* Do for all remaining elements in current row: */
+            for j = k + 1 ... n:
+                A[i, j] := A[i, j] - A[h, j] * f
+        /* Increase pivot row and column */
+        h := h + 1
+        k := k + 1
+```
+
+This algorithm differs slightly from the one discussed earlier, by choosing a pivot with largest [absolute value](https://en.wikipedia.org/wiki/Absolute_value). Such a *partial pivoting* may be required if, at the pivot place, the entry of the matrix is zero. In any case, choosing the largest possible absolute value of the pivot improves the [numerical stability](https://en.wikipedia.org/wiki/Numerical_stability) of the algorithm, when floating point is used for representing numbers.[[15]](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_note-15)
+
+Upon completion of this procedure the matrix will be in row echelon form and the corresponding system may be solved by back substitution.
+</pre></article><article id="section-0017"><h3>See also</h3><pre># See also
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=15)]
+- [Fangcheng (mathematics)](https://en.wikipedia.org/wiki/Fangcheng_(mathematics))
+- [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process) - another process for bringing a matrix into some canonical form.
+- [Fourier–Motzkin elimination](https://en.wikipedia.org/wiki/Fourier%E2%80%93Motzkin_elimination) - an algorithm for eliminating variables of a system of linear inequalities, rather than equations.
+</pre></article><article id="section-0018"><h3>References</h3><pre># References
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=16)]
+1. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-1) [&quot;DOCUMENTA MATHEMATICA, Vol. Extra Volume: Optimization Stories (2012), 9-14&quot;](https://www.emis.de/journals/DMJDMV/vol-ismp/10_yuan-ya-xiang.html). *www.emis.de*. Retrieved 2022-12-02.
+2. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-2) [Calinger 1999](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFCalinger1999), pp. 234–236
+3. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-princeton_3-0) Timothy Gowers; June Barrow-Green; Imre Leader (8 September 2008). [*The Princeton Companion to Mathematics*](https://archive.org/details/princetoncompanio00gowe). Princeton University Press. p. 607. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-691-11880-2](https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-11880-2).
+4. [Jump up to: 1](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-harvnb|Grcar|2011a|pp=169%E2%80%93172_4-0) [2](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-harvnb|Grcar|2011a|pp=169%E2%80%93172_4-1) [Grcar 2011a](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011a), pp. 169–172
+5. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-5) [Grcar 2011b](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011b), pp. 783–785
+6. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-6) [Lauritzen](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFLauritzen), p. 3
+7. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-7) [Grcar 2011b](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGrcar2011b), p. 789
+8. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-8) Althoen, Steven C.; McLaughlin, Renate (1987), &quot;Gauss–Jordan reduction: a brief history&quot;, *[The American Mathematical Monthly](https://en.wikipedia.org/wiki/American_Mathematical_Monthly)*, **94** (2), Mathematical Association of America: 130–142, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.2307/2322413](https://doi.org/10.2307%2F2322413), [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0002-9890](https://search.worldcat.org/issn/0002-9890), [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier)) [2322413](https://www.jstor.org/stable/2322413)
+9. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-9) [Farebrother 1988](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFFarebrother1988), p. 12
+10. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-10) Fang, Xin Gui; Havas, George (1997). [&quot;On the worst-case complexity of integer Gaussian elimination&quot;](https://scholar.archive.org/work/2htta67odrfilhxegzjqfratyy). *Proceedings of the 1997 international symposium on Symbolic and algebraic computation*. ISSAC &#39;97. Kihei, Maui, Hawaii, United States: ACM. pp. 28–31. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1145/258726.258740](https://doi.org/10.1145%2F258726.258740). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [0-89791-875-4](https://en.wikipedia.org/wiki/Special:BookSources/0-89791-875-4).
+11. [Jump up to: 1](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-:0_11-0) [2](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-:0_11-1) [Grötschel, Martin](https://en.wikipedia.org/wiki/Martin_Gr%C3%B6tschel); [Lovász, László](https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Lov%C3%A1sz); [Schrijver, Alexander](https://en.wikipedia.org/wiki/Alexander_Schrijver) (1993), [*Geometric algorithms and combinatorial optimization*](https://books.google.com/books?id=hWvmCAAAQBAJ&amp;pg=PA281), Algorithms and Combinatorics, vol. 2 (2nd ed.), Springer-Verlag, Berlin, [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-3-642-78240-4](https://doi.org/10.1007%2F978-3-642-78240-4), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-642-78242-8](https://en.wikipedia.org/wiki/Special:BookSources/978-3-642-78242-8), [MR](https://en.wikipedia.org/wiki/MR_(identifier)) [1261419](https://mathscinet.ams.org/mathscinet-getitem?mr=1261419)
+12. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-12) [Golub &amp; Van Loan 1996](https://en.wikipedia.org/wiki/Gaussian_elimination#CITEREFGolubVan_Loan1996), §3.4.6
+13. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-13) [John Urschel:&quot;Numerical Stability in Gaussian Elimination&quot;, June/July 2025, Notice of AMS, pp.605-613.](https://www.ams.org/journals/notices/202506/noti3191/noti3191.html)
+14. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-14) Hillar, Christopher; [Lim, Lek-Heng](https://en.wikipedia.org/wiki/Lek-Heng_Lim) (2009-11-07). &quot;Most tensor problems are NP-hard&quot;. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[0911.1393](https://arxiv.org/abs/0911.1393) [[cs.CC](https://arxiv.org/archive/cs.CC)].
+15. [↑](https://en.wikipedia.org/wiki/Gaussian_elimination#cite_ref-15) Kurgalin, Sergei; Borzunov, Sergei (2021). [*Algebra and Geometry with Python*](https://doi.org/10.1007/978-3-030-61541-3). Cham. [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1007/978-3-030-61541-3](https://doi.org/10.1007%2F978-3-030-61541-3). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-3-030-61540-6](https://en.wikipedia.org/wiki/Special:BookSources/978-3-030-61540-6).`{{cite book}}`: CS1 maint: location missing publisher ([link](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher))
+</pre></article><article id="section-0019"><h3>Works cited</h3><pre># Works cited
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=17)]
+- Atkinson, Kendall A. (1989), *An Introduction to Numerical Analysis* (2nd ed.), New York: [John Wiley &amp; Sons](https://en.wikipedia.org/wiki/John_Wiley_&amp;_Sons), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0471624899](https://en.wikipedia.org/wiki/Special:BookSources/978-0471624899).
+- Bolch, Gunter; Greiner, Stefan; de Meer, Hermann; Trivedi, Kishor S. (2006), *Queueing Networks and Markov Chains: Modeling and Performance Evaluation with Computer Science Applications* (2nd ed.), [Wiley-Interscience](https://en.wikipedia.org/wiki/Wiley-Interscience), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-471-79156-0](https://en.wikipedia.org/wiki/Special:BookSources/978-0-471-79156-0).
+- Calinger, Ronald (1999), *A Contextual History of Mathematics*, [Prentice Hall](https://en.wikipedia.org/wiki/Prentice_Hall), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-02-318285-3](https://en.wikipedia.org/wiki/Special:BookSources/978-0-02-318285-3).
+- Farebrother, R.W. (1988), *Linear Least Squares Computations*, STATISTICS: Textbooks and Monographs, Marcel Dekker, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-8247-7661-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-8247-7661-9).
+- Lauritzen, Niels, *Undergraduate Convexity: From Fourier and Motzkin to Kuhn and Tucker*.
+- [Golub, Gene H.](https://en.wikipedia.org/wiki/Gene_H._Golub); [Van Loan, Charles F.](https://en.wikipedia.org/wiki/Charles_F._Van_Loan) (1996), *Matrix Computations* (3rd ed.), Johns Hopkins, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-8018-5414-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-8018-5414-9).
+- Grcar, Joseph F. (2011a), &quot;How ordinary elimination became Gaussian elimination&quot;, *Historia Mathematica*, **38** (2): 163–218, [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)):[0907.2397](https://arxiv.org/abs/0907.2397), [doi](https://en.wikipedia.org/wiki/Doi_(identifier)):[10.1016/j.hm.2010.06.003](https://doi.org/10.1016%2Fj.hm.2010.06.003), [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [14259511](https://api.semanticscholar.org/CorpusID:14259511)
+- Grcar, Joseph F. (2011b), [&quot;Mathematicians of Gaussian elimination&quot;](https://www.ams.org/notices/201106/rtx110600782p.pdf) (PDF), *Notices of the American Mathematical Society*, **58** (6): 782–792
+- [Higham, Nicholas](https://en.wikipedia.org/wiki/Nicholas_Higham) (2002), *Accuracy and Stability of Numerical Algorithms* (2nd ed.), [SIAM](https://en.wikipedia.org/wiki/Society_for_Industrial_and_Applied_Mathematics), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-89871-521-7](https://en.wikipedia.org/wiki/Special:BookSources/978-0-89871-521-7).
+- [Katz, Victor J.](https://en.wikipedia.org/wiki/Victor_J._Katz) (2004), *A History of Mathematics, Brief Version*, [Addison-Wesley](https://en.wikipedia.org/wiki/Addison-Wesley), [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-321-16193-2](https://en.wikipedia.org/wiki/Special:BookSources/978-0-321-16193-2).
+- Kaw, Autar; Kalu, Egwu (2010). [&quot;Numerical Methods with Applications: Chapter 04.06 Gaussian Elimination&quot;](http://mathforcollege.com/nm/mws/gen/04sle/mws_gen_sle_txt_gaussian.pdf) (PDF) (1st ed.). University of South Florida. [Archived](https://web.archive.org/web/20120907224427/http://mathforcollege.com/nm/mws/gen/04sle/mws_gen_sle_txt_gaussian.pdf) (PDF) from the original on 2012-09-07.
+- Lipson, Marc; Lipschutz, Seymour (2001), *Schaum&#39;s outline of theory and problems of linear algebra*, New York: [McGraw-Hill](https://en.wikipedia.org/wiki/McGraw-Hill), pp. 69–80, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-07-136200-9](https://en.wikipedia.org/wiki/Special:BookSources/978-0-07-136200-9)
+- Press, WH; Teukolsky, SA; Vetterling, WT; Flannery, BP (2007), [&quot;Section 2.2&quot;](https://web.archive.org/web/20120319193237/http://apps.nrbook.com/empanel/index.html?pg=46), *Numerical Recipes: The Art of Scientific Computing* (3rd ed.), New York: Cambridge University Press, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-521-88068-8](https://en.wikipedia.org/wiki/Special:BookSources/978-0-521-88068-8), archived from [the original](http://apps.nrbook.com/empanel/index.html?pg=46) on 2012-03-19, retrieved 2011-08-08
+</pre></article><article id="section-0020"><h3>External links</h3><pre># External links
+
+[[edit](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;action=edit&amp;section=18)]   [![Wikibooks logo](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg) The Wikibook *[Linear Algebra](https://en.wikibooks.org/wiki/Linear%20Algebra)* has a page on the topic of: ***[Gaussian elimination](https://en.wikibooks.org/wiki/Linear%20Algebra/Gauss&#39;%20Method)***
+- [Interactive didactic tool](http://pnp.mathematik.uni-stuttgart.de/igt/eiserm/lehre/Gael/)
+ hide
+- [v](https://en.wikipedia.org/wiki/Template:Linear_algebra)
+- [t](https://en.wikipedia.org/wiki/Template_talk:Linear_algebra)
+- [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Linear_algebra)
+[Linear algebra](https://en.wikipedia.org/wiki/Linear_algebra)
+- [Outline](https://en.wikipedia.org/wiki/Outline_of_linear_algebra)
+- [Glossary](https://en.wikipedia.org/wiki/Glossary_of_linear_algebra)
+- [Template:Matrix classes](https://en.wikipedia.org/wiki/Template:Matrix_classes)
+ [Linear equations](https://en.wikipedia.org/wiki/Linear_equation)
+- [Linear equation](https://en.wikipedia.org/wiki/Linear_equation)
+- [System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)
+- [Determinant](https://en.wikipedia.org/wiki/Determinant)
+- [Minor](https://en.wikipedia.org/wiki/Minor_(linear_algebra))
+- [Cauchy–Binet formula](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Binet_formula)
+- [Cramer&#39;s rule](https://en.wikipedia.org/wiki/Cramer&#39;s_rule)
+- [Gaussian elimination](https://en.wikipedia.org/wiki/Gaussian_elimination)
+- [Gauss–Jordan elimination](https://en.wikipedia.org/wiki/Gauss%E2%80%93Jordan_elimination)
+- [Overcompleteness](https://en.wikipedia.org/wiki/Overcompleteness)
+- [Strassen algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm)
+ [![Three dimensional Euclidean space](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Linear_subspaces_with_shading.svg/120px-Linear_subspaces_with_shading.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Linear_subspaces_with_shading.svg)[Matrices](https://en.wikipedia.org/wiki/Matrix_(mathematics))
+- [Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics))
+- [Matrix addition](https://en.wikipedia.org/wiki/Matrix_addition)
+- [Matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication)
+- [Basis transformation matrix](https://en.wikipedia.org/wiki/Basis_transformation_matrix)
+- [Characteristic polynomial](https://en.wikipedia.org/wiki/Characteristic_polynomial)
+- [Spectrum](https://en.wikipedia.org/wiki/Spectrum_of_a_matrix)
+- [Trace](https://en.wikipedia.org/wiki/Trace_(linear_algebra))
+- [Eigenvalue, eigenvector and eigenspace](https://en.wikipedia.org/wiki/Eigenvalue,_eigenvector_and_eigenspace)
+- [Cayley–Hamilton theorem](https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem)
+- [Jordan normal form](https://en.wikipedia.org/wiki/Jordan_normal_form)
+- [Weyr canonical form](https://en.wikipedia.org/wiki/Weyr_canonical_form)
+- [Rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra))
+- [Inverse](https://en.wikipedia.org/wiki/Matrix_inversion), [Pseudoinverse](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_pseudoinverse)
+- [Adjugate](https://en.wikipedia.org/wiki/Adjugate_matrix), [Transpose](https://en.wikipedia.org/wiki/Transpose)
+- [Dot product](https://en.wikipedia.org/wiki/Dot_product)
+- [Symmetric matrix](https://en.wikipedia.org/wiki/Symmetric_matrix), [Skew-symmetric matrix](https://en.wikipedia.org/wiki/Skew-symmetric_matrix)
+- [Orthogonal matrix](https://en.wikipedia.org/wiki/Orthogonal_matrix), [Unitary matrix](https://en.wikipedia.org/wiki/Unitary_matrix)
+- [Hermitian matrix](https://en.wikipedia.org/wiki/Hermitian_matrix), [Antihermitian matrix](https://en.wikipedia.org/wiki/Antihermitian_matrix)
+- [Positive-(semi)definite](https://en.wikipedia.org/wiki/Positive-definite_matrix)
+- [Pfaffian](https://en.wikipedia.org/wiki/Pfaffian)
+- [Projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra))
+- [Spectral theorem](https://en.wikipedia.org/wiki/Spectral_theorem)
+- [Perron–Frobenius theorem](https://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem)
+- [Diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix), [Triangular matrix](https://en.wikipedia.org/wiki/Triangular_matrix), [Tridiagonal matrix](https://en.wikipedia.org/wiki/Tridiagonal_matrix)
+- [Block matrix](https://en.wikipedia.org/wiki/Block_matrix)
+- [Sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix)
+- [Hessenberg matrix](https://en.wikipedia.org/wiki/Hessenberg_matrix), [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix)
+- [Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)
+- [Stochastic matrix](https://en.wikipedia.org/wiki/Stochastic_matrix), [Toeplitz matrix](https://en.wikipedia.org/wiki/Toeplitz_matrix), [Circulant matrix](https://en.wikipedia.org/wiki/Circulant_matrix), [Hankel matrix](https://en.wikipedia.org/wiki/Hankel_matrix)
+- [(0,1)-matrix](https://en.wikipedia.org/wiki/(0,1)-matrix)
+- [List of matrices](https://en.wikipedia.org/wiki/List_of_matrices)
+ [Matrix decompositions](https://en.wikipedia.org/wiki/Matrix_decomposition)
+- [Cholesky decomposition](https://en.wikipedia.org/wiki/Cholesky_decomposition)
+- [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition)
+- [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition)
+- [Polar decomposition](https://en.wikipedia.org/wiki/Polar_decomposition)
+- [Spectral theorem](https://en.wikipedia.org/wiki/Spectral_theorem)
+- [Singular value decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+- [Higher-order singular value decomposition](https://en.wikipedia.org/wiki/Higher-order_singular_value_decomposition)
+- [Schur decomposition](https://en.wikipedia.org/wiki/Schur_decomposition)
+- [Schur complement](https://en.wikipedia.org/wiki/Schur_complement)
+- [Haynsworth inertia additivity formula](https://en.wikipedia.org/wiki/Haynsworth_inertia_additivity_formula)
+- [Reducing subspace](https://en.wikipedia.org/wiki/Reducing_subspace)
+ [Relations and computations](https://en.wikipedia.org/wiki/Matrix_equivalence)
+- [Matrix equivalence](https://en.wikipedia.org/wiki/Matrix_equivalence)
+- [Matrix congruence](https://en.wikipedia.org/wiki/Matrix_congruence)
+- [Matrix similarity](https://en.wikipedia.org/wiki/Matrix_similarity)
+- [Matrix consimilarity](https://en.wikipedia.org/wiki/Matrix_consimilarity)
+- [Row equivalence](https://en.wikipedia.org/wiki/Row_equivalence)
+- [Elementary row operations](https://en.wikipedia.org/wiki/Elementary_row_operations)
+- [Householder transformation](https://en.wikipedia.org/wiki/Householder_transformation)
+- [Least squares](https://en.wikipedia.org/wiki/Least_squares)
+- [Linear least squares](https://en.wikipedia.org/wiki/Linear_least_squares)
+- [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process)
+- [Woodbury matrix identity](https://en.wikipedia.org/wiki/Woodbury_matrix_identity)
+ [Vector spaces](https://en.wikipedia.org/wiki/Vector_space)
+- [Vector space](https://en.wikipedia.org/wiki/Vector_space)
+- [Linear combination](https://en.wikipedia.org/wiki/Linear_combination)
+- [Linear span](https://en.wikipedia.org/wiki/Linear_span)
+- [Linear independence](https://en.wikipedia.org/wiki/Linear_independence)
+- [Basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)), [Hamel basis](https://en.wikipedia.org/wiki/Hamel_basis)
+- [Change of basis](https://en.wikipedia.org/wiki/Change_of_basis)
+- [Dimension theorem for vector spaces](https://en.wikipedia.org/wiki/Dimension_theorem_for_vector_spaces)
+- [Hamel dimension](https://en.wikipedia.org/wiki/Hamel_dimension)
+- [Examples of vector spaces](https://en.wikipedia.org/wiki/Examples_of_vector_spaces)
+- [Linear map](https://en.wikipedia.org/wiki/Linear_map)
+- [Shear mapping](https://en.wikipedia.org/wiki/Shear_mapping)
+- [Squeeze mapping](https://en.wikipedia.org/wiki/Squeeze_mapping)
+- [Linear subspace](https://en.wikipedia.org/wiki/Linear_subspace)
+- [Row and column spaces](https://en.wikipedia.org/wiki/Row_and_column_spaces), [Null space](https://en.wikipedia.org/wiki/Null_space)
+- [Rank–nullity theorem](https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem)
+- [Nullity theorem](https://en.wikipedia.org/wiki/Nullity_theorem)
+- [Cyclic subspace](https://en.wikipedia.org/wiki/Cyclic_subspace)
+- [Dual space](https://en.wikipedia.org/wiki/Dual_space), [Linear functional](https://en.wikipedia.org/wiki/Linear_functional)
+- [Category of vector spaces](https://en.wikipedia.org/wiki/Category_of_vector_spaces)
+ [Structures](https://en.wikipedia.org/wiki/Vector_space)
+- [Topological vector space](https://en.wikipedia.org/wiki/Topological_vector_space)
+- [Normed vector space](https://en.wikipedia.org/wiki/Normed_vector_space)
+- [Inner product space](https://en.wikipedia.org/wiki/Inner_product_space)
+- [Euclidean space](https://en.wikipedia.org/wiki/Euclidean_space)
+- [Orthogonality](https://en.wikipedia.org/wiki/Orthogonality)
+- [Orthogonal complement](https://en.wikipedia.org/wiki/Orthogonal_complement)
+- [Orthogonal projection](https://en.wikipedia.org/wiki/Orthogonal_projection)
+- [Orthogonal group](https://en.wikipedia.org/wiki/Orthogonal_group)
+- [Pseudo-Euclidean space](https://en.wikipedia.org/wiki/Pseudo-Euclidean_space)
+- [Null vector](https://en.wikipedia.org/wiki/Null_vector)
+- [Indefinite orthogonal group](https://en.wikipedia.org/wiki/Indefinite_orthogonal_group)
+- [Orientation](https://en.wikipedia.org/wiki/Orientation_(geometry))
+- [Improper rotation](https://en.wikipedia.org/wiki/Improper_rotation)
+- [Symplectic structure](https://en.wikipedia.org/wiki/Symplectic_structure)
+ [Multilinear algebra](https://en.wikipedia.org/wiki/Multilinear_algebra)
+- [Multilinear algebra](https://en.wikipedia.org/wiki/Multilinear_algebra)
+- [Tensor](https://en.wikipedia.org/wiki/Tensor)
+- [Tensors (classical)](https://en.wikipedia.org/wiki/Classical_treatment_of_tensors)
+- [Component-free treatment of tensors](https://en.wikipedia.org/wiki/Component-free_treatment_of_tensors)
+- [Outer product](https://en.wikipedia.org/wiki/Outer_product)
+- [Tensor algebra](https://en.wikipedia.org/wiki/Tensor_algebra)
+- [Exterior algebra](https://en.wikipedia.org/wiki/Exterior_algebra)
+- [Symmetric algebra](https://en.wikipedia.org/wiki/Symmetric_algebra)
+- [Clifford algebra](https://en.wikipedia.org/wiki/Clifford_algebra)
+- [Geometric algebra](https://en.wikipedia.org/wiki/Geometric_algebra)
+- [Bivector](https://en.wikipedia.org/wiki/Bivector)
+- [Multivector](https://en.wikipedia.org/wiki/Multivector)
+- [Gamas&#39;s theorem](https://en.wikipedia.org/wiki/Gamas&#39;s_theorem)
+ [Affine and projective](https://en.wikipedia.org/wiki/Affine_space)
+- [Affine space](https://en.wikipedia.org/wiki/Affine_space)
+- [Affine transformation](https://en.wikipedia.org/wiki/Affine_transformation), [Affine group](https://en.wikipedia.org/wiki/Affine_group), [Affine geometry](https://en.wikipedia.org/wiki/Affine_geometry)
+- [Affine coordinate system](https://en.wikipedia.org/wiki/Affine_coordinate_system), [Flat (geometry)](https://en.wikipedia.org/wiki/Flat_(geometry))
+- [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system)
+- [Euclidean group](https://en.wikipedia.org/wiki/Euclidean_group)
+- [Poincaré group](https://en.wikipedia.org/wiki/Poincar%C3%A9_group)
+- [Galilean group](https://en.wikipedia.org/wiki/Galilean_group)
+- [Projective space](https://en.wikipedia.org/wiki/Projective_space)
+- [Projective transformation](https://en.wikipedia.org/wiki/Projective_transformation)
+- [Projective geometry](https://en.wikipedia.org/wiki/Projective_geometry)
+- [Projective linear group](https://en.wikipedia.org/wiki/Projective_linear_group)
+- [Quadric](https://en.wikipedia.org/wiki/Quadric)
+ [Numerical linear algebra](https://en.wikipedia.org/wiki/Numerical_linear_algebra)
+- [Numerical linear algebra](https://en.wikipedia.org/wiki/Numerical_linear_algebra)
+- [Floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
+- [Numerical stability](https://en.wikipedia.org/wiki/Numerical_stability)
+- [Basic Linear Algebra Subprograms](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)
+- [Sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix)
+- [Comparison of linear algebra libraries](https://en.wikipedia.org/wiki/Comparison_of_linear_algebra_libraries)
+
+- ![](https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail) [Category](https://en.wikipedia.org/wiki/Category:Linear_algebra)
+  [Authority control databases](https://en.wikipedia.org/wiki/Help:Authority_control) [![Edit this at Wikidata](https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail)](https://www.wikidata.org/wiki/Q2658#identifiers)
+- [GND](https://d-nb.info/gnd/4156110-7)
+          Retrieved from &quot;[https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;oldid=1365416799](https://en.wikipedia.org/w/index.php?title=Gaussian_elimination&amp;oldid=1365416799)&quot; [Categories](https://en.wikipedia.org/wiki/Help:Category):
+- [Numerical linear algebra](https://en.wikipedia.org/wiki/Category:Numerical_linear_algebra)
+- [Exchange algorithms](https://en.wikipedia.org/wiki/Category:Exchange_algorithms)
+Hidden categories:
+- [Articles with short description](https://en.wikipedia.org/wiki/Category:Articles_with_short_description)
+- [Short description matches Wikidata](https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata)
+- [CS1 maint: location missing publisher](https://en.wikipedia.org/wiki/Category:CS1_maint:_location_missing_publisher)
+- [Articles with example pseudocode](https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode)
+
+    [https://en\.wikipedia\.org/wiki/Gaussian\_elimination?action=edit](https://en.wikipedia.org/wiki/Gaussian_elimination?action=edit)
+</pre></article></section>
+<section><h2>Integrity note</h2><p>NDJSON records are canonical for this immutable Capsule. Tree, manifest display, and projection are generated views. Artifact records include SHA-256 hashes.</p></section>
+</main></body></html>

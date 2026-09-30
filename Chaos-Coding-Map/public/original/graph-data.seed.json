@@ -1,0 +1,1433 @@
+{
+  "schema": "fractal-computing-hyperindex.v1",
+  "node_count": 40,
+  "edge_count": 102,
+  "nodes": [
+    {
+      "id": "n00",
+      "title": "Blum–Shub–Smale machine",
+      "slug": "blum-shub-smale-machine",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Blum%E2%80%93Shub%E2%80%93Smale_machine",
+      "variants": [
+        {
+          "file": "Blum–Shub–Smale machine - Wikipedia_20260930-060331Z_capsule.html",
+          "local": "sources/Blum–Shub–Smale machine - Wikipedia_20260930-060331Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Blum–Shub–Smale_machine",
+      "degree": 5,
+      "x": 1104.0,
+      "y": 105.0
+    },
+    {
+      "id": "n01",
+      "title": "Buddhabrot",
+      "slug": "buddhabrot",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Buddhabrot",
+      "variants": [
+        {
+          "file": "Buddhabrot - Wikipedia_20260930-055753Z_capsule.html",
+          "local": "sources/Buddhabrot - Wikipedia_20260930-055753Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Buddhabrot",
+      "degree": 8,
+      "x": 112.0,
+      "y": 341.7
+    },
+    {
+      "id": "n02",
+      "title": "Creative coding",
+      "slug": "creative-coding",
+      "cluster": "rendering + creative tools",
+      "source": "https://en.wikipedia.org/wiki/Creative_coding#List_of_creative_coding_software",
+      "variants": [
+        {
+          "file": "Creative coding - Wikipedia_20260930-060045Z_capsule.html",
+          "local": "sources/Creative coding - Wikipedia_20260930-060045Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Creative_coding",
+      "degree": 2,
+      "x": 644.0,
+      "y": 460.0
+    },
+    {
+      "id": "n03",
+      "title": "Different Morphological Operations in Image Processing",
+      "slug": "different-morphological-operations-in-image-processing",
+      "cluster": "rendering + creative tools",
+      "source": "https://www.geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing/",
+      "variants": [
+        {
+          "file": "Different Morphological Operations in Image Processing - GeeksforGeeks_20260930-054208Z_capsule.html",
+          "local": "sources/Different Morphological Operations in Image Processing - GeeksforGeeks_20260930-054208Z_capsule.html"
+        }
+      ],
+      "key": "geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing",
+      "degree": 2,
+      "x": 608.0,
+      "y": 578.3
+    },
+    {
+      "id": "n04",
+      "title": "Feasible real random access machines",
+      "slug": "feasible-real-random-access-machines",
+      "cluster": "machine models",
+      "source": "https://pdf.sciencedirectassets.com/272569/1-s2.0-S0885064X00X00131/1-s2.0-S0885064X98904885/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDkxb2A%2BQo4c8WDkWVVAkj0l5%2BnN8tLmVyMe97nUY1%2F4wIgQwVfBTk%2BTryUtJCpJgTvZecji4dzaiBbT994%2FDQWEmYqswUIXxAFGgwwNTkwMDM1NDY4NjUiDFLCPU7oPcsCFApSASqQBUmEOgN8NRQCFEcsnuzIdGiYZIXDCLIvHXCalFGJS7GVIp9rCEb7gjZcFV4QySmArZtq0UWAVdh3Fxiqjcfu1XIwL1aYz%2BgzAQqxXaun3DWxwHVAeNh9dmOJumM4Q1JoT4dqTXivivZARcMKQZNRrHF3pE7H8Z0l0%2BOG832Ro2j1f8snJd1pwRUAJJhj3ZjLguP37avD3hmbExf%2BDe4CslIdap6eaqfEMbePn4adbcDU%2FVlBbwSqfWeGStA7PefhJfCmAYptJKDEMQ3IS0IxpbDmQmnbTI2Labr%2BbAUrqZgTR1FF4bDNMa5Rr1XPpAhC7R5Wj7owd0ZZC48XBX5VzU94sltOghTaiqZqRjm3GKDqrW8P6nDy8ug8f3FtyzCemoCsTu%2Bu4YUtszS2yjJWRXcECkONPlQaF9VWsNX76zOhVKphzO2ppzJ8e2SoCNByCWPG9eeXB8%2FI6vFninxhuwpYqQ6vQ4%2B5aHIXXWHhNOFfldEW0thnOTbQWgssvd5fSQ6EwWAbv6dJVSMbsJJHv6LYr29PoRPReXUwzaDPyUvnnGRm9THyb9qIkxLyYgmaxIigZgXtYoev4RB%2F5Pnm5C%2BvRc%2FvTHDUyH%2BrOTPxRSb%2B1tg5KVZKEy9aUUs8Phnf%2Bwrba3gwJdDWjF7YG7TcaWDSC5%2FQOXTesDdeE215KLKP0WjHNl6qAxhnvIrUX3nGP6eAzFf44c9R7GW4SWswySdHyzZqFU5Xne6bs0c64L396YB9u6qgUpZEiQZDonCveEyuVD1AvJ1wv9P%2BE007mlVF50k7WT8ilObLlXibvMAq2Rik86rr%2FWTgItIwA%2BAnORTmXuUo0NSX2JPIOgnjRxrEhDEqssREFkO50rxVCl7XMNS68tUGOrEBvR%2B9AYOkIbNDSv870w194hgELD8ps0Wc6znRm81yXnO1m6Lv02Bav7WjUycFYtsdN5y4ZDl3wjQG7a5xc032c6KuAmz3tlQFGALGR7LOikt3nMM3Y9b8XqEGLXp0hv4pyLA1VmcVVrSmdiDmQAmJ0FfvPRs0SZ7PCpUAinwR0YTqhUu9CJWe02WKVvjDHh0PIHZWExJ71S8wFC1tOzZWavtVIG9jxFV13imrcdAccRws&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260930T060942Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY7TESTVV6%2F20260930%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c60162c1d330187081df4cd893f6f395b924060dfb33b8ba4c89a4f08270bfa0&hash=079bcae8f283fe3a8d6e0e8432baf92f6df7c047c9a0ed7ecfc640e21cf68e04&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0885064X98904885&tid=spdf-aa2f828f-7197-47a9-b43c-15fdc81da1a3&sid=ff57c74353c9214d41498574cc8c5dcaaa79gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f160156545e57055304&rr=a4310f6d6a7730ba&cc=us",
+      "variants": [
+        {
+          "file": "pdf.sciencedirectassets.com_20260930-060951Z_capsule.html",
+          "local": "sources/pdf.sciencedirectassets.com_20260930-060951Z_capsule.html"
+        }
+      ],
+      "key": "pdf.sciencedirectassets.com/272569/1-s2.0-S0885064X00X00131/1-s2.0-S0885064X98904885/main.pdf",
+      "degree": 2,
+      "x": 1104.0,
+      "y": 307.9
+    },
+    {
+      "id": "n05",
+      "title": "Fractal-generating software",
+      "slug": "fractal-generating-software",
+      "cluster": "rendering + creative tools",
+      "source": "https://en.wikipedia.org/wiki/Fractal-generating_software",
+      "variants": [
+        {
+          "file": "Fractal-generating software - Wikipedia_20260930-060059Z_capsule.html",
+          "local": "sources/Fractal-generating software - Wikipedia_20260930-060059Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Fractal-generating_software",
+      "degree": 12,
+      "x": 608.0,
+      "y": 105.0
+    },
+    {
+      "id": "n06",
+      "title": "Fractint",
+      "slug": "fractint",
+      "cluster": "rendering + creative tools",
+      "source": "https://en.wikipedia.org/wiki/Fractint",
+      "variants": [
+        {
+          "file": "Fractint - Wikipedia_20260930-060143Z_capsule.html",
+          "local": "sources/Fractint - Wikipedia_20260930-060143Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Fractint",
+      "degree": 5,
+      "x": 608.0,
+      "y": 341.7
+    },
+    {
+      "id": "n07",
+      "title": "Gaussian elimination",
+      "slug": "gaussian-elimination",
+      "cluster": "algorithms + discrete math",
+      "source": "https://en.wikipedia.org/wiki/Gaussian_elimination",
+      "variants": [
+        {
+          "file": "Gaussian elimination - Wikipedia_20260930-060822Z_capsule.html",
+          "local": "sources/Gaussian elimination - Wikipedia_20260930-060822Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Gaussian_elimination",
+      "degree": 2,
+      "x": 892.0,
+      "y": 223.3
+    },
+    {
+      "id": "n08",
+      "title": "Geometric Computing: The Science of Making Geometric Algorithms Work",
+      "slug": "geometric-computing-the-science-of-making-geometric-algorithms-w",
+      "cluster": "algorithms + discrete math",
+      "source": "https://people.mpi-inf.mpg.de/~mehlhorn/ftp/SoCG09.pdf",
+      "variants": [
+        {
+          "file": "people.mpi-inf.mpg.de_20260930-060922Z_capsule.html",
+          "local": "sources/people.mpi-inf.mpg.de_20260930-060922Z_capsule.html"
+        }
+      ],
+      "key": "people.mpi-inf.mpg.de/~mehlhorn/ftp/SoCG09.pdf",
+      "degree": 3,
+      "x": 856.0,
+      "y": 105.0
+    },
+    {
+      "id": "n09",
+      "title": "Gilbreath shuffle",
+      "slug": "gilbreath-shuffle",
+      "cluster": "algorithms + discrete math",
+      "source": "https://en.wikipedia.org/wiki/Gilbreath_shuffle#Gilbreath_permutations",
+      "variants": [
+        {
+          "file": "Gilbreath shuffle - Wikipedia_20260930-060137Z_capsule.html",
+          "local": "sources/Gilbreath shuffle - Wikipedia_20260930-060137Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Gilbreath_shuffle",
+      "degree": 2,
+      "x": 856.0,
+      "y": 341.7
+    },
+    {
+      "id": "n10",
+      "title": "Hausdorff dimension",
+      "slug": "hausdorff-dimension",
+      "cluster": "dimension + geometry",
+      "source": "https://en.wikipedia.org/wiki/Hausdorff_dimension",
+      "variants": [
+        {
+          "file": "Hausdorff dimension - Wikipedia_20260930-060254Z_capsule.html",
+          "local": "sources/Hausdorff dimension - Wikipedia_20260930-060254Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Hausdorff_dimension",
+      "degree": 6,
+      "x": 360.0,
+      "y": 460.0
+    },
+    {
+      "id": "n11",
+      "title": "Hypercomputation",
+      "slug": "hypercomputation",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Hypercomputation",
+      "variants": [
+        {
+          "file": "Hypercomputation - Wikipedia_20260930-060508Z_capsule.html",
+          "local": "sources/Hypercomputation - Wikipedia_20260930-060508Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Hypercomputation",
+      "degree": 2,
+      "x": 1140.0,
+      "y": 409.3
+    },
+    {
+      "id": "n12",
+      "title": "Julia set",
+      "slug": "julia-set",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Julia_set",
+      "variants": [
+        {
+          "file": "Julia set - Wikipedia_20260930-060157Z_capsule.html",
+          "local": "sources/Julia set - Wikipedia_20260930-060157Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Julia_set",
+      "degree": 14,
+      "x": 148.0,
+      "y": 164.2
+    },
+    {
+      "id": "n13",
+      "title": "Library of Efficient Data types and Algorithms",
+      "slug": "library-of-efficient-data-types-and-algorithms",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Library_of_Efficient_Data_types_and_Algorithms",
+      "variants": [
+        {
+          "file": "Library of Efficient Data types and Algorithms - Wikipedia_20260930-060801Z_capsule.html",
+          "local": "sources/Library of Efficient Data types and Algorithms - Wikipedia_20260930-060801Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Library_of_Efficient_Data_types_and_Algorithms",
+      "degree": 1,
+      "x": 1104.0,
+      "y": 713.6
+    },
+    {
+      "id": "n14",
+      "title": "List of fractals by Hausdorff dimension",
+      "slug": "list-of-fractals-by-hausdorff-dimension",
+      "cluster": "dimension + geometry",
+      "source": "https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension",
+      "variants": [
+        {
+          "file": "List of fractals by Hausdorff dimension - Wikipedia_20260930-055942Z_capsule.html",
+          "local": "sources/List of fractals by Hausdorff dimension - Wikipedia_20260930-055942Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension",
+      "degree": 12,
+      "x": 360.0,
+      "y": 105.0
+    },
+    {
+      "id": "n15",
+      "title": "List of interactive geometry software",
+      "slug": "list-of-interactive-geometry-software",
+      "cluster": "rendering + creative tools",
+      "source": "https://en.wikipedia.org/wiki/List_of_interactive_geometry_software",
+      "variants": [
+        {
+          "file": "List of interactive geometry software - Wikipedia_20260930-060106Z_capsule.html",
+          "local": "sources/List of interactive geometry software - Wikipedia_20260930-060106Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/List_of_interactive_geometry_software",
+      "degree": 2,
+      "x": 644.0,
+      "y": 696.7
+    },
+    {
+      "id": "n16",
+      "title": "List of mathematical art software",
+      "slug": "list-of-mathematical-art-software",
+      "cluster": "rendering + creative tools",
+      "source": "https://en.wikipedia.org/wiki/List_of_mathematical_art_software",
+      "variants": [
+        {
+          "file": "List of mathematical art software - Wikipedia_20260930-060008Z_capsule.html",
+          "local": "sources/List of mathematical art software - Wikipedia_20260930-060008Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/List_of_mathematical_art_software",
+      "degree": 6,
+      "x": 644.0,
+      "y": 223.3
+    },
+    {
+      "id": "n17",
+      "title": "Lyapunov exponent",
+      "slug": "lyapunov-exponent",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Lyapunov_exponent",
+      "variants": [
+        {
+          "file": "Lyapunov exponent - Wikipedia_20260930-055634Z_capsule.html",
+          "local": "sources/Lyapunov exponent - Wikipedia_20260930-055634Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Lyapunov_exponent",
+      "degree": 3,
+      "x": 148.0,
+      "y": 637.5
+    },
+    {
+      "id": "n18",
+      "title": "Mandelbox",
+      "slug": "mandelbox",
+      "cluster": "dimension + geometry",
+      "source": "https://en.wikipedia.org/wiki/Mandelbox",
+      "variants": [
+        {
+          "file": "Mandelbox - Wikipedia_20260930-055957Z_capsule.html",
+          "local": "sources/Mandelbox - Wikipedia_20260930-055957Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Mandelbox",
+      "degree": 8,
+      "x": 396.0,
+      "y": 282.5
+    },
+    {
+      "id": "n19",
+      "title": "Mandelbrot Fractal Set visualization in Python",
+      "slug": "mandelbrot-fractal-set-visualization-in-python",
+      "cluster": "rendering + creative tools",
+      "source": "https://www.geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python/",
+      "variants": [
+        {
+          "file": "Mandelbrot Fractal Set visualization in Python - GeeksforGeeks_20260930-055744Z_capsule.html",
+          "local": "sources/Mandelbrot Fractal Set visualization in Python - GeeksforGeeks_20260930-055744Z_capsule.html"
+        }
+      ],
+      "key": "geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python",
+      "degree": 2,
+      "x": 608.0,
+      "y": 815.0
+    },
+    {
+      "id": "n20",
+      "title": "Mandelbrot set",
+      "slug": "mandelbrot-set",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+      "variants": [
+        {
+          "file": "Mandelbrot set - Wikipedia_20260930-054917Z_capsule.html",
+          "local": "sources/Mandelbrot set - Wikipedia_20260930-054917Z_capsule.html"
+        },
+        {
+          "file": "Mandelbrot set - Wikipedia_20260930-055548Z_capsule.html",
+          "local": "sources/Mandelbrot set - Wikipedia_20260930-055548Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Mandelbrot_set",
+      "degree": 21,
+      "x": 112.0,
+      "y": 105.0
+    },
+    {
+      "id": "n21",
+      "title": "Mandelbulb",
+      "slug": "mandelbulb",
+      "cluster": "dimension + geometry",
+      "source": "https://en.wikipedia.org/wiki/Mandelbulb",
+      "variants": [
+        {
+          "file": "Mandelbulb - Wikipedia_20260930-055912Z_capsule.html",
+          "local": "sources/Mandelbulb - Wikipedia_20260930-055912Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Mandelbulb",
+      "degree": 6,
+      "x": 396.0,
+      "y": 637.5
+    },
+    {
+      "id": "n22",
+      "title": "Menger sponge",
+      "slug": "menger-sponge",
+      "cluster": "dimension + geometry",
+      "source": "https://en.wikipedia.org/wiki/Menger_sponge",
+      "variants": [
+        {
+          "file": "Menger sponge - Wikipedia_20260930-055855Z_capsule.html",
+          "local": "sources/Menger sponge - Wikipedia_20260930-055855Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Menger_sponge",
+      "degree": 6,
+      "x": 360.0,
+      "y": 815.0
+    },
+    {
+      "id": "n23",
+      "title": "Misiurewicz point",
+      "slug": "misiurewicz-point",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Misiurewicz_point",
+      "variants": [
+        {
+          "file": "Misiurewicz point - Wikipedia_20260930-061053Z_capsule.html",
+          "local": "sources/Misiurewicz point - Wikipedia_20260930-061053Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Misiurewicz_point",
+      "degree": 12,
+      "x": 148.0,
+      "y": 282.5
+    },
+    {
+      "id": "n24",
+      "title": "Multibrot set",
+      "slug": "multibrot-set",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Multibrot_set",
+      "variants": [
+        {
+          "file": "Multibrot set - Wikipedia_20260930-055554Z_capsule.html",
+          "local": "sources/Multibrot set - Wikipedia_20260930-055554Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Multibrot_set",
+      "degree": 13,
+      "x": 112.0,
+      "y": 223.3
+    },
+    {
+      "id": "n25",
+      "title": "Newton fractal",
+      "slug": "newton-fractal",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Newton_fractal",
+      "variants": [
+        {
+          "file": "Newton fractal - Wikipedia_20260930-055850Z_capsule.html",
+          "local": "sources/Newton fractal - Wikipedia_20260930-055850Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Newton_fractal",
+      "degree": 7,
+      "x": 148.0,
+      "y": 400.8
+    },
+    {
+      "id": "n26",
+      "title": "Newton's method",
+      "slug": "newton-s-method",
+      "cluster": "algorithms + discrete math",
+      "source": "https://en.wikipedia.org/wiki/Newton's_method",
+      "variants": [
+        {
+          "file": "Newton's method - Wikipedia_20260930-060238Z_capsule.html",
+          "local": "sources/Newton's method - Wikipedia_20260930-060238Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Newton's_method",
+      "degree": 2,
+      "x": 892.0,
+      "y": 460.0
+    },
+    {
+      "id": "n27",
+      "title": "Orbit portrait",
+      "slug": "orbit-portrait",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Orbit_portrait",
+      "variants": [
+        {
+          "file": "Orbit portrait - Wikipedia_20260930-055845Z_capsule.html",
+          "local": "sources/Orbit portrait - Wikipedia_20260930-055845Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Orbit_portrait",
+      "degree": 2,
+      "x": 148.0,
+      "y": 755.8
+    },
+    {
+      "id": "n28",
+      "title": "Orbit trap",
+      "slug": "orbit-trap",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Orbit_trap",
+      "variants": [
+        {
+          "file": "Orbit trap - Wikipedia_20260930-055840Z_capsule.html",
+          "local": "sources/Orbit trap - Wikipedia_20260930-055840Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Orbit_trap",
+      "degree": 7,
+      "x": 112.0,
+      "y": 460.0
+    },
+    {
+      "id": "n29",
+      "title": "Perles configuration",
+      "slug": "perles-configuration",
+      "cluster": "algorithms + discrete math",
+      "source": "https://en.wikipedia.org/wiki/Perles_configuration",
+      "variants": [
+        {
+          "file": "Perles configuration - Wikipedia_20260930-060858Z_capsule.html",
+          "local": "sources/Perles configuration - Wikipedia_20260930-060858Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Perles_configuration",
+      "degree": 1,
+      "x": 892.0,
+      "y": 696.7
+    },
+    {
+      "id": "n30",
+      "title": "Pickover stalk",
+      "slug": "pickover-stalk",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Pickover_stalk",
+      "variants": [
+        {
+          "file": "Pickover stalk - Wikipedia_20260930-055828Z_capsule.html",
+          "local": "sources/Pickover stalk - Wikipedia_20260930-055828Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Pickover_stalk",
+      "degree": 7,
+      "x": 148.0,
+      "y": 519.2
+    },
+    {
+      "id": "n31",
+      "title": "Plotting algorithms for the Mandelbrot set",
+      "slug": "plotting-algorithms-for-the-mandelbrot-set",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set",
+      "variants": [
+        {
+          "file": "Plotting algorithms for the Mandelbrot set - Wikipedia_20260930-055710Z_capsule.html",
+          "local": "sources/Plotting algorithms for the Mandelbrot set - Wikipedia_20260930-055710Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set",
+      "degree": 6,
+      "x": 112.0,
+      "y": 578.3
+    },
+    {
+      "id": "n32",
+      "title": "Quantum finite automaton",
+      "slug": "quantum-finite-automaton",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Quantum_finite_automaton",
+      "variants": [
+        {
+          "file": "Quantum finite automaton - Wikipedia_20260930-061023Z_capsule.html",
+          "local": "sources/Quantum finite automaton - Wikipedia_20260930-061023Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Quantum_finite_automaton",
+      "degree": 1,
+      "x": 1140.0,
+      "y": 815.0
+    },
+    {
+      "id": "n33",
+      "title": "Stern–Brocot tree",
+      "slug": "stern-brocot-tree",
+      "cluster": "algorithms + discrete math",
+      "source": "https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree",
+      "variants": [
+        {
+          "file": "Stern–Brocot tree - Wikipedia_20260930-060245Z_capsule.html",
+          "local": "sources/Stern–Brocot tree - Wikipedia_20260930-060245Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Stern–Brocot_tree",
+      "degree": 2,
+      "x": 856.0,
+      "y": 578.3
+    },
+    {
+      "id": "n34",
+      "title": "symbolic computation - Truth tables in python using sympy",
+      "slug": "symbolic-computation-truth-tables-in-python-using-sympy",
+      "cluster": "algorithms + discrete math",
+      "source": "https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy",
+      "variants": [
+        {
+          "file": "symbolic computation - Truth tables in python using sympy - Stack Overflow_20260930-054858Z_capsule.html",
+          "local": "sources/symbolic computation - Truth tables in python using sympy - Stack Overflow_20260930-054858Z_capsule.html"
+        }
+      ],
+      "key": "stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy",
+      "degree": 1,
+      "x": 856.0,
+      "y": 815.0
+    },
+    {
+      "id": "n35",
+      "title": "Transdichotomous model",
+      "slug": "transdichotomous-model",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Transdichotomous_model",
+      "variants": [
+        {
+          "file": "Transdichotomous model - Wikipedia_20260930-060851Z_capsule.html",
+          "local": "sources/Transdichotomous model - Wikipedia_20260930-060851Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Transdichotomous_model",
+      "degree": 2,
+      "x": 1104.0,
+      "y": 510.7
+    },
+    {
+      "id": "n36",
+      "title": "Tricorn (mathematics)",
+      "slug": "tricorn-mathematics",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Tricorn_(mathematics)",
+      "variants": [
+        {
+          "file": "Tricorn (mathematics) - Wikipedia_20260930-060151Z_capsule.html",
+          "local": "sources/Tricorn (mathematics) - Wikipedia_20260930-060151Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Tricorn_(mathematics",
+      "degree": 3,
+      "x": 112.0,
+      "y": 696.7
+    },
+    {
+      "id": "n37",
+      "title": "Turing machine",
+      "slug": "turing-machine",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Turing_machine",
+      "variants": [
+        {
+          "file": "Turing machine - Wikipedia_20260930-060816Z_capsule.html",
+          "local": "sources/Turing machine - Wikipedia_20260930-060816Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Turing_machine",
+      "degree": 2,
+      "x": 1140.0,
+      "y": 612.1
+    },
+    {
+      "id": "n38",
+      "title": "Weierstrass–Mandelbrot function",
+      "slug": "weierstrass-mandelbrot-function",
+      "cluster": "complex dynamics",
+      "source": "https://en.wikipedia.org/wiki/Weierstrass%E2%80%93Mandelbrot_function",
+      "variants": [
+        {
+          "file": "Weierstrass–Mandelbrot function - Wikipedia_20260930-055823Z_capsule.html",
+          "local": "sources/Weierstrass–Mandelbrot function - Wikipedia_20260930-055823Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Weierstrass–Mandelbrot_function",
+      "degree": 1,
+      "x": 112.0,
+      "y": 815.0
+    },
+    {
+      "id": "n39",
+      "title": "Word RAM",
+      "slug": "word-ram",
+      "cluster": "machine models",
+      "source": "https://en.wikipedia.org/wiki/Word_RAM",
+      "variants": [
+        {
+          "file": "Word RAM - Wikipedia_20260930-060828Z_capsule.html",
+          "local": "sources/Word RAM - Wikipedia_20260930-060828Z_capsule.html"
+        }
+      ],
+      "key": "en.wikipedia.org/wiki/Word_RAM",
+      "degree": 3,
+      "x": 1140.0,
+      "y": 206.4
+    }
+  ],
+  "edges": [
+    {
+      "a": "n00",
+      "b": "n37",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n00",
+      "b": "n11",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n00",
+      "b": "n32",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n01",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n01",
+      "b": "n06",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n02",
+      "b": "n16",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n05",
+      "b": "n06",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n05",
+      "b": "n12",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n01",
+      "b": "n05",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n05",
+      "b": "n22",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n05",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n05",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n05",
+      "b": "n16",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n05",
+      "b": "n21",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n05",
+      "b": "n18",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n06",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n09",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n10",
+      "b": "n14",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n11",
+      "b": "n37",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n12",
+      "b": "n26",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n12",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.98,
+      "evidence": 20
+    },
+    {
+      "a": "n12",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n12",
+      "b": "n14",
+      "kind": "captured cross-link",
+      "weight": 0.87,
+      "evidence": 10
+    },
+    {
+      "a": "n14",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n14",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n14",
+      "b": "n22",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n14",
+      "b": "n21",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n14",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n14",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n14",
+      "b": "n18",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n01",
+      "b": "n14",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n14",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n14",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n06",
+      "b": "n16",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n16",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n12",
+      "b": "n16",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n15",
+      "b": "n16",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n10",
+      "b": "n17",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n17",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n18",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n12",
+      "b": "n18",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n18",
+      "b": "n21",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n01",
+      "b": "n18",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n20",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.89,
+      "evidence": 12
+    },
+    {
+      "a": "n10",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n00",
+      "b": "n20",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n20",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.92,
+      "evidence": 14
+    },
+    {
+      "a": "n20",
+      "b": "n31",
+      "kind": "captured cross-link",
+      "weight": 0.87,
+      "evidence": 10
+    },
+    {
+      "a": "n20",
+      "b": "n21",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n20",
+      "b": "n22",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n20",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.87,
+      "evidence": 10
+    },
+    {
+      "a": "n20",
+      "b": "n27",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n20",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n20",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.87,
+      "evidence": 10
+    },
+    {
+      "a": "n20",
+      "b": "n38",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n10",
+      "b": "n22",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n23",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n10",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n22",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n23",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n18",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n21",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n01",
+      "b": "n23",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n23",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n23",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n12",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n17",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n10",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n22",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n24",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n18",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n21",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n01",
+      "b": "n24",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n24",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n24",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n26",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n12",
+      "b": "n25",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n12",
+      "b": "n27",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n12",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n05",
+      "b": "n28",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n28",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n12",
+      "b": "n30",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n05",
+      "b": "n31",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n01",
+      "b": "n31",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n12",
+      "b": "n31",
+      "kind": "captured cross-link",
+      "weight": 0.73,
+      "evidence": 4
+    },
+    {
+      "a": "n06",
+      "b": "n31",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n35",
+      "b": "n39",
+      "kind": "captured cross-link",
+      "weight": 0.79,
+      "evidence": 6
+    },
+    {
+      "a": "n20",
+      "b": "n36",
+      "kind": "captured cross-link",
+      "weight": 0.83,
+      "evidence": 8
+    },
+    {
+      "a": "n12",
+      "b": "n36",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n05",
+      "b": "n36",
+      "kind": "captured cross-link",
+      "weight": 0.64,
+      "evidence": 2
+    },
+    {
+      "a": "n19",
+      "b": "n31",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n03",
+      "b": "n19",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n07",
+      "b": "n13",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n33",
+      "b": "n39",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n29",
+      "b": "n08",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n08",
+      "b": "n35",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n04",
+      "b": "n00",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n04",
+      "b": "n39",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n34",
+      "b": "n07",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n09",
+      "b": "n33",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n15",
+      "b": "n08",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    },
+    {
+      "a": "n03",
+      "b": "n02",
+      "kind": "curated neighbor",
+      "weight": 0.32,
+      "evidence": 0
+    }
+  ],
+  "cluster_meta": {
+    "complex dynamics": {
+      "color": "#36d1dc",
+      "description": "Iterated complex maps, parameter spaces, orbit structure, diagnostics."
+    },
+    "dimension + geometry": {
+      "color": "#ffb347",
+      "description": "Dimension, self-similarity, geometric and 3D fractal forms."
+    },
+    "rendering + creative tools": {
+      "color": "#ff6b9f",
+      "description": "Rendering algorithms, software, image processing, creative coding."
+    },
+    "machine models": {
+      "color": "#9d7cff",
+      "description": "Turing/RAM/real/quantum/hypercomputation models and implementation substrates."
+    },
+    "algorithms + discrete math": {
+      "color": "#7de38d",
+      "description": "Numerical, symbolic, geometric, and combinatorial algorithm neighbors."
+    },
+    "cross-domain": {
+      "color": "#9aa7b7",
+      "description": "Unclassified or connective reference node."
+    }
+  }
+}

@@ -1,0 +1,2691 @@
+[
+  {
+    "id": "n00",
+    "title": "Blum–Shub–Smale machine",
+    "slug": "blum-shub-smale-machine",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Blum%E2%80%93Shub%E2%80%93Smale_machine",
+    "capsules": [
+      "sources/Blum–Shub–Smale machine - Wikipedia_20260930-060331Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Blum–Shub–Smale_machine",
+    "seedDegree": 5,
+    "x": 1104.0,
+    "y": 105.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 5
+  },
+  {
+    "id": "n01",
+    "title": "Buddhabrot",
+    "slug": "buddhabrot",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Buddhabrot",
+    "capsules": [
+      "sources/Buddhabrot - Wikipedia_20260930-055753Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Buddhabrot",
+    "seedDegree": 8,
+    "x": 112.0,
+    "y": 341.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 10
+  },
+  {
+    "id": "n02",
+    "title": "Creative coding",
+    "slug": "creative-coding",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Creative_coding#List_of_creative_coding_software",
+    "capsules": [
+      "sources/Creative coding - Wikipedia_20260930-060045Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Creative_coding",
+    "seedDegree": 2,
+    "x": 644.0,
+    "y": 460.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "n03",
+    "title": "Different Morphological Operations in Image Processing",
+    "slug": "different-morphological-operations-in-image-processing",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://www.geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing/",
+    "capsules": [
+      "sources/Different Morphological Operations in Image Processing - GeeksforGeeks_20260930-054208Z_capsule.html"
+    ],
+    "sourceKey": "geeksforgeeks.org/computer-vision/different-morphological-operations-in-image-processing",
+    "seedDegree": 2,
+    "x": 608.0,
+    "y": 578.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n04",
+    "title": "Feasible real random access machines",
+    "slug": "feasible-real-random-access-machines",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://pdf.sciencedirectassets.com/272569/1-s2.0-S0885064X00X00131/1-s2.0-S0885064X98904885/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDkxb2A%2BQo4c8WDkWVVAkj0l5%2BnN8tLmVyMe97nUY1%2F4wIgQwVfBTk%2BTryUtJCpJgTvZecji4dzaiBbT994%2FDQWEmYqswUIXxAFGgwwNTkwMDM1NDY4NjUiDFLCPU7oPcsCFApSASqQBUmEOgN8NRQCFEcsnuzIdGiYZIXDCLIvHXCalFGJS7GVIp9rCEb7gjZcFV4QySmArZtq0UWAVdh3Fxiqjcfu1XIwL1aYz%2BgzAQqxXaun3DWxwHVAeNh9dmOJumM4Q1JoT4dqTXivivZARcMKQZNRrHF3pE7H8Z0l0%2BOG832Ro2j1f8snJd1pwRUAJJhj3ZjLguP37avD3hmbExf%2BDe4CslIdap6eaqfEMbePn4adbcDU%2FVlBbwSqfWeGStA7PefhJfCmAYptJKDEMQ3IS0IxpbDmQmnbTI2Labr%2BbAUrqZgTR1FF4bDNMa5Rr1XPpAhC7R5Wj7owd0ZZC48XBX5VzU94sltOghTaiqZqRjm3GKDqrW8P6nDy8ug8f3FtyzCemoCsTu%2Bu4YUtszS2yjJWRXcECkONPlQaF9VWsNX76zOhVKphzO2ppzJ8e2SoCNByCWPG9eeXB8%2FI6vFninxhuwpYqQ6vQ4%2B5aHIXXWHhNOFfldEW0thnOTbQWgssvd5fSQ6EwWAbv6dJVSMbsJJHv6LYr29PoRPReXUwzaDPyUvnnGRm9THyb9qIkxLyYgmaxIigZgXtYoev4RB%2F5Pnm5C%2BvRc%2FvTHDUyH%2BrOTPxRSb%2B1tg5KVZKEy9aUUs8Phnf%2Bwrba3gwJdDWjF7YG7TcaWDSC5%2FQOXTesDdeE215KLKP0WjHNl6qAxhnvIrUX3nGP6eAzFf44c9R7GW4SWswySdHyzZqFU5Xne6bs0c64L396YB9u6qgUpZEiQZDonCveEyuVD1AvJ1wv9P%2BE007mlVF50k7WT8ilObLlXibvMAq2Rik86rr%2FWTgItIwA%2BAnORTmXuUo0NSX2JPIOgnjRxrEhDEqssREFkO50rxVCl7XMNS68tUGOrEBvR%2B9AYOkIbNDSv870w194hgELD8ps0Wc6znRm81yXnO1m6Lv02Bav7WjUycFYtsdN5y4ZDl3wjQG7a5xc032c6KuAmz3tlQFGALGR7LOikt3nMM3Y9b8XqEGLXp0hv4pyLA1VmcVVrSmdiDmQAmJ0FfvPRs0SZ7PCpUAinwR0YTqhUu9CJWe02WKVvjDHh0PIHZWExJ71S8wFC1tOzZWavtVIG9jxFV13imrcdAccRws&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260930T060942Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY7TESTVV6%2F20260930%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c60162c1d330187081df4cd893f6f395b924060dfb33b8ba4c89a4f08270bfa0&hash=079bcae8f283fe3a8d6e0e8432baf92f6df7c047c9a0ed7ecfc640e21cf68e04&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0885064X98904885&tid=spdf-aa2f828f-7197-47a9-b43c-15fdc81da1a3&sid=ff57c74353c9214d41498574cc8c5dcaaa79gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f160156545e57055304&rr=a4310f6d6a7730ba&cc=us",
+    "capsules": [
+      "sources/pdf.sciencedirectassets.com_20260930-060951Z_capsule.html"
+    ],
+    "sourceKey": "pdf.sciencedirectassets.com/272569/1-s2.0-S0885064X00X00131/1-s2.0-S0885064X98904885/main.pdf",
+    "seedDegree": 2,
+    "x": 1104.0,
+    "y": 307.9,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n05",
+    "title": "Fractal-generating software",
+    "slug": "fractal-generating-software",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Fractal-generating_software",
+    "capsules": [
+      "sources/Fractal-generating software - Wikipedia_20260930-060059Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Fractal-generating_software",
+    "seedDegree": 12,
+    "x": 608.0,
+    "y": 105.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 13
+  },
+  {
+    "id": "n06",
+    "title": "Fractint",
+    "slug": "fractint",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Fractint",
+    "capsules": [
+      "sources/Fractint - Wikipedia_20260930-060143Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Fractint",
+    "seedDegree": 5,
+    "x": 608.0,
+    "y": 341.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 5
+  },
+  {
+    "id": "n07",
+    "title": "Gaussian elimination",
+    "slug": "gaussian-elimination",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Gaussian_elimination",
+    "capsules": [
+      "sources/Gaussian elimination - Wikipedia_20260930-060822Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Gaussian_elimination",
+    "seedDegree": 2,
+    "x": 892.0,
+    "y": 223.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n08",
+    "title": "Geometric Computing: The Science of Making Geometric Algorithms Work",
+    "slug": "geometric-computing-the-science-of-making-geometric-algorithms-w",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://people.mpi-inf.mpg.de/~mehlhorn/ftp/SoCG09.pdf",
+    "capsules": [
+      "sources/people.mpi-inf.mpg.de_20260930-060922Z_capsule.html"
+    ],
+    "sourceKey": "people.mpi-inf.mpg.de/~mehlhorn/ftp/SoCG09.pdf",
+    "seedDegree": 3,
+    "x": 856.0,
+    "y": 105.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "n09",
+    "title": "Gilbreath shuffle",
+    "slug": "gilbreath-shuffle",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Gilbreath_shuffle#Gilbreath_permutations",
+    "capsules": [
+      "sources/Gilbreath shuffle - Wikipedia_20260930-060137Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Gilbreath_shuffle",
+    "seedDegree": 2,
+    "x": 856.0,
+    "y": 341.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n10",
+    "title": "Hausdorff dimension",
+    "slug": "hausdorff-dimension",
+    "type": "concept",
+    "primaryCluster": "dimension + geometry",
+    "memberships": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension + geometry"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Hausdorff_dimension",
+    "capsules": [
+      "sources/Hausdorff dimension - Wikipedia_20260930-060254Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Hausdorff_dimension",
+    "seedDegree": 6,
+    "x": 360.0,
+    "y": 460.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 6
+  },
+  {
+    "id": "n11",
+    "title": "Hypercomputation",
+    "slug": "hypercomputation",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Hypercomputation",
+    "capsules": [
+      "sources/Hypercomputation - Wikipedia_20260930-060508Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Hypercomputation",
+    "seedDegree": 2,
+    "x": 1140.0,
+    "y": 409.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n12",
+    "title": "Julia set",
+    "slug": "julia-set",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Julia_set",
+    "capsules": [
+      "sources/Julia set - Wikipedia_20260930-060157Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Julia_set",
+    "seedDegree": 14,
+    "x": 148.0,
+    "y": 164.2,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 17
+  },
+  {
+    "id": "n13",
+    "title": "Library of Efficient Data types and Algorithms",
+    "slug": "library-of-efficient-data-types-and-algorithms",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Library_of_Efficient_Data_types_and_Algorithms",
+    "capsules": [
+      "sources/Library of Efficient Data types and Algorithms - Wikipedia_20260930-060801Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Library_of_Efficient_Data_types_and_Algorithms",
+    "seedDegree": 1,
+    "x": 1104.0,
+    "y": 713.6,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "n14",
+    "title": "List of fractals by Hausdorff dimension",
+    "slug": "list-of-fractals-by-hausdorff-dimension",
+    "type": "concept",
+    "primaryCluster": "dimension + geometry",
+    "memberships": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension + geometry"
+    ],
+    "source": "https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension",
+    "capsules": [
+      "sources/List of fractals by Hausdorff dimension - Wikipedia_20260930-055942Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension",
+    "seedDegree": 12,
+    "x": 360.0,
+    "y": 105.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 12
+  },
+  {
+    "id": "n15",
+    "title": "List of interactive geometry software",
+    "slug": "list-of-interactive-geometry-software",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://en.wikipedia.org/wiki/List_of_interactive_geometry_software",
+    "capsules": [
+      "sources/List of interactive geometry software - Wikipedia_20260930-060106Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/List_of_interactive_geometry_software",
+    "seedDegree": 2,
+    "x": 644.0,
+    "y": 696.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n16",
+    "title": "List of mathematical art software",
+    "slug": "list-of-mathematical-art-software",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://en.wikipedia.org/wiki/List_of_mathematical_art_software",
+    "capsules": [
+      "sources/List of mathematical art software - Wikipedia_20260930-060008Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/List_of_mathematical_art_software",
+    "seedDegree": 6,
+    "x": 644.0,
+    "y": 223.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 6
+  },
+  {
+    "id": "n17",
+    "title": "Lyapunov exponent",
+    "slug": "lyapunov-exponent",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Lyapunov_exponent",
+    "capsules": [
+      "sources/Lyapunov exponent - Wikipedia_20260930-055634Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Lyapunov_exponent",
+    "seedDegree": 3,
+    "x": 148.0,
+    "y": 637.5,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 5
+  },
+  {
+    "id": "n18",
+    "title": "Mandelbox",
+    "slug": "mandelbox",
+    "type": "concept",
+    "primaryCluster": "dimension + geometry",
+    "memberships": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension + geometry"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Mandelbox",
+    "capsules": [
+      "sources/Mandelbox - Wikipedia_20260930-055957Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Mandelbox",
+    "seedDegree": 8,
+    "x": 396.0,
+    "y": 282.5,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 9
+  },
+  {
+    "id": "n19",
+    "title": "Mandelbrot Fractal Set visualization in Python",
+    "slug": "mandelbrot-fractal-set-visualization-in-python",
+    "type": "concept",
+    "primaryCluster": "rendering + creative tools",
+    "memberships": [
+      "rendering + creative tools"
+    ],
+    "tags": [
+      "rendering + creative tools"
+    ],
+    "source": "https://www.geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python/",
+    "capsules": [
+      "sources/Mandelbrot Fractal Set visualization in Python - GeeksforGeeks_20260930-055744Z_capsule.html"
+    ],
+    "sourceKey": "geeksforgeeks.org/python/mandelbrot-fractal-set-visualization-in-python",
+    "seedDegree": 2,
+    "x": 608.0,
+    "y": 815.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "n20",
+    "title": "Mandelbrot set",
+    "slug": "mandelbrot-set",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+    "capsules": [
+      "sources/Mandelbrot set - Wikipedia_20260930-054917Z_capsule.html",
+      "sources/Mandelbrot set - Wikipedia_20260930-055548Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Mandelbrot_set",
+    "seedDegree": 21,
+    "x": 112.0,
+    "y": 105.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 25
+  },
+  {
+    "id": "n21",
+    "title": "Mandelbulb",
+    "slug": "mandelbulb",
+    "type": "concept",
+    "primaryCluster": "dimension + geometry",
+    "memberships": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension + geometry"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Mandelbulb",
+    "capsules": [
+      "sources/Mandelbulb - Wikipedia_20260930-055912Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Mandelbulb",
+    "seedDegree": 6,
+    "x": 396.0,
+    "y": 637.5,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 8
+  },
+  {
+    "id": "n22",
+    "title": "Menger sponge",
+    "slug": "menger-sponge",
+    "type": "concept",
+    "primaryCluster": "dimension + geometry",
+    "memberships": [
+      "dimension + geometry"
+    ],
+    "tags": [
+      "dimension + geometry"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Menger_sponge",
+    "capsules": [
+      "sources/Menger sponge - Wikipedia_20260930-055855Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Menger_sponge",
+    "seedDegree": 6,
+    "x": 360.0,
+    "y": 815.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 7
+  },
+  {
+    "id": "n23",
+    "title": "Misiurewicz point",
+    "slug": "misiurewicz-point",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Misiurewicz_point",
+    "capsules": [
+      "sources/Misiurewicz point - Wikipedia_20260930-061053Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Misiurewicz_point",
+    "seedDegree": 12,
+    "x": 148.0,
+    "y": 282.5,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 13
+  },
+  {
+    "id": "n24",
+    "title": "Multibrot set",
+    "slug": "multibrot-set",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Multibrot_set",
+    "capsules": [
+      "sources/Multibrot set - Wikipedia_20260930-055554Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Multibrot_set",
+    "seedDegree": 13,
+    "x": 112.0,
+    "y": 223.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 16
+  },
+  {
+    "id": "n25",
+    "title": "Newton fractal",
+    "slug": "newton-fractal",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Newton_fractal",
+    "capsules": [
+      "sources/Newton fractal - Wikipedia_20260930-055850Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Newton_fractal",
+    "seedDegree": 7,
+    "x": 148.0,
+    "y": 400.8,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 9
+  },
+  {
+    "id": "n26",
+    "title": "Newton's method",
+    "slug": "newton-s-method",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Newton's_method",
+    "capsules": [
+      "sources/Newton's method - Wikipedia_20260930-060238Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Newton's_method",
+    "seedDegree": 2,
+    "x": 892.0,
+    "y": 460.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "n27",
+    "title": "Orbit portrait",
+    "slug": "orbit-portrait",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Orbit_portrait",
+    "capsules": [
+      "sources/Orbit portrait - Wikipedia_20260930-055845Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Orbit_portrait",
+    "seedDegree": 2,
+    "x": 148.0,
+    "y": 755.8,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "n28",
+    "title": "Orbit trap",
+    "slug": "orbit-trap",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Orbit_trap",
+    "capsules": [
+      "sources/Orbit trap - Wikipedia_20260930-055840Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Orbit_trap",
+    "seedDegree": 7,
+    "x": 112.0,
+    "y": 460.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 9
+  },
+  {
+    "id": "n29",
+    "title": "Perles configuration",
+    "slug": "perles-configuration",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Perles_configuration",
+    "capsules": [
+      "sources/Perles configuration - Wikipedia_20260930-060858Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Perles_configuration",
+    "seedDegree": 1,
+    "x": 892.0,
+    "y": 696.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "n30",
+    "title": "Pickover stalk",
+    "slug": "pickover-stalk",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Pickover_stalk",
+    "capsules": [
+      "sources/Pickover stalk - Wikipedia_20260930-055828Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Pickover_stalk",
+    "seedDegree": 7,
+    "x": 148.0,
+    "y": 519.2,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 9
+  },
+  {
+    "id": "n31",
+    "title": "Plotting algorithms for the Mandelbrot set",
+    "slug": "plotting-algorithms-for-the-mandelbrot-set",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set",
+    "capsules": [
+      "sources/Plotting algorithms for the Mandelbrot set - Wikipedia_20260930-055710Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set",
+    "seedDegree": 6,
+    "x": 112.0,
+    "y": 578.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 7
+  },
+  {
+    "id": "n32",
+    "title": "Quantum finite automaton",
+    "slug": "quantum-finite-automaton",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Quantum_finite_automaton",
+    "capsules": [
+      "sources/Quantum finite automaton - Wikipedia_20260930-061023Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Quantum_finite_automaton",
+    "seedDegree": 1,
+    "x": 1140.0,
+    "y": 815.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "n33",
+    "title": "Stern–Brocot tree",
+    "slug": "stern-brocot-tree",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree",
+    "capsules": [
+      "sources/Stern–Brocot tree - Wikipedia_20260930-060245Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Stern–Brocot_tree",
+    "seedDegree": 2,
+    "x": 856.0,
+    "y": 578.3,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n34",
+    "title": "symbolic computation - Truth tables in python using sympy",
+    "slug": "symbolic-computation-truth-tables-in-python-using-sympy",
+    "type": "concept",
+    "primaryCluster": "algorithms + discrete math",
+    "memberships": [
+      "algorithms + discrete math"
+    ],
+    "tags": [
+      "algorithms + discrete math"
+    ],
+    "source": "https://stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy",
+    "capsules": [
+      "sources/symbolic computation - Truth tables in python using sympy - Stack Overflow_20260930-054858Z_capsule.html"
+    ],
+    "sourceKey": "stackoverflow.com/questions/12462747/truth-tables-in-python-using-sympy",
+    "seedDegree": 1,
+    "x": 856.0,
+    "y": 815.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "n35",
+    "title": "Transdichotomous model",
+    "slug": "transdichotomous-model",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Transdichotomous_model",
+    "capsules": [
+      "sources/Transdichotomous model - Wikipedia_20260930-060851Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Transdichotomous_model",
+    "seedDegree": 2,
+    "x": 1104.0,
+    "y": 510.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n36",
+    "title": "Tricorn (mathematics)",
+    "slug": "tricorn-mathematics",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Tricorn_(mathematics)",
+    "capsules": [
+      "sources/Tricorn (mathematics) - Wikipedia_20260930-060151Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Tricorn_(mathematics",
+    "seedDegree": 3,
+    "x": 112.0,
+    "y": 696.7,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 4
+  },
+  {
+    "id": "n37",
+    "title": "Turing machine",
+    "slug": "turing-machine",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Turing_machine",
+    "capsules": [
+      "sources/Turing machine - Wikipedia_20260930-060816Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Turing_machine",
+    "seedDegree": 2,
+    "x": 1140.0,
+    "y": 612.1,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n38",
+    "title": "Weierstrass–Mandelbrot function",
+    "slug": "weierstrass-mandelbrot-function",
+    "type": "concept",
+    "primaryCluster": "complex dynamics",
+    "memberships": [
+      "complex dynamics"
+    ],
+    "tags": [
+      "complex dynamics"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Weierstrass%E2%80%93Mandelbrot_function",
+    "capsules": [
+      "sources/Weierstrass–Mandelbrot function - Wikipedia_20260930-055823Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Weierstrass–Mandelbrot_function",
+    "seedDegree": 1,
+    "x": 112.0,
+    "y": 815.0,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "n39",
+    "title": "Word RAM",
+    "slug": "word-ram",
+    "type": "concept",
+    "primaryCluster": "machine models",
+    "memberships": [
+      "machine models"
+    ],
+    "tags": [
+      "machine models"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Word_RAM",
+    "capsules": [
+      "sources/Word RAM - Wikipedia_20260930-060828Z_capsule.html"
+    ],
+    "sourceKey": "en.wikipedia.org/wiki/Word_RAM",
+    "seedDegree": 3,
+    "x": 1140.0,
+    "y": 206.4,
+    "semanticLevel": 2,
+    "provenance": {
+      "kind": "seed-graph",
+      "origin": "graph-data.json",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "or-root",
+    "title": "OPENRNDR",
+    "slug": "openrndr",
+    "type": "framework",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr",
+      "creative coding"
+    ],
+    "tags": [
+      "creative coding",
+      "kotlin",
+      "rendering",
+      "framework"
+    ],
+    "source": "https://openrndr.org/",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "description": "Creative coding framework represented here through the supplied semantic knowledge tree.",
+    "x": 1480,
+    "y": 345,
+    "semanticLevel": 0,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 20
+  },
+  {
+    "id": "or-start",
+    "title": "Getting Started",
+    "slug": "openrndr-start",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "setup",
+      "firstprogram",
+      "basics",
+      "program",
+      "application",
+      "template"
+    ],
+    "description": "Setup, first program, templates and the canonical learning path.",
+    "resources": [
+      [
+        "Guide · Requirements",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C10_Requirements.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C10_Requirements.kt"
+      ],
+      [
+        "Guide · First program",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/blob/main/src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt",
+        "openrndr-guide",
+        "src/main/kotlin/docs/C20_SetUpYourFirstProgram.kt"
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-examples",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1480.0,
+    "y": 15.0,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-runtime",
+    "title": "Application & Runtime",
+    "slug": "openrndr-runtime",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "application",
+      "event",
+      "window",
+      "platform",
+      "program",
+      "runtime"
+    ],
+    "description": "Program lifecycle, events, windows, platform services and application infrastructure.",
+    "resources": [
+      [
+        "openrndr-application",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-application",
+        "openrndr",
+        "openrndr-application"
+      ],
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "openrndr-platform",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-platform",
+        "openrndr",
+        "openrndr-platform"
+      ],
+      [
+        "openrndr-utils",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-utils",
+        "openrndr",
+        "openrndr-utils"
+      ],
+      [
+        "Guide · Program basics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/20_Program_basics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/20_Program_basics"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1587.15,
+    "y": 32.88,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-drawing",
+    "title": "Drawing & Rendering",
+    "slug": "openrndr-drawing",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "draw",
+      "drawer",
+      "render",
+      "filter",
+      "compositor",
+      "fx",
+      "imagefit",
+      "colorbuffer"
+    ],
+    "description": "Drawer, render targets, filters, compositing, effects and image presentation.",
+    "resources": [
+      [
+        "openrndr-draw",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-draw",
+        "openrndr",
+        "openrndr-draw"
+      ],
+      [
+        "openrndr-filter",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-filter",
+        "openrndr",
+        "openrndr-filter"
+      ],
+      [
+        "orx-fx",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fx",
+        "orx",
+        "orx-fx"
+      ],
+      [
+        "orx-compositor",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-compositor",
+        "orx",
+        "orx-compositor"
+      ],
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-no-clear",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-no-clear",
+        "orx",
+        "orx-no-clear"
+      ],
+      [
+        "Guide · Drawing",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/30_Drawing",
+        "openrndr-guide",
+        "src/main/kotlin/docs/30_Drawing"
+      ],
+      [
+        "Examples · Drawing",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/30_Drawing",
+        "openrndr-examples",
+        "src/main/kotlin/examples/30_Drawing"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1682.69,
+    "y": 84.58,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "or-geometry",
+    "title": "Shapes & Geometry",
+    "slug": "openrndr-geometry",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "shape",
+      "contour",
+      "segment",
+      "path",
+      "geometry",
+      "triang",
+      "tessell",
+      "composition",
+      "marching"
+    ],
+    "description": "Contours, paths, tessellation, triangulation, compositions and constructive geometry.",
+    "resources": [
+      [
+        "openrndr-shape",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-shape",
+        "openrndr",
+        "openrndr-shape"
+      ],
+      [
+        "openrndr-kartifex",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-kartifex",
+        "openrndr",
+        "openrndr-kartifex"
+      ],
+      [
+        "openrndr-ktessellation",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-ktessellation",
+        "openrndr",
+        "openrndr-ktessellation"
+      ],
+      [
+        "orx-shapes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shapes",
+        "orx",
+        "orx-shapes"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ],
+      [
+        "orx-triangulation",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-triangulation",
+        "orx",
+        "orx-triangulation"
+      ],
+      [
+        "orx-marching-squares",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-marching-squares",
+        "orx",
+        "orx-marching-squares"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1756.26,
+    "y": 164.51,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "or-math",
+    "title": "Math & Spatial Structures",
+    "slug": "openrndr-math",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "math",
+      "vector",
+      "matrix",
+      "kdtree",
+      "quadtree",
+      "hashgrid",
+      "bvh",
+      "gradient",
+      "force"
+    ],
+    "description": "Vectors, matrices, spatial indexes, fields, optimization and simulation helpers.",
+    "resources": [
+      [
+        "openrndr-math",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-math",
+        "openrndr",
+        "openrndr-math"
+      ],
+      [
+        "orx-math",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-math",
+        "orx",
+        "orx-math"
+      ],
+      [
+        "orx-kdtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-kdtree",
+        "orx",
+        "orx-kdtree"
+      ],
+      [
+        "orx-quadtree",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-quadtree",
+        "orx",
+        "orx-quadtree"
+      ],
+      [
+        "orx-hash-grid",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-hash-grid",
+        "orx",
+        "orx-hash-grid"
+      ],
+      [
+        "orx-bvh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-bvh",
+        "orx",
+        "orx-bvh"
+      ],
+      [
+        "orx-gradient-descent",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-gradient-descent",
+        "orx",
+        "orx-gradient-descent"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1799.9,
+    "y": 263.99,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-color",
+    "title": "Color & Palettes",
+    "slug": "openrndr-color",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "color",
+      "palette",
+      "rgb",
+      "hsl",
+      "hsv",
+      "lab"
+    ],
+    "description": "Core color types, transformations, palettes and color-oriented extensions.",
+    "resources": [
+      [
+        "openrndr-color",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-color",
+        "openrndr",
+        "openrndr-color"
+      ],
+      [
+        "orx-color",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-color",
+        "orx",
+        "orx-color"
+      ],
+      [
+        "orx-palette",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-palette",
+        "orx",
+        "orx-palette"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1808.87,
+    "y": 372.25,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 2
+  },
+  {
+    "id": "or-animation",
+    "title": "Animation & Time",
+    "slug": "openrndr-animation",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "animat",
+      "easing",
+      "envelope",
+      "fcurve",
+      "time",
+      "timer",
+      "temporal",
+      "keyframe"
+    ],
+    "description": "Animatables, easing, envelopes, curves, clocks and temporal effects.",
+    "resources": [
+      [
+        "openrndr-animatable",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-animatable",
+        "openrndr",
+        "openrndr-animatable"
+      ],
+      [
+        "orx-easing",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-easing",
+        "orx",
+        "orx-easing"
+      ],
+      [
+        "orx-envelopes",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-envelopes",
+        "orx",
+        "orx-envelopes"
+      ],
+      [
+        "orx-fcurve",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fcurve",
+        "orx",
+        "orx-fcurve"
+      ],
+      [
+        "orx-time-operators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-time-operators",
+        "orx",
+        "orx-time-operators"
+      ],
+      [
+        "orx-timer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-timer",
+        "orx",
+        "orx-timer"
+      ],
+      [
+        "orx-temporal-blur",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-temporal-blur",
+        "orx",
+        "orx-temporal-blur"
+      ],
+      [
+        "Guide · Animation",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/50_Animation",
+        "openrndr-guide",
+        "src/main/kotlin/docs/50_Animation"
+      ],
+      [
+        "Examples · Animation",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/50_Animation",
+        "openrndr-examples",
+        "src/main/kotlin/examples/50_Animation"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1782.21,
+    "y": 477.56,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 4
+  },
+  {
+    "id": "or-shaders",
+    "title": "Shaders & GPU",
+    "slug": "openrndr-shaders",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "shader",
+      "shade",
+      "glsl",
+      "gpu",
+      "uniform",
+      "vertex",
+      "fragment",
+      "orsl"
+    ],
+    "description": "Shade styles, shader composition, shader phrases and the ORSL shader-language project.",
+    "resources": [
+      [
+        "openrndr-gl-common",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-gl-common",
+        "openrndr",
+        "openrndr-gl-common"
+      ],
+      [
+        "orx-shade-styles",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shade-styles",
+        "orx",
+        "orx-shade-styles"
+      ],
+      [
+        "orx-shader-phrases",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-shader-phrases",
+        "orx",
+        "orx-shader-phrases"
+      ],
+      [
+        "orsl",
+        "repo",
+        "https://github.com/openrndr/orsl",
+        "orsl",
+        ""
+      ],
+      [
+        "Guide · Advanced topics",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/90_Advanced_Topics",
+        "openrndr-guide",
+        "src/main/kotlin/docs/90_Advanced_Topics"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1722.79,
+    "y": 568.5,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 5
+  },
+  {
+    "id": "or-camera3d",
+    "title": "Camera, Mesh & 3D",
+    "slug": "openrndr-camera3d",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "camera",
+      "mesh",
+      "obj",
+      "depth",
+      "3d",
+      "projection",
+      "perspective"
+    ],
+    "description": "Cameras, depth cameras, meshes, loaders, generators and mesh deformation/noise.",
+    "resources": [
+      [
+        "orx-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-camera",
+        "orx",
+        "orx-camera"
+      ],
+      [
+        "orx-depth-camera",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-depth-camera",
+        "orx",
+        "orx-depth-camera"
+      ],
+      [
+        "orx-mesh",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh",
+        "orx",
+        "orx-mesh"
+      ],
+      [
+        "orx-mesh-generators",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-generators",
+        "orx",
+        "orx-mesh-generators"
+      ],
+      [
+        "orx-mesh-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-mesh-noise",
+        "orx",
+        "orx-mesh-noise"
+      ],
+      [
+        "orx-obj-loader",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-obj-loader",
+        "orx",
+        "orx-obj-loader"
+      ],
+      [
+        "software-cameras",
+        "workshop",
+        "https://github.com/openrndr/software-cameras",
+        "software-cameras",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1637.06,
+    "y": 635.23,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 3
+  },
+  {
+    "id": "or-imagecv",
+    "title": "Images & Computer Vision",
+    "slug": "openrndr-imagecv",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "image",
+      "integral",
+      "jumpflood",
+      "distance",
+      "boof",
+      "vision",
+      "pixel"
+    ],
+    "description": "Image fitting, integral images, distance fields and computer-vision integrations.",
+    "resources": [
+      [
+        "orx-image-fit",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-image-fit",
+        "orx",
+        "orx-image-fit"
+      ],
+      [
+        "orx-integral-image",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-integral-image",
+        "orx",
+        "orx-integral-image"
+      ],
+      [
+        "orx-jumpflood",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-jumpflood",
+        "orx",
+        "orx-jumpflood"
+      ],
+      [
+        "openrndr-x-boofcv",
+        "integration",
+        "https://github.com/openrndr/openrndr-x-boofcv",
+        "openrndr-x-boofcv",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1534.32,
+    "y": 670.5,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-signals",
+    "title": "Audio & Signals",
+    "slug": "openrndr-signals",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "fft",
+      "audio",
+      "sound",
+      "frequency",
+      "signal",
+      "spectrum"
+    ],
+    "description": "FFT and workshop material for sound-reactive or signal-driven creative coding.",
+    "resources": [
+      [
+        "orx-fft",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-fft",
+        "orx",
+        "orx-fft"
+      ],
+      [
+        "workshop-greyspace",
+        "workshop",
+        "https://github.com/openrndr/workshop-greyspace",
+        "workshop-greyspace",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1425.68,
+    "y": 670.5,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-textsvg",
+    "title": "Text, SVG & Typography",
+    "slug": "openrndr-textsvg",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "text",
+      "writer",
+      "font",
+      "svg",
+      "typography",
+      "contour"
+    ],
+    "description": "Text layout, text along contours, SVG and vector composition workflows.",
+    "resources": [
+      [
+        "orx-text-writer",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-writer",
+        "orx",
+        "orx-text-writer"
+      ],
+      [
+        "orx-text-on-contour",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-text-on-contour",
+        "orx",
+        "orx-text-on-contour"
+      ],
+      [
+        "orx-svg",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-svg",
+        "orx",
+        "orx-svg"
+      ],
+      [
+        "orx-composition",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-composition",
+        "orx",
+        "orx-composition"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1322.94,
+    "y": 635.23,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-interaction",
+    "title": "Interaction, Parameters & Live Control",
+    "slug": "openrndr-interaction",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "mouse",
+      "keyboard",
+      "interaction",
+      "parameter",
+      "property",
+      "watcher",
+      "event"
+    ],
+    "description": "Input/events, parameters, property watching and interactive extension patterns.",
+    "resources": [
+      [
+        "openrndr-event",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-event",
+        "openrndr",
+        "openrndr-event"
+      ],
+      [
+        "orx-parameters",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-parameters",
+        "orx",
+        "orx-parameters"
+      ],
+      [
+        "orx-property-watchers",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-property-watchers",
+        "orx",
+        "orx-property-watchers"
+      ],
+      [
+        "Guide · Interaction",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/40_Interaction",
+        "openrndr-guide",
+        "src/main/kotlin/docs/40_Interaction"
+      ],
+      [
+        "Examples · Interaction",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/40_Interaction",
+        "openrndr-examples",
+        "src/main/kotlin/examples/40_Interaction"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1237.21,
+    "y": 568.5,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-procedural",
+    "title": "Procedural & Generative Systems",
+    "slug": "openrndr-procedural",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "noise",
+      "turtle",
+      "generative",
+      "random",
+      "force",
+      "field",
+      "procedural"
+    ],
+    "description": "Noise, turtle systems, force fields and building blocks for generative graphics.",
+    "resources": [
+      [
+        "orx-noise",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-noise",
+        "orx",
+        "orx-noise"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "orx-force-2d",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-force-2d",
+        "orx",
+        "orx-force-2d"
+      ],
+      [
+        "workshop-generative-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-posters",
+        "workshop-generative-posters",
+        ""
+      ],
+      [
+        "workshop-generative-identities",
+        "workshop",
+        "https://github.com/openrndr/workshop-generative-identities",
+        "workshop-generative-identities",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1177.79,
+    "y": 477.56,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-fabrication",
+    "title": "Plotters & Fabrication",
+    "slug": "openrndr-fabrication",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "g-code",
+      "gcode",
+      "plotter",
+      "turtle",
+      "poster",
+      "print"
+    ],
+    "description": "G-code, turtle/path generation and data-driven poster / physical-output workflows.",
+    "resources": [
+      [
+        "orx-g-code",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-g-code",
+        "orx",
+        "orx-g-code"
+      ],
+      [
+        "orx-turtle",
+        "orx",
+        "https://github.com/openrndr/orx/tree/master/orx-turtle",
+        "orx",
+        "orx-turtle"
+      ],
+      [
+        "workshop-data-posters",
+        "workshop",
+        "https://github.com/openrndr/workshop-data-posters",
+        "workshop-data-posters",
+        ""
+      ],
+      [
+        "workshop-torino",
+        "workshop",
+        "https://github.com/openrndr/workshop-torino",
+        "workshop-torino",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1151.13,
+    "y": 372.25,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-web",
+    "title": "Web & Kotlin/JS",
+    "slug": "openrndr-web",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "javascript",
+      "kotlinjs",
+      "web",
+      "browser",
+      "js"
+    ],
+    "description": "OPENRNDR on JavaScript/web targets, web demos, templates and the project website.",
+    "resources": [
+      [
+        "openrndr-js",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-js",
+        "openrndr",
+        "openrndr-js"
+      ],
+      [
+        "openrndr-web-demo",
+        "core",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-web-demo",
+        "openrndr",
+        "openrndr-web-demo"
+      ],
+      [
+        "openrndr-js-template",
+        "template",
+        "https://github.com/openrndr/openrndr-js-template",
+        "openrndr-js-template",
+        ""
+      ],
+      [
+        "openrndr-website",
+        "website",
+        "https://github.com/openrndr/openrndr-website",
+        "openrndr-website",
+        ""
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1160.1,
+    "y": 263.99,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-learning",
+    "title": "Guide, Examples & Use Cases",
+    "slug": "openrndr-learning",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "docs",
+      "guide",
+      "example",
+      "tutorial",
+      "usecase",
+      "advanced"
+    ],
+    "description": "The learning corpus: guide, canonical examples, ORX chapter, advanced topics and use cases.",
+    "resources": [
+      [
+        "Guide source",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide",
+        "openrndr-guide",
+        "src/main/kotlin/docs"
+      ],
+      [
+        "Examples source",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples",
+        "openrndr-examples",
+        "src/main/kotlin/examples"
+      ],
+      [
+        "Guide · ORX",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/80_ORX",
+        "openrndr-guide",
+        "src/main/kotlin/docs/80_ORX"
+      ],
+      [
+        "Examples · ORX",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/80_ORX",
+        "openrndr-examples",
+        "src/main/kotlin/examples/80_ORX"
+      ],
+      [
+        "Guide · Use cases",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/95_Use_cases",
+        "openrndr-guide",
+        "src/main/kotlin/docs/95_Use_cases"
+      ],
+      [
+        "Examples · Use cases",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/95_Use_cases",
+        "openrndr-examples",
+        "src/main/kotlin/examples/95_Use_cases"
+      ],
+      [
+        "Guide · Best practices",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/98_Best_practices",
+        "openrndr-guide",
+        "src/main/kotlin/docs/98_Best_practices"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1203.74,
+    "y": 164.51,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-extensions",
+    "title": "Extensions & ORX",
+    "slug": "openrndr-extensions",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "extension",
+      "orx",
+      "module"
+    ],
+    "description": "How OPENRNDR extensions fit together, including the large ORX module collection.",
+    "resources": [
+      [
+        "Guide · Extensions",
+        "guide",
+        "https://github.com/openrndr/openrndr-guide/tree/main/src/main/kotlin/docs/45_Extensions",
+        "openrndr-guide",
+        "src/main/kotlin/docs/45_Extensions"
+      ],
+      [
+        "Examples · Extensions",
+        "examples",
+        "https://github.com/openrndr/openrndr-examples/tree/master/src/main/kotlin/examples/45_Extensions",
+        "openrndr-examples",
+        "src/main/kotlin/examples/45_Extensions"
+      ],
+      [
+        "ORX repository",
+        "orx",
+        "https://github.com/openrndr/orx",
+        "orx",
+        ""
+      ],
+      [
+        "ORX demos",
+        "examples",
+        "https://github.com/openrndr/orx/tree/master/openrndr-demos",
+        "orx",
+        "openrndr-demos"
+      ],
+      [
+        "ORX module catalog",
+        "catalog",
+        "https://github.com/openrndr/orx/tree/master/orx-module-catalog",
+        "orx",
+        "orx-module-catalog"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1277.31,
+    "y": 84.58,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "or-devtools",
+    "title": "Developer Tooling",
+    "slug": "openrndr-devtools",
+    "type": "implementation-domain",
+    "primaryCluster": "openrndr",
+    "memberships": [
+      "openrndr"
+    ],
+    "tags": [
+      "openrndr",
+      "gradle",
+      "intellij",
+      "build",
+      "modulecatalog",
+      "setup",
+      "tool"
+    ],
+    "description": "IDE support, templates, build helpers, module catalogs and CI graphics setup.",
+    "resources": [
+      [
+        "openrndr-intellij",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij",
+        "openrndr-intellij",
+        ""
+      ],
+      [
+        "openrndr-intellij-settings",
+        "tooling",
+        "https://github.com/openrndr/openrndr-intellij-settings",
+        "openrndr-intellij-settings",
+        ""
+      ],
+      [
+        "openrndr-template",
+        "template",
+        "https://github.com/openrndr/openrndr-template",
+        "openrndr-template",
+        ""
+      ],
+      [
+        "openrndr-dev-template",
+        "template",
+        "https://github.com/openrndr/openrndr-dev-template",
+        "openrndr-dev-template",
+        ""
+      ],
+      [
+        "setup-opengl",
+        "tooling",
+        "https://github.com/openrndr/setup-opengl",
+        "setup-opengl",
+        ""
+      ],
+      [
+        "core module catalog",
+        "catalog",
+        "https://github.com/openrndr/openrndr/tree/master/openrndr-module-catalog",
+        "openrndr",
+        "openrndr-module-catalog"
+      ]
+    ],
+    "source": "https://github.com/openrndr",
+    "capsules": [
+      "original/openrndr-semantic-knowledge-tree.html"
+    ],
+    "x": 1372.85,
+    "y": 32.88,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "openrndr-tree",
+      "origin": "openrndr-semantic-knowledge-tree.html",
+      "status": "source-derived"
+    },
+    "degree": 1
+  },
+  {
+    "id": "hub-complex-dynamics",
+    "title": "Complex dynamics",
+    "slug": "complex-dynamics",
+    "type": "domain",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "dynamical systems",
+      "complex dynamics"
+    ],
+    "description": "Complex-dynamics cluster hub generated from the seed graph cluster label.",
+    "x": 720,
+    "y": 200,
+    "semanticLevel": 0,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 13
+  },
+  {
+    "id": "hub-chaos",
+    "title": "Chaos",
+    "slug": "chaos",
+    "type": "domain",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "chaos",
+      "dynamical systems"
+    ],
+    "description": "A bridge concept for chaos-oriented navigation. Connections are explicitly labeled by provenance.",
+    "x": 760,
+    "y": 720,
+    "semanticLevel": 0,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 2
+  },
+  {
+    "id": "hub-orbit-iteration",
+    "title": "Orbit iteration",
+    "slug": "orbit-iteration",
+    "type": "method",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "iteration",
+      "orbit",
+      "algorithm"
+    ],
+    "description": "Iterative orbit evolution used by escape-time and related fractal computations.",
+    "x": 850,
+    "y": 555,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 5
+  },
+  {
+    "id": "hub-fractal-rendering",
+    "title": "Fractal rendering",
+    "slug": "fractal-rendering",
+    "type": "implementation",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "rendering",
+      "visualization",
+      "fractal"
+    ],
+    "description": "Mapping iterative or orbit diagnostics into visible output.",
+    "x": 1030,
+    "y": 565,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 9
+  },
+  {
+    "id": "hub-iterative-map",
+    "title": "Iterative map",
+    "slug": "iterative-map",
+    "type": "method",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "iteration",
+      "dynamical systems"
+    ],
+    "description": "A reusable navigation bridge for repeatedly applying a state transition/map.",
+    "x": 900,
+    "y": 785,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 2
+  },
+  {
+    "id": "hub-visualization",
+    "title": "Visualization",
+    "slug": "visualization",
+    "type": "implementation",
+    "primaryCluster": "bridge concepts",
+    "memberships": [
+      "bridge concepts"
+    ],
+    "tags": [
+      "rendering",
+      "visualization"
+    ],
+    "description": "Rendering or plotting computational state so structure can be inspected.",
+    "x": 1110,
+    "y": 760,
+    "semanticLevel": 1,
+    "provenance": {
+      "kind": "bridge-node",
+      "origin": "builder-curated",
+      "status": "curated"
+    },
+    "degree": 4
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "or-root": [
+    "openrndr",
+    "creative coding framework"
+  ],
+  "or-shaders": [
+    "gpu shader",
+    "gpu",
+    "shader",
+    "shaders"
+  ],
+  "or-animation": [
+    "animation/time",
+    "time"
+  ],
+  "hub-complex-dynamics": [
+    "complex dynamics"
+  ],
+  "hub-orbit-iteration": [
+    "orbit iteration",
+    "iteration kernel",
+    "escape iteration"
+  ],
+  "hub-fractal-rendering": [
+    "fractal rendering",
+    "rendering"
+  ],
+  "hub-chaos": [
+    "chaos theory",
+    "chaos"
+  ],
+  "hub-iterative-map": [
+    "iterative map",
+    "iterated map"
+  ],
+  "hub-visualization": [
+    "visualization",
+    "visualisation"
+  ],
+  "n12": [
+    "julia"
+  ],
+  "n17": [
+    "lyapunov"
+  ],
+  "n20": [
+    "mandelbrot"
+  ]
+}
