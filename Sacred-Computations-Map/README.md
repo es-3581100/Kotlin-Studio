@@ -4,6 +4,11 @@ A provenance-first symbolic relationship atlas built from the supplied Golden Ma
 
 The project treats **SymPy as a bridge**, not as the subject: source mathematics is preserved as the conceptual layer, then selected equations/recurrences are translated into exact symbolic objects, matrix forms, numerical kernels, and generated Python/C/JavaScript/Rust expressions.
 
+
+## 3D computation matrix
+
+The Matrix tab renders the concept cross-index as a rotatable 3D lattice. X is the computation capability axis, Y is concept position, and Z separates mathematical clusters. It supports direct X/Y/Z rotation, drag rotation, zoom, cluster lenses, focus/picking, optional auto-rotation, and a full-screen visualization mode. The exact 2D table remains underneath as the readable/auditable representation of the same matrix data.
+
 ## What is inside
 
 - **53 concepts / 85 relations** with relation provenance labels.

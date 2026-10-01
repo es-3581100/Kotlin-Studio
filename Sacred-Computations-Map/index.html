@@ -1,10 +1,117 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sacred Computations</title><link rel="stylesheet" href="web/styles.css"></head><body>
-<header><div><div class="eyebrow">SYMBOLIC RELATIONSHIP ATLAS</div><h1>Sacred Computations</h1><p>Recurrences, ratios, matrices, geometry, dynamics → exact symbolic form → modern executable code.</p></div><div id="meta" class="meta"></div></header>
-<nav id="tabs"><button data-tab="map" class="active">Atlas</button><button data-tab="bridges">SymPy Bridge</button><button data-tab="matrix">Matrix</button><button data-tab="routes">Routes</button><button data-tab="sources">Sources</button></nav>
-<main>
-<section id="map" class="tab active"><aside class="left"><input id="search" placeholder="Search ratios, sequences, formulas, code…"><div id="clusterFilters"></div><div id="searchResults"></div></aside><div class="canvasWrap"><canvas id="graph"></canvas><div class="legend"><span class="sourceBacked">source-backed</span><span class="derived">derived</span><span class="implementation">implementation</span><span class="curated">curated</span></div></div><aside id="inspector" class="right"></aside></section>
-<section id="bridges" class="tab"><div class="bridgeLayout"><aside class="bridgeList"><h2>Executable bridges</h2><div id="bridgeList"></div></aside><article id="bridgeDetail" class="bridgeDetail"></article></div></section>
-<section id="matrix" class="tab"><div class="panel"><h2>Concept × computation matrix</h2><p class="muted">This cross-index shows which mathematical objects have formulas, source support, live SymPy bridge data, matrix structure, and code-emission lanes.</p><div id="matrixTable"></div></div></section>
-<section id="routes" class="tab"><div class="panel"><h2>Connection routes</h2><div id="routeCards"></div><h3>Find a route</h3><div class="routeForm"><select id="routeFrom"></select><span>→</span><select id="routeTo"></select><button id="routeGo">Connect</button></div><div id="routeResult"></div></div></section>
-<section id="sources" class="tab"><div class="panel"><div class="sourceHead"><div><h2>Source corpus</h2><p class="muted">Every copied capsule stays local and hash-addressed. The symbolic/code relations are explicitly labeled so implementation bridges are not mistaken for historical or mathematical claims.</p></div><input id="sourceSearch" placeholder="Filter source capsules…"></div><div id="sourceStats"></div><div id="sourceList"></div></div></section>
-</main><script type="module" src="web/app.js"></script></body></html>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#02080a">
+  <title>Sacred Computations</title>
+  <link rel="stylesheet" href="web/styles.css">
+</head>
+<body>
+<div class="hudShell">
+  <header class="hudHeader">
+    <div class="brandBlock">
+      <div class="eyebrow">SYMBOLIC RELATIONSHIP ATLAS // COMPUTATION HUD</div>
+      <h1>Sacred Computations</h1>
+      <p>Recurrences, ratios, matrices, geometry, dynamics → exact symbolic form → modern executable code.</p>
+    </div>
+    <div class="headerReadout">
+      <div class="statusLine"><span class="statusDot"></span>LOCAL CORPUS ONLINE</div>
+      <div id="meta" class="meta"></div>
+    </div>
+  </header>
+
+  <nav id="tabs" class="hudTabs" aria-label="Primary views">
+    <button data-tab="map" class="active"><span>01</span> Atlas</button>
+    <button data-tab="bridges"><span>02</span> SymPy Bridge</button>
+    <button data-tab="matrix"><span>03</span> Matrix</button>
+    <button data-tab="routes"><span>04</span> Routes</button>
+    <button data-tab="sources"><span>05</span> Sources</button>
+  </nav>
+
+  <main>
+    <section id="map" class="tab active">
+      <aside class="left hudPanel">
+        <div class="panelLabel">NAV / SEARCH</div>
+        <input id="search" placeholder="Search ratios, sequences, formulas, code…">
+        <div id="clusterFilters"></div>
+        <div id="searchResults"></div>
+      </aside>
+      <div class="canvasWrap hudFrame">
+        <canvas id="graph"></canvas>
+        <div class="corner cornerTL"></div><div class="corner cornerTR"></div><div class="corner cornerBL"></div><div class="corner cornerBR"></div>
+        <div class="legend"><span class="sourceBacked">source-backed</span><span class="derived">derived</span><span class="implementation">implementation</span><span class="curated">curated</span></div>
+      </div>
+      <aside id="inspector" class="right hudPanel"></aside>
+    </section>
+
+    <section id="bridges" class="tab">
+      <div class="bridgeLayout">
+        <aside class="bridgeList hudPanel"><div class="panelLabel">SYMBOLIC BRIDGES</div><h2>Executable bridges</h2><div id="bridgeList"></div></aside>
+        <article id="bridgeDetail" class="bridgeDetail"></article>
+      </div>
+    </section>
+
+    <section id="matrix" class="tab">
+      <div class="matrixPage">
+        <div class="matrixIntro">
+          <div>
+            <div class="eyebrow">CONCEPT × COMPUTATION // 3D LATTICE</div>
+            <h2>Computational Matrix</h2>
+            <p class="muted">X = computation capability · Y = concepts · Z = mathematical cluster. Drag to rotate X/Y, Shift-drag to rotate Z, and scroll to zoom.</p>
+          </div>
+          <div class="matrixStatusRail">
+            <span><b id="matrixCellCount">0</b> ACTIVE CELLS</span>
+            <span><b id="matrixAngleReadout">0 / 0 / 0</b> XYZ°</span>
+            <span><b id="matrixZoomReadout">1.00×</b> ZOOM</span>
+          </div>
+        </div>
+
+        <div id="matrixStage" class="matrixStage hudFrame">
+          <div class="corner cornerTL"></div><div class="corner cornerTR"></div><div class="corner cornerBL"></div><div class="corner cornerBR"></div>
+          <div class="matrixStageTopbar">
+            <div class="matrixTelemetry"><span class="statusDot"></span><span>3D MATRIX RENDER // LIVE</span></div>
+            <div class="matrixActions">
+              <button id="matrixReset" class="hudButton" type="button">Reset view</button>
+              <button id="matrixAutoSpin" class="hudButton" type="button" aria-pressed="false">Auto rotate</button>
+              <button id="matrixFullscreen" class="hudButton primary" type="button">⛶ Full screen</button>
+            </div>
+          </div>
+          <canvas id="matrixCanvas" tabindex="0" aria-label="Rotatable 3D concept computation matrix"></canvas>
+          <div class="matrixAxisLegend" aria-hidden="true"><span class="axisX">X / CAPABILITIES</span><span class="axisY">Y / CONCEPTS</span><span class="axisZ">Z / CLUSTERS</span></div>
+          <div class="matrixHint">DRAG: X/Y · SHIFT+DRAG: Z · WHEEL: ZOOM · ARROWS/Q/E: ROTATE</div>
+        </div>
+
+        <div class="matrixConsoleGrid">
+          <section class="hudPanel matrixControls">
+            <div class="panelLabel">ORIENTATION CONTROL</div>
+            <label>X ROTATION <output id="matrixXOut">-18°</output><input id="matrixX" type="range" min="-180" max="180" value="-18"></label>
+            <label>Y ROTATION <output id="matrixYOut">28°</output><input id="matrixY" type="range" min="-180" max="180" value="28"></label>
+            <label>Z ROTATION <output id="matrixZOut">-2°</output><input id="matrixZ" type="range" min="-180" max="180" value="-2"></label>
+            <label>DEPTH ZOOM <output id="matrixZoomOut">0.95×</output><input id="matrixZoom" type="range" min="55" max="220" value="95"></label>
+            <label>CLUSTER LENS<select id="matrixCluster"><option value="all">All clusters</option></select></label>
+          </section>
+          <section id="matrixDetail" class="hudPanel matrixDetail" aria-live="polite"></section>
+          <section class="hudPanel matrixSignal">
+            <div class="panelLabel">SIGNAL PROFILE</div>
+            <div id="matrixSignalBars"></div>
+          </section>
+        </div>
+
+        <div class="panel matrixTablePanel">
+          <div class="panelLabel">READABLE CROSS-INDEX</div>
+          <h3>Matrix table</h3>
+          <p class="muted">The table remains the exact readable fallback for the same data rendered above.</p>
+          <div id="matrixTable"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="routes" class="tab"><div class="panel"><div class="panelLabel">RELATION ROUTER</div><h2>Connection routes</h2><div id="routeCards"></div><h3>Find a route</h3><div class="routeForm"><select id="routeFrom"></select><span>→</span><select id="routeTo"></select><button id="routeGo">Connect</button></div><div id="routeResult"></div></div></section>
+
+    <section id="sources" class="tab"><div class="panel"><div class="sourceHead"><div><div class="panelLabel">PROVENANCE VAULT</div><h2>Source corpus</h2><p class="muted">Every copied capsule stays local and hash-addressed. Symbolic/code relations are explicitly labeled so implementation bridges are not mistaken for historical or mathematical claims.</p></div><input id="sourceSearch" placeholder="Filter source capsules…"></div><div id="sourceStats"></div><div id="sourceList"></div></div></section>
+  </main>
+</div>
+<script type="module" src="web/app.js"></script>
+</body>
+</html>

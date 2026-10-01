@@ -24,4 +24,15 @@ class SacredTests(unittest.TestCase):
   r=shortest_path('tribonacci','rauzy-fractal'); self.assertTrue(r); self.assertLessEqual(len(r),3)
  def test_local_source_files_exist(self):
   for s in sources(): self.assertTrue((ROOT/'public'/Path(unquote(s['localPath']))).exists(),s['filename'])
+
+ def test_matrix_hud_contract(self):
+  html=(ROOT/'index.html').read_text(encoding='utf-8')
+  js=(ROOT/'web'/'app.js').read_text(encoding='utf-8')
+  css=(ROOT/'web'/'styles.css').read_text(encoding='utf-8')
+  for token in ['matrixCanvas','matrixFullscreen','matrixX','matrixY','matrixZ','matrixCluster']:
+   self.assertIn(token,html)
+  for token in ['requestFullscreen','fullscreenchange','rotatePoint','mRx','mRy','mRz','projectPoint']:
+   self.assertIn(token,js)
+  self.assertIn('.matrixStage:fullscreen',css)
+  self.assertIn('X=capability, Y=concept, Z=cluster',js)
 if __name__=='__main__': unittest.main()
