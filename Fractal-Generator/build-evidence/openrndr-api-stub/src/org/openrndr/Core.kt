@@ -14,7 +14,7 @@ open class Program {
     fun <T: Extension> extend(extension: T): T = extension
     fun extend(block: Program.() -> Unit) { block.hashCode() }
 }
-class Configuration { var width=640; var height=480; var title=""; var resizable=false }
+class Configuration { var width=640; var height=480; var title=""; var windowResizable=false }
 class ApplicationBuilder {
     fun configure(block: Configuration.() -> Unit) { Configuration().block() }
     fun program(block: Program.() -> Unit) { Program().block() }

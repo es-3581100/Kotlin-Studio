@@ -5,7 +5,7 @@ a6fa9dbe922bccb5cc78e874063c949b417889a90a62f5a91658c61b055ebd1f  ./.gitignore
 7bbf3a9d2cc8423172a41aa6726f7d30fbba5a6c5b7a904dd0a17a93d6248d54  ./build-evidence/integration-stub.out
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./build-evidence/kotlinc-integration-stub.log
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./build-evidence/kotlinc-pure.log
-3f38785bb061a8455580a3671e73e36028d6b5cb05918bfccc112c06836329f1  ./build-evidence/openrndr-api-stub/src/org/openrndr/Core.kt
+2bbac9ecb07374d0637613eca21da9a51df9f8bb16b8dac50806a8b330774925  ./build-evidence/openrndr-api-stub/src/org/openrndr/Core.kt
 806c2a8eda6fe04e87a0904194da7d8ee326fa652301bd0153654023404d1035  ./build-evidence/openrndr-api-stub/src/org/openrndr/color/ColorRGBa.kt
 7ce5f408940f39be71c3f6e58e4a6ecf24bafa4681530e2c0ae66b7306987e00  ./build-evidence/openrndr-api-stub/src/org/openrndr/draw/Draw.kt
 aeafe848dfd9c86dafb660895aa310aae08998dacc6fd19c55134816a3c99e58  ./build-evidence/openrndr-api-stub/src/org/openrndr/extensions/Screenshots.kt
@@ -13,19 +13,19 @@ aeafe848dfd9c86dafb660895aa310aae08998dacc6fd19c55134816a3c99e58  ./build-eviden
 b5f3eda21cb81322779d87f02f1a458fdb62381a8119618d943a3d1e8699146f  ./build-evidence/project-static.out
 8ea406cd07d9bb19a7a67e45f53e0f3b5f039cdb3e689ebb23d22a2e9aff2c39  ./build-evidence/pure-smoke.out
 8efd00d82882a2396fbcaf53f7bde41e48e30e63399e03364183041d904c7146  ./build-evidence/shader-static.out
-b02cb675bc9173a999b624735127f5c5fb134c59f514b071a38e75927477bf62  ./build-evidence/verification.md
+223801935238eb7afb2a08c37ede742a802f9ba370e17823b0a4a975d898d204  ./build-evidence/verification.md
 f15b99e7101a716874420bee1f780714f7db2bbec678257473a8dbb18bc07759  ./build-evidence/verify_shader_contract.py
 d144c0ce483a86c3aff0f7ad80fee21c99bb8048a3becf78f937b75181b8ebd1  ./build.gradle.kts
 439d19b9c79a393abe8dc8bfd8be715394538ff3853ce417788064b44ccd5ccc  ./gradle.properties
 d0c8df0ea3821051769dcadc0727c896b6b03d926f1ee92dab02bb17fb44ad28  ./settings.gradle.kts
-95f6933b26a7f1dc304c1489a90f8e235130d87c6448cf9c8921dbea94878401  ./src/main/kotlin/Main.kt
+53cf80fda5a5a1dac31a1f780ef97e0704a56506bf387535d286224f7ca0743d  ./src/main/kotlin/Main.kt
 c3fe0ecee4f58e24c82193fc13a015b5dddc5a68ef43dcd0903a97d8e701886c  ./src/main/kotlin/animation/Animator.kt
 c98e0976e8220712a619454e4723397c63aada19b8d08ef274bde4dc6332d6aa  ./src/main/kotlin/camera/ComplexViewport.kt
 b59e52f9248b5c0c441b1d2c8fe58cec5f4c30d94f214ecad9ce7bbb56f04fd4  ./src/main/kotlin/color/Palette.kt
 85236ec4555c48769d5a409e8acadc51e8f275d3b3ed45b6ef9b102545a49d07  ./src/main/kotlin/experiment/DirectionalController.kt
 689425a2fcbd3b1588a2da2fd7e587734e67b447e6e8a4819f5fb0df10528abf  ./src/main/kotlin/fractal/ExplorerState.kt
 854288bfee4a0d8c202bfa96521b299922b682fe363a852ae1c6011af35e23ee  ./src/main/kotlin/fractal/Fractal.kt
-d4be4a5bfbb5a052323818ced8c17d9e5e89f188552e6bcc450045348788ba32  ./src/main/kotlin/input/Controls.kt
+f6c5d3a594028d7dd06d4300f895f8ea752ea9c641e9bea7251d59992816acae  ./src/main/kotlin/input/Controls.kt
 7fbe27c8b00925bd77b238468aa414fc6bb89beb0fed229fcffc9a5985b65320  ./src/main/kotlin/preset/MiniJson.kt
 3c9f901978b33929f76b8796029ec4529126a94fa22fa35a7e5dc79d0eaa5320  ./src/main/kotlin/preset/Preset.kt
 749df0b4947f3f0bbf2564ca0d006c078b46fe285b3303617e3b2c6ee214cbe7  ./src/main/kotlin/render/GpuFractalRenderer.kt
@@ -43,3 +43,5 @@ e8f4cadb6a9d70f24088ac19093725c07b388cc7cd4c7dc8c65e942b10a927b3  ./src/test/kot
 81fc3f5937034ad5672d0dafdefd20a2b64d6045997d400fa0ab05dea55ad2e7  ./src/test/kotlin/camera/ComplexViewportTest.kt
 1683f4905b3205421295741cb458a384f6de6801d1eb50ace62b110ff44d04e7  ./src/test/kotlin/preset/PresetCodecTest.kt
 62dfd51b28ca9287f62e5a5f5be3b101e7497a89e800bd6289df0d0f2041a573  ./verify-pure.sh
+1c32d4129110559776b3379a49dc9f8f2f2a88ee4bb70164b3f60b634568235c  ./build-evidence/integration-stub-fixed.out
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./build-evidence/kotlinc-integration-stub-fixed.log

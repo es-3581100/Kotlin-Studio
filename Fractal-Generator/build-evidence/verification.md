@@ -60,3 +60,12 @@ SHADER_STATIC_PASS
 ```
 
 Source/resource checksums are in `SHA256SUMS.txt`. Generated verification JARs are intentionally excluded from the source repository and ignored by `.gitignore`.
+
+## 2026-10-01 real Gradle compile feedback — fix1
+
+A real `gradle run` on OPENRNDR resolved dependencies and reached Kotlin compilation. It exposed two source/API mismatches that the earlier isolated stub did not catch:
+
+- `Configuration.resizable` was incorrect for this OPENRNDR API; production now uses `windowResizable = true`.
+- `Controls.install()` executes inside `with(program)`, where OPENRNDR's `Program.clock` shadowed the `PlaybackClock` constructor property. The constructor property is now named `playbackClock` and all control handlers use it explicitly.
+
+The API stub was corrected to use `windowResizable`, then every production Kotlin source was recompiled against the corrected stub successfully (`KOTLIN_INTEGRATION_STUB_PASS_FIX1`). This still does not replace the real OPENRNDR/driver runtime test; rerun `gradle run` on the graphics host to surface the next real boundary, if any.
