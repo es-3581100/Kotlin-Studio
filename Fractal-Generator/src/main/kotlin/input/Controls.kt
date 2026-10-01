@@ -13,7 +13,7 @@ import kotlin.math.exp
 class Controls(
     private val program: Program,
     private val state: ExplorerState,
-    private val clock: PlaybackClock,
+    private val playbackClock: PlaybackClock,
     private val onMessage: (String) -> Unit,
 ) {
     private var presetIndex = 0
@@ -28,7 +28,7 @@ class Controls(
         }
         keyboard.keyDown.listen { e ->
             when (e.name.lowercase()) {
-                "space", "spacebar" -> { clock.togglePaused(); onMessage(if (clock.paused) "paused" else "playing") }
+                "space", "spacebar" -> { playbackClock.togglePaused(); onMessage(if (playbackClock.paused) "paused" else "playing") }
                 "r" -> { state.resetView(); onMessage("view reset") }
                 "n" -> { state.selectFractal(FractalRegistry.next(state.fractal)); onMessage(state.fractal.displayName) }
                 "b" -> { state.selectFractal(FractalRegistry.next(state.fractal, -1)); onMessage(state.fractal.displayName) }
@@ -40,7 +40,7 @@ class Controls(
                 "m" -> { state.animationMode = AnimationMode.entries[(state.animationMode.ordinal + 1) % AnimationMode.entries.size]; onMessage("animation=${state.animationMode}") }
                 "c" -> { state.palette.palette = state.palette.palette.next(); onMessage("palette=${state.palette.palette}") }
                 "v" -> { state.palette.coloring = state.palette.coloring.next(); onMessage("coloring=${state.palette.coloring}") }
-                "t" -> { clock.speed = when (clock.speed) { 0.25 -> 0.5; 0.5 -> 1.0; 1.0 -> 2.0; 2.0 -> 4.0; else -> 0.25 }; onMessage("time x${clock.speed}") }
+                "t" -> { playbackClock.speed = when (playbackClock.speed) { 0.25 -> 0.5; 0.5 -> 1.0; 1.0 -> 2.0; 2.0 -> 4.0; else -> 0.25 }; onMessage("time x${playbackClock.speed}") }
                 "=", "+", "kp_add" -> { state.parameters.iterations = (state.parameters.iterations + 32).coerceAtMost(2000) }
                 "-", "kp_subtract" -> { state.parameters.iterations = (state.parameters.iterations - 32).coerceAtLeast(4) }
                 "q" -> { state.parameters.power = (state.parameters.power - 0.1).coerceAtLeast(1.15) }
@@ -53,17 +53,17 @@ class Controls(
                 "f" -> { state.parameters.morph = (state.parameters.morph - 0.05).coerceAtLeast(0.0); onMessage("morph=${"%.2f".format(state.parameters.morph)}") }
                 "p" -> {
                     val file = File("presets/last.json")
-                    PresetCodec.save(file, PresetCodec.capture("saved", state, clock.speed))
+                    PresetCodec.save(file, PresetCodec.capture("saved", state, playbackClock.speed))
                     onMessage("saved ${file.path}")
                 }
                 "u" -> {
                     val file = File("presets/last.json")
                     if (file.exists()) {
-                        val p = PresetCodec.load(file); p.applyTo(state); clock.speed = p.timeScale; onMessage("loaded ${file.path}")
+                        val p = PresetCodec.load(file); p.applyTo(state); playbackClock.speed = p.timeScale; onMessage("loaded ${file.path}")
                     } else onMessage("no ${file.path}")
                 }
                 "o" -> {
-                    val p = PresetLibrary.loadBuiltIn(presetIndex++); p.applyTo(state); clock.speed = p.timeScale; onMessage("preset=${p.name}")
+                    val p = PresetLibrary.loadBuiltIn(presetIndex++); p.applyTo(state); playbackClock.speed = p.timeScale; onMessage("preset=${p.name}")
                 }
             }
         }

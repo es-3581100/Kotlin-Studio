@@ -26,7 +26,7 @@ fun main() = application {
         width = 1280
         height = 800
         title = "Fractal Studio · OPENRNDR"
-        resizable = true
+        windowResizable = true
     }
     program {
         val state = ExplorerState()
